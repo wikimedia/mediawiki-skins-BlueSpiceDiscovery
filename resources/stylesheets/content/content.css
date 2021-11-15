@@ -1,0 +1,86 @@
+#content {
+	font-family: 'Lato';
+	font-size: 15px;
+	color: var( --content-fg-primary );
+}
+#content p {
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 150%;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+.p-sm {
+	font-size: 0.8rem;
+	color: var( --content-fg-secondary );
+}
+#content pre {
+	font-family: monospace, Courier;
+	font-size: 0.8rem;
+	margin: 2rem 0;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+#content pre, #content .mw-code {
+	background-color: var( --content-box-color );
+	padding: 1rem;
+}
+#content code {
+	font-family: monospace, Courier;
+	color: var( --content-fg-primary );
+	font-size: 0.8rem;
+	background-color: var( --content-box-color );
+	border-radius: 5%;
+	padding: 2px 4px;
+}
+dd {
+	margin-left: 1.5rem;
+}
+.floatleft {
+	float: left;
+	clear: left;
+	margin: 0 1rem 1rem 0;
+}
+.center {
+	text-align: center;
+}
+.floatright {
+	float: right;
+	clear: right;
+	margin: 0 0 1rem 1rem;
+}
+.floatleft + ul, .floatright + ul {
+	display: inline-block;
+}
+
+.floatleft + ol, .floatright + ol {
+	display: inline-block;
+}
+a {
+	color: var( --link-fg );
+	font-size: inherit;
+	font-weight: inherit;
+	text-decoration: none;
+}
+a.new {
+	color: var(--new-link-fg)
+}
+a:hover {
+	color: var(--content-fg-primary);
+	text-decoration: none;
+}
+a.external.text {
+	color: var(--link-fg);
+}
+a.external.text:hover {
+	color: var(--content-fg-primary);
+}
+a.text {
+	color: var(--link-fg);
+}
+blockquote {
+	border-left: 2px solid var( --primary-bg );
+	border-radius: 2px;
+	padding: 0.5rem 1rem;
+	background-color: #F5F5F7;
+}

@@ -1,0 +1,73 @@
+<?php
+
+namespace BlueSpice\Discovery;
+
+use MWStake\MediaWiki\Component\CommonUserInterface\LessVars;
+
+class Setup {
+
+	/**
+	 *
+	 */
+	public static function onCallback() {
+		$GLOBALS['wgUseMediaWikiUIEverywhere'] = true;
+		$GLOBALS['wgVisualEditorSupportedSkins'][] = 'bluespicediscovery';
+		$GLOBALS['wgVisualEditorSkinToolbarScrollOffset']['bluespicediscovery'] = 100;
+
+		global $wgScriptPath;
+		$GLOBALS['wgFavicon'] = "$wgScriptPath/skins/BlueSpiceDiscovery/resources/images/favicon.ico";
+
+		$GLOBALS['wgServiceWiringFiles'][] = dirname( __DIR__ ) . '/includes/ServiceWiring.php';
+		$skinSlots = new SkinSlots();
+		$skinSlots->init();
+
+		$lessVars = LessVars::getInstance();
+
+		$lessVars->setVar( 'navbar-bg', '#fff' );
+		$lessVars->setVar( 'navbar-fg', '#252525' );
+		$lessVars->setVar( 'navbar-highlight', '#3e5389' );
+
+		$lessVars->setVar( 'sidebar-bg', '#f1f3f9' );
+		$lessVars->setVar( 'sidebar-fg', '#252525' );
+		$lessVars->setVar( 'sidebar-highlight', '#3e5389' );
+
+		$lessVars->setVar( 'footer-bg', '#d3d3d3' );
+		$lessVars->setVar( 'footer-fg', '#454545' );
+
+		$lessVars->setVar( 'content-bg', '#fff' );
+		$lessVars->setVar( 'content-fg', '#252525' );
+		$lessVars->setVar( 'link-fg', '#747474' );
+		$lessVars->setVar( 'new-link-fg', '#ba0000' );
+		$lessVars->setVar( 'content-font-size', '14px' );
+
+		$lessVars->setVar( 'content-h1-fg', '#252525' );
+		$lessVars->setVar( 'content-h1-font-size', '2rem' );
+		$lessVars->setVar( 'content-h1-font-weight', '500' );
+		$lessVars->setVar( 'content-h1-border', 'none' );
+
+		$lessVars->setVar( 'content-h2-fg', '#252525' );
+		$lessVars->setVar( 'content-h2-font-size', '1.8rem' );
+		$lessVars->setVar( 'content-h2-font-weight', 'bold' );
+		$lessVars->setVar( 'content-h2-border', 'none' );
+
+		$lessVars->setVar( 'content-h3-fg', '#252525' );
+		$lessVars->setVar( 'content-h3-font-size', '1.6rem' );
+		$lessVars->setVar( 'content-h3-font-weight', 'bold' );
+		$lessVars->setVar( 'content-h3-border', 'none' );
+
+		$lessVars->setVar( 'content-h4-fg', '#252525' );
+		$lessVars->setVar( 'content-h4-font-size', '1.4rem' );
+		$lessVars->setVar( 'content-h4-font-weight', 'bold' );
+		$lessVars->setVar( 'content-h4-border', 'none' );
+
+		$lessVars->setVar( 'content-h5-fg', '#252525' );
+		$lessVars->setVar( 'content-h5-font-size', '1.25rem' );
+		$lessVars->setVar( 'content-h5-font-weight', 'bold' );
+		$lessVars->setVar( 'content-h5-border', 'none' );
+
+		$lessVars->setVar( 'content-h6-fg', '#252525' );
+		$lessVars->setVar( 'content-h6-font-size', '1.1rem' );
+		$lessVars->setVar( 'content-h6-font-weight', 'bold' );
+		$lessVars->setVar( 'content-h6-border', 'none' );
+	}
+}

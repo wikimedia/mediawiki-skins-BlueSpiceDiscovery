@@ -1,0 +1,133 @@
+:root {
+	/* navbar-primary - checked */
+	--navbar-primary-bg: @navbar-bg;
+	--navbar-primary-fg: @navbar-fg;//#252525;
+	--navbar-primary-fg--hover: @navbar-highlight;// #3E5389;
+	--navbar-primary-border-color: @navbar-highlight;//#3E5389;
+	--navbar-primary-searchform-border: @navbar-highlight; //#3E5389;
+	--navbar-primary-searchform-bg: lighten( @navbar-highlight, 57%);
+	--navbar-primary-searchform-fg: var(--navbar-primary-fg);//#252525;
+	--navbar-primary-pill-bg: #3E5389;
+	--navbar-primary-pill-fg: white;
+
+	/* megamenu checked */
+	--mm-primary-bg: @navbar-bg; //#fff;
+	--mm-primary-fg:  @navbar-fg;//#252525;
+	--mm-primary-fg--hover: @navbar-highlight;// #3E5389;
+	--mm-primary-separator: @navbar-highlight;// #3E5389;
+
+	--mm-primary-title-fg: @navbar-highlight;// #3E5389;
+	--mm-primary-title-bg: transparent;
+	--mm-primary-title-border: @navbar-highlight;// #3E5389;
+
+	--mm-secondary-bg: lighten( @navbar-highlight, 57%);//#F1F1F4;
+	--mm-secondary-border: @navbar-highlight;// #3E5389;
+
+	/* icons */
+	--icon-primary-bg: transparent;
+	--icon-primary-bg--hover: lighten( @navbar-highlight, 57%);
+	--icon-primary-fg: #747474;
+	--icon-primary-fg--hover: @navbar-highlight;// #3E5389;
+	--icon-primary--focus-visible: var(--focus-visible);
+
+	--mws-primary-bg: @navbar-highlight; //#3E5389;
+	--mws-primary-bg--hover: lighten( @navbar-highlight, 40%);//#98A7C4;
+	--mws-primary-fg: #FFF;
+	--mws-primary-fg--hover: #252525;
+
+	/* sidebar primary - check */
+	--sidebar-primary-bg: @sidebar-bg; //#F1F1F4;
+	--sidebar-primary-bg--hover: @content-bg;
+	--sidebar-primary-bg--active:  @content-bg;
+	--sidebar-primary-fg: @sidebar-fg; //#F1F1F4;
+	--sidebar-primary-fg--hover: @content-fg; //#F1F1F4;
+	--sidebar-primary-fg--active: @content-fg; //#F1F1F4;
+	--sidebar-primary-tab-home-fg: #747474;
+	--sidebar-primary-tab-home-fg--hover: @sidebar-highlight; //#3E5389;
+	--sidebar-primary-border: var(--sidebar-primary-bg);
+	--sidebar-primary-marker--hover: @sidebar-highlight; //#3E5389;
+	--sidebar-primary-marker--active: @sidebar-highlight; //#3E5389;
+	--sidebar-primary-header-fg: @sidebar-highlight; //#3E5389;
+	--sidebar-primary-header-border-color:rgba(0, 0, 0, 0.125);
+	--sidebar-primary-border-marker: lighten( #747474, 45%);
+
+	/* secondary primary - check */
+	--secondary-primary-bg: #F1F1F4;
+	--secondary-primary-bg--hover: #FFF;
+	--secondary-primary-bg--active: #FFF;
+	--secondary-primary-fg: #252525;
+	--secondary-primary-fg--hover: #252525;
+	--secondary-primary-fg--active: #252525;
+	--secondary-primary-tab-home-fg: #747474;
+	--secondary-primary-tab-home-fg--hover: #3E5389;
+	--secondary-primary-border: var(--secondary-primary-bg);
+	--secondary-primary-marker--hover: #3E5389;
+	--secondary-primary-marker--active: #3E5389;
+	--secondary-primary-header-fg: #3E5389;
+	--secondary-primary-header-border-color:rgba(0, 0, 0, 0.125);
+
+	/*main - title nav - check*/
+	--breadcrumbs-rootnode-fg: var(--primary-fg);
+	--breadcrumbs-rootnode-bg: @navbar-highlight;
+	--breadcrumbs-rootnode-bg--hover: var(--primary-bg--hover);
+	--title-nav-fg: #747474;
+	--title-nav-fg--hover:  #252525;
+	--title-nav-bg--hover: lighten( @navbar-highlight, 57%);
+	--title-nav-border-color:rgba(0, 0, 0, 0.125);
+
+	/* footer - check */
+	--aftercontent-border-color:rgba(0, 0, 0, 0.125);
+	--aftercontent-tools-fg: #747474;
+	--footer-fg: @footer-fg; //#454545;
+	--footer-fg--hover: #252525;
+	--footer-bg: @footer-bg;//#d3d3d3;
+
+	--back-to-top-fg: @navbar-highlight;
+	--back-to-top-fg--hover: #747474;
+
+	/* discussion */
+	--discussion-section-bg: #f4f4f4;
+	--discussion-title-fg: #6e6e6e;
+	--discussion-content-bg: #e9e9e9;
+	--discussion-after-content-fg: #6e6e6e;
+	--discussion-content-fg--hover: #3e5893;
+
+	/* content colors */
+	--content-background-color: @content-bg;
+	--content-special-bg: #FAFAFC;
+	--content-fg-primary: @content-fg;
+	--content-fg-secondary: #747474;
+	--link-fg: @link-fg;
+	--new-link-fg: @new-link-fg;
+	--content-font-size: @content-font-size;
+	--content-box-color: #E9E9EE;
+
+	--content-font-size: @content-font-size;
+	--content-font-weight: @content-font-weight;
+
+	--content-width: @content-width;
+	--content-h1-fg: @content-h1-fg;
+	--content-h1-font-size: @content-h1-font-size;
+	--content-h1-font-weight: @content-h1-font-weight;
+	--content-h1-border: @content-h1-border;
+	--content-h2-fg: @content-h2-fg;
+	--content-h2-font-size: @content-h2-font-size;
+	--content-h2-font-weight: @content-h2-font-weight;
+	--content-h2-border: @content-h2-border;
+	--content-h3-fg: @content-h3-fg;
+	--content-h3-font-size: @content-h3-font-size;
+	--content-h3-font-weight: @content-h3-font-weight;
+	--content-h3-border: @content-h3-border;
+	--content-h4-fg: @content-h4-fg;
+	--content-h4-font-size: @content-h4-font-size;
+	--content-h4-font-weight: @content-h4-font-weight;
+	--content-h4-border: @content-h4-border;
+	--content-h5-fg: @content-h5-fg;
+	--content-h5-font-size: @content-h5-font-size;
+	--content-h5-font-weight: @content-h5-font-weight;
+	--content-h5-border: @content-h5-border;
+	--content-h6-fg: @content-h6-fg;
+	--content-h6-font-size: @content-h6-font-size;
+	--content-h6-font-weight: @content-h6-font-weight;
+	--content-h6-border: @content-h6-border;
+}

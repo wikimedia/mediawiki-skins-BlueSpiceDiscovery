@@ -1,0 +1,27 @@
+#sb-pri-cnt {
+	background-color: var(--sidebar-primary-bg);
+	color: var(--sidebar-primary-fg);
+	padding-top: 15px;
+	font-family: 'Lato';
+	font-size: 15px;
+	border-right: 0.05px solid var(--sidebar-primary-border-marker);
+}
+#sb-pri {
+	height: 100%;
+	max-height: calc( 100vh - calc( 15px + var(--navbar-primary-height) ));
+	overflow: hidden;
+	width: 100%;
+	padding-bottom: 20px;
+}
+#sb-pri:hover {
+	overflow-y: auto;
+}
+
+#sb-pri::-webkit-scrollbar {
+	width: 8px;
+}
+#sb-pri::-webkit-scrollbar-thumb {
+	background-color: #d8d8d9;
+	border-radius: 5px;
+	border: 3px solid transparent;
+}

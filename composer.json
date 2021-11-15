@@ -1,0 +1,48 @@
+{
+	"name": "bluespice/discovery",
+	"type": "mediawiki-skin",
+	"description": "A highly flexible MediaWiki skin using Bootstrap 5",
+	"keywords": [
+		"wiki",
+		"MediaWiki",
+		"skin",
+		"Twitter",
+		"Bootstrap"
+	],
+	"license": "GPL-3.0-only",
+	"extra": {
+		"installer-name": "BlueSpiceDiscovery"
+	},
+	"require": {
+		"composer/installers": "~1.0",
+		"mwstake/mediawiki-component-commonuserinterface": "~2.0",
+		"mwstake/mediawiki-component-manifestregistry": "~1.0"
+	},
+	"require-dev": {
+		"mediawiki/mediawiki-codesniffer": "31.0.0",
+		"mediawiki/minus-x": "1.1.0",
+		"php-parallel-lint/php-console-highlighter": "0.5.0",
+		"php-parallel-lint/php-parallel-lint": "1.2.0",
+		"mediawiki/mediawiki-phan-config": "0.11.0"
+	},
+	"scripts": {
+		"test": [
+			"parallel-lint . --exclude vendor --exclude node_modules",
+			"minus-x check .",
+			"phpcs -sp"
+		],
+		"fix": [
+			"minus-x fix .",
+			"phpcbf"
+		],
+		"lint": [
+			"phan --no-progress-bar -m text | sed 's, ,:,'"
+		]
+	},
+	"autoload": {
+		"psr-4": {
+			"Skin\\BlueSpiceDiscovery\\Tests\\": "tests/phpunit",
+			"Skin\\BlueSpiceDiscovery\\": "src"
+		}
+	}
+}

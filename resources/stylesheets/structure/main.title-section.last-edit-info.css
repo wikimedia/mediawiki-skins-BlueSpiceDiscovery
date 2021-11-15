@@ -1,0 +1,14 @@
+.last-edit-info {
+	color: var(--title-nav-fg);
+	font-size: 0.875rem;
+}
+.last-edit-info a {
+	color: var(--title-nav-fg);
+	text-decoration: underline;
+}
+.last-edit-info a:hover {
+	color: var(--title-nav-fg--hover);
+}
+.last-edit-info a:focus-visible {
+	outline-color: var(--focus-visible);
+}

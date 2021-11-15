@@ -1,0 +1,32 @@
+#sb-sec-cnt {
+	background-color: var(--sidebar-primary-bg);
+	color: var(--sidebar-primary-fg);
+	border-left: 1px solid var(--sidebar-primary-border);
+	padding-top: 15px;
+	font-family: 'Lato';
+	font-size: 15px;
+	border-left: 0.05px solid var(--sidebar-primary-border-marker);
+}
+#sb-sec {
+	height: 100%;
+	max-height: calc(100vh - calc( 55px + var(--navbar-primary-height) ));
+	overflow: hidden;
+	width: 100%;
+}
+#sb-sec:hover {
+	overflow-y: auto;
+}
+#sb-sec::-webkit-scrollbar {
+	width: 8px;
+}
+#sb-sec::-webkit-scrollbar-thumb {
+	background-color: #d8d8d9;
+	border-radius: 5px;
+	border: 3px solid transparent;
+}
+
+.all-actions-list {
+	list-style: none;
+	margin: 0;
+	padding: 10px;
+}

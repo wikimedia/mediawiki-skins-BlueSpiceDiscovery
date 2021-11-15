@@ -1,0 +1,49 @@
+.fs-mode-enabled .row > .col-east-spacer,
+.fs-mode-enabled .row > .col-west-spacer {
+	display: none;
+}
+
+.fs-mode-enabled #aftercontent,
+.fs-mode-enabled #footer {
+	padding-left: 0;
+	padding-right: 0;
+}
+.fs-mode-enabled #aftercontent > .inner {
+	max-width: 100%;
+}
+.fs-mode-enabled #footer ul {
+	max-width: 100%;
+}
+
+.row > .col-east-spacer {
+	min-width: var(--sidebar-primary-width);
+	max-width: var(--sidebar-primary-width);
+}
+.row > .col-west-spacer {
+	min-width: var(--sidebar-secondary-width);
+	max-width: var(--sidebar-secondary-width);
+}
+.row > .col-east,
+.row > .col-west {
+	min-height: calc(100vh - var(--navbar-primary-height));
+	position: fixed;
+	top: var(--navbar-primary-height);
+}
+.row > .col-west {
+	max-width: var(--sidebar-primary-width);
+	z-index: 1;
+}
+.row > .col-east {
+	max-width: var(--sidebar-secondary-width);
+	z-index: 1;
+	right: 0;
+}
+#aftercontent {
+	padding-left: var(--sidebar-primary-width);
+	padding-right: var(--sidebar-primary-width);
+}
+
+#footer {
+	padding-left: var(--sidebar-secondary-width);
+	padding-right: var(--sidebar-primary-width);
+}

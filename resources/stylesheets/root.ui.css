@@ -1,0 +1,19 @@
+:root {
+	/* ui dimensions - check */
+	--content-background-color: #FFF;
+	--navbar-primary-height: 64px;
+	--logo-width: 145px;
+	--logo-height: 40px;
+	--sidebar-primary-width: 300px;
+	--sidebar-secondary-width: 300px;
+	--button-height: 40px;
+	--content-max-width: 1200px;
+	--footer-height: 80px;
+	--aftercontent-height: 40px;
+	--navbar-icon-size: 22px;
+	--footer-max-width: var(--content-max-width);
+
+	/* aftercontent */
+	--aftercontent-max-width: var(--content-max-width);
+
+}

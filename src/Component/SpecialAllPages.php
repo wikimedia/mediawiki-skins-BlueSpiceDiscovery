@@ -1,0 +1,67 @@
+<?php
+
+namespace BlueSpice\Discovery\Component;
+
+use Message;
+use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink;
+use SpecialPage;
+
+class SpecialAllPages extends RestrictedTextLink {
+
+	/**
+	 *
+	 */
+	public function __construct() {
+		parent::__construct( [] );
+	}
+
+	/**
+	 *
+	 * @return string
+	 */
+	public function getId(): string {
+		return 'special-allpages';
+	}
+
+	/**
+	 *
+	 * @return string
+	 */
+	public function getHref(): string {
+		/** @var Title */
+		$specialpage = SpecialPage::getTitleFor( 'AllPages' );
+		return $specialpage->getFullURL();
+	}
+
+	/**
+	 *
+	 * @return array
+	 */
+	public function getPermissions(): array {
+		return [ 'edit' ];
+	}
+
+	/**
+	 *
+	 * @return Message
+	 */
+	public function getText(): Message {
+		return Message::newFromKey( 'allpages' );
+	}
+
+	/**
+	 *
+	 * @return Message
+	 */
+	public function getTitle(): Message {
+		return Message::newFromKey( 'allpages' );
+	}
+
+	/**
+	 *
+	 * @return Message
+	 */
+	public function getAriaLabel(): Message {
+		return Message::newFromKey( 'allpages' );
+	}
+}

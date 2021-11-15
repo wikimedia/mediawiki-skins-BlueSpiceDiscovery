@@ -1,0 +1,26 @@
+#sb-tgl-pri {
+	font-size: 25px;
+	margin-left: 35px;
+	padding: 4px 6px;
+	color: var( --icon-primary-fg--hover );
+	background-color: var(--icon-primary-bg--hover);
+}
+#sb-tgl-pri:hover {
+	padding: 4px 6px;
+}
+#sb-tgl-pri.collapsed {
+	color: var(--title-nav-fg);
+	background-color: var(--body-bg-color);
+}
+a#sb-sec-tgl-btn {
+	margin-top:2px;
+	color: var( --icon-primary-fg--hover );
+	background-color: var(--title-nav-bg--hover);
+	transform: rotate(90deg);
+	font-size: 21px;
+	padding-left: 8px;
+}
+a#sb-sec-tgl-btn.collapsed {
+	color: var(--title-nav-fg);
+	background-color: var(--body-bg-color);
+}

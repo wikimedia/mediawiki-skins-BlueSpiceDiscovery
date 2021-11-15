@@ -1,0 +1,15 @@
+.navbar a.nb-logo {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	min-width: var(--logo-width);
+	height: 100%;
+}
+.navbar a.nb-logo:hover {
+	background-color: transparent;
+	border-radius: 0;
+}
+.navbar a.nb-logo:focus-visible {
+	outline: 0;
+	border: .1em solid var(--focus-visible);
+}

@@ -1,0 +1,31 @@
+<div id="{{id}}-cnt"{{#container-class}}class="{{{.}}}"{{/container-class}}>
+	
+	<nav id="{{id}}" class="tab-content stacked-tabs">
+		{{#main}}
+		<div class="tab-pane fade{{#class}} {{{.}}}{{/class}}" id="{{id}}" role="tabpanel" aria-describedby ="{{id}}-desc">
+			<div id="{{id}}-desc" class="visually-hidden">{{{desc}}}</div>
+			<ul class="nav nav-tabs list-group" role="tablist">
+				{{#list}}
+				<li class="nav-item list-group-item" role="presentation">
+					<a data-bs-target="{{id}}" data-bs-toggle="tab" role="tab" aria-label="{{aria-label}}" title="{{title}}" tabindex="0">{{text}}</a>
+				</li>
+				{{/list}}
+			</ul>
+			{{{body}}}
+		</div>
+		{{/main}}
+		{{#other}}
+		<div class="tab-pane fade{{#class}} {{{.}}}{{/class}}" id="{{id}}" role="tabpanel" aria-describedby="{{id}}-desc">
+			<div id="{{id}}-desc" class="visually-hidden">{{{desc}}}</div>
+			<ul class="nav nav-tabs list-group" role="tablist">
+				{{#list}}
+				<li class="nav-item list-group-item" role="presentation">
+					<a class="tab-home" data-bs-target="{{id}}" data-bs-toggle="tab" role="tab" aria-label="{{aria-label}}" title="{{title}}" tabindex="0"><i class="bi-arrow-left-circle-fill"></i>{{text}}</a>
+				</li>
+				{{/list}}
+			</ul>
+			{{{body}}}
+		</div>
+		{{/other}}
+	</nav>
+</div>

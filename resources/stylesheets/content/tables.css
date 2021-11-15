@@ -1,0 +1,12 @@
+table {
+	caption-side: top;
+	border-collapse: collapse;
+	font-size: 0.875rem;
+}
+
+caption {
+	color: var(--font-color-secondary);
+	padding: 0.5rem 0;
+	text-align: left;
+	display: table-caption;
+}

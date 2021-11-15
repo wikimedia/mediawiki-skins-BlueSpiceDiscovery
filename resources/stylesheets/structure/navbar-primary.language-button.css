@@ -1,0 +1,14 @@
+.ico-lang {
+	background-color: var( --icon-primary-fg ) !important;
+	-webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+	-webkit-mask-image: url('../../images/translate_24px.svg') !important;
+	mask-image: url('../../images/translate_24px.svg')  !important;
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+.ico-btn:hover .ico-lang {
+	background-color: var( --icon-primary-fg--hover ) !important;
+	-webkit-mask-image: url('../../images/translate_24px.svg') !important;
+	mask-image: url('../../images/translate_24px.svg') !important;
+}
