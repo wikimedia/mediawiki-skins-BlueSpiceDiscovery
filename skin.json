@@ -258,7 +258,8 @@
 				"js/CookieHandler.js",
 				"js/BlueSpiceUI.js",
 				"js/BreadCrumbs.js",
-				"js/AttentionIndicator.js"
+				"js/AttentionIndicator.js",
+				"js/StickyTitle.js"
 			],
 			"messages": [
 				"bs-discovery-navbar-full-screen-button-enable-title",
