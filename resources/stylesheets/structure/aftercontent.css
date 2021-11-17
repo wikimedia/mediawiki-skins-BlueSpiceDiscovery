@@ -3,7 +3,6 @@
 	padding-top: 15px;
 	width: 100%;
 	background-color: var(--content-background-color);
-	padding-bottom: 30px;
 }
 .ns-special #aftercontent {
 	background-color: var( --content-special-bg );
@@ -14,6 +13,7 @@
 	padding-left: 2.5rem;
 	padding-right: 3rem;
 	padding-top: 1rem;
+	padding-bottom: 30px;
 	border-top: 0.05px solid var(--aftercontent-border-color);
 }
 
@@ -36,18 +36,16 @@
 
 #tools-after-content {
 	color: var(--content-fg-secondary);
+	margin-bottom: 20px;
 }
 
 #aftercontent a.new {
 	color: var(--new-link-fg);
 }
-#tools-after-content {
-	margin-bottom: 20px;
-}
 
-#data-after-content > div {
+#data-after-content {
 	background-color: var(--discussion-section-bg);
 	margin: 0 -40px;
 	padding: 20px;
-	border-radius: 10px;
+	border-radius: 5px;
 }
