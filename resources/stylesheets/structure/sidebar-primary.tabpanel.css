@@ -16,8 +16,6 @@
 	display: inline-block;
 	font-size: 15px;
 	padding-left: 0.8rem;
-	padding-top:0.2rem;
-	vertical-align: text-top;
 	border-left: 5px solid transparent;
 	color: var(--sidebar-primary-tab-home-fg);
 }
