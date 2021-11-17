@@ -96,11 +96,13 @@ ul.breadcrumb-labels {
 	vertical-align: baseline;
 	display: flex;
 	margin: 0;
+	padding-left: 0.5rem;
 	color: var(--title-nav-fg);
 }
 .breadcrumb-label {
-	margin-right: 5px;
-	padding: 0.3rem 0.6rem;
+	padding: 0.4rem 0.6rem;
+	font-weight: normal;
+	border-radius: 5px;
 }
 
 .breadcrumb-menu {
