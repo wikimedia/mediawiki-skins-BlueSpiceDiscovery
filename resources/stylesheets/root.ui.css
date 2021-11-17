@@ -2,6 +2,7 @@
 	/* ui dimensions - check */
 	--content-background-color: #FFF;
 	--navbar-primary-height: 64px;
+	--sticky-title-height: 64px;
 	--logo-width: 145px;
 	--logo-height: 40px;
 	--sidebar-primary-width: 300px;
