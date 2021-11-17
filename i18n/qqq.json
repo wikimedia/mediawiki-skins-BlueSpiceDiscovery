@@ -5,7 +5,6 @@
 		]
 	},
 	"bluespicecalumma-name": "{{name}}\nName of the skin on [[Special:Version]] and [[Special:Preferences]]",
-	"bluespicecalumma-desc": "Descripton text for the skin on [[Special:Version]]",
 	"bs-discovery-skip-links-navigation-aria-label": "Aria-label attribute for skip links navigation",
 	"bs-discovery-skip-to-navbar-primary-text": "Text for skip link item navbar-primary",
 	"bs-discovery-skip-to-sidebar-primary-text": "Text for skip link item sidebar-primary",
