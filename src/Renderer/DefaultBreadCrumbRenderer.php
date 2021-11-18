@@ -188,16 +188,26 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 					$titleParts = explode( ':', $titleMainPage );
 					$rootNodeText = $titleParts[0];
 				}
+				$rootNodeUrl = $titleMainPage->getLocalURL();
 			}
 		}
+
 		if ( !isset( $titleMainPage ) ) {
 			$titleMainPage = Title::makeTitleSafe( $this->relevantTitle->getNamespace(),
 			Title::newMainPage()->getDBkey() );
+
+			if ( $titleMainPage->isMainPage() ) {
+				$rootNodeUrl = $titleMainPage->getLocalURL();
+			} else {
+				$titleMainPage = $this->specialPageFactory->getTitleForAlias( 'Allpages' );
+				$rootNodeUrl = $titleMainPage->getFullURL(
+					'namespace=' . $this->relevantTitle->getNamespace() );
+			}
 		}
 
 		$this->options['rootNode'] = [
 			'text' => $rootNodeText,
-			'href' => $titleMainPage->getLocalURL(),
+			'href' => $rootNodeUrl,
 			'role' => 'link',
 			'title' => $rootNodeText,
 			'aria-label' => $this->messageLocalizer->msg(
