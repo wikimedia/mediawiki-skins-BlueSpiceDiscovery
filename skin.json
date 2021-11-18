@@ -244,7 +244,9 @@
 				"stylesheets/bluespice.xl.css": { "media": "all and ( min-width: 1200px ) and ( max-width: 1399px )" },
 				"stylesheets/bluespice.xxl.css": { "media": "all and ( min-width: 1400px )" },
 				"stylesheets/megamenu.css": {},
-				"stylesheets/oo-ui/oo-ui.css": {}
+				"stylesheets/oo-ui/oo-ui.css": {},
+				"stylesheets/mediawiki.ui/components/radio.css": {},
+				"stylesheets/control/versionpager.css": {}
 			}
 		},
 		"skin.discovery.bluespice.themes.default": {
