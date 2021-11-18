@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kareyac"
+		]
+	},
+	"bs-discovery-header-create-button-title": "Создать новую страницу",
+	"bs-discovery-navbar-language-button-aria-label": "Выбрать язык",
+	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Пространство имён",
+	"bs-discovery-dialog-details-heading": "Все действия",
+	"bs-discovery-breadcrumb-label-talk": "Обсуждение",
+	"bs-discovery-breadcrumb-label-action-history": "История",
+	"bs-discovery-personalurl-mycontributions-text": "Вклад",
+	"bs-discovery-personalurl-userpage-text": "Профиль"
+}

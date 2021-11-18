@@ -1,8 +1,8 @@
 {
 	"@metadata": {
-			"authors": [
-					"Robert Vogel"
-			]
+		"authors": [
+			"Robert Vogel"
+		]
 	},
 	"bs-discovery-skip-links-navigation-aria-label": "Zu den Links",
 	"bs-discovery-skip-to-navbar-primary-text": "Zur Hauptnavigation",
@@ -75,9 +75,9 @@
 	"bs-discovery-sidebar-secondary-toggle-hide-aria-label": "Nebenseitenleiste schließen",
 	"bs-discovery-sidebar-secondary-export-link-title": "Exportmöglichkeiten",
 	"bs-discovery-sidebar-secondary-export-link-aria-label": "Exportmöglichkeiten",
+	"bs-discovery-sidebar-secondary-share-sharebymail-title": "Diese Seite per E-Mail versenden",
 	"bs-discovery-sidebar-secondary-share-link-title": "Teilen",
 	"bs-discovery-sidebar-secondary-share-link-aria-label": "Teilen",
-	"bs-discovery-sidebar-secondary-share-sharebymail-title": "Diese Seite per E-Mail versenden",
 	"bs-discovery-sidebar-actions-heading": "Aktionen",
 	"bs-discovery-details-pnl-more-link-text": "... alle Aktionen",
 	"bs-discovery-details-pnl-more-link-title": "Öffnet einen Dialog, der alle Aktionen für diese Seite beinhaltet",
