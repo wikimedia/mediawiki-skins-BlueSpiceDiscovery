@@ -1,0 +1,20 @@
+.bs-version-pager {
+	margin-top: 1rem;
+}
+.bs-version-pager a.next, a.prev {
+		text-decoration: none;
+}
+
+.bs-version-pager-info {
+	margin: auto;
+	text-align: center;
+	width: 80%;
+}
+
+.bs-version-pager .pull-left {
+	float: left;
+}
+
+.bs-version-pager .pull-right {
+	float: right;
+}
