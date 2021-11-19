@@ -24,56 +24,56 @@ class GlobalActionsButton extends SimpleDropdownIcon implements IRestrictedCompo
 	/**
 	 * @inheritDoc
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'ga-btn';
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getContainerClasses() : array {
+	public function getContainerClasses(): array {
 		return [ 'has-megamenu' ];
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getButtonClasses() : array {
+	public function getButtonClasses(): array {
 		return [ 'ico-btn' ];
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getMenuClasses() : array {
+	public function getMenuClasses(): array {
 		return [ 'megamenu' ];
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getIconClasses() : array {
+	public function getIconClasses(): array {
 		return [ 'bi-gear-fill' ];
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getTitle() : Message {
+	public function getTitle(): Message {
 		return Message::newFromKey( 'bs-discovery-navbar-global-actions-button-title' );
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getAriaLabel() : Message {
+	public function getAriaLabel(): Message {
 		return Message::newFromKey( 'bs-discovery-navbar-global-actions-button-aria-label' );
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getSubComponents() : array {
+	public function getSubComponents(): array {
 		return [
 			new SimpleCard( [
 				'id' => 'ga-mm',
@@ -144,7 +144,7 @@ class GlobalActionsButton extends SimpleDropdownIcon implements IRestrictedCompo
 	 *
 	 * @return string
 	 */
-	private function getToolSkinSlotHtml() : string {
+	private function getToolSkinSlotHtml(): string {
 		/** @var MediaWikiServices */
 		$services = MediaWikiServices::getInstance();
 
@@ -161,7 +161,7 @@ class GlobalActionsButton extends SimpleDropdownIcon implements IRestrictedCompo
 	 *
 	 * @return string
 	 */
-	private function getManagerSkinSlotHtml() : string {
+	private function getManagerSkinSlotHtml(): string {
 		/** @var MediaWikiServices */
 		$services = MediaWikiServices::getInstance();
 

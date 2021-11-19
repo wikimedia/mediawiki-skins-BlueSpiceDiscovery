@@ -10,7 +10,7 @@ class ToolsAfterContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 *
 	 * @return string
 	 */
-	protected function getContainerWrapperTag() : string {
+	protected function getContainerWrapperTag(): string {
 		return 'div';
 	}
 
@@ -18,7 +18,7 @@ class ToolsAfterContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 *
 	 * @return string
 	 */
-	protected function getContainerWrapperId() : string {
+	protected function getContainerWrapperId(): string {
 		return 'tools-after-content';
 	}
 
@@ -26,7 +26,7 @@ class ToolsAfterContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 *
 	 * @return string
 	 */
-	protected function getItemWrapperTag() : string {
+	protected function getItemWrapperTag(): string {
 		return 'div';
 	}
 
@@ -35,7 +35,7 @@ class ToolsAfterContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 * @param string $id
 	 * @return string
 	 */
-	protected function getItemWrapperId( $id ) : string {
+	protected function getItemWrapperId( $id ): string {
 		return $id . '-cnt';
 	}
 }

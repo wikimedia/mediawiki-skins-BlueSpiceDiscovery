@@ -11,7 +11,7 @@ class NavbarPrimarySearchFormSkinSlotRenderer extends ExtendedSkinSlotRendererBa
 	 * @param array $data
 	 * @return string
 	 */
-	public function getHtml( $data = [] ) : string {
+	public function getHtml( $data = [] ): string {
 		$html = '';
 		$items = $this->componentManager->getSkinSlotComponentTree( static::REG_KEY, $data );
 		krsort( $items, SORT_NATURAL );

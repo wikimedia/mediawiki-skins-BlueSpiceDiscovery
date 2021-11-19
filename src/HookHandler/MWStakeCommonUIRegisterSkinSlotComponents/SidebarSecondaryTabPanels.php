@@ -1,6 +1,6 @@
 <?php
 
-namespace  BlueSpice\Discovery\HookHandler\MWStakeCommonUIRegisterSkinSlotComponents;
+namespace BlueSpice\Discovery\HookHandler\MWStakeCommonUIRegisterSkinSlotComponents;
 
 use BlueSpice\Discovery\Component\PageTabPanel;
 use MWStake\MediaWiki\Component\CommonUserInterface\Hook\MWStakeCommonUIRegisterSkinSlotComponents;
@@ -10,12 +10,12 @@ class SidebarSecondaryTabPanels implements MWStakeCommonUIRegisterSkinSlotCompon
 	/**
 	 * @inheritDoc
 	 */
-	public function onMWStakeCommonUIRegisterSkinSlotComponents( $registry ) : void {
+	public function onMWStakeCommonUIRegisterSkinSlotComponents( $registry ): void {
 		$registry->register(
 			"SidebarSecondaryTabPanels",
 			[
 				'page' => [
-					'factory' => function () {
+					'factory' => static function () {
 						return new PageTabPanel();
 					}
 				]

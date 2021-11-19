@@ -25,7 +25,7 @@ class TabPanelRegistry {
 	 * @param string $key
 	 * @param ITabPanel[] $panel
 	 */
-	public function register( $key, $panel ) : void {
+	public function register( $key, $panel ): void {
 		$this->panels[$key] = $panel;
 	}
 
@@ -33,7 +33,7 @@ class TabPanelRegistry {
 	 * @param string $key
 	 * @return array
 	 */
-	public function getRegistryData( $key ) : array {
+	public function getRegistryData( $key ): array {
 		if ( array_key_exists( $key, $this->panels ) ) {
 			return $this->panels[$key];
 		}

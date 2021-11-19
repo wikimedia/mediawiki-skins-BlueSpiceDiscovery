@@ -26,42 +26,42 @@ class FullscreenButton extends SimpleLink {
 	/**
 	 * @inheritDoc
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'full-screen-btn';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getClasses() : array {
+	public function getClasses(): array {
 		return $this->buildClasses();
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getRole() : string {
+	public function getRole(): string {
 		return 'button';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getTitle() : Message {
+	public function getTitle(): Message {
 		return $this->buildTitle();
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getAriaLabel() : Message {
+	public function getAriaLabel(): Message {
 		return $this->buildAriaLabel();
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getHref() : string {
+	public function getHref(): string {
 		return '';
 	}
 
@@ -69,7 +69,7 @@ class FullscreenButton extends SimpleLink {
 	 *
 	 * @return Message
 	 */
-	private function buildTitle() : Message {
+	private function buildTitle(): Message {
 		if ( $this->fullscreenMode === 'true' ) {
 			return Message::newFromKey( 'bs-discovery-navbar-full-screen-button-disable-title' );
 		} else {
@@ -81,7 +81,7 @@ class FullscreenButton extends SimpleLink {
 	 *
 	 * @return Message
 	 */
-	private function buildAriaLabel() : Message {
+	private function buildAriaLabel(): Message {
 		if ( $this->fullscreenMode === 'true' ) {
 			return Message::newFromKey( 'bs-discovery-navbar-full-screen-button-disable-aria-label' );
 		} else {
@@ -93,7 +93,7 @@ class FullscreenButton extends SimpleLink {
 	 *
 	 * @return array
 	 */
-	private function buildClasses() : array {
+	private function buildClasses(): array {
 		$classes = [ 'ico-btn', 'd-none', 'd-xxl-block' ];
 
 		if ( $this->fullscreenMode === 'true' ) {

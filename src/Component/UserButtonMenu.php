@@ -33,14 +33,14 @@ class UserButtonMenu extends SimpleDropdown {
 	/**
 	 * @inheritDoc
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'usr-btn';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getSubComponents() : array {
+	public function getSubComponents(): array {
 		$linkFormatter = new LinkFormatter();
 		$links = [];
 		foreach ( $this->componentProcessData['template']['personal_urls'] as $key => $link ) {
@@ -109,42 +109,42 @@ class UserButtonMenu extends SimpleDropdown {
 	/**
 	 * @return array
 	 */
-	public function getContainerClasses() : array {
+	public function getContainerClasses(): array {
 		return [ 'has-megamenu' ];
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getButtonClasses() : array {
+	public function getButtonClasses(): array {
 		return [ 'ico-btn' ];
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getMenuClasses() : array {
+	public function getMenuClasses(): array {
 		return [ 'megamenu' ];
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getText() : Message {
+	public function getText(): Message {
 		return new RawMessage( $this->getAvatar() );
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getTitle() : Message {
+	public function getTitle(): Message {
 		return Message::newFromKey( 'bs-discovery-navbar-user-button-title' );
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getAriaLabel() : Message {
+	public function getAriaLabel(): Message {
 		return Message::newFromKey( 'bs-discovery-navbar-user-button-aria-label' );
 	}
 
@@ -153,7 +153,7 @@ class UserButtonMenu extends SimpleDropdown {
 	 * @param IContextSource $context
 	 * @return bool
 	 */
-	public function shouldRender( IContextSource $context ) : bool {
+	public function shouldRender( IContextSource $context ): bool {
 		/** @var User */
 		$user = $context->getUser();
 		if ( !$user->isAnon() ) {
@@ -167,7 +167,7 @@ class UserButtonMenu extends SimpleDropdown {
 	 *
 	 * @return string
 	 */
-	private function getSkinSlotHtml() : string {
+	private function getSkinSlotHtml(): string {
 		/** @var MediaWikiServices */
 		$services = MediaWikiServices::getInstance();
 
@@ -234,7 +234,7 @@ class UserButtonMenu extends SimpleDropdown {
 				? $this->getFavoritePositions()[$key]
 				: 0;
 		}
-		usort( $links, function ( $e1, $e2 ) {
+		usort( $links, static function ( $e1, $e2 ) {
 			if ( $e1['position'] == $e2['position'] ) {
 				return 0;
 			}
@@ -247,7 +247,7 @@ class UserButtonMenu extends SimpleDropdown {
 	 *
 	 * @return string
 	 */
-	private function getAvatar() : string {
+	private function getAvatar(): string {
 		$defaultIcon = '<i class="ico-usr"></i>';
 		if ( !$this->avatarServicesAvailable() ) {
 			return $defaultIcon;
@@ -301,7 +301,7 @@ class UserButtonMenu extends SimpleDropdown {
 	 *
 	 * @return bool
 	 */
-	private function avatarServicesAvailable() : bool {
+	private function avatarServicesAvailable(): bool {
 		$hasImageUrlBuilder = MediaWikiServices::getInstance()->hasService(
 			'BSDynamicFileDispatcherUrlBuilder'
 		);

@@ -24,7 +24,7 @@ abstract class TemplateRendererBase implements ITemplateRenderer {
 	/**
 	 * @return string
 	 */
-	public function getHtml() : string {
+	public function getHtml(): string {
 		$this->getTemplate();
 		$templateParser = new TemplateParser(
 			$this->templatePath

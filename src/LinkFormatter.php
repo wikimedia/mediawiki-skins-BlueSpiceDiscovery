@@ -18,7 +18,7 @@ class LinkFormatter {
 	 * @param array $links
 	 * @return array
 	 */
-	public function formatLinks( $links ) : array {
+	public function formatLinks( $links ): array {
 		$params = [];
 
 		foreach ( $links as $key => $link ) {

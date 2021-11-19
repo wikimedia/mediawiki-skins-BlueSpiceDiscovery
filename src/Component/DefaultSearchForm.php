@@ -32,7 +32,7 @@ class DefaultSearchForm extends Literal {
 	 *
 	 * @return array
 	 */
-	public function getPermissions() : array {
+	public function getPermissions(): array {
 		return [ 'read' ];
 	}
 
@@ -40,7 +40,7 @@ class DefaultSearchForm extends Literal {
 	 *
 	 * @return array
 	 */
-	private function getParams() : array {
+	private function getParams(): array {
 		$specialSearch = SpecialPage::getTitleFor( 'Search' );
 
 		$params = [

@@ -20,21 +20,21 @@ class ToolbarPanel extends SimpleCard implements IRestrictedComponent {
 	/**
 	 * @inheritDoc
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'toolbar';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getContainerClasses() : array {
+	public function getContainerClasses(): array {
 		return [ 'w-100', 'bg-transp' ];
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getSubComponents() : array {
+	public function getSubComponents(): array {
 		$componentProcessData = $this->componentProcessData;
 		return [
 			new CallbackLiteral(
@@ -50,7 +50,7 @@ class ToolbarPanel extends SimpleCard implements IRestrictedComponent {
 	 *
 	 * @return string[]
 	 */
-	public function getPermissions() : array {
+	public function getPermissions(): array {
 		return [ 'read' ];
 	}
 
@@ -58,7 +58,7 @@ class ToolbarPanel extends SimpleCard implements IRestrictedComponent {
 	 *
 	 * @return string
 	 */
-	private function getSkinSlotHtml() : string {
+	private function getSkinSlotHtml(): string {
 		/** @var MediaWikiServices */
 		$services = MediaWikiServices::getInstance();
 

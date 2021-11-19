@@ -19,14 +19,14 @@ class ShareOptions extends SimpleDropdownIcon {
 	/**
 	 * @inheritDoc
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'share-menu';
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getButtonClasses() : array {
+	public function getButtonClasses(): array {
 		$classes = [ 'ico-btn' ];
 
 		if ( !isset( $this->componentProcessData['panel'] )
@@ -41,28 +41,28 @@ class ShareOptions extends SimpleDropdownIcon {
 	/**
 	 * @return array
 	 */
-	public function getMenuClasses() : array {
+	public function getMenuClasses(): array {
 		return [ 'mws-dropdown-secondary' ];
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getIconClasses() : array {
+	public function getIconClasses(): array {
 		return [ 'ico-btn', 'bi-link-45deg' ];
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getTitle() : Message {
+	public function getTitle(): Message {
 		return Message::newFromKey( 'bs-discovery-sidebar-secondary-share-link-title' );
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getAriaLabel() : Message {
+	public function getAriaLabel(): Message {
 		return Message::newFromKey( 'bs-discovery-sidebar-secondary-share-link-aria-label' );
 	}
 
@@ -77,7 +77,7 @@ class ShareOptions extends SimpleDropdownIcon {
 	/**
 	 * @inheritDoc
 	 */
-	public function getSubComponents() : array {
+	public function getSubComponents(): array {
 		if ( !isset( $this->componentProcessData['panel'] )
 			|| !isset( $this->componentProcessData['panel']['share'] ) ) {
 			return [];

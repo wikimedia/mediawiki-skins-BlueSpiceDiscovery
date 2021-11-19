@@ -10,12 +10,12 @@ class NavbarPrimarySearchForm implements MWStakeCommonUIRegisterSkinSlotComponen
 	/**
 	 * @inheritDoc
 	 */
-	public function onMWStakeCommonUIRegisterSkinSlotComponents( $registry ) : void {
+	public function onMWStakeCommonUIRegisterSkinSlotComponents( $registry ): void {
 		$registry->register(
 			'NavbarPrimarySearchForm',
 			[
 				'a-default-search' => [
-					'factory' => function () {
+					'factory' => static function () {
 						return new DefaultSearchForm();
 					}
 				]

@@ -13,27 +13,27 @@ class GlobalActions implements MWStakeCommonUIRegisterSkinSlotComponents {
 	/**
 	 * @inheritDoc
 	 */
-	public function onMWStakeCommonUIRegisterSkinSlotComponents( $registry ) : void {
+	public function onMWStakeCommonUIRegisterSkinSlotComponents( $registry ): void {
 		$registry->register(
 			'GlobalActionsTools',
 			[
 				'special-specialpages' => [
-					'factory' => function () {
+					'factory' => static function () {
 						return new SpecialSpecialPages();
 					}
 				],
 				'special-alltemplates' => [
-					'factory' => function () {
+					'factory' => static function () {
 						return new SpecialAllTemplates();
 					}
 				],
 				'special-upload' => [
-					'factory' => function () {
+					'factory' => static function () {
 						return new SpecialUpload();
 					}
 				],
 				'special-watchlist' => [
-					'factory' => function () {
+					'factory' => static function () {
 						return new SpecialWatchlist();
 					}
 				]

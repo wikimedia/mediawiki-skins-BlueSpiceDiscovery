@@ -20,14 +20,14 @@ class Footer extends SkinStructureBase {
 	 *
 	 * @return string
 	 */
-	public function getName() : string {
+	public function getName(): string {
 		return 'footer';
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getTemplatePath() : string {
+	public function getTemplatePath(): string {
 		return $GLOBALS['wgStyleDirectory'] .
 			'/BlueSpiceDiscovery/resources/templates/structure/footer';
 	}
@@ -35,7 +35,7 @@ class Footer extends SkinStructureBase {
 	/**
 	 * @return array
 	 */
-	public function getParams() : array {
+	public function getParams(): array {
 		return [
 			'places' => $this->getFooterPlaces()
 		];
@@ -45,7 +45,7 @@ class Footer extends SkinStructureBase {
 	 *
 	 * @return void
 	 */
-	private function getFooterPlaces() : array {
+	private function getFooterPlaces(): array {
 		$footerlinks = $this->template->get( 'footerlinks' );
 		$footerplaces = $footerlinks['places'];
 		$items = [];

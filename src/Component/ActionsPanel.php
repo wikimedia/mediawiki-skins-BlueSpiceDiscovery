@@ -22,21 +22,21 @@ class ActionsPanel extends SimpleCard implements IRestrictedComponent {
 	/**
 	 * @inheritDoc
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'actions-pnl';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getContainerClasses() : array {
+	public function getContainerClasses(): array {
 		return [ 'w-100', 'bg-transp' ];
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getSubComponents() : array {
+	public function getSubComponents(): array {
 		$actionsPrimary = [];
 		$actionsSecondary = [];
 
@@ -103,7 +103,7 @@ class ActionsPanel extends SimpleCard implements IRestrictedComponent {
 	 *
 	 * @return string[]
 	 */
-	public function getPermissions() : array {
+	public function getPermissions(): array {
 		return [ 'read' ];
 	}
 
@@ -132,7 +132,7 @@ class ActionsPanel extends SimpleCard implements IRestrictedComponent {
 				? $this->getFavoritePositions()[$key]
 				: 0;
 		}
-		usort( $links, function ( $e1, $e2 ) {
+		usort( $links, static function ( $e1, $e2 ) {
 			if ( $e1['position'] == $e2['position'] ) {
 				return 0;
 			}

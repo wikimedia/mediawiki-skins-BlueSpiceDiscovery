@@ -20,14 +20,14 @@ class Watch extends SimpleLink {
 	/**
 	 * @inheritDoc
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return $this->getAttributeData( 'id' );
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getClasses() : array {
+	public function getClasses(): array {
 		$class = 'bi-star';
 		if ( $this->getId() === 'ca-unwatch' ) {
 			$class = 'bi-star-fill';
@@ -38,14 +38,14 @@ class Watch extends SimpleLink {
 	/**
 	 * @inheritDoc
 	 */
-	public function getRole() : string {
+	public function getRole(): string {
 		return 'button';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getTitle() : Message {
+	public function getTitle(): Message {
 		$id = $this->getId();
 		// give grep a chance
 		// tooltip-ca-watch
@@ -56,21 +56,21 @@ class Watch extends SimpleLink {
 	/**
 	 * @inheritDoc
 	 */
-	public function getAriaLabel() : Message {
+	public function getAriaLabel(): Message {
 		return Message::newFromKey( 'bs-discovery-sidebar-secondary-watch-link-aria-label' );
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getHref() : string {
+	public function getHref(): string {
 		return $this->getAttributeData( 'href' );
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getDataAttributes() : array {
+	public function getDataAttributes(): array {
 		return $this->getAttributeData( 'data', [] );
 	}
 

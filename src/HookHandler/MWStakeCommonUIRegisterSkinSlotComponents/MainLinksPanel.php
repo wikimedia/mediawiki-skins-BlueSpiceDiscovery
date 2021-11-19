@@ -25,12 +25,12 @@ class MainLinksPanel implements MWStakeCommonUIRegisterSkinSlotComponents {
 	/**
 	 * @inheritDoc
 	 */
-	public function onMWStakeCommonUIRegisterSkinSlotComponents( $registry ) : void {
+	public function onMWStakeCommonUIRegisterSkinSlotComponents( $registry ): void {
 		$links = [];
 		$config = $this->configFactory->makeConfig( 'bsg' );
 		if ( $config->get( 'DiscoveryMainLinksMainpage' ) ) {
 			$links['special-mainpage'] = [
-				'factory' => function () {
+				'factory' => static function () {
 					return new SpecialMainPage();
 				},
 				'position' => 1
@@ -38,7 +38,7 @@ class MainLinksPanel implements MWStakeCommonUIRegisterSkinSlotComponents {
 		}
 		if ( $config->get( 'DiscoveryMainLinksAllPages' ) ) {
 			$links['special-allpages'] = [
-				'factory' => function () {
+				'factory' => static function () {
 					return new SpecialAllPages();
 				},
 				'position' => 30
@@ -46,7 +46,7 @@ class MainLinksPanel implements MWStakeCommonUIRegisterSkinSlotComponents {
 		}
 		if ( $config->get( 'DiscoveryMainLinksRecentChanges' ) ) {
 			$links['special-recentchanges'] = [
-				'factory' => function () {
+				'factory' => static function () {
 					return new SpecialRecentChanges();
 				},
 				'position' => 100

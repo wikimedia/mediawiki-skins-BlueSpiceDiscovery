@@ -80,7 +80,7 @@ abstract class SkinStructureBase implements ISkinStructure {
 	 *
 	 * @return bool
 	 */
-	public function enableRecursivePartials() : bool {
+	public function enableRecursivePartials(): bool {
 		return false;
 	}
 
@@ -89,7 +89,7 @@ abstract class SkinStructureBase implements ISkinStructure {
 	 * @param IContextSource $context
 	 * @return bool
 	 */
-	public function shouldRender( IContextSource $context ) : bool {
+	public function shouldRender( IContextSource $context ): bool {
 		return true;
 	}
 
@@ -97,7 +97,7 @@ abstract class SkinStructureBase implements ISkinStructure {
 	 *
 	 * @return array
 	 */
-	public function getParams() : array {
+	public function getParams(): array {
 		return [];
 	}
 
@@ -106,7 +106,7 @@ abstract class SkinStructureBase implements ISkinStructure {
 	 * @param string $skinSlotRegKey
 	 * @return string
 	 */
-	protected function getSkinSlotHtml( $skinSlotRegKey ) : string {
+	protected function getSkinSlotHtml( $skinSlotRegKey ): string {
 		/** @var MediaWikiServices */
 		$services = MediaWikiServices::getInstance();
 
@@ -125,7 +125,7 @@ abstract class SkinStructureBase implements ISkinStructure {
 	 * @param IComponent $component
 	 * @return string
 	 */
-	protected function getComponentHtml( $component ) : string {
+	protected function getComponentHtml( $component ): string {
 		/** @var MediaWikiServices */
 		$services = MediaWikiServices::getInstance();
 

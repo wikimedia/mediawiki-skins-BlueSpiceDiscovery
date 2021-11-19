@@ -20,49 +20,49 @@ class SidebarSecondaryToggleButton extends SimpleLink {
 	/**
 	 * @inheritDoc
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'sb-sec-tgl-btn';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getSubComponents() : array {
+	public function getSubComponents(): array {
 		return $this->options['items'];
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getClasses() : array {
+	public function getClasses(): array {
 		return [ 'ico-btn', 'bi-wrench', 'sb-toggle' ];
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getRole() : string {
+	public function getRole(): string {
 		return 'button';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getTitle() : Message {
+	public function getTitle(): Message {
 		return $this->getButtonTitle();
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getAriaLabel() : Message {
+	public function getAriaLabel(): Message {
 		return $this->getButtonAriaLabel();
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getDataAttributes() : array {
+	public function getDataAttributes(): array {
 		return [
 			'bs-toggle' => 'collapse',
 			'bs-target' => '#sb-sec-cnt'
@@ -72,7 +72,7 @@ class SidebarSecondaryToggleButton extends SimpleLink {
 	/**
 	 * @inheritDoc
 	 */
-	public function getAriaAttributes() : array {
+	public function getAriaAttributes(): array {
 		return [
 			'expanded' => $this->getExpandedState(),
 			'controls' => 'sb-sec-cnt'
@@ -82,7 +82,7 @@ class SidebarSecondaryToggleButton extends SimpleLink {
 	/**
 	 * @inheritDoc
 	 */
-	public function getHref() : string {
+	public function getHref(): string {
 		return '';
 	}
 
@@ -90,7 +90,7 @@ class SidebarSecondaryToggleButton extends SimpleLink {
 	 *
 	 * @return Message
 	 */
-	private function getButtonTitle() : Message {
+	private function getButtonTitle(): Message {
 		if ( $this->isExpanded !== 'false' ) {
 			return Message::newFromKey( 'bs-discovery-sidebar-secondary-toggle-hide-title' );
 		} else {
@@ -102,7 +102,7 @@ class SidebarSecondaryToggleButton extends SimpleLink {
 	 *
 	 * @return Message
 	 */
-	private function getButtonAriaLabel() : Message {
+	private function getButtonAriaLabel(): Message {
 		if ( $this->isExpanded !== 'false' ) {
 			return Message::newFromKey( 'bs-discovery-sidebar-secondary-toggle-hide-aria-label' );
 		} else {
@@ -114,7 +114,7 @@ class SidebarSecondaryToggleButton extends SimpleLink {
 	 *
 	 * @return string
 	 */
-	private function getExpandedState() : string {
+	private function getExpandedState(): string {
 		if ( $this->isExpanded !== null ) {
 			return $this->isExpanded;
 		} else {

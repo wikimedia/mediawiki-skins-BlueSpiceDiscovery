@@ -69,7 +69,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 * @param array $data
 	 * @return string
 	 */
-	public function getHtml( $data = [] ) : string {
+	public function getHtml( $data = [] ): string {
 		$skinSlots = $this->skinSlotRegistry->getSkinSlots();
 		$items = $skinSlots[static::REG_KEY];
 
@@ -113,7 +113,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 * @param array &$items
 	 * @return void
 	 */
-	protected function sortItems( &$items ) : void {
+	protected function sortItems( &$items ): void {
 		ksort( $items );
 	}
 
@@ -121,7 +121,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 *
 	 * @return string
 	 */
-	protected function getContainerWrapperTag() : string {
+	protected function getContainerWrapperTag(): string {
 		return '';
 	}
 
@@ -129,7 +129,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 *
 	 * @return array
 	 */
-	protected function getContainerWrapperClasses() : array {
+	protected function getContainerWrapperClasses(): array {
 		return [];
 	}
 
@@ -137,7 +137,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 *
 	 * @return string
 	 */
-	protected function getContainerWrapperId() : string {
+	protected function getContainerWrapperId(): string {
 		return '';
 	}
 
@@ -145,7 +145,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 *
 	 * @return array
 	 */
-	protected function getContainerWrapperDataAttributes() : array {
+	protected function getContainerWrapperDataAttributes(): array {
 		return [];
 	}
 
@@ -153,7 +153,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 *
 	 * @return array
 	 */
-	protected function getContainerWrapperAriaAttributes() : array {
+	protected function getContainerWrapperAriaAttributes(): array {
 		return [];
 	}
 
@@ -161,7 +161,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 *
 	 * @return string
 	 */
-	protected function getItemWrapperTag() : string {
+	protected function getItemWrapperTag(): string {
 		return '';
 	}
 
@@ -169,7 +169,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 *
 	 * @return array
 	 */
-	protected function getItemWrapperClasses() : array {
+	protected function getItemWrapperClasses(): array {
 		return [];
 	}
 
@@ -178,7 +178,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 * @param string $id
 	 * @return string
 	 */
-	protected function getItemWrapperId( $id ) : string {
+	protected function getItemWrapperId( $id ): string {
 		return '';
 	}
 
@@ -186,7 +186,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 *
 	 * @return array
 	 */
-	protected function getItemWrapperDataAttributes() : array {
+	protected function getItemWrapperDataAttributes(): array {
 		return [];
 	}
 
@@ -194,7 +194,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 *
 	 * @return array
 	 */
-	protected function getItemWrapperAriaAttributes() : array {
+	protected function getItemWrapperAriaAttributes(): array {
 		return [];
 	}
 
@@ -202,7 +202,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 *
 	 * @return string
 	 */
-	private function buildOpeningConainerWrapperHtml() : string {
+	private function buildOpeningConainerWrapperHtml(): string {
 		$html = $this->buildOpeningHtml(
 			$this->getContainerWrapperTag(),
 			$this->getContainerWrapperId(),
@@ -218,7 +218,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 		 *
 		 * @return string
 		 */
-	private function buildClosingConainerWrapperHtml() : string {
+	private function buildClosingConainerWrapperHtml(): string {
 		$html = $this->buildClosingHtml(
 			$this->getContainerWrapperTag()
 		);
@@ -231,7 +231,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 * @param string $id
 	 * @return string
 	 */
-	private function buildOpeningItemWrapperHtml( $id ) : string {
+	private function buildOpeningItemWrapperHtml( $id ): string {
 		$html = $this->buildOpeningHtml(
 			$this->getItemWrapperTag(),
 			$this->getItemWrapperId( $id ),
@@ -247,7 +247,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 		 *
 		 * @return string
 		 */
-	private function buildClosingItemWrapperHtml() : string {
+	private function buildClosingItemWrapperHtml(): string {
 		$html = $this->buildClosingHtml(
 			$this->getItemWrapperTag()
 		);
@@ -264,7 +264,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 * @param array $data
 	 * @return string
 	 */
-	private function buildOpeningHtml( $tag, $id, $classes, $aria, $data ) : string {
+	private function buildOpeningHtml( $tag, $id, $classes, $aria, $data ): string {
 		if ( $tag === '' ) {
 			return '';
 		}
@@ -299,7 +299,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 * @param string $tag
 	 * @return string
 	 */
-	private function buildClosingHtml( $tag ) : string {
+	private function buildClosingHtml( $tag ): string {
 		if ( $tag === '' ) {
 			return '';
 		}

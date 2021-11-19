@@ -11,9 +11,9 @@ class MainPanelSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 * @param array &$items
 	 * @return void
 	 */
-	protected function sortItems( &$items ) : void {
+	protected function sortItems( &$items ): void {
 		ksort( $items );
-		usort( $items, function ( $itemOne, $itemTwo ) {
+		usort( $items, static function ( $itemOne, $itemTwo ) {
 			$item1SortKey = isset( $itemOne['position'] ) ? $itemOne['position'] : 100;
 			$item2SortKey = isset( $itemTwo['position'] ) ? $itemTwo['position'] : 100;
 
@@ -25,7 +25,7 @@ class MainPanelSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 *
 	 * @return string
 	 */
-	protected function getContainerWrapperTag() : string {
+	protected function getContainerWrapperTag(): string {
 		return 'ul';
 	}
 
@@ -33,7 +33,7 @@ class MainPanelSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 *
 	 * @return array
 	 */
-	protected function getContainerWrapperClasses() : array {
+	protected function getContainerWrapperClasses(): array {
 		return [ 'list-group' ];
 	}
 
@@ -41,7 +41,7 @@ class MainPanelSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 *
 	 * @return array
 	 */
-	protected function getContainerWrapperAriaAttributes() : array {
+	protected function getContainerWrapperAriaAttributes(): array {
 		return [
 			'labelledby' => 'main-links-panel-head'
 		];
@@ -51,7 +51,7 @@ class MainPanelSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 *
 	 * @return string
 	 */
-	protected function getItemWrapperTag() : string {
+	protected function getItemWrapperTag(): string {
 		return 'li';
 	}
 
@@ -59,7 +59,7 @@ class MainPanelSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 *
 	 * @return array
 	 */
-	protected function getItemWrapperClasses() : array {
+	protected function getItemWrapperClasses(): array {
 		return [ 'list-group-item' ];
 	}
 

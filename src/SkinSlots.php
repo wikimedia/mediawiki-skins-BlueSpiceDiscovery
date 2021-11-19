@@ -28,7 +28,7 @@ class SkinSlots {
 	 *
 	 * @return void
 	 */
-	public function init() : void {
+	public function init(): void {
 		// Skin slots
 		$this->createSkinSlot(
 			NavbarPrimaryItemsSkinSlotRenderer::REG_KEY,

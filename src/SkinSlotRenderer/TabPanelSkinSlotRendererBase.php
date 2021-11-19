@@ -30,7 +30,7 @@ abstract class TabPanelSkinSlotRendererBase extends ExtendedSkinSlotRendererBase
 	 * @param array $data
 	 * @return string
 	 */
-	public function getHtml( $data = [] ) : string {
+	public function getHtml( $data = [] ): string {
 		$skinSlots = $this->skinSlotRegistry->getSkinSlots();
 		$items = $skinSlots[static::REG_KEY];
 
@@ -65,7 +65,7 @@ abstract class TabPanelSkinSlotRendererBase extends ExtendedSkinSlotRendererBase
 	 * @param ITabPanel[] $tabPanels
 	 * @return void
 	 */
-	private function findActiveId( $tabPanels ) : void {
+	private function findActiveId( $tabPanels ): void {
 		$first = true;
 		foreach ( $tabPanels as $id => $tabPanel ) {
 			if ( !( $tabPanel instanceof ITabPanel ) ) {
@@ -86,7 +86,7 @@ abstract class TabPanelSkinSlotRendererBase extends ExtendedSkinSlotRendererBase
 	 * @param array $tabPanels
 	 * @return array
 	 */
-	private function buildParams( $tabPanels ) : array {
+	private function buildParams( $tabPanels ): array {
 		$first = true;
 		$mainPanel = [];
 		$otherPanels = [];
@@ -172,7 +172,7 @@ abstract class TabPanelSkinSlotRendererBase extends ExtendedSkinSlotRendererBase
 	 * @param IComponent $component
 	 * @return string
 	 */
-	private function getComponentHtml( $component ) : string {
+	private function getComponentHtml( $component ): string {
 		$componentTree = $this->componentManager->getCustomComponentTree(
 			$component,
 			$this->componentProcessData
@@ -189,7 +189,7 @@ abstract class TabPanelSkinSlotRendererBase extends ExtendedSkinSlotRendererBase
 	/**
 	 * @return string
 	 */
-	public function getTemplatePath() : string {
+	public function getTemplatePath(): string {
 		return $GLOBALS['wgStyleDirectory'] .
 			'/BlueSpiceDiscovery/resources/templates/renderer/stacked-tab-panel-container';
 	}

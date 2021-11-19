@@ -18,7 +18,7 @@ class SpecialMainPage extends RestrictedTextLink {
 	 *
 	 * @return string
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'n-mainpage-description';
 	}
 
@@ -26,7 +26,7 @@ class SpecialMainPage extends RestrictedTextLink {
 	 *
 	 * @return string
 	 */
-	public function getHref() : string {
+	public function getHref(): string {
 		/** @var Title */
 		$mainpage = Title::newMainPage();
 		return $mainpage->getFullURL();
@@ -36,7 +36,7 @@ class SpecialMainPage extends RestrictedTextLink {
 	 *
 	 * @return array
 	 */
-	public function getPermissions() : array {
+	public function getPermissions(): array {
 		return [ 'read' ];
 	}
 
@@ -44,7 +44,7 @@ class SpecialMainPage extends RestrictedTextLink {
 	 *
 	 * @return Message
 	 */
-	public function getText() : Message {
+	public function getText(): Message {
 		return new Message( 'mainpage' );
 	}
 
@@ -52,7 +52,7 @@ class SpecialMainPage extends RestrictedTextLink {
 	 *
 	 * @return Message
 	 */
-	public function getTitle() : Message {
+	public function getTitle(): Message {
 		return new Message( 'mainpage-description' );
 	}
 
@@ -60,7 +60,7 @@ class SpecialMainPage extends RestrictedTextLink {
 	 *
 	 * @return Message
 	 */
-	public function getAriaLabel() : Message {
+	public function getAriaLabel(): Message {
 		return new Message( 'mainpage' );
 	}
 }

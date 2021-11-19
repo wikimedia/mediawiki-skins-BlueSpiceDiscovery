@@ -14,7 +14,7 @@ class SidebarPrimary extends StackedTabPanelContainerBase {
 	/**
 	 * @return string
 	 */
-	public function getName() : string {
+	public function getName(): string {
 		return 'sidebar-primary';
 	}
 
@@ -22,7 +22,7 @@ class SidebarPrimary extends StackedTabPanelContainerBase {
 	 *
 	 * @return string
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'sb-pri';
 	}
 
@@ -30,7 +30,7 @@ class SidebarPrimary extends StackedTabPanelContainerBase {
 	 *
 	 * @return string
 	 */
-	public function getTabPanelRegistryKey() : string {
+	public function getTabPanelRegistryKey(): string {
 		return $this->registryKey;
 	}
 

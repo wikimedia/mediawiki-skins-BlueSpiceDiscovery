@@ -11,14 +11,14 @@ class DataBeforeContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 * @param array &$items
 	 * @return void
 	 */
-	protected function sortItems( &$items ) : void {
+	protected function sortItems( &$items ): void {
 	}
 
 	/**
 	 *
 	 * @return string
 	 */
-	protected function getContainerWrapperTag() : string {
+	protected function getContainerWrapperTag(): string {
 		return 'div';
 	}
 
@@ -26,7 +26,7 @@ class DataBeforeContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 *
 	 * @return string
 	 */
-	protected function getContainerWrapperId() : string {
+	protected function getContainerWrapperId(): string {
 		return 'data-before-content';
 	}
 
@@ -34,7 +34,7 @@ class DataBeforeContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 *
 	 * @return string
 	 */
-	protected function getItemWrapperTag() : string {
+	protected function getItemWrapperTag(): string {
 		return 'div';
 	}
 
@@ -43,7 +43,7 @@ class DataBeforeContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 * @param string $id
 	 * @return string
 	 */
-	protected function getItemWrapperId( $id ) : string {
+	protected function getItemWrapperId( $id ): string {
 		return $id . '-cnt';
 	}
 }

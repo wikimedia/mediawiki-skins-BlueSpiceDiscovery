@@ -8,7 +8,7 @@ class BlueSpice extends SkinLayoutBase {
 	 *
 	 * @return string
 	 */
-	public function getName() : string {
+	public function getName(): string {
 		return 'bluespice';
 	}
 }

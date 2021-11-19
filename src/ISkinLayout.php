@@ -8,18 +8,18 @@ interface ISkinLayout {
 	 *
 	 * @return string
 	 */
-	public function getName() : string;
+	public function getName(): string;
 
 	/**
 	 * Parse templates recursive
 	 *
 	 * @return bool
 	 */
-	public function enableRecursivePartials() : bool;
+	public function enableRecursivePartials(): bool;
 
 	/**
 	 *
 	 * @return array
 	 */
-	public function getSkinStructureElements() : array;
+	public function getSkinStructureElements(): array;
 }

@@ -19,7 +19,7 @@ class SpecialRecentChanges extends RestrictedTextLink {
 	 *
 	 * @return string
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'n-recentchanges';
 	}
 
@@ -27,7 +27,7 @@ class SpecialRecentChanges extends RestrictedTextLink {
 	 *
 	 * @return string
 	 */
-	public function getHref() : string {
+	public function getHref(): string {
 		/** @var Title */
 		$specialpage = SpecialPage::getTitleFor( 'RecentChanges' );
 		return $specialpage->getLocalURL();
@@ -37,7 +37,7 @@ class SpecialRecentChanges extends RestrictedTextLink {
 	 *
 	 * @return array
 	 */
-	public function getPermissions() : array {
+	public function getPermissions(): array {
 		return [ 'read' ];
 	}
 
@@ -45,7 +45,7 @@ class SpecialRecentChanges extends RestrictedTextLink {
 	 *
 	 * @return Message
 	 */
-	public function getText() : Message {
+	public function getText(): Message {
 		return new Message( 'recentchanges' );
 	}
 
@@ -53,7 +53,7 @@ class SpecialRecentChanges extends RestrictedTextLink {
 	 *
 	 * @return Message
 	 */
-	public function getTitle() : Message {
+	public function getTitle(): Message {
 		return new Message( 'recentchanges' );
 	}
 
@@ -61,7 +61,7 @@ class SpecialRecentChanges extends RestrictedTextLink {
 	 *
 	 * @return Message
 	 */
-	public function getAriaLabel() : Message {
+	public function getAriaLabel(): Message {
 		return new Message( 'recentchanges' );
 	}
 }

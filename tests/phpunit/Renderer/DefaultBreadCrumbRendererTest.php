@@ -46,7 +46,7 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 
 		$mockUser = $this->createMock( User::class );
 		$mockMessageLocalizer = $this->createMock( MessageLocalizer::class );
-		$mockMessageLocalizer->method( 'msg' )->willReturnCallback( function ( $messageKey ) {
+		$mockMessageLocalizer->method( 'msg' )->willReturnCallback( static function ( $messageKey ) {
 			return Message::newFromKey( $messageKey );
 		} );
 
@@ -68,7 +68,7 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 			$actualLabels[] = $label['text'];
 		}
 
-		$actualLabels = array_map( function ( $actualLabelMsg ) {
+		$actualLabels = array_map( static function ( $actualLabelMsg ) {
 			/** @var Message $actualLabelMsg */
 			return $actualLabelMsg->getKey();
 		}, $actualLabels );

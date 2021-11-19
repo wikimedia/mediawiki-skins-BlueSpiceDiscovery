@@ -1,6 +1,6 @@
 <?php
 
-namespace  BlueSpice\Discovery\HookHandler\MWStakeCommonUIRegisterSkinSlotComponents;
+namespace BlueSpice\Discovery\HookHandler\MWStakeCommonUIRegisterSkinSlotComponents;
 
 use BlueSpice\Discovery\Component\ExportOptions;
 use BlueSpice\Discovery\Component\ShareOptions;
@@ -12,22 +12,22 @@ class SidebarSecondaryToolbar implements MWStakeCommonUIRegisterSkinSlotComponen
 	/**
 	 * @inheritDoc
 	 */
-	public function onMWStakeCommonUIRegisterSkinSlotComponents( $registry ) : void {
+	public function onMWStakeCommonUIRegisterSkinSlotComponents( $registry ): void {
 		$registry->register(
 			'ToolbarPanel',
 			[
 				'watch' => [
-					'factory' => function () {
+					'factory' => static function () {
 						return new Watch();
 					}
 				],
 				'share' => [
-					'factory' => function () {
+					'factory' => static function () {
 						return new ShareOptions();
 					}
 				],
 				'export' => [
-					'factory' => function () {
+					'factory' => static function () {
 						return new ExportOptions();
 					}
 				],

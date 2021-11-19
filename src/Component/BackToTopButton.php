@@ -18,7 +18,7 @@ class BackToTopButton extends SimpleLink {
 	/**
 	 * @inheritDoc
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'back-to-top';
 	}
 
@@ -32,28 +32,28 @@ class BackToTopButton extends SimpleLink {
 	/**
 	 * @inheritDoc
 	 */
-	public function getRole() : string {
+	public function getRole(): string {
 		return 'button';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getTitle() : Message {
+	public function getTitle(): Message {
 		return Message::newFromKey( 'bs-discovery-back-to-top-text' );
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getAriaLabel() : Message {
+	public function getAriaLabel(): Message {
 		return Message::newFromKey( 'bs-discovery-back-to-top-aria-label' );
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getHref() : string {
+	public function getHref(): string {
 		return '';
 	}
 
@@ -61,7 +61,7 @@ class BackToTopButton extends SimpleLink {
 	 *
 	 * @return array
 	 */
-	public function getSubComponents() : array {
+	public function getSubComponents(): array {
 		return [
 			new Literal(
 				'back-to-top-text',

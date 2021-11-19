@@ -16,7 +16,7 @@ abstract class NavbarBase extends SkinStructureBase {
 	 * @param IContextSource $context
 	 * @return bool
 	 */
-	public function shouldRender( IContextSource $context ) : bool {
+	public function shouldRender( IContextSource $context ): bool {
 		return true;
 	}
 }

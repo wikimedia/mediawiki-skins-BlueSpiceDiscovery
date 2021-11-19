@@ -15,7 +15,7 @@ class SidebarSecondary extends StackedTabPanelContainerBase {
 	/**
 	 * @return string
 	 */
-	public function getName() : string {
+	public function getName(): string {
 		return 'sidebar-secondary';
 	}
 
@@ -23,7 +23,7 @@ class SidebarSecondary extends StackedTabPanelContainerBase {
 	 *
 	 * @return string
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'sb-sec';
 	}
 
@@ -31,7 +31,7 @@ class SidebarSecondary extends StackedTabPanelContainerBase {
 	 *
 	 * @return string
 	 */
-	public function getTabPanelRegistryKey() : string {
+	public function getTabPanelRegistryKey(): string {
 		return $this->registryKey;
 	}
 
@@ -54,7 +54,7 @@ class SidebarSecondary extends StackedTabPanelContainerBase {
 	 *
 	 * @return array
 	 */
-	public function getParams() : array {
+	public function getParams(): array {
 		$params = parent::getParams();
 		$params = array_merge(
 			$params,
@@ -72,7 +72,7 @@ class SidebarSecondary extends StackedTabPanelContainerBase {
 	/**
 	 * @return string
 	 */
-	public function getTemplatePath() : string {
+	public function getTemplatePath(): string {
 		return $GLOBALS['wgStyleDirectory'] .
 			'/BlueSpiceDiscovery/resources/templates/structure/stacked-tab-panel-container-with-close-btn';
 	}

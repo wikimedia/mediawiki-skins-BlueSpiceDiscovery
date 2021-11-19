@@ -31,14 +31,14 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	/**
 	 * @inheritDoc
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'ta-edit-btn';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getHref() : string {
+	public function getHref(): string {
 		$context = RequestContext::getMain();
 		$title = $context->getTitle();
 		return $title->getFullURL( [ 'veaction' => 'edit' ] );
@@ -47,14 +47,14 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	/**
 	 * @return array
 	 */
-	public function getContainerClasses() : array {
+	public function getContainerClasses(): array {
 		return $this->options['container-classes'];
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getButtonClasses() : array {
+	public function getButtonClasses(): array {
 		$classes = [ 'ico-btn' ];
 		$actions = $this->getEditActions();
 		if ( empty( $actions ) ) {
@@ -66,56 +66,56 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	/**
 	 * @return array
 	 */
-	public function getSplitButtonClasses() : array {
+	public function getSplitButtonClasses(): array {
 		return [ 'dropdown-icon' ];
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getMenuClasses() : array {
+	public function getMenuClasses(): array {
 		return [ 'mws-dropdown-secondary', 'dropdown-menu-end' ];
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getIconClasses() : array {
+	public function getIconClasses(): array {
 		return [ 'bi-pencil-fill' ];
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getButtonTitle() : Message {
+	public function getButtonTitle(): Message {
 		return Message::newFromKey( 'bs-discovery-title-action-edit-button-title' );
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getSplitButtonTitle() : Message {
+	public function getSplitButtonTitle(): Message {
 		return Message::newFromKey( 'bs-discovery-title-action-edit-button-title' );
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getButtonAriaLabel() : Message {
+	public function getButtonAriaLabel(): Message {
 		return Message::newFromKey( 'bs-discovery-title-action-edit-button-aria-label' );
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getSplitButtonAriaLabel() : Message {
+	public function getSplitButtonAriaLabel(): Message {
 		return Message::newFromKey( 'bs-discovery-title-action-edit-button-aria-label' );
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getSubComponents() : array {
+	public function getSubComponents(): array {
 		return [
 			new SimpleDropdownItemlistFromArray( [
 				'id' => 'new-content-itms',
@@ -130,7 +130,7 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	 * @param IContextSource $context
 	 * @return bool
 	 */
-	public function shouldRender( IContextSource $context ) : bool {
+	public function shouldRender( IContextSource $context ): bool {
 		$user = $context->getUser();
 		$title = $context->getTitle();
 		$userCan = $this->permissionManager->quickUserCan( 'edit', $user, $title );
@@ -144,7 +144,7 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	 *
 	 * @return array
 	 */
-	private function getEditActions() : array {
+	private function getEditActions(): array {
 		$edit = [];
 		if ( isset( $this->componentProcessData['panel'] )
 			&& isset( $this->componentProcessData['panel']['edit'] ) ) {

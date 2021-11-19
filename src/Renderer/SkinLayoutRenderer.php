@@ -24,7 +24,7 @@ class SkinLayoutRenderer implements ISkinLayoutRenderer {
 	 * @param SkinLayout $skinLayout
 	 * @return SkinLayoutRenderer
 	 */
-	public static function factory( $skinLayout ) : ISkinLayoutRenderer {
+	public static function factory( $skinLayout ): ISkinLayoutRenderer {
 		return new SkinLayoutRenderer( $skinLayout );
 	}
 
@@ -32,7 +32,7 @@ class SkinLayoutRenderer implements ISkinLayoutRenderer {
 	 *
 	 * @return string
 	 */
-	public function getHtml() : string {
+	public function getHtml(): string {
 		$templateParser = new TemplateParser(
 			$this->getTemplatePath()
 		);
@@ -52,7 +52,7 @@ class SkinLayoutRenderer implements ISkinLayoutRenderer {
 	 *
 	 * @return array
 	 */
-	private function getAllStructureElementsHtml() : array {
+	private function getAllStructureElementsHtml(): array {
 		$params = [];
 		$skinStructureElements = $this->skinLayout->getSkinStructureElements();
 		foreach ( $skinStructureElements as $skinStructureElement ) {
@@ -67,7 +67,7 @@ class SkinLayoutRenderer implements ISkinLayoutRenderer {
 	 *
 	 * @return string
 	 */
-	public function getTemplatePath() : string {
+	public function getTemplatePath(): string {
 		$layoutRegistry = ExtensionRegistry::getInstance()->getAttribute(
 			'BlueSpiceDiscoveryLayoutRegistry'
 		);

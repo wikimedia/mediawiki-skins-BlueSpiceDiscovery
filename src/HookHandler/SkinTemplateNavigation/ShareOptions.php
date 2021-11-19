@@ -14,7 +14,7 @@ class ShareOptions implements SkinTemplateNavigation__UniversalHook {
 	 * @param array &$links
 	 * @return void
 	 */
-	public function onSkinTemplateNavigation__Universal( $sktemplate, &$links ) : void {
+	public function onSkinTemplateNavigation__Universal( $sktemplate, &$links ): void {
 		/**
 		 * Unfortunately the `VectorTemplateTest::testGetMenuProps` from `Skin:Vector` will break
 		 * in `REL1_35`, as it does not properly clear out all hook handlers.

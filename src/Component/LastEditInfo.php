@@ -59,7 +59,7 @@ class LastEditInfo extends Literal {
 	 *
 	 * @return string
 	 */
-	public function getHtml() : string {
+	public function getHtml(): string {
 		return $this->buildHtml();
 	}
 
@@ -67,7 +67,7 @@ class LastEditInfo extends Literal {
 	 *
 	 * @return string
 	 */
-	private function buildHtml() : string {
+	private function buildHtml(): string {
 		$html = '';
 		$this->requestContext = RequestContext::getMain();
 		$title = Title::newFromDbKey(
@@ -105,7 +105,7 @@ class LastEditInfo extends Literal {
 	 * @param RevisionRecord|null $revision
 	 * @return string
 	 */
-	private function buildRevisionDiffLink( $wikiPage, $revision ) : string {
+	private function buildRevisionDiffLink( $wikiPage, $revision ): string {
 		$html = '';
 		$rawTimestamp = $revision->getTimestamp();
 		/** @var Timestamp */
@@ -138,7 +138,7 @@ class LastEditInfo extends Literal {
 	 * @param RevisionRecord|null $revision
 	 * @return string
 	 */
-	private function buildLastEditorLink( $wikiPage, $revision ) : string {
+	private function buildLastEditorLink( $wikiPage, $revision ): string {
 		$html = '';
 		$userIdentity = $revision->getUser();
 		$user = User::newFromId( $userIdentity->getId() );

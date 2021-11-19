@@ -6,13 +6,13 @@ use BlueSpice\Discovery\TemplateDataProvider;
 use MediaWiki\MediaWikiServices;
 
 return [
-	'BlueSpiceDiscoveryTemplateDataProvider' => function ( MediaWikiServices $services ) {
+	'BlueSpiceDiscoveryTemplateDataProvider' => static function ( MediaWikiServices $services ) {
 		$panelManager = new TemplateDataProvider(
 			$services->getHookContainer()
 		);
 		return $panelManager;
 	},
-	'BlueSpiceDiscoveryCookieHandler' => function ( MediaWikiServices $services ) {
+	'BlueSpiceDiscoveryCookieHandler' => static function ( MediaWikiServices $services ) {
 		$panelManager = new CookieHandler( new WebRequest );
 		return $panelManager;
 	},

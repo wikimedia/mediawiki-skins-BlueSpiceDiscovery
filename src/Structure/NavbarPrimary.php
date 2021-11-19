@@ -20,14 +20,14 @@ class NavbarPrimary extends NavbarBase {
 	/**
 	 * @return string
 	 */
-	public function getName() : string {
+	public function getName(): string {
 		return 'navbar-primary';
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getTemplatePath() : string {
+	public function getTemplatePath(): string {
 		return $GLOBALS['wgStyleDirectory'] .
 			'/BlueSpiceDiscovery/resources/templates/structure/navbar-primary';
 	}
@@ -36,7 +36,7 @@ class NavbarPrimary extends NavbarBase {
 	 *
 	 * @return void
 	 */
-	private function fetchSkinSlotNavbarPrimarySearchFormHtml() : void {
+	private function fetchSkinSlotNavbarPrimarySearchFormHtml(): void {
 		$this->skinComponents['search-form'] = $this->getSkinSlotHtml(
 			NavbarPrimarySearchFormSkinSlotRenderer::REG_KEY
 		);
@@ -46,7 +46,7 @@ class NavbarPrimary extends NavbarBase {
 	 *
 	 * @return void
 	 */
-	private function fetchSkinSlotNavbarPrimaryItemsHtml() : void {
+	private function fetchSkinSlotNavbarPrimaryItemsHtml(): void {
 		$this->skinComponents['navbar-items'] = $this->getSkinSlotHtml(
 			NavbarPrimaryItemsSkinSlotRenderer::REG_KEY
 		);
@@ -129,7 +129,7 @@ class NavbarPrimary extends NavbarBase {
 	 *
 	 * @return array
 	 */
-	public function getParams() : array {
+	public function getParams(): array {
 		$cookieHandler = new CookieHandler( $this->template->getSkin()->getRequest() );
 		$expanded = $cookieHandler->getCookie( 'sb-pri-cnt' );
 		$mainpage = Title::newMainPage();
@@ -164,7 +164,7 @@ class NavbarPrimary extends NavbarBase {
 	 * @param IContextSource $context
 	 * @return string
 	 */
-	public function shouldRender( IContextSource $context ) : bool {
+	public function shouldRender( IContextSource $context ): bool {
 		return true;
 	}
 
@@ -173,7 +173,7 @@ class NavbarPrimary extends NavbarBase {
 	 * @param string $expanded
 	 * @return Message
 	 */
-	private function getSidebarPrimaryToggleButtonTitle( $expanded ) : Message {
+	private function getSidebarPrimaryToggleButtonTitle( $expanded ): Message {
 		if ( $expanded !== 'false' ) {
 			return Message::newFromKey( 'bs-discovery-sidebar-primary-toggle-hide-title' );
 		} else {
@@ -186,7 +186,7 @@ class NavbarPrimary extends NavbarBase {
 	 * @param string $expanded
 	 * @return Message
 	 */
-	private function getSidebarPrimaryToggleButtonAriaLabel( $expanded ) : Message {
+	private function getSidebarPrimaryToggleButtonAriaLabel( $expanded ): Message {
 		if ( $expanded !== 'false' ) {
 			return Message::newFromKey( 'bs-discovery-sidebar-primary-toggle-hide-aria-label' );
 		} else {
@@ -199,7 +199,7 @@ class NavbarPrimary extends NavbarBase {
 	 * @param string $expanded
 	 * @return string
 	 */
-	private function getSidebarPrimaryToggleExpandedState( $expanded ) : string {
+	private function getSidebarPrimaryToggleExpandedState( $expanded ): string {
 		if ( $expanded !== null ) {
 			return $expanded;
 		} else {

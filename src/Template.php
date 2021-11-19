@@ -35,7 +35,7 @@ class Template extends BaseTemplate {
 	 *
 	 * @return bool
 	 */
-	private function processSkinLayout() : bool {
+	private function processSkinLayout(): bool {
 		$services = MediaWikiServices::getInstance();
 		$TemplateDataProvider = $services->getService( 'BlueSpiceDiscoveryTemplateDataProvider' );
 		$TemplateDataProvider->init( $this );
