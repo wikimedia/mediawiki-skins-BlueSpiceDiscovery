@@ -72,6 +72,20 @@ ul.bs-social-entitylist .bs-social-entity-edit-mode form textarea {
 	margin: 0;
 	width: 65%;
 }
+.bs-social-entity.bs-social-entity-output-Short.resolved > .bs-social-entity-wrapper > .bs-social-entity-right,
+.bs-social-entity.bs-social-entity-output-Default.resolved > .bs-social-entity-wrapper > .bs-social-entity-right,
+.bs-social-entity.bs-social-entity-output-Page.resolved > .bs-social-entity-wrapper > .bs-social-entity-right,
+.bs-social-entity.bs-social-entity-output-Short.archived > .bs-social-entity-wrapper > .bs-social-entity-right,
+.bs-social-entity.bs-social-entity-output-Default.archived > .bs-social-entity-wrapper > .bs-social-entity-right,
+.bs-social-entity.bs-social-entity-output-Page.archived > .bs-social-entity-wrapper > .bs-social-entity-right {
+	background-color: var(--discussion-section-bg) !important;
+}
+.resolved .bs-social-entity-content {
+	background-color: #d9f2da;
+}
+.archived .bs-social-entity-content {
+	background-color: #f1d8d8;
+}
 .bs-social-entity-content p {
 	padding: 5px;
 	margin-top: 0.5rem;
@@ -168,6 +182,7 @@ ul.bs-social-entitylist {
 
 /* entitylist in content */
 #content ul.entitylist {
+	border-radius: 5px;
 	padding-right: 10px !important;
 }
 .bs-social-entity-profileleftcolumn .bs-social-entity-profilefields {
