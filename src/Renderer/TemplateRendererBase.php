@@ -7,17 +7,18 @@ use TemplateParser;
 
 abstract class TemplateRendererBase implements ITemplateRenderer {
 
-	/**
-	 *
-	 * @var array
-	 */
-	private $options = [];
+	/** @var array|null */
+	protected $options;
+	/** @var string */
+	private $templateName = '';
+	/** @var string */
+	private $templatePath = '';
 
 	/**
 	 *
-	 * @param array $options
+	 * @param array|null $options
 	 */
-	public function __construct( $options ) {
+	public function __construct( $options = [] ) {
 		$this->options = $options;
 	}
 

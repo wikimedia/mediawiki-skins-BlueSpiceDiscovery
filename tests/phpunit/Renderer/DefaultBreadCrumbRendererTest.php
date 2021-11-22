@@ -36,7 +36,7 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 	 * @param array $expectedLabels
 	 * @return void
 	 * @dataProvider provideGetParamsTestData
-	 * @covers BlueSpice\Discovery\Renderer\DefaultBreadCrumbRenderer::getParams
+	 * @covers \BlueSpice\Discovery\Renderer\DefaultBreadCrumbRenderer::getParams
 	 */
 	public function testGetParams( $title, $webRequestValues, $expectedRootNodeUrl,
 		$expectedLeafNodeUrl, $expectedLabels ) {
@@ -97,9 +97,9 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 			'specialpage-with-title-in-path' => [
 				Title::newFromText( 'Special:Move/Dummy/ABC' ),
 				[ 'action' => 'history' ],
-				'/wiki/Main_Page',
-				'/wiki/Dummy/ABC',
-				[ 'move', 'bs-discovery-breadcrumb-label-action-history' ]
+				'/wiki/Special:SpecialPages',
+				'/wiki/Special:Move',
+				[ 'bs-discovery-breadcrumb-label-action-history' ]
 			],
 			// We don't have SMW enabled on WMF CI
 			// TODO: Implement proper integration

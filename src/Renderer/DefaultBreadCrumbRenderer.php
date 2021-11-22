@@ -2,53 +2,65 @@
 
 namespace BlueSpice\Discovery\Renderer;
 
+use MediaWiki\Special\SpecialPageFactory;
 use MessageLocalizer;
 use NamespaceInfo;
 use RawMessage;
 use Title;
 use TitleFactory;
+use User;
 
 class DefaultBreadCrumbRenderer extends TemplateRendererBase {
+	/**
+	 * SpecialPages where "subpage" params will not be evaluated
+	 *
+	 * Could be a config or a registry but that's too much overhead
+	 * since i can think of any other SP that needs to be blacklisted
+	 * @var string[]
+	 */
+	private $specialPageLabelBlacklist = [
+		'Ask'
+	];
 
 	/**
 	 * @var User
 	 */
-	private $user = null;
+	private $user;
 
 	/**
 	 * @var Title
 	 */
-	private $title = null;
+	private $title;
 
 	/**
 	 *
 	 * @var array
 	 */
-	private $webRequestValues = null;
+	private $webRequestValues;
 
 	/**
 	 *
 	 * @var MessageLocalizer
 	 */
-	private $messageLocalizer = null;
+	private $messageLocalizer;
 
 	/**
 	 *
 	 * @var TitleFactory
 	 */
-	private $titleFactory = null;
+	private $titleFactory;
 
 	/**
 	 *
 	 * @var SpecialPageFactory
 	 */
-	private $specialPageFactory = null;
+	private $specialPageFactory;
 
 	/**
 	 *
 	 * @var NamespaceInfo
 	 */
-	private $namespaceInfo = null;
+	private $namespaceInfo;
 
 	/**
 	 *
@@ -67,6 +79,8 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	 * @var bool
 	 */
 	private $specialName = false;
+	/** @var array */
+	private $specialPageParams = [];
 
 	/**
 	 * @param Title $title
@@ -79,12 +93,12 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	 */
 	public function __construct( $title, $user, $webRequestValues, $messageLocalizer,
 		$titleFactory, $specialPageFactory, $namespaceInfo ) {
+		parent::__construct();
+
 		$this->title = $title;
 		$this->user = $user;
 		$this->webRequestValues = $webRequestValues;
 		$this->messageLocalizer = $messageLocalizer;
-		$this->talkName = false;
-		$this->specialName = false;
 		$this->titleFactory = $titleFactory;
 		$this->specialPageFactory = $specialPageFactory;
 		$this->namespaceInfo = $namespaceInfo;
@@ -113,26 +127,17 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 
 		// `Special:Move/Talk:Some_Page/with/Subpage`
 		if ( $this->relevantTitle->isSpecialPage() ) {
-			$this->specialName = true;
+			$this->specialName = $this->relevantTitle->getDBkey();
 			$fullPageTitle = $this->relevantTitle->getPrefixedDBkey();
-
-			// `[ "Special:Move", "Talk:Some_Page/with/Subpage" ]`
-			$titleParts = explode( '/', $fullPageTitle, 2 );
-			if ( count( $titleParts ) === 2 ) {
-				$this->specialTitle = $titleParts[0];
-				$this->relevantTitle = $this->titleFactory->newFromText( $titleParts[1] );
-			} else {
-				$this->specialTitle = $titleParts[0];
+			if ( class_exists( 'SMW\Encoder' ) ) {
+				$fullPageTitle = \SMW\Encoder::decode( $fullPageTitle );
 			}
 
-			// e.g. Special:Browse/:Main-5FPage
-			if ( $this->relevantTitle instanceof Title && class_exists( 'SMW\Encoder' ) ) {
-				$SMWtitle = $this->titleFactory->newFromText(
-					\SMW\Encoder::decode( $this->relevantTitle->getPrefixedText() )
-				);
-				if ( $SMWtitle !== null ) {
-					$this->relevantTitle = $SMWtitle;
-				}
+			// `[ "Special:Move/MyPage", "Talk:Some_Page/with/Subpage" ]`
+			$titleParts = explode( '/', $fullPageTitle );
+			$this->relevantTitle = $this->titleFactory->newFromText( array_shift( $titleParts ) );
+			if ( !empty( $titleParts ) ) {
+				$this->specialPageParams = $titleParts;
 			}
 		}
 
@@ -167,6 +172,7 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 			}
 		}
 
+		$titleMainPage = null;
 		if ( $this->title->isSpecialPage() ) {
 			if ( strpos( $this->title->getBaseText(), '/' ) ) {
 				$fullPageTitle = $this->relevantTitle->getPrefixedDBkey();
@@ -178,19 +184,18 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 					$rootNodeText = $this->messageLocalizer->msg(
 						'bs-discovery-breadcrumb-nav-node-ns-main' )->plain();
 				}
-
 			} else {
 				$this->specialName = false;
 				$this->relevantTitle = $this->title;
-
-				$titleMainPage = $this->specialPageFactory->getTitleForAlias( 'Specialpages' );
-				if ( strpos( $titleMainPage, ':' ) ) {
-					$titleParts = explode( ':', $titleMainPage );
-					$rootNodeText = $titleParts[0];
-				}
 			}
+			$titleMainPage = $this->specialPageFactory->getTitleForAlias( 'Specialpages' );
+			if ( strpos( $titleMainPage, ':' ) ) {
+				$titleParts = explode( ':', $titleMainPage );
+				$rootNodeText = $titleParts[0];
+			}
+			$rootNodeUrl = $titleMainPage->getLocalURL();
 		}
-		if ( !isset( $titleMainPage ) ) {
+		if ( $titleMainPage === null ) {
 			$titleMainPage = Title::makeTitleSafe( $this->relevantTitle->getNamespace(),
 			Title::newMainPage()->getDBkey() );
 		}
@@ -291,18 +296,17 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	private function buildLabels() {
 		$labels = [];
 		if ( $this->talkName === true ) {
-			$label['text'] = $this->messageLocalizer->msg( 'bs-discovery-breadcrumb-label-talk' );
-			array_push( $labels, $label );
+			$labels[] = [
+				'text' => $this->messageLocalizer->msg( 'bs-discovery-breadcrumb-label-talk' )
+			];
 		}
-		if ( $this->specialName === true ) {
-			$specialLabel = explode( ':', $this->specialTitle );
-			$msgKey = 'bs-discovery-breadcrumb-label-special-' . strtolower( $specialLabel[1] );
-			$msgText = $this->messageLocalizer->msg( $msgKey );
-			if ( !$msgText->exists() ) {
-				$msgText = new RawMessage( strtolower( $specialLabel[1] ) );
+		if ( $this->specialName ) {
+			$special = $this->specialPageFactory->getPage( $this->specialName );
+			if ( $special && !in_array( $special->getName(), $this->specialPageLabelBlacklist ) ) {
+				foreach ( $this->specialPageParams as $param ) {
+					$labels[] = [ 'text' => new RawMessage( $param ) ];
+				}
 			}
-			$label['text'] = $msgText;
-			array_push( $labels, $label );
 		}
 		if ( isset( $this->webRequestValues['action'] ) ) {
 			$msgKey = 'bs-discovery-breadcrumb-label-action-' . $this->webRequestValues['action'];
@@ -310,8 +314,7 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 			if ( !$msgText->exists() ) {
 				$msgText = new RawMessage( $this->webRequestValues['action'] );
 			}
-			$label['text'] = $msgText;
-			array_push( $labels, $label );
+			$labels[] = [ 'text' => $msgText ];
 		}
 
 		$this->options['labels'] = $labels;
