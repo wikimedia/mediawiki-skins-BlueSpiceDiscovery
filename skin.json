@@ -355,7 +355,8 @@
 		},
 		"skin.discovery.back-to-top.styles": {
 			"styles": {
-				"stylesheets/structure/back-to-top.css": {}
+				"stylesheets/structure/back-to-top.css": {},
+				"stylesheets/structure/back-to-top.sm.css": { "media": "all and ( max-width: 767px )" }
 			}
 		},
 		"skin.discovery.back-to-top.scripts": {
