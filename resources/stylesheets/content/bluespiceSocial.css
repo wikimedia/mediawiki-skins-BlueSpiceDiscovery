@@ -14,6 +14,12 @@ ul.bs-social-entitylist {
 }
 
 /* input forms */
+.bs-social-entity.bs-social-entity-output-Short.dirty > form,
+.bs-social-entity.bs-social-entity-output-Default.dirty > form,
+.bs-social-entity.bs-social-entity-output-Page.dirty > form,
+.bs-social-entity.bs-social-entity-output-List.dirty > form {
+	background-color: transparent !important;
+}
 ul.bs-social-entitylist .bs-social-entity-edit-mode form.short input,
 ul.bs-social-entitylist .bs-social-entity-edit-mode form.short textarea {
 	border-radius: 10px !important;
