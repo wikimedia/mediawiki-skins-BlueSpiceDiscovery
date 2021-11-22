@@ -9,6 +9,9 @@
 	padding: 0;
 	z-index: 1050;
 }
+#nb-pri > .row {
+	height: var(--navbar-primary-height);
+}
 .navbar button:focus-visible {
 	outline: 0;
 	box-shadow: 0 0 0 .1em var(--focus-visible);
