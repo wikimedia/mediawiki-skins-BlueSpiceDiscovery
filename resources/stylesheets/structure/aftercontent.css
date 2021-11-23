@@ -27,7 +27,8 @@
 }
 
 #aftercontent a {
-	color: var(--link-fg);
+	text-decoration: none;
+	color: var( --aftercontent-tools-fg );
 }
 #aftercontent a:hover {
 	color: var(--content-fg-primary);
