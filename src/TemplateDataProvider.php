@@ -45,7 +45,6 @@ class TemplateDataProvider implements ITemplateDataProvider {
 		$this->content_navigation = $template->get( 'content_navigation' );
 		$this->sidebar = $template->get( 'sidebar' );
 		$this->personal_urls = $template->get( 'personal_urls' );
-
 		$this->managedLinks = [
 			'panel' => $this->collectPanelLinks(),
 			'actioncollection' => $this->collectActionLinks(),
@@ -300,7 +299,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 * @return void
 	 */
 	private function makePanelShare(): void {
-		$idList = [ 't-permalink', 'ca-sharebymail' ];
+		$idList = [ 't-permalink', 't-sharebymail' ];
 		$this->registerLinks( 'panel/share', $idList );
 	}
 
@@ -372,7 +371,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 * @return void
 	 */
 	private function makePanelCreate(): void {
-		$idList = [ 'ca-new-page', 'ca-new-subpage', 'ca-new-file' ];
+		$idList = [ 'ca-new-page', 'ca-new-subpage', 't-new-file' ];
 		$this->registerLinks( 'panel/create', $idList );
 	}
 
@@ -404,9 +403,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 		foreach ( $this->content_navigation['namespaces'] as $key => $link ) {
 			$this->register( 'actioncollection/namespaces', $link['id'] );
 		}
-		$this->register( 'actioncollection/namespaces', 'ca-new-page' );
-		$this->register( 'actioncollection/namespaces', 'ca-new-subpage' );
-		$this->register( 'actioncollection/namespaces', 'ca-new-file' );
+		$this->register( 'actioncollection/namespaces', 't-new-file' );
 		$this->register( 'actioncollection/namespaces', 'ca-new-section' );
 	}
 
@@ -418,10 +415,6 @@ class TemplateDataProvider implements ITemplateDataProvider {
 		foreach ( $this->content_navigation['actions'] as $key => $link ) {
 			$this->register( 'actioncollection/actions', $link['id'] );
 		}
-		$this->unregister( 'actioncollection/actions', 'ca-new-page' );
-		$this->unregister( 'actioncollection/actions', 'ca-new-subpage' );
-		$this->unregister( 'actioncollection/actions', 'ca-new-file' );
-		$this->unregister( 'actioncollection/actions', 'ca-new-section' );
 		$this->unregister( 'actioncollection/actions', 'ca-readers' );
 		$this->unregister( 'actioncollection/actions', 'ca-sharebymail' );
 	}
