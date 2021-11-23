@@ -19,7 +19,7 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	 * @var string[]
 	 */
 	private $specialPageLabelBlacklist = [
-		'Ask'
+		'Ask', 'Browse'
 	];
 
 	/**
@@ -124,13 +124,15 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	 */
 	private function extractRelevantTitle() {
 		$this->relevantTitle = $this->title;
-
 		// `Special:Move/Talk:Some_Page/with/Subpage`
 		if ( $this->relevantTitle->isSpecialPage() ) {
 			$this->specialName = $this->relevantTitle->getDBkey();
 			$fullPageTitle = $this->relevantTitle->getPrefixedDBkey();
 			if ( class_exists( 'SMW\Encoder' ) ) {
-				$fullPageTitle = \SMW\Encoder::decode( $fullPageTitle );
+				$decoded = \SMW\Encoder::decode( $fullPageTitle );
+				if ( $decoded ) {
+					$fullPageTitle = $decoded;
+				}
 			}
 
 			// `[ "Special:Move/MyPage", "Talk:Some_Page/with/Subpage" ]`
@@ -171,7 +173,6 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 				$rootNodeText = $this->title->getSubjectNsText();
 			}
 		}
-
 		$titleMainPage = null;
 		if ( $this->title->isSpecialPage() ) {
 			if ( strpos( $this->title->getBaseText(), '/' ) ) {
@@ -304,6 +305,7 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 			$special = $this->specialPageFactory->getPage( $this->specialName );
 			if ( $special && !in_array( $special->getName(), $this->specialPageLabelBlacklist ) ) {
 				foreach ( $this->specialPageParams as $param ) {
+					$param = trim( $param, ':/' );
 					$labels[] = [ 'text' => new RawMessage( $param ) ];
 				}
 			}
