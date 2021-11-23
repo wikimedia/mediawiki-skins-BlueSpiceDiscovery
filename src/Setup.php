@@ -36,9 +36,9 @@ class Setup {
 
 		$lessVars->setVar( 'content-bg', '#fff' );
 		$lessVars->setVar( 'content-fg', '#252525' );
-		$lessVars->setVar( 'link-fg', '#747474' );
-		$lessVars->setVar( 'new-link-fg', '#ba0000' );
-		$lessVars->setVar( 'content-font-size', '14px' );
+		$lessVars->setVar( 'link-fg', '#3e5389' );
+		$lessVars->setVar( 'new-link-fg', '#bd1d1d' );
+		$lessVars->setVar( 'content-font-size', '15px' );
 
 		$lessVars->setVar( 'content-h1-fg', '#252525' );
 		$lessVars->setVar( 'content-h1-font-size', '2rem' );

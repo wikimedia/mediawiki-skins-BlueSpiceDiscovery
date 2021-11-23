@@ -1,7 +1,7 @@
 body.mediawiki {
 	background-color: var( --footer-bg );
 	font-family: 'Lato';
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: 400;
 
 	/* scrollbar for FF */
