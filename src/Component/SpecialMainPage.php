@@ -63,4 +63,12 @@ class SpecialMainPage extends RestrictedTextLink {
 	public function getAriaLabel() : Message {
 		return new Message( 'mainpage' );
 	}
+
+	/**
+	 *
+	 * @return string
+	 */
+	public function getTarget() : string {
+		return '_blank';
+	}
 }
