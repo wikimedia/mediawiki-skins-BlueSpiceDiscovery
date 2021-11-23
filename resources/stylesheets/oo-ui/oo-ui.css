@@ -5,11 +5,9 @@
 	/* header has 1050 */
 	z-index: 1051 !important;
 }
-
-.oo-ui-labelElement-label {
-	font-size: 15px;
-}
-
 .oo-ui-defaultOverlay .mw-widget-dateInputWidget-calendar {
 	z-index: 199 !important;
+}
+.alert .oo-ui-horizontalLayout > .oo-ui-widget {
+	margin-bottom: 0;
 }
