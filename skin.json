@@ -152,8 +152,9 @@
 		"share-options": {
 			"class": "\\BlueSpice\\Discovery\\HookHandler\\SkinTemplateNavigation\\ShareOptions"
 		},
-		"permalink": {
-			"class": "\\BlueSpice\\Discovery\\HookHandler\\SidebarBeforeOutput\\Permalink"
+		"sidebar": {
+			"class": "\\BlueSpice\\Discovery\\HookHandler\\SidebarBeforeOutput\\AddSidebarLinks",
+			"services": [ "PermissionManager" ]
 		},
 		"body-classes": {
 			"class": "\\BlueSpice\\Discovery\\HookHandler\\OutputPageBodyAttributes\\AddToBodyAttributes"
@@ -174,7 +175,7 @@
 			"share-options"
 		],
 		"SidebarBeforeOutput": [
-			"permalink"
+			"sidebar"
 		],
 		"OutputPageBodyAttributes": [
 			"body-classes"
