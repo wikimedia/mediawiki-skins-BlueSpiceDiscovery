@@ -37,7 +37,8 @@ class Footer extends SkinStructureBase {
 	 */
 	public function getParams(): array {
 		return [
-			'places' => $this->getFooterPlaces()
+			'places' => $this->getFooterPlaces(),
+			'icons' => $this->getFooterIcons()
 		];
 	}
 
@@ -55,6 +56,16 @@ class Footer extends SkinStructureBase {
 				'body' => $this->template->get( $footerplace, '' )
 			];
 		}
+		return $items;
+	}
+
+	/**
+	 * @return array
+	 */
+	private function getFooterIcons(): array {
+		$items = [];
+		$footericons = $this->template->get( 'footericons' );
+		$items = $footericons['poweredby'];
 		return $items;
 	}
 }
