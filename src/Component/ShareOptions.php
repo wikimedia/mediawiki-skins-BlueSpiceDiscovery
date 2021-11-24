@@ -49,7 +49,7 @@ class ShareOptions extends SimpleDropdownIcon {
 	 * @return array
 	 */
 	public function getIconClasses() : array {
-		return [ 'ico-btn', 'bi-link-45deg' ];
+		return [ 'ico-btn', 'bi-share' ];
 	}
 
 	/**
