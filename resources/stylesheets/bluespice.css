@@ -98,3 +98,7 @@ label {
 .ve-activated.ve-active #title-actions {
 	visibility: hidden;
 }
+
+#title-section #mw-indicator-mw-helplink {
+	display: none;
+}
