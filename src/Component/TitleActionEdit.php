@@ -41,7 +41,14 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	public function getHref(): string {
 		$context = RequestContext::getMain();
 		$title = $context->getTitle();
-		return $title->getFullURL( [ 'veaction' => 'edit' ] );
+		$actionType = 'action';
+
+		$veNamespace = $GLOBALS['wgVisualEditorAvailableNamespaces'] ?? [];
+		$ns = $title->getNamespace();
+		if ( isset( $veNamespace[$ns] ) && $veNamespace[$ns] ) {
+			$actionType = 'veaction';
+		}
+		return $title->getFullURL( [ $actionType => 'edit' ] );
 	}
 
 	/**
