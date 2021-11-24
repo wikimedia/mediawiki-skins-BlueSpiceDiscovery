@@ -73,10 +73,9 @@ h4:hover .mw-editsection, h5:hover .mw-editsection, h6:hover .mw-editsection {
 	visibility: visible;
 	opacity: 1;
 }
-/*#content .mw-editsection a {
+#content .mw-editsection a {
 	color: var(--content-fg-secondary);
-	text-decoration: underline;
 }
 #content .mw-editsection a:hover {
 	color: var(--content-fg-primary);
-}*/
+}

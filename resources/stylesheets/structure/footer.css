@@ -22,6 +22,7 @@
 #footer li a {
 	color: var(--footer-fg);
 	font-size: 0.8rem;
+	text-decoration: none;
 }
 #footer li a:hover{
 	color: var(--footer-fg--hover);
