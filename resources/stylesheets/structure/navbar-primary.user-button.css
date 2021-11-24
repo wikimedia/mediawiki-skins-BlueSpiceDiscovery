@@ -1,6 +1,7 @@
 #usr-login {
 	color: var(--navbar-primary-fg);
 	text-decoration: none;
+	margin: 0 0.5rem;
 }
 #usr-login:hover {
 	color: var(--navbar-primary-fg--hover);
