@@ -47,7 +47,3 @@
 	padding-left: var(--sidebar-secondary-width);
 	padding-right: var(--sidebar-primary-width);
 }
-
-#title-line.fixTitle {
-	width: 60%;
-}
