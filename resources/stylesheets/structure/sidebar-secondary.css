@@ -6,6 +6,7 @@
 	font-family: 'Lato';
 	font-size: 15px;
 	border-left: 0.05px solid var(--sidebar-primary-border-marker);
+	z-index: 1000;
 }
 #sb-sec {
 	height: 100%;

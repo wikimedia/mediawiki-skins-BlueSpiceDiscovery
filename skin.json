@@ -247,7 +247,8 @@
 				"stylesheets/megamenu.css": {},
 				"stylesheets/oo-ui/oo-ui.css": {},
 				"stylesheets/mediawiki.ui/components/radio.css": {},
-				"stylesheets/control/versionpager.css": {}
+				"stylesheets/control/versionpager.css": {},
+				"stylesheets/fixes/ve-fixes.css": {}
 			}
 		},
 		"skin.discovery.bluespice.themes.default": {
