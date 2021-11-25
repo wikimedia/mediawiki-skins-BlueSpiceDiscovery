@@ -31,7 +31,7 @@ class Setup {
 		$lessVars->setVar( 'sidebar-fg', '#252525' );
 		$lessVars->setVar( 'sidebar-highlight', '#3e5389' );
 
-		$lessVars->setVar( 'footer-bg', '#d3d3d3' );
+		$lessVars->setVar( 'footer-bg', '#d8d8d9' );
 		$lessVars->setVar( 'footer-fg', '#454545' );
 
 		$lessVars->setVar( 'content-bg', '#fff' );

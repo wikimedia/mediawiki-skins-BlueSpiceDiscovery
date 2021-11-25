@@ -22,8 +22,14 @@ ul.bs-social-entitylist {
 }
 ul.bs-social-entitylist .bs-social-entity-edit-mode form.short input,
 ul.bs-social-entitylist .bs-social-entity-edit-mode form.short textarea {
-	border-radius: 10px !important;
+	border-radius: 5px !important;
 	width: auto !important;
+	font-weight: bold;
+	text-align: center;
+}
+ul.bs-social-entitylist .bs-social-entity-edit-mode form.short input:hover,
+ul.bs-social-entitylist .bs-social-entity-edit-mode form.short textarea:hover {
+	cursor: pointer;
 }
 .bs-social-entity.bs-social-entity-edit-mode form.oo-ui-formLayout.oo-ui-layout {
 	margin-bottom: 15px;
@@ -55,6 +61,9 @@ ul.bs-social-entitylist .bs-social-entity-edit-mode form textarea {
 }
 
 /* entity userimage */
+.bs-social-entity .bs-social-entity-userimage .bs-userminiprofile img {
+	border-radius: 50%;
+}
 .bs-social-entitylist-children .bs-social-entitylist .bs-social-entity .bs-social-entity-userimage .bs-userminiprofile img {
 	height: 35px;
 	width: 35px;
@@ -68,13 +77,12 @@ ul.bs-social-entitylist .bs-social-entity-edit-mode form textarea {
 }
 .bs-social-entity .bs-social-entitylist .bs-social-entity-userimage {
 	z-index: 2;
-	margin-top: 0px !important;
 }
 
 /* entity content */
 .bs-social-entity-content {
 	background-color: var(--discussion-content-bg);
-	border-radius: 10px;
+	border-radius: 5px;
 	margin: 0;
 	width: 65%;
 }
@@ -96,6 +104,7 @@ ul.bs-social-entitylist .bs-social-entity-edit-mode form textarea {
 	padding: 5px;
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
+	color: var(--footer-fg);
 }
 .bs-social-entity-comment .bs-social-entity-content {
 	width: 60%;
@@ -190,6 +199,7 @@ ul.bs-social-entitylist {
 #content ul.entitylist {
 	border-radius: 5px;
 	padding-right: 10px !important;
+	border-radius: 5px;
 }
 .bs-social-entity-profileleftcolumn .bs-social-entity-profilefields {
 	margin-bottom: 0;
