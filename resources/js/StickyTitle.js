@@ -11,6 +11,7 @@
 				$( '#title-line' ).width( titleWidth );
 			} else {
 				$( '#title-line' ).removeClass( 'title-fixed' );
+				$( '#title-line' ).width( '100%' );
 			}
 		});
 	}
