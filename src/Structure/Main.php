@@ -43,7 +43,7 @@ class Main extends SkinStructureBase {
 		$this->fetchSkinSlotTitleActions();
 		$this->fetchTitleActionEdit();
 		$this->fetchTitleActionFullscreenButton();
-		$this->fetchSubTitles();
+		$this->fetchRedirect();
 		$this->fetchSkinSlotDataAfterTitle();
 		$this->fetchUndelete();
 		$this->fetchIndicators();
@@ -133,8 +133,18 @@ class Main extends SkinStructureBase {
 	 *
 	 * @return void
 	 */
-	private function fetchSubTitles() {
-		$this->skinComponents['subtitles'] = $this->template->get( 'subtitle' );
+	private function fetchRedirect() {
+		// We only want the redirect here
+		$subtitles = $this->template->get( 'subtitle' );
+		$matches = [];
+		$hasRedirect = preg_match(
+			'#(<span class="mw-redirectedfrom">)(.*?)(<\/span>)#',
+			$subtitles,
+			$matches
+		);
+		if ( $hasRedirect ) {
+			$this->skinComponents['redirect'] = $matches[0];
+		}
 	}
 
 	/**
