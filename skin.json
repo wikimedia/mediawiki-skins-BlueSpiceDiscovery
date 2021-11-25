@@ -320,7 +320,9 @@
 				"stylesheets/content/images.css": {},
 				"stylesheets/content/content.toc.css": {},
 				"stylesheets/structure/userminiprofile.css": {},
-				"stylesheets/content/bluespiceSocial.css": {}
+				"stylesheets/content/bluespiceSocial.css": {},
+				"stylesheets/content/bluespiceSocial.sm.css": {  "media": "all and ( max-width: 720px )" },
+				"stylesheets/content/bluespiceSocial.xl.css": {  "media": "all and ( min-width: 1024px )" }
 			}
 		},
 		"skin.discovery.aftercontent.styles": {

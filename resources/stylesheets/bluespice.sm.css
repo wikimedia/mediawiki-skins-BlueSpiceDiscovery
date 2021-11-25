@@ -22,3 +22,19 @@
 .ve-init-target-source > .ve-ui-toolbar-floating > .oo-ui-toolbar-bar{
 	top: calc( 2 * var( --navbar-primary-height ) );
 }
+
+#aftercontent > .inner {
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+}
+#tools-after-content {
+	padding-left: 2.5rem;
+	padding-right: 3rem;
+}
+#data-after-content {
+	margin: 0;
+	width: 100%;
+	padding-left: 2.5rem;
+	padding-right: 3rem;
+}
