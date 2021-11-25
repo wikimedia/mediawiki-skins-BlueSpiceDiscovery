@@ -1,4 +1,4 @@
-.oo-ui-windowManager-modal > .oo-ui-dialog {
+body.mediawiki .oo-ui-windowManager-modal > .oo-ui-dialog {
 	background-color: rgba(62,83,137, 0.3) !important;
 	font-family: 'Lato';
 	font-size: 15px;
@@ -6,7 +6,7 @@
 	z-index: 1051 !important;
 }
 .oo-ui-defaultOverlay .mw-widget-dateInputWidget-calendar {
-	z-index: 199 !important;
+	z-index: 1051;
 }
 .alert .oo-ui-horizontalLayout > .oo-ui-widget {
 	margin-bottom: 0;
