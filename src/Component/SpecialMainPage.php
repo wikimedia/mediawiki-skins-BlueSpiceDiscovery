@@ -29,7 +29,7 @@ class SpecialMainPage extends RestrictedTextLink {
 	public function getHref() : string {
 		/** @var Title */
 		$mainpage = Title::newMainPage();
-		return $mainpage->getFullURL();
+		return $mainpage->getLocalURL();
 	}
 
 	/**
@@ -62,13 +62,5 @@ class SpecialMainPage extends RestrictedTextLink {
 	 */
 	public function getAriaLabel() : Message {
 		return new Message( 'mainpage' );
-	}
-
-	/**
-	 *
-	 * @return string
-	 */
-	public function getTarget() : string {
-		return '_blank';
 	}
 }
