@@ -6,7 +6,7 @@
 	margin: 0 auto;
 	font-family: 'Lato';
 	font-size: var(--content-font-size);
-	min-height: 450px;
+	min-height: calc( 100vh - var(--navbar-primary-height) - calc( 2 * calc( var(--footer-height) + var(--aftercontent-height) ) ) );
 	padding-bottom: calc( var(--footer-height) + var(--aftercontent-height) + 5px );
 }
 #title-section {
