@@ -10,6 +10,26 @@ class GlobalActionsManagerSkinSlotRenderer extends ExtendedSkinSlotRendererBase 
 
 	/**
 	 *
+	 * @param array &$items
+	 * @return void
+	 */
+	protected function sortItems( &$items ): void {
+		$helper = [];
+		foreach ( $items as $itemid => $item ) {
+			if ( !isset( $item[ 'id' ] ) || empty( $item[ 'id' ] ) ) {
+				$item[ 'id' ] = "bs-ga-link-$itemid";
+			}
+			$component = call_user_func_array( $item[ 'factory' ], [] );
+			$text = $component->getText()->text();
+			$helper[ $text ] = $item;
+		}
+
+		ksort( $helper );
+		$items = array_values( $helper );
+	}
+
+	/**
+	 *
 	 * @param array $data
 	 * @return string
 	 */
