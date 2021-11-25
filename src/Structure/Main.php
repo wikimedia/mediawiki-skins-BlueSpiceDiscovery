@@ -43,7 +43,7 @@ class Main extends SkinStructureBase {
 		$this->fetchSkinSlotTitleActions();
 		$this->fetchTitleActionEdit();
 		$this->fetchTitleActionFullscreenButton();
-		// $this->fetchSubTitles(); // TODO: This renders a subpage list but we have our breadcrumbs. Remove this?
+		$this->fetchSubTitles();
 		$this->fetchSkinSlotDataAfterTitle();
 		$this->fetchUndelete();
 		$this->fetchIndicators();
