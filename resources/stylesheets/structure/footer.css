@@ -7,17 +7,20 @@
 	left:0;
 	position: relative;
 }
-#footer ul {
+#footer .inner {
+	justify-content: space-between;
 	margin: 0 auto;
 	max-width: var(--footer-max-width);
-	padding-left: 2.5rem;
-	padding-right: 3rem;
-	padding-bottom: 20px;
+}
+#footer ul {
+	display: inline;
+	padding-left: 0;
+	margin-left: 0;
 }
 #footer ul li {
 	display: inline;
 	list-style-type: none;
-	padding-right: 1.5rem;
+	padding-left: 1rem;
 }
 #footer li a {
 	color: var(--footer-fg);
@@ -31,4 +34,11 @@
 	outline: 0;
 	border-radius: 50rem;
 	box-shadow: 0 0 0 .1em var(--focus-visible);
+}
+#footer-icons {
+	float: right;
+}
+#footer-icons li {
+	padding-left: 1rem;
+	padding-right: 0;
 }
