@@ -365,7 +365,8 @@
 		},
 		"skin.discovery.footer.styles": {
 			"styles": {
-				"stylesheets/structure/footer.css": {}
+				"stylesheets/structure/footer.css": {},
+				"stylesheets/structure/footer.sm.css": { "media": "all and ( max-width: 767px )" }
 			}
 		},
 		"skin.discovery.watch.scripts": {
