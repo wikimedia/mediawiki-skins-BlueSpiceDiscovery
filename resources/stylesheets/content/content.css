@@ -16,7 +16,7 @@
 
 #mw-content-text a,
 [class^="mw-content-"] a {
-	color: var( --link-fg );
+	color: var(--link-fg);
 	font-size: inherit;
 	font-weight: inherit;
 	text-decoration: none;
@@ -35,7 +35,7 @@
 }
 #mw-content-text a:visited,
 [class^="mw-content-"] a:visited {
-	color: var(--visited-link-fg);
+	color: var(--link-fg);
 }
 #mw-content-text a.external:after {
 	font-family: 'bootstrap-icons';
