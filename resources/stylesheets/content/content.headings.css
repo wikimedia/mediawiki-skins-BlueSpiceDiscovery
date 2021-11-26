@@ -3,7 +3,6 @@ h1, h2, h3, h4, h5, h6 {
 	padding-top: 0;
 }
 h1#firstHeading {
-	font-family: 'Lato';
 	font-size: var(--content-h1-font-size);
 	font-weight: var(--content-h1-font-weight);
 	color: var(--content-h1-fg);
