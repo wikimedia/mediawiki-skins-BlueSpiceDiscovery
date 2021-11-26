@@ -301,8 +301,7 @@
 				"stylesheets/structure/navbar-primary.logo.css": {},
 				"stylesheets/structure/navbar-primary.search-form.css": {},
 				"stylesheets/structure/navbar-primary.language-button.css": {},
-				"stylesheets/structure/navbar-primary.user-button.css": {},
-				"stylesheets/content/extendedSearchBar.css": {}
+				"stylesheets/structure/navbar-primary.user-button.css": {}
 			}
 		},
 		"skin.discovery.main.styles": {
