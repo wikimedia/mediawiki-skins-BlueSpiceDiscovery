@@ -3,7 +3,6 @@
 	color: var(--sidebar-primary-fg);
 	border-left: 1px solid var(--sidebar-primary-border);
 	padding-top: 15px;
-	font-family: 'Lato';
 	font-size: 15px;
 	border-left: 0.05px solid var(--sidebar-primary-border-marker);
 	z-index: 1000;

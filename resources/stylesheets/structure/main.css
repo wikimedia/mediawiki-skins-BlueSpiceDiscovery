@@ -4,7 +4,6 @@
 	padding-right: 3rem;
 	max-width: var(--content-max-width);
 	margin: 0 auto;
-	font-family: 'Lato';
 	font-size: var(--content-font-size);
 	min-height: calc( 100vh - var(--navbar-primary-height) - calc( 2 * calc( var(--footer-height) + var(--aftercontent-height) ) ) );
 	padding-bottom: calc( var(--footer-height) + var(--aftercontent-height) + 5px );
@@ -28,13 +27,6 @@
 }
 main .alert label {
 	font-size: 0.875rem;
-}
-#content {
-	margin: 0 auto;
-	font-family: 'Lato';
-	font-size: var(--content-font-size);
-	height: 100%;
-	color: var( --content-fg-primary );
 }
 .fs-mode-enabled #main {
 	max-width: 100vw;

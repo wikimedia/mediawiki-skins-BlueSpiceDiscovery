@@ -249,7 +249,8 @@
 				"stylesheets/mediawiki.ui/components/radio.css": {},
 				"stylesheets/control/versionpager.css": {},
 				"stylesheets/fixes/ve-fixes.css": {},
-				"stylesheets/fixes/mw-fixes.css": {}
+				"stylesheets/fixes/mw-fixes.css": {},
+				"stylesheets/fixes/extjs-fixes.css": {}
 			}
 		},
 		"skin.discovery.bluespice.themes.default": {

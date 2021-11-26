@@ -58,7 +58,6 @@
 }
 .card-header.menu-title {
 	color: var(--mm-primary-title-fg);
-	font-family: 'Lato';
 	font-size: 1rem;
 	border-bottom: 0.3px solid var(--mm-primary-title-border);
 	background-color: var(--mm-primary-title-bg);
@@ -77,7 +76,6 @@
 	padding-bottom: 5px;
 	border: 0;
 	padding-left: 0;
-	font-family: 'Lato';
 	font-size: 15px;
 }
 .list-group.menu-list li a:hover {

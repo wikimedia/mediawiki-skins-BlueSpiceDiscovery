@@ -21,7 +21,6 @@
 }
 #nb-pri form input {
 	height: 40px;
-	font-family: 'Lato';
 	font-size: 15px;
 	background-color: var(--navbar-primary-searchform-bg);
 	border-color: var(--navbar-primary-searchform-bg);/*var(--navbar-primary-searchform-border);*/
