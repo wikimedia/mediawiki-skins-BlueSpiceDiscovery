@@ -1,0 +1,4 @@
+/* Fix notification settings popup */
+body.mediawiki .mw-echo-ui-overlay {
+	z-index: 2;
+}
