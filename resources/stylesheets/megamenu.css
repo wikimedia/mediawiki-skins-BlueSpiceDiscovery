@@ -15,6 +15,9 @@
 	color: var(--mm-primary-fg);
 	hyphens: auto;
 }
+.dropdown-menu[data-bs-popper].megamenu {
+	margin-top: 0px;
+}
 .dropdown-menu.megamenu a {
 	background-size: 0 0;
 	padding: 0;
@@ -39,6 +42,7 @@
 	border-radius: 0;
 	padding-left: 20px;
 	padding-right: 20px;
+	box-shadow: inset 0 2px 3px -2px var(--navbar-primary-border-color);
 }
 .card.card-mn {
 	border: 0;
