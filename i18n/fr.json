@@ -1,11 +1,32 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajeje Brazorf"
+			"Ajeje Brazorf",
+			"Gomoko"
 		]
 	},
+	"bs-discovery-desc": "Habillage BlueSpice",
+	"bs-discovery-skip-links-navigation-aria-label": "Sauter aux liens",
+	"bs-discovery-skip-to-navbar-primary-text": "Sauver à la barre de navigation principale",
+	"bs-discovery-skip-to-sidebar-primary-text": "Sauter à la barre latérale principale",
+	"bs-discovery-skip-to-sidebar-secondary-text": "Sauter à la barre latérale secondaire",
+	"bs-discovery-skip-to-main-text": "Sauter au contenu principal",
+	"bs-discovery-back-to-top-text": "Retour au début",
+	"bs-discovery-back-to-top-aria-label": "Retour au début",
+	"bs-discovery-navbar-aria-label": "Barre de navigation",
+	"bs-discovery-navbar-search-form-input-aria-label": "Entrée du formulaire de saisie",
 	"bs-discovery-navbar-user-button-title": "Menu utilisateur",
 	"bs-discovery-navbar-user-button-aria-label": "Menu utilisateur",
+	"bs-discovery-navbar-user-button-personal-menu-text": "Outils personnels",
+	"bs-discovery-navbar-user-login-text": "Connexion",
+	"bs-discovery-navbar-user-login-title": "Connexion",
+	"bs-discovery-navbar-user-login-aria-label": "Connexion",
+	"bs-discovery-logo-return-to-aria-label": "Retour à $1",
+	"bs-discovery-searchform-button-title": "Rechercher maintenant",
+	"bs-discovery-searchform-button-aria-label": "Rechercher maintenant",
+	"bs-discovery-searchform-input-placeholder": "Votre terme de recherche",
+	"bs-discovery-searchform-input-aria-label": "Saisir votre terme de recherche ici",
+	"bs-discovery-header-create-button-text": "Nouveau",
 	"bs-discovery-header-create-button-title": "Créer une nouvelle page",
 	"bs-discovery-header-create-button-aria-label": "Créer une nouvelle page",
 	"bs-discovery-create-button-new-section-text": "Nouvelle section",
@@ -18,6 +39,7 @@
 	"bs-discovery-navbar-languages-button-text": "Langues",
 	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Espace de noms",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Pages",
+	"bs-discovery-breadcrumb-nav-node-portal-page": "Accueil",
 	"bs-discovery-sidebar-secondary-share-sharebymail-subject": "$1 : $2",
 	"bs-discovery-sidebar-actions-heading": "Actions",
 	"bs-discovery-sidebar-details-heading": "Détails",
