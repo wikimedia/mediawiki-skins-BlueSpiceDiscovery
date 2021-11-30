@@ -1,10 +1,11 @@
 #content {
-	font-family: 'Lato';
+	font-family: var(--content-font-family);
 	font-size: var( --content-font-size );
 	color: var( --content-fg-primary );
+	font-weight: var(--content-font-weight);
 }
 #content p {
-	font-weight: normal;
+	font-weight: var(--content-font-weight);
 	line-height: 150%;
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
