@@ -38,7 +38,16 @@ class Setup {
 		$lessVars->setVar( 'content-fg', '#252525' );
 		$lessVars->setVar( 'link-fg', '#3e5389' );
 		$lessVars->setVar( 'new-link-fg', '#bd1d1d' );
+
+		$lessVars->setVar( 'font-weight-light', '300' );
+		$lessVars->setVar( 'font-weight-regular', '400' );
+		$lessVars->setVar( 'font-weight-medium', '500' );
+		$lessVars->setVar( 'font-weight-bold', '700' );
+
 		$lessVars->setVar( 'content-font-size', '15px' );
+		$lessVars->setVar( 'content-font-weight', '@font-weight-regular' );
+		$lessVars->setVar( 'content-primary-font-family', '"Lato"' );
+		$lessVars->setVar( 'content-font-family', '@content-primary-font-family, "sans-serif"' );
 
 		$lessVars->setVar( 'content-h1-fg', '#252525' );
 		$lessVars->setVar( 'content-h1-font-size', '2rem' );
