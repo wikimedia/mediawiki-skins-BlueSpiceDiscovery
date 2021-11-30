@@ -192,7 +192,8 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 			$titleMainPage = $this->specialPageFactory->getTitleForAlias( 'Specialpages' );
 			if ( strpos( $titleMainPage, ':' ) ) {
 				$titleParts = explode( ':', $titleMainPage );
-				$rootNodeText = $titleParts[0];
+				$rootNodeText = $this->relevantTitle->getPageLanguage()->getNsText(
+					$this->relevantTitle->getNamespace() );
 			}
 			$rootNodeUrl = $titleMainPage->getLocalURL();
 		}
