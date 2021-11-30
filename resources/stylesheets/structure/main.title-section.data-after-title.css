@@ -2,3 +2,6 @@
 	color: var(--title-nav-fg);
 	font-size: 0.875rem;
 }
+#data-after-title a.dropdown-toggle {
+	color: var(--title-nav-fg);
+}
