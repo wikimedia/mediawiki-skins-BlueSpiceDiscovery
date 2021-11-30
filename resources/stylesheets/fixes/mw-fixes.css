@@ -2,3 +2,7 @@
 body.mediawiki .mw-echo-ui-overlay {
 	z-index: 2;
 }
+
+.mw-echo-ui-datedSubGroupListWidget-title-primary {
+	margin-right: 0.5em;
+}
