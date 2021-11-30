@@ -5,7 +5,6 @@
 .last-edit-info a {
 	color: var(--title-nav-fg);
 	font-weight: bold;
-	text-decoration: none;
 }
 .last-edit-info a:hover {
 	color: var(--title-nav-fg--hover);
