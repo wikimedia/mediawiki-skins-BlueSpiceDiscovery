@@ -85,7 +85,7 @@ class LanguageButton extends SimpleDropdownIcon {
 		$currentLanguageClass = 'wiki-' . $currentLanguageParts[0];
 
 		/** @var array|bool $languages */
-		$languages = $this->componentProcessData['template']['languages'];
+		$languages = $this->componentProcessData['panel']['languages'];
 
 		/** @var LinkFormatter */
 		$linkFormatter = new LinkFormatter();
