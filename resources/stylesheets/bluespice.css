@@ -67,18 +67,12 @@ label {
 	display: none;
 }
 
-/* VisualEditor */
-.ve-init-target-visual > .ve-ui-toolbar-floating > .oo-ui-toolbar-bar,
-.ve-init-target-source > .ve-ui-toolbar-floating > .oo-ui-toolbar-bar{
-	top: calc(var(--navbar-primary-height) + var( --sticky-title-height ));
-}
-
 /* sticky title */
 #title-line.title-fixed {
 	position: fixed;
 	left: 50%;
 	top: var(--navbar-primary-height);
-	height: var( --sticky-title-height );
+	height: auto;
 	max-width: var(--content-max-width);
 	transform: translateX(-50%);
 	z-index: 500;
