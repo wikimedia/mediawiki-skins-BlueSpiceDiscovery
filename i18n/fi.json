@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"MITO"
+			"MITO",
+			"Rönttönen"
 		]
 	},
 	"bs-discovery-skip-to-main-text": "Siirry sisältöön",
@@ -25,7 +26,7 @@
 	"bs-discovery-create-button-new-file-title": "Tallenna uusi tiedosto",
 	"bs-discovery-navbar-global-actions-button-title": "Järjestelmänlaajuiset toiminnot",
 	"bs-discovery-navbar-global-actions-button-aria-label": "Järjestelmänlaajuiset toiminnot",
-	"bs-discovery-navbar-global-actions-tool-text": "Järjestelmänlaajuiset toiminnot",
+	"bs-discovery-navbar-global-actions-tool-text": "Työkalut",
 	"bs-discovery-navbar-global-actions-manager-text": "Hallinta",
 	"bs-discovery-navbar-languages-button-text": "Kielet",
 	"bs-discovery-navbar-language-button-title": "Valitse kieli",
