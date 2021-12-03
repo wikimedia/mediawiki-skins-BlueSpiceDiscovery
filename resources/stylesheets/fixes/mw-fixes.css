@@ -6,3 +6,7 @@ body.mediawiki .mw-echo-ui-overlay {
 .mw-echo-ui-datedSubGroupListWidget-title-primary {
 	margin-right: 0.5em;
 }
+
+body.mediawiki .mw-notification-area {
+	top: var(--navbar-primary-height);
+}
