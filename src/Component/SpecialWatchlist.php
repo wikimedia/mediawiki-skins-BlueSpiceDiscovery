@@ -48,9 +48,9 @@ class SpecialWatchlist extends RestrictedTextLink {
 	 * @return Message
 	 */
 	public function getText(): Message {
-		$name = MediaWikiServices::getInstance()->getSpecialPageFactory()->
-		getLocalNameFor( 'Watchlist', false );
-		return new RawMessage( $name );
+		$specialpage = MediaWikiServices::getInstance()->getSpecialPageFactory()
+		->getPage( 'Watchlist' );
+		return new RawMessage( $specialpage->getDescription() );
 	}
 
 	/**
@@ -58,9 +58,9 @@ class SpecialWatchlist extends RestrictedTextLink {
 	 * @return Message
 	 */
 	public function getTitle(): Message {
-		$name = MediaWikiServices::getInstance()->getSpecialPageFactory()->
-		getLocalNameFor( 'Watchlist', false );
-		return new RawMessage( $name );
+		$specialpage = MediaWikiServices::getInstance()->getSpecialPageFactory()
+		->getPage( 'Watchlist' );
+		return new RawMessage( $specialpage->getDescription() );
 	}
 
 	/**
@@ -68,8 +68,8 @@ class SpecialWatchlist extends RestrictedTextLink {
 	 * @return Message
 	 */
 	public function getAriaLabel(): Message {
-		$name = MediaWikiServices::getInstance()->getSpecialPageFactory()->
-		getLocalNameFor( 'Watchlist', false );
-		return new RawMessage( $name );
+		$specialpage = MediaWikiServices::getInstance()->getSpecialPageFactory()
+		->getPage( 'Watchlist' );
+		return new RawMessage( $specialpage->getDescription() );
 	}
 }

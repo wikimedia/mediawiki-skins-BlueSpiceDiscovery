@@ -21,7 +21,7 @@ class SpecialSpecialPages extends RestrictedTextLink {
 	 *
 	 * @return string
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'ga-special-specialpages';
 	}
 
@@ -29,7 +29,7 @@ class SpecialSpecialPages extends RestrictedTextLink {
 	 *
 	 * @return string
 	 */
-	public function getHref() : string {
+	public function getHref(): string {
 		/** @var Title */
 		$specialpage = SpecialPage::getTitleFor( 'Specialpages' );
 		return $specialpage->getLocalURL();
@@ -39,7 +39,7 @@ class SpecialSpecialPages extends RestrictedTextLink {
 	 *
 	 * @return array
 	 */
-	public function getPermissions() : array {
+	public function getPermissions(): array {
 		return [ 'edit' ];
 	}
 
@@ -47,29 +47,29 @@ class SpecialSpecialPages extends RestrictedTextLink {
 	 *
 	 * @return Message
 	 */
-	public function getText() : Message {
-		$name = MediaWikiServices::getInstance()->getSpecialPageFactory()->
-		getLocalNameFor( 'Specialpages', false );
-		return new RawMessage( $name );
+	public function getText(): Message {
+		$specialpage = MediaWikiServices::getInstance()->getSpecialPageFactory()
+		->getPage( 'Specialpages' );
+		return new RawMessage( $specialpage->getDescription() );
 	}
 
 	/**
 	 *
 	 * @return Message
 	 */
-	public function getTitle() : Message {
-		$name = MediaWikiServices::getInstance()->getSpecialPageFactory()->
-		getLocalNameFor( 'Specialpages', false );
-		return new RawMessage( $name );
+	public function getTitle(): Message {
+		$specialpage = MediaWikiServices::getInstance()->getSpecialPageFactory()
+		->getPage( 'Specialpages' );
+		return new RawMessage( $specialpage->getDescription() );
 	}
 
 	/**
 	 *
 	 * @return Message
 	 */
-	public function getAriaLabel() : Message {
-		$name = MediaWikiServices::getInstance()->getSpecialPageFactory()->
-		getLocalNameFor( 'Specialpages', false );
-		return new RawMessage( $name );
+	public function getAriaLabel(): Message {
+		$specialpage = MediaWikiServices::getInstance()->getSpecialPageFactory()
+		->getPage( 'Specialpages' );
+		return new RawMessage( $specialpage->getDescription() );
 	}
 }
