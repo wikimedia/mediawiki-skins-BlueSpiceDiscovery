@@ -22,6 +22,22 @@
 				$( '.ve-init-target-source .oo-ui-toolbar-bar ').css( 'top', '' );
 			}
 		});
+
+		$( d ).on( 'click', '.toc a', function ( e ) {
+			var topHeight = $( '#title-line' ).height() + $( '#nb-pri' ).height();
+			var target = $( this ).attr( 'href' );
+			var id = $( target ).attr( 'id' );
+
+			if ( !id ) {
+				var parent = $( document.getElementById( target.substr(1) ) );
+			} else {
+				var parent = $( '#' + id );
+			}
+
+			$( 'body,html' ).animate( {
+					scrollTop: parent.position().top - 1.75 * topHeight
+			});
+		});
 	}
 
 } )( mediaWiki, jQuery, document );
