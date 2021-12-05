@@ -9,6 +9,9 @@
 	"namemsg": "bs-discovery-name",
 	"license-name": "GPL-3.0-only",
 	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
 	"ValidSkinNames": {
 		"bluespicediscovery": {
 			"DisplayName": "BlueSpiceDiscovery",
@@ -22,8 +25,8 @@
 					"callback": "BlueSpice\\Discovery\\Layout\\BlueSpice::factory",
 					"template": "skins/BlueSpiceDiscovery/resources/templates/layout",
 					"styles": [
-							"skin.discovery.bluespice.styles",
-							"skin.discovery.bluespice.themes.default"
+						"skin.discovery.bluespice.styles",
+						"skin.discovery.bluespice.themes.default"
 					],
 					"scripts": "skin.discovery.bluespice.scripts"
 				}
