@@ -206,7 +206,7 @@ ul.bs-social-entitylist {
 	padding-right: 10px !important;
 	border-radius: 5px;
 }
-#mw-content-text a:hover {
+#mw-content-text ul.entitylist a:hover {
 	text-decoration: none;
 	color: var(--discussion-content-fg--hover) !important;
 }
