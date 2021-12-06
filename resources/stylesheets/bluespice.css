@@ -1,4 +1,4 @@
-body.mediawiki {
+body.mediawiki, body.mediawiki.x-body {
 	background-color: var( --footer-bg );
 	font-family: 'Lato';
 	font-size: 14px;
