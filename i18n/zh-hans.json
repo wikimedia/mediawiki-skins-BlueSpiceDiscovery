@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"GuoPC",
+			"Lakejason0"
+		]
+	},
+	"bs-discovery-desc": "BlueSpice皮肤",
+	"bs-discovery-skip-links-navigation-aria-label": "跳到链接",
+	"bs-discovery-skip-to-navbar-primary-text": "跳到主导航栏",
+	"bs-discovery-skip-to-sidebar-primary-text": "跳到主侧栏",
+	"bs-discovery-skip-to-sidebar-secondary-text": "跳到第二侧栏",
+	"bs-discovery-skip-to-main-text": "跳到主要内容",
+	"bs-discovery-back-to-top-text": "返回顶部",
+	"bs-discovery-back-to-top-aria-label": "返回顶部",
+	"bs-discovery-navbar-aria-label": "导航栏",
+	"bs-discovery-navbar-search-form-input-aria-label": "搜索表单输入框",
+	"bs-discovery-navbar-user-button-title": "用户菜单",
+	"bs-discovery-navbar-user-button-aria-label": "用户菜单",
+	"bs-discovery-navbar-user-button-personal-menu-text": "个人工具",
+	"bs-discovery-navbar-user-login-text": "登录",
+	"bs-discovery-navbar-user-login-title": "登录",
+	"bs-discovery-navbar-user-login-aria-label": "登录",
+	"bs-discovery-logo-return-to-aria-label": "返回至$1",
+	"bs-discovery-searchform-button-title": "搜索",
+	"bs-discovery-searchform-button-aria-label": "搜索",
+	"bs-discovery-searchform-input-placeholder": "搜索词",
+	"bs-discovery-searchform-input-aria-label": "在此输入搜索词",
+	"bs-discovery-header-create-button-text": "新建",
+	"bs-discovery-header-create-button-title": "创建一个新页面",
+	"bs-discovery-header-create-button-aria-label": "创建一个新页面",
+	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "命名空间"
+}

@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ajeje Brazorf"
+		]
+	},
+	"bs-discovery-header-create-button-text": "Nuovo",
+	"bs-discovery-navbar-global-actions-tool-text": "Strumenti",
+	"bs-discovery-breadcrumb-nav-aria-label": "Breadcrumb",
+	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Namespace",
+	"bs-discovery-sidebar-secondary-share-sharebymail-subject": "$1: $2",
+	"bs-discovery-sidebar-details-heading": "Dettagli"
+}
