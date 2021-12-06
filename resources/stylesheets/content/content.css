@@ -1,4 +1,5 @@
 #content {
+	font-family: var(--content-font-family);
 	font-size: var( --content-font-size );
 	color: var( --content-fg-primary );
 	font-weight: var(--content-font-weight);
