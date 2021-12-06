@@ -26,6 +26,10 @@
 	font-size: inherit;
 	font-weight: inherit;
 }
+#title-section .mw-indicators {
+	margin: 6px;
+	font-size: 14px;
+}
 main .alert label {
 	font-size: 0.875rem;
 }
