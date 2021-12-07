@@ -1,8 +1,8 @@
 {
 	"@metadata": {
-			"authors": [
-					"Robert Vogel"
-			]
+		"authors": [
+			"Robert Vogel"
+		]
 	},
 	"bs-discovery-skip-links-navigation-aria-label": "Zu den Links",
 	"bs-discovery-skip-to-navbar-primary-text": "Zur Hauptnavigation",
