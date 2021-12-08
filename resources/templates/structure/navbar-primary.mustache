@@ -1,7 +1,7 @@
 <nav id="nb-pri" class="navbar fixed-top hw-navbar-expand d-block navbar-primary-height" aria-label="{{navbar-menu-aria-label}}">
 	<div class="row px-1 align-items-center">
 		<div class="east-col-nav col-xxl-3 col-xl-3 col-md-4 col-sm-4 col-4 d-flex align-items-center h-100">
-			<a id="sb-tgl-pri" tabindex="0" class="ico-btn btn sb-toggle bi-list mr-4 my-auto d-none d-md-block" title="{{toggle-btn-sidebar-primary-title}}" type="button" role="button" data-bs-toggle="collapse" data-bs-target="#sb-pri-cnt" aria-expanded="true" aria-label="{{toggle-btn-sidebar-primary-aria-label}}" aria-controls="sb-pri-cnt"></a>
+			<a id="sb-tgl-pri" disabled tabindex="0" class="ico-btn btn sb-toggle bi-list mr-4 my-auto d-none d-md-block" title="{{toggle-btn-sidebar-primary-title}}" type="button" role="button" data-bs-target="#sb-pri-cnt" aria-expanded="{{toggle-btn-sidebar-primary-aria-expanded}}" aria-label="{{toggle-btn-sidebar-primary-aria-label}}" aria-controls="sb-pri-cnt"></a>
 			<a id="nb-logo" href="{{logo-href}}" title="{{logo-title}}" class="mx-4 mw-wiki-logo" style="background-image: url({{logo-src}});" role="link" tabindex="0" aria-label={{logo-aria-label}}></a>
 		</div>
 		<div class="center-col-nav col-xxl-6 col-xl-6 col-md-4 col-sm-8 col-8 d-flex align-items-center h-100">
@@ -11,7 +11,7 @@
 		<div class="west-col-nav col-xxl-3 col-xl-3 col-md-4 col-sm-12 col-12 d-flex h-100" id="nb-pri-itms">
 			<ul class="navbar-nav w-100 align-items-center">
 				<li class="nav-item d-sm-block d-md-none d-lg-none d-xl-none d-xxl-none">
-					<a id="sb-tgl-mobile-pri" tabindex="0" class="ico-btn btn sb-toggle bi-list mr-4 my-auto" type="button" role="button" data-bs-toggle="collapse" data-bs-target="#sb-pri-cnt" aria-expanded="true" aria-label="{{toggle-btn-sidebar-primary-aria-label}}" aria-controls="sb-pri-cnt"></a>
+					<a id="sb-tgl-mobile-pri" tabindex="0" class="ico-btn btn sb-toggle bi-list mr-4 my-auto" type="button" role="button" data-bs-target="#sb-pri-cnt" aria-expanded="{{toggle-btn-sidebar-primary-aria-expanded}}" aria-label="{{toggle-btn-sidebar-primary-aria-label}}" aria-controls="sb-pri-cnt"></a>
 				</li>
 				<li class="nav-item">{{{new-content-button}}}</li>
 				{{#navbar-items}}{{{.}}}{{/navbar-items}}

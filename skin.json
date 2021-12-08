@@ -344,13 +344,15 @@
 			"styles": {
 				"stylesheets/structure/sidebar-primary.css": {},
 				"stylesheets/structure/sidebar-primary.tabpanel.css": {},
+				"stylesheets/structure/sidebar-primary.sm.css": { "media": "all and ( max-width: 767px )" },
 				"stylesheets/structure/edit-sidebar.css": {}
 			}
 		},
 		"skin.discovery.sidebar-secondary.styles": {
 			"styles": {
 				"stylesheets/structure/sidebar-secondary.css": {},
-				"stylesheets/structure/sidebar-secondary.tabpanel.css": {}
+				"stylesheets/structure/sidebar-secondary.tabpanel.css": {},
+				"stylesheets/structure/sidebar-secondary.sm.css": { "media": "all and ( max-width: 767px )" }
 			}
 		},
 		"skin.discovery.skip-links.styles": {
@@ -360,8 +362,7 @@
 		},
 		"skin.discovery.back-to-top.styles": {
 			"styles": {
-				"stylesheets/structure/back-to-top.css": {},
-				"stylesheets/structure/back-to-top.sm.css": { "media": "all and ( max-width: 767px )" }
+				"stylesheets/structure/back-to-top.css": {}
 			}
 		},
 		"skin.discovery.back-to-top.scripts": {

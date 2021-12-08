@@ -42,7 +42,7 @@ class SidebarPrimary extends StackedTabPanelContainerBase {
 		$cookieHandler = new CookieHandler( $this->template->getSkin()->getRequest() );
 		$expanded = $cookieHandler->getCookie( $this->getId() . '-cnt' );
 		$classes = [ 'col', 'col-west', 'px-0', 'collapse' ];
-		if ( $expanded !== 'false' ) {
+		if ( $expanded === 'true' ) {
 			array_push( $classes, 'show' );
 		}
 

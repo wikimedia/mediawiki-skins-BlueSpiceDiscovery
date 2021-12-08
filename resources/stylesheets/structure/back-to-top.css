@@ -3,10 +3,13 @@
 	width: 60px;
 	display: block;
 	position: fixed;
-	right: calc( var(--sidebar-secondary-width) - 20px );
+	right: 20px;
 	top: calc(100vh - 100px);
 	text-decoration: none;
 	z-index: 1000;
+}
+#back-to-top.collapsed {
+	right: calc( var(--sidebar-secondary-width) - 20px );
 }
 #back-to-top::before {
 	content: "\f01b";
