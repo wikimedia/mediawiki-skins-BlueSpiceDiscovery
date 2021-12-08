@@ -64,7 +64,6 @@ class SidebarSecondaryToggleButton extends SimpleLink {
 	 */
 	public function getDataAttributes() : array {
 		return [
-			'bs-toggle' => 'collapse',
 			'bs-target' => '#sb-sec-cnt'
 		];
 	}
@@ -91,7 +90,7 @@ class SidebarSecondaryToggleButton extends SimpleLink {
 	 * @return Message
 	 */
 	private function getButtonTitle() : Message {
-		if ( $this->isExpanded !== 'false' ) {
+		if ( $this->isExpanded !== 'true' ) {
 			return Message::newFromKey( 'bs-discovery-sidebar-secondary-toggle-hide-title' );
 		} else {
 			return Message::newFromKey( 'bs-discovery-sidebar-secondary-toggle-show-title' );
@@ -103,7 +102,7 @@ class SidebarSecondaryToggleButton extends SimpleLink {
 	 * @return Message
 	 */
 	private function getButtonAriaLabel() : Message {
-		if ( $this->isExpanded !== 'false' ) {
+		if ( $this->isExpanded !== 'true' ) {
 			return Message::newFromKey( 'bs-discovery-sidebar-secondary-toggle-hide-aria-label' );
 		} else {
 			return Message::newFromKey( 'bs-discovery-sidebar-secondary-toggle-show-aria-label' );
@@ -118,7 +117,7 @@ class SidebarSecondaryToggleButton extends SimpleLink {
 		if ( $this->isExpanded !== null ) {
 			return $this->isExpanded;
 		} else {
-			return 'true';
+			return 'false';
 		}
 	}
 }

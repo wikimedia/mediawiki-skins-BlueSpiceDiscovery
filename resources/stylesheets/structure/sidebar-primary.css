@@ -25,3 +25,13 @@
 	border-radius: 5px;
 	border: 3px solid transparent;
 }
+.fs-mode-enabled #sb-pri-cnt {
+	display: none;
+}
+
+@media ( max-width: 767.99px ) {
+	#sb-pri {
+		overflow: auto;
+		height: calc( 100vh - calc( 15px + calc( 2 * var(--navbar-primary-height )) ));
+	}
+}

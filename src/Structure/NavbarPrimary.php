@@ -148,6 +148,7 @@ class NavbarPrimary extends NavbarBase {
 			[
 				'toggle-btn-sidebar-primary-title' => $this->getSidebarPrimaryToggleButtonTitle( $expanded ),
 				'toggle-btn-sidebar-primary-aria-label' => $this->getSidebarPrimaryToggleButtonAriaLabel( $expanded ),
+				'toggle-btn-sidebar-primary-aria-expanded' => $this->getSidebarPrimaryToggleExpandedState( $expanded ),
 				'logo-href' => $mainpage->getFullURL(),
 				'logo-title' => $mainpage->getText(),
 				'logo-aria-label' => Message::newFromKey(
@@ -203,7 +204,7 @@ class NavbarPrimary extends NavbarBase {
 		if ( $expanded !== null ) {
 			return $expanded;
 		} else {
-			return 'true';
+			return 'false';
 		}
 	}
 }
