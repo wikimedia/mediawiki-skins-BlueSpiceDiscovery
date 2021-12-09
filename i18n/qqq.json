@@ -57,6 +57,7 @@
 	"bs-discovery-title-last-edit-info": "Last edit sentence with author and date",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Last edit timestamp for aria-label",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Last edit user name",
+	"bs-discovery-last-edit-by-system-user": "Label for system user as editor",
 	"bs-discovery-title-action-edit-button-title": "Title attribute for button with menu of edit options",
 	"bs-discovery-title-action-edit-button-aria-label": "Aria-label attribute for button with menu of edit options",
 	"bs-discovery-tabpanel-main-text": "Text for tab button to show main navigation",
