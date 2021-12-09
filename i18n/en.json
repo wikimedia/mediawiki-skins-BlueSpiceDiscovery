@@ -118,5 +118,6 @@
 	"bs-discovery-personalurl-mycontributions-text": "Contributions",
 	"bs-discovery-personalurl-userpage-text": "Profile",
 	"bs-discovery-globalactionentry-templates-text": "Templates",
-	"bs-discovery-globalactionentry-templates-title": "All templates"
+	"bs-discovery-globalactionentry-templates-title": "All templates",
+	"bs-discovery-last-edit-by-system-user": "system user"
 }
