@@ -30,6 +30,9 @@
 	margin: 6px;
 	font-size: 14px;
 }
+main .alert {
+	font-size: 0.875rem;
+}
 main .alert label {
 	font-size: 0.875rem;
 }
