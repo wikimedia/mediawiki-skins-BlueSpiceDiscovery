@@ -155,7 +155,7 @@ class NavbarPrimary extends NavbarBase {
 					$mainpage->getText()
 				),
 				'logo-src' => $GLOBALS['wgLogo'],
-				'navbar-menu-aria-label' => Message::newFromKey( 'bs-discovery-navbar-primary-menu-aria-label' ),
+				'navbar-menu-aria-label' => Message::newFromKey( 'bs-discovery-navbar-aria-label' ),
 			]
 		);
 	}
