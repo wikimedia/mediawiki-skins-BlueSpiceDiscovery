@@ -4,22 +4,41 @@
 		$( window ).scroll( function() {
 			var top = $( '#title-section' ).offset().top;
 			var windowTop = $(this).scrollTop();
+			var $title = $( '#title-line' );
 
 			if ( windowTop > top && window.innerWidth >= 767 ) {
 				var titleWidth = $( '#main' ).innerWidth();
-				$( '#title-line' ).addClass( 'title-fixed' );
-				$( '#title-line' ).width( titleWidth );
-				if ( $( '.ve-init-target-visual > .ve-ui-toolbar-floating > .oo-ui-toolbar-bar' ) ||
-					$( '.ve-init-target-source > .ve-ui-toolbar-floating > .oo-ui-toolbar-bar ') ) {
-						var topHeight = $( '#title-line' ).height() + $( '#nb-pri' ).height();
-						$( '.ve-init-target-visual > .ve-ui-toolbar-floating > .oo-ui-toolbar-bar' ).css( 'top', topHeight );
-						$( '.ve-init-target-source > .ve-ui-toolbar-floating > .oo-ui-toolbar-bar ').css( 'top', topHeight );
-					}
+				$title.addClass( 'title-fixed' );
+				$title.width( titleWidth );
 			} else {
-				$( '#title-line' ).removeClass( 'title-fixed' );
-				$( '#title-line' ).width( '100%' );
-				$( '.ve-init-target-visual .oo-ui-toolbar-bar' ).css( 'top', '' );
-				$( '.ve-init-target-source .oo-ui-toolbar-bar ').css( 'top', '' );
+				$title.removeClass( 'title-fixed' );
+				$title.width( '100%' );
+			}
+
+			if ( $( '.ve-init-target-visual' ).length || $( '.ve-init-target-source' ).length ) {
+				var $floatingVisualVE = $( '.ve-init-target-visual > .ve-ui-toolbar-floating > .oo-ui-toolbar-bar' );
+				var $floatingSourceVE = $( '.ve-init-target-source > .ve-ui-toolbar-floating > .oo-ui-toolbar-bar' );
+				var $visualVE = $( '.ve-init-target-visual > .ve-ui-toolbar > .oo-ui-toolbar-bar' );
+				var $sourceVE = $( '.ve-init-target-source > .ve-ui-toolbar > .oo-ui-toolbar-bar' );
+				var topHeight = $( '#title-line' ).height() + $( '#nb-pri' ).height();
+
+				if ( $title.hasClass( 'title-fixed' ) ) {
+					if ( $( '.ve-init-target-visual > .ve-ui-toolbar-floating' ).length ) {
+						$floatingVisualVE.css( 'top', topHeight );
+						$floatingSourceVE.css( 'top', topHeight );
+					} else {
+						$visualVE.css( { 'top': topHeight, 'position': 'fixed' } );
+						$sourceVE.css( { 'top': topHeight, 'position': 'fixed' } );
+					}
+				} else {
+					if ( $( '.ve-init-target-visual > .ve-ui-toolbar-floating' ).length ) {
+						$floatingVisualVE.css( 'top', topHeight );
+						$floatingSourceVE.css( 'top', topHeight );
+					} else {
+						$visualVE.removeAttr( "style" );
+						$sourceVE.removeAttr( "style" );
+					}
+				}
 			}
 		});
 
