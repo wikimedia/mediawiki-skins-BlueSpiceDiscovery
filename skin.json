@@ -301,6 +301,7 @@
 		"skin.discovery.navbar-primary.styles": {
 			"styles": {
 				"stylesheets/structure/navbar-primary.css": {},
+				"stylesheets/structure/navbar-primary.md.css": { "media": "all and ( min-width: 767px ) and ( max-width: 1199px )" },
 				"stylesheets/structure/navbar-primary.sm.css": { "media": "all and ( max-width: 767px )" },
 				"stylesheets/structure/navbar-primary.sidebar-toggle.css": {},
 				"stylesheets/structure/navbar-primary.logo.css": {},
