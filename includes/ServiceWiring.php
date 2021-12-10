@@ -1,6 +1,7 @@
 <?php
 
 use BlueSpice\Discovery\AttentionIndicatorFactory;
+use BlueSpice\Discovery\BreadcrumbDataProviderFactory;
 use BlueSpice\Discovery\CookieHandler;
 use BlueSpice\Discovery\TemplateDataProvider;
 use MediaWiki\MediaWikiServices;
@@ -26,4 +27,15 @@ return [
 			$services
 		);
 	},
+	'BlueSpiceDiscoveryBreadcrumbDataProviderFactory' => function ( MediaWikiServices $services ) {
+		$context = RequestContext::getMain();
+		$messageLocalizer = $context;
+		return new BreadcrumbDataProviderFactory(
+			$messageLocalizer,
+			$context->getRequest()->getValues(),
+			$services->getTitleFactory(),
+			$services->getNamespaceInfo(),
+			$services->getObjectFactory()
+		);
+	}
 ];
