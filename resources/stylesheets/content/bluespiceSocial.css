@@ -223,7 +223,7 @@ ul.bs-social-entitylist {
 	font-size: 11px;
 }
 #content .bs-social-entity-content div {
-	padding: 5px;
+	padding: 10px;
 }
 #content .bs-social-entity-actions .dropdown {
 	z-index: 1030;
