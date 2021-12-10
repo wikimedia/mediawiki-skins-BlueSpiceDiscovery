@@ -2,6 +2,7 @@
 
 namespace BlueSpice\Discovery\Tests\Renderer;
 
+use BlueSpice\Discovery\BreadcrumbDataProviderFactory;
 use BlueSpice\Discovery\Renderer\DefaultBreadCrumbRenderer;
 use MediaWiki\MediaWikiServices;
 use MediaWikiIntegrationTestCase;
@@ -50,12 +51,21 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 			return Message::newFromKey( $messageKey );
 		} );
 
-		$titleFactory = MediaWikiServices::getInstance()->getTitleFactory();
 		$specialPageFactory = MediaWikiServices::getInstance()->getSpecialPageFactory();
+		$titleFactory = MediaWikiServices::getInstance()->getTitleFactory();
 		$namespaceInfo = MediaWikiServices::getInstance()->getNamespaceInfo();
+		$objectFactory = MediaWikiServices::getInstance()->getObjectFactory();
 
-		$renderer = new DefaultBreadCrumbRenderer( $title, $mockUser, $webRequestValues,
-			$mockMessageLocalizer, $titleFactory, $specialPageFactory, $namespaceInfo );
+		$breadcrumbFactory = new BreadcrumbDataProviderFactory(
+			$mockMessageLocalizer,
+			$webRequestValues,
+			$titleFactory,
+			$namespaceInfo,
+			$objectFactory
+		);
+
+		$renderer = new DefaultBreadCrumbRenderer( $title, $mockUser,
+			$mockMessageLocalizer, $specialPageFactory, $namespaceInfo, $breadcrumbFactory );
 
 		$params = $renderer->getParams();
 
@@ -97,28 +107,41 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 			'specialpage-with-title-in-path' => [
 				Title::newFromText( 'Special:Move/Dummy/ABC' ),
 				[ 'action' => 'history' ],
-				'/wiki/Special:SpecialPages',
-				'/wiki/Special:Move',
-				[ 'bs-discovery-breadcrumb-label-action-history' ]
+				'/wiki/Main_Page',
+				'/wiki/Dummy/ABC',
+				[ 'Move', 'bs-discovery-breadcrumb-label-action-history' ]
 			],
 			// We don't have SMW enabled on WMF CI
-			// TODO: Implement proper integration
-			// 'specialpage-with-smw-browse' => [
-			// 	Title::newFromText( 'Special:Browse/:Dummy/ABC' ),
-			// 	[],
-			// 	'/wiki/Main_Page',
-			// 	'/wiki/Dummy/ABC',
-			// 	// Be aware that the `bs-discovery-breadcrumb-label-special-` is only used because
-			// 	// we operate on `RawMessage` objects in this test. In the real world this would
-			// 	// rather be `Browse`
-			// 	[ 'bs-discovery-breadcrumb-label-special-browse' ]
-			// ],
+			'specialpage-with-smw-browse' => [
+				Title::newFromText( 'Special:Browse/:Dummy/ABC' ),
+				[],
+				'/wiki/Main_Page',
+				'/wiki/Dummy/ABC',
+				// Be aware that the `bs-discovery-breadcrumb-label-special-` is only used because
+				// we operate on `RawMessage` objects in this test. In the real world this would
+				// rather be `Browse`
+				[ 'Browse' ]
+			],
 			'specialpage' => [
 				Title::newFromText( 'Special:Allpages' ),
 				[],
 				'/wiki/Special:SpecialPages',
 				'/wiki/Special:Allpages',
 				[]
+			],
+			'specialpage-linkliste-with-target' => [
+				Title::newFromText( 'Special:Whatlinkshere' ),
+				[ 'target' => 'Dummy/ABC' ],
+				'/wiki/Main_Page',
+				'/wiki/Dummy/ABC',
+				[ 'Whatlinkshere' ]
+			],
+			'specialpage-linkliste-with-target' => [
+				Title::newFromText( 'Special:CiteThisPage' ),
+				[ 'page' => 'Dummy/ABC' ],
+				'/wiki/Main_Page',
+				'/wiki/Dummy/ABC',
+				[ 'CiteThisPage' ]
 			]
 		];
 	}

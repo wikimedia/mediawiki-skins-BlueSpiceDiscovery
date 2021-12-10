@@ -102,7 +102,6 @@
 	"bs-discovery-permalink-copy-text": "Link label for the permanent link in the toolbox",
 	"bs-discovery-main-links-heading": "Heading for static navigation",
 	"bs-discovery-breadcrumb-label-talk": "Label for talk page in breadcrumbs\n\n{{Identical|Talk}}",
-	"bs-discovery-breadcrumb-label-special-browse": "Label for browse in breadcrumbs",
 	"bs-discovery-breadcrumb-label-special-linkliste": "Label for links in breadcrumbs\n\n{{Identical|Link}}",
 	"bs-discovery-breadcrumb-label-action-history": "label for action history in breadcrumbs\n\n{{Identical|History}}",
 	"bs-discovery-breadcrumb-label-action-edit": "Label for action edit in breadcrumbs\n\n{{Identical|Edit}}",

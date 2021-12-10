@@ -2,6 +2,7 @@
 
 namespace BlueSpice\Discovery\Component;
 
+use BlueSpice\Discovery\BreadcrumbDataProviderFactory;
 use BlueSpice\Discovery\Renderer\DefaultBreadCrumbRenderer;
 use MessageLocalizer;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
@@ -23,21 +24,9 @@ class DefaultBreadcrumbNav extends Literal {
 
 	/**
 	 *
-	 * @var array
-	 */
-	private $webRequestValues = null;
-
-	/**
-	 *
 	 * @var MessageLocalizer
 	 */
 	private $messageLocalizer = null;
-
-	/**
-	 *
-	 * @var TitleFactory
-	 */
-	private $titleFactory = null;
 
 	/**
 	 *
@@ -52,24 +41,27 @@ class DefaultBreadcrumbNav extends Literal {
 	private $namespaceInfo = null;
 
 	/**
+	 * @var BreadcrumbDataProviderFactory
+	 */
+	private $breadcrumbFactory = null;
+
+	/**
 	 *
 	 * @param Title $title
 	 * @param User $user
-	 * @param array $webRequestValues
 	 * @param MessageLocalizer $messageLocalizer
-	 * @param TitleFactory $titleFactory
 	 * @param SpecialPageFactory $specialPageFactory
 	 * @param NamespaceInfo $namespaceInfo
+	 * @param BreadcrumbDataProviderFactory $breadcrumbFactory
 	 */
-	public function __construct( $title, $user, $webRequestValues, $messageLocalizer,
-		$titleFactory, $specialPageFactory, $namespaceInfo ) {
+	public function __construct( $title, $user, $messageLocalizer, $specialPageFactory,
+		$namespaceInfo, $breadcrumbFactory ) {
 		$this->title = $title;
 		$this->user = $user;
-		$this->webRequestValues = $webRequestValues;
 		$this->messageLocalizer = $messageLocalizer;
-		$this->titleFactory = $titleFactory;
 		$this->specialPageFactory = $specialPageFactory;
 		$this->namespaceInfo = $namespaceInfo;
+		$this->breadcrumbFactory = $breadcrumbFactory;
 	}
 
 	/**
@@ -82,8 +74,8 @@ class DefaultBreadcrumbNav extends Literal {
 	}
 
 	private function buildHtml(): string {
-		$renderer = new DefaultBreadCrumbRenderer( $this->title, $this->user, $this->webRequestValues,
-			$this->messageLocalizer, $this->titleFactory, $this->specialPageFactory, $this->namespaceInfo );
+		$renderer = new DefaultBreadCrumbRenderer( $this->title, $this->user, $this->messageLocalizer,
+			$this->specialPageFactory, $this->namespaceInfo, $this->breadcrumbFactory );
 
 		return $renderer->getHtml();
 	}

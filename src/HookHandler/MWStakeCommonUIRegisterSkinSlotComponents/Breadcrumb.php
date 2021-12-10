@@ -21,13 +21,13 @@ class Breadcrumb implements MWStakeCommonUIRegisterSkinSlotComponents {
 						$context = RequestContext::getMain();
 						$title = $context->getTitle();
 						$user = $context->getUser();
-						$webRequestValues = $context->getRequest()->getValues();
 						$messageLocalizer = $context;
-						$titleFactory = MediaWikiServices::getInstance()->getTitleFactory();
 						$specialPageFactory = MediaWikiServices::getInstance()->getSpecialPageFactory();
 						$namespaceInfo = MediaWikiServices::getInstance()->getNamespaceInfo();
-						return new DefaultBreadcrumbNav( $title, $user, $webRequestValues,
-							$messageLocalizer, $titleFactory, $specialPageFactory, $namespaceInfo );
+						$breadcrumbFactory = MediaWikiServices::getInstance()
+							->getService( 'BlueSpiceDiscoveryBreadcrumbDataProviderFactory' );
+						return new DefaultBreadcrumbNav( $title, $user, $messageLocalizer, $specialPageFactory,
+							$namespaceInfo, $breadcrumbFactory );
 					}
 				]
 			]
