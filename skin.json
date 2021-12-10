@@ -313,6 +313,7 @@
 		"skin.discovery.main.styles": {
 			"styles": {
 				"stylesheets/structure/main.css": {},
+				"stylesheets/structure/main.sm.css": { "media": "all and ( max-width: 767px )" },
 				"stylesheets/structure/main.title-action.edit-button.css": {},
 				"stylesheets/structure/main.title-action.full-sceen-button.css": {},
 				"stylesheets/structure/main.breadcrumb.css": {},

@@ -11,7 +11,7 @@
 	max-width: var(--aftercontent-max-width);
 	margin: 0 auto;
 	padding-left: 2.5rem;
-	padding-right: 3rem;
+	padding-right: 2.5rem;
 	padding-top: 1rem;
 	padding-bottom: 30px;
 	border-top: 0.05px solid var(--aftercontent-border-color);
