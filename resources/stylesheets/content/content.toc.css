@@ -1,4 +1,5 @@
 #content .toc {
+	margin-top: 0.5rem;
 	padding: 0.5rem;
 	background-color: var( --body-bg-color );
 	border-radius: 5px;
@@ -17,11 +18,11 @@
 }
 #toc .toctogglelabel {
 	color: var( --content-fg-secondary );
-	text-decoration: underline;
 	font-size: 0.8rem;
 }
 #toc .toctogglelabel:hover {
 	color: var( --content-fg-primary );
+	text-decoration: underline;
 }
 #content .toctogglelabel:focus-visible {
 	outline-color: var( --focus-visible );
@@ -35,8 +36,8 @@
 	text-decoration: none;
 }
 #content .toc ul li a:focus-visible {
-	outline-color:  var( --focus-visible );
+	outline-color: var( --focus-visible );
 }
 .tocnumber {
-	color: var(  --content-fg-secondary );
+	color: var( --content-fg-secondary );
 }
