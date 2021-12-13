@@ -60,7 +60,6 @@
 #content code {
 	font-family: monospace, Courier;
 	color: var( --content-fg-primary );
-	font-size: 0.8rem;
 	background-color: var( --content-box-color );
 	border-radius: 5%;
 	padding: 2px 4px;
