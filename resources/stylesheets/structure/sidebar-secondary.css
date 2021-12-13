@@ -24,9 +24,18 @@
 	border-radius: 5px;
 	border: 3px solid transparent;
 }
-
+.fs-mode-enabled #sb-sec-cnt {
+	display: none;
+}
 .all-actions-list {
 	list-style: none;
 	margin: 0;
 	padding: 10px;
+}
+
+@media ( max-width: 767.99px ) {
+	#sb-sec {
+		overflow: auto;
+		height: calc( 100vh - calc( 15px + calc( 2 * var(--navbar-primary-height )) ));
+	}
 }
