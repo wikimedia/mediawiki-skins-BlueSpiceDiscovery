@@ -116,6 +116,5 @@
 	"bs-discovery-personalurl-mycontributions-text": "Label for personal menu entry \"mycontris\"\n{{Identical|Contribution}}",
 	"bs-discovery-personalurl-userpage-text": "Label for personal menu entry \"userpage\"\n{{Identical|Profile}}",
 	"bs-discovery-globalactionentry-templates-text": "Label for \"All templates\" action menu entry that leads to [[Special:AllPages]] with preselection for namespace 10\n{{Identical|Template}}",
-	"bs-discovery-globalactionentry-templates-title": "Title for \"All templates\" action menu entry that leads to [[Special:AllPages]] with preselection for namespace 10",
-	"bs-discovery-last-edit-by-system-user": "Label for system user as editor"
+	"bs-discovery-globalactionentry-templates-title": "Title for \"All templates\" action menu entry that leads to [[Special:AllPages]] with preselection for namespace 10"
 }

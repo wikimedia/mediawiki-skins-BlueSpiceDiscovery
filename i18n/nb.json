@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"bs-discovery-skip-to-sidebar-primary-text": "Hopp til hovednavigasjon",
+	"bs-discovery-title-last-edit-info": "Sist redigert $1 <br /> av $2",
+	"bs-discovery-last-edit-by-system-user": "systembruker"
+}

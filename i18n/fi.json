@@ -41,7 +41,7 @@
 	"bs-discovery-breadcrumb-nav-node-title": "Avaa $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Avaa $1",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Etusivu",
-	"bs-discovery-title-last-edit-info": "Viimeksi muokannut käyttäjä $1 kello $2",
+	"bs-discovery-title-last-edit-info": "Viimeksi muokannut käyttäjä $1 <br /> kello $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Viimeisin muokkaus $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Viimeksi muokannut käyttäjä $1",
 	"bs-discovery-title-action-edit-button-title": "Muokkaa sivua",
@@ -80,5 +80,6 @@
 	"bs-discovery-personalurl-mycontributions-text": "Muokkaukset",
 	"bs-discovery-personalurl-userpage-text": "Profiili",
 	"bs-discovery-globalactionentry-templates-text": "Mallineet",
-	"bs-discovery-globalactionentry-templates-title": "Kaikki mallineet"
+	"bs-discovery-globalactionentry-templates-title": "Kaikki mallineet",
+	"bs-discovery-last-edit-by-system-user": "järjestelmän käyttäjä"
 }
