@@ -140,6 +140,7 @@ ul.bs-social-entitylist .bs-social-entity-edit-mode form textarea {
 
 /* content more */
 .bs-social-entity-content-more {
+	width: 75%;
 	border-top: 0;
 	margin-bottom: 0px;
 }
@@ -221,9 +222,15 @@ ul.bs-social-entitylist {
 #mw-content-text a.bs-social-entity-content-more-button {
 	font-size: 11px;
 }
-#content .bs-social-entity-content div {
+#content .bs-social-entitylist-more-section-button a:hover {
+	text-decoration: none;
+}
+#content .bs-social-entity-content > div {
 	padding: 10px;
 }
 #content .bs-social-entity-actions .dropdown-menu {
 	z-index: 1001;
+}
+#content .bs-social-entity-content p {
+	padding: 0;
 }
