@@ -57,11 +57,11 @@
 	background-color: var( --content-box-color );
 	padding: 1rem;
 }
-#content code {
+code {
 	font-family: monospace, Courier;
 	color: var( --content-fg-primary );
 	background-color: var( --content-box-color );
-	border-radius: 5%;
+	border-radius: 5px;
 	padding: 2px 4px;
 }
 dd {
