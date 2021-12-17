@@ -9,6 +9,7 @@ use BlueSpice\Discovery\SkinSlotRenderer\BreadcrumbSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\DataAfterTitleSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\DataBeforeContentSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\TitleActionsSkinSlotRenderer;
+use BlueSpice\Discovery\SubTitleProcessor;
 use Html;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\HtmlIdRegistry;
@@ -35,6 +36,9 @@ class Main extends SkinStructureBase {
 	 * @return array
 	 */
 	public function getParams() : array {
+		$subTitleProcessor = new SubTitleProcessor();
+		$subTitleProcessor->parse( $this->template->get( 'subtitle' ) );
+
 		$this->fetchSiteNotice();
 		$this->fetchSkinSlotDataBeforeContent();
 		$this->fetchBreadcrumb();
@@ -43,10 +47,12 @@ class Main extends SkinStructureBase {
 		$this->fetchSkinSlotTitleActions();
 		$this->fetchTitleActionEdit();
 		$this->fetchTitleActionFullscreenButton();
-		$this->fetchRedirect();
+		$this->fetchRedirect( $subTitleProcessor->get( 'redirect' ) );
 		$this->fetchSkinSlotDataAfterTitle();
 		$this->fetchUndelete();
 		$this->fetchIndicators();
+		$this->fetchSubcontent( $subTitleProcessor->get() );
+		$this->fetchSubcontent2();
 		$this->fetchBodyText();
 
 		return $this->skinComponents;
@@ -130,21 +136,12 @@ class Main extends SkinStructureBase {
 	 * Besides the tagline MediaWiki has two subtitles below the title to take into account.
 	 * This one is used for various things like the subpage hierarchy and redirected from line.
 	 * https://www.mediawiki.org/wiki/Manual:Skinning_Part_2#Subtitles
-	 *
+	 * @param string $redirect
 	 * @return void
 	 */
-	private function fetchRedirect() {
+	private function fetchRedirect( $redirect ) {
 		// We only want the redirect here
-		$subtitles = $this->template->get( 'subtitle' );
-		$matches = [];
-		$hasRedirect = preg_match(
-			'#(<span class="mw-redirectedfrom">)(.*?)(<\/span>)#',
-			$subtitles,
-			$matches
-		);
-		if ( $hasRedirect ) {
-			$this->skinComponents['redirect'] = $matches[0];
-		}
+		$this->skinComponents['redirect'] = $redirect;
 	}
 
 	/**
@@ -181,6 +178,24 @@ class Main extends SkinStructureBase {
 			}
 			$this->skinComponents['indicators'] = $indicatorHtml;
 		}
+	}
+
+	/**
+	 * https://www.mediawiki.org/wiki/Manual:Skinning_Part_2#Subtitles
+	 * @param string $subcontent
+	 * @return void
+	 */
+	private function fetchSubcontent( $subcontent ) {
+		$this->skinComponents['html-subtitle'] = $subcontent;
+	}
+
+	/**
+	 * https://www.mediawiki.org/wiki/Manual:Skinning_Part_2#Subtitles
+	 *
+	 * @return void
+	 */
+	private function fetchSubcontent2() {
+		$this->skinComponents['html-undelete'] = $this->template->get( 'undelete' );
 	}
 
 	/**
