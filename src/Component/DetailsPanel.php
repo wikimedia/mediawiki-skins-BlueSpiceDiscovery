@@ -2,14 +2,15 @@
 
 namespace BlueSpice\Discovery\Component;
 
-use BlueSpice\Discovery\LinkFormatter;
 use FormatJson;
+use MediaWiki\MediaWikiServices;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardHeader;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleLinklistGroupFromArray;
 use MWStake\MediaWiki\Component\CommonUserInterface\IRestrictedComponent;
+use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
 
 class DetailsPanel extends SimpleCard implements IRestrictedComponent {
 
@@ -46,7 +47,9 @@ class DetailsPanel extends SimpleCard implements IRestrictedComponent {
 	 * @inheritDoc
 	 */
 	public function getSubComponents() : array {
-		$linkFormatter = new LinkFormatter();
+		$services = MediaWikiServices::getInstance();
+		/** @var LinkFormatter */
+		$linkFormatter = $services->getService( 'MWStakeLinkFormatter' );
 		$actions = [];
 		if ( !empty( $this->componentProcessData['panel']['details'] ) ) {
 			$actions = $this->componentProcessData['panel']['details'];
