@@ -30,7 +30,7 @@ class SpecialAllPages extends RestrictedTextLink {
 	public function getHref(): string {
 		/** @var Title */
 		$specialpage = SpecialPage::getTitleFor( 'AllPages' );
-		return $specialpage->getFullURL();
+		return $specialpage->getLocalURL();
 	}
 
 	/**

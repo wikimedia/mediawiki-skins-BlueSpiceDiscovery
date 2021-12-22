@@ -48,7 +48,7 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 		if ( isset( $veNamespace[$ns] ) && $veNamespace[$ns] ) {
 			$actionType = 'veaction';
 		}
-		return $title->getFullURL( [ $actionType => 'edit' ] );
+		return $title->getLocalURL( [ $actionType => 'edit' ] );
 	}
 
 	/**

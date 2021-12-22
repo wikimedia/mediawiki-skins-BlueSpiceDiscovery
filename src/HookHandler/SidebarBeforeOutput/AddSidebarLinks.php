@@ -53,7 +53,7 @@ class AddSidebarLinks implements SidebarBeforeOutputHook {
 				. $skin->getRequest()->getRequestURL();
 		}
 		catch ( MWException $ex ) {
-			$requestUrl = $title->getFullURL();
+			$requestUrl = $title->getLocalURL();
 		}
 
 		$subject = $skin->msg( 'bs-discovery-sidebar-secondary-share-sharebymail-subject' );

@@ -149,7 +149,7 @@ class NavbarPrimary extends NavbarBase {
 				'toggle-btn-sidebar-primary-title' => $this->getSidebarPrimaryToggleButtonTitle( $expanded ),
 				'toggle-btn-sidebar-primary-aria-label' => $this->getSidebarPrimaryToggleButtonAriaLabel( $expanded ),
 				'toggle-btn-sidebar-primary-aria-expanded' => $this->getSidebarPrimaryToggleExpandedState( $expanded ),
-				'logo-href' => $mainpage->getFullURL(),
+				'logo-href' => $mainpage->getLocalURL(),
 				'logo-title' => $mainpage->getText(),
 				'logo-aria-label' => Message::newFromKey(
 					'bs-discovery-logo-return-to-aria-label',
