@@ -2,13 +2,14 @@
 
 namespace BlueSpice\Discovery\Component;
 
-use BlueSpice\Discovery\LinkFormatter;
+use MediaWiki\MediaWikiServices;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardHeader;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleLinklistGroupFromArray;
 use MWStake\MediaWiki\Component\CommonUserInterface\IRestrictedComponent;
+use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
 
 class ActionsPanel extends SimpleCard implements IRestrictedComponent {
 
@@ -54,8 +55,9 @@ class ActionsPanel extends SimpleCard implements IRestrictedComponent {
 			return [];
 		}
 
+		$services = MediaWikiServices::getInstance();
 		/** @var LinkFormatter */
-		$linkFormatter = new LinkFormatter();
+		$linkFormatter = $services->getService( 'MWStakeLinkFormatter' );
 
 		$list = [
 			new SimpleCardHeader( [

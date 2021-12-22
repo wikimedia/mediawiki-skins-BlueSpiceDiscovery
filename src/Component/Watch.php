@@ -2,11 +2,11 @@
 
 namespace BlueSpice\Discovery\Component;
 
-use BlueSpice\Discovery\LinkFormatter;
 use IContextSource;
 use MediaWiki\MediaWikiServices;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleLink;
+use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
 
 class Watch extends SimpleLink {
 
@@ -92,7 +92,9 @@ class Watch extends SimpleLink {
 			return $return;
 		}
 
-		$linkFormatter = new LinkFormatter();
+		$services = MediaWikiServices::getInstance();
+		/** @var LinkFormatter */
+		$linkFormatter = $services->getService( 'MWStakeLinkFormatter' );
 		$formattedData = $linkFormatter->formatLinks(
 			$this->componentProcessData['panel']['watch']
 		);

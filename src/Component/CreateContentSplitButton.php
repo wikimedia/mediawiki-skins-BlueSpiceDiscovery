@@ -2,11 +2,12 @@
 
 namespace BlueSpice\Discovery\Component;
 
-use BlueSpice\Discovery\LinkFormatter;
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdownItemlistFromArray;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdownSplitButton;
+use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
 use User;
 
 class CreateContentSplitButton extends SimpleDropdownSplitButton {
@@ -161,8 +162,9 @@ class CreateContentSplitButton extends SimpleDropdownSplitButton {
 			return $items;
 		}
 
+		$services = MediaWikiServices::getInstance();
 		/** @var LinkFormatter */
-		$linkFormatter = new LinkFormatter();
+		$linkFormatter = $services->getService( 'MWStakeLinkFormatter' );
 		$items = $linkFormatter->formatLinks( $create );
 
 		return $items;
