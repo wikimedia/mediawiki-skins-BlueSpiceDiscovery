@@ -75,7 +75,7 @@ class UserButtonLogin extends SimpleLink {
 	public function getHref() : string {
 		$returnToPage = $this->getReturnToPage();
 		$returnToAttrib = 'returnto=' . $returnToPage->getPrefixedDBkey();
-		return Title::newFromText( 'Login', NS_SPECIAL )->getFullURL( $returnToAttrib );
+		return Title::newFromText( 'Login', NS_SPECIAL )->getLocalURL( $returnToAttrib );
 	}
 
 	/**
