@@ -2,14 +2,15 @@
 
 namespace BlueSpice\Discovery\Component;
 
-use BlueSpice\Discovery\LinkFormatter;
 use IContextSource;
+use MediaWiki\MediaWikiServices;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardHeader;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdownIcon;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleLinklistGroupFromArray;
+use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
 
 class LanguageButton extends SimpleDropdownIcon {
 
@@ -87,8 +88,9 @@ class LanguageButton extends SimpleDropdownIcon {
 		/** @var array|bool $languages */
 		$languages = $this->componentProcessData['panel']['languages'];
 
+		$services = MediaWikiServices::getInstance();
 		/** @var LinkFormatter */
-		$linkFormatter = new LinkFormatter();
+		$linkFormatter = $services->getService( 'MWStakeLinkFormatter' );
 
 		return [
 			new SimpleCard( [

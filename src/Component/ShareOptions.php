@@ -2,10 +2,11 @@
 
 namespace BlueSpice\Discovery\Component;
 
-use BlueSpice\Discovery\LinkFormatter;
+use MediaWiki\MediaWikiServices;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdownIcon;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdownItemlistFromArray;
+use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
 
 class ShareOptions extends SimpleDropdownIcon {
 
@@ -87,8 +88,9 @@ class ShareOptions extends SimpleDropdownIcon {
 			return [];
 		}
 
+		$services = MediaWikiServices::getInstance();
 		/** @var LinkFormatter */
-		$linkFormatter = new LinkFormatter();
+		$linkFormatter = $services->getService( 'MWStakeLinkFormatter' );
 
 		return [
 			new SimpleDropdownItemlistFromArray( [
