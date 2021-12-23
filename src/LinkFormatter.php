@@ -4,6 +4,7 @@ namespace BlueSpice\Discovery;
 
 use Linker;
 use Message;
+use RequestContext;
 
 class LinkFormatter {
 
@@ -70,6 +71,24 @@ class LinkFormatter {
 				$link['data'] = [
 					'mw' => $link['data-mw']
 				];
+			}
+
+			// Is target external?
+			if ( isset( $link['href'] ) && ( $link['href'] !== '' ) && ( strpos( $link['href'], '#' ) !== 0 ) ) {
+				$parsedUrl = wfParseUrl( $link['href'] );
+				// MediaWiki global $wgExternalLinkTarget
+				$context = RequestContext::getMain();
+				$externalLinkTarget = $context->getConfig()->get( 'ExternalLinkTarget' );
+				if ( $parsedUrl && $externalLinkTarget ) {
+					if ( !isset( $link['target'] ) ) {
+						$link['target'] = $externalLinkTarget;
+					}
+					if ( isset( $link['target'] ) && !isset( $link['rel'] ) ) {
+						// See https://www.mediawiki.org/wiki/Manual:$wgExternalLinkTarget
+						$rel = [ 'external', 'noreferrer', 'noopener' ];
+						$link['rel'] = implode( ' ', $rel );
+					}
+				}
 			}
 
 			$params[] = $link;

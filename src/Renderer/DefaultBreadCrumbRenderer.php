@@ -205,7 +205,7 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 				$rootNodeUrl = $titleMainPage->getLocalURL();
 			} else {
 				$titleMainPage = $this->specialPageFactory->getTitleForAlias( 'Allpages' );
-				$rootNodeUrl = $titleMainPage->getFullURL(
+				$rootNodeUrl = $titleMainPage->getLocalURL(
 					'namespace=' . $this->relevantTitle->getNamespace() );
 			}
 		}
