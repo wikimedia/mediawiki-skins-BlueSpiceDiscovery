@@ -2,7 +2,6 @@
 
 namespace BlueSpice\Discovery\Component;
 
-use BlueSpice\Discovery\LinkFormatter;
 use BlueSpice\Discovery\SkinSlotRenderer\UserMenuCardsSkinSlotRenderer;
 use BlueSpice\DynamicFileDispatcher\Params;
 use BlueSpice\DynamicFileDispatcher\UrlBuilder;
@@ -17,6 +16,7 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardHeader;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdown;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleLinklistGroupFromArray;
+use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
 use RawMessage;
 use RequestContext;
 use User;
@@ -41,7 +41,9 @@ class UserButtonMenu extends SimpleDropdown {
 	 * @inheritDoc
 	 */
 	public function getSubComponents(): array {
-		$linkFormatter = new LinkFormatter();
+		$services = MediaWikiServices::getInstance();
+		/** @var LinkFormatter */
+		$linkFormatter = $services->getService( 'MWStakeLinkFormatter' );
 		$links = [];
 		foreach ( $this->componentProcessData['template']['personal_urls'] as $key => $link ) {
 			if ( in_array( $key, $this->getSkipList() ) ) {

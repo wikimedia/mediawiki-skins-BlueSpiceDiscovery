@@ -2,12 +2,13 @@
 
 namespace BlueSpice\Discovery\Component;
 
-use BlueSpice\Discovery\LinkFormatter;
 use IContextSource;
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdownIconSplitButton;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdownItemlistFromArray;
+use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
 use RequestContext;
 
 class TitleActionEdit extends SimpleDropdownIconSplitButton {
@@ -160,7 +161,9 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 		if ( empty( $edit ) ) {
 			return [];
 		}
-		$linkFormatter = new LinkFormatter();
+		$services = MediaWikiServices::getInstance();
+		/** @var LinkFormatter */
+		$linkFormatter = $services->getService( 'MWStakeLinkFormatter' );
 		return $linkFormatter->formatLinks( $edit );
 	}
 }
