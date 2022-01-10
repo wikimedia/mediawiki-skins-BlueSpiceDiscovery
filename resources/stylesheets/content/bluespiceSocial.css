@@ -224,6 +224,6 @@ ul.bs-social-entitylist {
 #content .bs-social-entity-content div {
 	padding: 10px;
 }
-#content .bs-social-entity-actions .dropdown {
-	z-index: 499;
+#content .bs-social-entity-actions .dropdown-menu {
+	z-index: 1001;
 }
