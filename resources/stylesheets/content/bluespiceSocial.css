@@ -84,7 +84,7 @@ ul.bs-social-entitylist .bs-social-entity-edit-mode form textarea {
 	background-color: var(--discussion-content-bg);
 	border-radius: 5px;
 	margin: 0;
-	width: 65%;
+	width: 75%;
 }
 .bs-social-entity.bs-social-entity-output-Short.resolved > .bs-social-entity-wrapper > .bs-social-entity-right,
 .bs-social-entity.bs-social-entity-output-Default.resolved > .bs-social-entity-wrapper > .bs-social-entity-right,
@@ -107,7 +107,6 @@ ul.bs-social-entitylist .bs-social-entity-edit-mode form textarea {
 	color: var(--footer-fg);
 }
 .bs-social-entity-comment .bs-social-entity-content {
-	width: 60%;
 	margin-top: 0;
 	margin-bottom: 0;
 }
@@ -226,5 +225,5 @@ ul.bs-social-entitylist {
 	padding: 10px;
 }
 #content .bs-social-entity-actions .dropdown {
-	z-index: 1030;
+	z-index: 499;
 }

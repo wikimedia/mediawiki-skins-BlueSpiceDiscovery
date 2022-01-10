@@ -1,5 +1,5 @@
 .bs-social-entity-content {
-	width: 50%;
+	width: 70%;
 }
 .bs-social-entity .bs-social-entitylist .bs-social-entity-userimage {
 	margin-top: 5px !important;
@@ -13,6 +13,10 @@
 }
 .bs-rating-bssocial-numvotes {
 	font-size: 12px;
+}
+
+.bs-social-entity-actions .dropdown .dropdown-item {
+	text-align: center;
 }
 
 #content .bs-social-entity-wrapper {
