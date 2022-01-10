@@ -48,6 +48,7 @@
 				if ( position === 0 ) {
 					return;
 				}
+				topHeight = $( '#content' ).position().top;
 
 				$( 'body,html' ).animate( {
 						scrollTop: position - topHeight
