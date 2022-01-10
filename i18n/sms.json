@@ -7,11 +7,15 @@
 	"bs-discovery-navbar-user-login-text": "Ǩeeʹrjtõõđ sizz",
 	"bs-discovery-navbar-user-login-title": "Ǩeeʹrjtõõđ sizz",
 	"bs-discovery-navbar-user-login-aria-label": "Ǩeeʹrjtõõđ sizz",
+	"bs-discovery-header-create-button-title": "Raaj ođđ seeid",
+	"bs-discovery-header-create-button-aria-label": "Raaj ođđ seeid",
 	"bs-discovery-navbar-languages-button-text": "Ǩiõl",
 	"bs-discovery-navbar-language-button-title": "Vaʹlljed ǩiõl",
 	"bs-discovery-navbar-language-button-aria-label": "Vaʹlljed ǩiõl",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Seeid",
 	"bs-discovery-sidebar-secondary-watch-link-title": "Vaalv seeid",
 	"bs-discovery-sidebar-secondary-watch-link-aria-label": "Vaalv seeid",
-	"bs-discovery-breadcrumb-label-action-edit": "Muuʹtt"
+	"bs-discovery-breadcrumb-label-special-linkliste": "Liiŋk",
+	"bs-discovery-breadcrumb-label-action-edit": "Muuʹtt",
+	"bs-discovery-personalurl-mycontributions-text": "Muttâz"
 }
