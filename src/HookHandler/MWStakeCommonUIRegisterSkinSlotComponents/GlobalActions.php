@@ -5,7 +5,6 @@ namespace BlueSpice\Discovery\HookHandler\MWStakeCommonUIRegisterSkinSlotCompone
 use BlueSpice\Discovery\Component\SpecialAllTemplates;
 use BlueSpice\Discovery\Component\SpecialSpecialPages;
 use BlueSpice\Discovery\Component\SpecialUpload;
-use BlueSpice\Discovery\Component\SpecialWatchlist;
 use MWStake\MediaWiki\Component\CommonUserInterface\Hook\MWStakeCommonUIRegisterSkinSlotComponents;
 
 class GlobalActions implements MWStakeCommonUIRegisterSkinSlotComponents {
@@ -30,11 +29,6 @@ class GlobalActions implements MWStakeCommonUIRegisterSkinSlotComponents {
 				'special-upload' => [
 					'factory' => static function () {
 						return new SpecialUpload();
-					}
-				],
-				'special-watchlist' => [
-					'factory' => static function () {
-						return new SpecialWatchlist();
 					}
 				]
 			]
