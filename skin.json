@@ -90,7 +90,12 @@
 					}
 				}
 			},
-			"AttentionIndicatorRegistry": {}
+			"AttentionIndicatorRegistry": {},
+			"BreadcrumbDataProviderRegistry": {
+				"special-actions": {
+					"class": "BlueSpice\\Discovery\\BreadcrumbDataProvider\\SpecialActionsProvider"
+				}
+			}
 		},
 		"BlueSpicePrivacy": {
 			"CookieConsentNativeMWCookies": {

@@ -23,6 +23,7 @@ nav .breadcrumb {
 	color: var(--title-nav-fg);
 	font-size: 0.875rem;
 	font-weight: normal;
+	margin-bottom: 0.3em;
 }
 .breadcrumb-item a {
 	color: var(--title-nav-fg);
