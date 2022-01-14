@@ -114,6 +114,9 @@ class LanguageButton extends SimpleDropdownIcon {
 							new SimpleLinklistGroupFromArray( [
 								'id' => 'langs',
 								'classes' => [ 'menu-card-body', 'menu-list', 'll-dft' ],
+								'aria' => [
+									'labelledby' => "lang-menu-head"
+								],
 								'links' => $linkFormatter->formatLinks( $languages )
 							] ),
 						]

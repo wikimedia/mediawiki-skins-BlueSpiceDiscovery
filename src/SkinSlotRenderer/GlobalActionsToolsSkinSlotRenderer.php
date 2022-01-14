@@ -43,7 +43,7 @@ class GlobalActionsToolsSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 
 		$this->sortItems( $items );
 
-		$html = '<ul id="ga-menu-tools" aria-label-by="ga-menu-tools-head"';
+		$html = '<ul id="ga-menu-tools" aria-labelledby="ga-menu-tools-head"';
 		$html .= ' class="list-group menu-card-body menu-list">';
 		foreach ( $items as $id => $item ) {
 			if ( !is_callable( $item['factory'] ) ) {
