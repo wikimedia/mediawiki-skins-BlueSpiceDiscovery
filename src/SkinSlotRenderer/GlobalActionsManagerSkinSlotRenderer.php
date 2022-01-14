@@ -43,7 +43,7 @@ class GlobalActionsManagerSkinSlotRenderer extends ExtendedSkinSlotRendererBase 
 
 		$this->sortItems( $items );
 
-		$html = '<ul id="ga-menu-manager" aria-label-by="ga-menu-manager-head"';
+		$html = '<ul id="ga-menu-manager" aria-labelledby="ga-menu-manager-head"';
 		$html .= ' class="list-group menu-card-body menu-list">';
 		foreach ( $items as $id => $item ) {
 			if ( !is_callable( $item['factory'] ) ) {
