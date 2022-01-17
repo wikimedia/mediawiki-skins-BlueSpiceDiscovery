@@ -66,6 +66,19 @@ class Footer extends SkinStructureBase {
 		$items = [];
 		$footericons = $this->template->get( 'footericons' );
 		$items = $footericons['poweredby'];
+
+		foreach ( $items as $key => &$item ) {
+			$validHref = isset( $item['url'] )
+				&& ( $item['url'] !== '' )
+				&& ( strpos( $item['url'], '#' ) !== 0 );
+
+			if ( $validHref ) {
+				$parsedURL = wfParseUrl( $item['url'] );
+				if ( $parsedURL ) {
+					$item['target'] = '_blank';
+				}
+			}
+		}
 		return $items;
 	}
 }
