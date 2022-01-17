@@ -21,6 +21,12 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 
 	/**
 	 *
+	 * @var array
+	 */
+	private $editActions = [];
+
+	/**
+	 *
 	 * @param PermissionManager $permissionManager
 	 */
 	public function __construct( $permissionManager ) {
@@ -46,9 +52,17 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 
 		$veNamespace = $GLOBALS['wgVisualEditorAvailableNamespaces'] ?? [];
 		$ns = $title->getNamespace();
+
 		if ( isset( $veNamespace[$ns] ) && $veNamespace[$ns] ) {
-			$actionType = 'veaction';
+			if ( !empty( $this->editActions ) ) {
+				foreach ( $this->editActions as $key => $editItem ) {
+					if ( $editItem['id'] === 'ca-ve-edit' ) {
+						$actionType = 'veaction';
+					}
+				}
+			}
 		}
+
 		return $title->getLocalURL( [ $actionType => 'edit' ] );
 	}
 
@@ -153,17 +167,16 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	 * @return array
 	 */
 	private function getEditActions(): array {
-		$edit = [];
 		if ( isset( $this->componentProcessData['panel'] )
 			&& isset( $this->componentProcessData['panel']['edit'] ) ) {
-				$edit = $this->componentProcessData['panel'][ 'edit' ];
+				$this->editActions = $this->componentProcessData['panel'][ 'edit' ];
 		}
-		if ( empty( $edit ) ) {
+		if ( empty( $this->editActions ) ) {
 			return [];
 		}
 		$services = MediaWikiServices::getInstance();
 		/** @var LinkFormatter */
 		$linkFormatter = $services->getService( 'MWStakeLinkFormatter' );
-		return $linkFormatter->formatLinks( $edit );
+		return $linkFormatter->formatLinks( $this->editActions );
 	}
 }
