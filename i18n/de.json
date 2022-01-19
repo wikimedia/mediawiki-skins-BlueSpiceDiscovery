@@ -111,5 +111,14 @@
 	"bs-discovery-personalurl-mycontributions-text": "Beiträge",
 	"bs-discovery-personalurl-userpage-text": "Profil",
 	"bs-discovery-globalactionentry-templates-text": "Vorlagen",
-	"bs-discovery-globalactionentry-templates-title": "Alle Vorlagen"
+	"bs-discovery-globalactionentry-templates-title": "Alle Vorlagen",
+	"bs-discovery-name": "BlueSpice Discovery",
+	"bs-discovery-desc": "BlueSpice Oberfläche",
+	"bs-discovery-navbar-aria-label": "Kopfleiste",
+	"bs-discovery-sidebar-secondary-share-sharebymail-text": "E-Mail",
+	"bs-discovery-sidebar-secondary-share-sharebymail-subject": "$1: $2",
+	"bs-discovery-sidebar-secondary-share-sharebymail-body": "$1: $2\n\n$3",
+	"bs-discovery-sidebar-details-heading": "Details",
+	"bs-discovery-sidebar-secondary-watch-link-title": "Diese Seite beobachten",
+	"bs-discovery-sidebar-secondary-watch-link-aria-label": "Diese Seite beobachten"
 }
