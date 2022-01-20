@@ -2,11 +2,10 @@
 
 namespace BlueSpice\Discovery\BreadcrumbDataProvider;
 
-use BlueSpice\Discovery\BreadcrumbDataProvider;
 use RawMessage;
 use Title;
 
-class SpecialActionsProvider extends BreadcrumbDataProvider {
+class SpecialActionsProvider extends BaseBreadcrumbDataProvider {
 
 	/**
 	 *
