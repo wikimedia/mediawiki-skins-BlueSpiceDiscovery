@@ -16,12 +16,12 @@
 }
 
 .row > .col-east-spacer {
-	min-width: var(--sidebar-secondary-width);
-	max-width: var(--sidebar-secondary-width);
-}
-.row > .col-west-spacer {
 	min-width: var(--sidebar-primary-width);
 	max-width: var(--sidebar-primary-width);
+}
+.row > .col-west-spacer {
+	min-width: var(--sidebar-secondary-width);
+	max-width: var(--sidebar-secondary-width);
 }
 .row > .col-east,
 .row > .col-west {

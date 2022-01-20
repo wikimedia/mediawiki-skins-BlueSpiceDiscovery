@@ -1,0 +1,4 @@
+#content .thumb {
+	max-width: var(--content-max-width);
+	width: 100%;
+}

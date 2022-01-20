@@ -1,0 +1,3 @@
+#content table {
+	max-width: var(--content-max-width);
+}

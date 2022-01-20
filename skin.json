@@ -325,6 +325,7 @@
 			"styles": {
 				"stylesheets/structure/main.css": {},
 				"stylesheets/structure/main.sm.css": { "media": "all and ( max-width: 767px )" },
+				"stylesheets/structure/main.xxl.css": { "media": "all and ( min-width: 1400px )" },
 				"stylesheets/structure/main.title-action.edit-button.css": {},
 				"stylesheets/structure/main.title-action.full-sceen-button.css": {},
 				"stylesheets/structure/main.breadcrumb.css": {},
@@ -334,7 +335,9 @@
 				"stylesheets/content/content.css": {},
 				"stylesheets/content/content.headings.css": {},
 				"stylesheets/content/tables.css": {},
+				"stylesheets/content/tables.xxl.css": { "media": "all and ( min-width: 1400px )" },
 				"stylesheets/content/images.css": {},
+				"stylesheets/content/images.xxl.css": { "media": "all and ( min-width: 1400px )" },
 				"stylesheets/content/content.toc.css": {},
 				"stylesheets/structure/userminiprofile.css": {},
 				"stylesheets/content/bluespiceSocial.css": {},
