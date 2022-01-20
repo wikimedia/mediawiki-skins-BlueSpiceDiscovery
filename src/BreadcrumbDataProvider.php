@@ -144,7 +144,7 @@ class BreadcrumbDataProvider implements IBreadcrumbDataProvider {
 
 			$node = [
 				'id' => $nodeTitle->getArticleID(),
-				'nodeText' => $nodeText,
+				'nodeText' => trim( $nodeText ),
 				'url' => $nodeTitle->getLocalURL(),
 				'classes' => $classes,
 				'title' => $nodeTitle->getFullText(),
