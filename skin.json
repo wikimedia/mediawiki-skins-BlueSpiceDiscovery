@@ -94,6 +94,12 @@
 			"BreadcrumbDataProviderRegistry": {
 				"special-actions": {
 					"class": "BlueSpice\\Discovery\\BreadcrumbDataProvider\\SpecialActionsProvider"
+				},
+				"without-subpages": {
+					"class": "BlueSpice\\Discovery\\BreadcrumbDataProvider\\PagesWithoutSubpagesProvider"
+				},
+				"base-breadcrumb": {
+					"class": "BlueSpice\\Discovery\\BreadcrumbDataProvider\\BaseBreadcrumbDataProvider"
 				}
 			}
 		},

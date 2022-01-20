@@ -92,7 +92,7 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 		return [
 			'main-namespace-view-mode' => [
 				Title::newFromText( 'Dummy/ABC' ),
-				[],
+				[ '' ],
 				'/wiki/Main_Page',
 				'/wiki/Dummy/ABC',
 				[]

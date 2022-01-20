@@ -1,14 +1,14 @@
 <?php
 
-namespace BlueSpice\Discovery;
+namespace BlueSpice\Discovery\BreadcrumbDataProvider;
 
+use BlueSpice\Discovery\IBreadcrumbDataProvider;
 use MessageLocalizer;
-use NamespaceInfo;
 use RawMessage;
 use Title;
 use TitleFactory;
 
-class BreadcrumbDataProvider implements IBreadcrumbDataProvider {
+class BaseBreadcrumbDataProvider implements IBreadcrumbDataProvider {
 
 	/**
 	 *

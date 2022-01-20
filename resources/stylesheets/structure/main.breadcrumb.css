@@ -34,6 +34,9 @@ nav .breadcrumb {
 	vertical-align: baseline;
 	width: 100%;
 }
+.breadcrumb-item a:hover {
+	color: var(--title-nav-fg--hover);
+}
 .breadcrumb-item a:focus-visible {
 	outline-color: var(--focus-visible);
 }
