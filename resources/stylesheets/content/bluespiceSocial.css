@@ -213,7 +213,7 @@ ul.bs-social-entitylist {
 .bs-social-entity-profileleftcolumn .bs-social-entity-profilefields {
 	margin-bottom: 0;
 }
-#content .bs-social-entity-title h3 a {
+#content .bs-social-entity-title a {
 	color: var(--discussion-title-fg) !important;
 }
 #content .bs-social-entity-right a {
@@ -232,5 +232,8 @@ ul.bs-social-entitylist {
 	z-index: 1001;
 }
 #content .bs-social-entity-content p {
-	padding: 0;
+	padding: 0px;
+}
+#content .bs-social-entity-content > p {
+	padding: 10px;
 }
