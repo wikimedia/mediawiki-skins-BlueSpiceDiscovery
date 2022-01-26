@@ -12,6 +12,13 @@ class DataAfterContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 * @return void
 	 */
 	protected function sortItems( &$items ): void {
+		ksort( $items );
+		usort( $items, static function ( $itemOne, $itemTwo ) {
+			$item1SortKey = isset( $itemOne['position'] ) ? $itemOne['position'] : 100;
+			$item2SortKey = isset( $itemTwo['position'] ) ? $itemTwo['position'] : 100;
+
+			return $item1SortKey > $item2SortKey;
+		} );
 	}
 
 	/**
