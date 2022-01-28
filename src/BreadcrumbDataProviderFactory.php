@@ -2,6 +2,7 @@
 
 namespace BlueSpice\Discovery;
 
+use BlueSpice\Discovery\BreadcrumbDataProvider\BaseBreadcrumbDataProvider;
 use User;
 use Wikimedia\ObjectFactory;
 
@@ -54,9 +55,9 @@ class BreadcrumbDataProviderFactory {
 	/**
 	 * @param Title $title
 	 * @param User $user
-	 * @return BreadcrumbDataProvider
+	 * @return BaseBreadcrumbDataProvider
 	 */
-	public function getProviderForTitle( $title, $user ): BreadcrumbDataProvider {
+	public function getProviderForTitle( $title, $user ): BaseBreadcrumbDataProvider {
 		$providers = \ExtensionRegistry::getInstance()->getAttribute(
 			'BlueSpiceDiscoveryBreadcrumbDataProviderRegistry'
 		);
@@ -75,7 +76,7 @@ class BreadcrumbDataProviderFactory {
 		}
 
 		return $this->objectFactory->createObject( [
-			'class' => BreadcrumbDataProvider::class,
+			'class' => BaseBreadcrumbDataProvider::class,
 			'args' => $args,
 		] );
 	}
