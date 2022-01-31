@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Brettchenweber",
 			"Mschlindwein",
 			"Robert Vogel"
 		]
 	},
 	"bs-discovery-name": "BlueSpice Discovery",
-	"bs-discovery-desc": "BlueSpice Oberfläche",
+	"bs-discovery-desc": "BlueSpice-Oberfläche",
 	"bs-discovery-skip-links-navigation-aria-label": "Zu den Links",
 	"bs-discovery-skip-to-navbar-primary-text": "Zur Kopfleiste",
 	"bs-discovery-skip-to-sidebar-primary-text": "Zur Hauptnavigation",

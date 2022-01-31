@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"Nickthijssen1994"
 		]
 	},
 	"bs-discovery-back-to-top-text": "Terug naar boven",
@@ -13,6 +14,9 @@
 	"bs-discovery-navbar-user-login-title": "Aanmelden",
 	"bs-discovery-navbar-user-login-aria-label": "Aanmelden",
 	"bs-discovery-logo-return-to-aria-label": "Terug naar $1",
+	"bs-discovery-searchform-button-title": "Zoeken naar",
+	"bs-discovery-searchform-button-aria-label": "Zoeken naar",
+	"bs-discovery-searchform-input-placeholder": "Uw zoekterm",
 	"bs-discovery-header-create-button-text": "Nieuw",
 	"bs-discovery-header-create-button-title": "Nieuwe pagina maken",
 	"bs-discovery-header-create-button-aria-label": "Nieuwe pagina maken",
@@ -20,9 +24,15 @@
 	"bs-discovery-create-button-new-section-title": "Nieuw kopje toevoegen",
 	"bs-discovery-create-button-new-file-text": "Nieuw bestand",
 	"bs-discovery-create-button-new-file-title": "Een nieuw bestand uploaden",
+	"bs-discovery-navbar-global-actions-tool-text": "Hulpmiddelen",
 	"bs-discovery-navbar-languages-button-text": "Talen",
 	"bs-discovery-navbar-language-button-title": "Taal selecteren",
 	"bs-discovery-navbar-language-button-aria-label": "Taal selecteren",
+	"bs-discovery-navbar-full-screen-button-enable-title": "Schermvullende weergave inschakelen",
+	"bs-discovery-navbar-full-screen-button-text": "Schermvullende weergave inschakelen",
+	"bs-discovery-navbar-full-screen-button-enable-aria-label": "Schermvullende weergave inschakelen",
+	"bs-discovery-navbar-full-screen-button-disable-title": "Schermvullende weergave uitschakelen",
+	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Schermvullende weergave uitschakelen",
 	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Naamruimte",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Pagina's",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Hoofdpagina",
