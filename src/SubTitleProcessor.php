@@ -28,6 +28,12 @@ class SubTitleProcessor {
 	 */
 	private $redirect = "";
 
+	/**
+	 *
+	 * @var string
+	 */
+	private $revision = "";
+
 	public function __construct() {
 	}
 
@@ -39,6 +45,7 @@ class SubTitleProcessor {
 		$this->checkRedirect();
 		$this->checkSubpages();
 		$this->checkBacklink();
+		$this->checkRevision();
 	}
 
 	/**
@@ -54,6 +61,9 @@ class SubTitleProcessor {
 		}
 		if ( $key === 'subpages' ) {
 			return $this->subpages;
+		}
+		if ( $key === 'revision' ) {
+			return $this->revision;
 		}
 		if ( $this->subtitle === '/v' ||
 			$this->subtitle === '<br>' ) {
@@ -126,6 +136,34 @@ class SubTitleProcessor {
 			$this->backlink = $matches[0];
 			$this->subtitle = preg_replace(
 			'#(← <a .*?>)(.*?)(<\/a>)#',
+			'',
+			$this->subtitle );
+		}
+	}
+
+	/**
+	 *
+	 * @return void
+	 */
+	private function checkRevision() {
+		$hasRevision = preg_match(
+			'#(<div class="mw-revision.*?>)(.*?)(<\/div>)#',
+			$this->subtitle,
+			$matches
+		);
+
+		if ( $hasRevision ) {
+			$this->revision = $matches[0];
+			$this->subtitle = preg_replace(
+			'#(<div id="mw-revision-nav.*?>)(.*?)(<\/div>)#',
+			'',
+			$this->subtitle );
+			$this->subtitle = preg_replace(
+			'#(<div id="mw-revision-info.*?>)(.*?)(<\/div>)#',
+			'',
+			$this->subtitle );
+			$this->subtitle = preg_replace(
+			'#(<div class="mw-revision.*?>)(.*?)(<\/div>)#',
 			'',
 			$this->subtitle );
 		}
