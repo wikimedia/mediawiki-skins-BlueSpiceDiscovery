@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"Nickthijssen1994"
 		]
 	},
 	"bs-discovery-back-to-top-text": "Terug naar boven",
@@ -56,5 +57,14 @@
 	"bs-discovery-personalurl-mycontributions-text": "Bijdragen",
 	"bs-discovery-personalurl-userpage-text": "Profiel",
 	"bs-discovery-globalactionentry-templates-text": "Sjablonen",
-	"bs-discovery-globalactionentry-templates-title": "Alle sjablonen"
+	"bs-discovery-globalactionentry-templates-title": "Alle sjablonen",
+	"bs-discovery-searchform-button-title": "Zoeken naar",
+	"bs-discovery-searchform-button-aria-label": "Zoeken naar",
+	"bs-discovery-searchform-input-placeholder": "Uw zoekterm",
+	"bs-discovery-navbar-global-actions-tool-text": "Hulpmiddelen",
+	"bs-discovery-navbar-full-screen-button-enable-title": "Schermvullende weergave inschakelen",
+	"bs-discovery-navbar-full-screen-button-text": "Schermvullende weergave inschakelen",
+	"bs-discovery-navbar-full-screen-button-enable-aria-label": "Schermvullende weergave inschakelen",
+	"bs-discovery-navbar-full-screen-button-disable-title": "Schermvullende weergave uitschakelen",
+	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Schermvullende weergave uitschakelen"
 }

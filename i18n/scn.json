@@ -50,5 +50,14 @@
 	"bs-discovery-personalurl-mycontributions-text": "Cuntribbuti",
 	"bs-discovery-personalurl-userpage-text": "Prufilu",
 	"bs-discovery-globalactionentry-templates-text": "Template",
-	"bs-discovery-globalactionentry-templates-title": "Tutti li template"
+	"bs-discovery-globalactionentry-templates-title": "Tutti li template",
+	"bs-discovery-navbar-user-button-personal-menu-text": "Strumenta pirsunali",
+	"bs-discovery-header-create-button-title": "Crea na pàggina nova",
+	"bs-discovery-header-create-button-aria-label": "Crea na pàggina nova",
+	"bs-discovery-header-create-split-button-title": "Apri lu menu cu di l'opzioni pi criari lu cuntinutu",
+	"bs-discovery-header-create-split-button-aria-label": "Apri lu menu cu di l'opzioni pi criari lu cuntinutu",
+	"bs-discovery-create-button-new-section-title": "Crea na sizzioni nova",
+	"bs-discovery-navbar-global-actions-manager-text": "Gistioni",
+	"bs-discovery-breadcrumb-nav-node-title": "Apri $1",
+	"bs-discovery-breadcrumb-nav-node-aria-label": "Apri $1"
 }
