@@ -1,8 +1,9 @@
 .bs-version-pager {
 	margin-top: 1rem;
 }
-.bs-version-pager a.next, a.prev {
-		text-decoration: none;
+.bs-version-pager a.next, .bs-version-pager a.prev,
+.bs-version-pager a.next:hover, .bs-version-pager a.prev:hover {
+	text-decoration: none;
 }
 
 .bs-version-pager-info {
