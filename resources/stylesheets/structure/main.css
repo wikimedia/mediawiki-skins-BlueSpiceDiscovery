@@ -35,6 +35,14 @@ main .alert {
 main .alert label {
 	font-size: 0.875rem;
 }
+main .alert-info a {
+	text-decoration: none;
+	color:#055160;
+	font-weight: bold;
+}
+main .alert-info a:hover {
+	text-decoration: underline;
+}
 .fs-mode-enabled #main {
 	max-width: 100vw;
 }
