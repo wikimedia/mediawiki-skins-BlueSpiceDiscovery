@@ -16,10 +16,12 @@
 			}
 
 			if ( $( '.ve-init-target-visual' ).length || $( '.ve-init-target-source' ).length ) {
-				var $floatingVisualVE = $( '.ve-init-target-visual > .ve-ui-toolbar-floating > .oo-ui-toolbar-bar' );
-				var $floatingSourceVE = $( '.ve-init-target-source > .ve-ui-toolbar-floating > .oo-ui-toolbar-bar' );
-				var $visualVE = $( '.ve-init-target-visual > .ve-ui-toolbar > .oo-ui-toolbar-bar' );
-				var $sourceVE = $( '.ve-init-target-source > .ve-ui-toolbar > .oo-ui-toolbar-bar' );
+				var $floatingVisualVE = $( '#content .ve-init-target-visual >' +
+					'.ve-ui-toolbar-floating > .oo-ui-toolbar-bar' );
+				var $floatingSourceVE = $( '#content .ve-init-target-source >' +
+					'.ve-ui-toolbar-floating > .oo-ui-toolbar-bar' );
+				var $visualVE = $( '#content .ve-init-target-visual > .ve-ui-toolbar > .oo-ui-toolbar-bar' );
+				var $sourceVE = $( '#content .ve-init-target-source > .ve-ui-toolbar > .oo-ui-toolbar-bar' );
 				var topHeight = $( '#title-line' ).height() + $( '#nb-pri' ).height();
 
 				if ( $title.hasClass( 'title-fixed' ) ) {
