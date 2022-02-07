@@ -10,6 +10,8 @@ class Setup {
 	 *
 	 */
 	public static function onCallback() {
+		\mwsInitComponents();
+
 		$GLOBALS['wgUseMediaWikiUIEverywhere'] = true;
 		$GLOBALS['wgVisualEditorSupportedSkins'][] = 'bluespicediscovery';
 		$GLOBALS['wgVisualEditorSkinToolbarScrollOffset']['bluespicediscovery'] = 100;
