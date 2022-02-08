@@ -3,7 +3,8 @@
 		"authors": [
 			"Ajeje Brazorf",
 			"Daniel Vogel",
-			"Robby"
+			"Robby",
+			"Verdy p"
 		]
 	},
 	"bs-discovery-skip-links-navigation-aria-label": "Aria-label attribute for skip links navigation",
@@ -38,7 +39,7 @@
 	"bs-discovery-navbar-global-actions-button-title": "Title attribute for button to open menu with global actions links",
 	"bs-discovery-navbar-global-actions-button-aria-label": "Aria-label for button to open menu with global actions links",
 	"bs-discovery-navbar-global-actions-tool-text": "Heading for a list with global actions links\n\n{{Identical|Tool}}",
-	"bs-discovery-navbar-global-actions-manager-text": "Heading for a list with links to managers\n{{identical||Management}}",
+	"bs-discovery-navbar-global-actions-manager-text": "Heading for a list with links to managers\n{{identical|Management}}",
 	"bs-discovery-navbar-languages-button-text": "Text for a button with language list for interwiki links\n{{identical|Language}}",
 	"bs-discovery-navbar-language-button-title": "Title attribute for a button with language list for interwiki links",
 	"bs-discovery-navbar-language-button-aria-label": "Aria-label attribute for a button with language list for interwiki links",
