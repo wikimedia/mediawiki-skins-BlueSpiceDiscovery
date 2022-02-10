@@ -8,17 +8,17 @@ interface ITabPanelContainer {
 	 *
 	 * @return string
 	 */
-	public function getId() : string;
+	public function getId(): string;
 
 	/**
 	 *
 	 * @return string
 	 */
-	public function getTabPanelRegistryKey() : string;
+	public function getTabPanelRegistryKey(): string;
 
 	/**
 	 *
 	 * @return array
 	 */
-	public function getClasses() : array;
+	public function getClasses(): array;
 }

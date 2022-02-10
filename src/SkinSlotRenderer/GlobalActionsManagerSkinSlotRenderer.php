@@ -13,7 +13,7 @@ class GlobalActionsManagerSkinSlotRenderer extends ExtendedSkinSlotRendererBase 
 	 * @param array &$items
 	 * @return void
 	 */
-	protected function sortItems( &$items ) : void {
+	protected function sortItems( &$items ): void {
 		$helper = [];
 		foreach ( $items as $itemid => $item ) {
 			if ( !isset( $item[ 'id' ] ) || empty( $item[ 'id' ] ) ) {
@@ -33,7 +33,7 @@ class GlobalActionsManagerSkinSlotRenderer extends ExtendedSkinSlotRendererBase 
 	 * @param array $data
 	 * @return string
 	 */
-	public function getHtml( $data = [] ) : string {
+	public function getHtml( $data = [] ): string {
 		$skinSlots = $this->skinSlotRegistry->getSkinSlots();
 		$items = $skinSlots[static::REG_KEY];
 

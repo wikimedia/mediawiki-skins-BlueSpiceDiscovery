@@ -18,14 +18,14 @@ class SkipTo extends SkinStructureBase {
 	 *
 	 * @return string
 	 */
-	public function getName() : string {
+	public function getName(): string {
 		return 'skip-to';
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getTemplatePath() : string {
+	public function getTemplatePath(): string {
 		return $GLOBALS['wgStyleDirectory'] .
 			'/BlueSpiceDiscovery/resources/templates/structure/skip-to';
 	}
@@ -35,7 +35,7 @@ class SkipTo extends SkinStructureBase {
 	 * @param IContextSource $context
 	 * @return bool
 	 */
-	public function shouldRender( IContextSource $context ) : bool {
+	public function shouldRender( IContextSource $context ): bool {
 		return true;
 	}
 
@@ -44,7 +44,7 @@ class SkipTo extends SkinStructureBase {
 	 *
 	 * @return bool
 	 */
-	public function enableRecursivePartials() : bool {
+	public function enableRecursivePartials(): bool {
 		return false;
 	}
 
@@ -52,7 +52,7 @@ class SkipTo extends SkinStructureBase {
 	 *
 	 * @return array
 	 */
-	public function getParams() : array {
+	public function getParams(): array {
 		return [
 			'aria-label' => Message::newFromKey( 'bs-discovery-skip-links-navigation-aria-label' )->text(),
 			'body' => $this->buildList()
@@ -63,7 +63,7 @@ class SkipTo extends SkinStructureBase {
 	 *
 	 * @return string
 	 */
-	private function buildList() : string {
+	private function buildList(): string {
 		$html = '<ul>';
 		$attribute = ExtensionRegistry::getInstance()->getAttribute(
 			'BlueSpiceDiscoverySkipToRegistry'

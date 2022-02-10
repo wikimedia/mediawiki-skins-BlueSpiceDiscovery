@@ -15,7 +15,7 @@ class PageTabPanel extends ComponentBase implements ITabPanel, IRestrictedCompon
 	 *
 	 * @return string
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'tp-page';
 	}
 
@@ -23,7 +23,7 @@ class PageTabPanel extends ComponentBase implements ITabPanel, IRestrictedCompon
 	 *
 	 * @return Message
 	 */
-	public function getText() : Message {
+	public function getText(): Message {
 		return Message::newFromKey( 'bs-discovery-tabpanel-page-text' );
 	}
 
@@ -31,7 +31,7 @@ class PageTabPanel extends ComponentBase implements ITabPanel, IRestrictedCompon
 	 *
 	 * @return Message
 	 */
-	public function getTitle() : Message {
+	public function getTitle(): Message {
 		return Message::newFromKey( 'bs-discovery-tabpanel-page-title' );
 	}
 
@@ -39,7 +39,7 @@ class PageTabPanel extends ComponentBase implements ITabPanel, IRestrictedCompon
 	 *
 	 * @return Message
 	 */
-	public function getAriaLabel() : Message {
+	public function getAriaLabel(): Message {
 		return Message::newFromKey( 'bs-discovery-tabpanel-page-aria-label' );
 	}
 
@@ -47,7 +47,7 @@ class PageTabPanel extends ComponentBase implements ITabPanel, IRestrictedCompon
 	 *
 	 * @return Message
 	 */
-	public function getAriaDesc() : Message {
+	public function getAriaDesc(): Message {
 		return Message::newFromKey( 'bs-discovery-tabpanel-page-desc' );
 	}
 
@@ -55,7 +55,7 @@ class PageTabPanel extends ComponentBase implements ITabPanel, IRestrictedCompon
 	 *
 	 * @return IComponent[]
 	 */
-	public function getSubComponents() : array {
+	public function getSubComponents(): array {
 		return [
 			new ActionsPanel(),
 			new ToolbarPanel(),
@@ -68,7 +68,7 @@ class PageTabPanel extends ComponentBase implements ITabPanel, IRestrictedCompon
 	 * @param IContextSource $context
 	 * @return bool
 	 */
-	public function isActive( $context ) : bool {
+	public function isActive( $context ): bool {
 		return true;
 	}
 

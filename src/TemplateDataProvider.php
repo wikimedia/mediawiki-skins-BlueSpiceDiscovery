@@ -41,7 +41,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @param BaseTemplate $template
 	 */
-	public function init( $template ) : void {
+	public function init( $template ): void {
 		$this->content_navigation = $template->get( 'content_navigation' );
 		$this->sidebar = $template->get( 'sidebar' );
 		$this->personal_urls = $template->get( 'personal_urls' );
@@ -60,7 +60,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 * @param string $id
 	 * @return void
 	 */
-	public function register( $group, $id ) : void {
+	public function register( $group, $id ): void {
 		$groupKeys = $this->getRegistryGroupKeys( $group );
 		if ( empty( $groupKeys ) || $groupKeys['path'] === 'template' ) {
 			return;
@@ -86,7 +86,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 * @param string $id
 	 * @return void
 	 */
-	public function unregister( $group, $id ) : void {
+	public function unregister( $group, $id ): void {
 		$groupKeys = $this->getRegistryGroupKeys( $group );
 		if ( empty( $groupKeys ) || $groupKeys['path'] === 'template' ) {
 			return;
@@ -109,7 +109,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return array
 	 */
-	public function getAll() : array {
+	public function getAll(): array {
 		$allLinks = $this->managedLinks;
 		$allLinks = array_merge(
 			$allLinks,
@@ -125,7 +125,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return void
 	 */
-	private function manageLinks() : void {
+	private function manageLinks(): void {
 		$this->makePanelWatch();
 		$this->makePanelShare();
 		$this->makePanelPrint();
@@ -146,7 +146,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return array
 	 */
-	private function collectTemplateLinks() : array {
+	private function collectTemplateLinks(): array {
 		$templateLinks = [
 			'views' => $this->content_navigation['views'],
 			'actions' => $this->content_navigation['actions'],
@@ -162,7 +162,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return array
 	 */
-	private function collectPanelLinks() : array {
+	private function collectPanelLinks(): array {
 		$templateLinks = $this->collectActionLinks();
 		$sidebar = $this->sidebar;
 		if ( array_key_exists( 'LANGUAGES', $sidebar ) ) {
@@ -190,7 +190,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return array
 	 */
-	private function collectActionLinks() : array {
+	private function collectActionLinks(): array {
 		$actionLinks = array_merge(
 			$this->content_navigation['views'],
 			$this->content_navigation['actions'],
@@ -226,7 +226,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 * @param string $group
 	 * @return void
 	 */
-	private function getRegistryGroupKeys( $group ) : array {
+	private function getRegistryGroupKeys( $group ): array {
 		$group = trim( $group, "/\x20\t\n\r\0\x0B" );
 		$groupParts = explode( '/', $group );
 		if ( count( $groupParts ) > 2 ) {
@@ -250,7 +250,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 * @param array &$array
 	 * @return void
 	 */
-	private function ensureArrayKey( $key, &$array ) : void {
+	private function ensureArrayKey( $key, &$array ): void {
 		if ( !array_key_exists( $key, $array ) ) {
 			$array = array_merge(
 				$array,
@@ -267,7 +267,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 * @param mixed $groupName
 	 * @return void
 	 */
-	private function buildGroupPath( $groupPath, $groupName ) : void {
+	private function buildGroupPath( $groupPath, $groupName ): void {
 		$this->ensureArrayKey( $groupPath, $this->managedLinks );
 		$this->ensureArrayKey( $groupName, $this->managedLinks[$groupPath] );
 		$this->ensureArrayKey( 'toolbox', $this->managedLinks[$groupPath] );
@@ -279,7 +279,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 * @param array $idList
 	 * @return void
 	 */
-	private function registerLinks( $groupPath, $idList ) : void {
+	private function registerLinks( $groupPath, $idList ): void {
 		foreach ( $idList as $id ) {
 			$this->register( $groupPath, $id );
 		}
@@ -289,7 +289,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return void
 	 */
-	private function makePanelWatch() : void {
+	private function makePanelWatch(): void {
 		$idList = [ 'ca-watch', 'ca-unwatch' ];
 		$this->registerLinks( 'panel/watch', $idList );
 	}
@@ -298,7 +298,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return void
 	 */
-	private function makePanelShare() : void {
+	private function makePanelShare(): void {
 		$idList = [ 't-permalink', 't-sharebymail' ];
 		$this->registerLinks( 'panel/share', $idList );
 	}
@@ -307,7 +307,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return void
 	 */
-	private function makePanelPrint() : void {
+	private function makePanelPrint(): void {
 		$idList = [ 't-print' ];
 		$this->registerLinks( 'panel/export', $idList );
 	}
@@ -316,7 +316,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return void
 	 */
-	private function makePanelEdit() : void {
+	private function makePanelEdit(): void {
 		$idList = [ 'ca-edit', 'ca-ve-edit', 'ca-new-section' ];
 		$this->registerLinks( 'panel/edit', $idList );
 	}
@@ -325,7 +325,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return void
 	 */
-	private function makePanelViews() : void {
+	private function makePanelViews(): void {
 		$idList = [ 'ca-view' ];
 		$this->registerLinks( 'panel/views', $idList );
 	}
@@ -334,7 +334,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return void
 	 */
-	private function makePanelActionsPrimary() : void {
+	private function makePanelActionsPrimary(): void {
 		$idList = [ 'ca-move', 'ca-delete', 'ca-purge' ];
 		$this->registerLinks( 'panel/actions_primary', $idList );
 	}
@@ -343,7 +343,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return void
 	 */
-	private function makePanelActionsSecondary() : void {
+	private function makePanelActionsSecondary(): void {
 		$idList = [];
 		$this->registerLinks( 'panel/actions_secondary', $idList );
 	}
@@ -352,7 +352,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return void
 	 */
-	private function makePanelDetails() : void {
+	private function makePanelDetails(): void {
 		$idList = [ 'ca-history', 't-info' ];
 		$this->registerLinks( 'panel/details', $idList );
 	}
@@ -361,7 +361,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return void
 	 */
-	private function makePanelVariants() : void {
+	private function makePanelVariants(): void {
 		$idList = [];
 		$this->registerLinks( 'panel/vaiants', $idList );
 	}
@@ -370,7 +370,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return void
 	 */
-	private function makePanelCreate() : void {
+	private function makePanelCreate(): void {
 		$idList = [ 'ca-new-page', 'ca-new-subpage', 't-new-file' ];
 		$this->registerLinks( 'panel/create', $idList );
 	}
@@ -379,7 +379,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return void
 	 */
-	private function makePanelNamespaces() : void {
+	private function makePanelNamespaces(): void {
 		foreach ( $this->content_navigation['namespaces'] as $key => $link ) {
 			$this->register( 'panel/namespaces', $link['id'] );
 		}
@@ -389,7 +389,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return void
 	 */
-	private function makeActionsCollectionViews() : void {
+	private function makeActionsCollectionViews(): void {
 		foreach ( $this->content_navigation['views'] as $key => $link ) {
 			$this->register( 'actioncollection/views', $link['id'] );
 		}
@@ -399,7 +399,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return void
 	 */
-	private function makeActionsCollectionNamespaces() : void {
+	private function makeActionsCollectionNamespaces(): void {
 		foreach ( $this->content_navigation['namespaces'] as $key => $link ) {
 			$this->register( 'actioncollection/namespaces', $link['id'] );
 		}
@@ -411,7 +411,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 *
 	 * @return void
 	 */
-	private function makeActionsCollectionContentActions() : void {
+	private function makeActionsCollectionContentActions(): void {
 		foreach ( $this->content_navigation['actions'] as $key => $link ) {
 			$this->register( 'actioncollection/actions', $link['id'] );
 		}

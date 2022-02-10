@@ -11,9 +11,9 @@ class DataAfterContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 * @param array &$items
 	 * @return void
 	 */
-	protected function sortItems( &$items ) : void {
+	protected function sortItems( &$items ): void {
 		ksort( $items );
-		usort( $items, function ( $itemOne, $itemTwo ) {
+		usort( $items, static function ( $itemOne, $itemTwo ) {
 			$item1SortKey = isset( $itemOne['position'] ) ? $itemOne['position'] : 100;
 			$item2SortKey = isset( $itemTwo['position'] ) ? $itemTwo['position'] : 100;
 
@@ -25,7 +25,7 @@ class DataAfterContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 *
 	 * @return string
 	 */
-	protected function getContainerWrapperTag() : string {
+	protected function getContainerWrapperTag(): string {
 		return 'div';
 	}
 
@@ -33,7 +33,7 @@ class DataAfterContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 *
 	 * @return string
 	 */
-	protected function getContainerWrapperId() : string {
+	protected function getContainerWrapperId(): string {
 		return 'data-after-content';
 	}
 
@@ -41,7 +41,7 @@ class DataAfterContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 *
 	 * @return string
 	 */
-	protected function getItemWrapperTag() : string {
+	protected function getItemWrapperTag(): string {
 		return 'div';
 	}
 
@@ -50,7 +50,7 @@ class DataAfterContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 * @param string $id
 	 * @return string
 	 */
-	protected function getItemWrapperId( $id ) : string {
+	protected function getItemWrapperId( $id ): string {
 		return $id . '-cnt';
 	}
 }

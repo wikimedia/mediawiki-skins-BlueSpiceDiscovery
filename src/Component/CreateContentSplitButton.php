@@ -39,14 +39,14 @@ class CreateContentSplitButton extends SimpleDropdownSplitButton {
 	/**
 	 * @inheritDoc
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'new-content';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getSubComponents() : array {
+	public function getSubComponents(): array {
 		return [
 			new SimpleDropdownItemlistFromArray( [
 				'id' => 'new-content-itms',
@@ -59,63 +59,63 @@ class CreateContentSplitButton extends SimpleDropdownSplitButton {
 	/**
 	 * @return array
 	 */
-	public function getContainerClasses() : array {
+	public function getContainerClasses(): array {
 		return [ 'mx-2' ];
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getButtonClasses() : array {
+	public function getButtonClasses(): array {
 		return [ 'mws-button-primary', 'new-page' ];
 	}
 
 		/**
 		 * @return array
 		 */
-	public function getSplitButtonClasses() : array {
+	public function getSplitButtonClasses(): array {
 		return [ 'mws-button-primary' ];
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getMenuClasses() : array {
+	public function getMenuClasses(): array {
 		return [ 'mws-dropdown-primary', 'dropdown-menu-end' ];
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getButtonText() : Message {
+	public function getButtonText(): Message {
 		return Message::newFromKey( 'bs-discovery-header-create-button-text' );
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getButtonTitle() : Message {
+	public function getButtonTitle(): Message {
 		return Message::newFromKey( 'bs-discovery-header-create-button-title' );
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getSplitButtonTitle() : Message {
+	public function getSplitButtonTitle(): Message {
 		return Message::newFromKey( 'bs-discovery-header-create-split-button-title' );
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getButtonAriaLabel() : Message {
+	public function getButtonAriaLabel(): Message {
 		return Message::newFromKey( 'bs-discovery-header-create-button-aria-label' );
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getSplitButtonAriaLabel() : Message {
+	public function getSplitButtonAriaLabel(): Message {
 		return Message::newFromKey( 'bs-discovery-header-create-split-button-aria-label' );
 	}
 
@@ -123,7 +123,7 @@ class CreateContentSplitButton extends SimpleDropdownSplitButton {
 	 *
 	 * @return bool
 	 */
-	public function buttonIsDisabled() : bool {
+	public function buttonIsDisabled(): bool {
 		if ( !isset( $this->componentProcessData['panel'] )
 			|| !isset( $this->componentProcessData['panel']['create'] )
 			|| !isset( $this->componentProcessData['panel']['create']['ca-new-page'] )
@@ -137,7 +137,7 @@ class CreateContentSplitButton extends SimpleDropdownSplitButton {
 		 *
 		 * @return bool
 		 */
-	public function splitButtonIsDisabled() : bool {
+	public function splitButtonIsDisabled(): bool {
 		if ( !isset( $this->componentProcessData['panel'] )
 			|| !isset( $this->componentProcessData['panel']['create'] )
 			|| empty( $this->componentProcessData['panel']['create'] ) ) {
@@ -150,7 +150,7 @@ class CreateContentSplitButton extends SimpleDropdownSplitButton {
 	 *
 	 * @return array
 	 */
-	private function getMenuLinks() : array {
+	private function getMenuLinks(): array {
 		$items = [];
 
 		if ( !isset( $this->componentProcessData['panel'] )

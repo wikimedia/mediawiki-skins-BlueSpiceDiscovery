@@ -32,56 +32,56 @@ class LanguageButton extends SimpleDropdownIcon {
 	/**
 	 * @inheritDoc
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'lang-btn';
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getContainerClasses() : array {
+	public function getContainerClasses(): array {
 		return [ 'has-megamenu' ];
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getButtonClasses() : array {
+	public function getButtonClasses(): array {
 		return [ 'ico-btn' ];
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getMenuClasses() : array {
+	public function getMenuClasses(): array {
 		return [ 'megamenu' ];
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getIconClasses() : array {
+	public function getIconClasses(): array {
 		return [ 'ico-lang' ];
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getTitle() : Message {
+	public function getTitle(): Message {
 		return Message::newFromKey( 'bs-discovery-navbar-language-button-title' );
 	}
 
 	/**
 	 * @return Message
 	 */
-	public function getAriaLabel() : Message {
+	public function getAriaLabel(): Message {
 		return Message::newFromKey( 'bs-discovery-navbar-language-button-aria-label' );
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getSubComponents() : array {
+	public function getSubComponents(): array {
 		$currentLanguageParts = explode( '-', $this->langCode );
 		$currentLanguageClass = 'wiki-' . $currentLanguageParts[0];
 
@@ -136,7 +136,7 @@ class LanguageButton extends SimpleDropdownIcon {
 	 * @param IContextSource $context
 	 * @return bool
 	 */
-	public function shouldRender( IContextSource $context ) : bool {
+	public function shouldRender( IContextSource $context ): bool {
 		$languages = $context->getSkin()->getLanguages();
 		if ( !empty( $languages ) ) {
 			return true;

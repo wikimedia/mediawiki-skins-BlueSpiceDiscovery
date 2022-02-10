@@ -8,17 +8,17 @@ interface ITemplateRenderer {
 	 *
 	 * @return string
 	 */
-	public function getHtml() : string;
+	public function getHtml(): string;
 
 	/**
 	 *
 	 * @return array
 	 */
-	public function getParams() : array;
+	public function getParams(): array;
 
 	/**
 	 *
 	 * @return string
 	 */
-	public function getTemplatePath() : string;
+	public function getTemplatePath(): string;
 }

@@ -27,7 +27,7 @@ interface IBreadcrumbDataProvider {
 	/**
 	 *
 	 * @param Title $title
-	 * @return boolean
+	 * @return bool
 	 */
 	public function applies( Title $title ): bool;
 }

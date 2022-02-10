@@ -11,5 +11,5 @@ interface ISkinStructureRenderer {
 	 * @param IContextSource $context
 	 * @return string
 	 */
-	public function getHtml( $context ) : string;
+	public function getHtml( $context ): string;
 }

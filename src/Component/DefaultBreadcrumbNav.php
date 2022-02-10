@@ -69,11 +69,11 @@ class DefaultBreadcrumbNav extends Literal {
 	 *
 	 * @return string
 	 */
-	public function getHtml() : string {
+	public function getHtml(): string {
 		return $this->buildHtml();
 	}
 
-	private function buildHtml() : string {
+	private function buildHtml(): string {
 		$renderer = new DefaultBreadCrumbRenderer( $this->title, $this->user, $this->messageLocalizer,
 			$this->specialPageFactory, $this->namespaceInfo, $this->breadcrumbFactory );
 

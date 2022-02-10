@@ -21,7 +21,7 @@ class MainTabPanel extends ComponentBase implements ITabPanel, IRestrictedCompon
 	 *
 	 * @return string
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'tp-main';
 	}
 
@@ -29,7 +29,7 @@ class MainTabPanel extends ComponentBase implements ITabPanel, IRestrictedCompon
 	 *
 	 * @return Message
 	 */
-	public function getText() : Message {
+	public function getText(): Message {
 		return Message::newFromKey( 'bs-discovery-tabpanel-main-text' );
 	}
 
@@ -37,7 +37,7 @@ class MainTabPanel extends ComponentBase implements ITabPanel, IRestrictedCompon
 	 *
 	 * @return Message
 	 */
-	public function getTitle() : Message {
+	public function getTitle(): Message {
 		return Message::newFromKey( 'bs-discovery-tabpanel-main-title' );
 	}
 
@@ -45,7 +45,7 @@ class MainTabPanel extends ComponentBase implements ITabPanel, IRestrictedCompon
 	 *
 	 * @return Message
 	 */
-	public function getAriaLabel() : Message {
+	public function getAriaLabel(): Message {
 		return Message::newFromKey( 'bs-discovery-tabpanel-main-aria-label' );
 	}
 
@@ -53,7 +53,7 @@ class MainTabPanel extends ComponentBase implements ITabPanel, IRestrictedCompon
 	 *
 	 * @return Message
 	 */
-	public function getAriaDesc() : Message {
+	public function getAriaDesc(): Message {
 		return Message::newFromKey( 'bs-discovery-tabpanel-main-desc' );
 	}
 
@@ -61,7 +61,7 @@ class MainTabPanel extends ComponentBase implements ITabPanel, IRestrictedCompon
 	 *
 	 * @return IComponent[]
 	 */
-	public function getSubComponents() : array {
+	public function getSubComponents(): array {
 		return [
 			new MainLinksPanel(),
 			new MediaWikiLinksPanel(),
@@ -73,7 +73,7 @@ class MainTabPanel extends ComponentBase implements ITabPanel, IRestrictedCompon
 	 * @param IContextSource $context
 	 * @return bool
 	 */
-	public function isActive( $context ) : bool {
+	public function isActive( $context ): bool {
 		return true;
 	}
 

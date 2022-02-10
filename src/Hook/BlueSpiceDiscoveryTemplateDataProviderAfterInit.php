@@ -9,5 +9,5 @@ interface BlueSpiceDiscoveryTemplateDataProviderAfterInit {
 	 * @param ITemplateDataProvider $registry
 	 * @return void
 	 */
-	public function onBlueSpiceDiscoveryTemplateDataProviderAfterInit( $registry ) : void;
+	public function onBlueSpiceDiscoveryTemplateDataProviderAfterInit( $registry ): void;
 }

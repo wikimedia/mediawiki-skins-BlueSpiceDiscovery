@@ -10,7 +10,7 @@ interface ITemplateDataProvider {
 	 * @param string $id
 	 * @return void
 	 */
-	public function register( $group, $id ) : void;
+	public function register( $group, $id ): void;
 
 	/**
 	 *
@@ -18,5 +18,5 @@ interface ITemplateDataProvider {
 	 * @param string $id
 	 * @return void
 	 */
-	public function unregister( $group, $id ) : void;
+	public function unregister( $group, $id ): void;
 }

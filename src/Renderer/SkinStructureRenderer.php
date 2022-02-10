@@ -24,7 +24,7 @@ class SkinStructureRenderer implements ISkinStructureRenderer {
 	 * @param IContextSource $context
 	 * @return string
 	 */
-	public function getHtml( $context ) : string {
+	public function getHtml( $context ): string {
 		if ( !$this->skinStructureElement->shouldRender( $context ) ) {
 			return '';
 		}

@@ -25,7 +25,7 @@ abstract class StackedTabPanelContainerBase extends SkinStructureBase implements
 	 *
 	 * @return array
 	 */
-	private function getTabPanels() : array {
+	private function getTabPanels(): array {
 		/** @var MediaWikiServices */
 		$services = MediaWikiServices::getInstance();
 
@@ -151,7 +151,7 @@ abstract class StackedTabPanelContainerBase extends SkinStructureBase implements
 	 * @param ITabPanel[] $tabPanels
 	 * @return void
 	 */
-	private function findActiveId( $tabPanels ) : void {
+	private function findActiveId( $tabPanels ): void {
 		$first = true;
 		foreach ( $tabPanels as $id => $tabPanel ) {
 			if ( !( $tabPanel instanceof ITabPanel ) ) {
@@ -171,7 +171,7 @@ abstract class StackedTabPanelContainerBase extends SkinStructureBase implements
 	 *
 	 * @return array
 	 */
-	public function getParams() : array {
+	public function getParams(): array {
 		$this->buildTabPanels();
 		$params = [
 			'id' => $this->getId()
@@ -192,7 +192,7 @@ abstract class StackedTabPanelContainerBase extends SkinStructureBase implements
 	/**
 	 * @return string
 	 */
-	public function getTemplatePath() : string {
+	public function getTemplatePath(): string {
 		return $GLOBALS['wgStyleDirectory'] .
 			'/BlueSpiceDiscovery/resources/templates/structure/stacked-tab-panel-container';
 	}
@@ -201,7 +201,7 @@ abstract class StackedTabPanelContainerBase extends SkinStructureBase implements
 	 *
 	 * @return array
 	 */
-	public function getClasses() : array {
+	public function getClasses(): array {
 		return [];
 	}
 
@@ -210,7 +210,7 @@ abstract class StackedTabPanelContainerBase extends SkinStructureBase implements
 	 * @param IContextSource $context
 	 * @return bool
 	 */
-	public function shouldRender( IContextSource $context ) : bool {
+	public function shouldRender( IContextSource $context ): bool {
 		$shouldRender = false;
 		$tabPanels = $this->getTabPanels();
 		foreach ( $tabPanels as $id => $tabPanel ) {

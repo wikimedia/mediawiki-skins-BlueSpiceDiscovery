@@ -23,21 +23,21 @@ class MainLinksPanel extends SimpleCard {
 	/**
 	 * @inheritDoc
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'main-pnl';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getContainerClasses() : array {
+	public function getContainerClasses(): array {
 		return [ 'w-100', 'bg-transp' ];
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getSubComponents() : array {
+	public function getSubComponents(): array {
 		$item = new SimpleCard( [
 			'id' => 'main-links-panel',
 			'classes' => [ 'w-100', 'bg-transp' ],
@@ -68,7 +68,7 @@ class MainLinksPanel extends SimpleCard {
 	 * @param IContextSource $context
 	 * @return bool
 	 */
-	public function shouldRender( IContextSource $context ) : bool {
+	public function shouldRender( IContextSource $context ): bool {
 		return true;
 	}
 
@@ -76,7 +76,7 @@ class MainLinksPanel extends SimpleCard {
 	 *
 	 * @return string
 	 */
-	private function getSkinSlotHtml() : string {
+	private function getSkinSlotHtml(): string {
 		/** @var MediaWikiServices */
 		$services = MediaWikiServices::getInstance();
 

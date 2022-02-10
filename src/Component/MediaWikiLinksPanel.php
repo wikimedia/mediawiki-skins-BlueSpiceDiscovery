@@ -26,21 +26,21 @@ class MediaWikiLinksPanel extends SimpleCard {
 	/**
 	 * @inheritDoc
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'mw-links';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getContainerClasses() : array {
+	public function getContainerClasses(): array {
 		return [ 'w-100', 'bg-transp' ];
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getSubComponents() : array {
+	public function getSubComponents(): array {
 		return $this->buildPanels();
 	}
 
@@ -49,7 +49,7 @@ class MediaWikiLinksPanel extends SimpleCard {
 	 * @param IContextSource $context
 	 * @return bool
 	 */
-	public function shouldRender( IContextSource $context ) : bool {
+	public function shouldRender( IContextSource $context ): bool {
 		return true;
 	}
 
@@ -57,7 +57,7 @@ class MediaWikiLinksPanel extends SimpleCard {
 	 *
 	 * @return array
 	 */
-	private function buildPanels() : array {
+	private function buildPanels(): array {
 		if ( !isset( $this->componentProcessData['panel'] )
 			|| !isset( $this->componentProcessData['panel']['sidebar'] ) ) {
 			return [];
@@ -92,7 +92,7 @@ class MediaWikiLinksPanel extends SimpleCard {
 	 * @param LinkFormatter $linkFormatter
 	 * @return IComponent
 	 */
-	private function buildPanel( $section, $links, $linkFormatter ) : IComponent {
+	private function buildPanel( $section, $links, $linkFormatter ): IComponent {
 		$id = 'n-links-' . strtolower( $section );
 		// Messages for navigation like 'bs-discovery-navigation-heading
 		$headerTextMsg = Message::newFromKey( 'bs-discovery-' . $section . '-heading' );
@@ -129,7 +129,7 @@ class MediaWikiLinksPanel extends SimpleCard {
 	 *
 	 * @return IComponent
 	 */
-	private function buildEditLink() : IComponent {
+	private function buildEditLink(): IComponent {
 		/** @var Title */
 		$title = Title::makeTitle( NS_MEDIAWIKI, 'Sidebar' );
 

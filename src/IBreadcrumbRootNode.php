@@ -10,6 +10,6 @@ interface IBreadcrumbRootNode {
 	 *
 	 * @return Title $title
 	 */
-	public function getLinkTarget() : Title;
+	public function getLinkTarget(): Title;
 
 }

@@ -12,12 +12,12 @@ class Breadcrumb implements MWStakeCommonUIRegisterSkinSlotComponents {
 	/**
 	 * @inheritDoc
 	 */
-	public function onMWStakeCommonUIRegisterSkinSlotComponents( $registry ) : void {
+	public function onMWStakeCommonUIRegisterSkinSlotComponents( $registry ): void {
 		$registry->register(
 			'Breadcrumb',
 			[
 				'default-breadcrumb-nav' => [
-					'factory' => function () {
+					'factory' => static function () {
 						$context = RequestContext::getMain();
 						$title = $context->getTitle();
 						$user = $context->getUser();

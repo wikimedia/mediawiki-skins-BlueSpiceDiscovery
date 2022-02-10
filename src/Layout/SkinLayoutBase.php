@@ -46,7 +46,7 @@ abstract class SkinLayoutBase implements ISkinLayout {
 	 * @param IContextSource $context
 	 * @return ISkinLayout
 	 */
-	public static function factory( $template, $context ) : ISkinLayout {
+	public static function factory( $template, $context ): ISkinLayout {
 		return new static( $template, $context );
 	}
 
@@ -54,7 +54,7 @@ abstract class SkinLayoutBase implements ISkinLayout {
 	 *
 	 * @return array
 	 */
-	private function findUsedStructureElements() : array {
+	private function findUsedStructureElements(): array {
 		$skinStructureElements = [];
 		$layoutName = $this->getName();
 		$skinStructureRegistry = ExtensionRegistry::getInstance()->getAttribute(
@@ -83,7 +83,7 @@ abstract class SkinLayoutBase implements ISkinLayout {
 	 * @param Layout $layout
 	 * @return ISkinStructure|null
 	 */
-	private function getStructureElement( $spec, $layout ) : ?ISkinStructure {
+	private function getStructureElement( $spec, $layout ): ?ISkinStructure {
 		if ( array_key_exists( 'callback', $spec ) ) {
 			$skinStructureElement = call_user_func_array( $spec['callback'], [ $layout ] );
 		}
@@ -98,7 +98,7 @@ abstract class SkinLayoutBase implements ISkinLayout {
 	 *
 	 * @return bool
 	 */
-	public function enableRecursivePartials() : bool {
+	public function enableRecursivePartials(): bool {
 		return false;
 	}
 
@@ -106,7 +106,7 @@ abstract class SkinLayoutBase implements ISkinLayout {
 	 *
 	 * @return array
 	 */
-	public function getSkinStructureElements() : array {
+	public function getSkinStructureElements(): array {
 		return $this->skinStructureElements;
 	}
 }

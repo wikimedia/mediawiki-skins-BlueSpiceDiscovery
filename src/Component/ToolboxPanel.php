@@ -23,21 +23,21 @@ class ToolboxPanel extends SimpleCard implements IRestrictedComponent {
 	/**
 	 * @inheritDoc
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 't-links';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getContainerClasses() : array {
+	public function getContainerClasses(): array {
 		return [ 'w-100', 'bg-transp' ];
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getSubComponents() : array {
+	public function getSubComponents(): array {
 		if ( !isset( $this->componentProcessData['panel'] )
 			|| !isset( $this->componentProcessData['panel']['toolbox'] ) ) {
 			return [];
@@ -77,7 +77,7 @@ class ToolboxPanel extends SimpleCard implements IRestrictedComponent {
 	 *
 	 * @return string[]
 	 */
-	public function getPermissions() : array {
+	public function getPermissions(): array {
 		return [ 'read' ];
 	}
 }

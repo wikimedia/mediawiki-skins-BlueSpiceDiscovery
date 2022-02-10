@@ -20,14 +20,14 @@ class Main extends SkinStructureBase {
 	 *
 	 * @return string
 	 */
-	public function getName() : string {
+	public function getName(): string {
 		return 'main';
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getTemplatePath() : string {
+	public function getTemplatePath(): string {
 		return $GLOBALS['wgStyleDirectory'] .
 			'/BlueSpiceDiscovery/resources/templates/structure/main';
 	}
@@ -35,7 +35,7 @@ class Main extends SkinStructureBase {
 	/**
 	 * @return array
 	 */
-	public function getParams() : array {
+	public function getParams(): array {
 		$subTitleProcessor = new SubTitleProcessor();
 		$subTitleProcessor->parse( $this->template->get( 'subtitle' ) );
 

@@ -24,14 +24,14 @@ class DetailsPanel extends SimpleCard implements IRestrictedComponent {
 	/**
 	 * @inheritDoc
 	 */
-	public function getId() : string {
+	public function getId(): string {
 		return 'details-pnl';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getContainerClasses() : array {
+	public function getContainerClasses(): array {
 		return [ 'w-100', 'bg-transp' ];
 	}
 
@@ -39,14 +39,14 @@ class DetailsPanel extends SimpleCard implements IRestrictedComponent {
 	 *
 	 * @inheritDoc
 	 */
-	public function getRequiredRLModules() : array {
+	public function getRequiredRLModules(): array {
 		return [ 'skin.discovery.details-panel.scripts' ];
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getSubComponents() : array {
+	public function getSubComponents(): array {
 		$services = MediaWikiServices::getInstance();
 		/** @var LinkFormatter */
 		$linkFormatter = $services->getService( 'MWStakeLinkFormatter' );
@@ -106,7 +106,7 @@ class DetailsPanel extends SimpleCard implements IRestrictedComponent {
 	 *
 	 * @return string[]
 	 */
-	public function getPermissions() : array {
+	public function getPermissions(): array {
 		return [ 'read' ];
 	}
 
@@ -138,7 +138,7 @@ class DetailsPanel extends SimpleCard implements IRestrictedComponent {
 				? $this->getFavoritePositions()[$key]
 				: 0;
 		}
-		usort( $links, function ( $e1, $e2 ) {
+		usort( $links, static function ( $e1, $e2 ) {
 			if ( $e1['position'] == $e2['position'] ) {
 				return 0;
 			}
@@ -152,7 +152,7 @@ class DetailsPanel extends SimpleCard implements IRestrictedComponent {
 	 * @param array &$panels
 	 * @return void
 	 */
-	private function arrangePanels( &$panels ) : void {
+	private function arrangePanels( &$panels ): void {
 		$arrangedPanels = [];
 		$this->moveFromPanel( $arrangedPanels, $panels, 'views' );
 		$this->moveFromPanel( $arrangedPanels, $panels, 'namespaces' );

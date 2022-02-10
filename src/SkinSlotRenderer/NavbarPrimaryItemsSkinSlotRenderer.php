@@ -10,7 +10,7 @@ class NavbarPrimaryItemsSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 *
 	 * @return string
 	 */
-	protected function getItemWrapperTag() : string {
+	protected function getItemWrapperTag(): string {
 		return 'li';
 	}
 
@@ -18,7 +18,7 @@ class NavbarPrimaryItemsSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	 *
 	 * @return array
 	 */
-	protected function getItemWrapperClasses() : array {
+	protected function getItemWrapperClasses(): array {
 		return [ 'nav-item' ];
 	}
 }
