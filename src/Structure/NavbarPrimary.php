@@ -5,6 +5,7 @@ namespace BlueSpice\Discovery\Structure;
 use BlueSpice\Discovery\Component\CreateContentSplitButton;
 use BlueSpice\Discovery\Component\GlobalActionsButton;
 use BlueSpice\Discovery\Component\LanguageButton;
+use BlueSpice\Discovery\Component\SidebarPrimaryToggleButton;
 use BlueSpice\Discovery\Component\SidebarSecondaryToggleButton;
 use BlueSpice\Discovery\Component\UserButtonLogin;
 use BlueSpice\Discovery\Component\UserButtonMenu;
@@ -83,13 +84,32 @@ class NavbarPrimary extends NavbarBase {
 	 *
 	 * @return void
 	 */
+	private function fetchSidebarPrimaryToggleButtonHtml() {
+		$cookieHandler = $this->services->getService( 'BlueSpiceDiscoveryCookieHandler' );
+		$sidebar = $this->layout->skinStructureElements['sidebar-primary'];
+
+		if ( $sidebar->shouldRender( $this->context ) ) {
+			$component = new SidebarPrimaryToggleButton( $cookieHandler );
+			$html = $this->getComponentHtml( $component );
+
+			$this->skinComponents['sidebar-primary-toggle'] = $html;
+		}
+	}
+
+	/**
+	 *
+	 * @return void
+	 */
 	private function fetchSidebarSecondaryToggleButtonHtml() {
 		$cookieHandler = $this->services->getService( 'BlueSpiceDiscoveryCookieHandler' );
+		$sidebar = $this->layout->skinStructureElements['sidebar-secondary'];
 
-		$component = new SidebarSecondaryToggleButton( $cookieHandler );
-		$html = $this->getComponentHtml( $component );
+		if ( $sidebar->shouldRender( $this->context ) ) {
+			$component = new SidebarSecondaryToggleButton( $cookieHandler );
+			$html = $this->getComponentHtml( $component );
 
-		$this->skinComponents['sidebar-secondary-toggle'] = $html;
+			$this->skinComponents['sidebar-secondary-toggle'] = $html;
+		}
 	}
 
 	/**
@@ -142,13 +162,11 @@ class NavbarPrimary extends NavbarBase {
 		$this->fetchLoginButtonHtml();
 		$this->fetchUserMenuButtonHtml();
 		$this->fetchSidebarSecondaryToggleButtonHtml();
+		$this->fetchSidebarPrimaryToggleButtonHtml();
 
 		return array_merge(
 			$this->skinComponents,
 			[
-				'toggle-btn-sidebar-primary-title' => $this->getSidebarPrimaryToggleButtonTitle( $expanded ),
-				'toggle-btn-sidebar-primary-aria-label' => $this->getSidebarPrimaryToggleButtonAriaLabel( $expanded ),
-				'toggle-btn-sidebar-primary-aria-expanded' => $this->getSidebarPrimaryToggleExpandedState( $expanded ),
 				'logo-href' => $mainpage->getLocalURL(),
 				'logo-title' => $mainpage->getText(),
 				'logo-aria-label' => Message::newFromKey(
@@ -169,42 +187,4 @@ class NavbarPrimary extends NavbarBase {
 		return true;
 	}
 
-	/**
-	 *
-	 * @param string $expanded
-	 * @return Message
-	 */
-	private function getSidebarPrimaryToggleButtonTitle( $expanded ) : Message {
-		if ( $expanded !== 'false' ) {
-			return Message::newFromKey( 'bs-discovery-sidebar-primary-toggle-hide-title' );
-		} else {
-			return Message::newFromKey( 'bs-discovery-sidebar-primary-toggle-show-title' );
-		}
-	}
-
-	/**
-	 *
-	 * @param string $expanded
-	 * @return Message
-	 */
-	private function getSidebarPrimaryToggleButtonAriaLabel( $expanded ) : Message {
-		if ( $expanded !== 'false' ) {
-			return Message::newFromKey( 'bs-discovery-sidebar-primary-toggle-hide-aria-label' );
-		} else {
-			return Message::newFromKey( 'bs-discovery-sidebar-primary-toggle-show-aria-label' );
-		}
-	}
-
-	/**
-	 *
-	 * @param string $expanded
-	 * @return string
-	 */
-	private function getSidebarPrimaryToggleExpandedState( $expanded ) : string {
-		if ( $expanded !== null ) {
-			return $expanded;
-		} else {
-			return 'false';
-		}
-	}
 }

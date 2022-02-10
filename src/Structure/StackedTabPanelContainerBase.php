@@ -137,8 +137,13 @@ abstract class StackedTabPanelContainerBase extends SkinStructureBase implements
 			}
 		}
 
-		$this->skinComponents['main'] = $main;
-		$this->skinComponents['other'] = $other;
+		if ( !empty( $main ) ) {
+			$this->skinComponents['sidebar']['main'] = $main;
+		}
+
+		if ( !empty( $other ) ) {
+			$this->skinComponents['sidebar']['other'] = $other;
+		}
 	}
 
 	/**

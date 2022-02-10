@@ -3,6 +3,8 @@
 namespace BlueSpice\Discovery\Structure;
 
 use BlueSpice\Discovery\CookieHandler;
+use IContextSource;
+use SpecialPage;
 
 class SidebarPrimary extends StackedTabPanelContainerBase {
 	/**
@@ -47,5 +49,27 @@ class SidebarPrimary extends StackedTabPanelContainerBase {
 		}
 
 		return $classes;
+	}
+
+	/**
+	 *
+	 * @param IContextSource $context
+	 * @return bool
+	 */
+	public function shouldRender( $context ): bool {
+		if ( !parent::shouldRender( $context ) ) {
+			return false;
+		}
+		$specialUserLogin = SpecialPage::getSafeTitleFor( 'UserLogin' );
+		$title = $context->getTitle();
+		if ( $specialUserLogin->equals( $title ) ) {
+			return false;
+		}
+		$user = $context->getUser();
+		$permissionManager = $this->services->getPermissionManager();
+		if ( !$permissionManager->userCan( 'read', $user, $title ) ) {
+			return false;
+		}
+		return true;
 	}
 }

@@ -3,7 +3,8 @@
 namespace BlueSpice\Discovery\Structure;
 
 use BlueSpice\Discovery\CookieHandler;
-use Message;
+use IContextSource;
+use SpecialPage;
 
 class SidebarSecondary extends StackedTabPanelContainerBase {
 	/**
@@ -53,28 +54,23 @@ class SidebarSecondary extends StackedTabPanelContainerBase {
 
 	/**
 	 *
-	 * @return array
+	 * @param IContextSource $context
+	 * @return bool
 	 */
-	public function getParams() : array {
-		$params = parent::getParams();
-		$params = array_merge(
-			$params,
-			[
-				'id' => $this->getId(),
-				'title' => Message::newFromKey( 'bs-discovery-sidebar-secondary-toggle-hide-title' ),
-				'aria-label' => Message::newFromKey( 'bs-discovery-sidebar-secondary-toggle-hide-aria-label' ),
-				'expanded' => 'true'
-			]
-		);
-
-		return $params;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getTemplatePath() : string {
-		return $GLOBALS['wgStyleDirectory'] .
-			'/BlueSpiceDiscovery/resources/templates/structure/stacked-tab-panel-container-with-close-btn';
+	public function shouldRender( $context ): bool {
+		if ( !parent::shouldRender( $context ) ) {
+			return false;
+		}
+		$specialUserLogin = SpecialPage::getSafeTitleFor( 'UserLogin' );
+		$title = $context->getTitle();
+		if ( $specialUserLogin->equals( $title ) ) {
+			return false;
+		}
+		$user = $context->getUser();
+		$permissionManager = $this->services->getPermissionManager();
+		if ( !$permissionManager->userCan( 'read', $user, $title ) ) {
+			return false;
+		}
+		return true;
 	}
 }
