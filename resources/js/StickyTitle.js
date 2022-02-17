@@ -1,12 +1,12 @@
 ( function( mw, $, d ){
 
-	if( !$( 'body' ).hasClass('ns-special') ) {
+	if( !$( 'body' ).hasClass('ns-special') && window.innerWidth >= 767  ) {
 		$( window ).scroll( function() {
 			var top = $( '#title-section' ).offset().top;
 			var windowTop = $(this).scrollTop();
 			var $title = $( '#title-line' );
 
-			if ( windowTop > top && window.innerWidth >= 767 ) {
+			if ( windowTop > top ) {
 				var titleWidth = $( '#main' ).innerWidth();
 				$title.addClass( 'title-fixed' );
 				$title.width( titleWidth );
