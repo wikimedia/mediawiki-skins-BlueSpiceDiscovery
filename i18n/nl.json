@@ -65,6 +65,8 @@
 	"bs-discovery-dialog-detailssectionheading-toolbox": "Hulpmiddelen",
 	"bs-discovery-navigation-heading": "Aan de slag",
 	"bs-discovery-edit-mediawiki-sidebar-link-text": "Zijbalk bewerken",
+	"bs-discovery-edit-mediawiki-sidebar-link-title": "MediaWiki:Sidebar bewerken",
+	"bs-discovery-edit-mediawiki-sidebar-link-aria-label": "MediaWiki:Sidebar bewerken",
 	"bs-discovery-sidebar-secondary-watch-link-title": "Pagina volgen",
 	"bs-discovery-sidebar-secondary-watch-link-aria-label": "Pagina volgen",
 	"bs-discovery-permalink-copy-text": "URL kopiëren",
