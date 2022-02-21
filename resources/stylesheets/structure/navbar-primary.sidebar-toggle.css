@@ -1,18 +1,18 @@
-#sb-tgl-pri {
+#sb-pri-tgl-btn {
 	font-size: 25px;
 	margin-left: 35px;
 	padding: 4px 6px;
 	color: var( --icon-primary-fg--hover );
 	background-color: var(--icon-primary-bg--hover);
 }
-#sb-tgl-pri:hover {
+#sb-pri-tgl-btn:hover {
 	padding: 4px 6px;
 }
-#sb-tgl-pri[aria-expanded="false"] {
+#sb-pri-tgl-btn[aria-expanded="false"] {
 	color: var(--title-nav-fg);
 	background-color: var(--body-bg-color);
 }
-.fs-mode-enabled #sb-tgl-pri {
+.fs-mode-enabled #sb-pri-tgl-btn {
 	color: var(--title-nav-fg);
 	background-color: var(--body-bg-color);
 }
