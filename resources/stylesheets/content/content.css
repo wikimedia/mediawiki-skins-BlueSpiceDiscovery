@@ -46,6 +46,9 @@
 	font-size: 10px;
 	padding-left: 0.3rem;
 }
+#mw-content-text .plainlinks a.external:after {
+	content: unset;
+}
 #content pre {
 	font-family: monospace, Courier;
 	font-size: 0.8rem;
