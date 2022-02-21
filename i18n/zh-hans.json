@@ -3,7 +3,8 @@
 		"authors": [
 			"GuoPC",
 			"Lakejason0",
-			"SolidBlock"
+			"SolidBlock",
+			"Cwek"
 		]
 	},
 	"bs-discovery-desc": "BlueSpice皮肤",
@@ -70,6 +71,14 @@
 	"bs-discovery-tabpanel-page-title": "带有页面的页面操作和工具的选项卡",
 	"bs-discovery-tabpanel-page-aria-label": "页面操作和工具导航",
 	"bs-discovery-tabpanel-page-desc": "页面操作和工具导航包含选项卡、工具箱和操作",
+	"bs-discovery-sidebar-primary-toggle-show-title": "展开主边栏",
+	"bs-discovery-sidebar-primary-toggle-show-aria-label": "展开主边栏",
+	"bs-discovery-sidebar-primary-toggle-hide-title": "关闭主边栏",
+	"bs-discovery-sidebar-primary-toggle-hide-aria-label": "关闭主边栏",
+	"bs-discovery-sidebar-secondary-toggle-show-title": "展开次边栏",
+	"bs-discovery-sidebar-secondary-toggle-show-aria-label": "展开次边栏",
+	"bs-discovery-sidebar-secondary-toggle-hide-title": "关闭次边栏",
+	"bs-discovery-sidebar-secondary-toggle-hide-aria-label": "关闭次边栏",
 	"bs-discovery-sidebar-secondary-export-link-title": "导出选项",
 	"bs-discovery-sidebar-secondary-export-link-aria-label": "导出选项",
 	"bs-discovery-sidebar-secondary-share-sharebymail-text": "电邮",
