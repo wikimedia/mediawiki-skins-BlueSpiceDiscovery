@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"500000000006城",
 			"Cwek",
 			"GuoPC",
 			"Lakejason0",
@@ -109,6 +110,7 @@
 	"bs-discovery-breadcrumb-label-action-history": "历史",
 	"bs-discovery-breadcrumb-label-action-edit": "编辑",
 	"bs-discovery-first-heading-aria-label": "页面标题",
+	"bs-discovery-config-mainlinks-mainpage-label": "展示入口点“主页”",
 	"bs-discovery-personalurl-mycontributions-text": "贡献",
 	"bs-discovery-personalurl-userpage-text": "个人资料",
 	"bs-discovery-globalactionentry-templates-text": "模板",
