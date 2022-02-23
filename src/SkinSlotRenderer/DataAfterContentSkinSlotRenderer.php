@@ -17,7 +17,7 @@ class DataAfterContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 			$item1SortKey = isset( $itemOne['position'] ) ? $itemOne['position'] : 100;
 			$item2SortKey = isset( $itemTwo['position'] ) ? $itemTwo['position'] : 100;
 
-			return $item1SortKey > $item2SortKey;
+			return $item1SortKey > $item2SortKey ? 1 : 0;
 		} );
 	}
 
