@@ -48,22 +48,16 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	public function getHref(): string {
 		$context = RequestContext::getMain();
 		$title = $context->getTitle();
-		$actionType = 'action';
 
 		$veNamespace = $GLOBALS['wgVisualEditorAvailableNamespaces'] ?? [];
 		$ns = $title->getNamespace();
 
 		if ( isset( $veNamespace[$ns] ) && $veNamespace[$ns] ) {
-			if ( !empty( $this->editActions ) ) {
-				foreach ( $this->editActions as $key => $editItem ) {
-					if ( $editItem['id'] === 'ca-ve-edit' ) {
-						$actionType = 'veaction';
-					}
-				}
+			if ( isset( $this->editActions['ca-ve-edit'] ) ) {
+				return $this->editActions['ca-ve-edit']['href'];
 			}
 		}
-
-		return $title->getLocalURL( [ $actionType => 'edit' ] );
+		return $this->editActions['ca-edit']['href'];
 	}
 
 	/**
