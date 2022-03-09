@@ -6,6 +6,7 @@ use BlueSpice\Discovery\Component\CreateContentSplitButton;
 use BlueSpice\Discovery\Component\GlobalActionsButton;
 use BlueSpice\Discovery\Component\LanguageButton;
 use BlueSpice\Discovery\Component\SidebarPrimaryToggleButton;
+use BlueSpice\Discovery\Component\SidebarPrimaryToggleButtonMobile;
 use BlueSpice\Discovery\Component\SidebarSecondaryToggleButton;
 use BlueSpice\Discovery\Component\UserButtonLogin;
 use BlueSpice\Discovery\Component\UserButtonMenu;
@@ -100,6 +101,22 @@ class NavbarPrimary extends NavbarBase {
 	 *
 	 * @return void
 	 */
+	private function fetchSidebarPrimaryToggleButtonMobileHtml() {
+		$cookieHandler = $this->services->getService( 'BlueSpiceDiscoveryCookieHandler' );
+		$sidebar = $this->layout->skinStructureElements['sidebar-primary'];
+
+		if ( $sidebar->shouldRender( $this->context ) ) {
+			$component = new SidebarPrimaryToggleButtonMobile( $cookieHandler );
+			$html = $this->getComponentHtml( $component );
+
+			$this->skinComponents['sidebar-primary-toggle-mobile'] = $html;
+		}
+	}
+
+	/**
+	 *
+	 * @return void
+	 */
 	private function fetchSidebarSecondaryToggleButtonHtml() {
 		$cookieHandler = $this->services->getService( 'BlueSpiceDiscoveryCookieHandler' );
 		$sidebar = $this->layout->skinStructureElements['sidebar-secondary'];
@@ -163,6 +180,7 @@ class NavbarPrimary extends NavbarBase {
 		$this->fetchUserMenuButtonHtml();
 		$this->fetchSidebarSecondaryToggleButtonHtml();
 		$this->fetchSidebarPrimaryToggleButtonHtml();
+		$this->fetchSidebarPrimaryToggleButtonMobileHtml();
 
 		return array_merge(
 			$this->skinComponents,
