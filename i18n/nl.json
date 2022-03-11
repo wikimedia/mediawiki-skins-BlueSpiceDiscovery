@@ -66,5 +66,18 @@
 	"bs-discovery-navbar-full-screen-button-text": "Schermvullende weergave inschakelen",
 	"bs-discovery-navbar-full-screen-button-enable-aria-label": "Schermvullende weergave inschakelen",
 	"bs-discovery-navbar-full-screen-button-disable-title": "Schermvullende weergave uitschakelen",
-	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Schermvullende weergave uitschakelen"
+	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Schermvullende weergave uitschakelen",
+	"bs-discovery-desc": "BlueSpice uiterlijk",
+	"bs-discovery-searchform-input-aria-label": "Voer hier uw zoekterm in",
+	"bs-discovery-breadcrumb-nav-aria-label": "Broodkruimels",
+	"bs-discovery-breadcrumb-nav-node-split-button-title": "Meer Subpagina's",
+	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Meer Subpagina's",
+	"bs-discovery-tabpanel-main-aria-label": "Hoofdnavigatie",
+	"bs-discovery-sidebar-primary-toggle-show-title": "Primaire zijbalk openen",
+	"bs-discovery-sidebar-primary-toggle-show-aria-label": "Primaire zijbalk openen",
+	"bs-discovery-dialog-details-heading": "Alle acties",
+	"bs-discovery-navigation-heading": "Aan de slag",
+	"bs-discovery-edit-mediawiki-sidebar-link-text": "Zijbalk bewerken",
+	"bs-discovery-edit-mediawiki-sidebar-link-title": "MediaWiki:Sidebar bewerken",
+	"bs-discovery-edit-mediawiki-sidebar-link-aria-label": "MediaWiki:Sidebar bewerken"
 }

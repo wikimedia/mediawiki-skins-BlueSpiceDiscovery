@@ -1,6 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
+			"500000000006城",
+			"Cwek",
 			"GuoPC",
 			"Lakejason0",
 			"SolidBlock"
@@ -103,5 +105,14 @@
 	"bs-discovery-personalurl-mycontributions-text": "贡献",
 	"bs-discovery-personalurl-userpage-text": "个人资料",
 	"bs-discovery-globalactionentry-templates-text": "模板",
-	"bs-discovery-globalactionentry-templates-title": "所有模板"
+	"bs-discovery-globalactionentry-templates-title": "所有模板",
+	"bs-discovery-sidebar-primary-toggle-show-title": "展开主边栏",
+	"bs-discovery-sidebar-primary-toggle-show-aria-label": "展开主边栏",
+	"bs-discovery-sidebar-primary-toggle-hide-title": "关闭主边栏",
+	"bs-discovery-sidebar-primary-toggle-hide-aria-label": "关闭主边栏",
+	"bs-discovery-sidebar-secondary-toggle-show-title": "展开次边栏",
+	"bs-discovery-sidebar-secondary-toggle-show-aria-label": "展开次边栏",
+	"bs-discovery-sidebar-secondary-toggle-hide-title": "关闭次边栏",
+	"bs-discovery-sidebar-secondary-toggle-hide-aria-label": "关闭次边栏",
+	"bs-discovery-config-mainlinks-mainpage-label": "展示入口点“主页”"
 }

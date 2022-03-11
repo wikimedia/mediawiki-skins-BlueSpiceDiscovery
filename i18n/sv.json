@@ -1,18 +1,19 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sabelöga"
+			"Sabelöga",
+			"WikiPhoenix"
 		]
 	},
 	"bs-discovery-desc": "BlueSpice-utseende",
 	"bs-discovery-skip-links-navigation-aria-label": "Hoppa till länkar",
-	"bs-discovery-skip-to-navbar-primary-text": "Hoppa till huvudnavigering",
-	"bs-discovery-skip-to-sidebar-primary-text": "Hoppa till huvudsidofält",
-	"bs-discovery-skip-to-sidebar-secondary-text": "Hoppa till andra sidofält",
-	"bs-discovery-skip-to-main-text": "Hoppa till huvudinnehåll",
+	"bs-discovery-skip-to-navbar-primary-text": "Hoppa till sidhuvudfältet",
+	"bs-discovery-skip-to-sidebar-primary-text": "Hoppa till huvudnavigeringen",
+	"bs-discovery-skip-to-sidebar-secondary-text": "Hoppa till sidverktygen",
+	"bs-discovery-skip-to-main-text": "Hoppa till arbetsområdet",
 	"bs-discovery-back-to-top-text": "Tillbaka till början",
 	"bs-discovery-back-to-top-aria-label": "Tillbaka till början",
-	"bs-discovery-navbar-aria-label": "Navigering",
+	"bs-discovery-navbar-aria-label": "Sidhuvudfält",
 	"bs-discovery-navbar-search-form-input-aria-label": "Sökfält",
 	"bs-discovery-navbar-user-button-title": "Användarmeny",
 	"bs-discovery-navbar-user-button-aria-label": "Användarmeny",
@@ -36,7 +37,7 @@
 	"bs-discovery-create-button-new-file-title": "Ladda upp en ny fil",
 	"bs-discovery-navbar-global-actions-button-title": "Globala åtgärder",
 	"bs-discovery-navbar-global-actions-button-aria-label": "Globala åtgärder",
-	"bs-discovery-navbar-global-actions-tool-text": "Globala åtgärder",
+	"bs-discovery-navbar-global-actions-tool-text": "Verktyg",
 	"bs-discovery-navbar-global-actions-manager-text": "Hantering",
 	"bs-discovery-navbar-languages-button-text": "Språk",
 	"bs-discovery-navbar-language-button-title": "Välj språk",
@@ -54,7 +55,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "Fler undersidor",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Fler undersidor",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Huvudsida",
-	"bs-discovery-title-last-edit-info": "Redigerades senast $1 av $2",
+	"bs-discovery-title-last-edit-info": "Redigerades senast $1 <br /> av $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Redigerades senast $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Redigerades senast av $1",
 	"bs-discovery-title-action-edit-button-title": "Redigera sida",
@@ -115,5 +116,6 @@
 	"bs-discovery-personalurl-mycontributions-text": "Bidrag",
 	"bs-discovery-personalurl-userpage-text": "Profil",
 	"bs-discovery-globalactionentry-templates-text": "Mallar",
-	"bs-discovery-globalactionentry-templates-title": "Alla mallar"
+	"bs-discovery-globalactionentry-templates-title": "Alla mallar",
+	"bs-discovery-last-edit-by-system-user": "systemanvändare"
 }

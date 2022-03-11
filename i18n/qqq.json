@@ -4,6 +4,7 @@
 			"Ajeje Brazorf",
 			"Daniel Vogel",
 			"Robby",
+			"Samflint",
 			"Verdy p"
 		]
 	},
@@ -48,7 +49,7 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "Title attribute for a button to disable fullscreen mode",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Aria-label attribute for a button to disable fullscreen mode",
 	"bs-discovery-breadcrumb-nav-aria-label": "Aria-label attribute for breadcrumb navigation",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Aria-label for bradcrumb root node\n\n{{Identical|Namespace}}",
+	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Aria-label for breadcrumb root node\n\n{{Identical|Namespace}}",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Text for button with namespace as text if namespace is NS_MAIN\n{{identical|Page}}",
 	"bs-discovery-breadcrumb-nav-node-title": "Title for breadcrumb item with link to a page",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Aria-label attribute for breadcrumb item with link to a page",
@@ -95,7 +96,7 @@
 	"bs-discovery-dialog-detailssectionheading-namespaces": "Header text for section \"namespaces\" in details dialog\n\n\n{{Identical|Namespace}}",
 	"bs-discovery-dialog-detailssectionheading-views": "Header text for section \"views\" in details dialog",
 	"bs-discovery-dialog-detailssectionheading-actions": "Header text for section \"actions\" in details dialog",
-	"bs-discovery-dialog-detailssectionheading-toolbox": "Header text for section \"toolbox\" in details dialog",
+	"bs-discovery-dialog-detailssectionheading-toolbox": "Header text for section \"toolbox\" in details dialog\n{{Identical|Toolbox}}",
 	"bs-discovery-navigation-heading": "Heading for panel with mediawiki navigation",
 	"bs-discovery-edit-mediawiki-sidebar-link-text": "Text for link to edit [MediaWiki:Sidebar]",
 	"bs-discovery-edit-mediawiki-sidebar-link-title": "Title for link to edit [MediaWiki:Sidebar]",
