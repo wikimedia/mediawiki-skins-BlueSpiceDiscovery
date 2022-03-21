@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"Okras"
 		]
 	},
 	"bs-discovery-back-to-top-aria-label": "Вернуться наверх",
 	"bs-discovery-navbar-user-button-title": "Пользовательское меню",
+	"bs-discovery-navbar-user-button-aria-label": "Пользовательское меню",
 	"bs-discovery-navbar-user-button-personal-menu-text": "Персональные инструменты",
 	"bs-discovery-navbar-user-login-text": "Войти",
 	"bs-discovery-navbar-user-login-aria-label": "Логин",
@@ -33,6 +35,7 @@
 	"bs-discovery-tabpanel-main-text": "Основная навигация",
 	"bs-discovery-tabpanel-main-aria-label": "Основная навигация",
 	"bs-discovery-sidebar-actions-heading": "Действия",
+	"bs-discovery-sidebar-details-heading": "Подробности",
 	"bs-discovery-dialog-details-heading": "Все действия",
 	"bs-discovery-dialog-details-action-cancel": "Отменить",
 	"bs-discovery-dialog-detailssectionheading-namespaces": "Пространства имён",
@@ -41,6 +44,7 @@
 	"bs-discovery-breadcrumb-label-special-linkliste": "Ссылки",
 	"bs-discovery-breadcrumb-label-action-history": "История",
 	"bs-discovery-breadcrumb-label-action-edit": "Править",
+	"bs-discovery-first-heading-aria-label": "Заголовок страницы",
 	"bs-discovery-personalurl-mycontributions-text": "Вклад",
 	"bs-discovery-personalurl-userpage-text": "Профиль",
 	"bs-discovery-globalactionentry-templates-text": "Шаблоны",
