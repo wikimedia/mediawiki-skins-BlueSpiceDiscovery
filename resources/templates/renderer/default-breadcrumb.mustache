@@ -1,19 +1,19 @@
 <nav aria-label="breadcrumb">
-	<ol id="breadcrumbs" class="breadcrumb{{#list-class}} {{{.}}}{{/list-class}}">
+	<ol id="breadcrumbs" class="breadcrumb{{#list-class}} {{.}}{{/list-class}}">
 		{{#rootNode}}
-		<li class="breadcrumb-item root-node {{#rootNode-class}} {{{.}}}{{/rootNode-class}}" {{#aria-current}}aria-current="{{{.}}}"{{/aria-current}}>
-			<a href={{href}} title={{title}} aria-label={{aria-label}}>{{{text}}}</a>
+		<li class="breadcrumb-item root-node {{#rootNode-class}} {{.}}{{/rootNode-class}}" {{#aria-current}}aria-current="{{.}}"{{/aria-current}}>
+			<a href="{{href}}" title="{{title}}" aria-label="{{aria-label}}">{{{text}}}</a>
 		</li>
 		{{/rootNode}}
 
 		{{#nodes}}
-		<li class="breadcrumb-item{{#nodes-class}} {{{.}}}{{/nodes-class}}" {{#aria-current}}aria-current="{{{.}}}"{{/aria-current}}>
-			<a {{#id}}id="{{{.}}}"{{/id}} {{#button-classes}}class="{{{.}}}"{{/button-classes}} title="{{button-title}}" {{#btn-data}}{{{.}}}{{/btn-data}} aria-haspopup="true" aria-label="{{{button-aria-label}}}"{{#btn-disabled}} disabled{{/btn-disabled}} href="{{button-href}}">
+		<li class="breadcrumb-item{{#nodes-class}} {{.}}{{/nodes-class}}" {{#aria-current}}aria-current="{{.}}"{{/aria-current}}>
+			<a {{#id}}id="{{.}}"{{/id}} {{#button-classes}}class="{{.}}"{{/button-classes}} title="{{button-title}}" {{#btn-data}}{{{.}}}{{/btn-data}} aria-haspopup="true" aria-label="{{button-aria-label}}"{{#btn-disabled}} disabled{{/btn-disabled}} href="{{button-href}}">
 			{{{button-text}}}
 			</a>
-			<a class="dropdown-toggle{{#split-button-classes}} {{{.}}}{{/split-button-classes}}"{{#id}} id="{{{.}}}-menu-btn"{{/id}} data-bs-path="{{path}}" title="{{split-button-title}}" {{#split-btn-data}}{{{.}}}{{/split-btn-data}}data-bs-toggle="dropdown" aria-haspopup="true" aria-label="{{{split-button-aria-label}}}" aria-expanded="false" aria-controls="{{{id}}}-menu"{{#split-btn-disabled}} disabled{{/split-btn-disabled}} href="">
+			<a class="dropdown-toggle{{#split-button-classes}} {{.}}{{/split-button-classes}}"{{#id}} id="{{.}}-menu-btn"{{/id}} data-bs-path="{{path}}" title="{{split-button-title}}" {{#split-btn-data}}{{{.}}}{{/split-btn-data}}data-bs-toggle="dropdown" aria-haspopup="true" aria-label="{{split-button-aria-label}}" aria-expanded="false" aria-controls="{{id}}-menu"{{#split-btn-disabled}} disabled{{/split-btn-disabled}} href="">
 			</a>
-			<div id="{{id}}-menu" class="dropdown-menu breadcrumb-menu dropdown-menu-start {{#menu-class}}  {{{.}}}{{/menu-class}}" aria-labelledby="{{id}}-menu-btn">
+			<div id="{{id}}-menu" class="dropdown-menu breadcrumb-menu dropdown-menu-start {{#menu-class}} {{.}}{{/menu-class}}" aria-labelledby="{{id}}-menu-btn">
 				<ul></ul>
 			</div>
 		</li>
@@ -21,7 +21,7 @@
 
 		<ul class="breadcrumb-labels">
 			{{#labels}}
-			<li class="badge bg-secondary breadcrumb-label {{#label-class}} {{{.}}}{{/label-class}}" {{#aria-current}}aria-current="{{{.}}}"{{/aria-current}}>{{{text}}}</li>
+			<li class="badge bg-secondary breadcrumb-label {{#label-class}} {{.}}{{/label-class}}" {{#aria-current}}aria-current="{{.}}"{{/aria-current}}>{{{text}}}</li>
 			{{/labels}}
 		</ul>
 	</ol>
