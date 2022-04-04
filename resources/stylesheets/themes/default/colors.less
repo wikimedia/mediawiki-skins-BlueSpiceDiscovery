@@ -1,4 +1,7 @@
 :root {
+	--body-bg: @content-bg;
+	--body-special-bg: #FAFAFC;
+
 	/* navbar-primary - checked */
 	--navbar-primary-bg: @navbar-bg;
 	--navbar-primary-fg: @navbar-fg;//#252525;
@@ -51,20 +54,23 @@
 	--sidebar-primary-header-border-color:rgba(0, 0, 0, 0.125);
 	--sidebar-primary-border-marker: lighten( #747474, 45%);
 
-	/* secondary primary - check */
-	--secondary-primary-bg: #F1F1F4;
-	--secondary-primary-bg--hover: #FFF;
-	--secondary-primary-bg--active: #FFF;
-	--secondary-primary-fg: #252525;
-	--secondary-primary-fg--hover: #252525;
-	--secondary-primary-fg--active: #252525;
-	--secondary-primary-tab-home-fg: #747474;
-	--secondary-primary-tab-home-fg--hover: #3E5389;
-	--secondary-primary-border: var(--secondary-primary-bg);
-	--secondary-primary-marker--hover: #3E5389;
-	--secondary-primary-marker--active: #3E5389;
-	--secondary-primary-header-fg: #3E5389;
-	--secondary-primary-header-border-color:rgba(0, 0, 0, 0.125);
+	/* sidebar secondary - check */
+	--sidebar-secondary-bg: @sidebar-bg; //#F1F1F4;
+	--sidebar-secondary-bg--hover: @content-bg;
+	--sidebar-secondary-bg--active:  @content-bg;
+	--sidebar-secondary-fg: @sidebar-fg; //#F1F1F4;
+	--sidebar-secondary-fg--hover: @content-fg; //#F1F1F4;
+	--sidebar-secondary-fg--active: @content-fg; //#F1F1F4;
+	--sidebar-secondary-tab-home-fg: #747474;
+	--sidebar-secondary-tab-home-fg--hover: @sidebar-highlight; //#3E5389;
+	--sidebar-secondary-border: var(--sidebar-primary-bg);
+	--sidebar-secondary-marker--hover: @sidebar-highlight; //#3E5389;
+	--sidebar-secondary-marker--active: @sidebar-highlight; //#3E5389;
+	--sidebar-secondary-header-fg: @sidebar-highlight; //#3E5389;
+	--sidebar-secondary-header-border-color:rgba(0, 0, 0, 0.125);
+	--sidebar-secondary-border-marker: lighten( #747474, 45%);
+	--sidebar-secondary-toolbar-bg: #E9E9EE;
+
 
 	/*main - title nav - check*/
 	--breadcrumbs-rootnode-fg: var(--primary-fg);
@@ -93,8 +99,7 @@
 	--discussion-content-fg--hover: #3e5893;
 
 	/* content colors */
-	--content-background-color: @content-bg;
-	--content-special-bg: #FAFAFC;
+	--content-bg: @content-bg;
 	--content-fg-primary: @content-fg;
 	--content-fg-secondary: #747474;
 	--link-fg: @link-fg;
