@@ -7,6 +7,7 @@
 	font-size: var(--content-font-size);
 	min-height: calc( 100vh - var(--navbar-primary-height) - calc( 2 * calc( var(--footer-height) + var(--aftercontent-height) ) ) );
 	padding-bottom: calc( var(--footer-height) + var(--aftercontent-height) + 5px );
+	background-color:var(--content-bg);
 }
 #title-section {
 	padding-top: 1rem;
@@ -48,8 +49,9 @@ main .alert-info a:hover {
 }
 
 #wrapper {
-	background-color:var( --content-background-color );
+	background-color:var(--body-bg);
 }
-.ns-special #wrapper {
-	background-color: var( --content-special-bg );
+.ns-special #wrapper,
+.ns-special #main {
+	background-color: var(--body-special-bg);
 }

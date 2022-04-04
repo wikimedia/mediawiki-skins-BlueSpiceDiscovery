@@ -10,11 +10,11 @@
 }
 #sb-pri-tgl-btn[aria-expanded="false"] {
 	color: var(--title-nav-fg);
-	background-color: var(--body-bg-color);
+	background-color: transparent;
 }
 .fs-mode-enabled #sb-pri-tgl-btn {
 	color: var(--title-nav-fg);
-	background-color: var(--body-bg-color);
+	background-color: transparent;
 }
 #sb-tgl-mobile-pri {
 	font-size: 25px;
@@ -24,7 +24,7 @@
 }
 #sb-tgl-mobile-pri[aria-expanded="false"] {
 	color: var(--title-nav-fg);
-	background-color: var(--body-bg-color);
+	background-color: transparent;
 }
 a#sb-sec-tgl-btn {
 	color: var( --icon-primary-fg--hover );
@@ -38,9 +38,9 @@ a#sb-sec-tgl-btn {
 }
 a#sb-sec-tgl-btn[aria-expanded='false'] {
 	color: var(--title-nav-fg);
-	background-color: var(--body-bg-color);
+	background-color: transparent;
 }
 .fs-mode-enabled #sb-sec-tgl-btn {
 	color: var(--title-nav-fg);
-	background-color: var(--body-bg-color);
+	background-color: transparent;
 }

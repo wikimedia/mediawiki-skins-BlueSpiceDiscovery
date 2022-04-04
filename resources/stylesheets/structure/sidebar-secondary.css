@@ -1,10 +1,10 @@
 #sb-sec-cnt {
-	background-color: var(--sidebar-primary-bg);
-	color: var(--sidebar-primary-fg);
-	border-left: 1px solid var(--sidebar-primary-border);
+	background-color: var(--sidebar-secondary-bg);
+	color: var(--sidebar-secondary-fg);
+	border-left: 1px solid var(--sidebar-secondary-border);
 	padding-top: 15px;
 	font-size: 15px;
-	border-left: 0.05px solid var(--sidebar-primary-border-marker);
+	border-left: 0.05px solid var(--sidebar-secondary-border-marker);
 	z-index: 1000;
 }
 #sb-sec {
