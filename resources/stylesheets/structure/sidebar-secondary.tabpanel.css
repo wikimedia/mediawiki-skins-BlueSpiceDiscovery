@@ -5,8 +5,8 @@
 #sb-sec-cnt .card-header.menu-title {
 	margin-bottom: 0.5rem;
 	padding-left: 25px;
-	border-bottom: 0.05px solid var(--sidebar-primary-header-border-color);
-	color: var(--sidebar-primary-header-fg);
+	border-bottom: 0.05px solid var(--sidebar-secondary-header-border-color);
+	color: var(--sidebar-secondary-header-fg);
 	font-size: 15px;
 	font-variant-caps: all-petite-caps;
 	letter-spacing: 0.15rem;
@@ -18,12 +18,12 @@
 	padding-top:0.2rem;
 	vertical-align: text-top;
 	border-left: 5px solid transparent;
-	color: var(--sidebar-primary-tab-home-fg);
+	color: var(--sidebar-secondary-tab-home-fg);
 }
 #sb-sec .list-group .list-group-item > .tab-home:hover {
 	background-color: transparent;
 	border-left: 5px solid transparent;
-	color: var(--sidebar-primary-tab-home-fg--hover);
+	color: var(--sidebar-secondary-tab-home-fg--hover);
 	cursor: pointer;
 }
 #sb-sec a.tab-home i {
@@ -37,14 +37,14 @@
 	border-left: 5px solid transparent;
 }
 #sb-sec .list-group-item a:hover {
-	color: var(--sidebar-primary-fg--hover);
-	background-color: var(--sidebar-primary-bg--hover);
-	border-left: 5px solid var(--sidebar-primary-marker--hover);
+	color: var(--sidebar-secondary-fg--hover);
+	background-color: var(--sidebar-secondary-bg--hover);
+	border-left: 5px solid var(--sidebar-secondary-marker--hover);
 }
 #sb-sec a.active {
-	color: var(--sidebar-primary-fg--active);
-	background-color: var(--sidebar-primary-bg--active);
-	border-left: 5px solid var(--sidebar-primary-marker--active);
+	color: var(--sidebar-secondary-fg--active);
+	background-color: var(--sidebar-secondary-bg--active);
+	border-left: 5px solid var(--sidebar-secondary-marker--active);
 }
 #sb-sec ul {
 	margin-left: 0;
@@ -64,7 +64,7 @@
 	justify-content: space-between;
 	height: 60px;
 	padding: 10px 30px;
-	background-color: var( --content-box-color ) !important;
+	background-color: var( --sidebar-secondary-toolbar-bg ) !important;
 	margin-bottom: 5px;
 }
 #sb-sec #toolbar .ico-toolbar {
@@ -97,7 +97,7 @@
 	padding-bottom: 0.5rem;
 }
 #actions-pnl-list-sec {
-	border-top: 0.05px solid var(--sidebar-primary-header-border-color);
+	border-top: 0.05px solid var(--sidebar-secondary-header-border-color);
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
 }
