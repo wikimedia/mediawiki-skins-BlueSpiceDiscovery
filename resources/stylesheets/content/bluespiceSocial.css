@@ -193,6 +193,10 @@ ul.bs-social-entitylist {
 	background-color: transparent;
 	padding: 6px 3px;
 }
+.bs-social-entity-actions-menu ul.bs-social-entity-actions-menu-content {
+	transform: none !important;
+	inset: 40px auto auto -130px !important;
+}
 .bs-social-entity .bs-social-entity-right .bs-social-entity-actions {
 	margin-right: 10px;
 }
@@ -216,8 +220,16 @@ ul.bs-social-entitylist {
 #content .bs-social-entity-title a {
 	color: var(--discussion-title-fg) !important;
 }
-#content .bs-social-entity-right a {
-	color: var(--discussion-title-fg);
+#content .bs-social-entity-right a,
+#content .bs-social-entity-right a::before {
+	color: var(--discussion-title-fg) !important;
+}
+#content .bs-social-entity-right a.highlight,
+#content .bs-social-entity-right a.highlight::before {
+	color: #3e5389 !important;
+}
+#content .bs-social-entity-right a:hover::before {
+	color: var(--discussion-content-fg--hover) !important;
 }
 #mw-content-text a.bs-social-entity-content-more-button {
 	font-size: 11px;
