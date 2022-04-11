@@ -166,7 +166,7 @@ class Main extends SkinStructureBase {
 			$htmlIdRegistry = new HtmlIdRegistry();
 			$indicatorHtml = '';
 			foreach ( $indicators as $id => $content ) {
-				$indicatorHtml = Html::openElement(
+				$indicatorHtml .= Html::openElement(
 					'div',
 					[
 						'id' => $htmlIdRegistry->makeHtmlIdSafe( "mw-indicator-$id" ),
