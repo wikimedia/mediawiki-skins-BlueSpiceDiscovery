@@ -27,6 +27,10 @@
 [class^="mw-content-"] a.new {
 	color: var(--new-link-fg);
 }
+#mw-content-text a:visited.new,
+[class^="mw-content-"] a:visited.new {
+	color: var(--new-link-fg);
+}
 #mw-content-text a.stub,
 [class^="mw-content-"] a.stub {
 	color: var(--stub-link-fg);
