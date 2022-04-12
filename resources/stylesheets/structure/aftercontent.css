@@ -2,10 +2,10 @@
 #aftercontent {
 	padding-top: 15px;
 	width: 100%;
-	background-color: var(--content-background-color);
+	background-color: var(--content-bg);
 }
 .ns-special #aftercontent {
-	background-color: var(--content-special-bg );
+	background-color: var(--body-special-bg );
 }
 #aftercontent > .inner {
 	max-width: var(--aftercontent-max-width);
