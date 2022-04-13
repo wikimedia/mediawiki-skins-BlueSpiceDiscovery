@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jeeputer"
+			"Jeeputer",
+			"Mohammad ebz"
 		]
 	},
-	"bs-discovery-last-edit-by-system-user": "کاربر سامانه"
+	"bs-discovery-last-edit-by-system-user": "کاربر سامانه",
+	"bs-discovery-breadcrumb-label-action-edit": "ویرایش"
 }
