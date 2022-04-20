@@ -5,7 +5,8 @@
 			"Cwek",
 			"GuoPC",
 			"Lakejason0",
-			"SolidBlock"
+			"SolidBlock",
+			"StarrySky"
 		]
 	},
 	"bs-discovery-desc": "BlueSpice皮肤",
@@ -114,5 +115,10 @@
 	"bs-discovery-sidebar-secondary-toggle-show-aria-label": "展开次边栏",
 	"bs-discovery-sidebar-secondary-toggle-hide-title": "关闭次边栏",
 	"bs-discovery-sidebar-secondary-toggle-hide-aria-label": "关闭次边栏",
-	"bs-discovery-config-mainlinks-mainpage-label": "展示入口点“主页”"
+	"bs-discovery-config-mainlinks-mainpage-label": "展示入口点“主页”",
+	"bs-discovery-config-mainlinks-mainpage-help": "在左侧导航中显示入口点“首页”链接",
+	"bs-discovery-config-mainlinks-allpages-label": "展示入口点“所有页面”",
+	"bs-discovery-config-mainlinks-allpages-help": "在左侧导航中显示入口点“所有页面”链接",
+	"bs-discovery-config-mainlinks-recentchanges-label": "展示入口点“最近更改”",
+	"bs-discovery-config-mainlinks-recentchanges-help": "在左侧导航中显示入口点“最近更改”链接"
 }

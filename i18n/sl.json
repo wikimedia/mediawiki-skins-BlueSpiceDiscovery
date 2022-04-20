@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"bs-discovery-navbar-user-login-text": "Prijava",
+	"bs-discovery-navbar-user-login-aria-label": "Prijava",
+	"bs-discovery-dialog-details-action-cancel": "Prekliči"
+}

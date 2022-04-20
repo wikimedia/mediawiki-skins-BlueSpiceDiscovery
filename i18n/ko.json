@@ -1,6 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
+			"Bluehill",
+			"MemphisA5",
 			"Ykhwong"
 		]
 	},
@@ -8,7 +10,7 @@
 	"bs-discovery-skip-links-navigation-aria-label": "링크로 건너뛰기",
 	"bs-discovery-skip-to-navbar-primary-text": "주 안내바로 건너뛰기",
 	"bs-discovery-skip-to-sidebar-primary-text": "주 사이드바로 건너뛰기",
-	"bs-discovery-skip-to-sidebar-secondary-text": "2차 사이드바로 건너뛰기",
+	"bs-discovery-skip-to-sidebar-secondary-text": "문서 도구로 건너뛰기",
 	"bs-discovery-skip-to-main-text": "작업 영억으로 건너뛰기",
 	"bs-discovery-back-to-top-text": "맨 위로 돌아가기",
 	"bs-discovery-back-to-top-aria-label": "맨 위로 돌아가기",

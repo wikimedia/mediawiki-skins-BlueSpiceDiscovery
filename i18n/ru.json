@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"Okras"
 		]
 	},
 	"bs-discovery-back-to-top-aria-label": "Вернуться наверх",
@@ -44,5 +45,8 @@
 	"bs-discovery-personalurl-mycontributions-text": "Вклад",
 	"bs-discovery-personalurl-userpage-text": "Профиль",
 	"bs-discovery-globalactionentry-templates-text": "Шаблоны",
-	"bs-discovery-globalactionentry-templates-title": "Все шаблоны"
+	"bs-discovery-globalactionentry-templates-title": "Все шаблоны",
+	"bs-discovery-navbar-user-button-aria-label": "Пользовательское меню",
+	"bs-discovery-sidebar-details-heading": "Подробности",
+	"bs-discovery-first-heading-aria-label": "Заголовок страницы"
 }
