@@ -10,13 +10,21 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\CallbackLiteral;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardHeader;
+use MWStake\MediaWiki\Component\CommonUserInterface\SkinSlotRegistry;
 
 class MainLinksPanel extends SimpleCard {
+
+	/**
+	 * @var MediaWikiServices
+	 */
+	private $services;
 
 	/**
 	 *
 	 */
 	public function __construct() {
+		$this->services = MediaWikiServices::getInstance();
+
 		parent::__construct( [] );
 	}
 
@@ -69,6 +77,12 @@ class MainLinksPanel extends SimpleCard {
 	 * @return bool
 	 */
 	public function shouldRender( IContextSource $context ): bool {
+		/** @var SkinSlotRegistry */
+		$skinSlotRegistry = $this->services->get( 'MWStakeSkinSlotRegistry' );
+		$skinSlot = $skinSlotRegistry->getSkinSlot( MainPanelSkinSlotRenderer::REG_KEY );
+		if ( empty( $skinSlot ) ) {
+			return false;
+		}
 		return true;
 	}
 
@@ -77,11 +91,8 @@ class MainLinksPanel extends SimpleCard {
 	 * @return string
 	 */
 	private function getSkinSlotHtml(): string {
-		/** @var MediaWikiServices */
-		$services = MediaWikiServices::getInstance();
-
 		/** @var SkinSlotRendererFactory */
-		$skinSlotRendererFactory = $services->get( 'MWStakeCommonUISkinSlotRendererFactory' );
+		$skinSlotRendererFactory = $this->services->get( 'MWStakeCommonUISkinSlotRendererFactory' );
 
 		/** @var MainPanelSkinSlotRenderer */
 		$skinSlotRenderer = $skinSlotRendererFactory->create( MainPanelSkinSlotRenderer::REG_KEY );
