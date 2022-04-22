@@ -70,7 +70,7 @@ class DetailsPanel extends SimpleCard implements IRestrictedComponent {
 					'aria' => [ 'label' => Message::newFromKey( 'bs-discovery-details-pnl-more-link-aria-label' ) ],
 					'href' => '',
 					'class' => false,
-					'data' => [ 'toolbox' => htmlentities( FormatJson::encode( $toolbox ) ) ],
+					'data' => [ 'toolbox' => FormatJson::encode( $toolbox ) ],
 					'id' => 'ca-details'
 				];
 			}
