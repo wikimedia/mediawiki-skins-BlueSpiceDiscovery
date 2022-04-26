@@ -5,7 +5,8 @@
 			"Rönttönen"
 		]
 	},
-	"bs-discovery-skip-to-main-text": "Siirry sisältöön",
+	"bs-discovery-desc": "BlueSpice-ulkoasu",
+	"bs-discovery-skip-to-main-text": "Siirry työskentelyalueeseen",
 	"bs-discovery-back-to-top-text": "Takaisin alkuun",
 	"bs-discovery-back-to-top-aria-label": "Takaisin ylös",
 	"bs-discovery-navbar-user-button-title": "Käyttäjävalikko",
@@ -66,6 +67,7 @@
 	"bs-discovery-dialog-details-action-cancel": "Peruuta",
 	"bs-discovery-dialog-detailssectionheading-namespaces": "Nimiavaruudet",
 	"bs-discovery-dialog-detailssectionheading-views": "Näyttökerrat",
+	"bs-discovery-dialog-detailssectionheading-toolbox": "Työkalulaatikko",
 	"bs-discovery-edit-mediawiki-sidebar-link-text": "Muokkaa sivupalkkia",
 	"bs-discovery-edit-mediawiki-sidebar-link-title": "Muokkaa MediaWiki:Sidebar",
 	"bs-discovery-edit-mediawiki-sidebar-link-aria-label": "Muokkaa sivua MediaWiki:Sidebar",
