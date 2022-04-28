@@ -120,7 +120,7 @@ class BaseBreadcrumbDataProvider implements IBreadcrumbDataProvider {
 				$classes[] = 'new';
 			}
 
-			if ( $nodeTitle->equals( $title ) ) {
+			if ( $nodeTitle->equals( $title ) || $index === ( $numberOfParts - 1 ) ) {
 				// See https://getbootstrap.com/docs/5.0/components/breadcrumb/
 				$current = true;
 				$classes[] = 'active';
@@ -135,7 +135,8 @@ class BaseBreadcrumbDataProvider implements IBreadcrumbDataProvider {
 				}
 			}
 
-			if ( strpos( $nodeTitleParts[$index], ':' ) ) {
+			if ( strpos( $nodeTitleParts[$index], ':' ) &&
+					$nodeTitle->isSpecialPage() ) {
 				$text = explode( ':', $nodeTitleParts[$index], 2 );
 				$nodeText = $text[1];
 			} else {
