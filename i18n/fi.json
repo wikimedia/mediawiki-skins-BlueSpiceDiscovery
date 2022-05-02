@@ -5,7 +5,8 @@
 			"Rönttönen"
 		]
 	},
-	"bs-discovery-skip-to-main-text": "Siirry sisältöön",
+	"bs-discovery-desc": "BlueSpice-ulkoasu",
+	"bs-discovery-skip-to-main-text": "Siirry työskentelyalueeseen",
 	"bs-discovery-back-to-top-text": "Takaisin alkuun",
 	"bs-discovery-back-to-top-aria-label": "Takaisin ylös",
 	"bs-discovery-navbar-user-button-title": "Käyttäjävalikko",
@@ -44,6 +45,7 @@
 	"bs-discovery-title-last-edit-info": "Viimeksi muokannut käyttäjä $1 <br /> kello $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Viimeisin muokkaus $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Viimeksi muokannut käyttäjä $1",
+	"bs-discovery-last-edit-by-system-user": "järjestelmän käyttäjä",
 	"bs-discovery-title-action-edit-button-title": "Muokkaa sivua",
 	"bs-discovery-title-action-edit-button-aria-label": "Muokkaa sivua",
 	"bs-discovery-tabpanel-main-text": "Päävalikko",
@@ -65,6 +67,7 @@
 	"bs-discovery-dialog-details-action-cancel": "Peruuta",
 	"bs-discovery-dialog-detailssectionheading-namespaces": "Nimiavaruudet",
 	"bs-discovery-dialog-detailssectionheading-views": "Näyttökerrat",
+	"bs-discovery-dialog-detailssectionheading-toolbox": "Työkalulaatikko",
 	"bs-discovery-edit-mediawiki-sidebar-link-text": "Muokkaa sivupalkkia",
 	"bs-discovery-edit-mediawiki-sidebar-link-title": "Muokkaa MediaWiki:Sidebar",
 	"bs-discovery-edit-mediawiki-sidebar-link-aria-label": "Muokkaa sivua MediaWiki:Sidebar",
@@ -72,7 +75,6 @@
 	"bs-discovery-sidebar-secondary-watch-link-aria-label": "Tarkastele sivua",
 	"bs-discovery-permalink-copy-text": "Kopioi URL",
 	"bs-discovery-breadcrumb-label-talk": "Keskustelu",
-	"bs-discovery-breadcrumb-label-special-browse": "Selaa",
 	"bs-discovery-breadcrumb-label-special-linkliste": "Linkit",
 	"bs-discovery-breadcrumb-label-action-history": "Historia",
 	"bs-discovery-breadcrumb-label-action-edit": "Muokkaa",
@@ -80,6 +82,5 @@
 	"bs-discovery-personalurl-mycontributions-text": "Muokkaukset",
 	"bs-discovery-personalurl-userpage-text": "Profiili",
 	"bs-discovery-globalactionentry-templates-text": "Mallineet",
-	"bs-discovery-globalactionentry-templates-title": "Kaikki mallineet",
-	"bs-discovery-last-edit-by-system-user": "järjestelmän käyttäjä"
+	"bs-discovery-globalactionentry-templates-title": "Kaikki mallineet"
 }
