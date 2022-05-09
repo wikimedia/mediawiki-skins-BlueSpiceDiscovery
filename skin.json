@@ -122,6 +122,13 @@
 				"DiscoveryMainLinksAllPages": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksAllPages::getInstance",
 				"DiscoveryMainLinksRecentChanges": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksRecentChanges::getInstance"
 			}
+		},
+		"BlueSpiceHideTitle": {
+			"CssSelectorModules": {
+				"bluespice": {
+					"class" : "\\BlueSpice\\Discovery\\HideTitleCssModule"
+				}
+			}
 		}
 	},
 	"MessagesDirs": {
