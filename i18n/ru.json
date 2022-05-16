@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Kareyac",
-			"Okras"
+			"Okras",
+			"Pacha Tchernof"
 		]
 	},
 	"bs-discovery-skip-links-navigation-aria-label": "Перейти к ссылкам",
@@ -44,7 +45,7 @@
 	"bs-discovery-dialog-detailssectionheading-namespaces": "Пространства имён",
 	"bs-discovery-dialog-detailssectionheading-views": "Просмотры",
 	"bs-discovery-dialog-detailssectionheading-toolbox": "Инструменты",
-	"bs-discovery-permalink-copy-text": "Копировать URL-адрес",
+	"bs-discovery-permalink-copy-text": "Скопировать URL-адрес",
 	"bs-discovery-breadcrumb-label-talk": "Обсуждение",
 	"bs-discovery-breadcrumb-label-special-linkliste": "Ссылки",
 	"bs-discovery-breadcrumb-label-action-history": "История",
