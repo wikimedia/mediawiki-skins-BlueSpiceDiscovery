@@ -156,7 +156,37 @@
 				);
 			}
 		}
+
+		// Hide sidebars
+		var toggleBtn = $( '.sb-toggle' );
+		for ( var i = 0; i < toggleBtn.length; i ++) {
+			if ( $( toggleBtn[i] ).attr( 'aria-controls' ) === null ) {
+				continue;
+			}
+
+			if ( $( toggleBtn ).attr( 'aria-expanded' ) === null ) {
+				continue;
+			}
+
+			var controls = $( toggleBtn[i] ).attr( 'aria-controls' );
+			var sidebarMap = 'undefined';
+			if ( controls === 'sb-pri-cnt' ) {
+				sidebarMap = 'primary';
+			}
+			else if ( controls === 'sb-sec-cnt' ) {
+				sidebarMap = 'secondary';
+			}
+			else {
+				continue;
+			}
+
+			var expanded = $( toggleBtn[i] ).attr( 'aria-expanded' );
+			if ( expanded === 'true' ) {
+				$( toggleBtn[i] ).click();
+			}
+		}
 	} );
+
 	$( d ).on( 'click', '#sb-pri-cnt, #sb-sec-cnt', function( e ) {
 		if ( $( window ).width() < 1400 ) {
 			$sidebars = $( '.sb-toggle[aria-expanded=true]' );
