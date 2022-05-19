@@ -39,6 +39,10 @@
 	margin-bottom: 20px;
 }
 
+#tools-after-content:empty {
+	display: none;
+}
+
 #aftercontent a.new {
 	color: var(--new-link-fg);
 }
@@ -48,4 +52,8 @@
 	margin: 0 -40px;
 	padding: 20px;
 	border-radius: 5px;
+}
+
+#data-after-content:empty {
+	display: none;
 }
