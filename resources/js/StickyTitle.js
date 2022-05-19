@@ -6,13 +6,15 @@
 			var windowTop = $(this).scrollTop();
 			var $title = $( '#title-line' );
 
-			if ( windowTop > top ) {
+			if ( windowTop >= top ) {
+				$( '#title-section' ).css( 'padding-bottom', $( '#title-line' ).height() );
 				var titleWidth = $( '#main' ).innerWidth();
 				$title.addClass( 'title-fixed' );
 				$title.width( titleWidth );
 			} else {
 				$title.removeClass( 'title-fixed' );
 				$title.width( '100%' );
+				$( '#title-section' ).css( 'padding-bottom', 0 );
 			}
 
 			if ( $( '.ve-init-target-visual' ).length || $( '.ve-init-target-source' ).length ) {
