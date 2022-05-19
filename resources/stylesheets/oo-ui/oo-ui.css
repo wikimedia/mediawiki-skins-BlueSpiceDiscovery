@@ -16,6 +16,13 @@ body.mediawiki.oo-ui-windowManager-modal-active {
 	overflow: auto;
 }
 
+/* fix for overlay in dialog floats away if page is scrolled */
+body.mediawiki.oo-ui-windowManager-modal-active .oo-ui-defaultOverlay .oo-ui-menuSelectWidget {
+	position: fixed;
+	bottom: unset;
+	max-width: min-content;
+}
+
 #mw-content-text .oo-ui-flaggedElement-progressive a,
 #mw-content-text .oo-ui-flaggedElement-progressive a:hover {
 	color: white;
