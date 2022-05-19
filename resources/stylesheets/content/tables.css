@@ -3,7 +3,7 @@ table {
 	border-collapse: collapse;
 	font-size: 0.875rem;
 	overflow-x: auto;
-	word-break: break-word;
+	word-break: normal;
 }
 
 caption {

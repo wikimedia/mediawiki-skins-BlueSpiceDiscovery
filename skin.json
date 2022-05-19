@@ -343,7 +343,6 @@
 				"stylesheets/content/content.css": {},
 				"stylesheets/content/content.headings.css": {},
 				"stylesheets/content/tables.css": {},
-				"stylesheets/content/tables.xxl.css": { "media": "all and ( min-width: 1400px )" },
 				"stylesheets/content/images.css": {},
 				"stylesheets/content/images.xxl.css": { "media": "all and ( min-width: 1400px )" },
 				"stylesheets/content/content.toc.css": {},
