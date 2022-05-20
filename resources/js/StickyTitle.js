@@ -5,15 +5,18 @@
 			var top = $( '#title-section' ).offset().top;
 			var windowTop = $(this).scrollTop();
 			var $title = $( '#title-line' );
+			var $titleContent = $( '#title-line > div' );
 
 			if ( windowTop >= top ) {
 				$( '#title-section' ).css( 'padding-bottom', $( '#title-line' ).height() );
-				var titleWidth = $( '#main' ).innerWidth();
 				$title.addClass( 'title-fixed' );
-				$title.width( titleWidth );
+
+				var titleWidth = $( '#main' ).innerWidth();
+				$titleContent.width( titleWidth );
+
 			} else {
 				$title.removeClass( 'title-fixed' );
-				$title.width( '100%' );
+				$titleContent.width( '100%' );
 				$( '#title-section' ).css( 'padding-bottom', 0 );
 			}
 
