@@ -17,8 +17,8 @@
 	color: var( --content-fg-secondary );
 }
 
-#mw-content-text a,
-[class^="mw-content-"] a {
+#mw-content-text a:not( [class*="oo-ui-"]),
+[class^="mw-content-"] a a:not( [class*="oo-ui-"]) {
 	color: var(--link-fg);
 	font-size: inherit;
 	font-weight: inherit;

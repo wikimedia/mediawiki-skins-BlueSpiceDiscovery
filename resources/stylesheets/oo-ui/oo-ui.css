@@ -23,19 +23,6 @@ body.mediawiki.oo-ui-windowManager-modal-active .oo-ui-defaultOverlay .oo-ui-men
 	max-width: min-content;
 }
 
-#mw-content-text .oo-ui-flaggedElement-progressive a,
-#mw-content-text .oo-ui-flaggedElement-progressive a:hover {
-	color: white;
-}
-
-#mw-content-text .oo-ui-widget.oo-ui-flaggedElement-destructive a,
-#mw-content-text .oo-ui-widget.oo-ui-flaggedElement-destructive a:hover {
-	color: white;
-}
-#mw-content-text .oo-ui-widget.oo-ui-buttonElement-active a,
-#mw-content-text .oo-ui-widget.oo-ui-buttonElement-active a:hover {
-	color: white;
-}
 #mw-content-text .oo-ui-widget.oo-ui-buttonElement a:hover {
 	text-decoration: none;
 }

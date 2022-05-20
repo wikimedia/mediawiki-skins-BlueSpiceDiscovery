@@ -15,6 +15,10 @@
 	font-size: 12px;
 }
 
+.bs-social-entity-actions-menu ul.bs-social-entity-actions-menu-content {
+	transform: none !important;
+	inset: 40px auto auto -40px !important;
+}
 .bs-social-entity-actions .dropdown .dropdown-item {
 	text-align: center;
 }
