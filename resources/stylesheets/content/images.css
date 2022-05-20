@@ -7,8 +7,6 @@
 }
 .thumbinner a > img {
 	display: block;
-	max-width: 100%;
-	height: auto;
 }
 .thumbinner {
 	display: block;
@@ -18,4 +16,9 @@
 	background-color: var(--body-bg-color);
 	border: 1px solid var(--font-color-secondary);
 	overflow: hidden;
+}
+
+#mw-content-text img {
+	max-width: 100%;
+	height: auto;
 }
