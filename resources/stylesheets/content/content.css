@@ -5,7 +5,7 @@
 	margin: 0 auto;
 	height: 100%;
 }
-#content p {
+p {
 	font-weight: var(--content-font-weight);
 	line-height: 150%;
 	margin-top: 0.5rem;
@@ -52,14 +52,14 @@
 #mw-content-text .plainlinks a.external:after {
 	content: unset;
 }
-#content pre {
+pre {
 	font-family: monospace, Courier;
 	font-size: 0.8rem;
 	margin: 2rem 0;
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
-#content pre, #content .mw-code {
+pre, .mw-code {
 	background-color: var( --content-box-color );
 	padding: 1rem;
 }

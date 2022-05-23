@@ -2,3 +2,8 @@ body.mediawiki .ve-ui-overlay-global {
 	z-index: 1052;
 	font-family: 'Lato';
 }
+
+/* code mirror padding */
+article#content .ve-init-mw-desktopArticleTarget .CodeMirror {
+	padding: 0;
+}
