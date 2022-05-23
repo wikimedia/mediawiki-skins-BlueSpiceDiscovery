@@ -17,31 +17,31 @@
 	color: var( --content-fg-secondary );
 }
 
-#mw-content-text a:not( [class*="oo-ui-"]),
-[class^="mw-content-"] a a:not( [class*="oo-ui-"]) {
+#mw-content-text a:not( [class*="oo-ui-"] ),
+[class^="mw-content-"] a:not( [class*="oo-ui-"] ) {
 	color: var(--link-fg);
 	font-size: inherit;
 	font-weight: inherit;
 	text-decoration: none;
 }
-#mw-content-text a.new,
-[class^="mw-content-"] a.new {
+#mw-content-text a.new:not( [class*="oo-ui-"] ),
+[class^="mw-content-"] a.new:not( [class*="oo-ui-"] ) {
 	color: var(--new-link-fg);
 }
-#mw-content-text a:visited.new,
-[class^="mw-content-"] a:visited.new {
+#mw-content-text a:visited.new:not( [class*="oo-ui-"] ),
+[class^="mw-content-"] a:visited.new:not( [class*="oo-ui-"] ) {
 	color: var(--new-link-fg);
 }
 #mw-content-text a.stub,
 [class^="mw-content-"] a.stub {
 	color: var(--stub-link-fg);
 }
-#mw-content-text a:hover,
-[class^="mw-content-"] a:hover {
+#mw-content-text a:hover:not( [class*="oo-ui-"] ),
+[class^="mw-content-"] a:hover:not( [class*="oo-ui-"] ) {
 	text-decoration: underline;
 }
-#mw-content-text a:visited,
-[class^="mw-content-"] a:visited {
+#mw-content-text a:visited:not( [class*="oo-ui-"] ),
+[class^="mw-content-"] a:visited:not( [class*="oo-ui-"] ) {
 	color: var(--link-fg);
 }
 #mw-content-text a.external:after {
