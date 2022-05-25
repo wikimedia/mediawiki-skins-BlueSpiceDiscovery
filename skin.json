@@ -338,7 +338,6 @@
 				"stylesheets/content/content.headings.css": {},
 				"stylesheets/content/tables.css": {},
 				"stylesheets/content/images.css": {},
-				"stylesheets/content/images.xxl.css": { "media": "all and ( min-width: 1400px )" },
 				"stylesheets/content/content.toc.css": {},
 				"stylesheets/structure/userminiprofile.css": {},
 				"stylesheets/content/bluespiceSocial.css": {},
