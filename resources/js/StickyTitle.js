@@ -11,7 +11,7 @@
 				$( '#title-section' ).css( 'padding-bottom', $( '#title-line' ).height() );
 				$title.addClass( 'title-fixed' );
 
-				var titleWidth = $( '#main' ).innerWidth();
+				var titleWidth = $( '#mw-content-text' ).innerWidth();
 				$titleContent.width( titleWidth );
 
 			} else {
