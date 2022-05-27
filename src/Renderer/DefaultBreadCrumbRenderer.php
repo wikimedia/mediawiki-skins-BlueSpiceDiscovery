@@ -3,7 +3,7 @@
 namespace BlueSpice\Discovery\Renderer;
 
 use BlueSpice\Discovery\BreadcrumbDataProvider;
-use MediaWiki\Special\SpecialPageFactory;
+use MediaWiki\SpecialPage\SpecialPageFactory;
 use MessageLocalizer;
 use Title;
 use User;
