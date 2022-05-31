@@ -2,7 +2,6 @@
 
 namespace BlueSpice\Discovery\HookHandler\MWStakeCommonUIRegisterSkinSlotComponents;
 
-use BlueSpice\Discovery\Component\ExportOptions;
 use BlueSpice\Discovery\Component\ShareOptions;
 use BlueSpice\Discovery\Component\Watch;
 use MWStake\MediaWiki\Component\CommonUserInterface\Hook\MWStakeCommonUIRegisterSkinSlotComponents;
@@ -25,12 +24,7 @@ class SidebarSecondaryToolbar implements MWStakeCommonUIRegisterSkinSlotComponen
 					'factory' => static function () {
 						return new ShareOptions();
 					}
-				],
-				'export' => [
-					'factory' => static function () {
-						return new ExportOptions();
-					}
-				],
+				]
 			]
 		);
 	}
