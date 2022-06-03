@@ -5,7 +5,7 @@
 			"Rönttönen"
 		]
 	},
-	"bs-discovery-skip-to-main-text": "Siirry sisältöön",
+	"bs-discovery-skip-to-main-text": "Siirry työskentelyalueeseen",
 	"bs-discovery-back-to-top-text": "Takaisin alkuun",
 	"bs-discovery-back-to-top-aria-label": "Takaisin ylös",
 	"bs-discovery-navbar-user-button-title": "Käyttäjävalikko",
@@ -81,5 +81,7 @@
 	"bs-discovery-personalurl-userpage-text": "Profiili",
 	"bs-discovery-globalactionentry-templates-text": "Mallineet",
 	"bs-discovery-globalactionentry-templates-title": "Kaikki mallineet",
-	"bs-discovery-last-edit-by-system-user": "järjestelmän käyttäjä"
+	"bs-discovery-last-edit-by-system-user": "järjestelmän käyttäjä",
+	"bs-discovery-desc": "BlueSpice-ulkoasu",
+	"bs-discovery-dialog-detailssectionheading-toolbox": "Työkalulaatikko"
 }

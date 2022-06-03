@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kly"
+			"Kly",
+			"Sidishandsome"
 		]
 	},
 	"bs-discovery-desc": "BlueSpice 外觀",
@@ -54,5 +55,14 @@
 	"bs-discovery-breadcrumb-label-action-edit": "編輯",
 	"bs-discovery-first-heading-aria-label": "頁面標題",
 	"bs-discovery-globalactionentry-templates-text": "模板",
-	"bs-discovery-globalactionentry-templates-title": "所有模板"
+	"bs-discovery-globalactionentry-templates-title": "所有模板",
+	"bs-discovery-searchform-button-title": "搜尋",
+	"bs-discovery-searchform-button-aria-label": "搜尋",
+	"bs-discovery-header-create-button-title": "建立新頁面",
+	"bs-discovery-header-create-button-aria-label": "建立新頁面",
+	"bs-discovery-title-last-edit-info": "最後編輯於$1 <br /> 由$2編輯",
+	"bs-discovery-title-last-edit-info-timestamp-aria-label": "最後編輯於$1",
+	"bs-discovery-dialog-detailssectionheading-toolbox": "工具箱",
+	"bs-discovery-breadcrumb-label-talk": "討論",
+	"bs-discovery-breadcrumb-label-special-linkliste": "連結"
 }
