@@ -82,7 +82,7 @@ abstract class StackedTabPanelContainerBase extends SkinStructureBase implements
 
 			$class = '';
 			if ( $tabPanel->getId() === $this->activeId ) {
-				$class = 'show active';
+				$class = ' show active';
 			}
 
 			if ( $first ) {
@@ -163,6 +163,7 @@ abstract class StackedTabPanelContainerBase extends SkinStructureBase implements
 			}
 			if ( $tabPanel->isActive( $this->context ) ) {
 				$this->activeId = $tabPanel->getId();
+				break;
 			}
 		}
 	}
