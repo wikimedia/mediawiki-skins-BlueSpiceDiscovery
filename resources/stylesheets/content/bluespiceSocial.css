@@ -148,6 +148,7 @@ ul.bs-social-entitylist .bs-social-entity-edit-mode form textarea {
 /* entity attachments */
 .bs-social-entity-content-attachments {
 	padding: 2px 0 0 0;
+	width: 75%;
 }
 .bs-social-entitylist .bs-social-entity-comment.bs-social-entity-output-Short div.bs-social-entity-right {
 	margin: 0 0 0 50px !important;
