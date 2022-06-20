@@ -252,7 +252,6 @@
 				"stylesheets/mws.button.css": {},
 				"stylesheets/mws.dropdown.css": {},
 				"stylesheets/bootstrap.override.css": {},
-				"stylesheets/bluespice.print.css": { "media": "print" },
 				"stylesheets/bluespice.css": {},
 				"stylesheets/bluespice.sm.css": { "media": "all and ( max-width: 767px )" },
 				"stylesheets/bluespice.md.css": { "media": "all and ( min-width: 767px ) and ( max-width: 1199px )" },
@@ -264,7 +263,8 @@
 				"stylesheets/control/versionpager.css": {},
 				"stylesheets/fixes/ve-fixes.css": {},
 				"stylesheets/fixes/mw-fixes.css": {},
-				"stylesheets/fixes/extjs-fixes.css": {}
+				"stylesheets/fixes/extjs-fixes.css": {},
+				"stylesheets/bluespice.print.css": { "media": "print" }
 			}
 		},
 		"skin.discovery.bluespice.themes.default": {
