@@ -11,6 +11,10 @@ body.mediawiki .mw-notification-area {
 	top: var(--navbar-primary-height);
 }
 
+.mw-category .mw-category-group {
+	display: table;
+}
+
 .oo-ui-defaultOverlay .oo-ui-floatableElement-floatable {
 	/* For popups in dialogs => dialog has a fixed 1054 z-index (with !important)*/
 	z-index: 1100;
