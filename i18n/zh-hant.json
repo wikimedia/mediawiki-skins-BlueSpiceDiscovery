@@ -54,7 +54,11 @@
 	"bs-discovery-dialog-details-heading": "所有操作",
 	"bs-discovery-dialog-details-action-cancel": "取消",
 	"bs-discovery-dialog-detailssectionheading-namespaces": "命名空間",
+	"bs-discovery-dialog-detailssectionheading-views": "檢視",
 	"bs-discovery-dialog-detailssectionheading-toolbox": "工具箱",
+	"bs-discovery-edit-mediawiki-sidebar-link-text": "編輯側邊欄",
+	"bs-discovery-edit-mediawiki-sidebar-link-title": "編輯 MediaWiki:Sidebar",
+	"bs-discovery-edit-mediawiki-sidebar-link-aria-label": "編輯 MediaWiki:Sidebar",
 	"bs-discovery-sidebar-secondary-watch-link-title": "監視頁面",
 	"bs-discovery-sidebar-secondary-watch-link-aria-label": "監視頁面",
 	"bs-discovery-breadcrumb-label-talk": "討論",
@@ -62,6 +66,8 @@
 	"bs-discovery-breadcrumb-label-action-history": "歷史",
 	"bs-discovery-breadcrumb-label-action-edit": "編輯",
 	"bs-discovery-first-heading-aria-label": "頁面標題",
+	"bs-discovery-personalurl-mycontributions-text": "貢獻",
+	"bs-discovery-personalurl-userpage-text": "個人檔案",
 	"bs-discovery-globalactionentry-templates-text": "模板",
 	"bs-discovery-globalactionentry-templates-title": "所有模板"
 }
