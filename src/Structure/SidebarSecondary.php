@@ -61,7 +61,7 @@ class SidebarSecondary extends StackedTabPanelContainerBase {
 		if ( !parent::shouldRender( $context ) ) {
 			return false;
 		}
-		$specialUserLogin = SpecialPage::getSafeTitleFor( 'UserLogin' );
+		$specialUserLogin = SpecialPage::getSafeTitleFor( 'Userlogin' );
 		$title = $context->getTitle();
 		if ( $specialUserLogin->equals( $title ) ) {
 			return false;

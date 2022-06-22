@@ -29,7 +29,7 @@ class SpecialRecentChanges extends RestrictedTextLink {
 	 */
 	public function getHref(): string {
 		/** @var Title */
-		$specialpage = SpecialPage::getTitleFor( 'RecentChanges' );
+		$specialpage = SpecialPage::getTitleFor( 'Recentchanges' );
 		return $specialpage->getLocalURL();
 	}
 
