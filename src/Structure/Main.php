@@ -52,7 +52,6 @@ class Main extends SkinStructureBase {
 		$this->fetchUndelete();
 		$this->fetchIndicators();
 		$this->fetchSubcontent( $subTitleProcessor->get() );
-		$this->fetchSubcontent2();
 		$this->fetchBodyText();
 
 		return $this->skinComponents;
@@ -187,15 +186,6 @@ class Main extends SkinStructureBase {
 	 */
 	private function fetchSubcontent( $subcontent ) {
 		$this->skinComponents['html-subtitle'] = $subcontent;
-	}
-
-	/**
-	 * https://www.mediawiki.org/wiki/Manual:Skinning_Part_2#Subtitles
-	 *
-	 * @return void
-	 */
-	private function fetchSubcontent2() {
-		$this->skinComponents['html-undelete'] = $this->template->get( 'undelete' );
 	}
 
 	/**
