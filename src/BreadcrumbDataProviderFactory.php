@@ -4,7 +4,7 @@ namespace BlueSpice\Discovery;
 
 use BlueSpice\Discovery\BreadcrumbDataProvider\BaseBreadcrumbDataProvider;
 use User;
-use Wikimedia\ObjectFactory;
+use Wikimedia\ObjectFactory\ObjectFactory;
 
 class BreadcrumbDataProviderFactory {
 
