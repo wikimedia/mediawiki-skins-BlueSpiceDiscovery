@@ -13,7 +13,6 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use RequestContext;
 use Title;
 use User;
-use WikiPage;
 
 class LastEditInfo extends Literal {
 
@@ -70,21 +69,18 @@ class LastEditInfo extends Literal {
 	private function buildHtml(): string {
 		$html = '';
 		$this->requestContext = RequestContext::getMain();
-		$title = Title::newFromDbKey(
-			$this->requestContext->getTitle()
-		);
+		$title = $this->requestContext->getTitle();
 		if ( !$title || $title->isSpecialPage() ) {
 			return $html;
 		}
 
-		$wikiPage = WikiPage::factory( $title );
-		$revision = $this->revisionStore->getRevisionByTitle( $wikiPage->getTitle() );
+		$revision = $this->revisionStore->getRevisionByTitle( $title );
 		if ( !$revision ) {
 			return $html;
 		}
 
-		$revisionDiffLink = $this->buildRevisionDiffLink( $wikiPage, $revision );
-		$lastEditorLink = $this->buildLastEditorLink( $wikiPage, $revision );
+		$revisionDiffLink = $this->buildRevisionDiffLink( $title, $revision );
+		$lastEditorLink = $this->buildLastEditorLink( $revision );
 
 		$lastEditInfo = Message::newFromKey(
 			'bs-discovery-title-last-edit-info',
@@ -101,11 +97,11 @@ class LastEditInfo extends Literal {
 
 	/**
 	 *
-	 * @param WikiPage $wikiPage
+	 * @param Title $title
 	 * @param RevisionRecord|null $revision
 	 * @return string
 	 */
-	private function buildRevisionDiffLink( $wikiPage, $revision ): string {
+	private function buildRevisionDiffLink( $title, $revision ): string {
 		$html = '';
 		$rawTimestamp = $revision->getTimestamp();
 		/** @var Timestamp */
@@ -117,7 +113,7 @@ class LastEditInfo extends Literal {
 		);
 
 		$html = $this->linkRenderer->makeLink(
-			$wikiPage->getTitle(),
+			$title,
 			new HtmlArmor( $timestamp ),
 			[
 				'title' => $timestamp,
@@ -134,11 +130,10 @@ class LastEditInfo extends Literal {
 
 	/**
 	 *
-	 * @param WikiPage $wikiPage
 	 * @param RevisionRecord|null $revision
 	 * @return string
 	 */
-	private function buildLastEditorLink( $wikiPage, $revision ): string {
+	private function buildLastEditorLink( $revision ): string {
 		$html = '';
 		$userIdentity = $revision->getUser();
 		$user = User::newFromId( $userIdentity->getId() );
