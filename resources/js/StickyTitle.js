@@ -11,12 +11,12 @@
 				$( '#title-section' ).css( 'padding-bottom', $( '#title-line' ).height() );
 				$title.addClass( 'title-fixed' );
 
-				var titleWidth = $( '#mw-content-text' ).innerWidth();
+				var titleWidth = $( '#content' ).innerWidth();
 				$titleContent.width( titleWidth );
 
 			} else {
 				$title.removeClass( 'title-fixed' );
-				$titleContent.width( '100%' );
+				$titleContent.removeAttr( 'style' );
 				$( '#title-section' ).removeAttr( 'style' );
 			}
 
