@@ -148,9 +148,18 @@ class LastEditInfo extends Literal {
 		}
 
 		/* Main_page is created with user id 0 */
-		if ( !$userIdentity || $userIdentity->getId() === 0 ) {
-			$html = Message::newFromKey( 'bs-discovery-last-edit-by-system-user' );
-			return $html->text();
+		if ( $userIdentity->getId() === 0 ) {
+
+			if ( $user->isSystemUser() ) {
+				$html = Message::newFromKey( 'bs-discovery-last-edit-by-system-user' );
+				return $html->text();
+			}
+
+			if ( $user->isAnon() ) {
+				$html = Message::newFromKey( 'bs-discovery-last-edit-by-anon-user' );
+				return $html->text();
+			}
+
 		}
 
 		$html = $this->linkRenderer->makeLink(
