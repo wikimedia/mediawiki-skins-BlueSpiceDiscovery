@@ -26,11 +26,12 @@
 	color: var(--footer-fg);
 }
 
-#aftercontent a {
+#aftercontent a:not( [class*="oo-ui-"] ) {
 	text-decoration: none;
-	color: var( --aftercontent-tools-fg );
+	color: var(--aftercontent-tools-fg);
 }
-#aftercontent a:hover {
+
+#aftercontent a:hover:not( [class*="oo-ui-"] ) {
 	color: var(--content-fg-primary);
 }
 
