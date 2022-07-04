@@ -57,7 +57,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Aria-label attribute for breadcrumb item split button with subpage menu",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Page title for the portal pages in namespaces",
 	"bs-discovery-title-last-edit-info": "Last edit sentence with author and date",
-	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Last edit timestamp for aria-label",
+	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Last edit timestamp for aria-label.\n{{Identical/Last edit}}",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Last edit user name",
 	"bs-discovery-last-edit-by-system-user": "Label for system user as editor",
 	"bs-discovery-title-action-edit-button-title": "Title attribute for button with menu of edit options",
