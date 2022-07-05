@@ -66,6 +66,19 @@ class SidebarSecondary extends StackedTabPanelContainerBase {
 		if ( $specialUserLogin->equals( $title ) ) {
 			return false;
 		}
+
+		/*
+		 * whitelist check necessary for InviteSignup
+		 * permission manager messes up with sessions
+		 * so that with submit login on invite link user's session
+		 * get changed and cannot use invite link to register
+		 */
+		$config = $context->getConfig();
+		$whitelist = $config->get( 'WhitelistRead' );
+		if ( $whitelist && in_array( $title->getPrefixedText(), $whitelist ) ) {
+			return true;
+		}
+
 		$user = $context->getUser();
 		$permissionManager = $this->services->getPermissionManager();
 		if ( !$permissionManager->userCan( 'read', $user, $title ) ) {
