@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Ajeje Brazorf",
+			"Cigaryno",
 			"Gomoko",
 			"Verdy p"
 		]
@@ -61,6 +62,7 @@
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Dernière modification le $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Dernière modification par $1",
 	"bs-discovery-last-edit-by-system-user": "utilisateur système",
+	"bs-discovery-last-edit-by-anon-user": "Utilisateur anonyme",
 	"bs-discovery-title-action-edit-button-title": "Modifier la page",
 	"bs-discovery-title-action-edit-button-aria-label": "Modifier la page",
 	"bs-discovery-tabpanel-main-text": "Navigation principale",
