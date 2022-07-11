@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajeje Brazorf"
+			"Ajeje Brazorf",
+			"MathXplore"
 		]
 	},
-	"bs-discovery-sidebar-details-heading": "詳細"
+	"bs-discovery-sidebar-details-heading": "詳細",
+	"bs-discovery-last-edit-by-anon-user": "匿名利用者"
 }

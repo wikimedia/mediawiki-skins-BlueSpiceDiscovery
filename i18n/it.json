@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajeje Brazorf"
+			"Ajeje Brazorf",
+			"Beta16"
 		]
 	},
 	"bs-discovery-header-create-button-text": "Nuovo",
@@ -9,5 +10,6 @@
 	"bs-discovery-breadcrumb-nav-aria-label": "Breadcrumb",
 	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Namespace",
 	"bs-discovery-sidebar-secondary-share-sharebymail-subject": "$1: $2",
-	"bs-discovery-sidebar-details-heading": "Dettagli"
+	"bs-discovery-sidebar-details-heading": "Dettagli",
+	"bs-discovery-last-edit-by-anon-user": "Utente anonimo"
 }
