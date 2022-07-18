@@ -10,18 +10,6 @@ body.mediawiki .oo-ui-windowManager-modal > .oo-ui-dialog {
 .alert .oo-ui-horizontalLayout > .oo-ui-widget {
 	margin-bottom: 0;
 }
-/* fix shift of content if opening a dialog or opening VE */
-body.mediawiki.oo-ui-windowManager-modal-active {
-	margin-right: 0 !important;
-	overflow: auto;
-}
-
-/* fix for overlay in dialog floats away if page is scrolled */
-body.mediawiki.oo-ui-windowManager-modal-active .oo-ui-defaultOverlay .oo-ui-menuSelectWidget {
-	position: fixed;
-	bottom: unset;
-	max-width: min-content;
-}
 
 #mw-content-text .oo-ui-widget.oo-ui-buttonElement a:hover {
 	text-decoration: none;
