@@ -46,12 +46,12 @@
 }
 #sb-pri .nav.nav-tabs a {
 	border-color: transparent;
-	background-color: var(--content-box-color);
+	background-color: var(--sidebar-primary-tab-home-bg);
 	color: var(--sidebar-primary-tab-home-fg);
 }
 #sb-pri .nav.nav-tabs a:hover{
 	border-color: transparent;
-	background-color: var(--content-box-color);
+	background-color: var(--sidebar-primary-tab-home-bg--hover);
 	color: var(--sidebar-primary-marker--active);
 }
 #sb-pri ul {
