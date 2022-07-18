@@ -17,3 +17,6 @@
 	font-size: 250%;
 	color: var(--back-to-top-fg);
 }
+#back-to-top:hover::before {
+	color: var(--back-to-top-fg--hover);
+}
