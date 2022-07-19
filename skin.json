@@ -312,7 +312,8 @@
 		},
 		"skin.discovery.bluespice.themes.default": {
 			"styles": {
-				"stylesheets/themes/default/colors.less": {}
+				"stylesheets/themes/default/colors.less": {},
+				"stylesheets/content/content.externallinks.less": {}
 			},
 			"class": "\\MWStake\\MediaWiki\\Component\\CommonUserInterface\\ResourceLoader\\LessVars"
 		},
