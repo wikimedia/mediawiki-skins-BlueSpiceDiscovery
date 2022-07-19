@@ -44,15 +44,8 @@ p {
 [class^="mw-content-"] a:visited:not( [class*="oo-ui-"] ) {
 	color: var(--link-fg);
 }
-#mw-content-text a.external:after {
-	font-family: 'bootstrap-icons';
-	content: "\f1c5";
-	font-size: 10px;
-	padding-left: 0.3rem;
-}
-#mw-content-text .plainlinks a.external:after {
-	content: unset;
-}
+/* external links in content.externallinks.less due to backgroundimage settings */
+
 pre {
 	font-family: monospace, Courier;
 	font-size: 0.8rem;
