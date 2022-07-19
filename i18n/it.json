@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Ajeje Brazorf",
-			"Beta16"
+			"Beta16",
+			"GpieroMW"
 		]
 	},
 	"bs-discovery-header-create-button-text": "Nuovo",
@@ -11,5 +12,18 @@
 	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Namespace",
 	"bs-discovery-sidebar-secondary-share-sharebymail-subject": "$1: $2",
 	"bs-discovery-sidebar-details-heading": "Dettagli",
-	"bs-discovery-last-edit-by-anon-user": "Utente anonimo"
+	"bs-discovery-last-edit-by-anon-user": "Utente anonimo",
+	"bs-discovery-navbar-user-button-title": "Menu utente",
+	"bs-discovery-navbar-user-button-aria-label": "Menu utente",
+	"bs-discovery-navbar-user-button-personal-menu-text": "Strumenti personali",
+	"bs-discovery-navbar-user-login-text": "Accedi",
+	"bs-discovery-navbar-user-login-title": "Accedi",
+	"bs-discovery-header-create-button-title": "Crea una nuova pagina",
+	"bs-discovery-create-button-new-file-text": "Nuovo file",
+	"bs-discovery-navbar-languages-button-text": "Lingue",
+	"bs-discovery-navbar-language-button-title": "Seleziona lingua",
+	"bs-discovery-breadcrumb-nav-node-ns-main": "Pagine",
+	"bs-discovery-breadcrumb-nav-node-portal-page": "Pagina principale",
+	"bs-discovery-title-action-edit-button-title": "Modifica la pagina",
+	"bs-discovery-title-action-edit-button-aria-label": "Modifica la pagina"
 }

@@ -116,5 +116,6 @@
 	"bs-discovery-config-mainlinks-recentchanges-label": "顯示「近期變更」入口點",
 	"bs-discovery-config-mainlinks-recentchanges-help": "顯示在左側導覽列的「近期變更」連結入口點",
 	"bs-discovery-personalurl-mycontributions-text": "貢獻",
-	"bs-discovery-personalurl-userpage-text": "個人檔案"
+	"bs-discovery-personalurl-userpage-text": "個人檔案",
+	"bs-discovery-last-edit-by-anon-user": "匿名使用者"
 }

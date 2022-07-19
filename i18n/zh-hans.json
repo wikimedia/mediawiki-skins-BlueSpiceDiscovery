@@ -6,7 +6,8 @@
 			"GuoPC",
 			"Lakejason0",
 			"SolidBlock",
-			"StarrySky"
+			"StarrySky",
+			"Tr jason"
 		]
 	},
 	"bs-discovery-desc": "BlueSpice皮肤",
@@ -120,5 +121,6 @@
 	"bs-discovery-personalurl-mycontributions-text": "贡献",
 	"bs-discovery-personalurl-userpage-text": "个人资料",
 	"bs-discovery-globalactionentry-templates-text": "模板",
-	"bs-discovery-globalactionentry-templates-title": "所有模板"
+	"bs-discovery-globalactionentry-templates-title": "所有模板",
+	"bs-discovery-last-edit-by-anon-user": "匿名用户"
 }

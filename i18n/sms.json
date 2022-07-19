@@ -21,5 +21,9 @@
 	"bs-discovery-breadcrumb-label-talk": "Saǥstõõllâmseidd",
 	"bs-discovery-breadcrumb-label-special-linkliste": "Liiŋk",
 	"bs-discovery-breadcrumb-label-action-edit": "Muuʹtt",
-	"bs-discovery-personalurl-mycontributions-text": "Muttâz"
+	"bs-discovery-personalurl-mycontributions-text": "Muttâz",
+	"bs-discovery-title-action-edit-button-title": "Muuʹtt seeid",
+	"bs-discovery-title-action-edit-button-aria-label": "Muuʹtt seeid",
+	"bs-discovery-sidebar-secondary-share-sharebymail-text": "E-pååʹštaddrõs",
+	"bs-discovery-breadcrumb-label-action-history": "Historia"
 }

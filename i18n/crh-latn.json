@@ -4,5 +4,10 @@
 			"TayfunEt."
 		]
 	},
-	"bs-discovery-title-last-edit-info-user-aria-label": "En soñ deñişiklik $1 tarafından ettildi"
+	"bs-discovery-title-last-edit-info-user-aria-label": "En soñ deñişiklik $1 tarafından ettildi",
+	"bs-discovery-navbar-languages-button-text": "Tiller",
+	"bs-discovery-navbar-language-button-title": "Til seç",
+	"bs-discovery-navbar-language-button-aria-label": "Til seç",
+	"bs-discovery-title-last-edit-info": "Soñki deñişiklik $1 <br /> $2 tarafından",
+	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Soñki deñişiklik $1"
 }
