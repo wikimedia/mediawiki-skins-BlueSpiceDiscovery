@@ -2,17 +2,18 @@
 
 namespace BlueSpice\Discovery\Structure;
 
+use BlueSpice\Discovery\ISkinLayout;
+use BlueSpice\Discovery\ISkinLayoutAware;
 use ExtensionRegistry;
 use IContextSource;
 use Message;
 
-class SkipTo extends SkinStructureBase {
+class SkipTo extends SkinStructureBase implements ISkinLayoutAware {
 
 	/**
-	 *
-	 * @var array
+	 * @var ISkinLayout
 	 */
-	private $skinComponents = [];
+	private $layout = null;
 
 	/**
 	 *
@@ -20,14 +21,6 @@ class SkipTo extends SkinStructureBase {
 	 */
 	public function getName(): string {
 		return 'skip-to';
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getTemplatePath(): string {
-		return $GLOBALS['wgStyleDirectory'] .
-			'/BlueSpiceDiscovery/resources/templates/structure/skip-to';
 	}
 
 	/**
@@ -76,5 +69,20 @@ class SkipTo extends SkinStructureBase {
 		}
 		$html .= '</ul>';
 		return $html;
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getStyles(): array {
+		return [ 'skin.discovery.skip-links.styles' ];
+	}
+
+	/**
+	 * @param ISkinLayout $layout
+	 * @return void
+	 */
+	public function setSkinLayout( ISkinLayout $layout ): void {
+		$this->layout = $layout;
 	}
 }

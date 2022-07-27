@@ -2,6 +2,7 @@
 
 namespace BlueSpice\Discovery;
 
+use Exception;
 use ExtensionRegistry;
 use MediaWiki\MediaWikiServices;
 use OutputPage;
@@ -25,33 +26,73 @@ class Skin extends SkinTemplate {
 	 * @param OutputPage $out
 	 */
 	private function addStaticResourceModuleStyles( $out ) {
-		$config = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
+		/** @var IContextSource */
+		$context = $this->getContext();
+
+		$services = MediaWikiServices::getInstance();
+		$config = $services->getConfigFactory()->makeConfig( 'bsg' );
 		$layoutEnabled = $config->get( 'LayoutEnabled' );
 
 		// Layout resource modules
-		$staticLayoutStylesRegistry = ExtensionRegistry::getInstance()->getAttribute(
+		$config = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
+		$layoutEnabled = $config->get( 'LayoutEnabled' );
+
+		$queryValues = $context->getRequest()->getQueryValues();
+		if ( array_key_exists( 'skintemplate', $queryValues ) ) {
+				$layoutEnabled = $queryValues['skintemplate'];
+		}
+
+		$layoutRegistry = ExtensionRegistry::getInstance()->getAttribute(
 			'BlueSpiceDiscoveryLayoutRegistry'
 		);
-		if ( array_key_exists( $layoutEnabled, $staticLayoutStylesRegistry ) ) {
-			if ( array_key_exists( 'styles', $staticLayoutStylesRegistry[$layoutEnabled] ) ) {
-				$out->addModuleStyles( $staticLayoutStylesRegistry[$layoutEnabled]['styles'] );
+
+		$layoutSpecs = [];
+		if ( isset( $layoutRegistry[$layoutEnabled] ) ) {
+			$layoutSpecs = $layoutRegistry[$layoutEnabled];
+			if ( is_array( $layoutSpecs['factory'] ) ) {
+				$callback = end( $layoutSpecs['factory'] );
+				$layoutSpecs['factory'] = $callback;
 			}
-			if ( array_key_exists( 'scripts', $staticLayoutStylesRegistry[$layoutEnabled] ) ) {
-				$out->addModules( $staticLayoutStylesRegistry[$layoutEnabled]['scripts'] );
+			if ( isset( $layoutSpecs['factory'] ) && isset( $layoutSpecs['class'] ) ) {
+				unset( $layoutSpecs['factory'] );
+			}
+		} else {
+			throw new Exception(
+				'No layout ' . $layoutEnabled . ' registered'
+			);
+		}
+
+		/** @var ObjectFactory */
+		$objectFactory = $services->getService( 'ObjectFactory' );
+		/** @var ISkinLayout */
+		$skinLayout = $objectFactory->createObject( $layoutSpecs );
+
+		if ( $skinLayout instanceof IResourceProvider ) {
+			$styles = $skinLayout->getStyles();
+			$scripts = $skinLayout->getScripts();
+
+			if ( !empty( $styles ) ) {
+				$out->addModuleStyles( $styles );
+			}
+
+			if ( !empty( $scripts ) ) {
+				$out->addModuleStyles( $scripts );
 			}
 		}
 
 		// Structure resource modules
-		$staticStructureStylesRegistry = ExtensionRegistry::getInstance()->getAttribute(
-			'BlueSpiceDiscoveryStructureRegistry'
-		);
-		if ( array_key_exists( $layoutEnabled, $staticStructureStylesRegistry ) ) {
-			foreach ( $staticStructureStylesRegistry[$layoutEnabled] as $name => $spec ) {
-				if ( array_key_exists( 'styles', $spec ) ) {
-					$out->addModuleStyles( $spec['styles'] );
+		$structureElements = $skinLayout->getSkinStructureElements();
+		foreach ( $structureElements as $structureElement ) {
+			if ( $structureElement instanceof IResourceProvider ) {
+				$styles = $structureElement->getStyles();
+				$scripts = $structureElement->getScripts();
+
+				if ( !empty( $styles ) ) {
+					$out->addModuleStyles( $styles );
 				}
-				if ( array_key_exists( 'scripts', $spec ) ) {
-					$out->addModules( $spec['scripts'] );
+
+				if ( !empty( $scripts ) ) {
+					$out->addModuleStyles( $scripts );
 				}
 			}
 		}

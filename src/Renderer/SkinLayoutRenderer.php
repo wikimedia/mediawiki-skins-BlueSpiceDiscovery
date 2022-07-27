@@ -2,13 +2,18 @@
 
 namespace BlueSpice\Discovery\Renderer;
 
+use BlueSpice\Discovery\IBaseTemplateAware;
+use BlueSpice\Discovery\IContextSourceAware;
+use BlueSpice\Discovery\ISkinLayout;
+use BlueSpice\Discovery\ISkinLayoutAware;
 use BlueSpice\Discovery\ISkinLayoutRenderer;
-use ExtensionRegistry;
+use BlueSpice\Discovery\ITemplateProvider;
+use Exception;
 use TemplateParser;
 
 class SkinLayoutRenderer implements ISkinLayoutRenderer {
 
-	/** @var skinLayout */
+	/** @var ISkinLayout */
 	private $skinLayout = null;
 
 	/**
@@ -16,6 +21,12 @@ class SkinLayoutRenderer implements ISkinLayoutRenderer {
 	 * @param SkinLayout $skinLayout
 	 */
 	public function __construct( $skinLayout ) {
+		if ( $skinLayout instanceof ITemplateProvider === false ) {
+			throw new Exception(
+				$skinLayout->getName() . ' is not instanceof ITemplatePathProvider'
+			);
+		}
+
 		$this->skinLayout = $skinLayout;
 	}
 
@@ -34,13 +45,13 @@ class SkinLayoutRenderer implements ISkinLayoutRenderer {
 	 */
 	public function getHtml(): string {
 		$templateParser = new TemplateParser(
-			$this->getTemplatePath()
+			$this->skinLayout->getTemplatePath()
 		);
 		$templateParser->enableRecursivePartials(
 			$this->skinLayout->enableRecursivePartials()
 		);
 		$html = $templateParser->processTemplate(
-			$this->skinLayout->getName(),
+			$this->skinLayout->getTemplateName(),
 			$this->getAllStructureElementsHtml()
 		);
 		return $html;
@@ -56,22 +67,22 @@ class SkinLayoutRenderer implements ISkinLayoutRenderer {
 		$params = [];
 		$skinStructureElements = $this->skinLayout->getSkinStructureElements();
 		foreach ( $skinStructureElements as $skinStructureElement ) {
+			if ( $skinStructureElement instanceof IBaseTemplateAware ) {
+				$skinStructureElement->setBaseTemplate( $this->skinLayout->template );
+			}
+
+			if ( $skinStructureElement instanceof IContextSourceAware ) {
+				$skinStructureElement->setContextSource( $this->skinLayout->context );
+			}
+
+			if ( $skinStructureElement instanceof ISkinLayoutAware ) {
+				$skinStructureElement->setSkinLayout( $this->skinLayout );
+			}
+
 			$skinStructureRenderer = new SkinStructureRenderer( $skinStructureElement );
 			$name = $skinStructureElement->getName();
 			$params[$name] = $skinStructureRenderer->getHtml( $this->skinLayout->context );
 		}
 		return $params;
-	}
-
-	/**
-	 *
-	 * @return string
-	 */
-	public function getTemplatePath(): string {
-		$layoutRegistry = ExtensionRegistry::getInstance()->getAttribute(
-			'BlueSpiceDiscoveryLayoutRegistry'
-		);
-		$name = $this->skinLayout->getName();
-		return $layoutRegistry[$name]['template'];
 	}
 }

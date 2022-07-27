@@ -2,77 +2,86 @@
 
 namespace BlueSpice\Discovery\Structure;
 
-use BaseTemplate;
-use BlueSpice\Discovery\ISkinLayout;
+use BlueSpice\Discovery\IResourceProvider;
 use BlueSpice\Discovery\ISkinStructure;
-use BlueSpice\Discovery\SkinSlotRenderer\ExtendedSkinSlotRendererBase;
+use BlueSpice\Discovery\ITemplateProvider;
+use BlueSpice\Discovery\Renderer\ComponentRenderer;
+use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
+use BlueSpice\Discovery\TemplateDataProvider;
 use IContextSource;
-use MediaWiki\MediaWikiServices;
-use MWStake\MediaWiki\Component\CommonUserInterface\ComponentManager;
-use MWStake\MediaWiki\Component\CommonUserInterface\RendererDataTreeBuilder;
-use MWStake\MediaWiki\Component\CommonUserInterface\RendererDataTreeRenderer;
-use RequestContext;
+use MediaWiki\Permissions\PermissionManager;
 
-abstract class SkinStructureBase implements ISkinStructure {
+abstract class SkinStructureBase implements ISkinStructure, ITemplateProvider, IResourceProvider {
 
 	/**
-	 *
-	 * @var RequestContext
-	 */
-	protected $context;
-
-	/**
-	 *
-	 * @var LayoutBase
-	 */
-	protected $layout;
-
-	/**
-	 *
-	 * @var OutputPage
-	 */
-	protected $out;
-
-	/**
-	 *
-	 * @var BaseTemplate
-	 */
-	protected $template;
-
-	/**
-	 *
-	 * @var MediaWikiServices
-	 */
-	protected $services = null;
-
-	/**
-	 *
 	 * @var array
 	 */
 	protected $componentProcessData = [];
 
 	/**
-	 *
-	 * @param IContextSource $layout
+	 * @var ComponentRenderer
 	 */
-	public function __construct( $layout ) {
-		$this->layout = $layout;
-		$this->context = $layout->context;
-		$this->out = $layout->context->getOutput();
-		$this->template = $layout->template;
-		$this->services = MediaWikiServices::getInstance();
+	protected $componentRenderer = null;
 
-		$templateDataProvider = $this->services->getService( 'BlueSpiceDiscoveryTemplateDataProvider' );
+	/**
+	 * @var SkinSlotRenderer
+	 */
+	protected $skinSlotRenderer = null;
+
+	/**
+	 * @var PermissionManager
+	 */
+	protected $permissionManager = null;
+
+	/**
+	 *
+	 * @param TemplateDataProvider $templateDataProvider
+	 * @param ComponentRenderer $componentRenderer
+	 * @param SkinSlotRenderer $skinSlotRenderer
+	 * @param PermissionManager $permissionManager
+	 */
+	public function __construct(
+		TemplateDataProvider $templateDataProvider,
+		ComponentRenderer $componentRenderer,
+		SkinSlotRenderer $skinSlotRenderer,
+		PermissionManager $permissionManager ) {
 		$this->componentProcessData = $templateDataProvider->getAll();
+		$this->componentRenderer = $componentRenderer;
+		$this->skinSlotRenderer = $skinSlotRenderer;
+		$this->permissionManger = $permissionManager;
 	}
 
 	/**
 	 *
-	 * @param IContextSource $layout
-	 * @return ISkinLayout
+	 * @param TemplateDataProvider $templateDataProvider
+	 * @param ComponentRenderer $componentRenderer
+	 * @param SkinSlotRenderer $skinSlotRenderer
+	 * @param PermissionManager $permissionManager
+	 * @return ISkinStructure
 	 */
-	public static function factory( $layout ) {
-		return new static( $layout );
+	public static function factory(
+		TemplateDataProvider $templateDataProvider,
+		ComponentRenderer $componentRenderer,
+		SkinSlotRenderer $skinSlotRenderer,
+		PermissionManager $permissionManager ) {
+		return new static(
+			$templateDataProvider, $componentRenderer, $skinSlotRenderer, $permissionManager
+		);
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getTemplatePath(): string {
+		return $GLOBALS['wgStyleDirectory'] .
+			'/BlueSpiceDiscovery/resources/templates/structure';
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getTemplateName(): string {
+		return $this->getName();
 	}
 
 	/**
@@ -102,54 +111,16 @@ abstract class SkinStructureBase implements ISkinStructure {
 	}
 
 	/**
-	 *
-	 * @param string $skinSlotRegKey
-	 * @return string
+	 * @return array
 	 */
-	protected function getSkinSlotHtml( $skinSlotRegKey ): string {
-		/** @var MediaWikiServices */
-		$services = MediaWikiServices::getInstance();
-
-		/** @var SkinSlotRendererFactory */
-		$skinSlotRendererFactory = $services->get( 'MWStakeCommonUISkinSlotRendererFactory' );
-
-		/** @var ExtendedSkinSlotRendererBase */
-		$skinSlotRenderer = $skinSlotRendererFactory->create( $skinSlotRegKey );
-		$html = $skinSlotRenderer->getHtml( $this->componentProcessData );
-
-		return $html;
+	public function getStyles(): array {
+		return [];
 	}
 
 	/**
-	 *
-	 * @param IComponent $component
-	 * @return string
+	 * @return array
 	 */
-	protected function getComponentHtml( $component ): string {
-		/** @var MediaWikiServices */
-		$services = MediaWikiServices::getInstance();
-
-		/** @var ComponentManager */
-		$componentManager = $services->getService( 'MWStakeCommonUIComponentManager' );
-
-		/** @var RendererDataTreeBuilder */
-		$rendererDataTreeBuilder = $services->getService( 'MWStakeCommonUIRendererDataTreeBuilder' );
-
-		/** @var RendererDataTreeRenderer */
-		$rendererDataTreeRenderer = $services->getService( 'MWStakeCommonUIRendererDataTreeRenderer' );
-
-		$componentTree = $componentManager->getCustomComponentTree(
-			$component,
-			$this->componentProcessData
-		);
-		if ( empty( $componentTree ) ) {
-			return '';
-		}
-
-		$rendererDataTree = $rendererDataTreeBuilder->getRendererDataTree( [ array_pop( $componentTree ) ] );
-
-		$html = $rendererDataTreeRenderer->getHtml( $rendererDataTree );
-
-		return $html;
+	public function getScripts(): array {
+		return [];
 	}
 }

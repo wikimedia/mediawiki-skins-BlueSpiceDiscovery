@@ -3,6 +3,8 @@
 use BlueSpice\Discovery\AttentionIndicatorFactory;
 use BlueSpice\Discovery\BreadcrumbDataProviderFactory;
 use BlueSpice\Discovery\CookieHandler;
+use BlueSpice\Discovery\Renderer\ComponentRenderer;
+use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
 use BlueSpice\Discovery\TemplateDataProvider;
 use MediaWiki\MediaWikiServices;
 
@@ -37,5 +39,19 @@ return [
 			$services->getNamespaceInfo(),
 			$services->getObjectFactory()
 		);
+	},
+	'BlueSpiceDiscoverySkinSlotRenderer' => static function ( MediaWikiServices $services ) {
+		$renderer = new SkinSlotRenderer(
+			$services->getService( 'MWStakeCommonUISkinSlotRendererFactory' )
+		);
+		return $renderer;
+	},
+	'BlueSpiceDiscoveryComponentRenderer' => static function ( MediaWikiServices $services ) {
+		$renderer = new ComponentRenderer(
+			$services->getService( 'MWStakeCommonUIComponentManager' ),
+			$services->getService( 'MWStakeCommonUIRendererDataTreeBuilder' ),
+			$services->getService( 'MWStakeCommonUIRendererDataTreeRenderer' )
+		);
+		return $renderer;
 	}
 ];
