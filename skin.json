@@ -22,51 +22,87 @@
 		"BlueSpiceDiscovery": {
 			"LayoutRegistry": {
 				"bluespice": {
-					"callback": "BlueSpice\\Discovery\\Layout\\BlueSpice::factory",
-					"template": "skins/BlueSpiceDiscovery/resources/templates/layout",
-					"styles": [
-						"skin.discovery.bluespice.styles",
-						"skin.discovery.bluespice.themes.default"
-					],
-					"scripts": "skin.discovery.bluespice.scripts"
+					"factory": "BlueSpice\\Discovery\\Layout\\BlueSpice::factory",
+					"services": [ "ObjectFactory" ]
 				}
 			},
 			"StructureRegistry": {
 				"bluespice": {
 					"skip-to": {
-						"callback": "BlueSpice\\Discovery\\Structure\\SkipTo::factory",
-						"styles": "skin.discovery.skip-links.styles"
-					},
-					"back-to-top": {
-						"callback": "BlueSpice\\Discovery\\Structure\\BackToTop::factory",
-						"styles": "skin.discovery.back-to-top.styles",
-						"scripts": "skin.discovery.back-to-top.scripts"
+						"factory": "BlueSpice\\Discovery\\Structure\\SkipTo::factory",
+						"services": [
+							"BlueSpiceDiscoveryTemplateDataProvider",
+							"BlueSpiceDiscoveryComponentRenderer",
+							"BlueSpiceDiscoverySkinSlotRenderer",
+							"PermissionManager"
+						]
 					},
 					"navbar-primary": {
-						"callback": "BlueSpice\\Discovery\\Structure\\NavbarPrimary::factory",
-						"styles": "skin.discovery.navbar-primary.styles"
+						"factory": "BlueSpice\\Discovery\\Structure\\NavbarPrimary::factory",
+						"services": [
+							"BlueSpiceDiscoveryTemplateDataProvider",
+							"BlueSpiceDiscoveryComponentRenderer",
+							"BlueSpiceDiscoverySkinSlotRenderer",
+							"BlueSpiceDiscoveryCookieHandler",
+							"PermissionManager"
+						]
 					},
 					"main": {
-						"callback": "BlueSpice\\Discovery\\Structure\\Main::factory",
-						"styles": "skin.discovery.main.styles"
+						"factory": "BlueSpice\\Discovery\\Structure\\Main::factory",
+						"services": [
+							"BlueSpiceDiscoveryTemplateDataProvider",
+							"BlueSpiceDiscoveryComponentRenderer",
+							"BlueSpiceDiscoverySkinSlotRenderer",
+							"BlueSpiceDiscoveryCookieHandler",
+							"PermissionManager",
+							"LinkRenderer",
+							"RevisionStore"
+						]
 					},
 					"aftercontent": {
-						"callback": "BlueSpice\\Discovery\\Structure\\AfterContent::factory",
-						"styles": "skin.discovery.aftercontent.styles"
+						"factory": "BlueSpice\\Discovery\\Structure\\AfterContent::factory",
+						"services": [
+							"BlueSpiceDiscoveryTemplateDataProvider",
+							"BlueSpiceDiscoveryComponentRenderer",
+							"BlueSpiceDiscoverySkinSlotRenderer",
+							"PermissionManager"
+						]
 					},
 					"footer": {
-						"callback": "BlueSpice\\Discovery\\Structure\\Footer::factory",
-						"styles": "skin.discovery.footer.styles"
+						"factory": "BlueSpice\\Discovery\\Structure\\Footer::factory",
+						"services": [
+							"BlueSpiceDiscoveryTemplateDataProvider",
+							"BlueSpiceDiscoveryComponentRenderer",
+							"BlueSpiceDiscoverySkinSlotRenderer",
+							"PermissionManager"
+						]
+					},
+					"back-to-top": {
+						"factory": "BlueSpice\\Discovery\\Structure\\BackToTop::factory",
+						"services": [
+							"BlueSpiceDiscoveryTemplateDataProvider",
+							"BlueSpiceDiscoveryComponentRenderer",
+							"BlueSpiceDiscoverySkinSlotRenderer",
+							"PermissionManager"
+						]
 					},
 					"sidebar-primary": {
-						"callback": "BlueSpice\\Discovery\\Structure\\SidebarPrimary::factory",
-						"styles": "skin.discovery.sidebar-primary.styles",
-						"scripts": "skin.discovery.bluespice.sidebar-primary.scripts"
+						"factory": "BlueSpice\\Discovery\\Structure\\SidebarPrimary::factory",
+						"services": [
+							"BlueSpiceDiscoveryTemplateDataProvider",
+							"BlueSpiceDiscoveryComponentRenderer",
+							"BlueSpiceDiscoverySkinSlotRenderer",
+							"PermissionManager"
+						]
 					},
 					"sidebar-secondary": {
-						"callback": "BlueSpice\\Discovery\\Structure\\SidebarSecondary::factory",
-						"styles": "skin.discovery.sidebar-secondary.styles",
-						"scripts": "skin.discovery.bluespice.sidebar-secondary.scripts"
+						"factory": "BlueSpice\\Discovery\\Structure\\SidebarSecondary::factory",
+						"services": [
+							"BlueSpiceDiscoveryTemplateDataProvider",
+							"BlueSpiceDiscoveryComponentRenderer",
+							"BlueSpiceDiscoverySkinSlotRenderer",
+							"PermissionManager"
+						]
 					}
 				}
 			},

@@ -28,11 +28,17 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	/**
 	 *
 	 * @param PermissionManager $permissionManager
+	 * @param array $componentProcessData
 	 */
-	public function __construct( $permissionManager ) {
+	public function __construct( $permissionManager, $componentProcessData ) {
 		parent::__construct( [] );
 
 		$this->permissionManager = $permissionManager;
+
+		if ( isset( $componentProcessData['panel'] )
+			&& isset( $componentProcessData['panel']['edit'] ) ) {
+				$this->editActions = $componentProcessData['panel'][ 'edit' ];
+		}
 	}
 
 	/**
@@ -161,10 +167,6 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	 * @return array
 	 */
 	private function getEditActions(): array {
-		if ( isset( $this->componentProcessData['panel'] )
-			&& isset( $this->componentProcessData['panel']['edit'] ) ) {
-				$this->editActions = $this->componentProcessData['panel'][ 'edit' ];
-		}
 		if ( empty( $this->editActions ) ) {
 			return [];
 		}

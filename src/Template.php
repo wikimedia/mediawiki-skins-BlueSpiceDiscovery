@@ -6,7 +6,7 @@ use BaseTemplate;
 use Exception;
 use ExtensionRegistry;
 use MediaWiki\MediaWikiServices;
-use RequestContext;
+use Wikimedia\ObjectFactory;
 
 /**
  * @package MediaWiki\Skins\WikimediaApiPortal
@@ -36,42 +36,61 @@ class Template extends BaseTemplate {
 	 * @return bool
 	 */
 	private function processSkinLayout(): bool {
+		/** @var IContextSource */
+		$context = $this->getSkin()->getContext();
+
+		/** @var MediaWikiServices */
 		$services = MediaWikiServices::getInstance();
 		$TemplateDataProvider = $services->getService( 'BlueSpiceDiscoveryTemplateDataProvider' );
 		$TemplateDataProvider->init( $this );
 
-		$context = new RequestContext();
 		$config = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
 		$layoutEnabled = $config->get( 'LayoutEnabled' );
+
+		$queryValues = $context->getRequest()->getQueryValues();
+		if ( array_key_exists( 'skintemplate', $queryValues ) ) {
+				$layoutEnabled = $queryValues['skintemplate'];
+		}
+
 		$layoutRegistry = ExtensionRegistry::getInstance()->getAttribute(
 			'BlueSpiceDiscoveryLayoutRegistry'
 		);
 
-		$queryValues = $context->getRequest()->getQueryValues();
-		if ( array_key_exists( 'skintemplate', $queryValues )
-			&& array_key_exists( $queryValues['skintemplate'], $layoutRegistry ) ) {
-				$layoutEnabled = $queryValues['skintemplate'];
-		}
-
-		if ( array_key_exists( $layoutEnabled, $layoutRegistry ) ) {
-			$callback = $layoutRegistry[$layoutEnabled]['callback'];
-
-			$skinLayout = call_user_func_array( $callback, [ $this, $context ] );
-
-			if ( $skinLayout instanceof ISkinLayout === false ) {
-				throw new Exception(
-					'Factory callback for ' . $layoutEnabled
-						. ' did not return a ISkinLayout object'
-				);
+		$layoutSpecs = [];
+		if ( isset( $layoutRegistry[$layoutEnabled] ) ) {
+			$layoutSpecs = $layoutRegistry[$layoutEnabled];
+			if ( is_array( $layoutSpecs['factory'] ) ) {
+				$callback = end( $layoutSpecs['factory'] );
+				$layoutSpecs['factory'] = $callback;
 			}
-
-			$skinLayoutRendererCallback = $config->get( 'LayoutRenderer' );
-			$this->skinLayoutRenderer = call_user_func_array( $skinLayoutRendererCallback, [ $skinLayout ] );
+			if ( is_array( $layoutSpecs['class'] ) ) {
+				$callback = end( $layoutSpecs['class'] );
+				$layoutSpecs['class'] = $callback;
+			}
+			if ( isset( $layoutSpecs['factory'] ) && isset( $layoutSpecs['class'] ) ) {
+				unset( $layoutSpecs['factory'] );
+			}
 		} else {
 			throw new Exception(
-				'No template ' . $layoutEnabled . ' registered'
+				'No layout ' . $layoutEnabled . ' registered'
 			);
 		}
+
+		/** @var ObjectFactory */
+		$objectFactory = $services->getService( 'ObjectFactory' );
+		$skinLayout = $objectFactory->createObject( $layoutSpecs );
+
+		if ( $skinLayout instanceof IBaseTemplateAware ) {
+			$skinLayout->setBaseTemplate( $this );
+		}
+
+		if ( $skinLayout instanceof IContextSourceAware ) {
+			$skinLayout->setContextSource( $context );
+		}
+
+		$skinLayoutRendererCallback = $config->get( 'LayoutRenderer' );
+		$this->skinLayoutRenderer = call_user_func_array( $skinLayoutRendererCallback, [ $skinLayout ] );
+
 		return true;
 	}
 }
