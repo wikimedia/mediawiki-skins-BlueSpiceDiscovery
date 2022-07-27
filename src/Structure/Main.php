@@ -2,19 +2,135 @@
 
 namespace BlueSpice\Discovery\Structure;
 
+use BaseTemplate;
 use BlueSpice\Discovery\Component\FullscreenButton;
 use BlueSpice\Discovery\Component\LastEditInfo;
 use BlueSpice\Discovery\Component\TitleActionEdit;
+use BlueSpice\Discovery\CookieHandler;
+use BlueSpice\Discovery\IBaseTemplateAware;
+use BlueSpice\Discovery\IContextSourceAware;
+use BlueSpice\Discovery\IResourceProvider;
+use BlueSpice\Discovery\ISkinStructure;
+use BlueSpice\Discovery\ITemplateProvider;
+use BlueSpice\Discovery\Renderer\ComponentRenderer;
+use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\BreadcrumbSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\DataAfterTitleSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\DataBeforeContentSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\TitleActionsSkinSlotRenderer;
 use BlueSpice\Discovery\SubTitleProcessor;
+use BlueSpice\Discovery\TemplateDataProvider;
 use Html;
+use IContextSource;
+use MediaWiki\Linker\LinkRenderer;
+use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Revision\RevisionStore;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\HtmlIdRegistry;
 
-class Main extends SkinStructureBase {
+class Main implements
+	ISkinStructure,
+	IBaseTemplateAware,
+	IContextSourceAware,
+	IResourceProvider,
+	ITemplateProvider
+{
+
+	/**
+	 * @var ComponentRenderer
+	 */
+	protected $componentRenderer = null;
+
+	/**
+	 * @var SkinSlotRenderer
+	 */
+	protected $skinSlotRenderer = null;
+
+	/**
+	 * @var PermissionManager
+	 */
+	protected $permissionManager = null;
+
+	/**
+	 *
+	 * @var CookieHandler
+	 */
+	protected $cookieHandler = null;
+
+	/**
+	 * @var LinkRenderer
+	 */
+	protected $linkRenderer = null;
+
+	/**
+	 * @var RevisionStore
+	 */
+	protected $revisionStore = null;
+
+	/**
+	 * @var array
+	 */
+	protected $componentProcessData = [];
+
+	/**
+	 * @var BaseTemplate
+	 */
+	protected $template = null;
+
+	/**
+	 * @var IContextSource
+	 */
+	protected $context = null;
+
+	/**
+	 * @var array
+	 */
+	protected $skinComponents = [];
+
+	/**
+	 *
+	 * @param TemplateDataProvider $templateDataProvider
+	 * @param PermissionManager $permissionManager
+	 * @param LinkRenderer $linkRenderer
+	 * @param RevisionStore $revisionStore
+	 */
+	public function __construct(
+		TemplateDataProvider $templateDataProvider,
+		ComponentRenderer $componentRenderer,
+		SkinSlotRenderer $skinSlotRenderer,
+		CookieHandler $cookieHandler,
+		PermissionManager $permissionManager,
+		LinkRenderer $linkRenderer,
+		RevisionStore $revisionStore ) {
+			$this->componentProcessData = $templateDataProvider->getAll();
+			$this->componentRenderer = $componentRenderer;
+			$this->skinSlotRenderer = $skinSlotRenderer;
+			$this->cookieHandler = $cookieHandler;
+			$this->permissionManager = $permissionManager;
+			$this->linkRenderer = $linkRenderer;
+			$this->revisionStore = $revisionStore;
+	}
+
+	/**
+	 *
+	 * @param TemplateDataProvider $templateDataProvider
+	 * @param PermissionManager $permissionManager
+	 * @param LinkRenderer $linkRenderer
+	 * @param RevisionStore $revisionStore
+	 * @return ISkinStructure
+	 */
+	public static function factory(
+		TemplateDataProvider $templateDataProvider,
+		ComponentRenderer $componentRenderer,
+		SkinSlotRenderer $skinSlotRenderer,
+		CookieHandler $cookieHandler,
+		PermissionManager $permissionManager,
+		LinkRenderer $linkRenderer,
+		RevisionStore $revisionStore ) {
+		return new static(
+			$templateDataProvider, $componentRenderer, $skinSlotRenderer,
+			$cookieHandler, $permissionManager, $linkRenderer, $revisionStore );
+	}
 
 	/**
 	 *
@@ -29,7 +145,23 @@ class Main extends SkinStructureBase {
 	 */
 	public function getTemplatePath(): string {
 		return $GLOBALS['wgStyleDirectory'] .
-			'/BlueSpiceDiscovery/resources/templates/structure/main';
+			'/BlueSpiceDiscovery/resources/templates/structure';
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getTemplateName(): string {
+		return $this->getName();
+	}
+
+	/**
+	 * Parse templates recursive
+	 *
+	 * @return bool
+	 */
+	public function enableRecursivePartials(): bool {
+		return false;
 	}
 
 	/**
@@ -71,7 +203,12 @@ class Main extends SkinStructureBase {
 	 * @return void
 	 */
 	private function fetchBreadcrumb() {
-		$this->skinComponents['breadcrumb-nav'] = $this->getSkinSlotHtml( BreadcrumbSkinSlotRenderer::REG_KEY );
+		$html = $this->skinSlotRenderer->getSkinSlotHtml(
+			BreadcrumbSkinSlotRenderer::REG_KEY,
+			$this->componentProcessData
+		);
+
+		$this->skinComponents['breadcrumb-nav'] = $html;
 	}
 
 	/**
@@ -79,11 +216,8 @@ class Main extends SkinStructureBase {
 	 * @return void
 	 */
 	private function fetchLastEdit() {
-		$linkRenderer = $this->services->getLinkRenderer();
-		$revisionStore = $this->services->getRevisionStore();
-
-		$component = new LastEditInfo( $this->context, $linkRenderer, $revisionStore );
-		$html = $this->getComponentHtml( $component );
+		$component = new LastEditInfo( $this->context, $this->linkRenderer, $this->revisionStore );
+		$html = $this->componentRenderer->getComponentHtml( $component );
 
 		$this->skinComponents['last-edit'] = $html;
 	}
@@ -93,10 +227,8 @@ class Main extends SkinStructureBase {
 	 * @return void
 	 */
 	private function fetchTitleActionEdit() {
-		$permissionManager = $this->services->getPermissionManager();
-
-		$component = new TitleActionEdit( $permissionManager );
-		$html = $this->getComponentHtml( $component );
+		$component = new TitleActionEdit( $this->permissionManager, $this->componentProcessData );
+		$html = $this->componentRenderer->getComponentHtml( $component );
 
 		$this->skinComponents['title-action-edit'] = $html;
 	}
@@ -106,10 +238,8 @@ class Main extends SkinStructureBase {
 	 * @return void
 	 */
 	private function fetchTitleActionFullscreenButton() {
-		$cookieHandler = $this->services->getService( 'BlueSpiceDiscoveryCookieHandler' );
-
-		$component = new FullscreenButton( $cookieHandler );
-		$html = $this->getComponentHtml( $component );
+		$component = new FullscreenButton( $this->cookieHandler );
+		$html = $this->componentRenderer->getComponentHtml( $component );
 
 		$this->skinComponents['fullscreen-button'] = $html;
 	}
@@ -202,9 +332,12 @@ class Main extends SkinStructureBase {
 	 * @return void
 	 */
 	private function fetchSkinSlotDataBeforeContent() {
-		$this->skinComponents['skin-slot-data-before-content'] = $this->getSkinSlotHtml(
-			DataBeforeContentSkinSlotRenderer::REG_KEY
+		$html = $this->skinSlotRenderer->getSkinSlotHtml(
+			DataBeforeContentSkinSlotRenderer::REG_KEY,
+			$this->componentProcessData
 		);
+
+		$this->skinComponents['skin-slot-data-before-content'] = $html;
 	}
 
 	/**
@@ -212,9 +345,12 @@ class Main extends SkinStructureBase {
 	 * @return void
 	 */
 	private function fetchSkinSlotDataAfterTitle() {
-		$this->skinComponents['skin-slot-data-after-title'] = $this->getSkinSlotHtml(
-			DataAfterTitleSkinSlotRenderer::REG_KEY
+		$html = $this->skinSlotRenderer->getSkinSlotHtml(
+			DataAfterTitleSkinSlotRenderer::REG_KEY,
+			$this->componentProcessData
 		);
+
+		$this->skinComponents['skin-slot-data-after-title'] = $html;
 	}
 
 	/**
@@ -222,8 +358,49 @@ class Main extends SkinStructureBase {
 	 * @return void
 	 */
 	private function fetchSkinSlotTitleActions() {
-		$this->skinComponents['skin-slot-title-actions'] = $this->getSkinSlotHtml(
-			TitleActionsSkinSlotRenderer::REG_KEY
+		$html = $this->skinSlotRenderer->getSkinSlotHtml(
+			TitleActionsSkinSlotRenderer::REG_KEY,
+			$this->componentProcessData
 		);
+
+		$this->skinComponents['skin-slot-title-actions'] = $html;
+	}
+
+	/**
+	 * @param BaseTemplate $baseTemplate
+	 * @return void
+	 */
+	public function setBaseTemplate( BaseTemplate $baseTemplate ): void {
+		$this->template = $baseTemplate;
+	}
+
+	/**
+	 * @param IContextSource $context
+	 * @return void
+	 */
+	public function setContextSource( IContextSource $context ): void {
+		$this->context = $context;
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getStyles(): array {
+		return [ 'skin.discovery.main.styles' ];
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getScripts(): array {
+		return [];
+	}
+
+	/**
+	 * @param IContextSource $context
+	 * @return bool
+	 */
+	public function shouldRender( IContextSource $context ): bool {
+		return true;
 	}
 }

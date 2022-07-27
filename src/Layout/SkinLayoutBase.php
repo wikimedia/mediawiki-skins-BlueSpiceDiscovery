@@ -2,14 +2,25 @@
 
 namespace BlueSpice\Discovery\Layout;
 
+use BaseTemplate;
+use BlueSpice\Discovery\IBaseTemplateAware;
+use BlueSpice\Discovery\IContextSourceAware;
+use BlueSpice\Discovery\IResourceProvider;
 use BlueSpice\Discovery\ISkinLayout;
-use BlueSpice\Discovery\ISkinStructure;
-use Exception;
+use BlueSpice\Discovery\ISkinLayoutAware;
+use BlueSpice\Discovery\ITemplateProvider;
 use ExtensionRegistry;
 use IContextSource;
 use RequestContext;
+use Wikimedia\ObjectFactory;
 
-abstract class SkinLayoutBase implements ISkinLayout {
+abstract class SkinLayoutBase implements
+	ISkinLayout,
+	IBaseTemplateAware,
+	IContextSourceAware,
+	IResourceProvider,
+	ITemplateProvider
+{
 
 	/**
 	 *
@@ -27,27 +38,29 @@ abstract class SkinLayoutBase implements ISkinLayout {
 	 *
 	 * @var array
 	 */
-	public $skinStructureElements;
+	public $skinStructureElements = [];
 
 	/**
 	 *
-	 * @param BaseTemplate $template
-	 * @param IContextSource $context
+	 * @var ObjectFactory
 	 */
-	public function __construct( $template, $context ) {
-		$this->context = $context;
-		$this->template = $template;
-		$this->skinStructureElements = $this->findUsedStructureElements();
+	private $objectFactory = null;
+
+	/**
+	 *
+	 * @param ObjectFactory $objectFactory
+	 */
+	public function __construct( ObjectFactory $objectFactory ) {
+		$this->objectFactory = $objectFactory;
 	}
 
 	/**
 	 *
-	 * @param BaseTemplate $template
-	 * @param IContextSource $context
+	 * @param ObjectFactory $objectFactory
 	 * @return ISkinLayout
 	 */
-	public static function factory( $template, $context ): ISkinLayout {
-		return new static( $template, $context );
+	public static function factory( ObjectFactory $objectFactory ): ISkinLayout {
+		return new static( $objectFactory );
 	}
 
 	/**
@@ -55,42 +68,49 @@ abstract class SkinLayoutBase implements ISkinLayout {
 	 * @return array
 	 */
 	private function findUsedStructureElements(): array {
-		$skinStructureElements = [];
+		$structureElements = [];
 		$layoutName = $this->getName();
-		$skinStructureRegistry = ExtensionRegistry::getInstance()->getAttribute(
+		$structureRegistry = ExtensionRegistry::getInstance()->getAttribute(
 			'BlueSpiceDiscoveryStructureRegistry'
 		);
-		if ( !array_key_exists( $layoutName, $skinStructureRegistry ) ) {
-			return $skinStructureElements;
-		}
-		foreach ( $skinStructureRegistry[$layoutName] as $name => $spec ) {
-			$skinStructureElement = $this->getStructureElement(
-				$spec,
-				$this
-			);
-			if ( ( $skinStructureElement instanceof ISkinStructure ) ) {
-				$skinStructureElements[$name] = $skinStructureElement;
-			} else {
-				throw new Exception( "Can not extract data from " . $spec['callback'] );
-			}
-		}
-		return $skinStructureElements;
-	}
 
-	/**
-	 *
-	 * @param array $spec
-	 * @param Layout $layout
-	 * @return ISkinStructure|null
-	 */
-	private function getStructureElement( $spec, $layout ): ?ISkinStructure {
-		if ( array_key_exists( 'callback', $spec ) ) {
-			$skinStructureElement = call_user_func_array( $spec['callback'], [ $layout ] );
+		if ( !array_key_exists( $layoutName, $structureRegistry ) ) {
+			return $structureElements;
 		}
-		if ( !( $skinStructureElement instanceof ISkinStructure ) ) {
-			throw new Exception( get_class( $skinStructureElement ) . " is not instance of ISkinLayout" );
+
+		foreach ( $structureRegistry[$layoutName] as $name => $structureSpec ) {
+			if ( is_array( $structureSpec['factory'] ) ) {
+				$callback = end( $structureSpec['factory'] );
+				$structureSpec['factory'] = $callback;
+			}
+			if ( is_array( $structureSpec['class'] ) ) {
+				$callback = end( $structureSpec['class'] );
+				$structureSpec['class'] = $callback;
+			}
+			if ( isset( $structureSpec['factory'] ) && isset( $structureSpec['class'] ) ) {
+				unset( $structureSpec['factory'] );
+			}
+
+			$structureElement = $this->objectFactory->createObject( $structureSpec );
+
+			if ( ( $structureElement instanceof IBaseTemplateAware )
+				&& ( $this->template instanceof BaseTemplate ) ) {
+				$structureElement->setBaseTemplate( $this->template );
+			}
+
+			if ( ( $structureElement instanceof IContextSourceAware )
+				&& ( $this->context instanceof IContextSource ) ) {
+				$structureElement->setContextSource( $this->context );
+			}
+
+			if ( $structureElement instanceof ISkinLayoutAware ) {
+				$structureElement->setSkinLayout( $this );
+			}
+
+			$structureElements[$name] = $structureElement;
 		}
-		return $skinStructureElement;
+
+		return $structureElements;
 	}
 
 	/**
@@ -107,6 +127,54 @@ abstract class SkinLayoutBase implements ISkinLayout {
 	 * @return array
 	 */
 	public function getSkinStructureElements(): array {
+		$this->skinStructureElements = $this->findUsedStructureElements();
 		return $this->skinStructureElements;
+	}
+
+	/**
+	 * @param BaseTemplate $baseTemplate
+	 * @return void
+	 */
+	public function setBaseTemplate( BaseTemplate $baseTemplate ): void {
+		$this->template = $baseTemplate;
+	}
+
+	/**
+	 * @param IContextSource $context
+	 * @return void
+	 */
+	public function setContextSource( IContextSource $context ): void {
+		$this->context = $context;
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getStyles(): array {
+		return [
+			'skin.discovery.bluespice.styles',
+			'skin.discovery.bluespice.themes.default'
+		];
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getScripts(): array {
+		return [ 'skin.discovery.bluespice.scripts' ];
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getTemplateName(): string {
+		return $this->getName();
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getTemplatePath(): string {
+		return 'skins/BlueSpiceDiscovery/resources/templates/layout';
 	}
 }

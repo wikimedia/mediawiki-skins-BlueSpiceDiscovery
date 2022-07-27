@@ -16,14 +16,6 @@ class BackToTop extends SkinStructureBase {
 	}
 
 	/**
-	 * @return string
-	 */
-	public function getTemplatePath(): string {
-		return $GLOBALS['wgStyleDirectory'] .
-			'/BlueSpiceDiscovery/resources/templates/structure/back-to-top';
-	}
-
-	/**
 	 *
 	 * @param IContextSource $context
 	 * @return bool
@@ -37,8 +29,23 @@ class BackToTop extends SkinStructureBase {
 	 */
 	public function getParams(): array {
 		$component = new BackToTopButton();
+		$html = $this->componentRenderer->getComponentHtml( $component );
 		return [
-			'body' => $this->getComponentHtml( $component )
+			'body' => $html
 		];
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getStyles(): array {
+		return [ 'skin.discovery.back-to-top.styles' ];
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getScripts(): array {
+		return [ 'skin.discovery.back-to-top.scripts' ];
 	}
 }

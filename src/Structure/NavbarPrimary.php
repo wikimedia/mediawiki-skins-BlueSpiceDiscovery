@@ -2,6 +2,7 @@
 
 namespace BlueSpice\Discovery\Structure;
 
+use BaseTemplate;
 use BlueSpice\Discovery\Component\CreateContentSplitButton;
 use BlueSpice\Discovery\Component\GlobalActionsButton;
 use BlueSpice\Discovery\Component\LanguageButton;
@@ -10,14 +11,35 @@ use BlueSpice\Discovery\Component\SidebarPrimaryToggleButtonMobile;
 use BlueSpice\Discovery\Component\SidebarSecondaryToggleButton;
 use BlueSpice\Discovery\Component\UserButtonLogin;
 use BlueSpice\Discovery\Component\UserButtonMenu;
-use BlueSpice\Discovery\CookieHandler;
+use BlueSpice\Discovery\ISkinLayout;
+use BlueSpice\Discovery\ISkinLayoutAware;
 use BlueSpice\Discovery\SkinSlotRenderer\NavbarPrimaryItemsSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\NavbarPrimarySearchFormSkinSlotRenderer;
 use IContextSource;
 use Message;
 use Title;
 
-class NavbarPrimary extends NavbarBase {
+class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
+
+	/**
+	 * @var BaseTemplate
+	 */
+	private $template = null;
+
+	/**
+	 * @var IContextSource
+	 */
+	private $context = null;
+
+	/**
+	 * @var ISkinLayout
+	 */
+	private $layout = null;
+
+	/**
+	 * @var array
+	 */
+	private $skinComponents = [];
 
 	/**
 	 * @return string
@@ -27,21 +49,15 @@ class NavbarPrimary extends NavbarBase {
 	}
 
 	/**
-	 * @return string
-	 */
-	public function getTemplatePath(): string {
-		return $GLOBALS['wgStyleDirectory'] .
-			'/BlueSpiceDiscovery/resources/templates/structure/navbar-primary';
-	}
-
-	/**
 	 *
 	 * @return void
 	 */
 	private function fetchSkinSlotNavbarPrimarySearchFormHtml(): void {
-		$this->skinComponents['search-form'] = $this->getSkinSlotHtml(
+		$html = $this->skinSlotRenderer->getSkinSlotHtml(
 			NavbarPrimarySearchFormSkinSlotRenderer::REG_KEY
 		);
+
+		$this->skinComponents['search-form'] = $html;
 	}
 
 	/**
@@ -49,9 +65,11 @@ class NavbarPrimary extends NavbarBase {
 	 * @return void
 	 */
 	private function fetchSkinSlotNavbarPrimaryItemsHtml(): void {
-		$this->skinComponents['navbar-items'] = $this->getSkinSlotHtml(
+		$html = $this->skinSlotRenderer->getSkinSlotHtml(
 			NavbarPrimaryItemsSkinSlotRenderer::REG_KEY
 		);
+
+		$this->skinComponents['navbar-items'] = $html;
 	}
 
 	/**
@@ -59,11 +77,10 @@ class NavbarPrimary extends NavbarBase {
 	 * @return void
 	 */
 	private function fetchNewContentButtonHtml() {
-		$permissionManager = $this->services->getPermissionManager();
 		$user = $this->template->getSkin()->getUser();
 
-		$component = new CreateContentSplitButton( $user, $permissionManager );
-		$html = $this->getComponentHtml( $component );
+		$component = new CreateContentSplitButton( $user, $this->permissionManger );
+		$html = $this->componentRenderer->getComponentHtml( $component );
 
 		$this->skinComponents['new-content-button'] = $html;
 	}
@@ -76,7 +93,7 @@ class NavbarPrimary extends NavbarBase {
 		$langCode = $this->template->getSkin()->getLanguage()->getCode();
 
 		$component = new LanguageButton( $langCode );
-		$html = $this->getComponentHtml( $component );
+		$html = $this->componentRenderer->getComponentHtml( $component );
 
 		$this->skinComponents['language-button'] = $html;
 	}
@@ -86,14 +103,15 @@ class NavbarPrimary extends NavbarBase {
 	 * @return void
 	 */
 	private function fetchSidebarPrimaryToggleButtonHtml() {
-		$cookieHandler = $this->services->getService( 'BlueSpiceDiscoveryCookieHandler' );
-		$sidebar = $this->layout->skinStructureElements['sidebar-primary'];
+		if ( isset( $this->layout->skinStructureElements['sidebar-primary'] ) ) {
+			$sidebar = $this->layout->skinStructureElements['sidebar-primary'];
 
-		if ( $sidebar->shouldRender( $this->context ) ) {
-			$component = new SidebarPrimaryToggleButton( $cookieHandler );
-			$html = $this->getComponentHtml( $component );
+			if ( $sidebar->shouldRender( $this->context ) ) {
+				$component = new SidebarPrimaryToggleButton( $this->cookieHandler );
+				$html = $this->componentRenderer->getComponentHtml( $component );
 
-			$this->skinComponents['sidebar-primary-toggle'] = $html;
+				$this->skinComponents['sidebar-primary-toggle'] = $html;
+			}
 		}
 	}
 
@@ -102,14 +120,15 @@ class NavbarPrimary extends NavbarBase {
 	 * @return void
 	 */
 	private function fetchSidebarPrimaryToggleButtonMobileHtml() {
-		$cookieHandler = $this->services->getService( 'BlueSpiceDiscoveryCookieHandler' );
-		$sidebar = $this->layout->skinStructureElements['sidebar-primary'];
+		if ( isset( $this->layout->skinStructureElements['sidebar-primary'] ) ) {
+			$sidebar = $this->layout->skinStructureElements['sidebar-primary'];
 
-		if ( $sidebar->shouldRender( $this->context ) ) {
-			$component = new SidebarPrimaryToggleButtonMobile( $cookieHandler );
-			$html = $this->getComponentHtml( $component );
+			if ( $sidebar->shouldRender( $this->context ) ) {
+				$component = new SidebarPrimaryToggleButtonMobile( $this->cookieHandler );
+				$html = $this->componentRenderer->getComponentHtml( $component );
 
-			$this->skinComponents['sidebar-primary-toggle-mobile'] = $html;
+				$this->skinComponents['sidebar-primary-toggle-mobile'] = $html;
+			}
 		}
 	}
 
@@ -118,14 +137,15 @@ class NavbarPrimary extends NavbarBase {
 	 * @return void
 	 */
 	private function fetchSidebarSecondaryToggleButtonHtml() {
-		$cookieHandler = $this->services->getService( 'BlueSpiceDiscoveryCookieHandler' );
-		$sidebar = $this->layout->skinStructureElements['sidebar-secondary'];
+		if ( isset( $this->layout->skinStructureElements['sidebar-secondary'] ) ) {
+			$sidebar = $this->layout->skinStructureElements['sidebar-secondary'];
 
-		if ( $sidebar->shouldRender( $this->context ) ) {
-			$component = new SidebarSecondaryToggleButton( $cookieHandler );
-			$html = $this->getComponentHtml( $component );
+			if ( $sidebar->shouldRender( $this->context ) ) {
+				$component = new SidebarSecondaryToggleButton( $this->cookieHandler );
+				$html = $this->componentRenderer->getComponentHtml( $component );
 
-			$this->skinComponents['sidebar-secondary-toggle'] = $html;
+				$this->skinComponents['sidebar-secondary-toggle'] = $html;
+			}
 		}
 	}
 
@@ -135,7 +155,7 @@ class NavbarPrimary extends NavbarBase {
 	 */
 	private function fetchGlobalActionsButtonHtml() {
 		$component = new GlobalActionsButton();
-		$html = $this->getComponentHtml( $component );
+		$html = $this->componentRenderer->getComponentHtml( $component );
 
 		$this->skinComponents['global-actions-button'] = $html;
 	}
@@ -146,7 +166,7 @@ class NavbarPrimary extends NavbarBase {
 	 */
 	private function fetchLoginButtonHtml() {
 		$component = new UserButtonLogin( $this->context );
-		$html = $this->getComponentHtml( $component );
+		$html = $this->componentRenderer->getComponentHtml( $component );
 
 		$this->skinComponents['login-button'] = $html;
 	}
@@ -157,7 +177,7 @@ class NavbarPrimary extends NavbarBase {
 	 */
 	private function fetchUserMenuButtonHtml() {
 		$component = new UserButtonMenu();
-		$html = $this->getComponentHtml( $component );
+		$html = $this->componentRenderer->getComponentHtml( $component );
 
 		$this->skinComponents['user-menu-button'] = $html;
 	}
@@ -167,8 +187,6 @@ class NavbarPrimary extends NavbarBase {
 	 * @return array
 	 */
 	public function getParams(): array {
-		$cookieHandler = new CookieHandler( $this->template->getSkin()->getRequest() );
-		$expanded = $cookieHandler->getCookie( 'sb-pri-cnt' );
 		$mainpage = Title::newMainPage();
 
 		$this->fetchSkinSlotNavbarPrimarySearchFormHtml();
@@ -198,11 +216,19 @@ class NavbarPrimary extends NavbarBase {
 	}
 
 	/**
-	 * @param IContextSource $context
-	 * @return string
+	 * @param ISkinLayout $layout
+	 * @return void
 	 */
-	public function shouldRender( IContextSource $context ): bool {
-		return true;
+	public function setSkinLayout( ISkinLayout $layout ): void {
+		$this->layout = $layout;
+		$this->context = $layout->context;
+		$this->template = $layout->template;
 	}
 
+	/**
+	 * @return array
+	 */
+	public function getStyles(): array {
+		return [ 'skin.discovery.navbar-primary.styles' ];
+	}
 }

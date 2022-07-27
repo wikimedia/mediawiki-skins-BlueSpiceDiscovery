@@ -2,6 +2,8 @@
 
 namespace BlueSpice\Discovery\Structure;
 
+use BlueSpice\Discovery\IContextSourceAware;
+use BlueSpice\Discovery\IResourceProvider;
 use BlueSpice\Discovery\ITabPanelContainer;
 use IContextSource;
 use MediaWiki\MediaWikiServices;
@@ -9,7 +11,8 @@ use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
 use MWStake\MediaWiki\Component\CommonUserInterface\ITabPanel;
 use MWStake\MediaWiki\Component\CommonUserInterface\SkinSlotRegistry;
 
-abstract class StackedTabPanelContainerBase extends SkinStructureBase implements ITabPanelContainer {
+abstract class StackedTabPanelContainerBase extends SkinStructureBase
+	implements ITabPanelContainer, IContextSourceAware, IResourceProvider {
 
 	/**
 	 * @var array
@@ -20,6 +23,11 @@ abstract class StackedTabPanelContainerBase extends SkinStructureBase implements
 	 * @var string
 	 */
 	private $activeId = '';
+
+	/**
+	 * @var IContextSource
+	 */
+	private $context = null;
 
 	/**
 	 *
@@ -73,7 +81,10 @@ abstract class StackedTabPanelContainerBase extends SkinStructureBase implements
 			$subComponents = $tabPanel->getSubComponents();
 			foreach ( $subComponents as $subComponent ) {
 				if ( !empty( $subComponent ) ) {
-					$body .= $this->getComponentHtml( $subComponent );
+					$body .= $this->componentRenderer->getComponentHtml(
+						$subComponent,
+						$this->componentProcessData
+					);
 				}
 			}
 			if ( $body === '' ) {
@@ -193,9 +204,8 @@ abstract class StackedTabPanelContainerBase extends SkinStructureBase implements
 	/**
 	 * @return string
 	 */
-	public function getTemplatePath(): string {
-		return $GLOBALS['wgStyleDirectory'] .
-			'/BlueSpiceDiscovery/resources/templates/structure/stacked-tab-panel-container';
+	public function getTemplateName(): string {
+		return 'stacked-tab-panel-container';
 	}
 
 	/**
@@ -226,5 +236,27 @@ abstract class StackedTabPanelContainerBase extends SkinStructureBase implements
 			}
 		}
 		return $shouldRender;
+	}
+
+	/**
+	 * @param IContextSource $context
+	 * @return void
+	 */
+	public function setContextSource( IContextSource $context ): void {
+		$this->context = $context;
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getStyles(): array {
+		return [];
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getScripts(): array {
+		return [];
 	}
 }
