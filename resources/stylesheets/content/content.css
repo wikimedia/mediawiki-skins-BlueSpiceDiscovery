@@ -14,7 +14,8 @@ p {
 }
 .p-sm {
 	font-size: 0.8rem;
-	color: var( --content-fg-secondary );
+	/* 0.8 * 16px = 12.8 */
+	font-size: calc(0.8534 * var(--content-font-size));
 }
 
 #mw-content-text a:not( [class*="oo-ui-"] ),
@@ -55,7 +56,8 @@ p {
 }
 pre {
 	font-family: monospace, Courier;
-	font-size: 0.8rem;
+	/* 0.8 * 16px = 12.8 */
+	font-size: calc(0.8534 * var(--content-font-size));
 	margin: 2rem 0;
 	white-space: pre-wrap;
 	word-wrap: break-word;
