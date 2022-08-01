@@ -13,11 +13,13 @@
 }
 #content .toctitle h2 {
 	display: inline;
-	font-size: 1.8rem;
+	/* 1.8 * 16px 28.8px */
+	font-size: calc(1.92 * var(--content-font-size));
 	font-weight: normal;
 }
 #toc .toctogglelabel {
-	color: var( --content-fg-secondary );
+	/* 0.8 * 16px = 12.8 */
+	font-size: calc(0.8534 * var(--content-font-size));
 	font-size: 0.8rem;
 }
 #toc .toctogglelabel:hover {
