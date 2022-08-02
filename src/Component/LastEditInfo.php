@@ -3,7 +3,6 @@
 namespace BlueSpice\Discovery\Component;
 
 use BlueSpice\Timestamp;
-use HtmlArmor;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
@@ -118,7 +117,7 @@ class LastEditInfo extends Literal {
 
 		$html = $this->linkRenderer->makeLink(
 			$wikiPage->getTitle(),
-			new HtmlArmor( $timestamp ),
+			$timestamp,
 			[
 				'title' => $timestamp,
 				'aria-label' => $ariaLabel,
@@ -143,9 +142,6 @@ class LastEditInfo extends Literal {
 		$userIdentity = $revision->getUser();
 		$user = User::newFromId( $userIdentity->getId() );
 		$username = $user->getName();
-		if ( $user->getRealName() !== '' ) {
-			$username = $user->getRealName();
-		}
 
 		/* Main_page is created with user id 0 */
 		if ( $userIdentity->getId() === 0 ) {
@@ -164,7 +160,7 @@ class LastEditInfo extends Literal {
 
 		$html = $this->linkRenderer->makeLink(
 			$user->getUserPage(),
-			new HtmlArmor( $username ),
+			$username,
 			[
 				'aria-label' => Message::newFromKey( 'bs-discovery-title-last-edit-info-user-aria-label', $username ),
 				'role' => 'link'
