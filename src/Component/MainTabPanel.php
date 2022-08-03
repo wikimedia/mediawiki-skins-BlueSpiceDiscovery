@@ -2,7 +2,9 @@
 
 namespace BlueSpice\Discovery\Component;
 
+use BlueSpice\Discovery\MenuManager;
 use IContextSource;
+use MediaWiki\MediaWikiServices;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\ComponentBase;
 use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
@@ -62,10 +64,20 @@ class MainTabPanel extends ComponentBase implements ITabPanel, IRestrictedCompon
 	 * @return IComponent[]
 	 */
 	public function getSubComponents(): array {
-		return [
-			new MainLinksPanel(),
-			new MediaWikiLinksPanel(),
+		$services = MediaWikiServices::getInstance();
+		/** @var MenuManager */
+		$menuManager = $services->get( 'BlueSpiceDiscoveryMenuManager' );
+		$menuComponent = $menuManager->getMenuComponentFromConfigVar( 'DiscoverySidebarPrimaryMainTabPanelMenu' );
+
+		$subcomponents = [
+			new MainLinksPanel()
 		];
+
+		if ( $menuComponent ) {
+			$subcomponents[] = $menuComponent;
+		}
+
+		return $subcomponents;
 	}
 
 	/**

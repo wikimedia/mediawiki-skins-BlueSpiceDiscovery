@@ -120,5 +120,19 @@
 	"bs-discovery-personalurl-userpage-text": "Profile",
 	"bs-discovery-globalactionentry-templates-text": "Templates",
 	"bs-discovery-globalactionentry-templates-title": "All templates",
-	"bs-discovery-last-edit-by-system-user": "system user"
+	"bs-discovery-last-edit-by-system-user": "system user",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-label": "Menu in main panel of primary sidebar",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-help": "Select menu in main panel of primary sidebar",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "MediaWiki sidebar",
+	"bs-discovery-menu-provider-mediawiki-sidebar-desc": "A MediaWiki sidebar menu with only one level of menu entries",
+	"bs-discovery-menu-provider-namespace-mainpage-list-label": "Namespace main page list",
+	"bs-discovery-menu-provider-namespace-mainpage-list-desc": "A list of main pages in content namespaces",
+	"bs-discovery-menu-provider-subpage-tree-label": "Subpage tree",
+	"bs-discovery-menu-provider-subpage-tree-desc": "Subpages of the current page as tree menu",
+	"bs-discovery-namespace-mainpage-links-pnl-header-text": "Namespace main pages",
+	"bs-discovery-subpage-tree-pnl-header-text": "Subpages",
+	"ns-main-label": "Pages",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Enhanced MediaWiki sidebar",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "A MediaWiki sidebar menu with enhanced function",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Main menu"
 }
