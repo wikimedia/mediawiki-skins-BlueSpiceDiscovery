@@ -16,7 +16,8 @@
 	"require": {
 		"composer/installers": "~1.0",
 		"mwstake/mediawiki-component-commonuserinterface": "~3",
-		"mwstake/mediawiki-component-manifestregistry": "~2"
+		"mwstake/mediawiki-component-manifestregistry": "~2",
+		"mwstake/mediawiki-lib-nodes": "~1"
 	},
 	"require-dev": {
 		"mediawiki/mediawiki-codesniffer": "39.0.0",

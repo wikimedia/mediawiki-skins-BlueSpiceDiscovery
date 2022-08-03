@@ -3,6 +3,8 @@
 use BlueSpice\Discovery\AttentionIndicatorFactory;
 use BlueSpice\Discovery\BreadcrumbDataProviderFactory;
 use BlueSpice\Discovery\CookieHandler;
+use BlueSpice\Discovery\MenuManager;
+use BlueSpice\Discovery\MenuProviderFactory;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
 use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
 use BlueSpice\Discovery\TemplateDataProvider;
@@ -53,5 +55,16 @@ return [
 			$services->getService( 'MWStakeCommonUIRendererDataTreeRenderer' )
 		);
 		return $renderer;
+	},
+	'BlueSpiceDiscoveryMenuProviderFactory' => static function ( MediaWikiServices $services ) {
+		return new MenuProviderFactory(
+			$services->get( 'MWStakeManifestObjectFactory' )
+		);
+	},
+	'BlueSpiceDiscoveryMenuManager' => static function ( MediaWikiServices $services ) {
+		return new MenuManager(
+			$services->get( 'BlueSpiceDiscoveryMenuProviderFactory' ),
+			$services->getConfigFactory()
+		);
 	}
 ];

@@ -1,0 +1,51 @@
+.oo-ui-icon-data-tree-expand::before {
+	content: "\f138";
+	font-family: 'fontawesome';
+	color: var(--sidebar-primary-marker--active);
+}
+.oo-ui-icon-data-tree-collapse::before {
+	content: "\f13a";
+	font-family: 'fontawesome';
+	color: var(--sidebar-primary-marker--active);
+}
+.tree-menu-cnt .oojsplus-data-tree-items ul.tree-node-list {
+	padding-left: 10px;
+}
+.tree-menu-cnt .oojsplus-data-tree-items ul.tree-node-list.tree-root {
+	padding-left: 0;
+}
+.tree-menu-cnt .oojsplus-data-tree-items .oojs-ui-data-tree-item {
+	padding-left: 0;
+}
+.tree-menu-cnt .oojsplus-data-tree-items .oojs-ui-data-tree-item > div {
+	position: relative;
+	border-left: 5px solid transparent;
+	padding-left: 30px;
+}
+.tree-menu-cnt .oojsplus-data-tree-items .oojs-ui-data-tree-item > div.active,
+.tree-menu-cnt .oojsplus-data-tree-items .oojs-ui-data-tree-item > div:hover {
+	border-left: 5px solid var(--sidebar-primary-marker--active);
+	color: var(--sidebar-primary-fg--active);
+	background-color: var(--sidebar-primary-bg--active);
+}
+.tree-menu-cnt .oojsplus-data-tree-items .oojs-ui-data-tree-item .oojsplus-data-tree-expander {
+	left: 10px;
+}
+.tree-menu-cnt .oo-ui-buttonElement-button,
+.tree-menu-cnt .oo-ui-buttonElement-button:hover,
+.tree-menu-cnt .oo-ui-buttonElement-button:focus {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	transition: none !important;
+	background-color: transparent !important;
+	border: none !important;
+}
+.tree-menu-cnt .oo-ui-buttonElement-frameless.oo-ui-labelElement {
+	margin-left: 13px;
+}
+.tree-menu-cnt .oo-ui-buttonElement-frameless.oo-ui-labelElement:first-child {
+	margin-left: 15px;
+}
+.tree-menu-cnt .oo-ui-buttonElement-button > .oo-ui-labelElement-label {
+	font-weight: normal;
+}

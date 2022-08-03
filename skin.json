@@ -126,6 +126,15 @@
 					}
 				}
 			},
+			"MenuProviderRegistry": {
+				"mediawiki-sidebar": {
+					"class": "BlueSpice\\Discovery\\MenuProvider\\MediawikiSidebar"
+				},
+				"namespace-mainpage-list": {
+					"class": "BlueSpice\\Discovery\\MenuProvider\\NamespaceMainPageList",
+					"services": [ "BSUtilityFactory" ]
+				}
+			},
 			"AttentionIndicatorRegistry": {},
 			"BreadcrumbDataProviderRegistry": {
 				"special-actions": {
@@ -136,6 +145,20 @@
 				},
 				"base-breadcrumb": {
 					"class": "BlueSpice\\Discovery\\BreadcrumbDataProvider\\BaseBreadcrumbDataProvider"
+				}
+			},
+			"EnhancedSidebarNodeProcessors": {
+				"internal": {
+					"class": "BlueSpice\\Discovery\\EnhancedSidebar\\NodeProcessor\\InternalLinkProcessor",
+					"services": [ "PermissionManager", "ParserFactory", "TitleFactory" ]
+				},
+				"external": {
+					"class": "BlueSpice\\Discovery\\EnhancedSidebar\\NodeProcessor\\ExternalLinkProcessor",
+					"services": [ "ParserFactory" ]
+				},
+				"subpage-tree": {
+					"class": "BlueSpice\\Discovery\\EnhancedSidebar\\NodeProcessor\\SubpageListProcessor",
+					"services": [ "PermissionManager", "ParserFactory", "TitleFactory" ]
 				}
 			}
 		},
@@ -156,7 +179,8 @@
 			"ConfigDefinitionRegistry": {
 				"DiscoveryMainLinksMainpage": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksMainpage::getInstance",
 				"DiscoveryMainLinksAllPages": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksAllPages::getInstance",
-				"DiscoveryMainLinksRecentChanges": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksRecentChanges::getInstance"
+				"DiscoveryMainLinksRecentChanges": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksRecentChanges::getInstance",
+				"DiscoverySidebarPrimaryMainTabPanelMenu": "\\BlueSpice\\Discovery\\ConfigDefinition\\SidebarPrimaryMainTabPanelMenu::getInstance"
 			}
 		},
 		"BlueSpiceHideTitle": {
@@ -261,6 +285,11 @@
 			"value": true,
 			"public": true,
 			"descriptionmsg": "bs-discovery-config-mainlinks-recentchanges-label"
+		},
+		"DiscoverySidebarPrimaryMainTabPanelMenu": {
+			"value": "mediawiki-sidebar",
+			"public": true,
+			"descriptionmsg": "bs-discovery-config-config-sidebar-primary-main-tab-menu-label"
 		}
 	},
 	"ResourceModules": {
@@ -476,6 +505,19 @@
 			"messages": [
 				"mw-widgets-copytextlayout-copy-success"
 			]
+		},
+		"skin.discovery.tree-menu-container": {
+			"scripts": [
+				"js/TreeMenuContainer.js"
+			],
+			"dependencies": [
+				"ext.oOJSPlus.data"
+			]
+		},
+		"skin.discovery.tree-menu-container.styles": {
+			"styles": {
+				"stylesheets/oo-ui/data-tree.css": {}
+			}
 		}
 	},
 	"ResourceFileModulePaths": {
