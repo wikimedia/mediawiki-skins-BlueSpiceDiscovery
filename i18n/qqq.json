@@ -118,5 +118,19 @@
 	"bs-discovery-personalurl-mycontributions-text": "Label for personal menu entry \"mycontris\"\n{{Identical|Contribution}}",
 	"bs-discovery-personalurl-userpage-text": "Label for personal menu entry \"userpage\"\n{{Identical|Profile}}",
 	"bs-discovery-globalactionentry-templates-text": "Label for \"All templates\" action menu entry that leads to [[Special:AllPages]] with preselection for namespace 10\n{{Identical|Template}}",
-	"bs-discovery-globalactionentry-templates-title": "Title for \"All templates\" action menu entry that leads to [[Special:AllPages]] with preselection for namespace 10"
+	"bs-discovery-globalactionentry-templates-title": "Title for \"All templates\" action menu entry that leads to [[Special:AllPages]] with preselection for namespace 10",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-label": "Label for a section in configuration manager with where a menu for the main tab of primary sidebar can be selected",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-help": "Help text for a section in configuration manager with where a menu for the main tab of primary sidebar can be selected",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "Label for a dropdown entry in configuration manager for the mediawiki sidebar menu",
+	"bs-discovery-menu-provider-mediawiki-sidebar-desc": "Description text for a dropdown entry in configuration manager for the mediawiki sidebar menu",
+	"bs-discovery-menu-provider-namespace-mainpage-list-label": "Label for a dropdown entry in configuration manager for a list of main pages in content namespaces",
+	"bs-discovery-menu-provider-namespace-mainpage-list-desc": "Description text for a dropdown entry in configuration manager for a list of main pages in content namespaces",
+	"bs-discovery-menu-provider-subpage-tree-label": "Label for a dropdown entry in configuration manager for a subpage tree",
+	"bs-discovery-menu-provider-subpage-tree-desc": "Description text for a dropdown entry in configuration manager for a subpage tree",
+	"bs-discovery-namespace-mainpage-links-pnl-header-text": "Label for panel header with a list of content namespace main pages",
+	"bs-discovery-subpage-tree-pnl-header-text": "Label for panel header with a subpage tree menu",
+	"ns-main-label": "Label for main namespace",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Label for a dropdown entry in configuration manager for a enhaced mediawiki sideerbar menu",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Description text for a dropdown entry in configuration manager for the enhaced mediawiki sidebar menu",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Label for panel header with a  enhaced mediawiki sidebar menu"
 }
