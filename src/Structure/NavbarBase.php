@@ -2,14 +2,103 @@
 
 namespace BlueSpice\Discovery\Structure;
 
+use BlueSpice\Discovery\CookieHandler;
+use BlueSpice\Discovery\IResourceProvider;
+use BlueSpice\Discovery\ISkinStructure;
+use BlueSpice\Discovery\ITemplateProvider;
+use BlueSpice\Discovery\Renderer\ComponentRenderer;
+use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
+use BlueSpice\Discovery\TemplateDataProvider;
 use IContextSource;
+use MediaWiki\Permissions\PermissionManager;
 
-abstract class NavbarBase extends SkinStructureBase {
+abstract class NavbarBase implements ISkinStructure, ITemplateProvider, IResourceProvider {
+	/**
+	 * @var ComponentRenderer
+	 */
+	protected $componentRenderer = null;
 
 	/**
 	 * @var array
 	 */
-	private $skinComponents = [];
+	protected $componentProcessData = [];
+
+	/**
+	 * @var SkinSlotRenderer
+	 */
+	protected $skinSlotRenderer = null;
+
+	/**
+	 * @var PermissionManager
+	 */
+	protected $permissionManager = null;
+
+	/**
+	 * @var CookieHandler
+	 */
+	protected $cookieHandler = null;
+
+	/**
+	 *
+	 * @param TemplateDataProvider $templateDataProvider
+	 * @param CookieHandler $cookieHandler
+	 * @param PermissionManager $permissionManager
+	 */
+	public function __construct(
+		TemplateDataProvider $templateDataProvider,
+		ComponentRenderer $componentRenderer,
+		SkinSlotRenderer $skinSlotRenderer,
+		CookieHandler $cookieHandler,
+		PermissionManager $permissionManager ) {
+		$this->componentProcessData = $templateDataProvider->getAll();
+		$this->componentRenderer = $componentRenderer;
+		$this->skinSlotRenderer = $skinSlotRenderer;
+		$this->permissionManager = $permissionManager;
+		$this->cookieHandler = $cookieHandler;
+	}
+
+	/**
+	 *
+	 * @param TemplateDataProvider $templateDataProvider
+	 * @param ComponentRenderer $componentRenderer
+	 * @param CookieHandler $cookieHandler
+	 * @param PermissionManager $permissionManager
+	 * @return void
+	 */
+	public static function factory(
+		TemplateDataProvider $templateDataProvider,
+		ComponentRenderer $componentRenderer,
+		SkinSlotRenderer $skinSlotRenderer,
+		CookieHandler $cookieHandler,
+		PermissionManager $permissionManager ) {
+		return new static(
+			$templateDataProvider, $componentRenderer, $skinSlotRenderer, $cookieHandler, $permissionManager
+		);
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getTemplatePath(): string {
+		return $GLOBALS['wgStyleDirectory'] .
+			'/BlueSpiceDiscovery/resources/templates/structure';
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getTemplateName(): string {
+		return $this->getName();
+	}
+
+	/**
+	 * Parse templates recursive
+	 *
+	 * @return bool
+	 */
+	public function enableRecursivePartials(): bool {
+		return false;
+	}
 
 	/**
 	 *
@@ -18,5 +107,20 @@ abstract class NavbarBase extends SkinStructureBase {
 	 */
 	public function shouldRender( IContextSource $context ): bool {
 		return true;
+	}
+
+	/**
+	 *
+	 * @return array
+	 */
+	public function getParams(): array {
+		return [];
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getScripts(): array {
+		return [];
 	}
 }

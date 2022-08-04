@@ -3,6 +3,8 @@
 namespace BlueSpice\Discovery\Renderer;
 
 use BlueSpice\Discovery\ISkinStructureRenderer;
+use BlueSpice\Discovery\ITemplateProvider;
+use Exception;
 use IContextSource;
 use TemplateParser;
 
@@ -16,6 +18,12 @@ class SkinStructureRenderer implements ISkinStructureRenderer {
 	 * @param SkinStructureElement $skinStructureElement
 	 */
 	public function __construct( $skinStructureElement ) {
+		if ( $skinStructureElement instanceof ITemplateProvider === false ) {
+			throw new Exception(
+				$skinStructureElement->getName() . ' is not instanceof ITemplatePathProvider'
+			);
+		}
+
 		$this->skinStructureElement = $skinStructureElement;
 	}
 
@@ -31,27 +39,16 @@ class SkinStructureRenderer implements ISkinStructureRenderer {
 		$params = array_merge(
 			$this->skinStructureElement->getParams()
 		);
-		$this->getTemplate();
 		$templateParser = new TemplateParser(
-			$this->structureTemplatePath
+			$this->skinStructureElement->getTemplatePath()
 		);
 		$templateParser->enableRecursivePartials(
 			$this->skinStructureElement->enableRecursivePartials()
 		);
 		$html = $templateParser->processTemplate(
-			$this->structureTemplateName,
+			$this->skinStructureElement->getTemplateName(),
 			$params
 		);
 		return $html;
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	private function getTemplate() {
-		$structureTemplatePath = $this->skinStructureElement->getTemplatePath();
-		$structureTemplateParts = explode( '/', $structureTemplatePath );
-		$this->structureTemplateName = array_pop( $structureTemplateParts );
-		$this->structureTemplatePath = implode( '/', $structureTemplateParts );
 	}
 }

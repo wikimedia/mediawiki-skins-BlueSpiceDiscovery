@@ -2,13 +2,21 @@
 
 namespace BlueSpice\Discovery\Structure;
 
+use BaseTemplate;
 use BlueSpice\Discovery\CookieHandler;
+use BlueSpice\Discovery\IBaseTemplateAware;
 use IContextSource;
+use MediaWiki\MediaWikiServices;
 use SpecialPage;
 
-class SidebarSecondary extends StackedTabPanelContainerBase {
+class SidebarSecondary extends StackedTabPanelContainerBase implements IBaseTemplateAware {
+
 	/**
-	 *
+	 * @var BaseTemplate
+	 */
+	private $template = null;
+
+	/**
 	 * @var string
 	 */
 	private $registryKey = 'SidebarSecondaryTabPanels';
@@ -61,6 +69,7 @@ class SidebarSecondary extends StackedTabPanelContainerBase {
 		if ( !parent::shouldRender( $context ) ) {
 			return false;
 		}
+
 		$specialUserLogin = SpecialPage::getSafeTitleFor( 'Userlogin' );
 		$title = $context->getTitle();
 		if ( $specialUserLogin->equals( $title ) ) {
@@ -80,10 +89,34 @@ class SidebarSecondary extends StackedTabPanelContainerBase {
 		}
 
 		$user = $context->getUser();
-		$permissionManager = $this->services->getPermissionManager();
+		/** @var MediaWikiServices */
+		$services = MediaWikiServices::getInstance();
+		$permissionManager = $services->getPermissionManager();
 		if ( !$permissionManager->userCan( 'read', $user, $title ) ) {
 			return false;
 		}
 		return true;
+	}
+
+	/**
+	 * @param BaseTemplate $baseTemplate
+	 * @return void
+	 */
+	public function setBaseTemplate( BaseTemplate $baseTemplate ): void {
+		$this->template = $baseTemplate;
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getStyles(): array {
+		return [ 'skin.discovery.sidebar-secondary.styles' ];
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getScripts(): array {
+		return [ 'skin.discovery.bluespice.sidebar-secondary.scripts' ];
 	}
 }

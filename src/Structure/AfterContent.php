@@ -2,10 +2,17 @@
 
 namespace BlueSpice\Discovery\Structure;
 
+use BaseTemplate;
+use BlueSpice\Discovery\IBaseTemplateAware;
 use BlueSpice\Discovery\SkinSlotRenderer\DataAfterContentSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\ToolsAfterContentSkinSlotRenderer;
 
-class AfterContent extends SkinStructureBase {
+class AfterContent extends SkinStructureBase implements IBaseTemplateAware {
+
+	/**
+	 * @var BaseTemplate
+	 */
+	private $template = null;
 
 	/**
 	 *
@@ -13,14 +20,6 @@ class AfterContent extends SkinStructureBase {
 	 */
 	public function getName(): string {
 		return 'aftercontent';
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getTemplatePath(): string {
-		return $GLOBALS['wgStyleDirectory'] .
-			'/BlueSpiceDiscovery/resources/templates/structure/aftercontent';
 	}
 
 	/**
@@ -49,9 +48,12 @@ class AfterContent extends SkinStructureBase {
 	 * @return void
 	 */
 	private function fetchSkinSlotDataAfterContent() {
-		$this->skinComponents['skin-slot-data-after-content'] = $this->getSkinSlotHtml(
-			DataAfterContentSkinSlotRenderer::REG_KEY
+		$html = $this->skinSlotRenderer->getSkinSlotHtml(
+			DataAfterContentSkinSlotRenderer::REG_KEY,
+			$this->componentProcessData
 		);
+
+		$this->skinComponents['skin-slot-data-after-content'] = $html;
 	}
 
 	/**
@@ -59,8 +61,26 @@ class AfterContent extends SkinStructureBase {
 	 * @return void
 	 */
 	private function fetchSkinSlotToolsAfterContent() {
-		$this->skinComponents['skin-slot-tools-after-content'] = $this->getSkinSlotHtml(
-			ToolsAfterContentSkinSlotRenderer::REG_KEY
+		$html = $this->skinSlotRenderer->getSkinSlotHtml(
+			ToolsAfterContentSkinSlotRenderer::REG_KEY,
+			$this->componentProcessData
 		);
+
+		$this->skinComponents['skin-slot-tools-after-content'] = $html;
+	}
+
+	/**
+	 * @param BaseTemplate $baseTemplate
+	 * @return void
+	 */
+	public function setBaseTemplate( BaseTemplate $baseTemplate ): void {
+		$this->template = $baseTemplate;
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getStyles(): array {
+		return [ 'skin.discovery.aftercontent.styles' ];
 	}
 }

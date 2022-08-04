@@ -2,19 +2,10 @@
 
 namespace BlueSpice\Discovery\Structure;
 
-class Footer extends SkinStructureBase {
+use BaseTemplate;
+use BlueSpice\Discovery\IBaseTemplateAware;
 
-	/**
-	 *
-	 * @var array
-	 */
-	private $skinComponents = [];
-
-	/**
-	 *
-	 * @var SkinSlotRendererFactory
-	 */
-	private $skinSlotRendererFactory = null;
+class Footer extends SkinStructureBase implements IBaseTemplateAware {
 
 	/**
 	 *
@@ -22,14 +13,6 @@ class Footer extends SkinStructureBase {
 	 */
 	public function getName(): string {
 		return 'footer';
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getTemplatePath(): string {
-		return $GLOBALS['wgStyleDirectory'] .
-			'/BlueSpiceDiscovery/resources/templates/structure/footer';
 	}
 
 	/**
@@ -80,5 +63,20 @@ class Footer extends SkinStructureBase {
 			}
 		}
 		return $items;
+	}
+
+	/**
+	 * @param BaseTemplate $baseTemplate
+	 * @return void
+	 */
+	public function setBaseTemplate( BaseTemplate $baseTemplate ): void {
+		$this->template = $baseTemplate;
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getStyles(): array {
+		return [ 'skin.discovery.footer.styles' ];
 	}
 }
