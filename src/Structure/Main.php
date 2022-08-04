@@ -217,7 +217,7 @@ class Main implements
 	 */
 	private function fetchLastEdit() {
 		$component = new LastEditInfo( $this->context, $this->linkRenderer, $this->revisionStore );
-		$html = $this->componentRenderer->getComponentHtml( $component );
+		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 
 		$this->skinComponents['last-edit'] = $html;
 	}
@@ -228,7 +228,7 @@ class Main implements
 	 */
 	private function fetchTitleActionEdit() {
 		$component = new TitleActionEdit( $this->permissionManager, $this->componentProcessData );
-		$html = $this->componentRenderer->getComponentHtml( $component );
+		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 
 		$this->skinComponents['title-action-edit'] = $html;
 	}
@@ -239,7 +239,7 @@ class Main implements
 	 */
 	private function fetchTitleActionFullscreenButton() {
 		$component = new FullscreenButton( $this->cookieHandler );
-		$html = $this->componentRenderer->getComponentHtml( $component );
+		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 
 		$this->skinComponents['fullscreen-button'] = $html;
 	}

@@ -29,7 +29,7 @@ class BackToTop extends SkinStructureBase {
 	 */
 	public function getParams(): array {
 		$component = new BackToTopButton();
-		$html = $this->componentRenderer->getComponentHtml( $component );
+		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 		return [
 			'body' => $html
 		];

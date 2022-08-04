@@ -91,8 +91,8 @@
 						"services": [
 							"BlueSpiceDiscoveryTemplateDataProvider",
 							"BlueSpiceDiscoveryComponentRenderer",
-							"BlueSpiceDiscoverySkinSlotRenderer",
-							"PermissionManager"
+							"MWStakeSkinSlotRegistry",
+							"ObjectFactory"
 						]
 					},
 					"sidebar-secondary": {
@@ -100,8 +100,8 @@
 						"services": [
 							"BlueSpiceDiscoveryTemplateDataProvider",
 							"BlueSpiceDiscoveryComponentRenderer",
-							"BlueSpiceDiscoverySkinSlotRenderer",
-							"PermissionManager"
+							"MWStakeSkinSlotRegistry",
+							"ObjectFactory"
 						]
 					}
 				}
