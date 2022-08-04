@@ -59,11 +59,11 @@ class Template extends BaseTemplate {
 		$layoutSpecs = [];
 		if ( isset( $layoutRegistry[$layoutEnabled] ) ) {
 			$layoutSpecs = $layoutRegistry[$layoutEnabled];
-			if ( is_array( $layoutSpecs['factory'] ) ) {
+			if ( isset( $layoutSpecs['factory'] ) && is_array( $layoutSpecs['factory'] ) ) {
 				$callback = end( $layoutSpecs['factory'] );
 				$layoutSpecs['factory'] = $callback;
 			}
-			if ( is_array( $layoutSpecs['class'] ) ) {
+			if ( isset( $layoutSpecs['class'] ) && is_array( $layoutSpecs['class'] ) ) {
 				$callback = end( $layoutSpecs['class'] );
 				$layoutSpecs['class'] = $callback;
 			}
@@ -85,7 +85,7 @@ class Template extends BaseTemplate {
 		}
 
 		if ( $skinLayout instanceof IContextSourceAware ) {
-			$skinLayout->setContextSource( $context );
+			$skinLayout->setContextSource( $this->getSkin()->getContext() );
 		}
 
 		$skinLayoutRendererCallback = $config->get( 'LayoutRenderer' );

@@ -54,7 +54,8 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 	 */
 	private function fetchSkinSlotNavbarPrimarySearchFormHtml(): void {
 		$html = $this->skinSlotRenderer->getSkinSlotHtml(
-			NavbarPrimarySearchFormSkinSlotRenderer::REG_KEY
+			NavbarPrimarySearchFormSkinSlotRenderer::REG_KEY,
+			$this->componentProcessData
 		);
 
 		$this->skinComponents['search-form'] = $html;
@@ -66,7 +67,8 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 	 */
 	private function fetchSkinSlotNavbarPrimaryItemsHtml(): void {
 		$html = $this->skinSlotRenderer->getSkinSlotHtml(
-			NavbarPrimaryItemsSkinSlotRenderer::REG_KEY
+			NavbarPrimaryItemsSkinSlotRenderer::REG_KEY,
+			$this->componentProcessData
 		);
 
 		$this->skinComponents['navbar-items'] = $html;
@@ -80,7 +82,7 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 		$user = $this->template->getSkin()->getUser();
 
 		$component = new CreateContentSplitButton( $user, $this->permissionManger );
-		$html = $this->componentRenderer->getComponentHtml( $component );
+		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 
 		$this->skinComponents['new-content-button'] = $html;
 	}
@@ -93,7 +95,7 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 		$langCode = $this->template->getSkin()->getLanguage()->getCode();
 
 		$component = new LanguageButton( $langCode );
-		$html = $this->componentRenderer->getComponentHtml( $component );
+		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 
 		$this->skinComponents['language-button'] = $html;
 	}
@@ -108,7 +110,7 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 
 			if ( $sidebar->shouldRender( $this->context ) ) {
 				$component = new SidebarPrimaryToggleButton( $this->cookieHandler );
-				$html = $this->componentRenderer->getComponentHtml( $component );
+				$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 
 				$this->skinComponents['sidebar-primary-toggle'] = $html;
 			}
@@ -125,7 +127,7 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 
 			if ( $sidebar->shouldRender( $this->context ) ) {
 				$component = new SidebarPrimaryToggleButtonMobile( $this->cookieHandler );
-				$html = $this->componentRenderer->getComponentHtml( $component );
+				$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 
 				$this->skinComponents['sidebar-primary-toggle-mobile'] = $html;
 			}
@@ -142,7 +144,7 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 
 			if ( $sidebar->shouldRender( $this->context ) ) {
 				$component = new SidebarSecondaryToggleButton( $this->cookieHandler );
-				$html = $this->componentRenderer->getComponentHtml( $component );
+				$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 
 				$this->skinComponents['sidebar-secondary-toggle'] = $html;
 			}
@@ -155,7 +157,7 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 	 */
 	private function fetchGlobalActionsButtonHtml() {
 		$component = new GlobalActionsButton();
-		$html = $this->componentRenderer->getComponentHtml( $component );
+		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 
 		$this->skinComponents['global-actions-button'] = $html;
 	}
@@ -166,7 +168,7 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 	 */
 	private function fetchLoginButtonHtml() {
 		$component = new UserButtonLogin( $this->context );
-		$html = $this->componentRenderer->getComponentHtml( $component );
+		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 
 		$this->skinComponents['login-button'] = $html;
 	}
@@ -177,7 +179,7 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 	 */
 	private function fetchUserMenuButtonHtml() {
 		$component = new UserButtonMenu();
-		$html = $this->componentRenderer->getComponentHtml( $component );
+		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 
 		$this->skinComponents['user-menu-button'] = $html;
 	}

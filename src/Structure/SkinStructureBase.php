@@ -59,7 +59,7 @@ abstract class SkinStructureBase implements ISkinStructure, ITemplateProvider, I
 	 * @param PermissionManager $permissionManager
 	 * @return ISkinStructure
 	 */
-	public static function factory(
+	public function factory(
 		TemplateDataProvider $templateDataProvider,
 		ComponentRenderer $componentRenderer,
 		SkinSlotRenderer $skinSlotRenderer,

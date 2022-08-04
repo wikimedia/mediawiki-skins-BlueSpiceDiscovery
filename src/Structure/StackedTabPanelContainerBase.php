@@ -4,15 +4,19 @@ namespace BlueSpice\Discovery\Structure;
 
 use BlueSpice\Discovery\IContextSourceAware;
 use BlueSpice\Discovery\IResourceProvider;
+use BlueSpice\Discovery\ISkinStructure;
 use BlueSpice\Discovery\ITabPanelContainer;
+use BlueSpice\Discovery\ITemplateProvider;
+use BlueSpice\Discovery\Renderer\ComponentRenderer;
+use BlueSpice\Discovery\TemplateDataProvider;
 use IContextSource;
-use MediaWiki\MediaWikiServices;
 use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
 use MWStake\MediaWiki\Component\CommonUserInterface\ITabPanel;
 use MWStake\MediaWiki\Component\CommonUserInterface\SkinSlotRegistry;
+use Wikimedia\ObjectFactory\ObjectFactory;
 
-abstract class StackedTabPanelContainerBase extends SkinStructureBase
-	implements ITabPanelContainer, IContextSourceAware, IResourceProvider {
+abstract class StackedTabPanelContainerBase
+	implements ISkinStructure, ITabPanelContainer, ITemplateProvider, IContextSourceAware, IResourceProvider {
 
 	/**
 	 * @var array
@@ -30,25 +34,85 @@ abstract class StackedTabPanelContainerBase extends SkinStructureBase
 	private $context = null;
 
 	/**
+	 * @var array
+	 */
+	protected $componentProcessData = [];
+
+	/**
+	 * @var ComponentRenderer
+	 */
+	protected $componentRenderer = null;
+
+	/**
+	 * @var SkinSlotRegistry
+	 */
+	protected $skinSlotRegistry = null;
+
+	/**
+	 * @var ObjectFactory
+	 */
+	protected $objectFactory = null;
+
+	/**
+	 *
+	 * @param TemplateDataProvider $templateDataProvider
+	 * @param ComponentRenderer $componentRenderer
+	 * @param SkinSlotRegistry $skinSlotRegistry
+	 * @param ObjectFactory $objectFactory
+	 */
+	public function __construct(
+		TemplateDataProvider $templateDataProvider,
+		ComponentRenderer $componentRenderer,
+		SkinSlotRegistry $skinSlotRegistry,
+		ObjectFactory $objectFactory
+		) {
+		$this->componentProcessData = $templateDataProvider->getAll();
+		$this->componentRenderer = $componentRenderer;
+		$this->skinSlotRegistry = $skinSlotRegistry;
+		$this->objectFactory = $objectFactory;
+	}
+
+	/**
+	 *
+	 * @param TemplateDataProvider $templateDataProvider
+	 * @param ComponentRenderer $componentRenderer
+	 * @param SkinSlotRegistry $skinSlotRegistry
+	 * @param ObjectFactory $objectFactory
+	 * @return ISkinStructure
+	 */
+	public static function factory(
+		TemplateDataProvider $templateDataProvider,
+		ComponentRenderer $componentRenderer,
+		SkinSlotRegistry $skinSlotRegistry,
+		ObjectFactory $objectFactory
+		) {
+		return new static(
+			$templateDataProvider, $componentRenderer, $skinSlotRegistry, $objectFactory
+		);
+	}
+
+	/**
 	 *
 	 * @return array
 	 */
 	private function getTabPanels(): array {
-		/** @var MediaWikiServices */
-		$services = MediaWikiServices::getInstance();
-
-		/** @var SkinSlotRegistry */
-		$skinSlotRegistry = $services->getService( 'MWStakeSkinSlotRegistry' );
-
-		$skinSlots = $skinSlotRegistry->getSkinSlots();
+		$skinSlots = $this->skinSlotRegistry->getSkinSlots();
 		$skinSlot = $skinSlots[$this->getTabPanelRegistryKey()];
-
 		$tabPanels = [];
 		foreach ( $skinSlot as $key => $item ) {
-			if ( !is_callable( $item['factory'] ) ) {
-				continue;
+			if ( isset( $item['factory'] ) && is_array( $item['factory'] ) ) {
+				$callback = end( $item['factory'] );
+				$item['factory'] = $callback;
 			}
-			$component = call_user_func_array( $item['factory'], [] );
+			if ( isset( $item['class'] ) && is_array( $item['class'] ) ) {
+				$callback = end( $item['class'] );
+				$item['class'] = $callback;
+			}
+			if ( isset( $item['factory'] ) && isset( $item['class'] ) ) {
+				unset( $item['factory'] );
+			}
+
+			$component = $this->objectFactory->createObject( $item );
 			if ( ( $component instanceof IComponent ) ) {
 				$tabPanels[] = $component;
 			}
@@ -72,6 +136,7 @@ abstract class StackedTabPanelContainerBase extends SkinStructureBase
 		$mainPanel = [];
 		$otherPanels = [];
 		foreach ( $tabPanels as $id => $tabPanel ) {
+
 			if ( !( $tabPanel instanceof ITabPanel )
 			 || !$tabPanel->shouldRender( $this->context ) ) {
 				continue;
@@ -204,8 +269,25 @@ abstract class StackedTabPanelContainerBase extends SkinStructureBase
 	/**
 	 * @return string
 	 */
+	public function getTemplatePath(): string {
+		return $GLOBALS['wgStyleDirectory'] .
+			'/BlueSpiceDiscovery/resources/templates/structure';
+	}
+
+	/**
+	 * @return string
+	 */
 	public function getTemplateName(): string {
 		return 'stacked-tab-panel-container';
+	}
+
+	/**
+	 * Parse templates recursive
+	 *
+	 * @return bool
+	 */
+	public function enableRecursivePartials(): bool {
+		return false;
 	}
 
 	/**
