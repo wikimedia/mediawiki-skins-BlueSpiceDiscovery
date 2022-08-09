@@ -6,5 +6,7 @@
 	},
 	"bs-discovery-navbar-user-login-text": "Prijava",
 	"bs-discovery-navbar-user-login-aria-label": "Prijava",
-	"bs-discovery-dialog-details-action-cancel": "Prekliči"
+	"bs-discovery-dialog-details-action-cancel": "Prekliči",
+	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Imenski prostor",
+	"bs-discovery-dialog-detailssectionheading-namespaces": "Imenski prostori"
 }
