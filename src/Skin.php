@@ -49,9 +49,13 @@ class Skin extends SkinTemplate {
 		$layoutSpecs = [];
 		if ( isset( $layoutRegistry[$layoutEnabled] ) ) {
 			$layoutSpecs = $layoutRegistry[$layoutEnabled];
-			if ( is_array( $layoutSpecs['factory'] ) ) {
+			if ( isset( $layoutSpecs['factory'] ) && is_array( $layoutSpecs['factory'] ) ) {
 				$callback = end( $layoutSpecs['factory'] );
 				$layoutSpecs['factory'] = $callback;
+			}
+			if ( isset( $layoutSpecs['class'] ) && is_array( $layoutSpecs['class'] ) ) {
+				$callback = end( $layoutSpecs['class'] );
+				$layoutSpecs['class'] = $callback;
 			}
 			if ( isset( $layoutSpecs['factory'] ) && isset( $layoutSpecs['class'] ) ) {
 				unset( $layoutSpecs['factory'] );
@@ -76,7 +80,7 @@ class Skin extends SkinTemplate {
 			}
 
 			if ( !empty( $scripts ) ) {
-				$out->addModuleStyles( $scripts );
+				$out->addModules( $scripts );
 			}
 		}
 
@@ -92,7 +96,7 @@ class Skin extends SkinTemplate {
 				}
 
 				if ( !empty( $scripts ) ) {
-					$out->addModuleStyles( $scripts );
+					$out->addModules( $scripts );
 				}
 			}
 		}
