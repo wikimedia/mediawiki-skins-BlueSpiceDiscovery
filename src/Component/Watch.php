@@ -110,6 +110,9 @@ class Watch extends SimpleLink {
 		// `Title::isWatchable` was deprecated in 1.37 and removed in 1.38
 		// See https://github.com/wikimedia/mediawiki/blob/REL1_35/includes/Title.php#L1222-L1234
 		$title = $context->getTitle();
+		if ( $title === null ) {
+			return false;
+		}
 		$user = $context->getUser();
 		$nsInfo = MediaWikiServices::getInstance()->getNamespaceInfo();
 		return $title->getText() !== '' && !$title->isExternal() &&
