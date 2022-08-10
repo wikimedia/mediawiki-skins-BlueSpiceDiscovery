@@ -106,8 +106,8 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 
 		$html = '';
 		if ( $innerHtml !== '' ) {
-			$html = $this->buildOpeningConainerWrapperHtml();
-			$html = $innerHtml;
+			$html .= $this->buildOpeningConainerWrapperHtml();
+			$html .= $innerHtml;
 			$html .= $this->buildClosingConainerWrapperHtml();
 		}
 
