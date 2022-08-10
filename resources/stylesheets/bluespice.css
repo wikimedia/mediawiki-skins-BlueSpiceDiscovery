@@ -2,10 +2,15 @@ body.mediawiki, body.mediawiki.x-body {
 	font-family: 'Lato';
 	font-size: 14px;
 	font-weight: 400;
+	background-color:var(--body-bg);
 
 	/* scrollbar for FF */
 	scrollbar-width: thin;
 	scrollbar-color:#d8d8d9 white;
+}
+body.mediawiki.ns-special,
+body.mediawiki.x-body.ns-special {
+	background-color: var(--body-special-bg);
 }
 /* scrollbar for Chrome, Safari, Edge */
 body::-webkit-scrollbar {

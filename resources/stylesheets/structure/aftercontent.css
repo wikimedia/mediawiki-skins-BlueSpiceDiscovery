@@ -1,8 +1,6 @@
 
 #aftercontent {
-	padding-top: 15px;
 	width: 100%;
-	background-color: var(--content-bg);
 }
 .ns-special #aftercontent {
 	background-color: var(--body-special-bg );
@@ -12,9 +10,10 @@
 	margin: 0 auto;
 	padding-left: 2.5rem;
 	padding-right: 2.5rem;
-	padding-top: 1rem;
+	padding-top: 2rem;
 	padding-bottom: 30px;
 	border-top: 0.05px solid var(--aftercontent-border-color);
+	background-color: var(--content-bg);
 }
 
 #aftercontent h1,
