@@ -26,6 +26,8 @@ class AfterContent extends SkinStructureBase implements IBaseTemplateAware {
 	 * @return array
 	 */
 	public function getParams(): array {
+		$this->skinComponents['inner'] = [];
+
 		$this->fetchDataAfterContent();
 		$this->fetchSkinSlotToolsAfterContent();
 		$this->fetchSkinSlotDataAfterContent();
@@ -40,7 +42,10 @@ class AfterContent extends SkinStructureBase implements IBaseTemplateAware {
 	 * @return void
 	 */
 	private function fetchDataAfterContent() {
-		$this->skinComponents['data-after-content'] = $this->template->get( 'dataAfterContent' );
+		$html = $this->template->get( 'dataAfterContent' );
+		if ( $html !== '' ) {
+			$this->skinComponents['inner']['data-after-content'] = $html;
+		}
 	}
 
 	/**
@@ -53,7 +58,9 @@ class AfterContent extends SkinStructureBase implements IBaseTemplateAware {
 			$this->componentProcessData
 		);
 
-		$this->skinComponents['skin-slot-data-after-content'] = $html;
+		if ( $html !== '' ) {
+			$this->skinComponents['inner']['skin-slot-data-after-content'] = $html;
+		}
 	}
 
 	/**
@@ -66,7 +73,9 @@ class AfterContent extends SkinStructureBase implements IBaseTemplateAware {
 			$this->componentProcessData
 		);
 
-		$this->skinComponents['skin-slot-tools-after-content'] = $html;
+		if ( $html !== '' ) {
+			$this->skinComponents['inner']['skin-slot-tools-after-content'] = $html;
+		}
 	}
 
 	/**
