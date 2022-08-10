@@ -79,7 +79,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 
 		$this->sortItems( $items );
 
-		$html = $this->buildOpeningConainerWrapperHtml();
+		$innerHtml = '';
 		foreach ( $items as $id => $item ) {
 			if ( !is_callable( $item['factory'] ) ) {
 				continue;
@@ -98,13 +98,19 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 				$rendererDataTree = $this->rendererDataTreeBuilder->getRendererDataTree( [
 					array_pop( $componentTree )
 				] );
-				$html .= $this->buildOpeningItemWrapperHtml( $component->getId() );
-				$html .= $this->rendererDataTreeRenderer->getHtml( $rendererDataTree );
-				$html .= $this->buildClosingItemWrapperHtml();
+				$innerHtml .= $this->buildOpeningItemWrapperHtml( $component->getId() );
+				$innerHtml .= $this->rendererDataTreeRenderer->getHtml( $rendererDataTree );
+				$innerHtml .= $this->buildClosingItemWrapperHtml();
 			}
 		}
 
-		$html .= $this->buildClosingConainerWrapperHtml();
+		$html = '';
+		if ( $innerHtml !== '' ) {
+			$html = $this->buildOpeningConainerWrapperHtml();
+			$html = $innerHtml;
+			$html .= $this->buildClosingConainerWrapperHtml();
+		}
+
 		return $html;
 	}
 
