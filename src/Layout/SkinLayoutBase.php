@@ -12,7 +12,7 @@ use BlueSpice\Discovery\ITemplateProvider;
 use ExtensionRegistry;
 use IContextSource;
 use RequestContext;
-use Wikimedia\ObjectFactory;
+use Wikimedia\ObjectFactory\ObjectFactory;
 
 abstract class SkinLayoutBase implements
 	ISkinLayout,
