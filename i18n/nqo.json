@@ -5,7 +5,7 @@
 		]
 	},
 	"bs-discovery-skip-links-navigation-aria-label": "ߛߘߌ߬ߜߋ߲ ߠߊߝߘߏ߬",
-	"bs-discovery-skip-to-main-text": "ߞߣߐߘߐ߫ ߓߊߖߎߡߊ ߟߊߜߊ߲߫",
+	"bs-discovery-skip-to-main-text": "ߊ߬ ߟߊߜߊ߲߫ ߞߊ߬ ߥߊ߫ ߓߊ߯ߙߊ߫ ߞߣߍ ߞߊ߲߬",
 	"bs-discovery-back-to-top-text": "ߌ ߞߐߛߊ߬ߦߌ߬ ߛߊ߲ߝߍ߬",
 	"bs-discovery-back-to-top-aria-label": "ߌ ߞߐߛߊ߬ߦߌ߬ ߛߊ߲ߝߍ߬",
 	"bs-discovery-navbar-search-form-input-aria-label": "ߢߌߣߌ߲ߠߌ߲ ߖߙߎߡߎ߲ ߝߙߊ߬ߟߌ",
@@ -40,7 +40,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "ߞߐߜߍߟߋ߲߫ ߜߘߍ ߟߎ߬",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "ߞߐߜߍߟߋ߲߫ ߜߘߍ ߟߎ߬",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "ߓߏ߬ߟߏ߲߬ߘߊ ߞߐߜߍ",
-	"bs-discovery-title-last-edit-info": "ߡߊ߬ߦߟߍ߬ߡߊ߲߬ߠߌ߲߬ ߠߊߓߊ߲ $1 ߟߊ߫߸ $2 ߡߊ߬",
+	"bs-discovery-title-last-edit-info": "ߡߊ߬ߦߟߍ߬ߡߊ߲߬ߠߌ߲߬ ߠߊߓߊ߲ $1 ߟߊ߫ <br /> $2 ߓߟߏ߫",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "ߞߐ߯ߟߊ߫ ߡߊߦߟߍߡߊ߲ߠߌ߲ $1",
 	"bs-discovery-title-action-edit-button-title": "ߞߐߜߍ ߡߊߦߟߍ߬ߡߊ߲߫",
 	"bs-discovery-title-action-edit-button-aria-label": "ߞߐߜߍ ߡߊߦߟߍ߬ߡߊ߲߫",
