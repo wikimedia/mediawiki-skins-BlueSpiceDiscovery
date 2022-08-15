@@ -6,13 +6,18 @@
 			"GpieroMW"
 		]
 	},
+	"bs-discovery-skip-links-navigation-aria-label": "Salta ai collegamenti",
+	"bs-discovery-skip-to-sidebar-primary-text": "Salta alla navigazione principale",
+	"bs-discovery-back-to-top-text": "Torna all'inizio",
 	"bs-discovery-navbar-user-button-title": "Menu utente",
 	"bs-discovery-navbar-user-button-aria-label": "Menu utente",
 	"bs-discovery-navbar-user-button-personal-menu-text": "Strumenti personali",
 	"bs-discovery-navbar-user-login-text": "Accedi",
 	"bs-discovery-navbar-user-login-title": "Accedi",
+	"bs-discovery-logo-return-to-aria-label": "Torna a $1",
 	"bs-discovery-header-create-button-text": "Nuovo",
 	"bs-discovery-header-create-button-title": "Crea una nuova pagina",
+	"bs-discovery-create-button-new-section-text": "Nuova sezione",
 	"bs-discovery-create-button-new-file-text": "Nuovo file",
 	"bs-discovery-navbar-global-actions-tool-text": "Strumenti",
 	"bs-discovery-navbar-languages-button-text": "Lingue",
