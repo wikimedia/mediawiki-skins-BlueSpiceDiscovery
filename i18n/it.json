@@ -25,5 +25,10 @@
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Pagine",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Pagina principale",
 	"bs-discovery-title-action-edit-button-title": "Modifica la pagina",
-	"bs-discovery-title-action-edit-button-aria-label": "Modifica la pagina"
+	"bs-discovery-title-action-edit-button-aria-label": "Modifica la pagina",
+	"bs-discovery-skip-links-navigation-aria-label": "Salta ai collegamenti",
+	"bs-discovery-skip-to-sidebar-primary-text": "Salta alla navigazione principale",
+	"bs-discovery-back-to-top-text": "Torna all'inizio",
+	"bs-discovery-logo-return-to-aria-label": "Torna a $1",
+	"bs-discovery-create-button-new-section-text": "Nuova sezione"
 }
