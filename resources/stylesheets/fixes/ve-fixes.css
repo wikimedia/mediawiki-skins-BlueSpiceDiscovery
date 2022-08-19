@@ -7,3 +7,11 @@ body.mediawiki .ve-ui-overlay-global {
 article#content .ve-init-mw-desktopArticleTarget .CodeMirror {
 	padding: 0;
 }
+
+/*
+ * toolbar shown at top of other dlg.windows 
+ *(formular, blog, all places with slimmed down VisualEditor)
+*/
+body.mediawiki .ve-ui-toolbar > .oo-ui-toolbar-bar {
+	z-index: auto;
+}
