@@ -15,3 +15,8 @@ article#content .ve-init-mw-desktopArticleTarget .CodeMirror {
 body.mediawiki .ve-init-sa-target-toolbar > .oo-ui-toolbar-bar {
 	position: initial;
 }
+
+/* signs in toolbar pushed out of box after window comes smaller */
+body.mediawiki .ve-init-sa-target-toolbar > .oo-ui-toolbar-bar > .oo-ui-toolbar-tools {
+	white-space: normal;
+}
