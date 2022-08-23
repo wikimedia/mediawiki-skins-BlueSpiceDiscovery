@@ -25,6 +25,14 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 * @var array
 	 */
 	private $managedLinks = [];
+	/**
+	 * @var HookContainer
+	 */
+	private $hookContainer;
+	/**
+	 * @var array
+	 */
+	private $personal_urls;
 
 	/**
 	 *
@@ -148,12 +156,12 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 */
 	private function collectTemplateLinks(): array {
 		$templateLinks = [
-			'views' => $this->content_navigation['views'],
-			'actions' => $this->content_navigation['actions'],
-			'variants' => $this->content_navigation['variants'],
+			'views' => $this->content_navigation['views'] ?? [],
+			'actions' => $this->content_navigation['actions'] ?? [],
+			'variants' => $this->content_navigation['variants'] ?? [],
 			'sidebar' => $this->sidebar,
 			'personal_urls' => $this->personal_urls,
-			'namespaces' => $this->content_navigation['namespaces'],
+			'namespaces' => $this->content_navigation['namespaces'] ?? [],
 		];
 		return $templateLinks;
 	}
