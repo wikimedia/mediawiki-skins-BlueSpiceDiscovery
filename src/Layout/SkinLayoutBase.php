@@ -79,11 +79,11 @@ abstract class SkinLayoutBase implements
 		}
 
 		foreach ( $structureRegistry[$layoutName] as $name => $structureSpec ) {
-			if ( is_array( $structureSpec['factory'] ) ) {
+			if ( isset( $structureSpec['factory'] ) && is_array( $structureSpec['factory'] ) ) {
 				$callback = end( $structureSpec['factory'] );
 				$structureSpec['factory'] = $callback;
 			}
-			if ( is_array( $structureSpec['class'] ) ) {
+			if ( isset( $structureSpec['class'] ) && is_array( $structureSpec['class'] ) ) {
 				$callback = end( $structureSpec['class'] );
 				$structureSpec['class'] = $callback;
 			}
