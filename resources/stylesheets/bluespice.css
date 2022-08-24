@@ -103,3 +103,8 @@ label {
 #title-section #mw-indicator-mw-helplink {
 	display: none;
 }
+
+.hide-title .ve-init-target-visual > .ve-ui-toolbar-floating > .oo-ui-toolbar-bar,
+.hide-title .ve-init-target-source > .ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
+	top: var( --navbar-primary-height );
+}
