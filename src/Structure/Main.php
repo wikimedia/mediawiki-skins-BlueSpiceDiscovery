@@ -25,7 +25,6 @@ use IContextSource;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Revision\RevisionStore;
-use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\HtmlIdRegistry;
 
 class Main implements
@@ -256,9 +255,6 @@ class Main implements
 			$displayTitle = $this->template->getSkin()->getTitle()->getSubpageText();
 		}
 		$this->skinComponents['title'] = $displayTitle;
-		$this->skinComponents['title-aria-label'] = Message::newFromKey(
-			'bs-discovery-first-heading-aria-label'
-			)->text();
 	}
 
 	/**
