@@ -19,3 +19,8 @@ body.mediawiki .mw-notification-area {
 	/* For popups in dialogs => dialog has a fixed 1054 z-index (with !important)*/
 	z-index: 1100;
 }
+
+body .mw-rcfilters-ui-highlights {
+	padding-bottom: 3px;
+	padding-right: 0px;
+}
