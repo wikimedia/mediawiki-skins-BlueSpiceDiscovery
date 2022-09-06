@@ -2,12 +2,18 @@
 	padding-top: 1rem;
 	padding-left: 2.5rem;
 	padding-right: 2.5rem;
-	max-width: var(--content-max-width);
+	width: calc( var(--content-max-width) + 5rem );
+	max-width: 100%;
 	margin: 0 auto;
 	font-size: var(--content-font-size);
 	min-height: calc( 100vh - var(--navbar-primary-height) - calc( 2 * calc( var(--footer-height) + var(--aftercontent-height) ) ) );
 	padding-bottom: calc( var(--footer-height) + var(--aftercontent-height) + 5px );
 	background-color:var(--content-bg);
+}
+#main main {
+	width: var(--content-max-width);
+	max-width: 100%;
+	margin: 0 auto;
 }
 #title-section {
 	padding-top: 1rem;
