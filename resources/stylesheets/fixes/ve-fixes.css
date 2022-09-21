@@ -9,9 +9,9 @@ article#content .ve-init-mw-desktopArticleTarget .CodeMirror {
 }
 
 /*
- * toolbar shown at top of other dlg.windows 
+ * toolbar shown at top of other dlg.windows
  * (formular, blog, all places with slimmed down VisualEditor)
 */
-body.mediawiki .ve-ui-toolbar > .oo-ui-toolbar-bar {
+body.mediawiki .ve-init-sa-target-toolbar > .oo-ui-toolbar-bar {
 	position: initial;
 }
