@@ -2,13 +2,13 @@
 
 	if( !$( 'body' ).hasClass('ns-special') && window.innerWidth >= 767  ) {
 		$( window ).scroll( function() {
-			var top = $( '#title-section' ).offset().top;
+			var top = $( '#wrapper' ).offset().top;
 			var windowTop = $(this).scrollTop();
 			var $title = $( '#title-line' );
 			var $titleContent = $( '#title-line > div' );
 
 			if ( windowTop >= top ) {
-				$( '#title-section' ).css( 'padding-bottom', $( '#title-line' ).height() );
+				$( '#title-section' ).css( 'padding-top', $title.height() );
 				$title.addClass( 'title-fixed' );
 
 				var titleWidth = $( '#content' ).innerWidth();
@@ -21,32 +21,17 @@
 			}
 
 			if ( $( '.ve-init-target-visual' ).length || $( '.ve-init-target-source' ).length ) {
-				var $floatingVisualVE = $( '#content .ve-init-target-visual >' +
-					'.ve-ui-toolbar-floating > .oo-ui-toolbar-bar' );
-				var $floatingSourceVE = $( '#content .ve-init-target-source >' +
-					'.ve-ui-toolbar-floating > .oo-ui-toolbar-bar' );
-				var $visualVE = $( '#content .ve-init-target-visual > .ve-ui-toolbar > .oo-ui-toolbar-bar' );
-				var $sourceVE = $( '#content .ve-init-target-source > .ve-ui-toolbar > .oo-ui-toolbar-bar' );
-				var topHeight = $( '#title-line' ).height() + $( '#nb-pri' ).height();
+				var $toolbar =  $( '#content .ve-init-target >' +
+					'.ve-ui-toolbar > .oo-ui-toolbar-bar' );
+				var topHeight = $title.height() + top;
 
 				if ( $title.hasClass( 'title-fixed' ) ) {
-					$( '#content' ).css( 'padding-bottom', $( '#title-line' ).height() );
-					if ( $( '.ve-init-target-visual > .ve-ui-toolbar-floating' ).length ) {
-						$floatingVisualVE.css( 'top', topHeight );
-						$floatingSourceVE.css( 'top', topHeight );
-					} else {
-						$visualVE.css( { 'top': topHeight, 'position': 'fixed' } );
-						$sourceVE.css( { 'top': topHeight, 'position': 'fixed' } );
-					}
+					$toolbar.css( 'top', topHeight );
+					$toolbar.css( 'position', 'fixed' );
+					$toolbar.width( titleWidth );
+					$( '#title-section' ).css( 'padding-bottom', $toolbar.height() );
 				} else {
-					$( '#content' ).removeAttr( 'style' );
-					if ( $( '.ve-init-target-visual > .ve-ui-toolbar-floating' ).length ) {
-						$floatingVisualVE.css( 'top', topHeight );
-						$floatingSourceVE.css( 'top', topHeight );
-					} else {
-						$visualVE.removeAttr( "style" );
-						$sourceVE.removeAttr( "style" );
-					}
+					$toolbar.removeAttr( "style" )
 				}
 			}
 		});
