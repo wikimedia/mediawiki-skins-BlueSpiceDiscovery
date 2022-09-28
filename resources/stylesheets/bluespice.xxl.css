@@ -35,22 +35,17 @@
 }
 #aftercontent {
 	padding-left: var(--sidebar-primary-width);
-	padding-right: var(--sidebar-primary-width);
+	padding-right: var(--sidebar-secondary-width);
 }
 
 #footer {
-	padding-left: var(--sidebar-secondary-width);
-	padding-right: var(--sidebar-primary-width);
+	padding-left: var(--sidebar-primary-width);
+	padding-right: var(--sidebar-secondary-width);
 }
 
 #wrapper {
-	padding-left: calc( var(--sidebar-primary-width) );
-	padding-right: calc( var(--sidebar-secondary-width) );
-}
-
-#wrapper {
-	padding-left: calc( var(--sidebar-primary-width) );
-	padding-right: calc( var(--sidebar-secondary-width) );
+	padding-left: var(--sidebar-primary-width);
+	padding-right: var(--sidebar-secondary-width);
 }
 .fs-mode-enabled #wrapper {
 	padding-left: 2.5rem;
