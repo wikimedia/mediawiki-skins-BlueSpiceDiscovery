@@ -13,5 +13,7 @@
 	"bs-discovery-sidebar-actions-heading": "Dejanja",
 	"bs-discovery-sidebar-details-heading": "Podrobnosti",
 	"bs-discovery-dialog-details-action-cancel": "Prekliči",
-	"bs-discovery-dialog-detailssectionheading-namespaces": "Imenski prostori"
+	"bs-discovery-dialog-detailssectionheading-namespaces": "Imenski prostori",
+	"bs-discovery-breadcrumb-label-talk": "Pogovor",
+	"bs-discovery-personalurl-mycontributions-text": "Prispevki"
 }
