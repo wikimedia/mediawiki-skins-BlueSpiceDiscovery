@@ -136,6 +136,11 @@
 				},
 				"subpage-tree": {
 					"class": "BlueSpice\\Discovery\\MenuProvider\\SubpageTree"
+				},
+				"enhanced-mediawiki-sidebar": {
+					"class": "BlueSpice\\Discovery\\MenuProvider\\EnhancedMediawikiSidebar",
+					"args": [ "MediaWiki:Sidebar.json", "EnhancedSidebarNodeProcessors" ],
+					"services": [ "RevisionStore", "TitleFactory", "ObjectFactory" ]
 				}
 			},
 			"AttentionIndicatorRegistry": {},
