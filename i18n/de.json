@@ -121,5 +121,19 @@
 	"bs-discovery-sidebar-secondary-share-sharebymail-body": "$1: $2\n\n$3",
 	"bs-discovery-sidebar-details-heading": "Details",
 	"bs-discovery-sidebar-secondary-watch-link-title": "Diese Seite beobachten",
-	"bs-discovery-sidebar-secondary-watch-link-aria-label": "Diese Seite beobachten"
+	"bs-discovery-sidebar-secondary-watch-link-aria-label": "Diese Seite beobachten",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-label": "Menü für das Hauptpanel der primären Seitenleiste",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-help": "Menü für das Hauptpanel der primären Seitenleiste auswählen",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "MediaWiki Sidebar",
+	"bs-discovery-menu-provider-mediawiki-sidebar-desc": "MediaWiki Sidebar mit nur einer Ebene an Einträgen",
+	"bs-discovery-menu-provider-namespace-mainpage-list-label": "Namensraum Hauptseiten",
+	"bs-discovery-menu-provider-namespace-mainpage-list-desc": "Eine Liste von Hauptseiten in Inhaltsnamensräumen",
+	"bs-discovery-menu-provider-subpage-tree-label": "Unterseitenbaum",
+	"bs-discovery-menu-provider-subpage-tree-desc": "Unterseiten der aktuellen Seite als Baum",
+	"bs-discovery-namespace-mainpage-links-pnl-header-text": "Namensraum Hauptseiten",
+	"bs-discovery-subpage-tree-pnl-header-text": "Unterseiten",
+	"ns-main-label": "Seiten",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Erweiterte MediaWiki sidebar",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "MediaWiki Sidebar mit erweiterten Funktionen",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Hauptmenü"
 }
