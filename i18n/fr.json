@@ -122,5 +122,19 @@
 	"bs-discovery-personalurl-mycontributions-text": "Contributions",
 	"bs-discovery-personalurl-userpage-text": "Profil",
 	"bs-discovery-globalactionentry-templates-text": "Modèles",
-	"bs-discovery-globalactionentry-templates-title": "Tous les modèles"
+	"bs-discovery-globalactionentry-templates-title": "Tous les modèles",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-label": "Menu dans le panneau principal de la barre latérale principale",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-help": "Sélectionnez le menu dans le panneau principal de la barre latérale",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "Barre latérale MediaWiki",
+	"bs-discovery-menu-provider-mediawiki-sidebar-desc": "Un menu latéral MediaWiki avec un seul niveau d’entrées de menu",
+	"bs-discovery-menu-provider-namespace-mainpage-list-label": "Liste des pages principales des espaces de noms",
+	"bs-discovery-menu-provider-namespace-mainpage-list-desc": "Une liste des pages principales dans les espaces de noms de contenu",
+	"bs-discovery-menu-provider-subpage-tree-label": "Arborescence des sous-pages",
+	"bs-discovery-menu-provider-subpage-tree-desc": "Sous-pages de la page en cours sous forme de menu arborescent",
+	"bs-discovery-namespace-mainpage-links-pnl-header-text": "Pages principales de l’espace de noms",
+	"bs-discovery-subpage-tree-pnl-header-text": "Sous-pages",
+	"ns-main-label": "Pages",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Barre latérale MediaWiki améliorée",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Un menu latéral MediaWiki aux fonctionnalités améliorées",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Menu principal"
 }

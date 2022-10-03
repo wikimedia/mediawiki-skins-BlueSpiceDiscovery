@@ -4,6 +4,7 @@
 			"Hamilton Abreu"
 		]
 	},
+	"bs-discovery-name": "BlueSpice Discovery",
 	"bs-discovery-desc": "Tema BlueSpice",
 	"bs-discovery-skip-links-navigation-aria-label": "Saltar para hiperligações",
 	"bs-discovery-skip-to-navbar-primary-text": "Saltar para a barra de cabeçalho",
@@ -116,5 +117,19 @@
 	"bs-discovery-personalurl-mycontributions-text": "Contribuições",
 	"bs-discovery-personalurl-userpage-text": "Perfil",
 	"bs-discovery-globalactionentry-templates-text": "Predefinições",
-	"bs-discovery-globalactionentry-templates-title": "Todas as predefinições"
+	"bs-discovery-globalactionentry-templates-title": "Todas as predefinições",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-label": "Menu no painel principal da barra lateral principal",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-help": "Selecione o menu no painel principal da barra lateral principal",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "Barra lateral do MediaWiki",
+	"bs-discovery-menu-provider-mediawiki-sidebar-desc": "Um menu da barra lateral do MediaWiki com apenas um nível de entradas de menu",
+	"bs-discovery-menu-provider-namespace-mainpage-list-label": "Lista das páginas principais dos espaços nominais",
+	"bs-discovery-menu-provider-namespace-mainpage-list-desc": "Uma lista das páginas principais dos espaços nominais de conteúdo",
+	"bs-discovery-menu-provider-subpage-tree-label": "Árvore de subpáginas",
+	"bs-discovery-menu-provider-subpage-tree-desc": "Subpáginas da página corrente como menu em forma de árvore",
+	"bs-discovery-namespace-mainpage-links-pnl-header-text": "Páginas principais dos espaços nominais",
+	"bs-discovery-subpage-tree-pnl-header-text": "Subpáginas",
+	"ns-main-label": "Páginas",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Barra lateral do MediaWiki melhorada",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Um menu da barra lateral MediaWiki com funções melhoradas",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Menu principal"
 }
