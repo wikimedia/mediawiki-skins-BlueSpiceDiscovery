@@ -15,5 +15,19 @@
 	"bs-discovery-sidebar-actions-heading": "Dejanja",
 	"bs-discovery-sidebar-details-heading": "Podrobnosti",
 	"bs-discovery-personalurl-mycontributions-text": "Prispevki",
-	"bs-discovery-breadcrumb-label-talk": "Pogovor"
+	"bs-discovery-breadcrumb-label-talk": "Pogovor",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-label": "Meni v glavnem panelu osnovne stranske vrstice",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-help": "Izberite meni za glavni panelu osnovne stranske vrstice",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "Stranska vrstica MediaWiki",
+	"bs-discovery-menu-provider-mediawiki-sidebar-desc": "Meni stranske vrstice MediaWiki z eno samo ravnijo menijskih vnosov",
+	"bs-discovery-menu-provider-namespace-mainpage-list-label": "Seznam glavnih strani imenskih prostorov",
+	"bs-discovery-menu-provider-namespace-mainpage-list-desc": "Seznam glavnih strani v imenskih prostorih vsebine",
+	"bs-discovery-menu-provider-subpage-tree-label": "Drevo podstrani",
+	"bs-discovery-menu-provider-subpage-tree-desc": "Podstrani trenutne strani kot drevesni meni",
+	"bs-discovery-namespace-mainpage-links-pnl-header-text": "Glavne strani imenskih prostorov",
+	"bs-discovery-subpage-tree-pnl-header-text": "Podstrani",
+	"ns-main-label": "Strani",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Izboljšana stranska vrstica MediaWiki",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Meni stranske vrstice MediaWiki z izboljšano funkcijo",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Glavni meni"
 }
