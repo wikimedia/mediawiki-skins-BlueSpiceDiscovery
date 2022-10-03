@@ -116,5 +116,19 @@
 	"bs-discovery-personalurl-mycontributions-text": "Придонеси",
 	"bs-discovery-personalurl-userpage-text": "Профил",
 	"bs-discovery-globalactionentry-templates-text": "Предлошки",
-	"bs-discovery-globalactionentry-templates-title": "Сите предлошки"
+	"bs-discovery-globalactionentry-templates-title": "Сите предлошки",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-label": "Мени во главната управувачница на главниот страничник",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-help": "Изберете мени во главната управувачница на главниот страничник",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "Страничник на МедијаВики",
+	"bs-discovery-menu-provider-mediawiki-sidebar-desc": "Страничник на МедијаВики со само еден степен на ставки",
+	"bs-discovery-menu-provider-namespace-mainpage-list-label": "Именски простор на главниот список на страници",
+	"bs-discovery-menu-provider-namespace-mainpage-list-desc": "Список на главни страници во содржинскиот именски простор",
+	"bs-discovery-menu-provider-subpage-tree-label": "Дрво на потстраници",
+	"bs-discovery-menu-provider-subpage-tree-desc": "Потстраници на тековната страница како дрво",
+	"bs-discovery-namespace-mainpage-links-pnl-header-text": "Главни страници во именскиот простор",
+	"bs-discovery-subpage-tree-pnl-header-text": "Потстраници",
+	"ns-main-label": "Страници",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Подобрен страничник на МедијаВики",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Страничник на МедијаВики со подобрени функции",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Главно мени"
 }

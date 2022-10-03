@@ -4,7 +4,8 @@
 			"Gulka.nik",
 			"Kareyac",
 			"Okras",
-			"Pacha Tchernof"
+			"Pacha Tchernof",
+			"UniCollab"
 		]
 	},
 	"bs-discovery-skip-links-navigation-aria-label": "Перейти к ссылкам",
@@ -103,5 +104,12 @@
 	"bs-discovery-edit-mediawiki-sidebar-link-aria-label": "Редактировать MediaWiki:Sidebar",
 	"bs-discovery-sidebar-secondary-watch-link-title": "Посмотреть страницу",
 	"bs-discovery-sidebar-secondary-watch-link-aria-label": "Посмотреть страницу",
-	"bs-discovery-last-edit-by-anon-user": "Анонимный участник"
+	"bs-discovery-last-edit-by-anon-user": "Анонимный участник",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "Боковая панель MediaWiki",
+	"bs-discovery-namespace-mainpage-links-pnl-header-text": "Главные страницы пространств имен",
+	"bs-discovery-subpage-tree-pnl-header-text": "Подстраницы",
+	"ns-main-label": "Страницы",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Расширенная боковая панель MediaWiki",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Боковое меню MediaWiki с расширенными функциями",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Главное меню"
 }
