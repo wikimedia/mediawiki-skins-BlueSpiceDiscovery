@@ -129,7 +129,7 @@
 	"bs-discovery-menu-provider-subpage-tree-desc": "Description text for a dropdown entry in configuration manager for a subpage tree",
 	"bs-discovery-namespace-mainpage-links-pnl-header-text": "Label for panel header with a list of content namespace main pages",
 	"bs-discovery-subpage-tree-pnl-header-text": "Label for panel header with a subpage tree menu",
-	"ns-main-label": "Label for main namespace",
+	"ns-main-label": "Label for main namespace\n{{identical|Page}}",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Label for a dropdown entry in configuration manager for a enhaced mediawiki sideerbar menu",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Description text for a dropdown entry in configuration manager for the enhaced mediawiki sidebar menu",
 	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Label for panel header with a  enhaced mediawiki sidebar menu"
