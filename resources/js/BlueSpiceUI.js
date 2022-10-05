@@ -42,6 +42,7 @@
 		// TODO: This has to be improved. It will only work as long
 		// bootstrap scripts run before this script runs
 		e.preventDefault();
+		e.stopPropagation();
 		var controls = $( this ).attr( 'aria-controls' );
 		var sidebarMap = 'undefined';
 		if ( controls === 'sb-pri-cnt' ) {
