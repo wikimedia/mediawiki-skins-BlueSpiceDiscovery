@@ -20,8 +20,10 @@ class GlobalActionsManagerSkinSlotRenderer extends ExtendedSkinSlotRendererBase 
 				$item[ 'id' ] = "bs-ga-link-$itemid";
 			}
 			$component = call_user_func_array( $item[ 'factory' ], [] );
-			$text = $component->getText()->text();
-			$helper[ $text ] = $item;
+			if ( is_a( $component, 'MWStake\MediaWiki\Component\CommonUserInterface\ITextLink', true ) ) {
+				$text = $component->getText()->text();
+				$helper[ $text ] = $item;
+			}
 		}
 
 		ksort( $helper );
