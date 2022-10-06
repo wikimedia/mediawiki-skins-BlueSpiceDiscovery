@@ -116,5 +116,19 @@
 	"bs-discovery-personalurl-mycontributions-text": "תרומות",
 	"bs-discovery-personalurl-userpage-text": "פרופיל",
 	"bs-discovery-globalactionentry-templates-text": "תבניות",
-	"bs-discovery-globalactionentry-templates-title": "כל התבניות"
+	"bs-discovery-globalactionentry-templates-title": "כל התבניות",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-label": "תפריט בחלונית הראשית של סרגל הצד הראשי",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-help": "תפריט בחירה בחלונית הראשית של סרגל הצד הראשי",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "סרגל צד של מדיה־ויקי",
+	"bs-discovery-menu-provider-mediawiki-sidebar-desc": "תפריט סרגל צד של מדיה־ויקי עם רמה אחת בלבד של ערכי תפריט",
+	"bs-discovery-menu-provider-namespace-mainpage-list-label": "רשימת העמודים הראשיים של מרחב השמות",
+	"bs-discovery-menu-provider-namespace-mainpage-list-desc": "רשימה של עמודים ראשיים במרחבי שמות של תוכן",
+	"bs-discovery-menu-provider-subpage-tree-label": "עץ דפי־משנה",
+	"bs-discovery-menu-provider-subpage-tree-desc": "דפי־משנה של הדף הנוכחי כתפריט עץ",
+	"bs-discovery-namespace-mainpage-links-pnl-header-text": "העמודים הראשיים של מרחב השמות",
+	"bs-discovery-subpage-tree-pnl-header-text": "דפי־משנה",
+	"ns-main-label": "דפים",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "סרגל צד מורחב של מדיה־ויקי",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "תפריט סרגל צד של מדיה־ויקי עם פעולות מורחבות",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "תפריט ראשי"
 }

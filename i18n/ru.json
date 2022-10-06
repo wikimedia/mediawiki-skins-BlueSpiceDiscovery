@@ -4,7 +4,8 @@
 			"Gulka.nik",
 			"Kareyac",
 			"Okras",
-			"Pacha Tchernof"
+			"Pacha Tchernof",
+			"UniCollab"
 		]
 	},
 	"bs-discovery-desc": "BlueSpice тема",
@@ -103,5 +104,12 @@
 	"bs-discovery-personalurl-mycontributions-text": "Вклад",
 	"bs-discovery-personalurl-userpage-text": "Профиль",
 	"bs-discovery-globalactionentry-templates-text": "Шаблоны",
-	"bs-discovery-globalactionentry-templates-title": "Все шаблоны"
+	"bs-discovery-globalactionentry-templates-title": "Все шаблоны",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "Боковая панель MediaWiki",
+	"bs-discovery-namespace-mainpage-links-pnl-header-text": "Главные страницы пространств имен",
+	"bs-discovery-subpage-tree-pnl-header-text": "Подстраницы",
+	"ns-main-label": "Страницы",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Расширенная боковая панель MediaWiki",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Боковое меню MediaWiki с расширенными функциями",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Главное меню"
 }
