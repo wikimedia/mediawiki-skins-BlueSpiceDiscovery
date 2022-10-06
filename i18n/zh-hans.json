@@ -5,6 +5,7 @@
 			"Cwek",
 			"GuoPC",
 			"Lakejason0",
+			"MangoFanFanw",
 			"SolidBlock",
 			"StarrySky",
 			"Tr jason"
@@ -122,5 +123,12 @@
 	"bs-discovery-personalurl-mycontributions-text": "贡献",
 	"bs-discovery-personalurl-userpage-text": "个人资料",
 	"bs-discovery-globalactionentry-templates-text": "模板",
-	"bs-discovery-globalactionentry-templates-title": "所有模板"
+	"bs-discovery-globalactionentry-templates-title": "所有模板",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "MediaWiki 侧边栏",
+	"bs-discovery-menu-provider-namespace-mainpage-list-label": "命名空间主页列表",
+	"bs-discovery-menu-provider-namespace-mainpage-list-desc": "内容命名空间中的主要页面列表",
+	"bs-discovery-namespace-mainpage-links-pnl-header-text": "命名空间主页",
+	"ns-main-label": "页面",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "具有增强功能的 MediaWiki 侧边栏菜单",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "主菜单"
 }
