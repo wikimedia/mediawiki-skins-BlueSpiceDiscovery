@@ -4,5 +4,12 @@
 			"Tajamul9"
 		]
 	},
-	"bs-discovery-last-edit-by-anon-user": "گُمنام صٲرِف"
+	"bs-discovery-last-edit-by-anon-user": "گُمنام صٲرِف",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "میٖڈیا وکی سائڈ بر",
+	"bs-discovery-menu-provider-namespace-mainpage-list-label": "اَہَم صفن منٛز ناوٕچ جاے ہِنٛز فہرست",
+	"bs-discovery-menu-provider-subpage-tree-label": "لۄٚکُٹ صفہٕ کُل",
+	"bs-discovery-namespace-mainpage-links-pnl-header-text": "اَہَم صفن منٛز ناوٕچ جاے",
+	"bs-discovery-subpage-tree-pnl-header-text": "لۄٚکٕٹیصفہٕ",
+	"ns-main-label": "صَفہٕ",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "اَہَم مینیو"
 }
