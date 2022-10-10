@@ -29,5 +29,6 @@
 	"ns-main-label": "Strani",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Izboljšana stranska vrstica MediaWiki",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Meni stranske vrstice MediaWiki z izboljšano funkcijo",
-	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Glavni meni"
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Glavni meni",
+	"bs-discovery-breadcrumb-label-action-edit": "Uredi"
 }
