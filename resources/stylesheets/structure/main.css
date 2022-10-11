@@ -2,8 +2,7 @@
 	padding-top: 1rem;
 	padding-left: 2.5rem;
 	padding-right: 2.5rem;
-	width: calc( var(--content-max-width) + 5rem );
-	max-width: 100%;
+	max-width: calc( var(--content-max-width) + 5rem );
 	margin: 0 auto;
 	font-size: var(--content-font-size);
 	min-height: calc( 100vh - var(--navbar-primary-height) - calc( 2 * calc( var(--footer-height) + var(--aftercontent-height) ) ) );
