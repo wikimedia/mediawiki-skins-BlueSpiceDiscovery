@@ -371,7 +371,6 @@
 			"styles": {
 				"stylesheets/structure/main.css": {},
 				"stylesheets/structure/main.sm.css": { "media": "all and ( max-width: 767px )" },
-				"stylesheets/structure/main.xxl.css": { "media": "all and ( min-width: 1400px )" },
 				"stylesheets/structure/main.title-action.edit-button.css": {},
 				"stylesheets/structure/main.title-action.full-sceen-button.css": {},
 				"stylesheets/structure/main.breadcrumb.css": {},
