@@ -21,6 +21,7 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 	 * @return void
 	 */
 	public function addDBDataOnce() {
+		$this->insertPage( 'Main_Page' );
 		$this->insertPage( 'Dummy' );
 		$this->insertPage( 'Dummy/ABC' );
 		$this->insertPage( 'Dummy/DEF' );
@@ -75,7 +76,11 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 
 		$actualLabels = [];
 		foreach ( $params['labels'] as $label ) {
-			$actualLabels[] = $label['text'];
+			if ( $label instanceof Message ) {
+				$actualLabels[] = $label;
+			} else {
+				$actualLabels[] = $label['text'];
+			}
 		}
 
 		$actualLabels = array_map( function ( $actualLabelMsg ) {
@@ -89,6 +94,10 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 	}
 
 	public function provideGetParamsTestData() {
+		$specialPageFactory = MediaWikiServices::getInstance()->getSpecialPageFactory();
+		$specialpages = $specialPageFactory->getTitleForAlias( 'Specialpages' );
+		$specialpagesPath = '/wiki/' . $specialpages->getFullText();
+
 		return [
 			'main-namespace-view-mode' => [
 				Title::newFromText( 'Dummy/ABC' ),
@@ -111,21 +120,10 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 				'/wiki/Dummy/ABC',
 				[ 'Move', 'bs-discovery-breadcrumb-label-action-history' ]
 			],
-			// We don't have SMW enabled on WMF CI
-			'specialpage-with-smw-browse' => [
-				Title::newFromText( 'Special:Browse/:Dummy/ABC' ),
-				[],
-				'/wiki/Main_Page',
-				'/wiki/Dummy/ABC',
-				// Be aware that the `bs-discovery-breadcrumb-label-special-` is only used because
-				// we operate on `RawMessage` objects in this test. In the real world this would
-				// rather be `Browse`
-				[ 'Browse' ]
-			],
 			'specialpage' => [
 				Title::newFromText( 'Special:Allpages' ),
 				[],
-				'/wiki/Special:SpecialPages',
+				$specialpagesPath,
 				'/wiki/Special:Allpages',
 				[]
 			],

@@ -105,14 +105,16 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 			$titleMainPage = $this->specialPageFactory->getTitleForAlias( 'Specialpages' );
 
 			$rootNodeText = $this->relevantTitle->getPageLanguage()->getNsText(
-				$this->relevantTitle->getNamespace() );
+				$titleMainPage->getNamespace() );
 			$rootNodeUrl = $titleMainPage->getLocalURL();
 		}
 		if ( $titleMainPage === null ) {
-			$titleMainPage = Title::makeTitleSafe( $this->relevantTitle->getNamespace(),
-			Title::newMainPage()->getDBkey() );
+			$titleMainPage = Title::makeTitleSafe(
+				$this->relevantTitle->getNamespace(),
+				Title::newMainPage()->getDBkey()
+			);
 
-			if ( $titleMainPage->isMainPage() ) {
+			if ( $titleMainPage->exists() ) {
 				$rootNodeUrl = $titleMainPage->getLocalURL();
 			} else {
 				$titleMainPage = $this->specialPageFactory->getTitleForAlias( 'Allpages' );
