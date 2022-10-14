@@ -80,5 +80,9 @@ class Setup {
 		$lessVars->setVar( 'content-h6-font-size', '1.1rem' );
 		$lessVars->setVar( 'content-h6-font-weight', 'bold' );
 		$lessVars->setVar( 'content-h6-border', 'none' );
+
+		$GLOBALS['mwsgWikitextNodeProcessorRegistry'] += \ExtensionRegistry::getInstance()->getAttribute(
+			"BlueSpiceDiscoveryEnhancedSidebarNodeProcessors"
+		);
 	}
 }

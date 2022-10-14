@@ -37,7 +37,16 @@ class InternalLinkProcessor extends EnhancedSidebarNodeProcessor {
 	 * @return bool
 	 */
 	public function supportsNodeType( $type ): bool {
-		return $type === 'internal';
+		return $type === 'enhanced-sidebar-internal-link';
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	protected function getProcessedData( INodeSource $nodeSource ): array {
+		$data = parent::getProcessedData( $nodeSource );
+		$data['page'] = $this->getTitleFromParam( $data['page'] );
+		return $data;
 	}
 
 	/**
@@ -45,11 +54,7 @@ class InternalLinkProcessor extends EnhancedSidebarNodeProcessor {
 	 * @return INode
 	 */
 	public function getNodeFromData( array $data ): INode {
-		return new InternalLinkNode(
-			$this->getTitleFromParam( $data['page'] ),
-			$data['text'],
-			$this->isHidden( $data )
-		);
+		return new InternalLinkNode( $this->getPermissionManager(), $data );
 	}
 
 	/**
@@ -61,30 +66,16 @@ class InternalLinkProcessor extends EnhancedSidebarNodeProcessor {
 	}
 
 	/**
-	 * @param INodeSource $nodeSource
-	 * @return INode
-	 */
-	public function getNode( INodeSource $nodeSource ): INode {
-		$data = $this->getProcessedData( $nodeSource );
-		return $this->getNodeFromData( $data );
-	}
-
-	/**
-	 * @param Title $title
-	 *
-	 * @return bool
-	 */
-	protected function userCanReadTitle( Title $title ) {
-		if ( $this->user === null ) {
-			return false;
-		}
-		return $this->permissionManager->userCan( 'read', $this->user, $title );
-	}
-
-	/**
 	 * @inheritDoc
 	 */
 	protected function getKeysToPreprocess( array $data ): array {
-		return [ 'text', 'hidden', 'page' ];
+		return parent::getKeysToPreprocess( $data ) + [ 'page' ];
+	}
+
+	/**
+	 * @return PermissionManager
+	 */
+	protected function getPermissionManager(): PermissionManager {
+		return $this->permissionManager;
 	}
 }

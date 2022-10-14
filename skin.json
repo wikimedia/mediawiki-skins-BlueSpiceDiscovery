@@ -139,8 +139,8 @@
 				},
 				"enhanced-mediawiki-sidebar": {
 					"class": "BlueSpice\\Discovery\\MenuProvider\\EnhancedMediawikiSidebar",
-					"args": [ "MediaWiki:Sidebar.json", "EnhancedSidebarNodeProcessors" ],
-					"services": [ "RevisionStore", "TitleFactory", "ObjectFactory" ]
+					"args": [ "MediaWiki:Sidebar.json" ],
+					"services": [ "RevisionStore", "TitleFactory", "MWStakeWikitextParserFactory" ]
 				}
 			},
 			"AttentionIndicatorRegistry": {},
@@ -167,6 +167,10 @@
 				"subpage-tree": {
 					"class": "BlueSpice\\Discovery\\EnhancedSidebar\\NodeProcessor\\SubpageListProcessor",
 					"services": [ "PermissionManager", "ParserFactory", "TitleFactory" ]
+				},
+				"panel-heading": {
+					"class": "BlueSpice\\Discovery\\EnhancedSidebar\\NodeProcessor\\PanelHeadingProcessor",
+					"services": [ "ParserFactory" ]
 				}
 			}
 		},
@@ -195,6 +199,33 @@
 			"CssSelectorModules": {
 				"bluespice": {
 					"class" : "\\BlueSpice\\Discovery\\HideTitleCssModule"
+				}
+			}
+		},
+		"MenuEditor": {
+			"Menus": {
+				"enhanced-sidebar": {
+					"class": "BlueSpice\\Discovery\\EnhancedSidebar\\Menu",
+					"args": [ "MediaWiki:Sidebar.json" ],
+					"services": [ "MWStakeWikitextParserFactory" ]
+				}
+			},
+			"Nodes": {
+				"enhanced-sidebar-external-link": {
+					"classname": "bs.skin.enhancedSidebar.tree.node.ExternalLink",
+					"module": "skin.discovery.enhancedSidebar.tree"
+				},
+				"enhanced-sidebar-internal-link": {
+					"classname": "bs.skin.enhancedSidebar.tree.node.InternalLink",
+					"module": "skin.discovery.enhancedSidebar.tree"
+				},
+				"enhanced-sidebar-subpage-tree": {
+					"classname": "bs.skin.enhancedSidebar.tree.node.SubpageList",
+					"module": "skin.discovery.enhancedSidebar.tree"
+				},
+				"enhanced-sidebar-panel-heading": {
+					"classname": "bs.skin.enhancedSidebar.tree.node.PanelHeading",
+					"module": "skin.discovery.enhancedSidebar.tree"
 				}
 			}
 		}
@@ -542,6 +573,47 @@
 			"styles": {
 				"stylesheets/oo-ui/data-tree.css": {}
 			}
+		},
+		"skin.discovery.enhancedSidebar.tree": {
+			"scripts": [
+				"js/enhancedSidebar/node/EnhancedSidebarNode.js",
+				"js/enhancedSidebar/node/ExternalLink.js",
+				"js/enhancedSidebar/node/InternalLink.js",
+				"js/enhancedSidebar/node/SubpageList.js",
+				"js/enhancedSidebar/node/PanelHeading.js",
+				"js/enhancedSidebar/Tree.js"
+			],
+			"messages": [
+				"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text",
+				"bs-discovery-enhanced-mediawiki-sidebar-field-page",
+				"bs-discovery-enhanced-mediawiki-sidebar-field-page-help",
+				"bs-discovery-enhanced-mediawiki-sidebar-field-text",
+				"bs-discovery-enhanced-mediawiki-sidebar-field-text-help",
+				"bs-discovery-enhanced-mediawiki-sidebar-field-depth",
+				"bs-discovery-enhanced-mediawiki-sidebar-field-depth-help",
+				"bs-discovery-enhanced-mediawiki-sidebar-field-href",
+				"bs-discovery-enhanced-mediawiki-sidebar-field-href-help",
+				"menueditor-ui-enhanced-sidebar-internal-link-label-edit",
+				"menueditor-ui-enhanced-sidebar-external-link-label-edit",
+				"menueditor-ui-enhanced-sidebar-subpage-tree-label-edit",
+				"menueditor-ui-enhanced-sidebar-external-link-label",
+				"menueditor-ui-enhanced-sidebar-internal-link-label",
+				"menueditor-ui-enhanced-sidebar-subpage-tree-label",
+				"bs-discovery-enhanced-mediawiki-sidebar-show-for-groups-text",
+				"menueditor-ui-enhanced-sidebar-panel-heading-label-edit",
+				"bs-discovery-enhanced-mediawiki-sidebar-field-heading",
+				"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help",
+				"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label",
+				"bs-discovery-enhanced-mediawiki-sidebar-field-classes",
+				"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls"
+			],
+			"dependencies": [
+				"ext.oOJSPlus.data",
+				"ext.menuEditor.tree",
+				"ext.menuEditor.node",
+				"oojs-ui.styles.icons-editing-list",
+				"ext.oOJSPlus.formelements"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {

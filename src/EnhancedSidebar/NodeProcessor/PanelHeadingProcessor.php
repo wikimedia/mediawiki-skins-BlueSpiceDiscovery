@@ -2,17 +2,17 @@
 
 namespace BlueSpice\Discovery\EnhancedSidebar\NodeProcessor;
 
-use BlueSpice\Discovery\EnhancedSidebar\Node\ExternalLinkNode;
+use BlueSpice\Discovery\EnhancedSidebar\Node\PanelHeadingNode;
 use MWStake\MediaWiki\Lib\Nodes\INode;
 
-class ExternalLinkProcessor extends EnhancedSidebarNodeProcessor {
+class PanelHeadingProcessor extends EnhancedSidebarNodeProcessor {
 
 	/**
 	 * @param string $type
 	 * @return bool
 	 */
 	public function supportsNodeType( $type ): bool {
-		return $type === 'enhanced-sidebar-external-link';
+		return $type === 'enhanced-sidebar-panel-heading';
 	}
 
 	/**
@@ -20,6 +20,6 @@ class ExternalLinkProcessor extends EnhancedSidebarNodeProcessor {
 	 * @return INode
 	 */
 	public function getNodeFromData( array $data ): INode {
-		return new ExternalLinkNode( $data );
+		return new PanelHeadingNode( $data );
 	}
 }
