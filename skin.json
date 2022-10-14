@@ -133,6 +133,9 @@
 				"namespace-mainpage-list": {
 					"class": "BlueSpice\\Discovery\\MenuProvider\\NamespaceMainPageList",
 					"services": [ "BSUtilityFactory" ]
+				},
+				"subpage-tree": {
+					"class": "BlueSpice\\Discovery\\MenuProvider\\SubpageTree"
 				}
 			},
 			"AttentionIndicatorRegistry": {},
