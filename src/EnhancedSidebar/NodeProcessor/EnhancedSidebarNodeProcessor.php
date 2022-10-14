@@ -2,6 +2,7 @@
 
 namespace BlueSpice\Discovery\EnhancedSidebar\NodeProcessor;
 
+use MWStake\MediaWiki\Lib\Nodes\INode;
 use MWStake\MediaWiki\Lib\Nodes\INodeProcessor;
 use MWStake\MediaWiki\Lib\Nodes\INodeSource;
 use ParserFactory;
@@ -52,13 +53,37 @@ abstract class EnhancedSidebarNodeProcessor implements INodeProcessor {
 	}
 
 	/**
+	 * @param INodeSource $nodeSource
+	 *
+	 * @return INode
+	 */
+	public function getRawNode( INodeSource $nodeSource ): INode {
+		return $this->getNodeFromData( $nodeSource->getData() );
+	}
+
+	/**
+	 * @param INodeSource $nodeSource
+	 * @return INode
+	 */
+	public function getNode( INodeSource $nodeSource ): INode {
+		$data = $this->getProcessedData( $nodeSource );
+		$data['hidden'] = $this->isHidden( $data );
+		if ( is_string( $data['classes'] ) ) {
+			$data['classes'] = [];
+		}
+		return $this->getNodeFromData( $data );
+	}
+
+	/**
 	 * Get array if keys that should be preprocessed
 	 *
 	 * @param array $data Key value pairs
 	 *
 	 * @return array
 	 */
-	abstract protected function getKeysToPreprocess( array $data ): array;
+	protected function getKeysToPreprocess( array $data ): array {
+		return [ 'text', 'hidden', 'icon-cls' ];
+	}
 
 	/**
 	 * Use wiki parser to parse value of properties
@@ -88,7 +113,7 @@ abstract class EnhancedSidebarNodeProcessor implements INodeProcessor {
 	 *
 	 * @return bool
 	 */
-	protected function isHidden( array $data ) {
+	protected function isHidden( array $data ): bool {
 		if ( !isset( $data['hidden'] ) ) {
 			return false;
 		}

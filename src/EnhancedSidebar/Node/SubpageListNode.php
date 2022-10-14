@@ -2,22 +2,27 @@
 
 namespace BlueSpice\Discovery\EnhancedSidebar\Node;
 
+use MediaWiki\Permissions\PermissionManager;
 use Title;
+use UnexpectedValueException;
+use User;
 
 class SubpageListNode extends InternalLinkNode {
 
 	/** @var int */
 	private $depth;
+	/** @var User */
+	private $user;
 
 	/**
-	 * @param Title $target
-	 * @param string $label
-	 * @param bool $hidden
-	 * @param int $depth
+	 * @param PermissionManager $permissionManager
+	 * @param array $data
 	 */
-	public function __construct( Title $target, $label, bool $hidden, int $depth ) {
-		parent::__construct( $target, $label, $hidden );
-		$this->depth = $depth;
+	public function __construct(
+		PermissionManager $permissionManager, $data
+	) {
+		parent::__construct( $permissionManager, $data );
+		$this->depth = $data['depth'] ?? 1;
 	}
 
 	/**
@@ -28,18 +33,36 @@ class SubpageListNode extends InternalLinkNode {
 	}
 
 	/**
-	 * @return void
+	 * @return array
 	 */
 	public function jsonSerialize() {
-		return array_merge( parent::jsonSerialize(), [
+		return parent::jsonSerialize() + [
 			'depth' => $this->depth
-		] );
+		];
 	}
 
 	/**
+	 * @param User $user
+	 *
+	 * @return bool
+	 */
+	public function isHidden( User $user ): bool {
+		$this->user = $user;
+		return parent::isHidden( $user );
+	}
+
+	/**
+	 * Serialize in format to be consumed by a tree
+	 *
 	 * @return array
+	 * @throws \Exception
 	 */
 	public function treeSerialize(): array {
+		if ( !( $this->target instanceof Title ) ) {
+			throw new UnexpectedValueException(
+				'Target is not a Title! Calling from an invalid context?'
+			);
+		}
 		return array_merge( parent::treeSerialize(), [
 			'items' => $this->getSubpages(),
 		] );
@@ -54,6 +77,7 @@ class SubpageListNode extends InternalLinkNode {
 	}
 
 	/**
+	 *
 	 * @return array
 	 */
 	private function getSubpages(): array {
@@ -67,7 +91,9 @@ class SubpageListNode extends InternalLinkNode {
 	/**
 	 * @param Title $target
 	 * @param int $depth
-	 * @return void
+	 *
+	 * @return array
+	 * @throws \Exception
 	 */
 	private function getSubpagesInternally( Title $target, int $depth ) {
 		if ( $depth > $this->depth ) {
@@ -83,13 +109,23 @@ class SubpageListNode extends InternalLinkNode {
 			if ( !$subpage->getBaseTitle()->equals( $target ) ) {
 				continue;
 			}
-			$children[] = [
-				'name' => $this->generateId(),
-				'href' => $subpage->getLocalUrl(),
-				'label' => $subpage->getText(),
-				'items' => $this->getSubpagesInternally( $subpage, $depth + 1 )
-			];
+			$subpageNode = new InternalLinkNode( $this->permissionManager, [
+				'page' => $subpage,
+				'text' => $subpage->getSubpageText()
+			] );
+			if ( $subpageNode->isHidden( $this->user ) ) {
+				continue;
+			}
+			$children[] = $subpageNode->treeSerialize() + $this->getSubpagesInternally( $subpage, $depth + 1 );
 		}
 		return $children;
+	}
+
+	/**
+	 * @return array|string[]
+	 */
+	protected function getOutputCssClasses(): array {
+		// Remove parent-specific classes
+		return array_diff( parent::getOutputCssClasses(), [ 'internal', 'new' ] );
 	}
 }
