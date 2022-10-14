@@ -3,46 +3,48 @@
 namespace BlueSpice\Discovery\MenuProvider;
 
 use BlueSpice\Discovery\Component\EnhancedMediawikiSidebar as ComponentEnhancedMediawikiSidebar;
-use BlueSpice\Discovery\EnhancedSidebar\NodeProcessor\EnhancedSidebarNodeProcessor;
 use BlueSpice\Discovery\EnhancedSidebar\Parser as EnhancedSidebarParser;
 use BlueSpice\Discovery\IMenuProvider;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Revision\RevisionStore;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
+use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use Psr\Log\LoggerInterface;
 use RawMessage;
 use Title;
 use TitleFactory;
-use Wikimedia\ObjectFactory\ObjectFactory;
 
 class EnhancedMediawikiSidebar implements IMenuProvider {
 	/** @var LoggerInterface */
 	private $logger;
 	/** @var EnhancedSidebarParser */
 	private $parser = null;
+	/**
+	 * @var RevisionStore
+	 */
+	private $revisionStore;
+	/**
+	 * @var Title
+	 */
+	private $title;
+	/** @var ParserFactory */
+	private $parserFactory;
 
 	/**
+	 * @param RevisionStore $revisionStore
 	 * @param TitleFactory $titleFactory
+	 * @param ParserFactory $parserFactory
 	 * @param string $pagename
 	 */
 	public function __construct(
 		RevisionStore $revisionStore, TitleFactory $titleFactory,
-		ObjectFactory $objectFactory, string $pagename, string $processorRegistryAttribute
+		ParserFactory $parserFactory, string $pagename
 	) {
 		$this->logger = LoggerFactory::getInstance( 'bluespicediscovery' );
-		$title = $titleFactory->newFromText( $pagename );
-		if ( $title instanceof Title ) {
-			$revision = $revisionStore->getRevisionByTitle( $title );
-			$nodeProcessors = $this->initNodeProcessors(
-				$processorRegistryAttribute, $objectFactory
-			);
-			if ( $revision ) {
-				$this->parser = new EnhancedSidebarParser(
-					$revision, $nodeProcessors
-				);
-			}
-		}
+		$this->title = $titleFactory->newFromText( $pagename );
+		$this->revisionStore = $revisionStore;
+		$this->parserFactory = $parserFactory;
 	}
 
 	/**
@@ -70,35 +72,18 @@ class EnhancedMediawikiSidebar implements IMenuProvider {
 	 * @return IComponent
 	 */
 	public function getComponent(): IComponent {
+		if ( $this->title instanceof Title ) {
+			$revision = $this->revisionStore->getRevisionByTitle( $this->title );
+			$this->parser = new EnhancedSidebarParser(
+				$revision,
+				$this->parserFactory->getNodeProcessors()
+			);
+		}
 		if ( !$this->parser ) {
 			throw new \MWException( 'EnhancedSidebar cannot be parsed' );
 		}
 		$sidebarComponent = new ComponentEnhancedMediawikiSidebar( $this->parser );
 		$sidebarComponent->setLogger( $this->logger );
 		return $sidebarComponent;
-	}
-
-	/**
-	 * @param string $processorRegistryAttribute
-	 * @param ObjectFactory $objectFactory
-	 * @return array
-	 */
-	private function initNodeProcessors(
-		string $processorRegistryAttribute, ObjectFactory $objectFactory
-	): array {
-		$attribute = \ExtensionRegistry::getInstance()->getAttribute(
-			"BlueSpiceDiscovery$processorRegistryAttribute"
-		);
-
-		$processors = [];
-		foreach ( $attribute as $key => $spec ) {
-			$object = $objectFactory->createObject( $spec );
-			if ( !( $object instanceof EnhancedSidebarNodeProcessor ) ) {
-				continue;
-			}
-			$processors[$key] = $object;
-		}
-
-		return $processors;
 	}
 }

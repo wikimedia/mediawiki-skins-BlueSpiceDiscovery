@@ -2,25 +2,24 @@
 
 namespace BlueSpice\Discovery\EnhancedSidebar\Node;
 
-use Title;
+use InvalidArgumentException;
 
 class ExternalLinkNode extends EnhancedSidebarNode {
 
-	/** @var Title */
-	private $target;
-
 	/** @var string */
-	private $label;
+	private $href;
 
 	/**
-	 * @param Title $target
-	 * @param string $label
-	 * @param bool $hidden
+	 * @param array $data
 	 */
-	public function __construct( $target, $label, bool $hidden ) {
-		parent::__construct( $hidden );
-		$this->target = $target;
-		$this->label = $label;
+	public function __construct( array $data ) {
+		parent::__construct( $data );
+		if ( !isset( $data['href'] ) ) {
+			throw new InvalidArgumentException(
+				$this->getType() . ' requires "href" parameter'
+			);
+		}
+		$this->href = $data['href'];
 	}
 
 	/**
@@ -31,25 +30,30 @@ class ExternalLinkNode extends EnhancedSidebarNode {
 	}
 
 	/**
-	 * @return void
+	 * @return array
 	 */
 	public function jsonSerialize() {
-		return [
-			'type' => $this->getType(),
-			'level' => $this->getLevel(),
-			'target' => $this->target,
-			'label' => $this->label
+		return parent::jsonSerialize() + [
+			'href' => $this->href,
 		];
 	}
 
 	/**
+	 * Serialize in format to be consumed by a tree
+	 *
 	 * @return array
+	 * @throws \Exception
 	 */
 	public function treeSerialize(): array {
-		return [
-			'name' => $this->generateId(),
-			'href' => $this->target,
-			'label' => $this->label,
+		return parent::treeSerialize() + [
+			'href' => $this->href,
 		];
+	}
+
+	/**
+	 * @return string[]
+	 */
+	protected function getOutputCssClasses(): array {
+		return [ 'external' ] + parent::getOutputCssClasses();
 	}
 }
