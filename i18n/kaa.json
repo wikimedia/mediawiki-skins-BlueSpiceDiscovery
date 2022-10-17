@@ -4,6 +4,14 @@
 			"Ajiniyaz Nurniyazov"
 		]
 	},
+	"bs-discovery-config-sidebar-primary-main-tab-menu-label": "Bas qaptal paneldiń tiykarǵı panelindegi menyu",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-help": "Bas qaptal paneldiń tiykarǵı panelindegi menyudı saylań",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "MediaWiki qaptal paneli",
+	"bs-discovery-menu-provider-namespace-mainpage-list-label": "Atlar maydanınıń tiykarǵı betleri dizimi",
+	"bs-discovery-menu-provider-namespace-mainpage-list-desc": "Kontent atları boslıqlarındaǵı tiykarǵı betler dizimi",
+	"bs-discovery-namespace-mainpage-links-pnl-header-text": "Atlar maydanınıń tiykarǵı betleri",
 	"ns-main-label": "Betler",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Keńeytilgen MediaWiki qaptal paneli",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Keńeytilgen funksiyaǵa iye MediaWiki qaptal paneli menyusı",
 	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Bas menyu"
 }
