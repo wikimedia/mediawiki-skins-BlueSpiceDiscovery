@@ -113,22 +113,7 @@
 				'aria-label',
 				mw.message( 'bs-discovery-navbar-full-screen-button-enable-aria-label' ).text()
 			);
-		} else {
-			$( this ).addClass( 'fs-mode-enabled' );
-			$( this ).removeClass( 'bi-chevron-expand' );
-			$( this ).addClass( 'bi-chevron-contract' );
-			$( this ).attr(
-				'title',
-				mw.message( 'bs-discovery-navbar-full-screen-button-disable-title' ).text()
-			);
-			$( this ).attr(
-				'aria-label',
-				mw.message( 'bs-discovery-navbar-full-screen-button-disable-aria-label' ).text()
-			);
 
-		}
-
-		if ( $( 'body' ).hasClass( 'fs-mode-enabled' ) ) {
 			$( 'body' ).removeClass( 'fs-mode-enabled' );
 			discovery_cookie.set( 'fsMode', 'false' );
 
@@ -144,18 +129,32 @@
 				}
 			}
 		} else {
+			$( this ).addClass( 'fs-mode-enabled' );
+			$( this ).removeClass( 'bi-chevron-expand' );
+			$( this ).addClass( 'bi-chevron-contract' );
+			$( this ).attr(
+				'title',
+				mw.message( 'bs-discovery-navbar-full-screen-button-disable-title' ).text()
+			);
+			$( this ).attr(
+				'aria-label',
+				mw.message( 'bs-discovery-navbar-full-screen-button-disable-aria-label' ).text()
+			);
+
 			$( 'body' ).addClass( 'fs-mode-enabled' );
 			discovery_cookie.set( 'fsMode', 'true' );
 
 			var classes = discovery_cookie.get( 'bodyClasses' );
 			if ( classes ) {
 				var classes_obj = JSON.parse( classes );
-				Object.assign( classes_obj, { 'fsMode': 'fs-mode-enabled' } );
+			} else {
+				var classes_obj = {};
+			}
+			Object.assign( classes_obj, { 'fsMode': 'fs-mode-enabled' } );
 				discovery_cookie.set(
 					'bodyClasses',
 					JSON.stringify( classes_obj )
 				);
-			}
 		}
 
 		// Hide sidebars
