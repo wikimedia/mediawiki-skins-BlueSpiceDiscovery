@@ -117,5 +117,19 @@
 	"bs-discovery-personalurl-userpage-text": "Profil",
 	"bs-discovery-globalactionentry-templates-text": "Mallar",
 	"bs-discovery-globalactionentry-templates-title": "Alla mallar",
-	"bs-discovery-last-edit-by-anon-user": "Anonym användare"
+	"bs-discovery-last-edit-by-anon-user": "Anonym användare",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-label": "Meny i huvudpanelen för det primära sidofältet",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-help": "Välj meny från huvudpanelen i det primära sidofältet",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "MediaWiki-sidofält",
+	"bs-discovery-menu-provider-mediawiki-sidebar-desc": "En MediaWiki-sidofältsmeny med bara en nivå av menyposter",
+	"bs-discovery-menu-provider-namespace-mainpage-list-label": "Namnrymdens huvudsidslista",
+	"bs-discovery-menu-provider-namespace-mainpage-list-desc": "En lista över huvudsidor i innehållsnamnrymder",
+	"bs-discovery-menu-provider-subpage-tree-label": "Undersideträd",
+	"bs-discovery-menu-provider-subpage-tree-desc": "Undersidor till den aktuella sidan som trädmeny",
+	"bs-discovery-namespace-mainpage-links-pnl-header-text": "Namnrymdens huvudsidor",
+	"bs-discovery-subpage-tree-pnl-header-text": "Undersidor",
+	"ns-main-label": "Sidor",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Förbättrat MediaWiki-sidofält",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "En MediaWiki-sidofältsmeny med förbättrad funktionalitet",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Huvudmeny"
 }
