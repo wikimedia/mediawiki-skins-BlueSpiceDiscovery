@@ -3,7 +3,8 @@
 		"authors": [
 			"Brettchenweber",
 			"Mschlindwein",
-			"Robert Vogel"
+			"Robert Vogel",
+			"Osnard"
 		]
 	},
 	"bs-discovery-name": "BlueSpice Discovery",
@@ -110,7 +111,7 @@
 	"bs-discovery-breadcrumb-label-special-linkliste": "Linkliste",
 	"bs-discovery-breadcrumb-label-action-history": "Versionsgeschichte",
 	"bs-discovery-breadcrumb-label-action-edit": "Bearbeiten",
-	"bs-discovery-first-heading-aria-label": "Seiten Titel",
+	"bs-discovery-first-heading-aria-label": "Seitentitel",
 	"bs-discovery-config-mainlinks-mainpage-label": "Einstiegspunkt \"Hauptseite\" anzeigen",
 	"bs-discovery-config-mainlinks-mainpage-help": "Einstiegspunkt \"Hauptseite\" in der linken Navigation anzeigen",
 	"bs-discovery-config-mainlinks-allpages-label": "Einstiegspunkt \"Alle Seiten\" anzeigen",
