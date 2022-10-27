@@ -14,11 +14,12 @@
 			}
 
 			var position = $( jumpmark ).position().top;
-			var titleWidth = $( '#main' ).innerWidth();
+			var titleWidth = $( '#main' ).outerWidth();
 			var $title = $( '#title-line' );
+			var $titleContent = $( '#title-line > div' );
 
 			$title.addClass( 'title-fixed' );
-			$title.width( titleWidth );
+			$titleContent.width( titleWidth );
 
 			$( 'body, html').animate( {
 					scrollTop: position - topHeight
