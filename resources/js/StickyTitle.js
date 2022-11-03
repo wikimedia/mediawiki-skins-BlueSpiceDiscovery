@@ -1,6 +1,9 @@
 ( function( mw, $, d ){
 
-	if( !$( 'body' ).hasClass('ns-special') && window.innerWidth >= 767  ) {
+	if( !$( 'body' ).hasClass( 'ns-special' ) && window.innerWidth >= 767 ) {
+		if ( !$( '#title-section' ).is( ':visible' ) ) {
+			return;
+		}
 		$( window ).scroll( function() {
 			var top = $( '#wrapper' ).offset().top;
 			var windowTop = $(this).scrollTop();
@@ -28,7 +31,7 @@
 				if ( $title.hasClass( 'title-fixed' ) ) {
 					$toolbar.css( 'top', topHeight );
 					$toolbar.css( 'position', 'fixed' );
-					$toolbar.width( titleWidth );
+					$toolbar.width( $( '.ve-init-target' ).outerWidth() );
 					$( '#title-section' ).css( 'padding-bottom', $toolbar.height() );
 				} else {
 					$toolbar.removeAttr( "style" )
