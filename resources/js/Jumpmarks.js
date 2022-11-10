@@ -1,7 +1,6 @@
 ( function( mw, $, d ){
 
 	$( d ).ready( function(){
-
 		var hash = window.location.hash;
 		var topHeight = $( '#content' ).position().top;
 
@@ -14,13 +13,6 @@
 			}
 
 			var position = $( jumpmark ).position().top;
-			var titleWidth = $( '#main' ).outerWidth();
-			var $title = $( '#title-line' );
-			var $titleContent = $( '#title-line > div' );
-
-			$title.addClass( 'title-fixed' );
-			$titleContent.width( titleWidth );
-
 			$( 'body, html').animate( {
 					scrollTop: position - topHeight
 				},
@@ -52,8 +44,8 @@
 				topHeight = $( '#content' ).position().top;
 
 				$( 'body,html' ).animate( {
-						scrollTop: position - topHeight
-				});
+					scrollTop: position - topHeight
+				} );
 			}
 		});
 	});
