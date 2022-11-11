@@ -545,6 +545,11 @@
 				"mw-widgets-copytextlayout-copy-success"
 			]
 		},
+		"skin.discovery.mws-tree-component.styles": {
+			"styles": {
+				"stylesheets/control/mws-tree-component.css": {}
+			}
+		},
 		"skin.discovery.tree-menu-container": {
 			"scripts": [
 				"js/TreeMenuContainer.js"
