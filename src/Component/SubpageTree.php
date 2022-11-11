@@ -2,23 +2,16 @@
 
 namespace BlueSpice\Discovery\Component;
 
+use BlueSpice\Discovery\SubpageDataGenerator;
 use IContextSource;
-use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
-use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;
-use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardHeader;
+use MediaWiki\MediaWikiServices;
+use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleTreeContainer;
 use RequestContext;
 use Title;
 
-class SubpageTree extends SimpleCard {
+class SubpageTree extends SimpleTreeContainer {
 
 	private const MAX_DEPTH = 5;
-
-	/**
-	 *
-	 */
-	public function __construct() {
-		parent::__construct( [] );
-	}
 
 	/**
 	 * @inheritDoc
@@ -30,7 +23,7 @@ class SubpageTree extends SimpleCard {
 	/**
 	 * @inheritDoc
 	 */
-	public function getContainerClasses(): array {
+	public function getClasses(): array {
 		return [ 'w-100', 'bg-transp' ];
 	}
 
@@ -38,7 +31,31 @@ class SubpageTree extends SimpleCard {
 	 * @inheritDoc
 	 */
 	public function getSubComponents(): array {
-		return $this->buildPanels();
+		$services = MediaWikiServices::getInstance();
+		$treeDataGenerator = $services->get( 'MWStakeCommonUITreeDataGenerator' );
+
+		$nodes = $treeDataGenerator->generate(
+			$this->getTreeData(),
+			$this->getTreeExpandPaths()
+		);
+
+		return $nodes;
+	}
+
+	/**
+	 * @return array
+	 */
+	private function getTreeData(): array {
+		/** @var IContextSource */
+		$context = RequestContext::getMain();
+
+		/** @var Title */
+		$title = $context->getTitle();
+
+		$subpageDataGenerator = new SubpageDataGenerator();
+		$subpageData = $subpageDataGenerator->generate( $title );
+
+		return $subpageData;
 	}
 
 	/**
@@ -49,20 +66,7 @@ class SubpageTree extends SimpleCard {
 	public function shouldRender( IContextSource $context ): bool {
 		$title = $context->getTitle();
 
-		if ( !$title->exists() ) {
-			return false;
-		}
-
 		if ( !$title->isContentPage() ) {
-			return false;
-		}
-
-		if ( !$title->hasSubpages() ) {
-			return false;
-		}
-
-		$data = $this->buildTreeSubData( $title, self::MAX_DEPTH );
-		if ( empty( $data ) ) {
 			return false;
 		}
 
@@ -70,161 +74,40 @@ class SubpageTree extends SimpleCard {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
-	private function buildPanels(): array {
-		$id = 'subpage-tree-pnl';
-		$headerText = wfMessage( 'bs-discovery-subpage-tree-pnl-header-text' )->text();
-
-		return [
-			new SimpleCard( [
-				'id' => $id,
-				'classes' => [ 'w-100', 'bg-transp' ],
-				'items' => [
-					new SimpleCardHeader( [
-						'id' => $id . '-head',
-						'classes' => [ 'menu-title' ],
-						'items' => [
-							new Literal(
-								$id . '-head',
-								$headerText
-							)
-						]
-					] ),
-					new TreeMenuContainer(
-						$id . '-menu',
-						$id . '-head',
-						[
-							'w-100',
-							'bg-transp'
-						],
-						$this->getTreeData()
-					)
-				]
-			] )
-		];
-	}
-
-	/**
-	 * @param Title $title
-	 * @param int $maxDepth
-	 * @return array
-	 */
-	private function buildTreeSubData( Title $title, int $maxDepth ): array {
-		$activeTitle = $title;
-
-		/** $title->isSubpage() delivers false even if it is a subpage */
-		if ( !$title->equals( $title->getRootTitle() ) ) {
-			$title = $title->getRootTitle();
-		}
-
-		$subpageTitles = $title->getSubpages();
-
-		$subpages = [];
-		foreach ( $subpageTitles as $subpageTitle ) {
-			$subpagePath = $this->makeSupbageData( $subpageTitle, $activeTitle, $maxDepth );
-
-			$cur = &$subpages;
-			$subPageDepth = 0;
-			foreach ( $subpagePath as $key => $value ) {
-				if ( !isset( $cur[$key] ) ) {
-					$cur[$key] = $value;
-				}
-
-				$subPageDepth++;
-
-				if ( $subPageDepth >= count( $subpagePath ) ) {
-					unset( $cur[$key]['items'] );
-					break;
-				}
-
-				if ( $subPageDepth >= $maxDepth ) {
-					unset( $cur[$key]['items'] );
-					break;
-				}
-
-				$cur = &$cur[$key]['items'];
-
-			}
-		}
-
-		return $this->clearIndex( $subpages );
-	}
-
-	/**
-	 * @param Title $title
-	 * @param Title $activeTitle
-	 * @param int $maxDepth
-	 * @return array
-	 */
-	private function makeSupbageData( Title $title, Title $activeTitle, int $maxDepth ): array {
-		$list = [];
-
-		$namespace = $title->getNamespace();
-		$titleText = $title->getText();
-		$titleParts = explode( '/', $titleText );
-
-		$curTitleText = '';
-		for ( $index = 0; $index < count( $titleParts ); $index++ ) {
-			if ( $index > $maxDepth ) {
-				break;
-			}
-
-			$titlePart = $titleParts[$index];
-			$curTitleText .= $titlePart;
-
-			if ( $index === 0 ) {
-				$curTitleText .= '/';
-				continue;
-			}
-
-			$curTitle = Title::makeTitle( $namespace, $curTitleText );
-
-			$key = $curTitle->getDBkey();
-			$list[$key] = [
-				'name' => $curTitle->getPrefixedDBkey(),
-				'label' => $titleParts[$index],
-				'href' => $curTitle->getLocalURL(),
-				'items' => []
-			];
-
-			if ( $curTitle->equals( $activeTitle ) ) {
-				$list[$key]['class'] = 'active';
-			}
-
-			$curTitleText .= '/';
-		}
-
-		return $list;
-	}
-
-	/**
-	 * @param array $data
-	 * @return array
-	 */
-	private function clearIndex( array $data ): array {
-		$indexedData = [];
-		foreach ( $data as $key => $value ) {
-			if ( isset( $value['items'] ) ) {
-				$value['items'] = $this->clearIndex( $value['items'] );
-			}
-			$indexedData[] = $value;
-		}
-
-		return $indexedData;
-	}
-
-	/**
-	 * @return array
-	 */
-	private function getTreeData(): array {
+	private function getTreeExpandPaths(): array {
+		/** @var IContextSource */
 		$context = RequestContext::getMain();
 		/** @var Title */
 		$title = $context->getTitle();
 
-		$data = $this->buildTreeSubData( $title, self::MAX_DEPTH );
+		$titleText = $title->getFullText();
+		$titleParts = explode( '/', $titleText );
 
-		return $data;
+		$curTitleText = '';
+		$path = [];
+
+		for ( $index = 0; $index < count( $titleParts ); $index++ ) {
+			$curTitleText .= $titleParts[$index];
+			$curTitle = Title::newFromText( $curTitleText );
+			$fullId = md5( $curTitle->getFullText() );
+			$path[] = substr( $fullId, 0, 6 );
+
+			$curTitleText .= '/';
+		}
+
+		$path = array_slice( $path, 1 );
+
+		return [
+			implode( '/', $path )
+		];
+	}
+
+	/**
+	 * @return string[]
+	 */
+	public function getRequiredRLStyles(): array {
+		return [ 'skin.discovery.mws-tree-component.styles' ];
 	}
 }
