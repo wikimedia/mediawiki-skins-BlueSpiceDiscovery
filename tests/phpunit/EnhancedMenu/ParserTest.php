@@ -6,7 +6,7 @@ use BlueSpice\Discovery\EnhancedSidebar\Node\ExternalLinkNode;
 use BlueSpice\Discovery\EnhancedSidebar\NodeProcessor\EnhancedSidebarNodeProcessor;
 use BlueSpice\Discovery\EnhancedSidebar\NodeProcessor\ExternalLinkProcessor;
 use BlueSpice\Discovery\EnhancedSidebar\Parser;
-use MediaWiki\Storage\MutableRevisionRecord;
+use MediaWiki\Revision\MutableRevisionRecord;
 use MWException;
 use MWStake\MediaWiki\Lib\Nodes\INodeSource;
 use PHPUnit\Framework\TestCase;
