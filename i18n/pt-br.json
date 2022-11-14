@@ -60,5 +60,17 @@
 	"bs-discovery-namespace-mainpage-links-pnl-header-text": "Páginas principais dos espaços nominais",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Barra lateral do MediaWiki melhorada",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Um menu da barra lateral MediaWiki com funções melhoradas",
-	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Menu principal"
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Menu principal",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "Página",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-text": "Etiqueta",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-depth": "Profundidade",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-href": "URL",
+	"menueditor-ui-enhanced-sidebar-internal-link-label-edit": "Link interno",
+	"menueditor-ui-enhanced-sidebar-external-link-label-edit": "Link externo",
+	"menueditor-ui-enhanced-sidebar-subpage-tree-label-edit": "Árvore de subpáginas",
+	"menueditor-ui-enhanced-sidebar-external-link-label": "Link externo",
+	"menueditor-ui-enhanced-sidebar-internal-link-label": "Link interno",
+	"menueditor-ui-enhanced-sidebar-subpage-tree-label": "Árvore de subpáginas",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "Texto de cabeçalho",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "Classes CSS"
 }
