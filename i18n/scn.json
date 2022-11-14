@@ -33,7 +33,6 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Cchiossai suttapàggini",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Pàggina principali",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Ùrtimu canciamentu $1",
-	"bs-discovery-last-edit-by-system-user": "utenti sistema",
 	"bs-discovery-title-action-edit-button-title": "Cancia la pàggina",
 	"bs-discovery-title-action-edit-button-aria-label": "Cancia la pàggina",
 	"bs-discovery-tabpanel-main-text": "Navigazzioni principali",
@@ -59,5 +58,6 @@
 	"bs-discovery-personalurl-mycontributions-text": "Cuntribbuti",
 	"bs-discovery-personalurl-userpage-text": "Prufilu",
 	"bs-discovery-globalactionentry-templates-text": "Template",
-	"bs-discovery-globalactionentry-templates-title": "Tutti li template"
+	"bs-discovery-globalactionentry-templates-title": "Tutti li template",
+	"bs-discovery-last-edit-by-system-user": "utenti sistema"
 }

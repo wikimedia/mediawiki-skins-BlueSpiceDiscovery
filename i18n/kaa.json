@@ -13,5 +13,19 @@
 	"ns-main-label": "Betler",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Keńeytilgen MediaWiki qaptal paneli",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Keńeytilgen funksiyaǵa iye MediaWiki qaptal paneli menyusı",
-	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Bas menyu"
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Bas menyu",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "Bet",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-text": "Teg",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-depth": "Tereńlik",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-depth-help": "Qosılatuǵın tómengi betlerdiń maksimal tereńligi",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-href": "URL",
+	"menueditor-ui-enhanced-sidebar-internal-link-label-edit": "Ishki silteme",
+	"menueditor-ui-enhanced-sidebar-external-link-label-edit": "Sırtqı silteme",
+	"menueditor-ui-enhanced-sidebar-external-link-label": "Sırtqı silteme",
+	"menueditor-ui-enhanced-sidebar-internal-link-label": "Ishki silteme",
+	"bs-discovery-enhanced-mediawiki-sidebar-show-for-groups-text": "Toparlar ushın kórsetiw",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "Baslama teksti",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help": "Bet baslaması retinde kórsetiletuǵın tekst; parser funkciyasın óz ishine alıwı múmkin",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS klasları",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Belgiler klası"
 }

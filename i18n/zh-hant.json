@@ -58,7 +58,6 @@
 	"bs-discovery-title-last-edit-info": "最後編輯於$1 <br /> 由$2編輯",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "最後編輯於$1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "最後由$1編輯",
-	"bs-discovery-last-edit-by-system-user": "系統使用者",
 	"bs-discovery-last-edit-by-anon-user": "匿名使用者",
 	"bs-discovery-title-action-edit-button-title": "編輯頁面",
 	"bs-discovery-title-action-edit-button-aria-label": "編輯頁面",
@@ -117,5 +116,6 @@
 	"bs-discovery-personalurl-mycontributions-text": "貢獻",
 	"bs-discovery-personalurl-userpage-text": "個人檔案",
 	"bs-discovery-globalactionentry-templates-text": "模板",
-	"bs-discovery-globalactionentry-templates-title": "所有模板"
+	"bs-discovery-globalactionentry-templates-title": "所有模板",
+	"bs-discovery-last-edit-by-system-user": "系統使用者"
 }

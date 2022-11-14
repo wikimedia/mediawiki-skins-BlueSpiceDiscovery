@@ -34,7 +34,6 @@
 	"bs-discovery-title-last-edit-info": "$2 အဆုဲင်ꩻသွတ်ꩻ မွဉ်းဖျင်ခါꩻလဲဉ်း $1 <br />",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "အဆုဲင်ꩻသွတ်ꩻ မွဉ်းဖျင်မုꩻ $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "$1 အဆုဲင်ꩻသွတ်ꩻ မွဉ်းဖျင်မုꩻ",
-	"bs-discovery-last-edit-by-system-user": "စနိစ် ကေားသုင်ꩻသား",
 	"bs-discovery-title-action-edit-button-title": "ခြပ်ချော်ꩻလိတ်မဲ့ငါ",
 	"bs-discovery-title-action-edit-button-aria-label": "ခြပ်ချော်ꩻလိတ်မဲ့ငါ",
 	"bs-discovery-sidebar-secondary-share-sharebymail-text": "အီးမေး",
@@ -59,5 +58,6 @@
 	"bs-discovery-personalurl-mycontributions-text": "ခွုမ်မာꩻချက်ဖိုင်ႏ",
 	"bs-discovery-personalurl-userpage-text": "ပရိုဖုဲင်",
 	"bs-discovery-globalactionentry-templates-text": "တမ်းပလေက်ဖိုင်ႏ",
-	"bs-discovery-globalactionentry-templates-title": "တမ်းပလေက်ဖိုင်ႏလို့လို့"
+	"bs-discovery-globalactionentry-templates-title": "တမ်းပလေက်ဖိုင်ႏလို့လို့",
+	"bs-discovery-last-edit-by-system-user": "စနိစ် ကေားသုင်ꩻသား"
 }

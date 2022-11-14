@@ -44,7 +44,6 @@
 	"bs-discovery-title-last-edit-info": "Laatst bewerkt $1 <br /> door $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Laatste bewerking $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Laatste bewerking door $1",
-	"bs-discovery-last-edit-by-system-user": "systeemgebruiker",
 	"bs-discovery-last-edit-by-anon-user": "Anonieme gebruiker",
 	"bs-discovery-title-action-edit-button-title": "Pagina bewerken",
 	"bs-discovery-title-action-edit-button-aria-label": "Pagina bewerken",
@@ -79,5 +78,6 @@
 	"bs-discovery-personalurl-mycontributions-text": "Bijdragen",
 	"bs-discovery-personalurl-userpage-text": "Profiel",
 	"bs-discovery-globalactionentry-templates-text": "Sjablonen",
-	"bs-discovery-globalactionentry-templates-title": "Alle sjablonen"
+	"bs-discovery-globalactionentry-templates-title": "Alle sjablonen",
+	"bs-discovery-last-edit-by-system-user": "systeemgebruiker"
 }

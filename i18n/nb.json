@@ -57,7 +57,6 @@
 	"bs-discovery-title-last-edit-info": "Sist redigert $1 <br /> av $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Siste redigering $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Siste redigering av $1",
-	"bs-discovery-last-edit-by-system-user": "systembruker",
 	"bs-discovery-last-edit-by-anon-user": "Anonym bruker",
 	"bs-discovery-title-action-edit-button-title": "Rediger side",
 	"bs-discovery-title-action-edit-button-aria-label": "Rediger side",
@@ -116,5 +115,6 @@
 	"bs-discovery-personalurl-mycontributions-text": "Bidrag",
 	"bs-discovery-personalurl-userpage-text": "Profil",
 	"bs-discovery-globalactionentry-templates-text": "Maler",
-	"bs-discovery-globalactionentry-templates-title": "Alle maler"
+	"bs-discovery-globalactionentry-templates-title": "Alle maler",
+	"bs-discovery-last-edit-by-system-user": "systembruker"
 }
