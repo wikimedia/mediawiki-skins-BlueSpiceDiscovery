@@ -5,5 +5,8 @@
 		]
 	},
 	"bs-discovery-subpage-tree-pnl-header-text": "Podstranice",
-	"ns-main-label": "Stranice"
+	"ns-main-label": "Stranice",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-text": "Oznaka",
+	"menueditor-ui-enhanced-sidebar-external-link-label": "Spoljašnja veza",
+	"menueditor-ui-enhanced-sidebar-internal-link-label": "Unutrašnja veza"
 }
