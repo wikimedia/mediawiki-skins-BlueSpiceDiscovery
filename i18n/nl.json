@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"AHendriksen-collecties",
 			"Mainframe98",
 			"Nickthijssen1994"
 		]
@@ -79,5 +80,10 @@
 	"bs-discovery-personalurl-userpage-text": "Profiel",
 	"bs-discovery-globalactionentry-templates-text": "Sjablonen",
 	"bs-discovery-globalactionentry-templates-title": "Alle sjablonen",
-	"bs-discovery-last-edit-by-system-user": "systeemgebruiker"
+	"bs-discovery-last-edit-by-system-user": "systeemgebruiker",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-href": "URL",
+	"menueditor-ui-enhanced-sidebar-external-link-label-edit": "Externe koppeling",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "Koptekst",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help": "Tekst om als kop weer te geven; kan een parserfunctie bevatten",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Icon class"
 }
