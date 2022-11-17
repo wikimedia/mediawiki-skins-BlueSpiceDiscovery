@@ -83,5 +83,15 @@
 	"bs-discovery-personalurl-mycontributions-text": "기여",
 	"bs-discovery-personalurl-userpage-text": "프로파일",
 	"bs-discovery-globalactionentry-templates-text": "틀",
-	"bs-discovery-globalactionentry-templates-title": "모든 틀"
+	"bs-discovery-globalactionentry-templates-title": "모든 틀",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-text": "레이블",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-href": "URL",
+	"menueditor-ui-enhanced-sidebar-internal-link-label-edit": "내부 링크",
+	"menueditor-ui-enhanced-sidebar-external-link-label-edit": "외부 링크",
+	"menueditor-ui-enhanced-sidebar-external-link-label": "외부 링크",
+	"menueditor-ui-enhanced-sidebar-internal-link-label": "내부 링크",
+	"menueditor-ui-enhanced-sidebar-subpage-tree-label": "하위 문서 트리",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "제목",
+	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "새 패널 추가",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS 클래스"
 }
