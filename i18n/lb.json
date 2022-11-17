@@ -62,5 +62,16 @@
 	"bs-discovery-globalactionentry-templates-text": "Schablounen",
 	"bs-discovery-globalactionentry-templates-title": "All Schablounen",
 	"bs-discovery-subpage-tree-pnl-header-text": "Ënnersäiten",
-	"ns-main-label": "Säiten"
+	"ns-main-label": "Säiten",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "Säit",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-text": "Etikett",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-depth": "Déift",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-href": "URL",
+	"menueditor-ui-enhanced-sidebar-internal-link-label-edit": "Interne Link",
+	"menueditor-ui-enhanced-sidebar-external-link-label-edit": "Externe Link",
+	"menueditor-ui-enhanced-sidebar-external-link-label": "Externe Link",
+	"menueditor-ui-enhanced-sidebar-internal-link-label": "Interne Link",
+	"bs-discovery-enhanced-mediawiki-sidebar-show-for-groups-text": "Fir Gruppe weisen",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "Text vum Titel",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS-Klassen"
 }
