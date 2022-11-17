@@ -26,13 +26,15 @@ nav .breadcrumb {
 	margin-bottom: 0.3em;
 }
 .breadcrumb-item a {
-	color: var(--title-nav-fg);
 	text-decoration: none;
 	margin-right: 0rem;
 	padding: 0.2rem 0.2rem;
 	text-align: center;
 	vertical-align: baseline;
 	width: 100%;
+}
+.breadcrumb-item a:not( .new ) {
+	color: var(--title-nav-fg);
 }
 .breadcrumb-item a:hover {
 	color: var(--title-nav-fg--hover);
