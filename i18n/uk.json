@@ -3,7 +3,8 @@
 		"authors": [
 			"DDPAT",
 			"Ice bulldog",
-			"Samflint"
+			"Samflint",
+			"Vlad5250"
 		]
 	},
 	"bs-discovery-desc": "Тема оформлення для BlueSpice",
@@ -59,6 +60,7 @@
 	"bs-discovery-title-last-edit-info": "Востаннє відредаговано  $1 <br /> ким $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Останнє редагування $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Востаннє відредаговано користувачем $1",
+	"bs-discovery-last-edit-by-anon-user": "Анонімний користувач",
 	"bs-discovery-title-action-edit-button-title": "Редагувати сторінку",
 	"bs-discovery-title-action-edit-button-aria-label": "Редагувати сторінку",
 	"bs-discovery-tabpanel-main-text": "Головна навігація",
