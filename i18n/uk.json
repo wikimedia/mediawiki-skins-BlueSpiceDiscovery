@@ -3,7 +3,8 @@
 		"authors": [
 			"DDPAT",
 			"Ice bulldog",
-			"Samflint"
+			"Samflint",
+			"Vlad5250"
 		]
 	},
 	"bs-discovery-desc": "Тема оформлення для BlueSpice",
@@ -117,5 +118,6 @@
 	"bs-discovery-personalurl-mycontributions-text": "Внески",
 	"bs-discovery-personalurl-userpage-text": "Профіль",
 	"bs-discovery-globalactionentry-templates-text": "Шаблони",
-	"bs-discovery-globalactionentry-templates-title": "Усі шаблони"
+	"bs-discovery-globalactionentry-templates-title": "Усі шаблони",
+	"bs-discovery-last-edit-by-anon-user": "Анонімний користувач"
 }
