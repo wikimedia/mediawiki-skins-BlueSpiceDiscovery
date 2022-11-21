@@ -20,6 +20,19 @@
 	},
 	"attributes": {
 		"BlueSpiceDiscovery": {
+			"LangLinksProviderRegistry": {
+				"interwiki": {
+					"class": "BlueSpice\\Discovery\\LangLinksProvider\\Interwiki"
+				},
+				"hardwired": {
+					"class": "BlueSpice\\Discovery\\LangLinksProvider\\Hardwired",
+					"services": [ "LanguageNameUtils", "ConfigFactory" ]
+				},
+				"subpages": {
+					"class": "BlueSpice\\Discovery\\LangLinksProvider\\Subpages",
+					"services": [ "LanguageNameUtils" ]
+				}
+			},
 			"LayoutRegistry": {
 				"bluespice": {
 					"factory": "BlueSpice\\Discovery\\Layout\\BlueSpice::factory",
@@ -304,6 +317,12 @@
 	},
 	"config_prefix": "bsg",
 	"config": {
+		"DiscoveryHardWiredLangLinks" : {
+			"value": {}
+		},
+		"DiscoveryLangLinksMode" : {
+			"value": "subpages"
+		},
 		"LayoutEnabled":{
 			"value": "bluespice"
 		},
@@ -448,7 +467,6 @@
 				"stylesheets/structure/navbar-primary.sidebar-toggle.css": {},
 				"stylesheets/structure/navbar-primary.logo.css": {},
 				"stylesheets/structure/navbar-primary.search-form.css": {},
-				"stylesheets/structure/navbar-primary.language-button.css": {},
 				"stylesheets/structure/navbar-primary.user-button.css": {}
 			}
 		},
