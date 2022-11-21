@@ -6,6 +6,7 @@ use BaseTemplate;
 use BlueSpice\Discovery\Component\FullscreenButton;
 use BlueSpice\Discovery\Component\LastEditInfo;
 use BlueSpice\Discovery\Component\TitleActionEdit;
+use BlueSpice\Discovery\Component\TitleActionLanguage;
 use BlueSpice\Discovery\CookieHandler;
 use BlueSpice\Discovery\IBaseTemplateAware;
 use BlueSpice\Discovery\IContextSourceAware;
@@ -178,6 +179,7 @@ class Main implements
 		$this->fetchTitle();
 		$this->fetchSkinSlotTitleActions();
 		$this->fetchTitleActionEdit();
+		$this->fetchTitleActionLanguage();
 		$this->fetchTitleActionFullscreenButton();
 		$this->fetchRedirect( $subTitleProcessor->get( 'redirect' ) );
 		$this->fetchSkinSlotDataAfterTitle();
@@ -231,6 +233,16 @@ class Main implements
 		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 
 		$this->skinComponents['title-action-edit'] = $html;
+	}
+
+	/**
+	 * @return void
+	 */
+	private function fetchTitleActionLanguage() {
+		$component = new TitleActionLanguage( $this->componentProcessData );
+		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
+
+		$this->skinComponents['title-action-language'] = $html;
 	}
 
 	/**

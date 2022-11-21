@@ -5,7 +5,6 @@ namespace BlueSpice\Discovery\Structure;
 use BaseTemplate;
 use BlueSpice\Discovery\Component\CreateContentSplitButton;
 use BlueSpice\Discovery\Component\GlobalActionsButton;
-use BlueSpice\Discovery\Component\LanguageButton;
 use BlueSpice\Discovery\Component\SidebarPrimaryToggleButton;
 use BlueSpice\Discovery\Component\SidebarPrimaryToggleButtonMobile;
 use BlueSpice\Discovery\Component\SidebarSecondaryToggleButton;
@@ -85,19 +84,6 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 
 		$this->skinComponents['new-content-button'] = $html;
-	}
-
-	/**
-	 *
-	 * @return void
-	 */
-	private function fetchLanguageButtonHtml() {
-		$langCode = $this->template->getSkin()->getLanguage()->getCode();
-
-		$component = new LanguageButton( $langCode );
-		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
-
-		$this->skinComponents['language-button'] = $html;
 	}
 
 	/**
@@ -195,7 +181,6 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 		$this->fetchNewContentButtonHtml();
 		$this->fetchSkinSlotNavbarPrimaryItemsHtml();
 		$this->fetchGlobalActionsButtonHtml();
-		$this->fetchLanguageButtonHtml();
 		$this->fetchLoginButtonHtml();
 		$this->fetchUserMenuButtonHtml();
 		$this->fetchSidebarSecondaryToggleButtonHtml();
