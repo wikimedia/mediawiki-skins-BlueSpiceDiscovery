@@ -132,5 +132,6 @@
 	"bs-discovery-menu-provider-subpage-tree-desc": "الصفحات الفرعية للصفحة الحالية كقائمة شجرة",
 	"bs-discovery-namespace-mainpage-links-pnl-header-text": "صفحات Namespace الرئيسية",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "ميدياويكي الشريط الجانبي المحسن",
-	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "قائمة الشريط الجانبي في ميدياويكي بوظيفة محسّنة"
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "قائمة الشريط الجانبي في ميدياويكي بوظيفة محسّنة",
+	"menueditor-ui-enhanced-sidebar-internal-link-label": "وصلة داخلية"
 }
