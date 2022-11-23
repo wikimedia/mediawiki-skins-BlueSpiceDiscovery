@@ -153,5 +153,6 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Field label",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Label for a dropdown entry in configuration manager for a enhaced mediawiki sideerbar menu",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Description text for a dropdown entry in configuration manager for the enhaced mediawiki sidebar menu",
-	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Label for panel header with a  enhaced mediawiki sidebar menu"
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Label for panel header with a  enhaced mediawiki sidebar menu",
+	"bs-discovery-page-does-not-exist-title": "Text for title attribute of a link with additional information that page does not exist\n{{Identical|Red-link-title}}"
 }

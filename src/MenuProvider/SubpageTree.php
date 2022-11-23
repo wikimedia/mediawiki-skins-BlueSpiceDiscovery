@@ -2,7 +2,7 @@
 
 namespace BlueSpice\Discovery\MenuProvider;
 
-use BlueSpice\Discovery\Component\SubpageTree as ComponentSubpageTree;
+use BlueSpice\Discovery\Component\SubpageTreePanel;
 use BlueSpice\Discovery\IMenuProvider;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
@@ -35,6 +35,6 @@ class SubpageTree implements IMenuProvider {
 	 * @return IComponent
 	 */
 	public function getComponent(): IComponent {
-		return new ComponentSubpageTree();
+		return new SubpageTreePanel();
 	}
 }
