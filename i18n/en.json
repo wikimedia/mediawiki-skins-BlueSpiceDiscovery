@@ -154,5 +154,6 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help": "Text to display as heading; can contain a parser function",
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Add new panel",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS classes",
-	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Icon class"
+	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Icon class",
+	"bs-discovery-page-does-not-exist-title": "$1 (page does not exist)"
 }
