@@ -138,9 +138,12 @@
 					"class": "BlueSpice\\Discovery\\MenuProvider\\SubpageTree"
 				},
 				"enhanced-mediawiki-sidebar": {
-					"class": "BlueSpice\\Discovery\\MenuProvider\\EnhancedMediawikiSidebar",
-					"args": [ "MediaWiki:Sidebar.json" ],
-					"services": [ "RevisionStore", "TitleFactory", "MWStakeWikitextParserFactory" ]
+					"class": "BlueSpice\\Discovery\\MenuProvider\\EnhancedSidebar",
+					"args": [ "MediaWiki:Sidebar.json", "enh-mw-sb" ],
+					"services": [
+						"RevisionStore", "TitleFactory", "MWStakeWikitextParserFactory",
+						"MWStakeCommonUITreeDataGenerator", "BlueSpiceDiscoveryCookieHandler"
+					]
 				}
 			},
 			"AttentionIndicatorRegistry": {},
@@ -564,18 +567,13 @@
 				"stylesheets/control/mws-tree-component.css": {}
 			}
 		},
-		"skin.discovery.tree-menu-container": {
+		"skin.discovery.mws-tree-component.scripts": {
 			"scripts": [
-				"js/TreeMenuContainer.js"
+				"js/TreeComponent.js"
 			],
 			"dependencies": [
-				"ext.oOJSPlus.data"
+				"skin.discovery.bluespice.scripts"
 			]
-		},
-		"skin.discovery.tree-menu-container.styles": {
-			"styles": {
-				"stylesheets/oo-ui/data-tree.css": {}
-			}
 		},
 		"skin.discovery.enhancedSidebar.tree": {
 			"scripts": [
@@ -617,6 +615,11 @@
 				"oojs-ui.styles.icons-editing-list",
 				"ext.oOJSPlus.formelements"
 			]
+		},
+		"skin.discovery.enhanced-sidebar.styles": {
+			"styles": {
+				"stylesheets/control/enhanced-sidebar.css": {}
+			}
 		}
 	},
 	"ResourceFileModulePaths": {
