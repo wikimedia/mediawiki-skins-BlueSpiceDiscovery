@@ -38,25 +38,21 @@ class SubpageTreePanel extends SimpleCard {
 		$headerText = wfMessage( 'bs-discovery-subpage-tree-pnl-header-text' )->text();
 
 		return [
-			new SimpleCard( [
-				'id' => $id,
-				'classes' => [ 'w-100', 'bg-transp' ],
+			new SimpleCardHeader( [
+				'id' => $id . '-head',
+				'classes' => [ 'menu-title' ],
 				'items' => [
-					new SimpleCardHeader( [
-						'id' => $id . '-head',
-						'classes' => [ 'menu-title' ],
-						'items' => [
-							new Literal(
-								$id . '-head',
-								$headerText
-							)
-						]
-					] ),
-					new SubpageTree( [
-						'aria' => [
-							'labelledby' => $id . '-head'
-						]
-					] )
+					new Literal(
+						$id . '-head',
+						$headerText
+					)
+				]
+			] ),
+			new SubpageTree( [
+				'id' => $id . '-menu',
+				'classes' => [ 'w-100', 'bg-transp' ],
+				'aria' => [
+					'labelledby' => $id . '-head'
 				]
 			] )
 		];
