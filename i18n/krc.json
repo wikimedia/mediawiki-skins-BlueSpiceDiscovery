@@ -24,5 +24,6 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help": "Башлыкъ болуб кёрюннген текст; парсер функциясы болургъа боллукъду",
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Джангы панель къош",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS классла",
-	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Иконканы классы"
+	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Иконканы классы",
+	"bs-discovery-page-does-not-exist-title": "$1 (быллай бет джокъду)"
 }

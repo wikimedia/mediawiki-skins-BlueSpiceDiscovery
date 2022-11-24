@@ -157,5 +157,6 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help": "Texte à afficher pour le titre ; cela peut contenir une fonction d’analyseur.",
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Ajouter un nouveau panneau",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "Classes CSS",
-	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Classe d’icônes"
+	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Classe d’icônes",
+	"bs-discovery-page-does-not-exist-title": "$1 (page inexistante)"
 }
