@@ -138,10 +138,17 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	 * @return void
 	 */
 	private function buildNodes( $nodesData ) {
+		$firstNode = false;
 		$nodes = [];
 
 		foreach ( $nodesData as $node ) {
-			$nodeTextParts = explode( ':', $node['nodeText'] );
+			if ( !$firstNode ) {
+				$nodeTextParts = explode( ':', $node['nodeText'] );
+				$firstNode = true;
+			} else {
+				$nodeTextParts = explode( ':', $node['nodeText'], 1 );
+			}
+
 			$nodeText = array_pop( $nodeTextParts );
 			$nodeHTML = [
 				'id' => md5( 'breadcrumb-nav-subpages-' . $node['id'] ),
