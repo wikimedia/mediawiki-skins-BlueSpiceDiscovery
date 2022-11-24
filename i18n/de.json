@@ -4,7 +4,8 @@
 			"Brettchenweber",
 			"Mschlindwein",
 			"Robert Vogel",
-			"Osnard"
+			"Osnard",
+			"Justman10000"
 		]
 	},
 	"bs-discovery-name": "BlueSpice Discovery",
@@ -61,7 +62,6 @@
 	"bs-discovery-title-last-edit-info": "Zuletzt bearbeitet $1 <br /> von $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Zuletzt bearbeitet $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Zuletzt bearbeitet von $1",
-	"bs-discovery-last-edit-by-system-user": "Systembenutzer",
 	"bs-discovery-title-action-edit-button-title": "Seite bearbeiten",
 	"bs-discovery-title-action-edit-button-aria-label": "Seite bearbeiten",
 	"bs-discovery-tabpanel-main-text": "Hauptnavigation",
@@ -122,6 +122,7 @@
 	"bs-discovery-personalurl-userpage-text": "Profil",
 	"bs-discovery-globalactionentry-templates-text": "Vorlagen",
 	"bs-discovery-globalactionentry-templates-title": "Alle Vorlagen",
+	"bs-discovery-last-edit-by-system-user": "Systembenutzer",
 	"bs-discovery-config-sidebar-primary-main-tab-menu-label": "Menü für das Hauptpanel der primären Seitenleiste",
 	"bs-discovery-config-sidebar-primary-main-tab-menu-help": "Menü für das Hauptpanel der primären Seitenleiste auswählen",
 	"bs-discovery-menu-provider-mediawiki-sidebar-label": "MediaWiki Sidebar",
@@ -135,5 +136,26 @@
 	"ns-main-label": "Seiten",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Erweiterte MediaWiki sidebar",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "MediaWiki Sidebar mit erweiterten Funktionen",
-	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Hauptmenü"
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Hauptmenü",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "Seite",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-page-help": "Seite, auf die verlinkt werden soll; kann ein bestehender Titel sein oder eine Parser-Funktion enthalten, die einen gültigen Titel auswertet",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-text": "Label",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-text-help": "Text, der für den Link angezeigt werden soll; kann eine Parser-Funktion enthalten",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-depth": "Tiefe",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-depth-help": "Maximale Tiefe der einzubeziehenden Unterseiten",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-href": "URL",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-href-help": "Zu verlinkende URL",
+	"menueditor-ui-enhanced-sidebar-internal-link-label-edit": "Interner Link",
+	"menueditor-ui-enhanced-sidebar-external-link-label-edit": "Externer Link",
+	"menueditor-ui-enhanced-sidebar-subpage-tree-label-edit": "Unterseitenbaum",
+	"menueditor-ui-enhanced-sidebar-external-link-label": "Externer Link",
+	"menueditor-ui-enhanced-sidebar-internal-link-label": "Interner Link",
+	"menueditor-ui-enhanced-sidebar-subpage-tree-label": "Unterseitenbaum",
+	"bs-discovery-enhanced-mediawiki-sidebar-show-for-groups-text": "Für Gruppen anzeigen",
+	"menueditor-ui-enhanced-sidebar-panel-heading-label-edit": "Überschrift des Panels",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "Überschrift",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help": "Text, der als Überschrift angezeigt werden soll; kann eine Parser-Funktion enthalten",
+	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Neues Panel hinzufügen",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS-Klassen",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Icon Klasse"
 }

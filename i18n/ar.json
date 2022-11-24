@@ -59,7 +59,6 @@
 	"bs-discovery-title-last-edit-info": "آخر تحرير $1<br /> بمقدار $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "التعديل الأخير $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "آخر تعديل بواسطة $1",
-	"bs-discovery-last-edit-by-system-user": "مستخدم النظام",
 	"bs-discovery-last-edit-by-anon-user": "مستخدم مجهول",
 	"bs-discovery-title-action-edit-button-title": "تعديل الصفحة",
 	"bs-discovery-title-action-edit-button-aria-label": "تعديل الصفحة",
@@ -119,6 +118,7 @@
 	"bs-discovery-personalurl-userpage-text": "الملف الشخصي",
 	"bs-discovery-globalactionentry-templates-text": "قوالب",
 	"bs-discovery-globalactionentry-templates-title": "كل القوالب",
+	"bs-discovery-last-edit-by-system-user": "مستخدم النظام",
 	"bs-discovery-config-sidebar-primary-main-tab-menu-label": "القائمة في اللوحة الرئيسية للشريط الجانبي الأساسي",
 	"bs-discovery-config-sidebar-primary-main-tab-menu-help": "حدد القائمة في اللوحة الرئيسية للشريط الجانبي الأساسي",
 	"bs-discovery-menu-provider-mediawiki-sidebar-label": "ميدياويكي الشريط الجانبي",
@@ -132,5 +132,6 @@
 	"ns-main-label": "الصفحات",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "ميدياويكي الشريط الجانبي المحسن",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "قائمة الشريط الجانبي في ميدياويكي بوظيفة محسّنة",
-	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "القائمة الرئيسة"
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "القائمة الرئيسة",
+	"menueditor-ui-enhanced-sidebar-internal-link-label": "وصلة داخلية"
 }

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kizule"
+			"Kizule",
+			"Milicevic01"
 		]
 	},
 	"bs-discovery-navbar-user-button-title": "Кориснички мени",
@@ -55,5 +56,8 @@
 	"bs-discovery-personalurl-mycontributions-text": "Доприноси",
 	"bs-discovery-personalurl-userpage-text": "Профил",
 	"bs-discovery-globalactionentry-templates-text": "Шаблони",
-	"bs-discovery-globalactionentry-templates-title": "Сви шаблони"
+	"bs-discovery-globalactionentry-templates-title": "Сви шаблони",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "Страница",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-depth": "Дубина",
+	"menueditor-ui-enhanced-sidebar-internal-link-label-edit": "Унутрашња веза"
 }

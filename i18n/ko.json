@@ -48,7 +48,6 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "더 많은 하위 문서",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "더 많은 하위 문서",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "$1 마지막 편집",
-	"bs-discovery-last-edit-by-system-user": "시스템 사용자",
 	"bs-discovery-last-edit-by-anon-user": "익명 사용자",
 	"bs-discovery-title-action-edit-button-title": "문서 편집",
 	"bs-discovery-title-action-edit-button-aria-label": "문서 편집",
@@ -83,5 +82,16 @@
 	"bs-discovery-personalurl-mycontributions-text": "기여",
 	"bs-discovery-personalurl-userpage-text": "프로파일",
 	"bs-discovery-globalactionentry-templates-text": "틀",
-	"bs-discovery-globalactionentry-templates-title": "모든 틀"
+	"bs-discovery-globalactionentry-templates-title": "모든 틀",
+	"bs-discovery-last-edit-by-system-user": "시스템 사용자",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-text": "레이블",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-href": "URL",
+	"menueditor-ui-enhanced-sidebar-internal-link-label-edit": "내부 링크",
+	"menueditor-ui-enhanced-sidebar-external-link-label-edit": "외부 링크",
+	"menueditor-ui-enhanced-sidebar-external-link-label": "외부 링크",
+	"menueditor-ui-enhanced-sidebar-internal-link-label": "내부 링크",
+	"menueditor-ui-enhanced-sidebar-subpage-tree-label": "하위 문서 트리",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "제목",
+	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "새 패널 추가",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS 클래스"
 }
