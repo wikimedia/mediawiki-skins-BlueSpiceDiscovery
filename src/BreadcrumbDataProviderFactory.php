@@ -3,6 +3,7 @@
 namespace BlueSpice\Discovery;
 
 use BlueSpice\Discovery\BreadcrumbDataProvider\BaseBreadcrumbDataProvider;
+use Title;
 use User;
 use Wikimedia\ObjectFactory;
 
