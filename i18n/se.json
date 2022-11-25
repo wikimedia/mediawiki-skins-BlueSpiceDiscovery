@@ -4,5 +4,7 @@
 			"Yupik"
 		]
 	},
-	"bs-discovery-header-create-button-text": "Ođđa"
+	"bs-discovery-header-create-button-text": "Ođđa",
+	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Nammagomuvuohta",
+	"bs-discovery-dialog-detailssectionheading-namespaces": "Nammagomuvuođat"
 }
