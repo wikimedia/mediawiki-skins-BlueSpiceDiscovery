@@ -151,5 +151,6 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help": "איזה טקסט להציג בתור כותרת; זה יכול להכיל פונקציית מפענח",
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "הוספת חלונית חדשה",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "מחלקות CSS",
-	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "מחלקת סמל"
+	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "מחלקת סמל",
+	"bs-discovery-page-does-not-exist-title": "$1 (הדף אינו קיים)"
 }
