@@ -59,5 +59,10 @@
 	"bs-discovery-globalactionentry-templates-title": "Сви шаблони",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "Страница",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-depth": "Дубина",
-	"menueditor-ui-enhanced-sidebar-internal-link-label-edit": "Унутрашња веза"
+	"menueditor-ui-enhanced-sidebar-internal-link-label-edit": "Унутрашња веза",
+	"menueditor-ui-enhanced-sidebar-external-link-label-edit": "Спољашња веза",
+	"menueditor-ui-enhanced-sidebar-external-link-label": "Спољашња веза",
+	"menueditor-ui-enhanced-sidebar-internal-link-label": "Унутрашња веза",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS класе",
+	"bs-discovery-page-does-not-exist-title": "$1 (страница не постоји)"
 }
