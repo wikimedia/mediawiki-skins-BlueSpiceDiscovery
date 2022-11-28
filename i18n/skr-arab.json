@@ -10,7 +10,9 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "ورقہ",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-text": "لیبل",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-href": "یوآرایل",
+	"menueditor-ui-enhanced-sidebar-internal-link-label-edit": "اندرلا لنک",
 	"menueditor-ui-enhanced-sidebar-external-link-label": "ٻاہرلا لنک",
+	"menueditor-ui-enhanced-sidebar-internal-link-label": "اندرلا لنک",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "سرخی عبارت",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "آئیکان جماعت"
 }
