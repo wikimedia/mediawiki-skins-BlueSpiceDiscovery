@@ -10,5 +10,6 @@
 	"menueditor-ui-enhanced-sidebar-external-link-label": "Spoljašnja veza",
 	"menueditor-ui-enhanced-sidebar-internal-link-label": "Unutrašnja veza",
 	"menueditor-ui-enhanced-sidebar-internal-link-label-edit": "Unutrašnja veza",
-	"menueditor-ui-enhanced-sidebar-external-link-label-edit": "Spoljašnja veza"
+	"menueditor-ui-enhanced-sidebar-external-link-label-edit": "Spoljašnja veza",
+	"bs-discovery-page-does-not-exist-title": "$1 (stranica ne postoji)"
 }
