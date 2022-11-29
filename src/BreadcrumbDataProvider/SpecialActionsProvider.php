@@ -40,6 +40,11 @@ class SpecialActionsProvider extends BaseBreadcrumbDataProvider {
 
 		$newTitle = $this->titleFactory->newFromText( $pagename );
 
+		// Prevent null Title error in case of square bracket use in Special:ReplaceText
+		if ( $newTitle == null ) {
+			return $title;
+		}
+
 		if ( $newTitle->isTalkPage() ) {
 			$this->talkName = true;
 		}
