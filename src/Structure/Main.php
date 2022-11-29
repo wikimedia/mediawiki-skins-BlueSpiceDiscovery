@@ -26,6 +26,7 @@ use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Revision\RevisionStore;
 use MWStake\MediaWiki\Component\CommonUserInterface\HtmlIdRegistry;
+use PageProps;
 
 class Main implements
 	ISkinStructure,
@@ -249,10 +250,16 @@ class Main implements
 	 * @return void
 	 */
 	private function fetchTitle() {
-		$regularTitle = $this->template->getSkin()->getTitle()->getPrefixedText();
+		$title = $this->template->getSkin()->getTitle();
+		$regularTitle = $title->getPrefixedText();
 		$displayTitle = $this->template->data['title'];
 		if ( $displayTitle === $regularTitle ) {
-			$displayTitle = $this->template->getSkin()->getTitle()->getSubpageText();
+			$displayTitle = $title->getSubpageText();
+		}
+		$pageProps = PageProps::getInstance()->getProperties( $title, 'displaytitle' );
+		$pageId = $title->getArticleID();
+		if ( isset( $pageProps[ $pageId ] ) ) {
+			$displayTitle = $pageProps[ $pageId ];
 		}
 		$this->skinComponents['title'] = $displayTitle;
 	}
