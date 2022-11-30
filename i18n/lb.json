@@ -74,5 +74,6 @@
 	"menueditor-ui-enhanced-sidebar-internal-link-label": "Interne Link",
 	"bs-discovery-enhanced-mediawiki-sidebar-show-for-groups-text": "Fir Gruppe weisen",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "Text vum Titel",
-	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS-Klassen"
+	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS-Klassen",
+	"bs-discovery-page-does-not-exist-title": "$1 (Säit gëtt et net)"
 }
