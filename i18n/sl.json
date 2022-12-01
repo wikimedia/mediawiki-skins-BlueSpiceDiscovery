@@ -57,5 +57,6 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help": "Besedilo za prikaz kot podnaslov; lahko vsebuje razčlembno funkcijo",
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Dodaj nov panel",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "Razredi CSS",
-	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Razred ikon"
+	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Razred ikon",
+	"bs-discovery-page-does-not-exist-title": "$1 (stran ne obstaja)"
 }
