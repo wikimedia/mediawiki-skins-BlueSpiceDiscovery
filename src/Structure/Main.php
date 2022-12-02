@@ -288,6 +288,9 @@ class Main implements
 	private function fetchIndicators() {
 		$indicators = $this->template->get( 'indicators' );
 		if ( !empty( $indicators ) ) {
+			if ( isset( $indicators[ 'mw-helplink' ] ) ) {
+				unset( $indicators[ 'mw-helplink' ] );
+			}
 			$htmlIdRegistry = new HtmlIdRegistry();
 			$indicatorHtml = '';
 			foreach ( $indicators as $id => $content ) {
