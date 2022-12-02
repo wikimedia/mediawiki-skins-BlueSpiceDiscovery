@@ -236,9 +236,6 @@
 		]
 	},
 	"callback": "BlueSpice\\Discovery\\Setup::onCallback",
-	"AutoloadClasses": {
-		"Skin": "Skin.php"
-	},
 	"AutoloadNamespaces": {
 		"BlueSpice\\Discovery\\": "src/"
 	},
