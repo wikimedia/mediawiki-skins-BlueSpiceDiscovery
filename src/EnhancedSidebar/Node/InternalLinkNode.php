@@ -61,7 +61,7 @@ class InternalLinkNode extends EnhancedSidebarNode {
 	/**
 	 * @return array
 	 */
-	public function jsonSerialize() {
+	public function jsonSerialize(): array {
 		return parent::jsonSerialize() + [
 			'page' => $this->target instanceof Title ?
 				$this->target->getPrefixedText() : $this->target
