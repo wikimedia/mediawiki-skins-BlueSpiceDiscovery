@@ -35,7 +35,7 @@ class SubpageListNode extends InternalLinkNode {
 	/**
 	 * @return array
 	 */
-	public function jsonSerialize() {
+	public function jsonSerialize(): array {
 		return parent::jsonSerialize() + [
 			'depth' => $this->depth
 		];
