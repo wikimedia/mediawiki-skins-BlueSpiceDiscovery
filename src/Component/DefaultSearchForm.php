@@ -46,7 +46,7 @@ class DefaultSearchForm extends Literal {
 		$params = [
 			'form-id' => 'searchform',
 			'form-class' => 'form-inline input-group',
-			'form-action' => $specialSearch->getFullUrl(),
+			'form-action' => $specialSearch->getFullURL(),
 			'button-id' => 'mw-searchButton',
 			'button-class' => 'input-group-text bi bi-search',
 			'button-title' => Message::newFromKey( 'bs-discovery-searchform-button-title' )->text(),
