@@ -1,43 +1,146 @@
 ( function( mw, $, d ){
 
-	if( !$( 'body' ).hasClass( 'ns-special' ) && window.innerWidth >= 767 ) {
-		if ( !$( '#title-section' ).is( ':visible' ) ) {
-			return;
+	$( window ).scroll( function() {
+		if( !isSpecialPage() && window.innerWidth >= 767  ) {
+			setSickyTitleforVerticalPosition();
+			handleVEToolbar();
 		}
-		$( window ).scroll( function() {
-			var top = $( '#wrapper' ).offset().top;
-			var windowTop = $(this).scrollTop();
-			var $title = $( '#title-line' );
-			var $titleContent = $( '#title-line > div' );
+	} );
 
-			if ( windowTop >= top ) {
-				$( '#title-section' ).css( 'padding-top', $title.height() );
-				$title.addClass( 'title-fixed' );
+	$( window ).on( 'resize', function( e ) {
+		var $titleLine = getTitleLine()
 
-				var titleWidth = $( '#main' ).outerWidth();
-				$titleContent.innerWidth( titleWidth );
+		if ( ( window.innerWidth < 766 ) && $titleLine.hasClass( 'title-fixed' ) ) {
+			disableStickyTitle();
+		} else if ( window.innerWidth >= 767 ) {
+			setSickyTitleforVerticalPosition();
+			handleVEToolbar();
+		}
 
+		var $titleContent = getTitleLineContent();
+		if ( $titleContent.length > 0 ) {
+			resizeTitleLineContent();
+		}
+	} );
+
+	function setSickyTitleforVerticalPosition() {
+		var windowTop = $( this ).scrollTop();
+		var top = getWrapperTopPosition();
+
+		if ( windowTop > top ) {
+			enableSitckyTitle();
+		} else {
+			disableStickyTitle();
+		}
+	}
+
+	function handleVEToolbar() {
+		if ( inEditMode() ) {
+			if ( isStickyTitle() ) {
+				setVEToolbarPosition();
 			} else {
-				$title.removeClass( 'title-fixed' );
-				$titleContent.removeAttr( 'style' );
-				$( '#title-section' ).removeAttr( 'style' );
+				resetVEToolbarPosition();
 			}
+		}
+	}
 
-			if ( $( '.ve-init-target-visual' ).length || $( '.ve-init-target-source' ).length ) {
-				var $toolbar =  $( '#content .ve-init-target >' +
-					'.ve-ui-toolbar > .oo-ui-toolbar-bar' );
-				var topHeight = $title.height() + top;
+	function isStickyTitle() {
+		var $titleLine = getTitleLine();
+		return $titleLine.hasClass( 'title-fixed' );
+	}
 
-				if ( $title.hasClass( 'title-fixed' ) ) {
-					$toolbar.css( 'top', topHeight );
-					$toolbar.css( 'position', 'fixed' );
-					$toolbar.width( $( '.ve-init-target' ).outerWidth() );
-					$( '#title-section' ).css( 'padding-bottom', $toolbar.height() );
-				} else {
-					$toolbar.removeAttr( "style" )
-				}
-			}
-		});
+	function isSpecialPage() {
+		return $( 'body' ).hasClass( 'ns-special' );
+	}
+
+	function getTitleSection() {
+		return $( '#title-section' );
+	}
+
+	function getTitleLine() {
+		return $( '#title-line' );
+	}
+
+	function getTitleLineContent() {
+		return $( '#title-line > div' );
+	}
+
+	function setTitleLineContentWidth( width ) {
+		var $titleLineContent = getTitleLineContent();
+		$titleLineContent.innerWidth( width );
+	}
+
+	function getWrapperTopPosition() {
+		return $( '#wrapper' ).offset().top;
+	}
+
+	function getMainWidth() {
+		return $( '#main' ).outerWidth();
+	}
+
+	function resizeTitleLineContent() {
+		var mainWidth = getMainWidth();
+		// MMV overlay triggers this resize method but with
+		// var mainWidth = 0
+		if ( mainWidth > 0 ) {
+			setTitleLineContentWidth( mainWidth );
+		}
+	}
+
+	function enableSitckyTitle() {
+		var $titleLine = getTitleLine();
+		$titleLine.addClass( 'title-fixed' );
+
+		var $titleSection = getTitleSection();
+		$titleSection.css( 'padding-top', $titleLine.height() );
+
+		resizeTitleLineContent();
+	}
+
+	function disableStickyTitle() {
+		var $titleLine = getTitleLine();
+		$titleLine.removeClass( 'title-fixed' );
+
+		var $titleSection = getTitleSection();
+		$titleSection.removeAttr( 'style' );
+
+		var $titleLineContent = getTitleLineContent();
+		$titleLineContent.removeAttr( 'style' );
+	}
+
+	function getVEToolbar() {
+		return  $( '#content .ve-init-target >.ve-ui-toolbar > .oo-ui-toolbar-bar' );
+	}
+
+	function setVEToolbarPosition() {
+		var top = getWrapperTopPosition();
+		var mainWidth = getMainWidth();
+		var $titleLine = getTitleLine();
+		var topPosition = $titleLine.height() + top;
+
+		var $toolbar = getVEToolbar();
+		$toolbar.css( 'top', topPosition );
+		$toolbar.css( 'position', 'fixed' );
+		$toolbar.width( mainWidth );
+
+		var $titleSection = getTitleSection();
+		$titleSection .css( 'padding-bottom', $toolbar.height() );
+	}
+
+	function resetVEToolbarPosition() {
+		var $toolbar = getVEToolbar();
+		$toolbar.removeAttr( "style" );
+	}
+
+	function inEditMode() {
+		var targetVisual = $( '.ve-init-target-visual' );
+		var targetSource = $( '.ve-init-target-source' );
+
+		if ( targetVisual.length || targetSource.length ) {
+			return true;
+		}
+
+		return false;
 	}
 
 } )( mediaWiki, jQuery, document );
