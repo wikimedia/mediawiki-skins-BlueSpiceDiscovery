@@ -71,7 +71,7 @@ abstract class EnhancedSidebarNode extends MenuNode {
 		return $data;
 	}
 
-	public function jsonSerialize() {
+	public function jsonSerialize(): array {
 		return [
 			'type' => $this->getType(),
 			'text' => $this->text,

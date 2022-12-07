@@ -32,7 +32,7 @@ class ExternalLinkNode extends EnhancedSidebarNode {
 	/**
 	 * @return array
 	 */
-	public function jsonSerialize() {
+	public function jsonSerialize(): array {
 		return parent::jsonSerialize() + [
 			'href' => $this->href,
 		];
