@@ -85,5 +85,17 @@
 	"menueditor-ui-enhanced-sidebar-external-link-label-edit": "Externe koppeling",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "Koptekst",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help": "Tekst om als kop weer te geven; kan een parserfunctie bevatten",
-	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Icon class"
+	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Icon class",
+	"bs-discovery-navbar-global-actions-manager-text": "Beheer",
+	"bs-discovery-breadcrumb-nav-node-title": "$1 openen",
+	"bs-discovery-breadcrumb-nav-node-aria-label": "$1 openen",
+	"ns-main-label": "Pagina's",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Hoofdmenu",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "Pagina",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-depth": "Diepte",
+	"menueditor-ui-enhanced-sidebar-internal-link-label-edit": "Interne koppeling",
+	"menueditor-ui-enhanced-sidebar-external-link-label": "Externe koppeling",
+	"menueditor-ui-enhanced-sidebar-internal-link-label": "Interne koppeling",
+	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Nieuw paneel toevoegen",
+	"bs-discovery-page-does-not-exist-title": "$1 (de pagina bestaat niet)"
 }

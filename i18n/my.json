@@ -56,5 +56,6 @@
 	"bs-discovery-personalurl-mycontributions-text": "ဆောင်ရွက်ချက်များ",
 	"bs-discovery-personalurl-userpage-text": "ပရိုဖိုင်",
 	"bs-discovery-globalactionentry-templates-text": "တမ်းပလိတ်များ",
-	"bs-discovery-globalactionentry-templates-title": "တမ်းပလိတ်အားလုံး"
+	"bs-discovery-globalactionentry-templates-title": "တမ်းပလိတ်အားလုံး",
+	"bs-discovery-page-does-not-exist-title": "$1 (စာမျက်နှာ မရှိသေးပါ)"
 }
