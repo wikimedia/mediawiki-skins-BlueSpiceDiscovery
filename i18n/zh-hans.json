@@ -5,6 +5,7 @@
 			"Cwek",
 			"GuoPC",
 			"Lakejason0",
+			"LittlePaw365",
 			"MangoFanFanw",
 			"SolidBlock",
 			"StarrySky",
@@ -143,7 +144,7 @@
 	"menueditor-ui-enhanced-sidebar-internal-link-label": "内部链接",
 	"menueditor-ui-enhanced-sidebar-subpage-tree-label": "子页面树",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "标题文本",
-	"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help": "要显示为标题的文本；可以包含解析器函数",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help": "显示为标题的文字，可含有一个解析器函数",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS类",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "图标类",
 	"bs-discovery-page-does-not-exist-title": "$1（页面不存在）"
