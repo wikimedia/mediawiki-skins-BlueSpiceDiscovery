@@ -117,7 +117,8 @@ class LastEditInfo extends Literal {
 			[
 				'title' => $timestamp,
 				'aria-label' => $ariaLabel,
-				'role' => 'link'
+				'role' => 'link',
+				'rel' => 'nofollow',
 			],
 			[
 				'oldid' => $revision->getId(),
