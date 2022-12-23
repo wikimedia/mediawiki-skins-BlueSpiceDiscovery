@@ -7,7 +7,7 @@ use Exception;
 use ExtensionRegistry;
 use Html;
 use MediaWiki\MediaWikiServices;
-use Wikimedia\ObjectFactory;
+use Wikimedia\ObjectFactory\ObjectFactory;
 
 /**
  * @package MediaWiki\Skins\WikimediaApiPortal
