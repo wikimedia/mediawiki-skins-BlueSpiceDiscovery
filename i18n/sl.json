@@ -58,5 +58,6 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Dodaj nov panel",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "Razredi CSS",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Razred ikon",
-	"bs-discovery-page-does-not-exist-title": "$1 (stran ne obstaja)"
+	"bs-discovery-page-does-not-exist-title": "$1 (stran ne obstaja)",
+	"bs-discovery-sidebar-secondary-share-sharebymail-title": "Delite to stran po e-pošti"
 }
