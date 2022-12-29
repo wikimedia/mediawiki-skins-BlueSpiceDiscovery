@@ -51,8 +51,7 @@ class AddSidebarLinks implements SidebarBeforeOutputHook {
 			// `WebRequest::getRequestURL` may fail in some cases (e.g. UnitTests)
 			$requestUrl = $skin->getConfig()->get( 'Server' )
 				. $skin->getRequest()->getRequestURL();
-		}
-		catch ( MWException $ex ) {
+		} catch ( MWException $ex ) {
 			$requestUrl = $title->getLocalURL();
 		}
 

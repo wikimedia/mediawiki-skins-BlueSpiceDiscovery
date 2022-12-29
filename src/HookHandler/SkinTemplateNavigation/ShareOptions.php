@@ -33,8 +33,7 @@ class ShareOptions implements SkinTemplateNavigation__UniversalHook {
 			// `WebRequest::getRequestURL` may fail in some cases (e.g. UnitTests)
 			$requestUrl = $sktemplate->getConfig()->get( 'Server' )
 				. $sktemplate->getRequest()->getRequestURL();
-		}
-		catch ( MWException $ex ) {
+		} catch ( MWException $ex ) {
 			$requestUrl = $title->getFullURL();
 		}
 
