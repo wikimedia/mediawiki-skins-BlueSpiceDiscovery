@@ -59,5 +59,10 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "Razredi CSS",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Razred ikon",
 	"bs-discovery-page-does-not-exist-title": "$1 (stran ne obstaja)",
-	"bs-discovery-sidebar-secondary-share-sharebymail-title": "Delite to stran po e-pošti"
+	"bs-discovery-sidebar-secondary-share-sharebymail-title": "Delite to stran po e-pošti",
+	"bs-discovery-navbar-user-button-aria-label": "Uporabniški meni",
+	"bs-discovery-searchform-button-title": "Poišči zdaj",
+	"bs-discovery-searchform-button-aria-label": "Išči zdaj",
+	"bs-discovery-last-edit-by-anon-user": "Anonimni uporabnik",
+	"bs-discovery-last-edit-by-system-user": "sistemskki uporabnik"
 }
