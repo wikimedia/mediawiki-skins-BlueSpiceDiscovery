@@ -1,96 +1,34 @@
 ( function( d, $, mw ) {
-
-	$( function(e) {
-		$( '#sb-tgl-pri' ).removeAttr( 'disabled' );
-		var $sbPrimaryToggle = $( '.sb-toggle[aria-controls=sb-pri-cnt]' );
-		var $sbPrimary = $( '#sb-pri-cnt' );
-		if ( $( window ).width() >= 1400 && discovery_cookie.get( 'sb-pri-cnt' ) != 'false' ) {
-			discovery_cookie.set( 'sb-pri-cnt', 'true' );
-			$sbPrimary.addClass( 'show' );
-			$sbPrimaryToggle.attr( 'title',
-				mw.message( 'bs-discovery-sidebar-primary-toggle-hide-title' ).text()
-			);
-			$sbPrimaryToggle.attr( 'aria-label',
-				mw.message( 'bs-discovery-sidebar-primary-toggle-hide-aria-label' ).text()
-			);
-			$sbPrimaryToggle.attr( 'aria-expanded', 'true' );
-		}
-		if ( $( window ).width() >= 1400 && $( '#book-navigation-panel.active').length ) {
-			discovery_cookie.set( 'sb-pri-cnt', 'true' );
-			$sbPrimary.addClass( 'show' );
-			$sbPrimaryToggle.attr( 'title',
-				mw.message( 'bs-discovery-sidebar-primary-toggle-hide-title' ).text()
-			);
-			$sbPrimaryToggle.attr( 'aria-label',
-				mw.message( 'bs-discovery-sidebar-primary-toggle-hide-aria-label' ).text()
-			);
-			$sbPrimaryToggle.attr( 'aria-expanded', 'true' );
-		}
-		if ( $( window ).width() < 1400 ) {
-			$sidebars = $( '.sb-toggle[aria-expanded=true]' );
-			for ( var i = 0; i < $sidebars.length; i++ ) {
-				$sidebars[i].click();
-			}
-		}
-		if( $( '#sb-sec-cnt.show' ).length ) {
-			$( '#back-to-top' ).addClass( 'collapsed' );
-		}
-
-	});
+	init();
 
 	$( d ).on( 'click', '.sb-toggle', function( e ) {
 		// TODO: This has to be improved. It will only work as long
 		// bootstrap scripts run before this script runs
 		e.preventDefault();
 		e.stopPropagation();
-		var controls = $( this ).attr( 'aria-controls' );
-		var sidebarMap = 'undefined';
-		if ( controls === 'sb-pri-cnt' ) {
-			sidebarMap = 'primary';
-		}
-		if ( controls === 'sb-sec-cnt' ) {
-			sidebarMap = 'secondary';
-		}
 
-		if ( sidebarMap != 'undefined' ) {
+		var controls = $( this ).attr( 'aria-controls' );
+
+		if ( controls === 'sb-pri-cnt' || controls === 'sb-sec-cnt' ) {
 			var expanded = $( this ).attr( 'aria-expanded' );
 			if ( expanded === 'true' ) {
 				if ( $( window ).width() < 1400 ) {
 					$( 'body ').css( 'overflow', '' );
 				}
-				$( '.sb-toggle[aria-controls='+controls+']' ).attr(
-					'title',
-					mw.message( 'bs-discovery-sidebar-'+sidebarMap+'-toggle-show-title' ).text()
-				);
-				$( '.sb-toggle[aria-controls='+controls+']' ).attr(
-					'aria-label',
-					mw.message( 'bs-discovery-sidebar-'+sidebarMap+'-toggle-show-aria-label' ).text()
-				);
 
-				discovery_cookie.set( controls, 'false' );
-				$( this ).attr( 'aria-expanded', 'false' );
-				$( '#' + controls ).removeClass( 'show' );
+				toggleSidebar( controls );
+
 				if ( controls === 'sb-sec-cnt' ) {
 					$( '#back-to-top' ).removeClass( 'collapsed' );
 				}
 			}
 			if ( expanded === 'false' ) {
 				if ( $( window ).width() < 1400 ) {
-					$sidebar = $( '.sb-toggle[aria-expanded=true]' );
-					$sidebar.click();
 					$( 'body ').css( 'overflow', 'hidden' );
 				}
-				$( '.sb-toggle[aria-controls='+controls+']' ).attr(
-					'title',
-					mw.message( 'bs-discovery-sidebar-'+sidebarMap+'-toggle-hide-title' ).text()
-				);
-				$( '.sb-toggle[aria-controls='+controls+']' ).attr(
-					'aria-label',
-					mw.message( 'bs-discovery-sidebar-'+sidebarMap+'-toggle-hide-aria-label' ).text()
-				);
-				discovery_cookie.set( controls, 'true' );
-				$( '#' + controls ).addClass( 'show' );
-				$( this ).attr( 'aria-expanded', 'true' );
+
+				toggleSidebar( controls );
+
 				if ( controls === 'sb-sec-cnt' ) {
 					$( '#back-to-top' ).addClass( 'collapsed');
 				}
@@ -98,102 +36,221 @@
 		}
 	});
 
+
 	$( d ).on( 'click', '#full-screen-btn', function( e ){
 		e.preventDefault();
 
 		if ( $( this ).hasClass( 'fs-mode-enabled' ) ) {
-			$( this ).removeClass( 'fs-mode-enabled' );
-			$( this ).removeClass( 'bi-chevron-contract' );
-			$( this ).addClass( 'bi-chevron-expand' );
-			$( this ).attr(
-				'title',
-				mw.message( 'bs-discovery-navbar-full-screen-button-enable-title' ).text()
-			);
-			$( this ).attr(
-				'aria-label',
-				mw.message( 'bs-discovery-navbar-full-screen-button-enable-aria-label' ).text()
-			);
+			disableFullscreenMode( this );
+		} else {
+			enableFullscreenMode( this );
+		}
+	} );
 
-			$( 'body' ).removeClass( 'fs-mode-enabled' );
-			discovery_cookie.set( 'fsMode', 'false' );
+	function enableFullscreenMode( element ) {
+		$( element ).addClass( 'fs-mode-enabled' );
+		$( element ).removeClass( 'bi-chevron-expand' );
+		$( element ).addClass( 'bi-chevron-contract' );
+		$( element ).attr(
+			'title',
+			mw.message( 'bs-discovery-navbar-full-screen-button-disable-title' ).text()
+		);
+		$( element ).attr(
+			'aria-label',
+			mw.message( 'bs-discovery-navbar-full-screen-button-disable-aria-label' ).text()
+		);
 
-			var classes = discovery_cookie.get( 'bodyClasses' );
-			if ( classes ) {
-				var classes_obj = JSON.parse( classes );
-				if ( classes_obj.hasOwnProperty( 'fsMode' ) ) {
-					delete classes_obj.fsMode;
-					discovery_cookie.set(
-						'bodyClasses',
-						JSON.stringify( classes_obj )
-					);
+		fullscreenModePreserveSidebarState();
+
+		hideSidebarPrimary();
+		hideSidebarSecondary();
+
+		$( 'body' ).addClass( 'fs-mode-enabled' );
+		addToBodyClassesCookie( { 'fsMode': 'fs-mode-enabled' } );
+
+		discovery_cookie.set( 'fsMode', 'true' );		
+	}
+
+	function disableFullscreenMode( element ) {
+		$( element ).removeClass( 'fs-mode-enabled' );
+		$( element ).removeClass( 'bi-chevron-contract' );
+		$( element ).addClass( 'bi-chevron-expand' );
+		$( element ).attr(
+			'title',
+			mw.message( 'bs-discovery-navbar-full-screen-button-enable-title' ).text()
+		);
+		$( element ).attr(
+			'aria-label',
+			mw.message( 'bs-discovery-navbar-full-screen-button-enable-aria-label' ).text()
+		);
+
+		fullscreenModeRestoreSidebarState();
+
+		$( 'body' ).removeClass( 'fs-mode-enabled' );
+		removeFromBodyClassesCookie( 'fsMode' );
+
+		discovery_cookie.set( 'fsMode', 'false' );
+	}
+
+	function fullscreenModePreserveSidebarState() {
+		var preserve_obj = {};
+
+		var sbPriState = discovery_cookie.get( 'sb-pri-cnt' );
+		Object.assign( preserve_obj, { 'sb-pri-cnt': sbPriState } );
+
+		var sbSecState = discovery_cookie.get( 'sb-sec-cnt' );
+		Object.assign( preserve_obj, { 'sb-sec-cnt': sbSecState } );
+
+		discovery_cookie.set(
+			'fsPreserve',
+			JSON.stringify( preserve_obj )
+		);
+	}
+
+	function fullscreenModeRestoreSidebarState() {
+		var preserve = discovery_cookie.get( 'fsPreserve' );
+		var preserve_obj = {};
+		if ( preserve ) {
+			preserve_obj = JSON.parse( preserve );
+
+			for ( var id in preserve_obj ) {
+				var sbState = discovery_cookie.get( id );
+
+				if ( sbState === 'false' ) {
+					toggleSidebar( id, preserve_obj[id] );
+				} else {
+					// if the sidebar was collapsed but is open now it should stay open
+					toggleSidebar( id, sbState );
 				}
 			}
-		} else {
-			$( this ).addClass( 'fs-mode-enabled' );
-			$( this ).removeClass( 'bi-chevron-expand' );
-			$( this ).addClass( 'bi-chevron-contract' );
-			$( this ).attr(
-				'title',
-				mw.message( 'bs-discovery-navbar-full-screen-button-disable-title' ).text()
-			);
-			$( this ).attr(
-				'aria-label',
-				mw.message( 'bs-discovery-navbar-full-screen-button-disable-aria-label' ).text()
-			);
+		}
+	}
 
-			$( 'body' ).addClass( 'fs-mode-enabled' );
-			discovery_cookie.set( 'fsMode', 'true' );
+	function addToBodyClassesCookie( obj ) {
+		var classes_obj = {};
+		var classes = discovery_cookie.get( 'bodyClasses' );
+		if ( classes ) {
+			classes_obj = JSON.parse( classes );
+		}
 
-			var classes = discovery_cookie.get( 'bodyClasses' );
-			if ( classes ) {
-				var classes_obj = JSON.parse( classes );
-			} else {
-				var classes_obj = {};
-			}
-			Object.assign( classes_obj, { 'fsMode': 'fs-mode-enabled' } );
+		Object.assign( classes_obj, obj );
+
+		discovery_cookie.set(
+			'bodyClasses',
+			JSON.stringify( classes_obj )
+		);
+	}
+
+	function removeFromBodyClassesCookie( key ) {
+		var classes = discovery_cookie.get( 'bodyClasses' );
+
+		if ( classes ) {
+			var classes_obj = JSON.parse( classes );
+
+			if ( classes_obj.hasOwnProperty( key ) ) {
+				delete classes_obj[key];
+
 				discovery_cookie.set(
 					'bodyClasses',
 					JSON.stringify( classes_obj )
 				);
-		}
-
-		// Hide sidebars
-		var toggleBtn = $( '.sb-toggle' );
-		for ( var i = 0; i < toggleBtn.length; i ++) {
-			if ( $( toggleBtn[i] ).attr( 'aria-controls' ) === null ) {
-				continue;
-			}
-
-			if ( $( toggleBtn ).attr( 'aria-expanded' ) === null ) {
-				continue;
-			}
-
-			var controls = $( toggleBtn[i] ).attr( 'aria-controls' );
-			var sidebarMap = 'undefined';
-			if ( controls === 'sb-pri-cnt' ) {
-				sidebarMap = 'primary';
-			}
-			else if ( controls === 'sb-sec-cnt' ) {
-				sidebarMap = 'secondary';
-			}
-			else {
-				continue;
-			}
-
-			var expanded = $( toggleBtn[i] ).attr( 'aria-expanded' );
-			if ( expanded === 'true' ) {
-				$( toggleBtn[i] ).click();
 			}
 		}
-	} );
+	}
+
+	function init() {
+		if ( $( window ).width() >= 1400 && discovery_cookie.get( 'sb-pri-cnt' ) !== 'false' ) {
+			showSidebarPrimary();
+		}
+		if ( $( window ).width() >= 1400 && $( '#book-navigation-panel.active').length ) {
+			showSidebarPrimary();
+		}
+		if ( $( window ).width() < 1400 ) {
+			hideSidebarPrimary();
+			hideSidebarSecondary();
+		}
+		if( $( '#sb-sec-cnt.show' ).length ) {
+			$( '#back-to-top' ).addClass( 'collapsed' );
+		}
+	}
+
+	function toggleSidebar( id, expand ) {
+		var $toggleBtns = $( '.sb-toggle[aria-controls='+id+']' );
+		var $sidebarCnt = $( '#'+id );
+
+		// Allow only 'undefinded' or strings 'true' or 'false' 
+		if ( expand !== 'true' && expand !== 'false' ) {
+			expand = undefined
+		}
+
+		if ( expand === undefined ) {
+			expand = 'true';
+			if ( $sidebarCnt.hasClass( 'show' ) ) {
+				expand = 'false';
+			}
+		}
+
+		var state = '';
+		if ( expand ===  'true' ) {
+			$sidebarCnt.removeClass( 'collapse' );
+			$sidebarCnt.addClass( 'show' );
+			state = 'hide';
+			
+		} else {
+			$sidebarCnt.removeClass( 'show' );
+			$sidebarCnt.addClass( 'collapse' );
+			state = 'show';
+		}
+
+		var name = '';
+		if ( id === 'sb-pri-cnt' ) {
+			name = 'primary';
+		}
+		if ( id === 'sb-sec-cnt' ) {
+			name = 'secondary';
+		}
+
+		if ( ( name !== '' ) && ( $toggleBtns.length > 0  ) ) {
+			$toggleBtns.attr( 'title',
+				mw.message( 'bs-discovery-sidebar-'+name+'-toggle-'+state+'-title' ).text()
+			);
+			$toggleBtns.attr( 'aria-label',
+				mw.message( 'bs-discovery-sidebar-'+name+'-toggle-'+state+'-aria-label' ).text()
+			);
+
+			$toggleBtns.attr( 'aria-expanded', expand );
+		}
+
+		discovery_cookie.set( id, expand );
+	}
+
+	function showSidebarPrimary() {
+		toggleSidebar( 'sb-pri-cnt', 'true' );
+	}
+
+	function hideSidebarPrimary() {
+		toggleSidebar( 'sb-pri-cnt', 'false' );
+	}
+
+	function showSidebarSecondary() {
+		toggleSidebar( 'sb-sec-cnt', 'true' );
+	}
+
+	function hideSidebarSecondary() {
+		toggleSidebar( 'sb-sec-cnt', 'false' );
+	}
+
+	/*
+	// This click handler should be removed. On page load this is done in init method.
+	// and may cause an issue with tree component.
 
 	$( d ).on( 'click', '#sb-pri-cnt, #sb-sec-cnt', function( e ) {
 		if ( $( window ).width() < 1400 ) {
-			$sidebars = $( '.sb-toggle[aria-expanded=true]' );
-			for ( var i = 0; i < $sidebars.length; i++ ) {
-				$sidebars[i].click();
-			}
+			hideSidebarPrimary();
+			hideSidebarSecondary();
 		}
 	});
+	*/
+
 
 })( document, jQuery, mediaWiki );
