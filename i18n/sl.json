@@ -64,5 +64,6 @@
 	"bs-discovery-searchform-button-title": "Poišči zdaj",
 	"bs-discovery-searchform-button-aria-label": "Išči zdaj",
 	"bs-discovery-last-edit-by-anon-user": "Anonimni uporabnik",
-	"bs-discovery-last-edit-by-system-user": "sistemskki uporabnik"
+	"bs-discovery-last-edit-by-system-user": "sistemski uporabnik",
+	"bs-discovery-dialog-detailssectionheading-toolbox": "Orodjarna"
 }
