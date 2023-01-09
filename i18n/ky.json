@@ -4,5 +4,7 @@
 			"Bosogo"
 		]
 	},
-	"bs-discovery-navbar-languages-button-text": "Тилдер"
+	"bs-discovery-navbar-languages-button-text": "Тилдер",
+	"bs-discovery-navbar-global-actions-tool-text": "Куралдар",
+	"bs-discovery-sidebar-details-heading": "Чоо-жайы"
 }
