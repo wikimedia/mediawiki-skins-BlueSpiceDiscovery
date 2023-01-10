@@ -393,7 +393,8 @@
 				"js/AttentionIndicator.js",
 				"js/StickyTitle.js",
 				"js/Jumpmarks.js",
-				"js/MobileContentTables.js"
+				"js/MobileContentTables.js",
+				"js/dblClickEdit.js"
 			],
 			"messages": [
 				"bs-discovery-navbar-full-screen-button-enable-title",
