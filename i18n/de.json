@@ -62,6 +62,7 @@
 	"bs-discovery-title-last-edit-info": "Zuletzt bearbeitet $1 <br /> von $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Zuletzt bearbeitet $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Zuletzt bearbeitet von $1",
+	"bs-discovery-last-edit-by-anon-user": "Anonymer Benutzer",
 	"bs-discovery-title-action-edit-button-title": "Seite bearbeiten",
 	"bs-discovery-title-action-edit-button-aria-label": "Seite bearbeiten",
 	"bs-discovery-tabpanel-main-text": "Hauptnavigation",
@@ -157,5 +158,6 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help": "Text, der als Überschrift angezeigt werden soll; kann eine Parser-Funktion enthalten",
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Neues Panel hinzufügen",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS-Klassen",
-	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Icon-Klasse"
+	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Icon-Klasse",
+	"bs-discovery-page-does-not-exist-title": "$1 (Seite existiert nicht)"
 }
