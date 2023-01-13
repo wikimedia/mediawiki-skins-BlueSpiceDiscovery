@@ -158,5 +158,7 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help": "Text, der als Überschrift angezeigt werden soll; kann eine Parser-Funktion enthalten",
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Neues Panel hinzufügen",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS-Klassen",
-	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Icon-Klasse"
+	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Icon-Klasse",
+	"bs-discovery-last-edit-by-anon-user": "Anonymer Benutzer",
+	"bs-discovery-page-does-not-exist-title": "$1 (Seite existiert nicht)"
 }
