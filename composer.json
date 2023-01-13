@@ -48,5 +48,10 @@
 			"Skin\\BlueSpiceDiscovery\\Tests\\": "tests/phpunit",
 			"Skin\\BlueSpiceDiscovery\\": "src"
 		}
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true
+		}
 	}
 }
