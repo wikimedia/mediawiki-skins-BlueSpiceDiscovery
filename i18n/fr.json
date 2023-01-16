@@ -4,6 +4,7 @@
 			"Ajeje Brazorf",
 			"Cigaryno",
 			"Gomoko",
+			"McDutchie",
 			"Verdy p"
 		]
 	},
@@ -12,12 +13,12 @@
 	"bs-discovery-skip-links-navigation-aria-label": "Sauter aux liens",
 	"bs-discovery-skip-to-navbar-primary-text": "Sauter à la barre d’entête",
 	"bs-discovery-skip-to-sidebar-primary-text": "Sauter à la navigation principale",
-	"bs-discovery-skip-to-sidebar-secondary-text": "Sauter à la page d’outils",
+	"bs-discovery-skip-to-sidebar-secondary-text": "Sauter aux outils de la page",
 	"bs-discovery-skip-to-main-text": "Sauter à la zone de travail",
 	"bs-discovery-back-to-top-text": "Retour au début",
 	"bs-discovery-back-to-top-aria-label": "Retour au début",
 	"bs-discovery-navbar-aria-label": "Barre d’entête",
-	"bs-discovery-navbar-search-form-input-aria-label": "Entrée du formulaire de saisie",
+	"bs-discovery-navbar-search-form-input-aria-label": "Entrée du formulaire de recherche",
 	"bs-discovery-navbar-user-button-title": "Menu utilisateur",
 	"bs-discovery-navbar-user-button-aria-label": "Menu utilisateur",
 	"bs-discovery-navbar-user-button-personal-menu-text": "Outils personnels",
