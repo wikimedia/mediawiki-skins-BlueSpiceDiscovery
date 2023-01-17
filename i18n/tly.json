@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Patriot Kur"
+			"Patriot Kur",
+			"Patriot Kor"
 		]
 	},
+	"bs-discovery-breadcrumb-nav-node-portal-page": "Sərlohə",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "Səhifə"
 }
