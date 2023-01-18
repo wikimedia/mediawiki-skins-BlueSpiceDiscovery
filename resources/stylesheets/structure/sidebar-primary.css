@@ -25,6 +25,16 @@
 	border-radius: 5px;
 	border: 3px solid transparent;
 }
+#sb-pri #enh-mw-sb-edit-sidebar-link {
+	visibility: hidden;
+	float: right;
+	padding: 0 1em;
+	text-align: right;
+	width: 100%;
+}
+#sb-pri .enhanced-sidebar-cnt:hover #enh-mw-sb-edit-sidebar-link {
+	visibility: visible;
+}
 
 @media ( max-width: 767.99px ) {
 	#sb-pri {

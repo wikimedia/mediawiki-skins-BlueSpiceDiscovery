@@ -56,13 +56,13 @@ abstract class EnhancedSidebarNode extends MenuNode {
 	 */
 	public function treeSerialize(): array {
 		$data = [
-			'name' => $this->generateId(),
+			'id' => $this->generateId(),
 			'text' => $this->getDisplayText(),
 		];
 
-		$classes = implode( ',', $this->getOutputCssClasses() );
-		if ( $classes !== '' ) {
-			$data['class'] = $classes;
+		$classes = $this->getOutputCssClasses();
+		if ( !empty( $classes ) ) {
+			$data['classes'] = $classes;
 		}
 		if ( $this->iconCls ) {
 			$data['icon-cls'] = $this->iconCls;

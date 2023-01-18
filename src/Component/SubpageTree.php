@@ -16,20 +16,6 @@ class SubpageTree extends SimpleTreeContainer {
 	/**
 	 * @inheritDoc
 	 */
-	public function getId(): string {
-		return 'subpage-tree';
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	public function getClasses(): array {
-		return [ 'w-100', 'bg-transp' ];
-	}
-
-	/**
-	 * @inheritDoc
-	 */
 	public function getSubComponents(): array {
 		$services = MediaWikiServices::getInstance();
 		$treeDataGenerator = $services->get( 'MWStakeCommonUITreeDataGenerator' );
