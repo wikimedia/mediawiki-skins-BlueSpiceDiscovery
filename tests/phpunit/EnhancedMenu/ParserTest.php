@@ -10,6 +10,7 @@ use MediaWiki\Revision\MutableRevisionRecord;
 use MWException;
 use MWStake\MediaWiki\Lib\Nodes\INodeSource;
 use PHPUnit\Framework\TestCase;
+use Title;
 
 /**
  * @covers \BlueSpice\Discovery\EnhancedSidebar\Parser
@@ -60,7 +61,8 @@ class ParserTest extends TestCase {
 			]
 		];
 
-		$revision = new MutableRevisionRecord( $this->createMock( \Title::class ) );
+		$title = Title::newFromText( 'testTitle' );
+		$revision = new MutableRevisionRecord( $title );
 		$parser = new Parser( $revision, [ $this->getProcessor() ] );
 		$parser->addNodesFromData( $data );
 		$mutated = $parser->getMutatedData();
