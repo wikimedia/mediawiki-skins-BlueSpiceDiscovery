@@ -152,5 +152,8 @@
 	"bs-discovery-config-mainlinks-recentchanges-label": "Prikaže vstopno točko »Zadnje spremembe«",
 	"bs-discovery-config-mainlinks-recentchanges-help": "Prikaži povezavo vstopne točke »Zadnje spremembe« v navigacijskem panelu levo",
 	"bs-discovery-personalurl-userpage-text": "Profil",
-	"bs-discovery-globalactionentry-templates-title": "Vse predloge"
+	"bs-discovery-globalactionentry-templates-title": "Vse predloge",
+	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigacija",
+	"bs-discovery-enhanced-sidebar-edit-button-title": "Uredi ta meni",
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Uredi $1"
 }

@@ -111,5 +111,7 @@
 	"ns-main-label": "Страницы",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Расширенная боковая панель MediaWiki",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Боковое меню MediaWiki с расширенными функциями",
-	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Главное меню"
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Главное меню",
+	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Навигация",
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Редактировать $1"
 }
