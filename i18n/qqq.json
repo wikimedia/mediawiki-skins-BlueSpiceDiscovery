@@ -155,10 +155,6 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "Field label",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Field label",
 	"bs-discovery-page-does-not-exist-title": "Text for title attribute of a link with additional information that page does not exist\n{{Identical|Red-link-title}}",
-	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Label for a dropdown entry in configuration manager for a enhaced mediawiki sideerbar menu",
-	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Description text for a dropdown entry in configuration manager for the enhaced mediawiki sidebar menu",
-	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Label for panel header with a  enhaced mediawiki sidebar menu",
-	"bs-discovery-page-does-not-exist-title": "Text for title attribute of a link with additional information that page does not exist\n{{Identical|Red-link-title}}",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Text for a menu heading",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Title text for a link to edit the menu source page",
 	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Aria label for a link to edit the menu source page"

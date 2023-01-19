@@ -159,5 +159,8 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Ajouter un nouveau panneau",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "Classes CSS",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Classe d’icônes",
-	"bs-discovery-page-does-not-exist-title": "$1 (page inexistante)"
+	"bs-discovery-page-does-not-exist-title": "$1 (page inexistante)",
+	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigation",
+	"bs-discovery-enhanced-sidebar-edit-button-title": "Modifier ce menu",
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Modifier $1"
 }

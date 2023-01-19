@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"MITO",
+			"Nike",
 			"Rönttönen"
 		]
 	},
@@ -82,5 +83,6 @@
 	"bs-discovery-personalurl-userpage-text": "Profiili",
 	"bs-discovery-globalactionentry-templates-text": "Mallineet",
 	"bs-discovery-globalactionentry-templates-title": "Kaikki mallineet",
-	"bs-discovery-last-edit-by-system-user": "järjestelmän käyttäjä"
+	"bs-discovery-last-edit-by-system-user": "järjestelmän käyttäjä",
+	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigaatio"
 }
