@@ -3,12 +3,10 @@
  */
 ( function( mw, $, d ){
 	if ( Number( mw.user.options.get( 'editondblclick' ) ) !== 1 ) {
-		console.log('2');
 		return;
 	}
 
 	if ( mw.config.get( 'wgAction' ) !== 'view' ) {
-		console.log('4');
 		return;
 	}
 
