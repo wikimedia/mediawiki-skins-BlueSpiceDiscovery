@@ -152,5 +152,8 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "הוספת חלונית חדשה",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "מחלקות CSS",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "מחלקת סמל",
-	"bs-discovery-page-does-not-exist-title": "$1 (הדף אינו קיים)"
+	"bs-discovery-page-does-not-exist-title": "$1 (הדף אינו קיים)",
+	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "ניווט",
+	"bs-discovery-enhanced-sidebar-edit-button-title": "עריכת התפריט הזה",
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "עריכת $1"
 }
