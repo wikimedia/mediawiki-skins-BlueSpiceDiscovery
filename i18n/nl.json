@@ -3,6 +3,7 @@
 		"authors": [
 			"AHendriksen-collecties",
 			"Mainframe98",
+			"McDutchie",
 			"Nickthijssen1994"
 		]
 	},
@@ -97,5 +98,8 @@
 	"menueditor-ui-enhanced-sidebar-external-link-label": "Externe koppeling",
 	"menueditor-ui-enhanced-sidebar-internal-link-label": "Interne koppeling",
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Nieuw paneel toevoegen",
-	"bs-discovery-page-does-not-exist-title": "$1 (de pagina bestaat niet)"
+	"bs-discovery-page-does-not-exist-title": "$1 (de pagina bestaat niet)",
+	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigatie",
+	"bs-discovery-enhanced-sidebar-edit-button-title": "Dit menu bewerken",
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 bewerken"
 }

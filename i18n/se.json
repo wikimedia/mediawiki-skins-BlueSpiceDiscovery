@@ -10,5 +10,7 @@
 	"bs-discovery-navbar-user-login-text": "Čálit sisa",
 	"bs-discovery-navbar-user-login-title": "Čálit sisa",
 	"bs-discovery-navbar-user-login-aria-label": "Čálit sisa",
-	"bs-discovery-last-edit-by-anon-user": "Anonyma geavaheaddji"
+	"bs-discovery-last-edit-by-anon-user": "Anonyma geavaheaddji",
+	"bs-discovery-navbar-language-button-title": "Vállje giela",
+	"bs-discovery-navbar-language-button-aria-label": "Vállje giela"
 }
