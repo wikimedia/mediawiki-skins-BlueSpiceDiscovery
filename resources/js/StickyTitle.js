@@ -78,6 +78,10 @@
 		return $( '#main' ).outerWidth();
 	}
 
+	function getContentWidth() {
+		return $( 'main' ).outerWidth();
+	}
+
 	function resizeTitleLineContent() {
 		var mainWidth = getMainWidth();
 		// MMV overlay triggers this resize method but with
@@ -114,7 +118,7 @@
 
 	function setVEToolbarPosition() {
 		var top = getWrapperTopPosition();
-		var mainWidth = getMainWidth();
+		var mainWidth = getContentWidth();
 		var $titleLine = getTitleLine();
 		var topPosition = $titleLine.height() + top;
 
