@@ -153,5 +153,8 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Lägg till ny panel",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS-klasser",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Ikonklass",
-	"bs-discovery-page-does-not-exist-title": "$1 (sidan existerar inte)"
+	"bs-discovery-page-does-not-exist-title": "$1 (sidan existerar inte)",
+	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigering",
+	"bs-discovery-enhanced-sidebar-edit-button-title": "Redigera denna meny",
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Redigera $1"
 }

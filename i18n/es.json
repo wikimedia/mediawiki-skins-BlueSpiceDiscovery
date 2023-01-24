@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"La Mantis"
+			"La Mantis",
+			"JDíaz32"
 		]
 	},
-	"ns-main-label": "Páginas"
+	"ns-main-label": "Páginas",
+	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navegación",
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Editar $1"
 }

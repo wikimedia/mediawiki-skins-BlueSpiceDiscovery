@@ -94,5 +94,7 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "제목",
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "새 패널 추가",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS 클래스",
-	"bs-discovery-page-does-not-exist-title": "$1 (없는 문서)"
+	"bs-discovery-page-does-not-exist-title": "$1 (없는 문서)",
+	"bs-discovery-enhanced-sidebar-edit-button-title": "이 메뉴 편집",
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 편집"
 }

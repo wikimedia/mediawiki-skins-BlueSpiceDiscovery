@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"MITO",
-			"Rönttönen"
+			"Rönttönen",
+			"Nike"
 		]
 	},
 	"bs-discovery-desc": "BlueSpice-ulkoasu",
@@ -45,7 +46,6 @@
 	"bs-discovery-title-last-edit-info": "Viimeksi muokannut käyttäjä $1 <br /> kello $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Viimeisin muokkaus $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Viimeksi muokannut käyttäjä $1",
-	"bs-discovery-last-edit-by-system-user": "järjestelmän käyttäjä",
 	"bs-discovery-title-action-edit-button-title": "Muokkaa sivua",
 	"bs-discovery-title-action-edit-button-aria-label": "Muokkaa sivua",
 	"bs-discovery-tabpanel-main-text": "Päävalikko",
@@ -82,5 +82,7 @@
 	"bs-discovery-personalurl-mycontributions-text": "Muokkaukset",
 	"bs-discovery-personalurl-userpage-text": "Profiili",
 	"bs-discovery-globalactionentry-templates-text": "Mallineet",
-	"bs-discovery-globalactionentry-templates-title": "Kaikki mallineet"
+	"bs-discovery-globalactionentry-templates-title": "Kaikki mallineet",
+	"bs-discovery-last-edit-by-system-user": "järjestelmän käyttäjä",
+	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigaatio"
 }

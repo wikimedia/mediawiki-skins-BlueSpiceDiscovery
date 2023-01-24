@@ -3,7 +3,8 @@
 		"authors": [
 			"Mainframe98",
 			"Nickthijssen1994",
-			"AHendriksen-collecties"
+			"AHendriksen-collecties",
+			"McDutchie"
 		]
 	},
 	"bs-discovery-desc": "BlueSpice uiterlijk",
@@ -97,5 +98,8 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help": "Tekst om als kop weer te geven; kan een parserfunctie bevatten",
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Nieuw paneel toevoegen",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Icon class",
-	"bs-discovery-page-does-not-exist-title": "$1 (de pagina bestaat niet)"
+	"bs-discovery-page-does-not-exist-title": "$1 (de pagina bestaat niet)",
+	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigatie",
+	"bs-discovery-enhanced-sidebar-edit-button-title": "Dit menu bewerken",
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 bewerken"
 }
