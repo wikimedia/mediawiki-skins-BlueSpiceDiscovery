@@ -4,6 +4,7 @@ namespace BlueSpice\Discovery\Tests;
 
 use BlueSpice\Discovery\SubpageDataGenerator;
 use MediaWikiIntegrationTestCase;
+use Message;
 use Title;
 
 /**
@@ -16,11 +17,13 @@ class SubpageDataGeneratorTest extends MediaWikiIntegrationTestCase {
 	 * @return void
 	 */
 	public function addDBDataOnce() {
-		$this->insertPage( 'Dummy' );
-		$this->insertPage( 'Dummy/ABC' );
-		$this->insertPage( 'Dummy/DEF' );
-		$this->insertPage( 'Dummy/DEF/Some_Subpage' );
-		$this->insertPage( 'Dummy/GHI/AAA/BBB/CCC' );
+		$this->setMwGlobals( 'wgNamespacesWithSubpages', [ NS_MAIN => true ] );
+
+		$this->insertPage( 'Dummy2' );
+		$this->insertPage( 'Dummy2/ABC' );
+		$this->insertPage( 'Dummy2/DEF' );
+		$this->insertPage( 'Dummy2/DEF/Some_Subpage' );
+		$this->insertPage( 'Dummy2/GHI/AAA/BBB/CCC' );
 	}
 
 	/**
@@ -29,7 +32,7 @@ class SubpageDataGeneratorTest extends MediaWikiIntegrationTestCase {
 	public function testGenerate() {
 		$suppageDataGenerator = new SubpageDataGenerator();
 
-		$title = Title::newFromText( 'Dummy/DEF' );
+		$title = Title::newFromText( 'Dummy2/DEF' );
 
 		$actualSubpageData = $suppageDataGenerator->generate( $title );
 
@@ -42,18 +45,18 @@ class SubpageDataGeneratorTest extends MediaWikiIntegrationTestCase {
 	private function getExpected(): array {
 		return [
 			$this->makeItem(
-				'Dummy/ABC',
+				'Dummy2/ABC',
 				'ABC',
 				[],
 				[]
 			),
 			$this->makeItem(
-				'Dummy/DEF',
+				'Dummy2/DEF',
 				'DEF',
 				[ 'active' ],
 				[
 					$this->makeItem(
-						'Dummy/DEF/Some_Subpage',
+						'Dummy2/DEF/Some_Subpage',
 						'Some Subpage',
 						[],
 						[]
@@ -61,22 +64,22 @@ class SubpageDataGeneratorTest extends MediaWikiIntegrationTestCase {
 				]
 			),
 			$this->makeItem(
-				'Dummy/GHI',
+				'Dummy2/GHI',
 				'GHI',
 				[ 'new' ],
 				[
 					$this->makeItem(
-						'Dummy/GHI/AAA',
+						'Dummy2/GHI/AAA',
 						'AAA',
 						[ 'new' ],
 						[
 							$this->makeItem(
-								'Dummy/GHI/AAA/BBB',
+								'Dummy2/GHI/AAA/BBB',
 								'BBB',
 								[ 'new' ],
 								[
 									$this->makeItem(
-										'Dummy/GHI/AAA/BBB/CCC',
+										'Dummy2/GHI/AAA/BBB/CCC',
 										'CCC',
 										[],
 										[]
@@ -110,12 +113,26 @@ class SubpageDataGeneratorTest extends MediaWikiIntegrationTestCase {
 			'href' => $title->getLocalURL(),
 		];
 
-		if ( !empty( $classes ) ) {
-			$item['classes'] = $classes;
+		// Change 'classes' order for $title passed to generate() because 'items' gets reset
+		if ( $name == 'Dummy2/DEF' ) {
+			if ( !empty( $classes ) ) {
+				$item['classes'] = $classes;
+			}
 		}
 
 		if ( !empty( $items ) ) {
 			$item['items'] = $items;
+		}
+
+		if ( !$title->exists() ) {
+			$item['title'] = Message::newFromKey(
+				'bs-discovery-page-does-not-exist-title',
+				$title->getPrefixedText()
+			)->text();
+		}
+
+		if ( !empty( $classes ) ) {
+			$item['classes'] = $classes;
 		}
 
 		return $item;
