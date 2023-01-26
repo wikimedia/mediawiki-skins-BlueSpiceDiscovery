@@ -157,5 +157,11 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (page does not exist)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigation",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Edit this menu",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Edit $1"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Edit $1",
+	"bs-discovery-title-action-language-button-title": "Select language",
+	"bs-discovery-title-action-language-button-aria-label": "Select language",
+	"bs-discovery-config-meta-items-header-label": "Elements below the page title",
+	"bs-discovery-config-meta-items-header-help": "Selected elements are displayed below the page title",
+	"bs-discovery-config-meta-items-footer-label": "Elements below the page content",
+	"bs-discovery-config-meta-items-footer-help": "Selected elements are displayed below the page content"
 }

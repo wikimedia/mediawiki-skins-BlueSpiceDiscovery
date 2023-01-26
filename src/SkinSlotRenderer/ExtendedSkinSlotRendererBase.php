@@ -2,7 +2,7 @@
 
 namespace BlueSpice\Discovery\SkinSlotRenderer;
 
-use BlueSpice\Calumma\CookieHandler;
+use BlueSpice\Discovery\CookieHandler;
 use IContextSource;
 use MWStake\MediaWiki\Component\CommonUserInterface\AriaAttributesBuilder;
 use MWStake\MediaWiki\Component\CommonUserInterface\DataAttributesBuilder;
@@ -12,6 +12,11 @@ use MWStake\MediaWiki\Component\CommonUserInterface\SkinSlotRegistry;
 use MWStake\MediaWiki\Component\CommonUserInterface\SkinSlotRendererBase;
 
 abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
+
+	/**
+	 * @var SkinSlotRegistry
+	 */
+	protected $skinSlotRegistry;
 
 	/**
 	 *
@@ -55,7 +60,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 		$this->componentManager = $componentManager;
 		$this->rendererDataTreeBuilder = $rendererDataTreeBuilder;
 		$this->rendererDataTreeRenderer = $rendererDataTreeRenderer;
-		$this->HtmlIdRegistry = $htmlIdRegistry;
+		$this->htmlIdRegistry = $htmlIdRegistry;
 		$this->cookieHandler = $cookieHandler;
 		$this->permissionManager = $permissionManager;
 		$this->slotId = $slotId;
@@ -208,7 +213,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 *
 	 * @return string
 	 */
-	private function buildOpeningConainerWrapperHtml(): string {
+	protected function buildOpeningConainerWrapperHtml(): string {
 		$html = $this->buildOpeningHtml(
 			$this->getContainerWrapperTag(),
 			$this->getContainerWrapperId(),
@@ -220,11 +225,11 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 		return $html;
 	}
 
-		/**
-		 *
-		 * @return string
-		 */
-	private function buildClosingConainerWrapperHtml(): string {
+	/**
+	 *
+	 * @return string
+	 */
+	protected function buildClosingConainerWrapperHtml(): string {
 		$html = $this->buildClosingHtml(
 			$this->getContainerWrapperTag()
 		);
@@ -237,7 +242,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 * @param string $id
 	 * @return string
 	 */
-	private function buildOpeningItemWrapperHtml( $id ): string {
+	protected function buildOpeningItemWrapperHtml( $id ): string {
 		$html = $this->buildOpeningHtml(
 			$this->getItemWrapperTag(),
 			$this->getItemWrapperId( $id ),
@@ -249,11 +254,11 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 		return $html;
 	}
 
-		/**
-		 *
-		 * @return string
-		 */
-	private function buildClosingItemWrapperHtml(): string {
+	/**
+	 *
+	 * @return string
+	 */
+	protected function buildClosingItemWrapperHtml(): string {
 		$html = $this->buildClosingHtml(
 			$this->getItemWrapperTag()
 		);
@@ -270,7 +275,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 * @param array $data
 	 * @return string
 	 */
-	private function buildOpeningHtml( $tag, $id, $classes, $aria, $data ): string {
+	protected function buildOpeningHtml( $tag, $id, $classes, $aria, $data ): string {
 		if ( $tag === '' ) {
 			return '';
 		}
@@ -305,7 +310,7 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 * @param string $tag
 	 * @return string
 	 */
-	private function buildClosingHtml( $tag ): string {
+	protected function buildClosingHtml( $tag ): string {
 		if ( $tag === '' ) {
 			return '';
 		}
