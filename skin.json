@@ -188,7 +188,8 @@
 					"class": "BlueSpice\\Discovery\\EnhancedSidebar\\NodeProcessor\\PanelHeadingProcessor",
 					"services": [ "ParserFactory" ]
 				}
-			}
+			},
+			"MetaItemProviderRegistry": {}
 		},
 		"BlueSpicePrivacy": {
 			"CookieConsentNativeMWCookies": {
@@ -208,7 +209,9 @@
 				"DiscoveryMainLinksMainpage": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksMainpage::getInstance",
 				"DiscoveryMainLinksAllPages": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksAllPages::getInstance",
 				"DiscoveryMainLinksRecentChanges": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksRecentChanges::getInstance",
-				"DiscoverySidebarPrimaryMainTabPanelMenu": "\\BlueSpice\\Discovery\\ConfigDefinition\\SidebarPrimaryMainTabPanelMenu::getInstance"
+				"DiscoverySidebarPrimaryMainTabPanelMenu": "\\BlueSpice\\Discovery\\ConfigDefinition\\SidebarPrimaryMainTabPanelMenu::getInstance",
+				"DiscoveryMetaItemsHeader": "\\BlueSpice\\Discovery\\ConfigDefinition\\MetaItemsHeader::getInstance",
+				"DiscoveryMetaItemsFooter": "\\BlueSpice\\Discovery\\ConfigDefinition\\MetaItemsFooter::getInstance"
 			}
 		},
 		"BlueSpiceHideTitle": {
@@ -351,6 +354,14 @@
 			"value": "mediawiki-sidebar",
 			"public": true,
 			"descriptionmsg": "bs-discovery-config-config-sidebar-primary-main-tab-menu-label"
+		},
+		"DiscoveryMetaItemsHeader": {
+			"value": [],
+			"public": true
+		},
+		"DiscoveryMetaItemsFooter": {
+			"value": [],
+			"public": true
 		}
 	},
 	"ResourceModules": {

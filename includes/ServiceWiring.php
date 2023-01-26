@@ -6,6 +6,8 @@ use BlueSpice\Discovery\CookieHandler;
 use BlueSpice\Discovery\LangLinksProviderFactory;
 use BlueSpice\Discovery\MenuManager;
 use BlueSpice\Discovery\MenuProviderFactory;
+use BlueSpice\Discovery\MetaItemsManager;
+use BlueSpice\Discovery\MetaItemsProviderFactory;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
 use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
 use BlueSpice\Discovery\TemplateDataProvider;
@@ -72,6 +74,17 @@ return [
 		return new LangLinksProviderFactory(
 			$services->get( 'MWStakeManifestObjectFactory' ),
 			$services->getConfigFactory()->makeConfig( 'bsg' )
+		);
+	},
+	'BlueSpiceDiscoveryMetaItemFactory' => static function ( MediaWikiServices $services ) {
+		return new MetaItemsProviderFactory(
+			$services->get( 'MWStakeManifestObjectFactory' )
+		);
+	},
+	'BlueSpiceDiscoveryMetaItemManager' => static function ( MediaWikiServices $services ) {
+		return new MetaItemsManager(
+			$services->get( 'BlueSpiceDiscoveryMetaItemFactory' ),
+			$services->getConfigFactory()
 		);
 	}
 ];
