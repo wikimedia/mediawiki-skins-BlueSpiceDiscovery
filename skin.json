@@ -137,7 +137,8 @@
 				"base-breadcrumb": {
 					"class": "BlueSpice\\Discovery\\BreadcrumbDataProvider\\BaseBreadcrumbDataProvider"
 				}
-			}
+			},
+			"MetaItemProviderRegistry": {}
 		},
 		"BlueSpicePrivacy": {
 			"CookieConsentNativeMWCookies": {
@@ -156,7 +157,9 @@
 			"ConfigDefinitionRegistry": {
 				"DiscoveryMainLinksMainpage": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksMainpage::getInstance",
 				"DiscoveryMainLinksAllPages": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksAllPages::getInstance",
-				"DiscoveryMainLinksRecentChanges": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksRecentChanges::getInstance"
+				"DiscoveryMainLinksRecentChanges": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksRecentChanges::getInstance",
+				"DiscoveryMetaItemsHeader": "\\BlueSpice\\Discovery\\ConfigDefinition\\MetaItemsHeader::getInstance",
+				"DiscoveryMetaItemsFooter": "\\BlueSpice\\Discovery\\ConfigDefinition\\MetaItemsFooter::getInstance"
 			}
 		},
 		"BlueSpiceHideTitle": {
@@ -261,6 +264,14 @@
 			"value": true,
 			"public": true,
 			"descriptionmsg": "bs-discovery-config-mainlinks-recentchanges-label"
+		},
+		"DiscoveryMetaItemsHeader": {
+			"value": [],
+			"public": true
+		},
+		"DiscoveryMetaItemsFooter": {
+			"value": [],
+			"public": true
 		}
 	},
 	"ResourceModules": {
