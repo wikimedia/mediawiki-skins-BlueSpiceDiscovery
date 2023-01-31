@@ -48,5 +48,7 @@
 	"menueditor-ui-enhanced-sidebar-external-link-label": "Արտաքին հղում",
 	"menueditor-ui-enhanced-sidebar-internal-link-label": "Ներքին հղում",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "Վերնագրի տեքստ",
-	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Ավելացնել նոր վահանակ"
+	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Ավելացնել նոր վահանակ",
+	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Նավարկություն",
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Խմբագրել $1"
 }
