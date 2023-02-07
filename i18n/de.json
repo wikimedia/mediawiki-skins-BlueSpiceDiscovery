@@ -164,5 +164,7 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (Seite existiert nicht)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigation",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Dieses Menü bearbeiten",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 bearbeiten"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 bearbeiten",
+	"bs-discovery-title-action-language-button-title": "Sprache auswählen",
+	"bs-discovery-title-action-language-button-aria-label": "Sprache auswählen"
 }

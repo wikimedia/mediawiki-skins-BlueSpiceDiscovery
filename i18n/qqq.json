@@ -157,5 +157,7 @@
 	"bs-discovery-page-does-not-exist-title": "Text for title attribute of a link with additional information that page does not exist\n{{Identical|Red-link-title}}",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Text for a menu heading\n{{identical|Navigation}}",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Title text for a link to edit the menu source page",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Aria label for a link to edit the menu source page"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Aria label for a link to edit the menu source page",
+	"bs-discovery-title-action-language-button-title": "Title attribute for button with menu of language options",
+	"bs-discovery-title-action-language-button-aria-label": "Aria-label attribute for button with menu of language options"
 }
