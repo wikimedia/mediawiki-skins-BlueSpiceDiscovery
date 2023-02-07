@@ -3,6 +3,7 @@
 use BlueSpice\Discovery\AttentionIndicatorFactory;
 use BlueSpice\Discovery\BreadcrumbDataProviderFactory;
 use BlueSpice\Discovery\CookieHandler;
+use BlueSpice\Discovery\LangLinksProviderFactory;
 use BlueSpice\Discovery\MenuManager;
 use BlueSpice\Discovery\MenuProviderFactory;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
@@ -65,6 +66,12 @@ return [
 		return new MenuManager(
 			$services->get( 'BlueSpiceDiscoveryMenuProviderFactory' ),
 			$services->getConfigFactory()
+		);
+	},
+	'BlueSpiceDiscoveryLangLinksProviderFactory' => static function ( MediaWikiServices $services ) {
+		return new LangLinksProviderFactory(
+			$services->get( 'MWStakeManifestObjectFactory' ),
+			$services->getConfigFactory()->makeConfig( 'bsg' )
 		);
 	}
 ];
