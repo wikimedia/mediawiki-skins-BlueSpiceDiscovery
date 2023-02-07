@@ -4,5 +4,7 @@
 			"Tofeiku"
 		]
 	},
-	"bs-discovery-enhanced-sidebar-edit-button-title": "Sunting menu ini"
+	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Pandu arah",
+	"bs-discovery-enhanced-sidebar-edit-button-title": "Sunting menu ini",
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Sunting $1"
 }

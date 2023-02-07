@@ -10,5 +10,7 @@
 	"bs-discovery-sidebar-secondary-share-sharebymail-text": "E-postal adreso",
 	"bs-discovery-dialog-details-action-cancel": "Nuligar",
 	"bs-discovery-breadcrumb-label-special-linkliste": "Ligili",
-	"bs-discovery-breadcrumb-label-action-edit": "Redaktez"
+	"bs-discovery-breadcrumb-label-action-history": "Kronologio",
+	"bs-discovery-breadcrumb-label-action-edit": "Redaktez",
+	"bs-discovery-personalurl-userpage-text": "Profilo"
 }
