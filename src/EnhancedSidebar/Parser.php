@@ -65,6 +65,7 @@ class Parser extends MutableParser implements IParser, IMenuParser {
 	 * @return array
 	 */
 	public function parseForOutput( User $user ): array {
+		$this->setUserOnProcessors( $user );
 		$this->setFullParse( true );
 		$this->parse();
 		$this->setFullParse( false );
@@ -300,6 +301,17 @@ class Parser extends MutableParser implements IParser, IMenuParser {
 					$node->addChild( $n );
 				}
 			}
+		}
+	}
+
+	/**
+	 * @param User $user
+	 *
+	 * @return void
+	 */
+	private function setUserOnProcessors( User $user ) {
+		foreach ( $this->nodeProcessors as $processor ) {
+			$processor->setUser( $user );
 		}
 	}
 }
