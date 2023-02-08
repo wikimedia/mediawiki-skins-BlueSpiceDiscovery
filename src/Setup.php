@@ -46,6 +46,7 @@ class Setup {
 		$lessVars->setVar( 'font-weight-medium', '500' );
 		$lessVars->setVar( 'font-weight-bold', '700' );
 
+		$lessVars->setVar( 'content-width', '1200px' );
 		$lessVars->setVar( 'content-font-size', '15px' );
 		$lessVars->setVar( 'content-font-weight', '@font-weight-regular' );
 		$lessVars->setVar( 'content-primary-font-family', '"Lato"' );
