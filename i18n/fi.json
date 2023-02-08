@@ -84,5 +84,7 @@
 	"bs-discovery-personalurl-userpage-text": "Profiili",
 	"bs-discovery-globalactionentry-templates-text": "Mallineet",
 	"bs-discovery-globalactionentry-templates-title": "Kaikki mallineet",
-	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigaatio"
+	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigaatio",
+	"bs-discovery-title-action-language-button-title": "Valitse kieli",
+	"bs-discovery-title-action-language-button-aria-label": "Valitse kieli"
 }

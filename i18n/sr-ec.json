@@ -67,5 +67,7 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (страница не постоји)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Навигација",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Уреди овај мени",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Уреди $1"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Уреди $1",
+	"bs-discovery-title-action-language-button-title": "Изабери језик",
+	"bs-discovery-title-action-language-button-aria-label": "Изабери језик"
 }

@@ -96,5 +96,7 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS 클래스",
 	"bs-discovery-page-does-not-exist-title": "$1 (없는 문서)",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "이 메뉴 편집",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 편집"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 편집",
+	"bs-discovery-title-action-language-button-title": "언어 선택",
+	"bs-discovery-title-action-language-button-aria-label": "언어 선택"
 }

@@ -57,5 +57,7 @@
 	"bs-discovery-personalurl-userpage-text": "ပရိုဖိုင်",
 	"bs-discovery-globalactionentry-templates-text": "တမ်းပလိတ်များ",
 	"bs-discovery-globalactionentry-templates-title": "တမ်းပလိတ်အားလုံး",
-	"bs-discovery-page-does-not-exist-title": "$1 (စာမျက်နှာ မရှိသေးပါ)"
+	"bs-discovery-page-does-not-exist-title": "$1 (စာမျက်နှာ မရှိသေးပါ)",
+	"bs-discovery-title-action-language-button-title": "ဘာသာစကား ရွေးရန်",
+	"bs-discovery-title-action-language-button-aria-label": "ဘာသာစကား ရွေးရန်"
 }

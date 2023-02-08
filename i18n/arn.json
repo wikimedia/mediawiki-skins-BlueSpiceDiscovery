@@ -18,5 +18,7 @@
 	"bs-discovery-navbar-language-button-title": "Zullinge zungun",
 	"bs-discovery-navbar-language-button-aria-label": "Zullinge zungun",
 	"bs-discovery-breadcrumb-nav-node-title": "Nülan $1",
-	"bs-discovery-breadcrumb-nav-node-aria-label": "Nülan $1"
+	"bs-discovery-breadcrumb-nav-node-aria-label": "Nülan $1",
+	"bs-discovery-title-action-language-button-title": "Zullinge zungun",
+	"bs-discovery-title-action-language-button-aria-label": "Zullinge zungun"
 }

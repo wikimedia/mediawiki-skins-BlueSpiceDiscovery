@@ -119,5 +119,7 @@
 	"bs-discovery-personalurl-userpage-text": "Профіль",
 	"bs-discovery-globalactionentry-templates-text": "Шаблони",
 	"bs-discovery-globalactionentry-templates-title": "Усі шаблони",
-	"bs-discovery-last-edit-by-anon-user": "Анонімний користувач"
+	"bs-discovery-last-edit-by-anon-user": "Анонімний користувач",
+	"bs-discovery-title-action-language-button-title": "Вибір мови",
+	"bs-discovery-title-action-language-button-aria-label": "Вибір мови"
 }
