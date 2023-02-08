@@ -152,7 +152,7 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 			$nodeText = array_pop( $nodeTextParts );
 			$nodeHTML = [
 				'id' => md5( 'breadcrumb-nav-subpages-' . $node['id'] ),
-				'button-text' => new \RawMessage( $nodeText ),
+				'button-text' => new \RawMessage( trim( $nodeText ) ),
 				'button-classes' => $node['classes'],
 				'button-title' => $this->messageLocalizer
 					->msg( 'bs-discovery-breadcrumb-nav-node-title', $node['title'] ),
