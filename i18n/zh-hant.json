@@ -156,5 +156,7 @@
 	"bs-discovery-page-does-not-exist-title": "$1（頁面不存在）",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "導覽",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "編輯此選單",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "編輯$1"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "編輯$1",
+	"bs-discovery-title-action-language-button-title": "選擇語言",
+	"bs-discovery-title-action-language-button-aria-label": "選擇語言"
 }

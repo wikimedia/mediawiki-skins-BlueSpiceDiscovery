@@ -155,5 +155,7 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (pagina non existe)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigation",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Modificar iste menu",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Modificar $1"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Modificar $1",
+	"bs-discovery-title-action-language-button-title": "Selige lingua",
+	"bs-discovery-title-action-language-button-aria-label": "Selige lingua"
 }

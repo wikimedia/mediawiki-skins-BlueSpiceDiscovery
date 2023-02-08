@@ -113,5 +113,7 @@
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Боковое меню MediaWiki с расширенными функциями",
 	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Главное меню",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Навигация",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Редактировать $1"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Редактировать $1",
+	"bs-discovery-title-action-language-button-title": "Выбрать язык",
+	"bs-discovery-title-action-language-button-aria-label": "Выбрать язык"
 }

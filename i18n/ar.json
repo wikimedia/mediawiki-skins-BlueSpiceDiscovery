@@ -133,5 +133,7 @@
 	"bs-discovery-namespace-mainpage-links-pnl-header-text": "صفحات Namespace الرئيسية",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "ميدياويكي الشريط الجانبي المحسن",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "قائمة الشريط الجانبي في ميدياويكي بوظيفة محسّنة",
-	"menueditor-ui-enhanced-sidebar-internal-link-label": "وصلة داخلية"
+	"menueditor-ui-enhanced-sidebar-internal-link-label": "وصلة داخلية",
+	"bs-discovery-title-action-language-button-title": "اختر اللغة",
+	"bs-discovery-title-action-language-button-aria-label": "اختر اللغة"
 }

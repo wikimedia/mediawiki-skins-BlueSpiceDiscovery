@@ -74,5 +74,7 @@
 	"bs-discovery-personalurl-mycontributions-text": "Hammiimeh",
 	"bs-discovery-personalurl-userpage-text": "Proofiil",
 	"bs-discovery-globalactionentry-templates-text": "Myenstereh",
-	"bs-discovery-globalactionentry-templates-title": "Puoh myenstereh"
+	"bs-discovery-globalactionentry-templates-title": "Puoh myenstereh",
+	"bs-discovery-title-action-language-button-title": "Valjii kielâ",
+	"bs-discovery-title-action-language-button-aria-label": "Valjii kielâ"
 }

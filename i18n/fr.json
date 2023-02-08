@@ -162,5 +162,7 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (page inexistante)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigation",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Modifier ce menu",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Modifier $1"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Modifier $1",
+	"bs-discovery-title-action-language-button-title": "Sélectionner la langue",
+	"bs-discovery-title-action-language-button-aria-label": "Sélectionner la langue"
 }
