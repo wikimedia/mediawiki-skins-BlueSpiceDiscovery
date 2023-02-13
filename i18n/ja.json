@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Ajeje Brazorf",
+			"Kokage si",
 			"MathXplore"
 		]
 	},
@@ -21,5 +22,8 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "新しいパネルを追加",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSSクラス",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "ナビゲーション",
-	"bs-discovery-enhanced-sidebar-edit-button-title": "このメニューを編集"
+	"bs-discovery-enhanced-sidebar-edit-button-title": "このメニューを編集",
+	"bs-discovery-navbar-user-login-text": "ログイン",
+	"bs-discovery-navbar-user-login-title": "ログイン",
+	"bs-discovery-navbar-user-login-aria-label": "ログイン"
 }
