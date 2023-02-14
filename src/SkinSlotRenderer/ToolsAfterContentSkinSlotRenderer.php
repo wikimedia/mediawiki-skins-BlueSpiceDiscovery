@@ -2,17 +2,9 @@
 
 namespace BlueSpice\Discovery\SkinSlotRenderer;
 
-class ToolsAfterContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
+class ToolsAfterContentSkinSlotRenderer extends DataAfterTitleSkinSlotRenderer {
 
 	public const REG_KEY = 'ToolsAfterContent';
-
-	/**
-	 *
-	 * @return string
-	 */
-	protected function getContainerWrapperTag(): string {
-		return 'div';
-	}
 
 	/**
 	 *
@@ -24,18 +16,10 @@ class ToolsAfterContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 
 	/**
 	 *
-	 * @return string
+	 * @param MetaItemsManager $metaItemsManager
+	 * @return array
 	 */
-	protected function getItemWrapperTag(): string {
-		return 'div';
-	}
-
-	/**
-	 *
-	 * @param string $id
-	 * @return string
-	 */
-	protected function getItemWrapperId( $id ): string {
-		return $id . '-cnt';
+	protected function getMetaItems( $metaItemsManager ): array {
+		return $metaItemsManager->getMetaItemsFromConfigVar( 'DiscoveryMetaItemsFooter' );
 	}
 }
