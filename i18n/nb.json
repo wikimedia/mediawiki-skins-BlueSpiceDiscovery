@@ -38,9 +38,6 @@
 	"bs-discovery-navbar-global-actions-button-aria-label": "Globale handlinger",
 	"bs-discovery-navbar-global-actions-tool-text": "Verktøy",
 	"bs-discovery-navbar-global-actions-manager-text": "Behandling",
-	"bs-discovery-navbar-languages-button-text": "Språk",
-	"bs-discovery-navbar-language-button-title": "Velg språk",
-	"bs-discovery-navbar-language-button-aria-label": "Velg språk",
 	"bs-discovery-navbar-full-screen-button-enable-title": "Slå på fullskjermmodus",
 	"bs-discovery-navbar-full-screen-button-text": "Slå på fullskjermmodus",
 	"bs-discovery-navbar-full-screen-button-enable-aria-label": "Slå på fullskjermmodus",
@@ -57,10 +54,11 @@
 	"bs-discovery-title-last-edit-info": "Sist redigert $1 <br /> av $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Siste redigering $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Siste redigering av $1",
-	"bs-discovery-last-edit-by-system-user": "systembruker",
 	"bs-discovery-last-edit-by-anon-user": "Anonym bruker",
 	"bs-discovery-title-action-edit-button-title": "Rediger side",
 	"bs-discovery-title-action-edit-button-aria-label": "Rediger side",
+	"bs-discovery-title-action-language-button-title": "Velg språk",
+	"bs-discovery-title-action-language-button-aria-label": "Velg språk",
 	"bs-discovery-tabpanel-main-text": "Hovednavigasjon",
 	"bs-discovery-tabpanel-main-title": "Fane med hovednavigasjons for wikien",
 	"bs-discovery-tabpanel-main-aria-label": "Hovednavigasjon",
@@ -116,5 +114,6 @@
 	"bs-discovery-personalurl-mycontributions-text": "Bidrag",
 	"bs-discovery-personalurl-userpage-text": "Profil",
 	"bs-discovery-globalactionentry-templates-text": "Maler",
-	"bs-discovery-globalactionentry-templates-title": "Alle maler"
+	"bs-discovery-globalactionentry-templates-title": "Alle maler",
+	"bs-discovery-last-edit-by-system-user": "systembruker"
 }

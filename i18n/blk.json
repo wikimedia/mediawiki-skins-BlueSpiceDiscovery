@@ -21,9 +21,6 @@
 	"bs-discovery-navbar-global-actions-button-aria-label": "တကမ္ဘာႏလွုမ်းခွုမ်မာꩻချက်ဖိုင်ႏ",
 	"bs-discovery-navbar-global-actions-tool-text": "ကိရိယာႏဖုံႏ",
 	"bs-discovery-navbar-global-actions-manager-text": "စီႏမံႏဖန်းဖြယ်",
-	"bs-discovery-navbar-languages-button-text": "ဘာႏသာႏငဝ်းငွါ",
-	"bs-discovery-navbar-language-button-title": "လွိုက်ဘာႏသာႏငဝ်းငွါ",
-	"bs-discovery-navbar-language-button-aria-label": "လွိုက်ဘာႏသာႏငဝ်းငွါ",
 	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "ယီးနယ်မိဉ်ꩻ",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "လိတ်မဲ့ငါဖိုင်ႏ",
 	"bs-discovery-breadcrumb-nav-node-title": "ဗွောင် $1",
@@ -34,9 +31,10 @@
 	"bs-discovery-title-last-edit-info": "$2 အဆုဲင်ꩻသွတ်ꩻ မွဉ်းဖျင်ခါꩻလဲဉ်း $1 <br />",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "အဆုဲင်ꩻသွတ်ꩻ မွဉ်းဖျင်မုꩻ $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "$1 အဆုဲင်ꩻသွတ်ꩻ မွဉ်းဖျင်မုꩻ",
-	"bs-discovery-last-edit-by-system-user": "စနိစ် ကေားသုင်ꩻသား",
 	"bs-discovery-title-action-edit-button-title": "ခြပ်ချော်ꩻလိတ်မဲ့ငါ",
 	"bs-discovery-title-action-edit-button-aria-label": "ခြပ်ချော်ꩻလိတ်မဲ့ငါ",
+	"bs-discovery-title-action-language-button-title": "လွိုက်ဘာႏသာႏငဝ်းငွါ",
+	"bs-discovery-title-action-language-button-aria-label": "လွိုက်ဘာႏသာႏငဝ်းငွါ",
 	"bs-discovery-sidebar-secondary-share-sharebymail-text": "အီးမေး",
 	"bs-discovery-sidebar-secondary-share-link-title": "ဖန်းဖြယ်လိတ်မဲ့ငါ",
 	"bs-discovery-sidebar-actions-heading": "ခွုမ်မာꩻချက်ဖိုင်ႏ",
@@ -59,5 +57,6 @@
 	"bs-discovery-personalurl-mycontributions-text": "ခွုမ်မာꩻချက်ဖိုင်ႏ",
 	"bs-discovery-personalurl-userpage-text": "ပရိုဖုဲင်",
 	"bs-discovery-globalactionentry-templates-text": "တမ်းပလေက်ဖိုင်ႏ",
-	"bs-discovery-globalactionentry-templates-title": "တမ်းပလေက်ဖိုင်ႏလို့လို့"
+	"bs-discovery-globalactionentry-templates-title": "တမ်းပလေက်ဖိုင်ႏလို့လို့",
+	"bs-discovery-last-edit-by-system-user": "စနိစ် ကေားသုင်ꩻသား"
 }

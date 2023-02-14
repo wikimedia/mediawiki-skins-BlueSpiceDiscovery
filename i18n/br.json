@@ -36,9 +36,6 @@
 	"bs-discovery-navbar-global-actions-button-aria-label": "Oberoù hollek",
 	"bs-discovery-navbar-global-actions-tool-text": "Ostilhoù",
 	"bs-discovery-navbar-global-actions-manager-text": "Merañ",
-	"bs-discovery-navbar-languages-button-text": "Yezhoù",
-	"bs-discovery-navbar-language-button-title": "Dibab ar yezh",
-	"bs-discovery-navbar-language-button-aria-label": "Dibab ar yezh",
 	"bs-discovery-navbar-full-screen-button-enable-title": "Gweredekaat ar mod skramm leun",
 	"bs-discovery-navbar-full-screen-button-text": "Gweredekaat ar mod skramm leun",
 	"bs-discovery-navbar-full-screen-button-enable-aria-label": "Gweredekaat ar mod skramm leun",
@@ -54,9 +51,10 @@
 	"bs-discovery-title-last-edit-info": "Kemmet evit ar wech diwezhañ d’ar/an $1 <br /> gant $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Kemm diwezhañ $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Bet kemmet da ziwezhañ gant $1",
-	"bs-discovery-last-edit-by-system-user": "Implijer reizhiad",
 	"bs-discovery-title-action-edit-button-title": "Kemmañ ar bajenn",
 	"bs-discovery-title-action-edit-button-aria-label": "Kemmañ ar bajenn",
+	"bs-discovery-title-action-language-button-title": "Dibab ar yezh",
+	"bs-discovery-title-action-language-button-aria-label": "Dibab ar yezh",
 	"bs-discovery-tabpanel-main-text": "Merdeerezh pennañ",
 	"bs-discovery-tabpanel-main-title": "Steudenn gant merdeerezh pennañ ar wiki",
 	"bs-discovery-tabpanel-main-aria-label": "Merdeerezh pennañ",
@@ -86,5 +84,6 @@
 	"bs-discovery-personalurl-mycontributions-text": "Degasadennoù",
 	"bs-discovery-personalurl-userpage-text": "Profil",
 	"bs-discovery-globalactionentry-templates-text": "Patromoù",
-	"bs-discovery-globalactionentry-templates-title": "An holl batromoù"
+	"bs-discovery-globalactionentry-templates-title": "An holl batromoù",
+	"bs-discovery-last-edit-by-system-user": "Implijer reizhiad"
 }
