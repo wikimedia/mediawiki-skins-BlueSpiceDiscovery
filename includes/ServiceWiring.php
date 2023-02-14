@@ -5,6 +5,8 @@ use BlueSpice\Discovery\BreadcrumbDataProviderFactory;
 use BlueSpice\Discovery\CookieHandler;
 use BlueSpice\Discovery\MenuManager;
 use BlueSpice\Discovery\MenuProviderFactory;
+use BlueSpice\Discovery\MetaItemsManager;
+use BlueSpice\Discovery\MetaItemsProviderFactory;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
 use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
 use BlueSpice\Discovery\TemplateDataProvider;
@@ -64,6 +66,17 @@ return [
 	'BlueSpiceDiscoveryMenuManager' => static function ( MediaWikiServices $services ) {
 		return new MenuManager(
 			$services->get( 'BlueSpiceDiscoveryMenuProviderFactory' ),
+			$services->getConfigFactory()
+		);
+	},
+	'BlueSpiceDiscoveryMetaItemFactory' => static function ( MediaWikiServices $services ) {
+		return new MetaItemsProviderFactory(
+			$services->get( 'MWStakeManifestObjectFactory' )
+		);
+	},
+	'BlueSpiceDiscoveryMetaItemManager' => static function ( MediaWikiServices $services ) {
+		return new MetaItemsManager(
+			$services->get( 'BlueSpiceDiscoveryMetaItemFactory' ),
 			$services->getConfigFactory()
 		);
 	}

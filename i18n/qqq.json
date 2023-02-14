@@ -159,5 +159,9 @@
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Title text for a link to edit the menu source page",
 	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Aria label for a link to edit the menu source page",
 	"bs-discovery-title-action-language-button-title": "Title attribute for button with menu of language options",
-	"bs-discovery-title-action-language-button-aria-label": "Aria-label attribute for button with menu of language options"
+	"bs-discovery-title-action-language-button-aria-label": "Aria-label attribute for button with menu of language options",
+	"bs-discovery-config-meta-items-header-label": "Label for input box in config which allows elements to be added below the page title",
+	"bs-discovery-config-meta-items-header-help": "Help message for input box in config which allows elements to be added below page title",
+	"bs-discovery-config-meta-items-footer-label": "Label for input box in config which allows elements to be added below page content",
+	"bs-discovery-config-meta-items-footer-help": "Help message for input box in config which allows elements to be added below page content"
 }
