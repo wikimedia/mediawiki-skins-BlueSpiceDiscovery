@@ -100,5 +100,9 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (de pagina bestaat niet)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigatie",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Dit menu bewerken",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 bewerken"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 bewerken",
+	"bs-discovery-config-meta-items-header-label": "Elementen onder de paginatitel",
+	"bs-discovery-config-meta-items-header-help": "Geselecteerde elementen worden weergegeven onder de paginatitel",
+	"bs-discovery-config-meta-items-footer-label": "Elementen onder de pagina-inhoud",
+	"bs-discovery-config-meta-items-footer-help": "Geselecteerde elementen worden weergegeven onder de pagina-inhoud"
 }
