@@ -49,7 +49,7 @@ class MetaItemsHeader extends ArraySetting {
 	protected function getOptions() {
 		$services = MediaWikiServices::getInstance();
 		$metaItemFactory = $services->getService( 'BlueSpiceDiscoveryMetaItemFactory' );
-		$metaOptions = new MetaItemOptions( $metaItemFactory);
+		$metaOptions = new MetaItemOptions( $metaItemFactory );
 		$options = $metaOptions->getOptions();
 		return $options;
 	}

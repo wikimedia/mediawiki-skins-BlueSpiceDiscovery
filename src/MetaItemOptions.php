@@ -14,7 +14,7 @@ class MetaItemOptions {
 	 *
 	 * @param MetaItemsProviderFactory $metaItemFactory
 	 */
-	public function __construct( $metaItemFactory) {
+	public function __construct( $metaItemFactory ) {
 		$this->metaItemFactory = $metaItemFactory;
 	}
 
