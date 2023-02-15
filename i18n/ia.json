@@ -157,5 +157,9 @@
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Modificar iste menu",
 	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Modificar $1",
 	"bs-discovery-title-action-language-button-title": "Selige lingua",
-	"bs-discovery-title-action-language-button-aria-label": "Selige lingua"
+	"bs-discovery-title-action-language-button-aria-label": "Selige lingua",
+	"bs-discovery-config-meta-items-header-label": "Elementos sub le titulo del pagina",
+	"bs-discovery-config-meta-items-header-help": "Le elementos seligite appare sub le titulo del pagina",
+	"bs-discovery-config-meta-items-footer-label": "Elementos sub le contento del pagina`",
+	"bs-discovery-config-meta-items-footer-help": "Le elementos seligite appare sub le contento del pagina"
 }
