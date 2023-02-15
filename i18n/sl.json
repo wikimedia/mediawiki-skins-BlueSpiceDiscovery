@@ -157,5 +157,9 @@
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Uredi ta meni",
 	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Uredi $1",
 	"bs-discovery-title-action-language-button-title": "Izberite jezik",
-	"bs-discovery-title-action-language-button-aria-label": "Izberite jezik"
+	"bs-discovery-title-action-language-button-aria-label": "Izberite jezik",
+	"bs-discovery-config-meta-items-header-label": "Elementi pod naslovom strani",
+	"bs-discovery-config-meta-items-header-help": "Izbrani elementi so prikazani pod naslovom strani",
+	"bs-discovery-config-meta-items-footer-label": "Elementi pod vsebino strani",
+	"bs-discovery-config-meta-items-footer-help": "Izbrani elementi so prikazani pod vsebino strani"
 }
