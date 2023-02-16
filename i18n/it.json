@@ -46,5 +46,7 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help": "Testo da visualizzare come intestazione; può contenere una funzione parser",
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Aggiungi nuovo pannello",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "Classi CSS",
-	"bs-discovery-page-does-not-exist-title": "$1 (la pagina non esiste)"
+	"bs-discovery-page-does-not-exist-title": "$1 (la pagina non esiste)",
+	"bs-discovery-config-meta-items-header-label": "Elementi sotto il titolo della pagina",
+	"bs-discovery-config-meta-items-footer-help": "Gli elementi selezionati vengono visualizzati sotto il contenuto della pagina"
 }
