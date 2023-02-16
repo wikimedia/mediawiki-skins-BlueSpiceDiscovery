@@ -157,5 +157,9 @@
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Уреди го мениво",
 	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Уреди $1",
 	"bs-discovery-title-action-language-button-title": "Одберете јазик",
-	"bs-discovery-title-action-language-button-aria-label": "Одберете јазик"
+	"bs-discovery-title-action-language-button-aria-label": "Одберете јазик",
+	"bs-discovery-config-meta-items-header-label": "Елементи под насловот на страницата",
+	"bs-discovery-config-meta-items-header-help": "Избраните елементи се прикажуваат под насловот на страницата",
+	"bs-discovery-config-meta-items-footer-label": "Елементи под содржината на страницата",
+	"bs-discovery-config-meta-items-footer-help": "Избраните елементи се прикажуваат под содржината на страницата"
 }
