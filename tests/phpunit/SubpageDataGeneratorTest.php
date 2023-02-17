@@ -30,19 +30,25 @@ class SubpageDataGeneratorTest extends MediaWikiIntegrationTestCase {
 	 * @covers BlueSpice\Discovery\SubpageDataGenerator::generate
 	 */
 	public function testGenerate() {
-		$suppageDataGenerator = new SubpageDataGenerator();
+		$subpageDataGenerator = new SubpageDataGenerator();
 
+		// Tree from root title of $title
 		$title = Title::newFromText( 'Dummy2/DEF' );
+		$subpageDataGenerator->setActiveTitle( $title );
+		$actualSubpageData = $subpageDataGenerator->generate( $title );
+		$this->assertEquals( $this->getExpectedFromRoot(), $actualSubpageData );
 
-		$actualSubpageData = $suppageDataGenerator->generate( $title );
-
-		$this->assertEquals( $this->getExpected(), $actualSubpageData );
+		// Tree with specific root title
+		$title = Title::NewFromText( 'Dummy2/GHI' );
+		$subpageDataGenerator->setTreeRootTitle( $title );
+		$actualSubpageData = $subpageDataGenerator->generate( $title );
+		$this->assertEquals( $this->getExpectedFromSpecificTitle(), $actualSubpageData );
 	}
 
 	/**
 	 * @return array
 	 */
-	private function getExpected(): array {
+	private function getExpectedFromRoot(): array {
 		return [
 			$this->makeItem(
 				'Dummy2/ABC',
@@ -94,6 +100,34 @@ class SubpageDataGeneratorTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
+	 * @return array
+	 */
+	private function getExpectedFromSpecificTitle(): array {
+		return [
+			$this->makeItem(
+				'Dummy2/GHI/AAA',
+				'AAA',
+				[ 'new' ],
+				[
+					$this->makeItem(
+						'Dummy2/GHI/AAA/BBB',
+						'BBB',
+						[ 'new' ],
+						[
+							$this->makeItem(
+								'Dummy2/GHI/AAA/BBB/CCC',
+								'CCC',
+								[],
+								[]
+							)
+						]
+					)
+				]
+			)
+		];
+	}
+
+	/**
 	 * @param string $name
 	 * @param string $text
 	 * @param array $classes
@@ -112,13 +146,6 @@ class SubpageDataGeneratorTest extends MediaWikiIntegrationTestCase {
 			'text' => $text,
 			'href' => $title->getLocalURL(),
 		];
-
-		// Change 'classes' order for $title passed to generate() because 'items' gets reset
-		if ( $name == 'Dummy2/DEF' ) {
-			if ( !empty( $classes ) ) {
-				$item['classes'] = $classes;
-			}
-		}
 
 		if ( !empty( $items ) ) {
 			$item['items'] = $items;
