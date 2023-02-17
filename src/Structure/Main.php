@@ -263,7 +263,7 @@ class Main implements
 	 */
 	private function fetchTitle() {
 		$title = $this->template->getSkin()->getTitle();
-		$regularTitle = $title->getPrefixedText();
+		$regularTitle = $title->getText();
 		$displayTitle = $this->template->data['title'];
 		if ( $displayTitle === $regularTitle ) {
 			$displayTitle = $title->getSubpageText();
