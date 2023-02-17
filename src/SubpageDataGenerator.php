@@ -7,58 +7,108 @@ use Title;
 
 class SubpageDataGenerator {
 
+	/** @var Title|null */
+	private $activeTitle = null;
+
+	/** @var Title|null */
+	private $treeRootTitle = null;
+
 	/**
+	 * @param Title $title
+	 * @return void
+	 */
+	public function setActiveTitle( Title $title ): void {
+		$this->activeTitle = $title;
+	}
+
+	/**
+	 * Tree root title has to be the subpage root of the title or
+	 * one of titles suppages.
+	 *
+	 * @param Title $title
+	 * @return void
+	 */
+	public function setTreeRootTitle( Title $title ): void {
+		$this->treeRootTitle = $title;
+	}
+
+	/**
+	 * $title is the root title or a subpage of the title for that the
+	 * subpage tree should be created.
+	 *
 	 * @param Title $title
 	 * @return array
 	 */
-	public function generate( Title $title, int $maxDepth = 5 ): array {
-		$activeTitle = $title;
+	public function generate( Title $title, int $maxDepth = 6 ): array {
+		$rootTitle = $title;
 
 		/** $title->isSubpage() delivers false even if it is a subpage */
-		if ( !$title->equals( $title->getRootTitle() ) ) {
-			$title = $title->getRootTitle();
+		if ( !$rootTitle->equals( $title->getRootTitle() ) ) {
+			$rootTitle = $title->getRootTitle();
 		}
 
-		$subpageTitles = $title->getSubpages();
-
-		$subpages = [];
-		foreach ( $subpageTitles as $subpageTitle ) {
-			$subpagePath = $this->makeSupbageData( $subpageTitle, $activeTitle, $maxDepth );
-
-			$cur = &$subpages;
-			$subPageDepth = 0;
-			foreach ( $subpagePath as $key => $value ) {
-				if ( !isset( $cur[$key] ) ) {
-					$cur[$key] = $value;
-				}
-
-				$subPageDepth++;
-
-				if ( $subPageDepth >= count( $subpagePath ) ) {
-					unset( $cur[$key]['items'] );
-					break;
-				}
-
-				if ( $subPageDepth >= $maxDepth ) {
-					unset( $cur[$key]['items'] );
-					break;
-				}
-
-				$cur = &$cur[$key]['items'];
-
+		if ( $this->treeRootTitle ) {
+			$rootTitle = $this->treeRootTitle;
+			$rootTitleParts = explode( '/', $rootTitle->getDBkey() );
+			if ( count( $rootTitleParts ) > 1 ) {
+				$maxDepth = $maxDepth + count( $rootTitleParts ) - 1;
 			}
 		}
 
-		return $this->clearIndex( $subpages );
+		$subpageTitles = $rootTitle->getSubpages();
+
+		$subpages = [];
+		foreach ( $subpageTitles as $subpageTitle ) {
+			$subpagePath = $this->makeSupbageData( $subpageTitle, $maxDepth );
+			$this->unsetUnusedItems( $subpagePath, $subpages, $maxDepth );
+		}
+
+		if ( $this->treeRootTitle ) {
+			$rootTitleKey = $rootTitle->getDBkey();
+			if ( isset( $subpages[$rootTitleKey]['items'] ) ) {
+				return $this->clearRootIndex( $subpages[$rootTitleKey]['items'] );
+			} else {
+				return [];
+			}
+		}
+
+		return $this->clearRootIndex( $subpages );
+	}
+
+	/**
+	 * @param array $subpagePath
+	 * @param array &$subpages
+	 * @param int $maxDepth
+	 */
+	private function unsetUnusedItems( array $subpagePath, array &$subpages, int $maxDepth ) {
+		$subPageDepth = 0;
+		foreach ( $subpagePath as $key => $value ) {
+			if ( !isset( $subpages[$key] ) ) {
+				$subpages[$key] = $value;
+			}
+
+			$subPageDepth++;
+
+			if ( $subPageDepth >= count( $subpagePath ) ) {
+				unset( $subpages[$key]['items'] );
+				break;
+			}
+
+			if ( $subPageDepth >= $maxDepth ) {
+				unset( $subpages[$key]['items'] );
+				break;
+			}
+
+			$subpages = &$subpages[$key]['items'];
+		}
 	}
 
 	/**
 	 * @param Title $title
-	 * @param Title $activeTitle
 	 * @param int $maxDepth
 	 * @return array
 	 */
-	private function makeSupbageData( Title $title, Title $activeTitle, int $maxDepth ): array {
+	private function makeSupbageData( Title $title, int $maxDepth ): array {
 		$list = [];
 
 		$namespace = $title->getNamespace();
@@ -104,7 +154,7 @@ class SubpageDataGenerator {
 				$list[$key]['title'] = $titleText->text();
 			}
 
-			if ( $curTitle->equals( $activeTitle ) ) {
+			if ( $this->activeTitle && $curTitle->equals( $this->activeTitle ) ) {
 				$classes[] = 'active';
 			}
 
@@ -122,11 +172,11 @@ class SubpageDataGenerator {
 	 * @param array $data
 	 * @return array
 	 */
-	private function clearIndex( array $data ): array {
+	private function clearRootIndex( array $data ): array {
 		$indexedData = [];
 		foreach ( $data as $key => $value ) {
 			if ( isset( $value['items'] ) ) {
-				$value['items'] = $this->clearIndex( $value['items'] );
+				$value['items'] = $this->clearRootIndex( $value['items'] );
 			}
 			$indexedData[] = $value;
 		}

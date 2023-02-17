@@ -36,7 +36,9 @@ bs.skin.enhancedSidebar.tree.node.SubpageList.prototype.getCustomFormFields = fu
 			name: 'depth',
 			type: 'number',
 			label: mw.message( 'bs-discovery-enhanced-mediawiki-sidebar-field-depth' ).text(),
-			help: mw.message( 'bs-discovery-enhanced-mediawiki-sidebar-field-depth-help' ).text()
+			help: mw.message( 'bs-discovery-enhanced-mediawiki-sidebar-field-depth-help' ).text(),
+			widget_min: 1,
+			widget_max: 6
 		},
 	];
 };

@@ -11,8 +11,6 @@ use Title;
 
 class SubpageTree extends SimpleTreeContainer {
 
-	private const MAX_DEPTH = 5;
-
 	/**
 	 * @inheritDoc
 	 */
@@ -39,6 +37,7 @@ class SubpageTree extends SimpleTreeContainer {
 		$title = $context->getTitle();
 
 		$subpageDataGenerator = new SubpageDataGenerator();
+		$subpageDataGenerator->setActiveTitle( $title );
 		$subpageData = $subpageDataGenerator->generate( $title );
 
 		return $subpageData;
