@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"Սերգեյ Սաֆարյան"
 		]
 	},
 	"bs-discovery-back-to-top-aria-label": "Ետ էջի վերև",
+	"bs-discovery-navbar-user-button-title": "Օգտվողի ընտրացանկ",
+	"bs-discovery-navbar-user-button-aria-label": "Օգտվողի ընտրացանկ",
 	"bs-discovery-navbar-user-button-personal-menu-text": "Անձնական գործիքներ",
 	"bs-discovery-navbar-user-login-aria-label": "Մուտք",
 	"bs-discovery-searchform-button-title": "Որոնել հիմա",
@@ -38,7 +41,7 @@
 	"bs-discovery-globalactionentry-templates-title": "Բոլոր կաղապարներ",
 	"bs-discovery-subpage-tree-pnl-header-text": "Ենթաէջեր",
 	"ns-main-label": "Էջեր",
-	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Հիմնական մենյու",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Հիմնական ընտրացանկ",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "Էջ",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-text": "Պիտակ",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-depth": "Խորություն",
