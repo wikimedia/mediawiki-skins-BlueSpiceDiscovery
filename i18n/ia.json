@@ -154,5 +154,9 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (pagina non existe)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigation",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Modificar iste menu",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Modificar $1"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Modificar $1",
+	"bs-discovery-config-meta-items-header-label": "Elementos sub le titulo del pagina",
+	"bs-discovery-config-meta-items-header-help": "Le elementos seligite appare sub le titulo del pagina",
+	"bs-discovery-config-meta-items-footer-label": "Elementos sub le contento del pagina`",
+	"bs-discovery-config-meta-items-footer-help": "Le elementos seligite appare sub le contento del pagina"
 }
