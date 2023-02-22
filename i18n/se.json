@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kimberli Mäkäräinen (WMNO)",
 			"Yupik"
 		]
 	},
@@ -12,5 +13,6 @@
 	"bs-discovery-last-edit-by-anon-user": "Anonyma geavaheaddji",
 	"bs-discovery-title-action-language-button-title": "Vállje giela",
 	"bs-discovery-title-action-language-button-aria-label": "Vállje giela",
+	"bs-discovery-dialog-details-action-cancel": "Šluhtte",
 	"bs-discovery-dialog-detailssectionheading-namespaces": "Nammagomuvuođat"
 }
