@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kimberli Mäkäräinen (WMNO)",
 			"Yupik"
 		]
 	},
@@ -14,5 +15,6 @@
 	"bs-discovery-navbar-language-button-title": "Vállje giela",
 	"bs-discovery-navbar-language-button-aria-label": "Vállje giela",
 	"bs-discovery-title-action-language-button-title": "Vállje giela",
-	"bs-discovery-title-action-language-button-aria-label": "Vállje giela"
+	"bs-discovery-title-action-language-button-aria-label": "Vállje giela",
+	"bs-discovery-dialog-details-action-cancel": "Šluhtte"
 }
