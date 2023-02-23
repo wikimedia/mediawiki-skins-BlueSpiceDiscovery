@@ -16,5 +16,7 @@
 	"bs-discovery-navbar-language-button-aria-label": "Vállje giela",
 	"bs-discovery-title-action-language-button-title": "Vállje giela",
 	"bs-discovery-title-action-language-button-aria-label": "Vállje giela",
-	"bs-discovery-dialog-details-action-cancel": "Šluhtte"
+	"bs-discovery-dialog-details-action-cancel": "Šluhtte",
+	"bs-discovery-back-to-top-text": "Ruovttoluotta bajás",
+	"bs-discovery-back-to-top-aria-label": "Ruovttoluotta bajás"
 }
