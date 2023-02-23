@@ -158,5 +158,9 @@
 	"bs-discovery-enhanced-sidebar-edit-button-title": "編輯此選單",
 	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "編輯$1",
 	"bs-discovery-title-action-language-button-title": "選擇語言",
-	"bs-discovery-title-action-language-button-aria-label": "選擇語言"
+	"bs-discovery-title-action-language-button-aria-label": "選擇語言",
+	"bs-discovery-config-meta-items-header-label": "頁面標題下方的元素",
+	"bs-discovery-config-meta-items-header-help": "所選元素顯示在頁面標題下方",
+	"bs-discovery-config-meta-items-footer-label": "頁面內容下方的元素",
+	"bs-discovery-config-meta-items-footer-help": "所選元素顯示在頁面內容下方"
 }
