@@ -37,11 +37,11 @@
 					return;
 				}
 
-				var position = $( jumpmark ).position().top;
+				var position = $( jumpmark ).offset().top;
 				if ( position === 0 ) {
 					return;
 				}
-				topHeight = $( '#content' ).position().top;
+				topHeight = $( '#content' ).offset().top;
 
 				$( 'body,html' ).animate( {
 					scrollTop: position - topHeight
