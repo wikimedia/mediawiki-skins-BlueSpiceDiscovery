@@ -16,11 +16,6 @@
 			setSickyTitleforVerticalPosition();
 			handleVEToolbar();
 		}
-
-		var $titleContent = getTitleLineContent();
-		if ( $titleContent.length > 0 ) {
-			resizeTitleLineContent();
-		}
 	} );
 
 	function setSickyTitleforVerticalPosition() {
