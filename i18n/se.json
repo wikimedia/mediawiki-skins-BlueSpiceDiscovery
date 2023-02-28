@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yupik"
+			"Yupik",
+			"Kimberli Mäkäräinen (WMNO)"
 		]
 	},
+	"bs-discovery-back-to-top-text": "Ruovttoluotta bajás",
+	"bs-discovery-back-to-top-aria-label": "Ruovttoluotta bajás",
 	"bs-discovery-navbar-user-login-text": "Čálit sisa",
 	"bs-discovery-navbar-user-login-title": "Čálit sisa",
 	"bs-discovery-navbar-user-login-aria-label": "Čálit sisa",
@@ -12,5 +15,6 @@
 	"bs-discovery-last-edit-by-anon-user": "Anonyma geavaheaddji",
 	"bs-discovery-title-action-language-button-title": "Vállje giela",
 	"bs-discovery-title-action-language-button-aria-label": "Vállje giela",
+	"bs-discovery-dialog-details-action-cancel": "Šluhtte",
 	"bs-discovery-dialog-detailssectionheading-namespaces": "Nammagomuvuođat"
 }
