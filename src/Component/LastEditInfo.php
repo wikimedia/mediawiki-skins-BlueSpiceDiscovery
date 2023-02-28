@@ -120,7 +120,7 @@ class LastEditInfo extends Literal {
 			$timestamp,
 			[
 				'title' => $timestamp,
-				'aria-label' => $ariaLabel,
+				'aria-label' => $ariaLabel->plain(),
 				'role' => 'link',
 				'rel' => 'nofollow',
 			],
@@ -159,11 +159,15 @@ class LastEditInfo extends Literal {
 
 		}
 
+		$ariaLabelMsg = Message::newFromKey(
+			'bs-discovery-title-last-edit-info-user-aria-label',
+			$username
+		);
 		$html = $this->linkRenderer->makeLink(
 			$user->getUserPage(),
 			$username,
 			[
-				'aria-label' => Message::newFromKey( 'bs-discovery-title-last-edit-info-user-aria-label', $username ),
+				'aria-label' => $ariaLabelMsg->plain(),
 				'role' => 'link'
 			],
 			[]
