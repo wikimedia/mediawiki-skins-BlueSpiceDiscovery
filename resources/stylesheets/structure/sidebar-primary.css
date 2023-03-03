@@ -25,6 +25,10 @@
 	border-radius: 5px;
 	border: 3px solid transparent;
 }
+#sb-pri .enhanced-sidebar-cnt {
+	/* A min-height is required to show edit link for empty MediaWiki:Sidebar.json */
+	min-height: 35px;
+}
 #sb-pri #enh-mw-sb-edit-sidebar-link {
 	visibility: hidden;
 	float: right;
