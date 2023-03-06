@@ -46,6 +46,10 @@ class CreateContentOptions implements SkinTemplateNavigation__UniversalHook {
 			return;
 		}
 
+		if ( $title->getContentModel() !== CONTENT_MODEL_WIKITEXT ) {
+			return;
+		}
+
 		if ( $this->permissionManager->userCan( 'edit', $user, $title ) ) {
 			$links['namespaces']['new-section'] = [
 				'text' => $sktemplate->msg( 'bs-discovery-create-button-new-section-text' ),
