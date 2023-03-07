@@ -2,6 +2,8 @@
 
 namespace BlueSpice\Discovery\EnhancedSidebar\Node;
 
+use BlueSpice\Discovery\SubpageDataGenerator;
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
 use Title;
 use UnexpectedValueException;
@@ -11,8 +13,6 @@ class SubpageListNode extends InternalLinkNode {
 
 	/** @var int */
 	private $depth;
-	/** @var User */
-	private $user;
 
 	/**
 	 * @param PermissionManager $permissionManager
@@ -47,7 +47,6 @@ class SubpageListNode extends InternalLinkNode {
 	 * @return bool
 	 */
 	public function isHidden( User $user ): bool {
-		$this->user = $user;
 		return parent::isHidden( $user );
 	}
 
@@ -63,9 +62,15 @@ class SubpageListNode extends InternalLinkNode {
 				'Target is not a Title! Calling from an invalid context?'
 			);
 		}
-		return array_merge( parent::treeSerialize(), [
-			'items' => $this->getSubpages(),
-		] );
+
+		$data = parent::treeSerialize();
+		return array_merge(
+			$data,
+			[
+				'classes' => $this->getOutputCssClasses(),
+				'items' => $this->getSubpages(),
+			]
+		);
 	}
 
 	/**
@@ -81,51 +86,34 @@ class SubpageListNode extends InternalLinkNode {
 	 * @return array
 	 */
 	private function getSubpages(): array {
+		if ( $this->target instanceof Title === false ) {
+			$services = MediaWikiServices::getInstance();
+			$titleFactory = $services->getTitleFactory();
+			$this->target = $titleFactory->newFromText( $this->target );
+		}
+
 		if ( !$this->target->hasSubpages() ) {
 			return [];
 		}
 
-		return $this->getSubpagesInternally( $this->target, 1 );
-	}
+		$subpageDataGenerator = new SubpageDataGenerator();
+		$subpageDataGenerator->setTreeRootTitle( $this->target );
+		$subpageData = $subpageDataGenerator->generate( $this->target, $this->depth - 1 );
 
-	/**
-	 * @param Title $target
-	 * @param int $depth
-	 *
-	 * @return array
-	 * @throws \Exception
-	 */
-	private function getSubpagesInternally( Title $target, int $depth ) {
-		if ( $depth > $this->depth ) {
-			return [];
-		}
-		if ( !$target->hasSubpages() ) {
-			return [];
-		}
-		$children = [];
-		$subpages = $target->getSubpages();
-		/** @var Title $subpage */
-		foreach ( $subpages as $subpage ) {
-			if ( !$subpage->getBaseTitle()->equals( $target ) ) {
-				continue;
-			}
-			$subpageNode = new InternalLinkNode( $this->permissionManager, [
-				'page' => $subpage,
-				'text' => $subpage->getSubpageText()
-			] );
-			if ( $subpageNode->isHidden( $this->user ) ) {
-				continue;
-			}
-			$children[] = $subpageNode->treeSerialize() + $this->getSubpagesInternally( $subpage, $depth + 1 );
-		}
-		return $children;
+		return $subpageData;
 	}
 
 	/**
 	 * @return array|string[]
 	 */
 	protected function getOutputCssClasses(): array {
-		// Remove parent-specific classes
 		return array_diff( parent::getOutputCssClasses(), [ 'internal', 'new' ] );
+	}
+
+	/**
+	 * @return string
+	 */
+	protected function getDisplayText(): string {
+		return $this->text;
 	}
 }
