@@ -2,6 +2,7 @@
 
 namespace BlueSpice\Discovery\Component;
 
+use Exception;
 use IContextSource;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
@@ -9,7 +10,6 @@ use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdownIconSplitButton;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdownItemlistFromArray;
 use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
-use RequestContext;
 
 class TitleActionEdit extends SimpleDropdownIconSplitButton {
 
@@ -45,25 +45,34 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	 * @inheritDoc
 	 */
 	public function getId(): string {
-		return 'ta-edit-btn';
+		$actionIds = array_keys( $this->editActions );
+
+		if ( empty( $actionIds ) ) {
+			return 'ta-edit-btn';
+		}
+
+		if ( isset( $this->editActions['ca-ve-edit'] ) ) {
+			return 'ca-ve-edit';
+		}
+
+		if ( isset( $this->editActions['ca-edit'] ) ) {
+			return 'ca-edit';
+		}
+
+		return $actionIds[0];
 	}
 
 	/**
 	 * @inheritDoc
 	 */
 	public function getHref(): string {
-		$context = RequestContext::getMain();
-		$title = $context->getTitle();
+		$actionKey = $this->getId();
 
-		$veNamespace = $GLOBALS['wgVisualEditorAvailableNamespaces'] ?? [];
-		$ns = $title->getNamespace();
-
-		if ( isset( $veNamespace[$ns] ) && $veNamespace[$ns] ) {
-			if ( isset( $this->editActions['ca-ve-edit'] ) ) {
-				return $this->editActions['ca-ve-edit']['href'];
-			}
+		if ( isset( $this->editActions[$actionKey]['href'] ) ) {
+			return $this->editActions[$actionKey]['href'];
+		} else {
+			throw new Exception( 'No edit action found' );
 		}
-		return $this->editActions['ca-edit']['href'];
 	}
 
 	/**
@@ -153,6 +162,10 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	 * @return bool
 	 */
 	public function shouldRender( IContextSource $context ): bool {
+		if ( empty( $this->editActions ) ) {
+			return false;
+		}
+
 		$user = $context->getUser();
 		$title = $context->getTitle();
 		$userCan = $this->permissionManager->quickUserCan( 'edit', $user, $title );
@@ -170,9 +183,16 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 		if ( empty( $this->editActions ) ) {
 			return [];
 		}
+
+		$actionId = $this->getId();
+		$actions = $this->editActions;
+		if ( isset( $actions[$actionId] ) ) {
+			unset( $actions[$actionId] );
+		}
+
 		$services = MediaWikiServices::getInstance();
 		/** @var LinkFormatter */
 		$linkFormatter = $services->getService( 'MWStakeLinkFormatter' );
-		return $linkFormatter->formatLinks( $this->editActions );
+		return $linkFormatter->formatLinks( $actions );
 	}
 }
