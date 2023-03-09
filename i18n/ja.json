@@ -3,7 +3,8 @@
 		"authors": [
 			"Ajeje Brazorf",
 			"Kokage si",
-			"MathXplore"
+			"MathXplore",
+			"もなー(偽物)"
 		]
 	},
 	"bs-discovery-last-edit-by-anon-user": "匿名利用者",
@@ -25,5 +26,9 @@
 	"bs-discovery-enhanced-sidebar-edit-button-title": "このメニューを編集",
 	"bs-discovery-navbar-user-login-text": "ログイン",
 	"bs-discovery-navbar-user-login-title": "ログイン",
-	"bs-discovery-navbar-user-login-aria-label": "ログイン"
+	"bs-discovery-navbar-user-login-aria-label": "ログイン",
+	"bs-discovery-config-meta-items-header-label": "ページ コンテンツの下の要素",
+	"bs-discovery-config-meta-items-header-help": "選択した要素がページ コンテンツの下に表示されます",
+	"bs-discovery-config-meta-items-footer-label": "ページ コンテンツの下の要素",
+	"bs-discovery-config-meta-items-footer-help": "選択した要素がページ コンテンツの下に表示されます"
 }
