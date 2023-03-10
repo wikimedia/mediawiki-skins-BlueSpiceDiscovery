@@ -115,5 +115,8 @@
 	"bs-discovery-personalurl-userpage-text": "Profil",
 	"bs-discovery-globalactionentry-templates-text": "Maler",
 	"bs-discovery-globalactionentry-templates-title": "Alle maler",
-	"bs-discovery-last-edit-by-system-user": "systembruker"
+	"bs-discovery-last-edit-by-system-user": "systembruker",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-label": "Meny i hovedpanelet i det primære sidefeltet",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-help": "Velg meny i hovedpanelet til det primære sidefeltet",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "MediaWikis sidemeny"
 }
