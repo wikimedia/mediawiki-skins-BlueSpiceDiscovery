@@ -118,5 +118,8 @@
 	"bs-discovery-globalactionentry-templates-title": "Alle maler",
 	"bs-discovery-last-edit-by-anon-user": "Anonym bruker",
 	"bs-discovery-title-action-language-button-title": "Velg språk",
-	"bs-discovery-title-action-language-button-aria-label": "Velg språk"
+	"bs-discovery-title-action-language-button-aria-label": "Velg språk",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-label": "Meny i hovedpanelet i det primære sidefeltet",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-help": "Velg meny i hovedpanelet til det primære sidefeltet",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "MediaWikis sidemeny"
 }
