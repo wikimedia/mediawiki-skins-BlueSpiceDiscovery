@@ -40,6 +40,7 @@ class SubpageDataGenerator {
 	 * @return array
 	 */
 	public function generate( Title $title, int $maxDepth = 6 ): array {
+		$minDepth = 1;
 		$rootTitle = $title;
 
 		/** $title->isSubpage() delivers false even if it is a subpage */
@@ -48,9 +49,9 @@ class SubpageDataGenerator {
 		}
 
 		if ( $this->treeRootTitle ) {
-			$rootTitle = $this->treeRootTitle;
-			$rootTitleParts = explode( '/', $rootTitle->getDBkey() );
+			$rootTitleParts = explode( '/', $this->treeRootTitle->getDBkey() );
 			if ( count( $rootTitleParts ) > 1 ) {
+				$minDepth = count( $rootTitleParts );
 				$maxDepth = $maxDepth + count( $rootTitleParts ) - 1;
 			}
 		}
@@ -59,17 +60,8 @@ class SubpageDataGenerator {
 
 		$subpages = [];
 		foreach ( $subpageTitles as $subpageTitle ) {
-			$subpagePath = $this->makeSupbageData( $subpageTitle, $maxDepth );
-			$this->unsetUnusedItems( $subpagePath, $subpages, $maxDepth );
-		}
-
-		if ( $this->treeRootTitle ) {
-			$rootTitleKey = $rootTitle->getDBkey();
-			if ( isset( $subpages[$rootTitleKey]['items'] ) ) {
-				return $this->clearRootIndex( $subpages[$rootTitleKey]['items'] );
-			} else {
-				return [];
-			}
+			$subpagePath = $this->makeSupbageData( $subpageTitle, $minDepth, $maxDepth );
+			$this->buildSubpageTreeData( $subpagePath, $subpages, $maxDepth );
 		}
 
 		return $this->clearRootIndex( $subpages );
@@ -80,7 +72,7 @@ class SubpageDataGenerator {
 	 * @param array &$subpages
 	 * @param int $maxDepth
 	 */
-	private function unsetUnusedItems( array $subpagePath, array &$subpages, int $maxDepth ) {
+	private function buildSubpageTreeData( array $subpagePath, array &$subpages, int $maxDepth ) {
 		$subPageDepth = 0;
 		foreach ( $subpagePath as $key => $value ) {
 			if ( !isset( $subpages[$key] ) ) {
@@ -105,10 +97,11 @@ class SubpageDataGenerator {
 
 	/**
 	 * @param Title $title
+	 * @param int $minDepth
 	 * @param int $maxDepth
 	 * @return array
 	 */
-	private function makeSupbageData( Title $title, int $maxDepth ): array {
+	private function makeSupbageData( Title $title, int $minDepth, int $maxDepth ): array {
 		$list = [];
 
 		$namespace = $title->getNamespace();
@@ -129,7 +122,21 @@ class SubpageDataGenerator {
 				continue;
 			}
 
+			if ( $index < $minDepth ) {
+				$curTitleText .= '/';
+				continue;
+			}
+
 			$curTitle = Title::makeTitle( $namespace, $curTitleText );
+
+			if ( $this->treeRootTitle ) {
+				$curDBKey = $curTitle->getDBkey();
+				$rootTitleDBKey = $this->treeRootTitle->getDBKey();
+				if ( substr( $curDBKey, 0, strlen( $rootTitleDBKey ) ) !== $rootTitleDBKey ) {
+					$curTitleText .= '/';
+					continue;
+				}
+			}
 
 			$fullId = md5( $curTitle->getFullText() );
 			$id = substr( $fullId, 0, 6 );
