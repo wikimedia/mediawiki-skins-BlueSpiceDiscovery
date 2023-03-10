@@ -29,12 +29,15 @@
 	/* A min-height is required to show edit link for empty MediaWiki:Sidebar.json */
 	min-height: 35px;
 }
-#sb-pri #enh-mw-sb-edit-sidebar-link {
+#sb-pri #enh-mw-sb-edit-sidebar-link,
+#sb-pri #enh-mw-sb-edit-sidebar-link:visited {
 	visibility: hidden;
 	float: right;
 	padding: 0 1em;
 	text-align: right;
 	width: 100%;
+	font-size: 0.7rem;
+	color: var(--sidebar-primary-fg);
 }
 #sb-pri .enhanced-sidebar-cnt:hover #enh-mw-sb-edit-sidebar-link {
 	visibility: visible;

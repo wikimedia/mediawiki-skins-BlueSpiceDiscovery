@@ -23,7 +23,7 @@ body::-webkit-scrollbar-thumb {
 	border: 3px solid transparent;
 }
 
-a.ico-btn {
+a.ico-btn, a.ico-btn:visited {
 	display: block;
 	height: 40px;
 	width: 40px;
