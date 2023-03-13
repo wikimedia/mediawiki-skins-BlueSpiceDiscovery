@@ -3,6 +3,7 @@
 		"authors": [
 			"MITO",
 			"Nike",
+			"Pyscowicz",
 			"Rönttönen"
 		]
 	},
@@ -86,5 +87,21 @@
 	"bs-discovery-globalactionentry-templates-title": "Kaikki mallineet",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigaatio",
 	"bs-discovery-title-action-language-button-title": "Valitse kieli",
-	"bs-discovery-title-action-language-button-aria-label": "Valitse kieli"
+	"bs-discovery-title-action-language-button-aria-label": "Valitse kieli",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "MediaWiki-sivupalkki",
+	"bs-discovery-menu-provider-subpage-tree-label": "Alasivupuu",
+	"bs-discovery-subpage-tree-pnl-header-text": "Alasivut",
+	"ns-main-label": "Sivut",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Päävalikko",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "Sivu",
+	"menueditor-ui-enhanced-sidebar-external-link-label": "Ulkoinen linkki",
+	"menueditor-ui-enhanced-sidebar-internal-link-label": "Sisäinen linkki",
+	"menueditor-ui-enhanced-sidebar-subpage-tree-label": "Alasivupuu",
+	"bs-discovery-enhanced-mediawiki-sidebar-show-for-groups-text": "Näytä ryhmille",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "Otsikkoteksti",
+	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Lisää uusi paneeli",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS-luokat",
+	"bs-discovery-page-does-not-exist-title": "$1 (sivua ei ole)",
+	"bs-discovery-enhanced-sidebar-edit-button-title": "Muokkaa tätä valikkoa",
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Muokkaa $1"
 }
