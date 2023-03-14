@@ -63,6 +63,8 @@
 	"bs-discovery-last-edit-by-system-user": "Systembenutzer",
 	"bs-discovery-title-action-edit-button-title": "Seite bearbeiten",
 	"bs-discovery-title-action-edit-button-aria-label": "Seite bearbeiten",
+	"bs-discovery-title-action-language-button-title": "Sprache auswählen",
+	"bs-discovery-title-action-language-button-aria-label": "Sprache auswählen",
 	"bs-discovery-tabpanel-main-text": "Hauptnavigation",
 	"bs-discovery-tabpanel-main-title": "Reiter mit der Hauptnavigation",
 	"bs-discovery-tabpanel-main-aria-label": "Hauptnavigation",
