@@ -3,7 +3,8 @@
 		"authors": [
 			"Ajeje Brazorf",
 			"MathXplore",
-			"Kokage si"
+			"Kokage si",
+			"もなー(偽物)"
 		]
 	},
 	"bs-discovery-navbar-user-login-text": "ログイン",
@@ -25,5 +26,9 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "新しいパネルを追加",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSSクラス",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "ナビゲーション",
-	"bs-discovery-enhanced-sidebar-edit-button-title": "このメニューを編集"
+	"bs-discovery-enhanced-sidebar-edit-button-title": "このメニューを編集",
+	"bs-discovery-config-meta-items-header-label": "ページ コンテンツの下の要素",
+	"bs-discovery-config-meta-items-header-help": "選択した要素がページ コンテンツの下に表示されます",
+	"bs-discovery-config-meta-items-footer-label": "ページ コンテンツの下の要素",
+	"bs-discovery-config-meta-items-footer-help": "選択した要素がページ コンテンツの下に表示されます"
 }
