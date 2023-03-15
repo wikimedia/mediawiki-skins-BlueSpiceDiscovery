@@ -383,24 +383,24 @@
 		},
 		"skin.discovery.bootstrap.styles": {
 			"styles": {
-				"bootstrap/5.0/dist/css/bootstrap-grid.min.css": {},
-				"bootstrap/5.0/dist/css/bootstrap-reboot.min.css": {},
-				"bootstrap/5.0/dist/css/bootstrap-utilities.min.css": {},
-				"bootstrap/5.0/dist/css/bootstrap.min.css": {},
+				"bootstrap/dist/css/bootstrap-grid.min.css": {},
+				"bootstrap/dist/css/bootstrap-reboot.min.css": {},
+				"bootstrap/dist/css/bootstrap-utilities.min.css": {},
+				"bootstrap/dist/css/bootstrap.min.css": {},
 				"bootstrap/icons/bootstrap-icons.css": {}
 			}
 		},
 		"skin.discovery.bootstrap.rtl.styles": {
 			"styles": {
-				"bootstrap/5.0/dist/css/bootstrap-grid.rtl.min.css": {},
-				"bootstrap/5.0/dist/css/bootstrap-reboot.rtl.min.css": {},
-				"bootstrap/5.0/dist/css/bootstrap-utilities.rtl.min.css": {},
-				"bootstrap/5.0/dist/css/bootstrap.rtl.min.css": {}
+				"bootstrap/dist/css/bootstrap-grid.rtl.min.css": {},
+				"bootstrap/dist/css/bootstrap-reboot.rtl.min.css": {},
+				"bootstrap/dist/css/bootstrap-utilities.rtl.min.css": {},
+				"bootstrap/dist/css/bootstrap.rtl.min.css": {}
 			}
 		},
 		"skin.discovery.bootstrap.scripts": {
 			"scripts": [
-				"bootstrap/5.0/dist/js/bootstrap.bundle.js"
+				"bootstrap/dist/js/bootstrap.bundle.js"
 			]
 		},
 		"skin.discovery.bluespice.styles": {
