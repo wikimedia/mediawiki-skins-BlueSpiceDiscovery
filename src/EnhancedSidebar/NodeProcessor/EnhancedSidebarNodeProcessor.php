@@ -98,9 +98,13 @@ abstract class EnhancedSidebarNodeProcessor implements INodeProcessor {
 		}
 		if ( $title ) {
 			$requestContext->setTitle( $title );
+		} else {
+			$title = $requestContext->getTitle();
 		}
 
 		$parser = $this->parserFactory->create();
+		$parser->setPage( $requestContext->getTitle() );
+		$parser->setUser( $requestContext->getUser() );
 		$parserOptions = ParserOptions::newFromContext( $requestContext );
 		$parser->setOptions( $parserOptions );
 

@@ -28,6 +28,6 @@ class SubpageListProcessor extends InternalLinkProcessor {
 	 * @inheritDoc
 	 */
 	protected function getKeysToPreprocess( array $data ): array {
-		return parent::getKeysToPreprocess( $data ) + [ 'depth' ];
+		return array_merge( parent::getKeysToPreprocess( $data ), [ 'depth', 'page' ] );
 	}
 }
