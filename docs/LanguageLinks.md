@@ -7,6 +7,7 @@ Config Setting for Language Links - skin.json
 
 ## Example:
 
+```json
 "config": {
     "DiscoveryHardWiredLangLinks" : {
         "value": {
@@ -14,3 +15,6 @@ Config Setting for Language Links - skin.json
             "en": "/wiki/en/$1",
             "fr": "/wiki/$1/fr"
         }
+    }
+}
+```
