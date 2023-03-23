@@ -86,7 +86,7 @@ class NamespaceMainPages extends SimpleCard {
 				$nsText = 'main';
 			}
 
-			$pageProps = $this->utilityFactory->getPagePropHelper( $title )->getPageProps();
+			$pageProps = $services->getPageProps()->getAllProperties( $title );
 			if ( ( $pageProps !== null ) && ( isset( $pageProps['displaytitle'] ) ) ) {
 				$nsText = $pageProps['displaytitle'];
 			}
