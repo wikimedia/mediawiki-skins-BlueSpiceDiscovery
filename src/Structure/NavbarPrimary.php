@@ -196,7 +196,7 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 					'bs-discovery-logo-return-to-aria-label',
 					$mainpage->getText()
 				),
-				'logo-src' => $GLOBALS['wgLogo'],
+				'logo-src' => $GLOBALS['wgLogos']['1x'],
 				'navbar-menu-aria-label' => Message::newFromKey( 'bs-discovery-navbar-aria-label' ),
 			]
 		);
