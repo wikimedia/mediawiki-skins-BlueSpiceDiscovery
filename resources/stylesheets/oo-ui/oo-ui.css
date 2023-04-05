@@ -19,3 +19,11 @@ body.mediawiki .oo-ui-windowManager-modal > .oo-ui-dialog {
 .oo-ui-windowManager .oo-ui-processDialog .oo-ui-actionWidget.oo-ui-labelElement > .oo-ui-buttonElement-button {
 	padding: 0.75rem;
 }
+
+/* apply min-height to buttons in oo-ui-numberInputWidget-field */
+.oo-ui-numberInputWidget-field input.oo-ui-inputWidget-input {
+	min-height: 32px;
+}
+.oo-ui-numberInputWidget-field > span, .oo-ui-numberInputWidget-field > input {
+	position: relative;
+}
