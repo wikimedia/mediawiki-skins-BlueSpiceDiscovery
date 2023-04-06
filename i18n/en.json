@@ -163,5 +163,10 @@
 	"bs-discovery-config-meta-items-header-label": "Elements below the page title",
 	"bs-discovery-config-meta-items-header-help": "Selected elements are displayed below the page title",
 	"bs-discovery-config-meta-items-footer-label": "Elements below the page content",
-	"bs-discovery-config-meta-items-footer-help": "Selected elements are displayed below the page content"
+	"bs-discovery-config-meta-items-footer-help": "Selected elements are displayed below the page content",
+	"bs-discovery-alert-old-page-version": "You are viewing an old version of this page. [[Special:Redirect/page/$1|Return to the latest version]].",
+	"bs-discovery-page-version-pager-deleted-user": "(username removed)",
+	"bs-discovery-page-version-pager-info-text": "This is the version of $1, $2 by [[User:$3|$3]]",
+	"bs-discovery-page-version-pager-previous": "Previous",
+	"bs-discovery-page-version-pager-next": "Next"
 }
