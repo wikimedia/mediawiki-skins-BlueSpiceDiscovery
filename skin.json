@@ -160,6 +160,9 @@
 				"DiscoveryMainLinksRecentChanges": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksRecentChanges::getInstance",
 				"DiscoveryMetaItemsHeader": "\\BlueSpice\\Discovery\\ConfigDefinition\\MetaItemsHeader::getInstance",
 				"DiscoveryMetaItemsFooter": "\\BlueSpice\\Discovery\\ConfigDefinition\\MetaItemsFooter::getInstance"
+			},
+			"AlertProviderRegistry": {
+				"old-revision": "\\BlueSpice\\Discovery\\AlertProvider\\PageVersionPagerAlert::factory"
 			}
 		},
 		"BlueSpiceHideTitle": {
@@ -314,7 +317,7 @@
 				"stylesheets/megamenu.css": {},
 				"stylesheets/oo-ui/oo-ui.css": {},
 				"stylesheets/mediawiki.ui/components/radio.css": {},
-				"stylesheets/control/versionpager.css": {},
+				"stylesheets/control/page-version-pager.css": {},
 				"stylesheets/fixes/ve-fixes.css": {},
 				"stylesheets/fixes/mw-fixes.css": {},
 				"stylesheets/fixes/extjs-fixes.css": {},
