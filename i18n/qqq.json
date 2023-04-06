@@ -160,5 +160,10 @@
 	"bs-discovery-config-meta-items-header-label": "Label for input box in config which allows elements to be added below the page title",
 	"bs-discovery-config-meta-items-header-help": "Help message for input box in config which allows elements to be added below page title",
 	"bs-discovery-config-meta-items-footer-label": "Label for input box in config which allows elements to be added below page content",
-	"bs-discovery-config-meta-items-footer-help": "Help message for input box in config which allows elements to be added below page content"
+	"bs-discovery-config-meta-items-footer-help": "Help message for input box in config which allows elements to be added below page content",
+	"bs-discovery-alert-old-page-version": "Text that is shown in a warning box above the page content when a user views an old version of a page\n\nParameters:\n* $1 - The ID of the current page",
+	"bs-discovery-page-version-pager-deleted-user": "See also:\n* {{msg-mw|Rev-deleted-event}}",
+	"bs-discovery-page-version-pager-info-text": "Text that tells which particular version a user is viewing\n\nParameters:\n* $1 - The date of that version\n* $2 - The time of that version\n* $3 - The name of the user that created this version\n{{identical|bs-calumma-version-pager-info-text}}",
+	"bs-discovery-page-version-pager-previous": "Text for button in revision pager to navigate to the previous revision of a page",
+	"bs-discovery-page-version-pager-next": "Text for button in revision pager to navigate to the next revision of a page"
 }
