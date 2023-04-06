@@ -68,6 +68,7 @@ bs.skin.enhancedSidebar.tree.node.EnhancedSidebarNode.prototype.getFormFields = 
 			name: 'hidden',
 			type: 'group_multiselect',
 			widget_$overlay: true,
+			widget_groupTypes: [ 'core-minimal', 'extension-minimal', 'custom' ],
 			label: mw.message( 'bs-discovery-enhanced-mediawiki-sidebar-show-for-groups-text' ).text(),
 		}, {
 			name: 'classes',
