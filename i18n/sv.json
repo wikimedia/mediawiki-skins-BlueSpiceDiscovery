@@ -155,5 +155,9 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (sidan existerar inte)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigering",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Redigera denna meny",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Redigera $1"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Redigera $1",
+	"bs-discovery-config-meta-items-header-label": "Element under sidrubriken",
+	"bs-discovery-config-meta-items-header-help": "Valda element visas under sidrubriken",
+	"bs-discovery-config-meta-items-footer-label": "Element under sidinnehållet",
+	"bs-discovery-config-meta-items-footer-help": "Valda element visas under sidinnehållet"
 }
