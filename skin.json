@@ -300,6 +300,9 @@
 		},
 		"body-classes": {
 			"class": "\\BlueSpice\\Discovery\\HookHandler\\OutputPageBodyAttributes\\AddToBodyAttributes"
+		},
+		"pdf-export": {
+			"class": "\\BlueSpice\\Discovery\\HookHandler\\PdfExportHandler"
 		}
 	},
 	"Hooks":{
@@ -322,7 +325,8 @@
 		"OutputPageBodyAttributes": [
 			"body-classes"
 		],
-		"BsAdapterAjaxPingResult": "\\BlueSpice\\Discovery\\Hook\\BsAdapterAjaxPingResult\\CheckAttentionIndicator::callback"
+		"BsAdapterAjaxPingResult": "\\BlueSpice\\Discovery\\Hook\\BsAdapterAjaxPingResult\\CheckAttentionIndicator::callback",
+		"BSUEModulePDFBeforeAddingContent": "pdf-export"
 	},
 	"config_prefix": "bsg",
 	"config": {
