@@ -2,6 +2,8 @@
     // See https://github.com/hallowelt/mwstake-mediawiki-component-commonuserinterface/blob/master/tests/phpunit/TreeDataGeneratorTest.php#L32
     // and BlueSpiceDiscovery/src/Component/EnhancedSidebarTree.php
 
+    // This script is responsible for setting the cookie. Functionality of the tree is done in
+    // https://github.com/hallowelt/mwstake-mediawiki-component-commonuserinterface/blob/master/resources/tree/tree.js
     $( '.tree-component' ).on( 'click', '.mws-tree-expander', function( e ) {
         let cntId = getContainerId( this );
         let cookieContent = getCookieContent( cntId );
