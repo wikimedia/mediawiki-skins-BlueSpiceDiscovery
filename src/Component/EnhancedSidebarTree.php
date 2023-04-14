@@ -82,19 +82,16 @@ class EnhancedSidebarTree extends SimpleTreeContainer implements LoggerAwareInte
 	 * @return string[]
 	 */
 	public function getRequiredRLStyles(): array {
-		return [ 'skin.discovery.mws-tree-component.styles' ];
+		// Styles are placed in gereral layout styles to make it usable for other extensions
+		return [];
 	}
 
 	/**
 	 * @inheritDoc
 	 */
 	public function getRequiredRLModules(): array {
-		$parentScripts = parent::getRequiredRLModules();
-
-		$scripts = array_merge(
-			[ 'skin.discovery.mws-tree-component.scripts' ],
-			$parentScripts
-		);
+		// Scipts are placed in gereral layout styles to make it usable for other extensions
+		$scripts = parent::getRequiredRLModules();
 
 		return $scripts;
 	}
