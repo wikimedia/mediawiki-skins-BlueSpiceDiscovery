@@ -310,6 +310,9 @@
 		"setPageLanguage": {
 			"class": "\\BlueSpice\\Discovery\\Hook\\SetPageLanguage",
 			"services": [ "LanguageNameUtils" ]
+		},
+		"pdf-export": {
+			"class": "\\BlueSpice\\Discovery\\HookHandler\\PdfExportHandler"
 		}
 	},
 	"Hooks":{
@@ -333,7 +336,8 @@
 			"body-classes"
 		],
 		"BsAdapterAjaxPingResult": "\\BlueSpice\\Discovery\\Hook\\BsAdapterAjaxPingResult\\CheckAttentionIndicator::callback",
-		"PageSaveComplete": "setPageLanguage"
+		"PageSaveComplete": "setPageLanguage",
+		"BSUEModulePDFBeforeAddingContent": "pdf-export"
 	},
 	"config_prefix": "bsg",
 	"config": {

@@ -167,5 +167,7 @@
 	"bs-discovery-page-version-pager-deleted-user": "See also:\n* {{msg-mw|Rev-deleted-event}}",
 	"bs-discovery-page-version-pager-info-text": "Text that tells which particular version a user is viewing\n\nParameters:\n* $1 - The date of that version\n* $2 - The time of that version\n* $3 - The name of the user that created this version\n{{identical|bs-calumma-version-pager-info-text}}",
 	"bs-discovery-page-version-pager-previous": "Text for button in revision pager to navigate to the previous revision of a page",
-	"bs-discovery-page-version-pager-next": "Text for button in revision pager to navigate to the next revision of a page"
+	"bs-discovery-page-version-pager-next": "Text for button in revision pager to navigate to the next revision of a page",
+	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Extension description on [[Special:Version]]",
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Extension description on [[Special:Version]]"
 }

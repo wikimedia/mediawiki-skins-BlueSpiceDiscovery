@@ -168,5 +168,7 @@
 	"bs-discovery-page-version-pager-deleted-user": "(username removed)",
 	"bs-discovery-page-version-pager-info-text": "This is the version of $1, $2 by [[User:$3|$3]]",
 	"bs-discovery-page-version-pager-previous": "Previous",
-	"bs-discovery-page-version-pager-next": "Next"
+	"bs-discovery-page-version-pager-next": "Next",
+	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Twitter Bootstrap framework used for BlueSpiceDiscovery. ([https://getbootstrap.com/ https://getbootstrap.com])",
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Twitter Bootstrap icons used for BlueSpiceDiscovery and content. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])"
 }
