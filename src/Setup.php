@@ -10,6 +10,8 @@ class Setup {
 	 *
 	 */
 	public static function onCallback() {
+		self::addBootstrapAssetsToSpecialVersion();
+
 		\mwsInitComponents();
 
 		$GLOBALS['wgUseMediaWikiUIEverywhere'] = true;
@@ -81,5 +83,34 @@ class Setup {
 		$lessVars->setVar( 'content-h6-font-size', '1.1rem' );
 		$lessVars->setVar( 'content-h6-font-weight', 'bold' );
 		$lessVars->setVar( 'content-h6-border', 'none' );
+	}
+
+	/**
+	 *
+	 */
+	protected static function addBootstrapAssetsToSpecialVersion(): void {
+		$path = $GLOBALS['IP'];
+		$path .= '/skins/BlueSpiceDiscovery/resources/bootstrap/icons/LICENSE';
+		$GLOBALS['wgExtensionCredits']['bluespice-assets'][] = [
+			'path' => $path,
+			'name' => 'Twitter Bootstrap Icons',
+			'license-name' => 'MIT',
+			'author' => 'Twitter Bootstrap',
+			'url' => 'https://icons.getbootstrap.com',
+			'descriptionmsg' => 'bs-discovery-ext-credentials-desc-bootstrap-icons',
+			'version' => 'v1.10.3',
+		];
+
+		$path = $GLOBALS['IP'];
+		$path .= '/skins/BlueSpiceDiscovery/resources/bootstrap/5.0/LICENCE';
+		$GLOBALS['wgExtensionCredits']['bluespice-assets'][] = [
+			'path' => $path,
+			'name' => 'Twitter Bootstrap',
+			'license-name' => 'MIT',
+			'author' => 'Twitter Bootstrap',
+			'url' => 'https://getbootstrap.com',
+			'descriptionmsg' => 'bs-discovery-ext-credentials-desc-bootstrap-dist',
+			'version' => '5.0',
+		];
 	}
 }
