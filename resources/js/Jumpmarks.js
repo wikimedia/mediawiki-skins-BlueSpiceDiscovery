@@ -2,19 +2,16 @@
 
 	$( d ).ready( function(){
 		var hash = window.location.hash;
-		var topHeight = $( '#content' ).position().top;
 
 		if ( hash !== '' ) {
-			var jumpmarkId = hash.replace( '#', '' );
-
-			var jumpmark = d.getElementById( jumpmarkId );
+			var jumpmark = getJumpmarkEl( hash );
 			if ( !jumpmark ) {
 				return;
 			}
 
-			var position = $( jumpmark ).position().top;
+			var position = getPosition( jumpmark );
 			$( 'body, html').animate( {
-					scrollTop: position - topHeight
+					scrollTop: position
 				},
 				100
 			);
@@ -30,24 +27,52 @@
 			}
 
 			if ( hash !== '' ) {
-				var jumpmarkId = hash.replace( '#', '' );
-
-				var jumpmark = d.getElementById( jumpmarkId );
+				var jumpmark = getJumpmarkEl( hash );
 				if ( !jumpmark ) {
 					return;
 				}
 
-				var position = $( jumpmark ).offset().top;
+				var position = getPosition( jumpmark );
 				if ( position === 0 ) {
 					return;
 				}
-				topHeight = $( '#content' ).offset().top;
 
 				$( 'body,html' ).animate( {
-					scrollTop: position - topHeight
+					scrollTop: position
 				} );
 			}
 		});
 	});
+
+	function getJumpmarkEl( hash ) {
+		// Strip the leading # to get the id
+		var id = hash.replace( '#', '' ),
+			urldecodedId = decodeURIComponent( id ),
+			element = d.getElementById( urldecodedId );
+
+		if ( !element ) {
+			// MediaWiki may use additional anchors
+			id = mw.util.rawurlencode( urldecodedId ).replace( /%/g, '.' );
+			element = d.getElementById( id );
+		}
+		return element;
+	}
+
+	function getPosition( jumpmark ) {
+		var offset =
+				// The maybe fixed title
+				$( '#title-line' ).height() +
+				// The surely fixed header menu
+				$( '#nb-pri' ).height(),
+			$jumpmark = $( jumpmark ),
+			$heading = $jumpmark.closest( 'h1,h2,h3,h4,h5,h6' ),
+			postion = $jumpmark.position().top;
+
+		if ( $heading.length === 1  ) {
+			postion -= $heading.height();
+		}
+
+		return postion - offset;
+	}
 
 } )( mediaWiki, jQuery, document );
