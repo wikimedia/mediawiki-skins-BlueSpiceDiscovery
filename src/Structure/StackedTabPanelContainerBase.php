@@ -114,9 +114,11 @@ abstract class StackedTabPanelContainerBase
 
 			$component = $this->objectFactory->createObject( $item );
 			if ( ( $component instanceof IComponent ) ) {
-				$tabPanels[] = $component;
+				$tabPanels[$key] = $component;
 			}
 		}
+		krsort( $tabPanels );
+
 		return $tabPanels;
 	}
 
@@ -135,7 +137,7 @@ abstract class StackedTabPanelContainerBase
 		$first = true;
 		$mainPanel = [];
 		$otherPanels = [];
-		foreach ( $tabPanels as $id => $tabPanel ) {
+		foreach ( $tabPanels as $key => $tabPanel ) {
 
 			if ( !( $tabPanel instanceof ITabPanel )
 			 || !$tabPanel->shouldRender( $this->context ) ) {
@@ -192,9 +194,9 @@ abstract class StackedTabPanelContainerBase
 		}
 
 		$main = [];
-		if ( array_key_exists( 'panel', $mainPanel ) ) {
+		if ( isset( $mainPanel['panel'] ) ) {
 			foreach ( $mainPanel['panel'] as $panel ) {
-				if ( array_key_exists( 'list', $otherPanels ) ) {
+				if ( isset( $otherPanels['list'] ) ) {
 					$panel = array_merge( $panel, [ 'list' => $otherPanels['list'] ] );
 				}
 			}
@@ -203,9 +205,9 @@ abstract class StackedTabPanelContainerBase
 		}
 
 		$other = [];
-		if ( array_key_exists( 'panel', $otherPanels ) ) {
+		if ( isset( $otherPanels['panel'] ) ) {
 			foreach ( $otherPanels['panel'] as $panel ) {
-				if ( array_key_exists( 'list', $mainPanel ) ) {
+				if ( isset( $mainPanel['list'] ) ) {
 					$panel = array_merge( $panel, [ 'list' => $mainPanel['list'] ] );
 				}
 

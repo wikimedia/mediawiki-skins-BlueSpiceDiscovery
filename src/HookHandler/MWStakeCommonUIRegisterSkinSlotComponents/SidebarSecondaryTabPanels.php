@@ -14,7 +14,7 @@ class SidebarSecondaryTabPanels implements MWStakeCommonUIRegisterSkinSlotCompon
 		$registry->register(
 			"SidebarSecondaryTabPanels",
 			[
-				'page' => [
+				'010-page' => [
 					'factory' => static function () {
 						return new PageTabPanel();
 					}
