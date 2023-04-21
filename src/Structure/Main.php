@@ -27,7 +27,6 @@ use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Revision\RevisionStore;
 use MWStake\MediaWiki\Component\CommonUserInterface\HtmlIdRegistry;
-use PageProps;
 
 class Main implements
 	ISkinStructure,
@@ -263,16 +262,27 @@ class Main implements
 	 */
 	private function fetchTitle() {
 		$title = $this->template->getSkin()->getTitle();
-		$regularTitle = $title->getText();
+		// data['title'] contains eigther the display title or the page title.
+		// The page title is wrapped into some html but the display title not.
 		$displayTitle = $this->template->data['title'];
-		if ( $displayTitle === $regularTitle ) {
+
+		$matches = [];
+		$status = preg_match( '#<span\s*?class="mw-page-title-main"\s*?>(.*)</span>#', $displayTitle, $matches );
+
+		if ( $status ) {
+			// Display title is not set but we only want to show the subpage text in title section
 			$displayTitle = $title->getSubpageText();
 		}
-		$pageProps = PageProps::getInstance()->getProperties( $title, 'displaytitle' );
-		$pageId = $title->getArticleID();
-		if ( isset( $pageProps[ $pageId ] ) ) {
-			$displayTitle = $pageProps[ $pageId ];
-		}
+
+		// Wrapping the page title in html again
+		$displayTitle = Html::element(
+			'span',
+			[
+				'class' => 'mw-page-title-main'
+			],
+			$displayTitle
+		);
+
 		$this->skinComponents['title'] = $displayTitle;
 	}
 
