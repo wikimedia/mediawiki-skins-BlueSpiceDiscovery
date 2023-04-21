@@ -14,7 +14,7 @@ class SidebarPrimaryTabPanels implements MWStakeCommonUIRegisterSkinSlotComponen
 		$registry->register(
 			"SidebarPrimaryTabPanels",
 			[
-				'main' => [
+				'010-main' => [
 					'factory' => static function () {
 						return new MainTabPanel();
 					}
