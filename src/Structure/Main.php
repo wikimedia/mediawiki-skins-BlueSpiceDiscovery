@@ -262,26 +262,35 @@ class Main implements
 	 */
 	private function fetchTitle() {
 		$title = $this->template->getSkin()->getTitle();
-		// data['title'] contains eigther the display title or the page title.
-		// The page title is wrapped into some html but the display title not.
+		$regularTitle = $title->getPrefixedText();
+
+		// data['title'] contains either the DISPLAYTITLE title or the page title.
+		// The page title could be wrapped into some html but the DISPLAYTITLE not.
 		$displayTitle = $this->template->data['title'];
 
-		$matches = [];
-		$status = preg_match( '#<span\s*?class="mw-page-title-main"\s*?>(.*)</span>#', $displayTitle, $matches );
+		// Check if $displayTitle contains DISPLAYTITLE or page title
+		if ( $regularTitle === strip_tags( $displayTitle ) ) {
+			// $displayTitle contains page title.
+			// But we only want to show the subpage text in title section.
 
-		if ( $status ) {
-			// Display title is not set but we only want to show the subpage text in title section
-			$displayTitle = $title->getSubpageText();
+			$subpageText = $title->getSubpageText();
+
+			// Check if $displayTitle is wrapped into html
+			if ( $regularTitle === $displayTitle ) {
+				// $displayTitle is not wrapped into html
+				$displayTitle = $subpageText;
+			} else {
+				// $displayTitle is wrapped into html. We want to keep this wrapper.
+				// But we don't want to show namespace part or separator part.
+				$matches = [];
+				$regEx = '.*?(<span\s*?class="mw-page-title-main"\s*?>)(.*)(</span>).*$';
+				$status = preg_match( '#' . $regEx . '#', $displayTitle, $matches );
+
+				if ( $status ) {
+					$displayTitle = $matches[1] . $subpageText . $matches[3];
+				}
+			}
 		}
-
-		// Wrapping the page title in html again
-		$displayTitle = Html::element(
-			'span',
-			[
-				'class' => 'mw-page-title-main'
-			],
-			$displayTitle
-		);
 
 		$this->skinComponents['title'] = $displayTitle;
 	}
