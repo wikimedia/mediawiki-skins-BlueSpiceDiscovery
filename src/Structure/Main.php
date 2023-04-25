@@ -256,11 +256,7 @@ class Main implements
 		if ( $displayTitle === $regularTitle ) {
 			$displayTitle = $title->getSubpageText();
 		}
-		$pageProps = PageProps::getInstance()->getProperties( $title, 'displaytitle' );
-		$pageId = $title->getArticleID();
-		if ( isset( $pageProps[ $pageId ] ) ) {
-			$displayTitle = $pageProps[ $pageId ];
-		}
+
 		$this->skinComponents['title'] = $displayTitle;
 	}
 
