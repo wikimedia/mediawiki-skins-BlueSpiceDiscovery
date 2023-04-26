@@ -20,8 +20,8 @@ bs.skin.enhancedSidebar.tree.node.PanelHeading.prototype.getIcon = function () {
 	return 'largerText';
 };
 
-bs.skin.enhancedSidebar.tree.node.PanelHeading.prototype.getFormFields = function () {
-	var fields = bs.skin.enhancedSidebar.tree.node.PanelHeading.parent.prototype.getFormFields.call( this );
+bs.skin.enhancedSidebar.tree.node.PanelHeading.prototype.getFormFields = function ( dialog ) {
+	var fields = bs.skin.enhancedSidebar.tree.node.PanelHeading.parent.prototype.getFormFields.call( this, dialog );
 
 	// Find field with name `text` and modify it
 	for ( var i = 0; i < fields.length; i++ ) {

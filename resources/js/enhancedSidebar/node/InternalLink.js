@@ -20,7 +20,7 @@ bs.skin.enhancedSidebar.tree.node.InternalLink.prototype.getIcon = function () {
 	return 'link';
 };
 
-bs.skin.enhancedSidebar.tree.node.InternalLink.prototype.getCustomFormFields = function () {
+bs.skin.enhancedSidebar.tree.node.InternalLink.prototype.getCustomFormFields = function ( dialog ) {
 	return [
 		{
 			name: 'page',
