@@ -20,7 +20,7 @@ bs.skin.enhancedSidebar.tree.node.SubpageList.prototype.getIcon = function () {
 	return 'listBullet';
 };
 
-bs.skin.enhancedSidebar.tree.node.SubpageList.prototype.getCustomFormFields = function () {
+bs.skin.enhancedSidebar.tree.node.SubpageList.prototype.getCustomFormFields = function ( dialog ) {
 	return [
 		{
 			name: 'page',

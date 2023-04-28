@@ -50,11 +50,11 @@ bs.skin.enhancedSidebar.tree.node.EnhancedSidebarNode.prototype.getFormConfig = 
 	};
 };
 
-bs.skin.enhancedSidebar.tree.node.EnhancedSidebarNode.prototype.getCustomFormFields = function () {
+bs.skin.enhancedSidebar.tree.node.EnhancedSidebarNode.prototype.getCustomFormFields = function ( dialog ) {
 	return [];
 };
 
-bs.skin.enhancedSidebar.tree.node.EnhancedSidebarNode.prototype.getFormFields = function () {
+bs.skin.enhancedSidebar.tree.node.EnhancedSidebarNode.prototype.getFormFields = function ( dialog ) {
 	return [
 		{
 			name: 'text',
@@ -63,11 +63,11 @@ bs.skin.enhancedSidebar.tree.node.EnhancedSidebarNode.prototype.getFormFields = 
 			label: mw.message( 'bs-discovery-enhanced-mediawiki-sidebar-field-text' ).text(),
 			help: mw.message( 'bs-discovery-enhanced-mediawiki-sidebar-field-text-help' ).text()
 		},
-	].concat( this.getCustomFormFields(), [
+	].concat( this.getCustomFormFields( dialog ), [
 		{
 			name: 'hidden',
 			type: 'group_multiselect',
-			widget_$overlay: true,
+			widget_$overlay: dialog.$overlay,
 			widget_groupTypes: [ 'core-minimal', 'extension-minimal', 'custom' ],
 			label: mw.message( 'bs-discovery-enhanced-mediawiki-sidebar-show-for-groups-text' ).text(),
 		}, {

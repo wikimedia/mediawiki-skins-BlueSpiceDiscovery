@@ -20,7 +20,7 @@ bs.skin.enhancedSidebar.tree.node.ExternalLink.prototype.getIcon = function () {
 	return 'linkExternal';
 };
 
-bs.skin.enhancedSidebar.tree.node.ExternalLink.prototype.getCustomFormFields = function () {
+bs.skin.enhancedSidebar.tree.node.ExternalLink.prototype.getCustomFormFields = function ( dialog ) {
 	return [
 		{
 			name: 'href',
