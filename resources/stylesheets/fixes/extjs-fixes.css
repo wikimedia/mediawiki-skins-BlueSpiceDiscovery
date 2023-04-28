@@ -7,3 +7,9 @@ body.mediawiki.x-body .x-btn-inner-default-toolbar-small {
 	font-family: 'Lato';
 	font-weight: normal;
 }
+
+/* fix for portlets */
+body.mediawiki.x-body
+.x-surface {
+    position: absolute;
+}
