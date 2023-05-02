@@ -30,7 +30,7 @@
 				},
 				"subpages": {
 					"class": "BlueSpice\\Discovery\\LangLinksProvider\\Subpages",
-					"services": [ "LanguageNameUtils", "PageProps" ]
+					"services": [ "LanguageNameUtils" ]
 				}
 			},
 			"LayoutRegistry": {
@@ -297,10 +297,6 @@
 		},
 		"body-classes": {
 			"class": "\\BlueSpice\\Discovery\\HookHandler\\OutputPageBodyAttributes\\AddToBodyAttributes"
-		},
-		"setPageLanguage": {
-			"class": "\\BlueSpice\\Discovery\\Hook\\SetPageLanguage",
-			"services": [ "LanguageNameUtils" ]
 		}
 	},
 	"Hooks":{
@@ -323,8 +319,7 @@
 		"OutputPageBodyAttributes": [
 			"body-classes"
 		],
-		"BsAdapterAjaxPingResult": "\\BlueSpice\\Discovery\\Hook\\BsAdapterAjaxPingResult\\CheckAttentionIndicator::callback",
-		"PageSaveComplete": "setPageLanguage"
+		"BsAdapterAjaxPingResult": "\\BlueSpice\\Discovery\\Hook\\BsAdapterAjaxPingResult\\CheckAttentionIndicator::callback"
 	},
 	"config_prefix": "bsg",
 	"config": {
