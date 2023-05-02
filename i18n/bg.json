@@ -4,5 +4,6 @@
 			"StanProg"
 		]
 	},
-	"bs-discovery-navbar-languages-button-text": "Езици"
+	"bs-discovery-navbar-languages-button-text": "Езици",
+	"bs-discovery-first-heading-aria-label": "Заглавие на страницата"
 }
