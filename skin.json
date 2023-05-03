@@ -189,7 +189,13 @@
 					"services": [ "ParserFactory" ]
 				}
 			},
-			"MetaItemProviderRegistry": {}
+			"MetaItemProviderRegistry": {},
+			"TemplateDataProviderRegistry": {
+				"bluespice": {
+					"class": "BlueSpice\\Discovery\\TemplateDataProvider\\TemplateDataProvider",
+					"services": [ "HookContainer" ]
+				}
+			}
 		},
 		"BlueSpicePrivacy": {
 			"CookieConsentNativeMWCookies": {
@@ -367,6 +373,9 @@
 		"DiscoveryMetaItemsFooter": {
 			"value": [],
 			"public": true
+		},
+		"DiscoveryTemplateDataProvider": {
+			"value": "bluespice"
 		}
 	},
 	"ResourceModules": {

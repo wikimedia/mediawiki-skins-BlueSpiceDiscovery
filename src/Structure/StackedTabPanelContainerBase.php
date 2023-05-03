@@ -8,7 +8,6 @@ use BlueSpice\Discovery\ISkinStructure;
 use BlueSpice\Discovery\ITabPanelContainer;
 use BlueSpice\Discovery\ITemplateProvider;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
-use BlueSpice\Discovery\TemplateDataProvider;
 use IContextSource;
 use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
 use MWStake\MediaWiki\Component\CommonUserInterface\ITabPanel;

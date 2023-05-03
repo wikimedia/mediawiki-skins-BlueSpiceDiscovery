@@ -10,14 +10,15 @@ use BlueSpice\Discovery\MetaItemsManager;
 use BlueSpice\Discovery\MetaItemsProviderFactory;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
 use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
-use BlueSpice\Discovery\TemplateDataProvider;
+use BlueSpice\Discovery\TemplateDataProviderFactory;
 use MediaWiki\MediaWikiServices;
 
 return [
 	'BlueSpiceDiscoveryTemplateDataProvider' => static function ( MediaWikiServices $services ) {
-		$panelManager = new TemplateDataProvider(
-			$services->getHookContainer()
-		);
+		$factory = $services->getService( 'BlueSpiceDiscoveryTemplateDataProviderFactory' );
+		$config = $services->getConfigFactory()->makeConfig( 'bsg' );
+		$providerFromConfig = $config->get( 'DiscoveryTemplateDataProvider' );
+		$panelManager = $factory->getTemplateDataProvider( $providerFromConfig );
 		return $panelManager;
 	},
 	'BlueSpiceDiscoveryCookieHandler' => static function ( MediaWikiServices $services ) {
@@ -85,6 +86,11 @@ return [
 		return new MetaItemsManager(
 			$services->get( 'BlueSpiceDiscoveryMetaItemFactory' ),
 			$services->getConfigFactory()
+		);
+	},
+	'BlueSpiceDiscoveryTemplateDataProviderFactory' => static function ( MediaWikiServices $services ) {
+		return new TemplateDataProviderFactory(
+			$services->get( 'MWStakeManifestObjectFactory' )
 		);
 	}
 ];
