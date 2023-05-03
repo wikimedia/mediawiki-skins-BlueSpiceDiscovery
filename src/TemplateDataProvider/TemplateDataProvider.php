@@ -1,8 +1,9 @@
 <?php
 
-namespace BlueSpice\Discovery;
+namespace BlueSpice\Discovery\TemplateDataProvider;
 
 use BaseTemplate;
+use BlueSpice\Discovery\ITemplateDataProvider;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\MediaWikiServices;
 

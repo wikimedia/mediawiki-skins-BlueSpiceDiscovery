@@ -8,7 +8,6 @@ use BlueSpice\Discovery\ISkinStructure;
 use BlueSpice\Discovery\ITemplateProvider;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
 use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
-use BlueSpice\Discovery\TemplateDataProvider;
 use IContextSource;
 use MediaWiki\Permissions\PermissionManager;
 
@@ -40,12 +39,12 @@ abstract class NavbarBase implements ISkinStructure, ITemplateProvider, IResourc
 
 	/**
 	 *
-	 * @param TemplateDataProvider $templateDataProvider
+	 * @param ITemplateDataProvider $templateDataProvider
 	 * @param CookieHandler $cookieHandler
 	 * @param PermissionManager $permissionManager
 	 */
 	public function __construct(
-		TemplateDataProvider $templateDataProvider,
+		ITemplateDataProvider $templateDataProvider,
 		ComponentRenderer $componentRenderer,
 		SkinSlotRenderer $skinSlotRenderer,
 		CookieHandler $cookieHandler,
@@ -59,14 +58,14 @@ abstract class NavbarBase implements ISkinStructure, ITemplateProvider, IResourc
 
 	/**
 	 *
-	 * @param TemplateDataProvider $templateDataProvider
+	 * @param ITemplateDataProvider $templateDataProvider
 	 * @param ComponentRenderer $componentRenderer
 	 * @param CookieHandler $cookieHandler
 	 * @param PermissionManager $permissionManager
 	 * @return void
 	 */
 	public static function factory(
-		TemplateDataProvider $templateDataProvider,
+		ITemplateDataProvider $templateDataProvider,
 		ComponentRenderer $componentRenderer,
 		SkinSlotRenderer $skinSlotRenderer,
 		CookieHandler $cookieHandler,
