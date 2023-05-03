@@ -12,6 +12,7 @@ use BlueSpice\Discovery\IBaseTemplateAware;
 use BlueSpice\Discovery\IContextSourceAware;
 use BlueSpice\Discovery\IResourceProvider;
 use BlueSpice\Discovery\ISkinStructure;
+use BlueSpice\Discovery\ITemplateDataProvider;
 use BlueSpice\Discovery\ITemplateProvider;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
 use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
@@ -20,7 +21,6 @@ use BlueSpice\Discovery\SkinSlotRenderer\DataAfterTitleSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\DataBeforeContentSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\TitleActionsSkinSlotRenderer;
 use BlueSpice\Discovery\SubTitleProcessor;
-use BlueSpice\Discovery\TemplateDataProvider;
 use Html;
 use IContextSource;
 use MediaWiki\Linker\LinkRenderer;
@@ -89,13 +89,13 @@ class Main implements
 
 	/**
 	 *
-	 * @param TemplateDataProvider $templateDataProvider
+	 * @param ITemplateDataProvider $templateDataProvider
 	 * @param PermissionManager $permissionManager
 	 * @param LinkRenderer $linkRenderer
 	 * @param RevisionStore $revisionStore
 	 */
 	public function __construct(
-		TemplateDataProvider $templateDataProvider,
+		ITemplateDataProvider $templateDataProvider,
 		ComponentRenderer $componentRenderer,
 		SkinSlotRenderer $skinSlotRenderer,
 		CookieHandler $cookieHandler,
@@ -113,14 +113,14 @@ class Main implements
 
 	/**
 	 *
-	 * @param TemplateDataProvider $templateDataProvider
+	 * @param ITemplateDataProvider $templateDataProvider
 	 * @param PermissionManager $permissionManager
 	 * @param LinkRenderer $linkRenderer
 	 * @param RevisionStore $revisionStore
 	 * @return ISkinStructure
 	 */
 	public static function factory(
-		TemplateDataProvider $templateDataProvider,
+		ITemplateDataProvider $templateDataProvider,
 		ComponentRenderer $componentRenderer,
 		SkinSlotRenderer $skinSlotRenderer,
 		CookieHandler $cookieHandler,

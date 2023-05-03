@@ -4,10 +4,10 @@ namespace BlueSpice\Discovery\Structure;
 
 use BlueSpice\Discovery\IResourceProvider;
 use BlueSpice\Discovery\ISkinStructure;
+use BlueSpice\Discovery\ITemplateDataProvider;
 use BlueSpice\Discovery\ITemplateProvider;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
 use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
-use BlueSpice\Discovery\TemplateDataProvider;
 use IContextSource;
 use MediaWiki\Permissions\PermissionManager;
 
@@ -35,13 +35,13 @@ abstract class SkinStructureBase implements ISkinStructure, ITemplateProvider, I
 
 	/**
 	 *
-	 * @param TemplateDataProvider $templateDataProvider
+	 * @param ITemplateDataProvider $templateDataProvider
 	 * @param ComponentRenderer $componentRenderer
 	 * @param SkinSlotRenderer $skinSlotRenderer
 	 * @param PermissionManager $permissionManager
 	 */
 	public function __construct(
-		TemplateDataProvider $templateDataProvider,
+		ITemplateDataProvider $templateDataProvider,
 		ComponentRenderer $componentRenderer,
 		SkinSlotRenderer $skinSlotRenderer,
 		PermissionManager $permissionManager ) {
@@ -53,14 +53,14 @@ abstract class SkinStructureBase implements ISkinStructure, ITemplateProvider, I
 
 	/**
 	 *
-	 * @param TemplateDataProvider $templateDataProvider
+	 * @param ITemplateDataProvider $templateDataProvider
 	 * @param ComponentRenderer $componentRenderer
 	 * @param SkinSlotRenderer $skinSlotRenderer
 	 * @param PermissionManager $permissionManager
 	 * @return ISkinStructure
 	 */
 	public static function factory(
-		TemplateDataProvider $templateDataProvider,
+		ITemplateDataProvider $templateDataProvider,
 		ComponentRenderer $componentRenderer,
 		SkinSlotRenderer $skinSlotRenderer,
 		PermissionManager $permissionManager ) {
