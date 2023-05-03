@@ -55,3 +55,8 @@ main .alert-info a:hover {
 .ns-special #main {
 	background-color: var(--body-special-bg);
 }
+
+#contentSub .mw-revision.mw-message-box {
+	/* Hide mw page version information because we have our PageVersionPager */
+	display: none;
+}
