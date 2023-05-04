@@ -5,6 +5,7 @@ namespace BlueSpice\Discovery\Structure;
 use BlueSpice\Discovery\CookieHandler;
 use BlueSpice\Discovery\IResourceProvider;
 use BlueSpice\Discovery\ISkinStructure;
+use BlueSpice\Discovery\ITemplateDataProvider;
 use BlueSpice\Discovery\ITemplateProvider;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
 use BlueSpice\Discovery\Renderer\SkinSlotRenderer;

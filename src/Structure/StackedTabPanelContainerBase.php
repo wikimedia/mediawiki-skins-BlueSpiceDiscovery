@@ -6,6 +6,7 @@ use BlueSpice\Discovery\IContextSourceAware;
 use BlueSpice\Discovery\IResourceProvider;
 use BlueSpice\Discovery\ISkinStructure;
 use BlueSpice\Discovery\ITabPanelContainer;
+use BlueSpice\Discovery\ITemplateDataProvider;
 use BlueSpice\Discovery\ITemplateProvider;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
 use IContextSource;
@@ -54,13 +55,13 @@ abstract class StackedTabPanelContainerBase
 
 	/**
 	 *
-	 * @param TemplateDataProvider $templateDataProvider
+	 * @param ITemplateDataProvider $templateDataProvider
 	 * @param ComponentRenderer $componentRenderer
 	 * @param SkinSlotRegistry $skinSlotRegistry
 	 * @param ObjectFactory $objectFactory
 	 */
 	public function __construct(
-		TemplateDataProvider $templateDataProvider,
+		ITemplateDataProvider $templateDataProvider,
 		ComponentRenderer $componentRenderer,
 		SkinSlotRegistry $skinSlotRegistry,
 		ObjectFactory $objectFactory
@@ -73,14 +74,14 @@ abstract class StackedTabPanelContainerBase
 
 	/**
 	 *
-	 * @param TemplateDataProvider $templateDataProvider
+	 * @param ITemplateDataProvider $templateDataProvider
 	 * @param ComponentRenderer $componentRenderer
 	 * @param SkinSlotRegistry $skinSlotRegistry
 	 * @param ObjectFactory $objectFactory
 	 * @return ISkinStructure
 	 */
 	public static function factory(
-		TemplateDataProvider $templateDataProvider,
+		ITemplateDataProvider $templateDataProvider,
 		ComponentRenderer $componentRenderer,
 		SkinSlotRegistry $skinSlotRegistry,
 		ObjectFactory $objectFactory
