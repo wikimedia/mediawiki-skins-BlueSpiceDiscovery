@@ -161,5 +161,12 @@
 	"bs-discovery-config-meta-items-header-label": "Elementi pod naslovom strani",
 	"bs-discovery-config-meta-items-header-help": "Izbrani elementi so prikazani pod naslovom strani",
 	"bs-discovery-config-meta-items-footer-label": "Elementi pod vsebino strani",
-	"bs-discovery-config-meta-items-footer-help": "Izbrani elementi so prikazani pod vsebino strani"
+	"bs-discovery-config-meta-items-footer-help": "Izbrani elementi so prikazani pod vsebino strani",
+	"bs-discovery-alert-old-page-version": "Ogledujete si staro redakcijo te strani. [[Special:Redirect/page/$1|Nazaj na najnovejšo redakcijo]].",
+	"bs-discovery-page-version-pager-deleted-user": "(odstranjeno uporabniško ime)",
+	"bs-discovery-page-version-pager-info-text": "To je različica z dne $1 ob $2 avtorja [[User:$3|$3]]",
+	"bs-discovery-page-version-pager-previous": "Nazaj",
+	"bs-discovery-page-version-pager-next": "Naprej",
+	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Ogrodje Twitter Bootstrap, uporabljeno za BlueSpiceDiscovery. ([https://getbootstrap.com/ https://getbootstrap.com])",
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Ikone Twitter Bootstrap, uporabljene za BlueSpiceDiscovery in vsebino. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])"
 }
