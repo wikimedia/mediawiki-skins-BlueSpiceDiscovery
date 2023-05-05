@@ -120,9 +120,11 @@
 	"bs-discovery-config-sidebar-primary-main-tab-menu-help": "Velg meny i hovedpanelet til det primære sidefeltet",
 	"bs-discovery-menu-provider-mediawiki-sidebar-label": "MediaWikis sidemeny",
 	"bs-discovery-menu-provider-mediawiki-sidebar-desc": "En MediaWiki-sidemeny med bare ett nivå med menyoppføringer",
+	"bs-discovery-menu-provider-namespace-mainpage-list-label": "Liste over hovedsider for navnerom",
 	"bs-discovery-menu-provider-namespace-mainpage-list-desc": "En liste over hovedsider i innholdsnavnerom",
 	"bs-discovery-menu-provider-subpage-tree-label": "Undersidetre",
 	"bs-discovery-menu-provider-subpage-tree-desc": "Undersider av den gjeldende siden som en tremeny",
+	"bs-discovery-namespace-mainpage-links-pnl-header-text": "Hovedsider for navnerom",
 	"bs-discovery-subpage-tree-pnl-header-text": "Undersider",
 	"ns-main-label": "Sider",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Forbedret MediaWiki-sidefelt",
@@ -156,5 +158,12 @@
 	"bs-discovery-config-meta-items-header-label": "Elementer under sidetittelen",
 	"bs-discovery-config-meta-items-header-help": "Valgte elementer vises under sidetittelen",
 	"bs-discovery-config-meta-items-footer-label": "Elementer under sideinnholdet",
-	"bs-discovery-config-meta-items-footer-help": "Valgte elementer vises under sideinnholdet"
+	"bs-discovery-config-meta-items-footer-help": "Valgte elementer vises under sideinnholdet",
+	"bs-discovery-alert-old-page-version": "Du ser en gammel versjon av denne siden. [[Special:Redirect/page/$1|Tilbake til den siste versjonen]].",
+	"bs-discovery-page-version-pager-deleted-user": "(brukernavn fjernet)",
+	"bs-discovery-page-version-pager-info-text": "Dette er versjonen fra $1 kl. $2 av [[User:$3|$3]]",
+	"bs-discovery-page-version-pager-previous": "Forrige",
+	"bs-discovery-page-version-pager-next": "Neste",
+	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Twitter Bootstrap-rammeverk for BlueSpiceDiscovery. ([https://getbootstrap.com https://getbootstrap.com])",
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Twitter Bootstrap-ikoner brukt for BlueSpiceDiscovery og innhold. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])"
 }

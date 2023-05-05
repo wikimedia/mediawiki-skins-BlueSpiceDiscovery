@@ -158,5 +158,10 @@
 	"bs-discovery-config-meta-items-header-label": "Елементи под насловот на страницата",
 	"bs-discovery-config-meta-items-header-help": "Избраните елементи се прикажуваат под насловот на страницата",
 	"bs-discovery-config-meta-items-footer-label": "Елементи под содржината на страницата",
-	"bs-discovery-config-meta-items-footer-help": "Избраните елементи се прикажуваат под содржината на страницата"
+	"bs-discovery-config-meta-items-footer-help": "Избраните елементи се прикажуваат под содржината на страницата",
+	"bs-discovery-alert-old-page-version": "Гледате постара верзија на страницава. [[Special:Redirect/page/$1|Вратете се на најновата]].",
+	"bs-discovery-page-version-pager-deleted-user": "(избришано корисничко име)",
+	"bs-discovery-page-version-pager-info-text": "Ова е верзијата на $1, $2 од [[User:$3|$3]]",
+	"bs-discovery-page-version-pager-previous": "Претходно",
+	"bs-discovery-page-version-pager-next": "Следно"
 }
