@@ -30,5 +30,8 @@
 	"bs-discovery-config-meta-items-header-label": "ページ コンテンツの下の要素",
 	"bs-discovery-config-meta-items-header-help": "選択した要素がページ コンテンツの下に表示されます",
 	"bs-discovery-config-meta-items-footer-label": "ページ コンテンツの下の要素",
-	"bs-discovery-config-meta-items-footer-help": "選択した要素がページ コンテンツの下に表示されます"
+	"bs-discovery-config-meta-items-footer-help": "選択した要素がページ コンテンツの下に表示されます",
+	"bs-discovery-page-version-pager-deleted-user": "(利用者名は除去されています)",
+	"bs-discovery-page-version-pager-previous": "前へ",
+	"bs-discovery-page-version-pager-next": "次へ"
 }
