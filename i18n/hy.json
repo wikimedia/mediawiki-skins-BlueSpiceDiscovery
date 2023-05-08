@@ -55,5 +55,6 @@
 	"bs-discovery-title-action-language-button-title": "Ընտրեք լեզուն",
 	"bs-discovery-title-action-language-button-aria-label": "Ընտրեք լեզուն",
 	"bs-discovery-navbar-user-button-title": "Օգտվողի ընտրացանկ",
-	"bs-discovery-navbar-user-button-aria-label": "Օգտվողի ընտրացանկ"
+	"bs-discovery-navbar-user-button-aria-label": "Օգտվողի ընտրացանկ",
+	"bs-discovery-page-version-pager-next": "Հաջորդ"
 }
