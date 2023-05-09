@@ -98,5 +98,8 @@
 	"bs-discovery-enhanced-sidebar-edit-button-title": "이 메뉴 편집",
 	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 편집",
 	"bs-discovery-title-action-language-button-title": "언어 선택",
-	"bs-discovery-title-action-language-button-aria-label": "언어 선택"
+	"bs-discovery-title-action-language-button-aria-label": "언어 선택",
+	"bs-discovery-page-version-pager-deleted-user": "(사용자 이름 삭제됨)",
+	"bs-discovery-page-version-pager-previous": "이전",
+	"bs-discovery-page-version-pager-next": "다음"
 }

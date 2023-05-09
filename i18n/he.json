@@ -166,5 +166,7 @@
 	"bs-discovery-page-version-pager-deleted-user": "(שם המשתמש הוסתר)",
 	"bs-discovery-page-version-pager-info-text": "זוהי הגרסה של $1, $2 מאת [[User:$3|$3]]",
 	"bs-discovery-page-version-pager-previous": "הקודמת",
-	"bs-discovery-page-version-pager-next": "הבאה"
+	"bs-discovery-page-version-pager-next": "הבאה",
+	"bs-discovery-ext-credentials-desc-bootstrap-dist": "מסגרת Twitter Bootstrap המשמשת עבור BlueSpiceDiscovery. (ר' [https://getbootstrap.com/ https://getbootstrap.com])",
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "סמלים של Twitter Bootstrap המשמשים עבור BlueSpiceDiscovery ותוכן. (ר' [https://icons.getbootstrap.com https://icons.getbootstrap.com])"
 }
