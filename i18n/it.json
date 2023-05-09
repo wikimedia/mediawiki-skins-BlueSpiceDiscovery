@@ -48,5 +48,10 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "Classi CSS",
 	"bs-discovery-page-does-not-exist-title": "$1 (la pagina non esiste)",
 	"bs-discovery-config-meta-items-header-label": "Elementi sotto il titolo della pagina",
-	"bs-discovery-config-meta-items-footer-help": "Gli elementi selezionati vengono visualizzati sotto il contenuto della pagina"
+	"bs-discovery-config-meta-items-footer-help": "Gli elementi selezionati vengono visualizzati sotto il contenuto della pagina",
+	"bs-discovery-alert-old-page-version": "Stai visualizzando una vecchia versione di questa pagina. [[Special:Redirect/page/$1|Torna all'ultima versione]].",
+	"bs-discovery-page-version-pager-deleted-user": "(nome utente rimosso)",
+	"bs-discovery-page-version-pager-info-text": "Questa è la versione di $1, $2 da [[User:$3|$3]]",
+	"bs-discovery-page-version-pager-previous": "Precedente",
+	"bs-discovery-page-version-pager-next": "Successivo"
 }

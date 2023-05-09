@@ -165,5 +165,12 @@
 	"bs-discovery-config-meta-items-header-label": "Éléments sous le titre de la page",
 	"bs-discovery-config-meta-items-header-help": "Les éléments sélectionnés sont affichés sous le titre de la page",
 	"bs-discovery-config-meta-items-footer-label": "Éléments sous le contenu de la page",
-	"bs-discovery-config-meta-items-footer-help": "Les éléments sélectionnés sont affichés sous le contenu de la page"
+	"bs-discovery-config-meta-items-footer-help": "Les éléments sélectionnés sont affichés sous le contenu de la page",
+	"bs-discovery-alert-old-page-version": "Vous regardez une ancienne version de cette page. [[Special:Redirect/page/$1|Revenir à la dernière version]].",
+	"bs-discovery-page-version-pager-deleted-user": "(nom d’utilisateur retiré)",
+	"bs-discovery-page-version-pager-info-text": "Ceci est la version du $1 à $2 par [[User:$3|$3]]",
+	"bs-discovery-page-version-pager-previous": "Précédent",
+	"bs-discovery-page-version-pager-next": "Suivant",
+	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Cadre de travail Bootstrap de Twitter utilisé pour BlueSpiceDiscovery. ([https://getbootstrap.com/ https://getbootstrap.com])",
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Icônes Bootstrap de Twitter utilisées pour BlueSpiceDiscovery et le contenu. ([https://icons.getbootstrap.com/ https://icons.getbootstrap.com])"
 }

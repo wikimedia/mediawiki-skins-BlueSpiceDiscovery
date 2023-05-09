@@ -158,5 +158,10 @@
 	"bs-discovery-config-meta-items-header-label": "רכיבים מתחת לכותרת הדף",
 	"bs-discovery-config-meta-items-header-help": "רכיבים נבחרים מוצגים מתחת לכותרת הדף",
 	"bs-discovery-config-meta-items-footer-label": "רכיבים מתחת לתוכן הדף",
-	"bs-discovery-config-meta-items-footer-help": "רכיבים נבחרים מוצגים מתחת לתוכן הדף"
+	"bs-discovery-config-meta-items-footer-help": "רכיבים נבחרים מוצגים מתחת לתוכן הדף",
+	"bs-discovery-alert-old-page-version": "{{GENDER:|אתה|את}} צופה בגרסה ישנה של הדף הזה. [[Special:Redirect/page/$1|חזרה לגרסה החדשה ביותר]].",
+	"bs-discovery-page-version-pager-deleted-user": "(שם המשתמש הוסתר)",
+	"bs-discovery-page-version-pager-info-text": "זוהי הגרסה של $1, $2 מאת [[User:$3|$3]]",
+	"bs-discovery-page-version-pager-previous": "הקודמת",
+	"bs-discovery-page-version-pager-next": "הבאה"
 }
