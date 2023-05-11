@@ -2,7 +2,6 @@
 
 namespace BlueSpice\Discovery\Component;
 
-use BlueSpice\UtilityFactory;
 use IContextSource;
 use MediaWiki\MediaWikiServices;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
@@ -10,21 +9,20 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardHeader;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleLinklistGroupFromArray;
 use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
+use PageProps;
 use RequestContext;
 use Title;
 
 class NamespaceMainPages extends SimpleCard {
 
-	/**
-	 * @var UtilityFactory
-	 */
-	private $utilityFactory = null;
+	/** @var PageProps */
+	private $pageProps = null;
 
 	/**
-	 *
+	 * @param PageProps $pageProps
 	 */
-	public function __construct( UtilityFactory $uilityFactory ) {
-		$this->utilityFactory = $uilityFactory;
+	public function __construct( PageProps $pageProps ) {
+		$this->pageProps = $pageProps;
 		parent::__construct( [] );
 	}
 
@@ -86,8 +84,9 @@ class NamespaceMainPages extends SimpleCard {
 				$nsText = 'main';
 			}
 
-			$pageProps = $services->getPageProps()->getAllProperties( $title );
-			if ( ( $pageProps !== null ) && ( isset( $pageProps['displaytitle'] ) ) ) {
+			$pageProps = $this->pageProps->getAllProperties( $title );
+			$pageProps = $pageProps[$title->getArticleID()] ?? [];
+			if ( isset( $pageProps['displaytitle'] ) ) {
 				$nsText = $pageProps['displaytitle'];
 			}
 
