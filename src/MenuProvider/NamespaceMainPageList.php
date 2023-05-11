@@ -4,23 +4,21 @@ namespace BlueSpice\Discovery\MenuProvider;
 
 use BlueSpice\Discovery\Component\NamespaceMainPages;
 use BlueSpice\Discovery\IMenuProvider;
-use BlueSpice\UtilityFactory;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
+use PageProps;
 use RawMessage;
 
 class NamespaceMainPageList implements IMenuProvider {
 
-	/**
-	 * @var UtilityFactory
-	 */
-	private $utilityFactory = null;
+	/** @var PageProps */
+	private $pageProps = null;
 
 	/**
-	 *
+	 * @param PageProps $pageProps
 	 */
-	public function __construct( UtilityFactory $uilityFactory ) {
-		$this->utilityFactory = $uilityFactory;
+	public function __construct( PageProps $pageProps ) {
+		$this->pageProps = $pageProps;
 	}
 
 	/**
@@ -48,6 +46,6 @@ class NamespaceMainPageList implements IMenuProvider {
 	 * @return IComponent
 	 */
 	public function getComponent(): IComponent {
-		return new NamespaceMainPages( $this->utilityFactory );
+		return new NamespaceMainPages( $this->pageProps );
 	}
 }

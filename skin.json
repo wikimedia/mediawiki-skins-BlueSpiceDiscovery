@@ -145,7 +145,7 @@
 				},
 				"namespace-mainpage-list": {
 					"class": "BlueSpice\\Discovery\\MenuProvider\\NamespaceMainPageList",
-					"services": [ "BSUtilityFactory" ]
+					"services": [ "PageProps" ]
 				},
 				"subpage-tree": {
 					"class": "BlueSpice\\Discovery\\MenuProvider\\SubpageTree"
