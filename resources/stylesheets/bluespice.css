@@ -111,3 +111,11 @@ label {
 #title-section #mw-indicator-mw-helplink {
 	display: none;
 }
+
+.bs-destructive {
+	color: var(--bs-destructive-fg);
+}
+
+.bs-progressive {
+	color: var(--bs-progressive-fg);
+}
