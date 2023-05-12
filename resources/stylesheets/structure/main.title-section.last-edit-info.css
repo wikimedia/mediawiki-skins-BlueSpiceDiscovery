@@ -2,7 +2,8 @@
 	color: var(--title-nav-fg);
 	font-size: 0.875rem;
 }
-.last-edit-info a {
+.last-edit-info a,
+.last-edit-info a:visited {
 	color: var(--title-nav-fg);
 	font-weight: bold;
 }
