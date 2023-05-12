@@ -20,7 +20,7 @@
 
 	function setSickyTitleforVerticalPosition() {
 		var windowTop = $( this ).scrollTop();
-		var top = getWrapperTopPosition();
+		var top = getTitleSection().offset().top;
 
 		if ( windowTop > top ) {
 			enableSitckyTitle();
@@ -123,7 +123,7 @@
 		$toolbar.width( mainWidth );
 
 		var $titleSection = getTitleSection();
-		$titleSection .css( 'padding-bottom', $toolbar.height() );
+		$titleSection.css( 'padding-bottom', $toolbar.height() );
 	}
 
 	function resetVEToolbarPosition() {
