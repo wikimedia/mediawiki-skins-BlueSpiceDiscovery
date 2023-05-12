@@ -116,3 +116,10 @@ label {
 .hide-title .ve-init-target-source > .ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
 	top: var( --navbar-primary-height );
 }
+.bs-destructive {
+	color: var(--bs-destructive-fg);
+}
+
+.bs-progressive {
+	color: var(--bs-progressive-fg);
+}
