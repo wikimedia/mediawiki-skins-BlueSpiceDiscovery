@@ -405,7 +405,8 @@
 				"bootstrap/dist/css/bootstrap-reboot.min.css": {},
 				"bootstrap/dist/css/bootstrap-utilities.min.css": {},
 				"bootstrap/dist/css/bootstrap.min.css": {},
-				"bootstrap/icons/bootstrap-icons.css": {}
+				"bootstrap/icons/bootstrap-icons.css": {},
+				"bootstrap/overwrite/alert-colors.css": {}
 			}
 		},
 		"skin.discovery.bootstrap.rtl.styles": {
