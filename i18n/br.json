@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Adriendelucca",
 			"Huñvreüs",
 			"Y-M D"
 		]
@@ -85,5 +86,9 @@
 	"bs-discovery-personalurl-userpage-text": "Profil",
 	"bs-discovery-globalactionentry-templates-text": "Patromoù",
 	"bs-discovery-globalactionentry-templates-title": "An holl batromoù",
-	"bs-discovery-last-edit-by-system-user": "Implijer reizhiad"
+	"bs-discovery-last-edit-by-system-user": "Implijer reizhiad",
+	"bs-discovery-alert-old-page-version": "Emaoc’h o sellout ouzh ur stumm kozh eus ar bajenn-mañ. [[Special:Redirect/page/$1|Kit en-dro d’ar stumm diwezhañ]].",
+	"bs-discovery-page-version-pager-deleted-user": "(anv implijer diverket)",
+	"bs-discovery-page-version-pager-previous": "Kent",
+	"bs-discovery-page-version-pager-next": "War-lerc'h"
 }

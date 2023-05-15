@@ -166,5 +166,12 @@
 	"bs-discovery-config-meta-items-header-label": "Elemente unterhalb des Seitentitels",
 	"bs-discovery-config-meta-items-header-help": "Ausgewählte Elemente werden unterhalb des Seitentitels angezeigt",
 	"bs-discovery-config-meta-items-footer-label": "Elemente unterhalb des Seiteninhalts",
-	"bs-discovery-config-meta-items-footer-help": "Ausgewählte Elemente werden unterhalb des Seiteninhalts angezeigt"
+	"bs-discovery-config-meta-items-footer-help": "Ausgewählte Elemente werden unterhalb des Seiteninhalts angezeigt",
+	"bs-discovery-alert-old-page-version": "Du siehst gerade eine alte Version dieser Seite. [[Special:Redirect/page/$1|Zurück zur letzten Version]].",
+	"bs-discovery-page-version-pager-deleted-user": "(Benutzername entfernt)",
+	"bs-discovery-page-version-pager-info-text": "Dies ist die Version von $1, $2 von [[User:$3|$3]]",
+	"bs-discovery-page-version-pager-previous": "Vorherig",
+	"bs-discovery-page-version-pager-next": "Nächste",
+	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Twitter Bootstrap-Framework, das für BlueSpiceDiscovery verwendet wird. ([https://getbootstrap.com/ https://getbootstrap.com])",
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Twitter Bootstrap-Symbole, die für BlueSpiceDiscovery und Inhalte verwendet werden. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])"
 }

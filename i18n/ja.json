@@ -4,6 +4,7 @@
 			"Ajeje Brazorf",
 			"Kokage si",
 			"MathXplore",
+			"Shirayuki",
 			"もなー(偽物)"
 		]
 	},
@@ -11,6 +12,7 @@
 	"bs-discovery-navbar-user-login-title": "ログイン",
 	"bs-discovery-navbar-user-login-aria-label": "ログイン",
 	"bs-discovery-last-edit-by-anon-user": "匿名利用者",
+	"bs-discovery-sidebar-actions-heading": "操作",
 	"bs-discovery-sidebar-details-heading": "詳細",
 	"bs-discovery-menu-provider-mediawiki-sidebar-label": "MediaWiki サイドバー",
 	"bs-discovery-subpage-tree-pnl-header-text": "サブページ",
