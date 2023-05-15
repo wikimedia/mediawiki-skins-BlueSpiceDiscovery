@@ -4,6 +4,7 @@
 			"Ajeje Brazorf",
 			"Kokage si",
 			"MathXplore",
+			"Shirayuki",
 			"もなー(偽物)"
 		]
 	},
@@ -33,5 +34,6 @@
 	"bs-discovery-config-meta-items-footer-help": "選択した要素がページ コンテンツの下に表示されます",
 	"bs-discovery-page-version-pager-deleted-user": "(利用者名は除去されています)",
 	"bs-discovery-page-version-pager-previous": "前へ",
-	"bs-discovery-page-version-pager-next": "次へ"
+	"bs-discovery-page-version-pager-next": "次へ",
+	"bs-discovery-sidebar-actions-heading": "操作"
 }
