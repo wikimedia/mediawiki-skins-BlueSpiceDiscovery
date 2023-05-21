@@ -93,7 +93,7 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $expectedLabels, $actualLabels );
 	}
 
-	public function provideGetParamsTestData() {
+	public static function provideGetParamsTestData() {
 		$specialPageFactory = MediaWikiServices::getInstance()->getSpecialPageFactory();
 		$specialpages = $specialPageFactory->getTitleForAlias( 'Specialpages' );
 		$specialpagesPath = '/wiki/' . $specialpages->getFullText();

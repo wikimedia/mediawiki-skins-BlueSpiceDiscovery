@@ -53,7 +53,7 @@ class SubTitleProcessorTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $expectedSubpages, $subPages );
 	}
 
-	public function provideParseTestData() {
+	public static function provideParseTestData() {
 		return [
 			'redirect' => [
 				// phpcs:ignore Generic.Files.LineLength.TooLong

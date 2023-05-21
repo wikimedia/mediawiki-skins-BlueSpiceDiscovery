@@ -45,7 +45,7 @@ class SubpagesLangLinksTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * @return array[]
 	 */
-	public function provideData() {
+	public static function provideData() {
 		$localUrl = Title::newFromText( 'Test Page' )->getLocalURL();
 		return [
 			'on-base-page' => [
