@@ -59,5 +59,8 @@
 	"bs-discovery-globalactionentry-templates-title": "တမ်းပလိတ်အားလုံး",
 	"bs-discovery-page-does-not-exist-title": "$1 (စာမျက်နှာ မရှိသေးပါ)",
 	"bs-discovery-title-action-language-button-title": "ဘာသာစကား ရွေးရန်",
-	"bs-discovery-title-action-language-button-aria-label": "ဘာသာစကား ရွေးရန်"
+	"bs-discovery-title-action-language-button-aria-label": "ဘာသာစကား ရွေးရန်",
+	"bs-discovery-page-version-pager-deleted-user": "(အသုံးပြုသူအမည် ဖယ်ရှားပြီး)",
+	"bs-discovery-page-version-pager-previous": "ယခင်",
+	"bs-discovery-page-version-pager-next": "ရှေ့"
 }
