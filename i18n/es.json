@@ -1,11 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"Fitoschido",
 			"JDíaz32",
 			"La Mantis"
 		]
 	},
 	"ns-main-label": "Páginas",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navegación",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Editar $1"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Editar $1",
+	"bs-discovery-page-version-pager-previous": "Anterior",
+	"bs-discovery-page-version-pager-next": "Siguiente"
 }
