@@ -21,12 +21,11 @@ class AddToBodyAttributes {
 		$cookie = $cookieHandler->getCookie( 'bodyClasses' );
 		if ( $cookie ) {
 			$cookieData = json_decode( $cookie, true );
-			foreach ( $cookieData as $key => $value ) {
-				$bodyAttrs[ 'class' ] .= $value;
-			}
+			$skinBodyClasses = implode( ' ', $cookieData );
 
 			$bodyClassName = $out->getProperty( 'bodyClassName' );
-			$bodyAttrs[ 'class' ] .= $bodyClassName;
+
+			$bodyAttrs[ 'class' ] .= " $bodyClassName $skinBodyClasses";
 		}
 	}
 }
