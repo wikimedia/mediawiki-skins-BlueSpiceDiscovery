@@ -51,6 +51,10 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 			return 'ta-edit-btn';
 		}
 
+		if ( isset( $this->editActions['ca-formedit'] ) ) {
+			return 'ca-formedit';
+		}
+
 		if ( isset( $this->editActions['ca-ve-edit'] ) ) {
 			return 'ca-ve-edit';
 		}
