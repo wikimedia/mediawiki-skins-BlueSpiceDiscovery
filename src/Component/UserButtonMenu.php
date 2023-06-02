@@ -13,6 +13,7 @@ use MediaWiki\MediaWikiServices;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;
+use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardBody;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardHeader;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdown;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleLinklistGroupFromArray;
@@ -64,38 +65,43 @@ class UserButtonMenu extends SimpleDropdown {
 			new SimpleCard( [
 				'id' => 'p-tools-megamn',
 				'classes' => [
-					'mega-menu', 'async', 'd-flex', 'justify-content-center',
-					'flex-md-row', 'flex-lg-row', 'flex-xl-row'
+					'mega-menu', 'd-flex', 'justify-content-center'
 				],
 				'items' => [
-					new Literal(
-						'user-menu-additional-cards-unset',
-						$this->getSkinSlotHtml()
-					),
-					new SimpleCard( [
-						'id' => $id . '-menu',
-						'classes' => [ 'card-mn' ],
+					new SimpleCardBody( [
+						'id' => 'p-tools-megamn-body',
+						'classes' => [ 'd-flex', 'mega-menu-wrapper' ],
 						'items' => [
-							new SimpleCardHeader( [
-								'id' => $id . '-head',
-								'classes' => [ 'menu-title' ],
+							new Literal(
+								'user-menu-additional-cards-unset',
+								$this->getSkinSlotHtml()
+							),
+							new SimpleCard( [
+								'id' => $id . '-menu',
+								'classes' => [ 'card-mn' ],
 								'items' => [
-									new Literal(
-										$id . '-title',
-										Message::newFromKey(
-											'bs-discovery-navbar-user-button-personal-menu-text'
-										)->text()
-									)
+									new SimpleCardHeader( [
+										'id' => $id . '-head',
+										'classes' => [ 'menu-title' ],
+										'items' => [
+											new Literal(
+												$id . '-title',
+												Message::newFromKey(
+													'bs-discovery-navbar-user-button-personal-menu-text'
+												)->text()
+											)
+										]
+									] ),
+									new SimpleLinklistGroupFromArray( [
+										'id' => $id,
+										'classes' => [ 'menu-card-body', 'menu-list', 'll-dft' ],
+										'links' => $linkFormatter->formatLinks( $this->sortLinks( $links ) ),
+										'aria' => [
+											'labelledby' => $id . '-head'
+										],
+									] ),
 								]
-							] ),
-							new SimpleLinklistGroupFromArray( [
-								'id' => $id,
-								'classes' => [ 'menu-card-body', 'menu-list', 'll-dft' ],
-								'links' => $linkFormatter->formatLinks( $this->sortLinks( $links ) ),
-								'aria' => [
-									'labelledby' => $id . '-head'
-								],
-							] ),
+							] )
 						]
 					] )
 				]
