@@ -8,6 +8,7 @@ use MediaWiki\MediaWikiServices;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;
+use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardBody;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardHeader;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdownIcon;
 use MWStake\MediaWiki\Component\CommonUserInterface\IRestrictedComponent;
@@ -78,48 +79,53 @@ class GlobalActionsButton extends SimpleDropdownIcon implements IRestrictedCompo
 			new SimpleCard( [
 				'id' => 'ga-mm',
 				'classes' => [
-					'mega-menu', 'async', 'd-flex', 'justify-content-center',
-					'flex-md-row', 'flex-lg-row', 'flex-xl-row', 'flex-xxl-row'
+					'mega-menu', 'd-flex', 'justify-content-center'
 				],
 				'items' => [
-					new SimpleCard( [
-						'id' => 'ga-tools',
-						'classes' => [ 'card-mn' ],
+					new SimpleCardBody( [
+						'id' => 'ga-tools-megamn-body',
+						'classes' => [ 'd-flex', 'mega-menu-wrapper' ],
 						'items' => [
-							new SimpleCardHeader( [
-								'id' => 'ga-menu-tools-head',
-								'classes' => [ 'menu-title' ],
+							new SimpleCard( [
+								'id' => 'ga-tools',
+								'classes' => [ 'card-mn' ],
 								'items' => [
+									new SimpleCardHeader( [
+										'id' => 'ga-menu-tools-head',
+										'classes' => [ 'menu-title' ],
+										'items' => [
+											new Literal(
+												'ga-menu-title',
+												Message::newFromKey( 'bs-discovery-navbar-global-actions-tool-text' )
+											)
+										]
+									] ),
 									new Literal(
-										'ga-menu-title',
-										Message::newFromKey( 'bs-discovery-navbar-global-actions-tool-text' )
+										'ga-menu-list-items',
+										$this->getToolSkinSlotHtml()
 									)
 								]
 							] ),
-							new Literal(
-								'ga-menu-list-items',
-								$this->getToolSkinSlotHtml()
-							)
-						]
-					] ),
-					new SimpleCard( [
-						'id' => 'ga-manager',
-						'classes' => [ 'card-mn' ],
-						'items' => [
-							new SimpleCardHeader( [
-								'id' => 'ga-menu-manager-head',
-								'classes' => [ 'menu-title' ],
+							new SimpleCard( [
+								'id' => 'ga-manager',
+								'classes' => [ 'card-mn' ],
 								'items' => [
+									new SimpleCardHeader( [
+										'id' => 'ga-menu-manager-head',
+										'classes' => [ 'menu-title' ],
+										'items' => [
+											new Literal(
+												'ga-menu-title',
+												Message::newFromKey( 'bs-discovery-navbar-global-actions-manager-text' )
+											)
+										]
+									] ),
 									new Literal(
-										'ga-menu-title',
-										Message::newFromKey( 'bs-discovery-navbar-global-actions-manager-text' )
-									)
+										'ga-menu-list-items',
+										$this->getManagerSkinSlotHtml()
+									),
 								]
-							] ),
-							new Literal(
-								'ga-menu-list-items',
-								$this->getManagerSkinSlotHtml()
-							),
+							] )
 						]
 					] )
 				]
