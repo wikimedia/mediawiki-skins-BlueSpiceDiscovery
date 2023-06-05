@@ -162,5 +162,12 @@
 	"bs-discovery-config-meta-items-header-label": "Element under sidrubriken",
 	"bs-discovery-config-meta-items-header-help": "Valda element visas under sidrubriken",
 	"bs-discovery-config-meta-items-footer-label": "Element under sidinnehållet",
-	"bs-discovery-config-meta-items-footer-help": "Valda element visas under sidinnehållet"
+	"bs-discovery-config-meta-items-footer-help": "Valda element visas under sidinnehållet",
+	"bs-discovery-alert-old-page-version": "Du visar en gammal version av denna sida. [[Special:Redirect/page/$1|Gå tillbaka till den senaste versionen]].",
+	"bs-discovery-page-version-pager-deleted-user": "(användarnamn borttaget)",
+	"bs-discovery-page-version-pager-info-text": "Detta är versionen från $1, $2 av [[User:$3|$3]]",
+	"bs-discovery-page-version-pager-previous": "Föregående",
+	"bs-discovery-page-version-pager-next": "Nästa",
+	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Ramverket Twitter Bootstrap används för BlueSpiceDiscovery. ([https://getbootstrap.com/ https://getbootstrap.com])",
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Twitter Bootstrap-ikoner används för BlueSpiceDiscovery och innehåll. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])"
 }
