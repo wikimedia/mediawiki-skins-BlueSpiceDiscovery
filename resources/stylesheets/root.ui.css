@@ -11,10 +11,7 @@
 	--content-max-width: 1200px;
 	--footer-height: 80px;
 	--aftercontent-height: 40px;
+	--aftercontent-max-width: var(--content-max-width);
 	--navbar-icon-size: 22px;
 	--footer-max-width: var(--content-max-width);
-
-	/* aftercontent */
-	--aftercontent-max-width: var(--content-max-width);
-
 }
