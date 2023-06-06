@@ -48,7 +48,7 @@
 }
 
 #data-after-content {
-	background-color: var(--discussion-section-bg);
+	background-color: var(--data-after-content-bg);
 	margin: 0 -40px;
 	padding: 20px;
 	border-radius: 5px;
