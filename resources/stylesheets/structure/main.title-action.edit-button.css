@@ -40,6 +40,9 @@ a.title-actions {
 	font-size: 22px;
 	text-align:center;
 }
+.btn-group button.dropdown-icon[disabled] {
+	display: none;
+}
 .btn-group button.dropdown-icon:hover {
 	color: var( --icon-primary-fg--hover );
 	background-color: var( --icon-primary-bg );
