@@ -148,9 +148,25 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	}
 
 	/**
+	 *
+	 * @return bool
+	 */
+	public function splitButtonIsDisabled(): bool {
+		$editActions = $this->getEditActions();
+		if ( empty( $editActions ) ) {
+			return true;
+		}
+		return false;
+	}
+
+	/**
 	 * @inheritDoc
 	 */
 	public function getSubComponents(): array {
+		$editActions = $this->getEditActions();
+		if ( empty( $editActions ) ) {
+			return [];
+		}
 		return [
 			new SimpleDropdownItemlistFromArray( [
 				'id' => 'new-content-itms',
