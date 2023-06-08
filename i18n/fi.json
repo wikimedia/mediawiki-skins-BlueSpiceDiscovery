@@ -105,5 +105,6 @@
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Muokkaa tätä valikkoa",
 	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Muokkaa $1",
 	"bs-discovery-page-version-pager-previous": "Edellinen",
-	"bs-discovery-page-version-pager-next": "Seuraava"
+	"bs-discovery-page-version-pager-next": "Seuraava",
+	"menueditor-ui-enhanced-sidebar-subpage-tree-label-edit": "Alasivupuu"
 }
