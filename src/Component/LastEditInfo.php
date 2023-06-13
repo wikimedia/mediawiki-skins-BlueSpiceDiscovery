@@ -11,7 +11,6 @@ use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use RequestContext;
 use Title;
-use User;
 
 class LastEditInfo extends Literal {
 
@@ -32,6 +31,9 @@ class LastEditInfo extends Literal {
 	 * @var RevisionStore
 	 */
 	private $revisionStore = null;
+
+	/** @var MediaWikiServices */
+	private $services = null;
 
 	/**
 	 *
@@ -136,7 +138,7 @@ class LastEditInfo extends Literal {
 	private function buildLastEditorLink( $revision ): string {
 		$html = '';
 		$userIdentity = $revision->getUser();
-		$user = User::newFromId( $userIdentity->getId() );
+		$user = $this->services->getUserFactory()->newFromId( $userIdentity->getId() );
 		$username = $user->getName();
 
 		/* Main_page is created with user id 0 */
