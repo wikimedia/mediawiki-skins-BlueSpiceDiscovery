@@ -27,6 +27,7 @@ use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Revision\RevisionStore;
 use MWStake\MediaWiki\Component\CommonUserInterface\HtmlIdRegistry;
+use Wikimedia\ObjectFactory\ObjectFactory;
 
 class Main implements
 	ISkinStructure,
@@ -68,6 +69,11 @@ class Main implements
 	protected $revisionStore = null;
 
 	/**
+	 * @var ObjectFactory
+	 */
+	protected $objectFactory = null;
+
+	/**
 	 * @var array
 	 */
 	protected $componentProcessData = [];
@@ -93,6 +99,7 @@ class Main implements
 	 * @param PermissionManager $permissionManager
 	 * @param LinkRenderer $linkRenderer
 	 * @param RevisionStore $revisionStore
+	 * @param ObjectFactory $objectFactory
 	 */
 	public function __construct(
 		ITemplateDataProvider $templateDataProvider,
@@ -101,7 +108,8 @@ class Main implements
 		CookieHandler $cookieHandler,
 		PermissionManager $permissionManager,
 		LinkRenderer $linkRenderer,
-		RevisionStore $revisionStore ) {
+		RevisionStore $revisionStore,
+		ObjectFactory $objectFactory ) {
 			$this->componentProcessData = $templateDataProvider->getAll();
 			$this->componentRenderer = $componentRenderer;
 			$this->skinSlotRenderer = $skinSlotRenderer;
@@ -109,6 +117,7 @@ class Main implements
 			$this->permissionManager = $permissionManager;
 			$this->linkRenderer = $linkRenderer;
 			$this->revisionStore = $revisionStore;
+			$this->objectFactory = $objectFactory;
 	}
 
 	/**
@@ -117,6 +126,7 @@ class Main implements
 	 * @param PermissionManager $permissionManager
 	 * @param LinkRenderer $linkRenderer
 	 * @param RevisionStore $revisionStore
+	 * @param ObjectFactory $objectFactory
 	 * @return ISkinStructure
 	 */
 	public static function factory(
@@ -126,10 +136,11 @@ class Main implements
 		CookieHandler $cookieHandler,
 		PermissionManager $permissionManager,
 		LinkRenderer $linkRenderer,
-		RevisionStore $revisionStore ) {
+		RevisionStore $revisionStore,
+		ObjectFactory $objectFactory ) {
 		return new static(
-			$templateDataProvider, $componentRenderer, $skinSlotRenderer,
-			$cookieHandler, $permissionManager, $linkRenderer, $revisionStore );
+			$templateDataProvider, $componentRenderer, $skinSlotRenderer, $cookieHandler,
+			$permissionManager, $linkRenderer, $revisionStore, $objectFactory );
 	}
 
 	/**
@@ -217,7 +228,9 @@ class Main implements
 	 * @return void
 	 */
 	private function fetchLastEdit() {
-		$component = new LastEditInfo( $this->context, $this->linkRenderer, $this->revisionStore );
+		$component = new LastEditInfo(
+			$this->context, $this->linkRenderer, $this->revisionStore, $this->objectFactory
+		);
 		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 
 		$this->skinComponents['last-edit'] = $html;
@@ -228,7 +241,7 @@ class Main implements
 	 * @return void
 	 */
 	private function fetchTitleActionEdit() {
-		$component = new TitleActionEdit( $this->permissionManager, $this->componentProcessData );
+		$component = new TitleActionEdit( $this->permissionManager, $this->componentProcessData, $this->objectFactory );
 		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 
 		$this->skinComponents['title-action-edit'] = $html;

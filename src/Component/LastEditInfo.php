@@ -2,7 +2,9 @@
 
 namespace BlueSpice\Discovery\Component;
 
+use BlueSpice\Discovery\ILastEditInfoModifier;
 use BlueSpice\Timestamp;
+use ExtensionRegistry;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
@@ -11,6 +13,7 @@ use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use RequestContext;
 use Title;
+use Wikimedia\ObjectFactory\ObjectFactory;
 
 class LastEditInfo extends Literal {
 
@@ -32,6 +35,11 @@ class LastEditInfo extends Literal {
 	 */
 	private $revisionStore = null;
 
+	/**
+	 * @var ObjectFactory
+	 */
+	private $objectFactory = null;
+
 	/** @var MediaWikiServices */
 	private $services = null;
 
@@ -41,7 +49,7 @@ class LastEditInfo extends Literal {
 	 * @param LinkRenderer $linkRenderer
 	 * @param RevisionStore $revisionStore
 	 */
-	public function __construct( $requestContext, $linkRenderer, $revisionStore ) {
+	public function __construct( $requestContext, $linkRenderer, $revisionStore, $objectFactory ) {
 		parent::__construct(
 			'last-edit-info',
 			''
@@ -50,6 +58,7 @@ class LastEditInfo extends Literal {
 		$this->requestContext = $requestContext;
 		$this->linkRenderer = $linkRenderer;
 		$this->revisionStore = $revisionStore;
+		$this->objectFactory = $objectFactory;
 
 		$this->services = MediaWikiServices::getInstance();
 	}
@@ -93,6 +102,20 @@ class LastEditInfo extends Literal {
 			$html .= $lastEditInfo->text();
 		}
 
+		$registry = ExtensionRegistry::getInstance()->getAttribute(
+			'BlueSpiceDiscoveryLastEditInfoModifier'
+		);
+
+		if ( !empty( $registry ) ) {
+			ksort( $registry );
+			$spec = array_pop( $registry );
+
+			$modifier = $this->objectFactory->createObject( $spec, [ $html ] );
+			if ( $modifier instanceof ILastEditInfoModifier ) {
+				$html = $modifier->getHtml( $html );
+			}
+		}
+
 		return $html;
 	}
 
@@ -108,7 +131,7 @@ class LastEditInfo extends Literal {
 		/** @var Timestamp */
 		$revisionTimestamp = Timestamp::getInstance( $rawTimestamp );
 		$timestamp = $revisionTimestamp->getAgeString( null, null, 1 );
-		$ariaLabel = $lastEditInfo = Message::newFromKey(
+		$ariaLabel = Message::newFromKey(
 			'bs-discovery-title-last-edit-info-timestamp-aria-label',
 			$timestamp
 		);
