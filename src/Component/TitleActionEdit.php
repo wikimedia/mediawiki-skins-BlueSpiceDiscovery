@@ -2,7 +2,9 @@
 
 namespace BlueSpice\Discovery\Component;
 
+use BlueSpice\Discovery\ITitleActionPrimaryActionModifier;
 use Exception;
+use ExtensionRegistry;
 use IContextSource;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
@@ -10,6 +12,7 @@ use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdownIconSplitButton;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdownItemlistFromArray;
 use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
+use Wikimedia\ObjectFactory\ObjectFactory;
 
 class TitleActionEdit extends SimpleDropdownIconSplitButton {
 
@@ -18,6 +21,11 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	 * @var PermissionManager
 	 */
 	private $permissionManager = null;
+
+	/**
+	 * @var ObjectFactory
+	 */
+	private $objectFactory = null;
 
 	/**
 	 *
@@ -30,10 +38,11 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	 * @param PermissionManager $permissionManager
 	 * @param array $componentProcessData
 	 */
-	public function __construct( $permissionManager, $componentProcessData ) {
+	public function __construct( $permissionManager, $componentProcessData, $objectFactory ) {
 		parent::__construct( [] );
 
 		$this->permissionManager = $permissionManager;
+		$this->objectFactory = $objectFactory;
 
 		if ( isset( $componentProcessData['panel'] )
 			&& isset( $componentProcessData['panel']['edit'] ) ) {
@@ -51,19 +60,37 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 			return 'ta-edit-btn';
 		}
 
-		if ( isset( $this->editActions['ca-formedit'] ) ) {
-			return 'ca-formedit';
+		$primaryAction = '';
+		if ( isset( $this->editActions['ca-edit'] ) ) {
+			$primaryAction = 'ca-edit';
 		}
 
 		if ( isset( $this->editActions['ca-ve-edit'] ) ) {
-			return 'ca-ve-edit';
+			$primaryAction = 'ca-ve-edit';
 		}
 
-		if ( isset( $this->editActions['ca-edit'] ) ) {
-			return 'ca-edit';
+		$registry = ExtensionRegistry::getInstance()->getAttribute(
+			'BlueSpiceDiscoveryTitleActionPrimaryActionModifier'
+		);
+
+		if ( !empty( $registry ) ) {
+			ksort( $registry );
+			$spec = array_pop( $registry );
+
+			$modifier = $this->objectFactory->createObject( $spec, [ $actionIds, $primaryAction ] );
+			if ( $modifier instanceof ITitleActionPrimaryActionModifier ) {
+				$modifiedActionId = $modifier->getActionId( $actionIds );
+				if ( in_array( $modifiedActionId, $actionIds ) ) {
+					$primaryAction = $modifiedActionId;
+				}
+			}
 		}
 
-		return $actionIds[0];
+		if ( $primaryAction === '' ) {
+			return $actionIds[0];
+		} else {
+			return $primaryAction;
+		}
 	}
 
 	/**

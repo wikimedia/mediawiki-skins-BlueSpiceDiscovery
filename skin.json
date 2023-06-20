@@ -69,7 +69,8 @@
 							"BlueSpiceDiscoveryCookieHandler",
 							"PermissionManager",
 							"LinkRenderer",
-							"RevisionStore"
+							"RevisionStore",
+							"ObjectFactory"
 						]
 					},
 					"aftercontent": {
@@ -195,6 +196,10 @@
 					"class": "BlueSpice\\Discovery\\TemplateDataProvider\\TemplateDataProvider",
 					"services": [ "HookContainer" ]
 				}
+			},
+			"TitleActionPrimaryActionModifier": {
+			},
+			"LastEditInfoModifier": {
 			}
 		},
 		"BlueSpicePrivacy": {
