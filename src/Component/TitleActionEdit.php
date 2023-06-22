@@ -79,7 +79,7 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 
 			$modifier = $this->objectFactory->createObject( $spec, [ $actionIds, $primaryAction ] );
 			if ( $modifier instanceof ITitleActionPrimaryActionModifier ) {
-				$modifiedActionId = $modifier->getActionId( $actionIds );
+				$modifiedActionId = $modifier->getActionId( $actionIds, $primaryAction );
 				if ( in_array( $modifiedActionId, $actionIds ) ) {
 					$primaryAction = $modifiedActionId;
 				}
