@@ -6,5 +6,6 @@
 	},
 	"bs-discovery-navbar-languages-button-text": "Тилдер",
 	"bs-discovery-navbar-global-actions-tool-text": "Куралдар",
-	"bs-discovery-sidebar-details-heading": "Чоо-жайы"
+	"bs-discovery-sidebar-details-heading": "Чоо-жайы",
+	"bs-discovery-dialog-details-action-cancel": "Жокко чыгаруу"
 }
