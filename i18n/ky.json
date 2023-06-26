@@ -5,6 +5,9 @@
 		]
 	},
 	"bs-discovery-navbar-global-actions-tool-text": "Куралдар",
+	"bs-discovery-breadcrumb-nav-node-ns-main": "Барактар",
 	"bs-discovery-sidebar-details-heading": "Чоо-жайы",
-	"bs-discovery-dialog-details-action-cancel": "Жокко чыгаруу"
+	"bs-discovery-dialog-details-action-cancel": "Жокко чыгаруу",
+	"bs-discovery-breadcrumb-label-special-linkliste": "Шилтемелер",
+	"bs-discovery-globalactionentry-templates-text": "Калыптар"
 }
