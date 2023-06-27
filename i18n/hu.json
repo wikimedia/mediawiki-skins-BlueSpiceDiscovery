@@ -77,5 +77,22 @@
 	"bs-discovery-config-meta-items-footer-help": "A kiválasztott elemek az oldal tartalma alatt jelennek meg",
 	"bs-discovery-page-version-pager-deleted-user": "(felhasználónév eltávolítva)",
 	"bs-discovery-page-version-pager-previous": "Előző",
-	"bs-discovery-page-version-pager-next": "Következő"
+	"bs-discovery-page-version-pager-next": "Következő",
+	"bs-discovery-navbar-user-login-aria-label": "Bejelentkezés",
+	"bs-discovery-searchform-button-title": "Keresés most",
+	"bs-discovery-navbar-global-actions-button-aria-label": "Globális műveletek",
+	"bs-discovery-navbar-global-actions-tool-text": "Eszközök",
+	"bs-discovery-tabpanel-main-aria-label": "Fő navigáció",
+	"bs-discovery-sidebar-secondary-export-link-title": "Exportálási lehetőségek",
+	"bs-discovery-sidebar-secondary-export-link-aria-label": "Exportálási lehetőségek",
+	"bs-discovery-sidebar-actions-heading": "Műveletek",
+	"bs-discovery-details-pnl-more-link-text": "... minden művelet",
+	"bs-discovery-dialog-details-heading": "Minden művelet",
+	"bs-discovery-edit-mediawiki-sidebar-link-text": "Oldalsáv szerkesztése",
+	"bs-discovery-edit-mediawiki-sidebar-link-title": "MediaWiki:Sidebar szerkesztése",
+	"bs-discovery-edit-mediawiki-sidebar-link-aria-label": "MediaWiki:Sidebar szerkesztése",
+	"bs-discovery-breadcrumb-label-talk": "Vitalap",
+	"bs-discovery-first-heading-aria-label": "Lap címe",
+	"bs-discovery-personalurl-mycontributions-text": "Közreműködések",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Főmenü"
 }
