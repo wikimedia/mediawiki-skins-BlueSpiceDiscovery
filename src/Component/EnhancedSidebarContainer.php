@@ -138,12 +138,23 @@ class EnhancedSidebarContainer extends Container implements LoggerAwareInterface
 	 */
 	private function buildPanel( array $panelData ): IComponent {
 		$panelId = $panelData['id'];
-		$panelHeading = $panelData['text'];
+		$panelHeading = htmlspecialchars( $panelData['text'] );
 		$panelItems = $panelData['items'];
+		$classes = [];
+		if ( isset( $panelData['classes'] ) ) {
+			$classes = $panelData['classes'];
+		}
+
+		// Custom messages as heading for sections
+		$customHeaderTextMsg = Message::newFromKey( $panelHeading );
+		if ( $customHeaderTextMsg->exists() ) {
+			$panelHeading = $customHeaderTextMsg->escaped();
+		}
 
 		$panel = new EnhancedSidebarPanel(
 			$panelId,
 			$panelHeading,
+			$classes,
 			$panelItems,
 			$this->treeDataGenerator,
 			$this->cookieHandler
