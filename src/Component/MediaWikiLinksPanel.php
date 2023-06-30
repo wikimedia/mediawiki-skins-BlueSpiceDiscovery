@@ -66,8 +66,6 @@ class MediaWikiLinksPanel extends SimpleCard {
 		if ( empty( $sidebar ) ) {
 			return [];
 		}
-		$sidebarEdit = Title::makeTitle( NS_MEDIAWIKI, 'Sidebar' );
-
 		$services = MediaWikiServices::getInstance();
 		/** @var LinkFormatter */
 		$linkFormatter = $services->getService( 'MWStakeLinkFormatter' );
@@ -94,9 +92,20 @@ class MediaWikiLinksPanel extends SimpleCard {
 	 */
 	private function buildPanel( $section, $links, $linkFormatter ): IComponent {
 		$id = 'n-links-' . strtolower( $section );
-		// Messages for navigation like 'bs-discovery-navigation-heading
-		$headerTextMsg = Message::newFromKey( 'bs-discovery-' . $section . '-heading' );
-		$headerText = $headerTextMsg->exists() ? $headerTextMsg->text() : $section;
+
+		// BlueSpiceDiscovery messages as heading for sections like 'bs-discovery-navigation-heading
+		$discoveryHeaderTextMsg = Message::newFromKey( 'bs-discovery-' . $section . '-heading' );
+		// Custom messages as heading for sections
+		$customHeaderTextMsg = Message::newFromKey( $section );
+		if ( $discoveryHeaderTextMsg->exists() ) {
+			$headerText = $discoveryHeaderTextMsg->escaped();
+		} elseif ( $customHeaderTextMsg->exists() ) {
+			$headerText = $customHeaderTextMsg->escaped();
+		} else {
+			// Plain text
+			$headerText = htmlspecialchars( $section );
+		}
+
 		$item = new SimpleCard( [
 			'id' => $id,
 			'classes' => [ 'w-100', 'bg-transp' ],
