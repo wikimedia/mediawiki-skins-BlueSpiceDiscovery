@@ -60,12 +60,10 @@ ul.mws-tree a:not(.new):hover {
 }
 .mws-tree-item-label {
 	display: inline-block;
-	/* width: calc(100% - var(--mws-tree-expander-width)); */
-	padding: 0;
-}
-ul.mws-tree .mws-tree-item a.mws-tree-item-label {
-	display: inline-block;
 	width: calc(100% - var(--mws-tree-expander-width));
+	padding: 0;
+	line-height: 1.5em;
+	padding: calc((var(--mws-tree-item-min-height) - 1.5em) / 2) 0;
 }
 .leaf .mws-tree-item-label {
 	margin-left: var(--mws-tree-expander-width);
