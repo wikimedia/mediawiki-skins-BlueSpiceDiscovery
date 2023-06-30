@@ -2,6 +2,7 @@
 
 namespace BlueSpice\Discovery;
 
+use MediaWiki\MediaWikiServices;
 use Message;
 use Title;
 
@@ -104,6 +105,9 @@ class SubpageDataGenerator {
 	private function makeSupbageData( Title $title, int $minDepth, int $maxDepth ): array {
 		$list = [];
 
+		$services = MediaWikiServices::getInstance();
+		$pageProps = $services->getPageProps();
+
 		$namespace = $title->getNamespace();
 		$titleText = $title->getText();
 		$titleParts = explode( '/', $titleText );
@@ -141,11 +145,19 @@ class SubpageDataGenerator {
 			$fullId = md5( $curTitle->getFullText() );
 			$id = substr( $fullId, 0, 6 );
 
+			$text = $titleParts[$index];
+			$pageId = $curTitle->getId();
+			$displayTitleProps = $pageProps->getProperties( $curTitle, 'displaytitle' );
+
+			if ( isset( $displayTitleProps[$pageId] ) ) {
+				$text = $displayTitleProps[$pageId];
+			}
+
 			$key = $curTitle->getDBkey();
 			$list[$key] = [
 				'id' => $id,
 				'name' => $curTitle->getPrefixedDBkey(),
-				'text' => $titleParts[$index],
+				'text' => $text,
 				'href' => $curTitle->getLocalURL(),
 				'items' => []
 			];
