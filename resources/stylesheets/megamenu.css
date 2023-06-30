@@ -34,8 +34,7 @@
 .mega-menu-wrapper {
 	flex-wrap: wrap;
 	justify-content: center;
-	overflow-y: scroll;
-	height: 90vh;
+	overflow-y: auto;
 	margin: 0;
 }
 .mega-menu .mm-edit-link {
@@ -73,6 +72,7 @@
 	background-color: transparent;
 	display: block;
 	margin-top: 1.5rem;
+	min-height: 450px;
 }
 .card-group {
 	justify-content: center;
