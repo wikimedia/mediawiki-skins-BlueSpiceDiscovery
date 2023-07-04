@@ -29,3 +29,9 @@ body .mw-rcfilters-ui-highlights {
 	padding-bottom: 3px;
 	padding-right: 0px;
 }
+
+/* mediawiki styles a.new is also set outside of mw-content-text
+=> has to be adapted to our changes */
+body.mediawiki a.new {
+	color: var(--new-link-fg);
+}
