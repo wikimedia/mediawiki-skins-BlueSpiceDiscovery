@@ -1,8 +1,10 @@
 ( function( mw, $, d ){
 
+	var initialTitlePos = getTitleLineContent().offset().top;
+
 	$( window ).scroll( function() {
 		if( !isSpecialPage() && window.innerWidth >= 767  ) {
-			setSickyTitleforVerticalPosition();
+			setSickyTitleForVerticalPosition();
 			handleVEToolbar();
 		}
 	} );
@@ -13,20 +15,40 @@
 		if ( ( window.innerWidth < 766 ) && $titleLine.hasClass( 'title-fixed' ) ) {
 			disableStickyTitle();
 		} else if ( window.innerWidth >= 767 ) {
-			setSickyTitleforVerticalPosition();
+			setSickyTitleForVerticalPosition();
 			handleVEToolbar();
 		}
 	} );
 
-	function setSickyTitleforVerticalPosition() {
+	function setSickyTitleForVerticalPosition() {
 		var windowTop = $( this ).scrollTop();
-		var top = getTitleSection().offset().top;
+		var headerHeight = $( '#header > nav' ).height();
 
-		if ( windowTop > top ) {
+		if ( windowTop > ( initialTitlePos - headerHeight ) ) {
 			enableSitckyTitle();
 		} else {
 			disableStickyTitle();
 		}
+	}
+
+	function enableSitckyTitle() {
+		$( 'body' ).addClass( 'title-fixed' );
+
+		var $titleLine = getTitleLine();
+		var $titleSection = getTitleSection();
+		$titleSection.css( 'padding-top', $titleLine.height() );
+
+		resizeTitleLineContent();
+	}
+
+	function disableStickyTitle() {
+		$( 'body' ).removeClass( 'title-fixed' );
+
+		var $titleSection = getTitleSection();
+		$titleSection.removeAttr( 'style' );
+
+		var $titleLineContent = getTitleLineContent();
+		$titleLineContent.removeAttr( 'style' );
 	}
 
 	function handleVEToolbar() {
@@ -40,8 +62,7 @@
 	}
 
 	function isStickyTitle() {
-		var $titleLine = getTitleLine();
-		return $titleLine.hasClass( 'title-fixed' );
+		return $( 'body' ).hasClass( 'title-fixed' );
 	}
 
 	function isSpecialPage() {
@@ -86,26 +107,6 @@
 		}
 	}
 
-	function enableSitckyTitle() {
-		var $titleLine = getTitleLine();
-		$titleLine.addClass( 'title-fixed' );
-
-		var $titleSection = getTitleSection();
-		$titleSection.css( 'padding-top', $titleLine.height() );
-
-		resizeTitleLineContent();
-	}
-
-	function disableStickyTitle() {
-		var $titleLine = getTitleLine();
-		$titleLine.removeClass( 'title-fixed' );
-
-		var $titleSection = getTitleSection();
-		$titleSection.removeAttr( 'style' );
-
-		var $titleLineContent = getTitleLineContent();
-		$titleLineContent.removeAttr( 'style' );
-	}
 
 	function getVEToolbar() {
 		return  $( '#content .ve-init-target >.ve-ui-toolbar > .oo-ui-toolbar-bar' );
