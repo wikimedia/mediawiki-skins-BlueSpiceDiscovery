@@ -64,11 +64,19 @@
 
 		hideSidebarPrimary();
 		hideSidebarSecondary();
+		resizeTitleLine();
 
 		$( 'body' ).addClass( 'fs-mode-enabled' );
-		addToBodyClassesCookie( { 'fsMode': 'fs-mode-enabled' } );
 
-		discovery_cookie.set( 'fsMode', 'true' );		
+		width = $( '#main' ).width();
+		resizeTitleLine( width );
+
+		addToBodyClassesCookie( { 'fsMode': 'fs-mode-enabled' } );
+		discovery_cookie.set( 'fsMode', 'true' );
+	}
+
+	function resizeTitleLine( width ) {
+		$( '#title-line > div' ).width( width );
 	}
 
 	function disableFullscreenMode( element ) {
@@ -87,8 +95,11 @@
 		fullscreenModeRestoreSidebarState();
 
 		$( 'body' ).removeClass( 'fs-mode-enabled' );
-		removeFromBodyClassesCookie( 'fsMode' );
 
+		width = $( '#main' ).width();
+		resizeTitleLine( width );
+
+		removeFromBodyClassesCookie( 'fsMode' );
 		discovery_cookie.set( 'fsMode', 'false' );
 	}
 
