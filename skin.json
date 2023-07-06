@@ -228,13 +228,6 @@
 				"old-revision": "\\BlueSpice\\Discovery\\AlertProvider\\PageVersionPagerAlert::factory"
 			}
 		},
-		"BlueSpiceHideTitle": {
-			"CssSelectorModules": {
-				"bluespice": {
-					"class" : "\\BlueSpice\\Discovery\\HideTitleCssModule"
-				}
-			}
-		},
 		"MenuEditor": {
 			"Menus": {
 				"enhanced-sidebar": {
@@ -453,7 +446,8 @@
 				"stylesheets/fixes/mw-fixes.css": {},
 				"stylesheets/fixes/extjs-fixes.css": {},
 				"stylesheets/bluespice.print.css": { "media": "print" },
-				"stylesheets/control/mws-tree-component.css": {}
+				"stylesheets/control/mws-tree-component.css": {},
+				"stylesheets/control/hide-title.css": {}
 			}
 		},
 		"skin.discovery.bluespice.themes.default": {

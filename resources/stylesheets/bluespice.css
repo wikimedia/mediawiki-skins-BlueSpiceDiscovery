@@ -71,39 +71,6 @@ label {
 	display: none;
 }
 
-/* sticky title */
-#title-line.title-fixed {
-	position: fixed;
-	left: 50%;
-	top: var(--navbar-primary-height);
-	height: auto;
-	max-width: 100vw;
-	width: 100vw;
-	transform: translateX(-50%);
-	z-index: 500;
-	background-color: transparent;
-}
-#title-line.title-fixed > div {
-	padding-left: 2.5rem;
-	padding-right: 2.5rem;
-	margin: 0 auto;
-	max-width: 100vw;
-	border-bottom: 0.05px solid var(--title-nav-border-color);
-	background-color: var(--content-bg);
-}
-
-#title-line.title-fixed h1 {
-	padding-left: 0;
-}
-#title-line.title-fixed #title-actions {
-	padding-right: 0;
-}
-
-.fs-mode-enabled #title-line.title-fixed {
-	max-width: 100vw;
-	width: 100%;
-}
-
 .ve-activated.ve-active #title-actions {
 	visibility: hidden;
 }
