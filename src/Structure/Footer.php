@@ -4,8 +4,58 @@ namespace BlueSpice\Discovery\Structure;
 
 use BaseTemplate;
 use BlueSpice\Discovery\IBaseTemplateAware;
+use BlueSpice\Discovery\ITemplateDataProvider;
+use BlueSpice\Discovery\Renderer\ComponentRenderer;
+use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
+use MediaWiki\HookContainer\HookContainer;
+use MediaWiki\MediaWikiServices;
+use MediaWiki\Permissions\PermissionManager;
 
 class Footer extends SkinStructureBase implements IBaseTemplateAware {
+
+	/** @var BaseTemplate */
+	private $template;
+
+	/** @var HookContainer */
+	private $hookContainer;
+
+	/**
+	 *
+	 * @param ITemplateDataProvider $templateDataProvider
+	 * @param ComponentRenderer $componentRenderer
+	 * @param SkinSlotRenderer $skinSlotRenderer
+	 * @param PermissionManager $permissionManager
+	 * @param HookContainer $hookContainer
+	 */
+	public function __construct(
+		ITemplateDataProvider $templateDataProvider,
+		ComponentRenderer $componentRenderer,
+		SkinSlotRenderer $skinSlotRenderer,
+		PermissionManager $permissionManager,
+		HookContainer $hookContainer ) {
+		$this->hookContainer = $hookContainer;
+		parent::__construct( $templateDataProvider, $componentRenderer, $skinSlotRenderer, $permissionManager );
+	}
+
+	/**
+	 *
+	 * @param ITemplateDataProvider $templateDataProvider
+	 * @param ComponentRenderer $componentRenderer
+	 * @param SkinSlotRenderer $skinSlotRenderer
+	 * @param PermissionManager $permissionManager
+	 * @return ISkinStructure
+	 */
+	public static function factory(
+		ITemplateDataProvider $templateDataProvider,
+		ComponentRenderer $componentRenderer,
+		SkinSlotRenderer $skinSlotRenderer,
+		PermissionManager $permissionManager
+	) {
+		$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+		return new static(
+			$templateDataProvider, $componentRenderer, $skinSlotRenderer, $permissionManager, $hookContainer
+		);
+	}
 
 	/**
 	 *
@@ -30,13 +80,13 @@ class Footer extends SkinStructureBase implements IBaseTemplateAware {
 	 * @return void
 	 */
 	private function getFooterPlaces(): array {
-		$footerlinks = $this->template->get( 'footerlinks' );
-		$footerplaces = $footerlinks['places'];
+		$footerlinks = $this->template->getSkin()->getSiteFooterLinks();
+		$this->hookContainer->run( 'BlueSpiceDiscoveryAfterGetFooterPlaces', [ &$footerlinks ] );
 		$items = [];
-		foreach ( $footerplaces as $footerplace ) {
+		foreach ( $footerlinks as $place => $footerlink ) {
 			$items[] = [
-				'id' => $footerplace . '-cnt',
-				'body' => $this->template->get( $footerplace, '' )
+				'id' => $place . '-cnt',
+				'body' => $footerlink
 			];
 		}
 		return $items;
