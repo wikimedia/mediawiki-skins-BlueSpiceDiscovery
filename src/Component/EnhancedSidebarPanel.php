@@ -30,6 +30,11 @@ class EnhancedSidebarPanel extends SimpleCard implements LoggerAwareInterface {
 	/**
 	 * @var array
 	 */
+	private $classes = [];
+
+	/**
+	 * @var array
+	 */
 	private $items = [];
 
 	/**
@@ -47,13 +52,14 @@ class EnhancedSidebarPanel extends SimpleCard implements LoggerAwareInterface {
 	 * @param string $heading
 	 * @param array $items
 	 */
-	public function __construct( string $id, string $heading, array $items,
+	public function __construct( string $id, string $heading, array $classes, array $items,
 		TreeDataGenerator $treeDataGenerator, CookieHandler $cookieHandler
 	) {
 		parent::__construct( [] );
 
 		$this->id = $id;
 		$this->heading = $heading;
+		$this->classes = $classes;
 		$this->items = $items;
 		$this->treeDataGenerator = $treeDataGenerator;
 		$this->cookieHandler = $cookieHandler;
@@ -78,7 +84,9 @@ class EnhancedSidebarPanel extends SimpleCard implements LoggerAwareInterface {
 	 * @inheritDoc
 	 */
 	public function getContainerClasses(): array {
-		return [ 'w-100', 'bg-transp', 'tree-component' ];
+		$defaultClasses = [ 'w-100', 'bg-transp', 'tree-component' ];
+		$classes = array_merge( $defaultClasses, $this->classes );
+		return $classes;
 	}
 
 	/**
