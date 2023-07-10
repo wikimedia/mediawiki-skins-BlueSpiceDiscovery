@@ -15,6 +15,9 @@
 	border-bottom: 0.05px solid var(--title-nav-border-color);
 	background-color: var(--title-nav-bg);
 }
+body.ns-special #title-section {
+	background-color: var(--body-special-bg);
+}
 #title-section a {
 	text-decoration: none;
 }
