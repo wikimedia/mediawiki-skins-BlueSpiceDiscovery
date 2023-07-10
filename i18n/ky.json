@@ -10,5 +10,8 @@
 	"bs-discovery-dialog-details-action-cancel": "Жокко чыгаруу",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Барактар",
 	"bs-discovery-breadcrumb-label-special-linkliste": "Шилтемелер",
-	"bs-discovery-globalactionentry-templates-text": "Калыптар"
+	"bs-discovery-globalactionentry-templates-text": "Калыптар",
+	"bs-discovery-navbar-user-login-text": "Кирүү",
+	"bs-discovery-navbar-user-login-title": "Кирүү",
+	"bs-discovery-navbar-user-login-aria-label": "Кирүү"
 }
