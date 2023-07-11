@@ -3,6 +3,7 @@
 namespace BlueSpice\Discovery\Structure;
 
 use BaseTemplate;
+use BlueSpice\Discovery\HookRunner;
 use BlueSpice\Discovery\IBaseTemplateAware;
 use BlueSpice\Discovery\ITemplateDataProvider;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
@@ -80,7 +81,14 @@ class Footer extends SkinStructureBase implements IBaseTemplateAware {
 	 * @return void
 	 */
 	private function getFooterPlaces(): array {
-		$footerlinks = $this->template->getSkin()->getSiteFooterLinks();
+		$data = [];
+		$data['places'] = $this->template->getSkin()->getSiteFooterLinks();
+		foreach ( $data as $key => $existingItems ) {
+			$newItems = [];
+			$this->getHookRunner()->onSkinAddFooterLinks( $this->template->getSkin(), $key, $newItems );
+			$data[$key] = $existingItems + $newItems;
+		}
+		$footerlinks = $data['places'];
 		$this->hookContainer->run( 'BlueSpiceDiscoveryAfterGetFooterPlaces', [ &$footerlinks ] );
 		$items = [];
 		foreach ( $footerlinks as $place => $footerlink ) {
@@ -90,6 +98,13 @@ class Footer extends SkinStructureBase implements IBaseTemplateAware {
 			];
 		}
 		return $items;
+	}
+
+	/**
+	 * @return HookRunner
+	 */
+	private function getHookRunner() {
+		return new HookRunner( $this->hookContainer );
 	}
 
 	/**
