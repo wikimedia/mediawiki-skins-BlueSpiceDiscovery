@@ -4,6 +4,9 @@
 			"Bosogo"
 		]
 	},
+	"bs-discovery-navbar-user-login-text": "Кирүү",
+	"bs-discovery-navbar-user-login-title": "Кирүү",
+	"bs-discovery-navbar-user-login-aria-label": "Кирүү",
 	"bs-discovery-navbar-global-actions-tool-text": "Куралдар",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Барактар",
 	"bs-discovery-sidebar-details-heading": "Чоо-жайы",
