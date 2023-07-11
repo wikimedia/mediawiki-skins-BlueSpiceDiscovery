@@ -54,6 +54,14 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	 * @inheritDoc
 	 */
 	public function getId(): string {
+		return 'primary-' . $this->getPrimaryActionId();
+	}
+
+	/**
+	 *
+	 * @return string
+	 */
+	private function getPrimaryActionId() {
 		$actionIds = array_keys( $this->editActions );
 
 		if ( empty( $actionIds ) ) {
@@ -97,7 +105,7 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	 * @inheritDoc
 	 */
 	public function getHref(): string {
-		$actionKey = $this->getId();
+		$actionKey = $this->getPrimaryActionId();
 
 		if ( isset( $this->editActions[$actionKey]['href'] ) ) {
 			return $this->editActions[$actionKey]['href'];
@@ -231,10 +239,13 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 			return [];
 		}
 
-		$actionId = $this->getId();
+		$primaryActionId = $this->getPrimaryActionId();
 		$actions = $this->editActions;
-		if ( isset( $actions[$actionId] ) ) {
-			unset( $actions[$actionId] );
+		// Set primary action on first place
+		if ( isset( $actions[$primaryActionId] ) ) {
+			$newActions = $actions[$primaryActionId];
+			unset( $actions[$primaryActionId] );
+			array_unshift( $actions, $newActions );
 		}
 
 		$services = MediaWikiServices::getInstance();
