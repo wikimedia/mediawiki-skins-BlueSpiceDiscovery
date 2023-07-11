@@ -464,7 +464,8 @@
 				"js/Jumpmarks.js",
 				"js/MobileContentTables.js",
 				"js/dblClickEdit.js",
-				"js/TreeComponent.js"
+				"js/TreeComponent.js",
+				"js/VEEditClick.js"
 			],
 			"messages": [
 				"bs-discovery-navbar-full-screen-button-enable-title",
