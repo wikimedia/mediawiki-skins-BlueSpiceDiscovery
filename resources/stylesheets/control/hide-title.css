@@ -1,7 +1,14 @@
-body.hide-title #title-section {
+:not( .ve-active ) body.hide-title #title-section {
     border: none;
     padding: 0;
     height: 3rem; /* required for not fixed title-seciton */
+}
+/* ve-active selector required to prevent white gap between header and ve-toolbar */
+.ve-active .hide-title #main {
+	padding-top: 0;
+}
+.ve-active .hide-title #title-section {
+	padding: 0;
 }
 body.hide-title #title-nav {
     display: none;
