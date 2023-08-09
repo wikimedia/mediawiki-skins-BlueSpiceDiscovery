@@ -15,5 +15,7 @@
 	"bs-discovery-navbar-user-login-title": "Кирүү",
 	"bs-discovery-navbar-user-login-aria-label": "Кирүү",
 	"bs-discovery-sidebar-secondary-share-sharebymail-text": "Электрондук почта",
-	"bs-discovery-breadcrumb-label-talk": "Талкуу"
+	"bs-discovery-breadcrumb-label-talk": "Талкуу",
+	"bs-discovery-header-create-button-text": "Жаңы",
+	"bs-discovery-breadcrumb-label-action-edit": "Түзөтүү"
 }
