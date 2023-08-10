@@ -108,5 +108,10 @@
 	"bs-discovery-config-meta-items-header-help": "Geselecteerde elementen worden weergegeven onder de paginatitel",
 	"bs-discovery-config-meta-items-footer-label": "Elementen onder de pagina-inhoud",
 	"bs-discovery-config-meta-items-footer-help": "Geselecteerde elementen worden weergegeven onder de pagina-inhoud",
-	"bs-discovery-subpage-tree-pnl-header-text": "Subpagina's"
+	"bs-discovery-subpage-tree-pnl-header-text": "Subpagina's",
+	"bs-discovery-alert-old-page-version": "U bekijkt een oudere versie van deze pagina. [[Special:Redirect/page/$1|Terug naar de laatste versie]].",
+	"bs-discovery-page-version-pager-deleted-user": "(gebruikersnaam verwijderd)",
+	"bs-discovery-page-version-pager-info-text": "Dit is de versie van $1, $2 door [[User:$3|$3]]",
+	"bs-discovery-page-version-pager-previous": "Vorige",
+	"bs-discovery-page-version-pager-next": "Volgende"
 }
