@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Alshamiri1",
+			"Hubaishan",
 			"Meno25",
 			"محمد أحمد عبد الفتاح"
 		]
@@ -34,7 +35,7 @@
 	"bs-discovery-header-create-split-button-title": "افتح القائمة مع خيارات لإنشاء المحتوى",
 	"bs-discovery-header-create-split-button-aria-label": "افتح القائمة مع خيارات لإنشاء المحتوى",
 	"bs-discovery-create-button-new-section-text": "قسم جديد",
-	"bs-discovery-create-button-new-section-title": "قم بإنشاء قسم جديد",
+	"bs-discovery-create-button-new-section-title": "أنشِئ قسمًا جديدًا",
 	"bs-discovery-create-button-new-file-text": "ملف جديد",
 	"bs-discovery-create-button-new-file-title": "رفع ملف جديد",
 	"bs-discovery-navbar-global-actions-button-title": "أفعال عالمية",
