@@ -7,6 +7,7 @@
 	"bs-discovery-navbar-user-login-text": "Кирүү",
 	"bs-discovery-navbar-user-login-title": "Кирүү",
 	"bs-discovery-navbar-user-login-aria-label": "Кирүү",
+	"bs-discovery-header-create-button-text": "Жаңы",
 	"bs-discovery-navbar-global-actions-tool-text": "Куралдар",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Барактар",
 	"bs-discovery-sidebar-secondary-share-sharebymail-text": "Электрондук почта",
@@ -14,5 +15,7 @@
 	"bs-discovery-dialog-details-action-cancel": "Жокко чыгаруу",
 	"bs-discovery-breadcrumb-label-talk": "Талкуу",
 	"bs-discovery-breadcrumb-label-special-linkliste": "Шилтемелер",
+	"bs-discovery-breadcrumb-label-action-history": "Тарых",
+	"bs-discovery-breadcrumb-label-action-edit": "Түзөтүү",
 	"bs-discovery-globalactionentry-templates-text": "Калыптар"
 }
