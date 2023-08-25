@@ -3,6 +3,7 @@
 namespace BlueSpice\Discovery\Component;
 
 use BlueSpice\Timestamp;
+use DateTime;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
@@ -113,11 +114,16 @@ class LastEditInfo extends Literal {
 			$timestamp
 		);
 
+		$date = new DateTime();
+		$date->setTimestamp( strtotime( $rawTimestamp ) );
+		$language = $this->services->getContentLanguage();
+		$exactTime = $language->userTimeAndDate( $date, $this->requestContext->getUser() );
+
 		$html = $this->linkRenderer->makeLink(
 			$title,
 			$timestamp,
 			[
-				'title' => $timestamp,
+				'title' => $exactTime,
 				'aria-label' => $ariaLabel->plain(),
 				'role' => 'link',
 				'rel' => 'nofollow',
