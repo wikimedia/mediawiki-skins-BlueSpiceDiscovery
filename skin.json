@@ -570,8 +570,7 @@
 		"skin.discovery.footer.styles": {
 			"styles": {
 				"stylesheets/structure/footer.css": {},
-				"stylesheets/structure/footer.sm.css": { "media": "all and ( max-width: 767px )" },
-				"stylesheets/structure/footer.md.css":{ "media": "all and ( min-width: 767px ) and ( max-width: 1199px )" }
+				"stylesheets/structure/footer.sm.css": { "media": "all and ( max-width: 767px )" }
 			}
 		},
 		"skin.discovery.watch.scripts": {
