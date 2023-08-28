@@ -1,12 +1,16 @@
 <div id="footer" class="mx-0" role="contentinfo">
-	<div class="inner">
-		<ul>
-			{{#places}}
-			<li {{#class}} class="{{.}}"{{/class}}>
-				{{{body}}}
-			</li>
-			{{/places}}
-		</ul>
+    <div class="inner">
+        <ul id="footer-links">
+            {{#defaultfooterlinks}}
+            <li {{#class}} class="{{.}}"{{/class}}>
+                {{{body}}}
+            </li>
+            {{/defaultfooterlinks}}
+
+            {{#customfooterlinks}}
+            {{{.}}}
+            {{/customfooterlinks}}
+        </ul>
 		<ul id="footer-icons">
 			{{#icons}}
 			<li>
@@ -16,5 +20,5 @@
 			</li>
 			{{/icons}}
 		</ul>
-	</div>
+    </div>
 </div>
