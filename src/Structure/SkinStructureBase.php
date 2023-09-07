@@ -48,7 +48,7 @@ abstract class SkinStructureBase implements ISkinStructure, ITemplateProvider, I
 		$this->componentProcessData = $templateDataProvider->getAll();
 		$this->componentRenderer = $componentRenderer;
 		$this->skinSlotRenderer = $skinSlotRenderer;
-		$this->permissionManger = $permissionManager;
+		$this->permissionManager = $permissionManager;
 	}
 
 	/**
