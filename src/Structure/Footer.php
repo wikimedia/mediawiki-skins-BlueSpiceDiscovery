@@ -3,6 +3,7 @@
 namespace BlueSpice\Discovery\Structure;
 
 use BaseTemplate;
+use BlueSpice\Discovery\Component\FooterLinksListItems;
 use BlueSpice\Discovery\HookRunner;
 use BlueSpice\Discovery\IBaseTemplateAware;
 use BlueSpice\Discovery\ITemplateDataProvider;
@@ -11,6 +12,12 @@ use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Revision\RevisionStore;
+use MediaWiki\Utils\UrlUtils;
+use Message;
+use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
+use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
+use TitleFactory;
 
 class Footer extends SkinStructureBase implements IBaseTemplateAware {
 
@@ -19,6 +26,9 @@ class Footer extends SkinStructureBase implements IBaseTemplateAware {
 
 	/** @var HookContainer */
 	private $hookContainer;
+
+	/** @var MediaWikiServices */
+	private $services;
 
 	/**
 	 *
@@ -36,6 +46,8 @@ class Footer extends SkinStructureBase implements IBaseTemplateAware {
 		HookContainer $hookContainer ) {
 		$this->hookContainer = $hookContainer;
 		parent::__construct( $templateDataProvider, $componentRenderer, $skinSlotRenderer, $permissionManager );
+
+		$this->services = MediaWikiServices::getInstance();
 	}
 
 	/**
@@ -71,24 +83,58 @@ class Footer extends SkinStructureBase implements IBaseTemplateAware {
 	 */
 	public function getParams(): array {
 		return [
-			'places' => $this->getFooterPlaces(),
+			'defaultfooterlinks' => $this->getDefaultFooterLinks(),
+			'customfooterlinks' => $this->getFooterLinks(),
 			'icons' => $this->getFooterIcons()
 		];
 	}
 
 	/**
-	 *
-	 * @return void
+	 * @return string
 	 */
-	private function getFooterPlaces(): array {
+	private function getFooterLinks(): string {
+		/**
+		 * For compatibility the services are not injected
+		 * TODO: Inject services
+		 */
+
+		/** @var TitleFactory */
+		$titleFactory = $this->services->getTitleFactory();
+		/** @var RevisionStore */
+		$revisionStore = $this->services->getRevisionStore();
+		/** @var UrlUtils */
+		$urlUtils = $this->services->getUrlUtils();
+		/** @var LinkFormatter */
+		$linkFormatter = $this->services->getService( 'MWStakeLinkFormatter' );
+		/** @var ParserFactory */
+		$parserFactory = $this->services->getService( 'MWStakeWikitextParserFactory' );
+
+		$component = new FooterLinksListItems(
+			$this->template->getSkin(), $titleFactory, $revisionStore, $urlUtils, $linkFormatter, $parserFactory
+		);
+		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
+
+		return $html;
+	}
+
+	/**
+	 * @return array
+	 */
+	private function getDefaultFooterLinks(): array {
 		$data = [];
-		$data['places'] = $this->template->getSkin()->getSiteFooterLinks();
+		$skin = $this->template->getSkin();
+		$data['defaultfooterlinks'] = $skin->getSiteFooterLinks();
+		$data['defaultfooterlinks']['imprint'] = $skin->footerLink(
+			Message::newFromKey( 'bs-discovery-footerlinks-imprint-link-desc' ),
+			Message::newFromKey( 'bs-discovery-footerlinks-imprint-link-page' )
+		);
 		foreach ( $data as $key => $existingItems ) {
 			$newItems = [];
-			$this->getHookRunner()->onSkinAddFooterLinks( $this->template->getSkin(), $key, $newItems );
+			$this->getHookRunner()->onSkinAddFooterLinks( $skin, $key, $newItems );
 			$data[$key] = $existingItems + $newItems;
 		}
-		$footerlinks = $data['places'];
+
+		$footerlinks = $data['defaultfooterlinks'];
 		$this->hookContainer->run( 'BlueSpiceDiscoveryAfterGetFooterPlaces', [ &$footerlinks ] );
 		$items = [];
 		foreach ( $footerlinks as $place => $footerlink ) {
