@@ -177,5 +177,7 @@
 	"bs-discovery-page-version-pager-previous": "Vorherig",
 	"bs-discovery-page-version-pager-next": "Nächste",
 	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Twitter Bootstrap-Framework, das für BlueSpiceDiscovery verwendet wird. ([https://getbootstrap.com/ https://getbootstrap.com])",
-	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Twitter Bootstrap-Symbole, die für BlueSpiceDiscovery und Inhalte verwendet werden. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])"
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Twitter Bootstrap-Symbole, die für BlueSpiceDiscovery und Inhalte verwendet werden. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
+	"bs-discovery-footerlinks-imprint-link-desc": "Impressum",
+	"bs-discovery-footerlinks-imprint-link-page": "Project:Imprint"
 }
