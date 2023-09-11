@@ -169,5 +169,8 @@
 	"bs-discovery-page-version-pager-previous": "Претходно",
 	"bs-discovery-page-version-pager-next": "Следно",
 	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Рамката Twitter Bootstrap се користи за BlueSpiceDiscovery. ([https://getbootstrap.com/ https://getbootstrap.com])",
-	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Иконите на Twitter Bootstrap се користат за BlueSpiceDiscovery и содржината. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])"
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Иконите на Twitter Bootstrap се користат за BlueSpiceDiscovery и содржината. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
+	"bs-discovery-edit-footerlinks-link-text": "Уреди подножни врски",
+	"bs-discovery-footerlinks-imprint-link-desc": "Импресум",
+	"bs-discovery-footerlinks-imprint-link-page": "Project:Imprint"
 }

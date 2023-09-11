@@ -72,5 +72,6 @@
 	"bs-discovery-title-action-language-button-aria-label": "Изабери језик",
 	"bs-discovery-page-version-pager-deleted-user": "(корисничко име уклоњено)",
 	"bs-discovery-page-version-pager-previous": "Претходно",
-	"bs-discovery-page-version-pager-next": "Следеће"
+	"bs-discovery-page-version-pager-next": "Следеће",
+	"bs-discovery-footerlinks-imprint-link-desc": "Импресум"
 }
