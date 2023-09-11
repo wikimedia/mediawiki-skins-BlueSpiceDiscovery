@@ -165,5 +165,8 @@
 	"bs-discovery-page-version-pager-previous": "הקודמת",
 	"bs-discovery-page-version-pager-next": "הבאה",
 	"bs-discovery-ext-credentials-desc-bootstrap-dist": "מסגרת Twitter Bootstrap המשמשת עבור BlueSpiceDiscovery. (ר' [https://getbootstrap.com/ https://getbootstrap.com])",
-	"bs-discovery-ext-credentials-desc-bootstrap-icons": "סמלים של Twitter Bootstrap המשמשים עבור BlueSpiceDiscovery ותוכן. (ר' [https://icons.getbootstrap.com https://icons.getbootstrap.com])"
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "סמלים של Twitter Bootstrap המשמשים עבור BlueSpiceDiscovery ותוכן. (ר' [https://icons.getbootstrap.com https://icons.getbootstrap.com])",
+	"bs-discovery-edit-footerlinks-link-text": "עריכת קישורים תחתונים",
+	"bs-discovery-footerlinks-imprint-link-desc": "דפוסת",
+	"bs-discovery-footerlinks-imprint-link-page": "Project:דפוסת"
 }
