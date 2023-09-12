@@ -165,5 +165,8 @@
 	"bs-discovery-page-version-pager-previous": "Precedente",
 	"bs-discovery-page-version-pager-next": "Sequente",
 	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Infrastructura Twitter Bootstrap usate pro BlueSpiceDiscovery. ([https://getbootstrap.com/ https://getbootstrap.com])",
-	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Icones de Twitter Bootstrap usate pro BlueSpiceDiscovery e contento. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])"
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Icones de Twitter Bootstrap usate pro BlueSpiceDiscovery e contento. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
+	"bs-discovery-edit-footerlinks-link-text": "Modificar ligamines de pede",
+	"bs-discovery-footerlinks-imprint-link-desc": "Impressum",
+	"bs-discovery-footerlinks-imprint-link-page": "Project:Impressum"
 }
