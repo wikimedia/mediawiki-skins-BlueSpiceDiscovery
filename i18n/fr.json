@@ -172,5 +172,8 @@
 	"bs-discovery-page-version-pager-previous": "Précédent",
 	"bs-discovery-page-version-pager-next": "Suivant",
 	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Cadre de travail Bootstrap de Twitter utilisé pour BlueSpiceDiscovery. ([https://getbootstrap.com/ https://getbootstrap.com])",
-	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Icônes Bootstrap de Twitter utilisées pour BlueSpiceDiscovery et le contenu. ([https://icons.getbootstrap.com/ https://icons.getbootstrap.com])"
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Icônes Bootstrap de Twitter utilisées pour BlueSpiceDiscovery et le contenu. ([https://icons.getbootstrap.com/ https://icons.getbootstrap.com])",
+	"bs-discovery-edit-footerlinks-link-text": "Modifier les liens de bas de page",
+	"bs-discovery-footerlinks-imprint-link-desc": "Imprimer",
+	"bs-discovery-footerlinks-imprint-link-page": "Project:Imprint"
 }
