@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Ashay vb",
+			"~aanzx",
 			"ಮಲ್ನಾಡಾಚ್ ಕೊಂಕ್ಣೊ"
 		]
 	},
@@ -10,5 +11,5 @@
 	"bs-discovery-navbar-user-login-aria-label": "ಲಾಗಿನ್",
 	"bs-discovery-edit-footerlinks-link-text": "ಅಡಿಟಿಪ್ಪಣಿಗಳನ್ನು ಸಂಪಾದಿಸಿ",
 	"bs-discovery-footerlinks-imprint-link-desc": "ಮುದ್ರೆ",
-	"bs-discovery-footerlinks-imprint-link-page": "ಯೋಜನೆ: ಮುದ್ರೆ"
+	"bs-discovery-footerlinks-imprint-link-page": "Project:ಮುದ್ರೆ"
 }
