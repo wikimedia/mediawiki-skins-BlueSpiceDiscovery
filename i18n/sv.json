@@ -166,5 +166,8 @@
 	"bs-discovery-page-version-pager-previous": "Föregående",
 	"bs-discovery-page-version-pager-next": "Nästa",
 	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Ramverket Twitter Bootstrap används för BlueSpiceDiscovery. ([https://getbootstrap.com/ https://getbootstrap.com])",
-	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Twitter Bootstrap-ikoner används för BlueSpiceDiscovery och innehåll. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])"
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Twitter Bootstrap-ikoner används för BlueSpiceDiscovery och innehåll. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
+	"bs-discovery-edit-footerlinks-link-text": "Redigera sidfotslänkar",
+	"bs-discovery-footerlinks-imprint-link-desc": "Avtryck",
+	"bs-discovery-footerlinks-imprint-link-page": "Projekt:Avtryck"
 }
