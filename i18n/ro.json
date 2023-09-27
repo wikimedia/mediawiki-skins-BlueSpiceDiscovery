@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Alesaru"
+			"Alesaru",
+			"Strainu"
 		]
 	},
-	"bs-discovery-edit-footerlinks-link-text": "Editați linkurile de subsol",
-	"bs-discovery-footerlinks-imprint-link-desc": "Imprima",
+	"bs-discovery-edit-footerlinks-link-text": "Editați legăturile din subsol",
+	"bs-discovery-footerlinks-imprint-link-desc": "Amprentă",
 	"bs-discovery-footerlinks-imprint-link-page": "Proiect:Amprentă"
 }
