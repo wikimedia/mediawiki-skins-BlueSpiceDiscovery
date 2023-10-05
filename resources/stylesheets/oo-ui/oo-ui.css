@@ -11,7 +11,7 @@ body.mediawiki .oo-ui-windowManager-modal > .oo-ui-dialog {
 	margin-bottom: 0;
 }
 
-#mw-content-text .oo-ui-widget.oo-ui-buttonElement a:hover {
+.mw-body-content .oo-ui-widget.oo-ui-buttonElement a:hover {
 	text-decoration: none;
 }
 
