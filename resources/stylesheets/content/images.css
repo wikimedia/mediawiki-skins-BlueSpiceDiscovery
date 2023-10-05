@@ -21,7 +21,7 @@
 	border: 1px solid var(--font-color-secondary);
 	overflow: hidden;
 }
-#mw-content-text img {
+.mw-body-content img {
 	max-width: 100%;
 	height: auto;
 }
