@@ -38,7 +38,7 @@ class SpecialAllPages extends RestrictedTextLink {
 	 * @return array
 	 */
 	public function getPermissions(): array {
-		return [ 'edit' ];
+		return [ 'read' ];
 	}
 
 	/**
