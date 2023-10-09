@@ -14,7 +14,7 @@ class GlobalActions implements MWStakeCommonUIRegisterSkinSlotComponents {
 	 */
 	public function onMWStakeCommonUIRegisterSkinSlotComponents( $registry ): void {
 		$registry->register(
-			'GlobalActionsTools',
+			'GlobalActionsOverview',
 			[
 				'special-specialpages' => [
 					'factory' => static function () {

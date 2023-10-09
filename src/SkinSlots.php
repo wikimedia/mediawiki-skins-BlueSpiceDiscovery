@@ -6,8 +6,9 @@ use BlueSpice\Discovery\SkinSlotRenderer\BreadcrumbSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\DataAfterContentSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\DataAfterTitleSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\DataBeforeContentSkinSlotRenderer;
-use BlueSpice\Discovery\SkinSlotRenderer\GlobalActionsManagerSkinSlotRenderer;
-use BlueSpice\Discovery\SkinSlotRenderer\GlobalActionsToolsSkinSlotRenderer;
+use BlueSpice\Discovery\SkinSlotRenderer\GlobalActionsAdministrationSkinSlotRenderer;
+use BlueSpice\Discovery\SkinSlotRenderer\GlobalActionsEditingSkinSlotRenderer;
+use BlueSpice\Discovery\SkinSlotRenderer\GlobalActionsOverviewSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\MainPanelSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\NavbarPrimaryItemsSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\NavbarPrimarySearchFormSkinSlotRenderer;
@@ -59,12 +60,16 @@ class SkinSlots {
 			UserMenuCardsSkinSlotRenderer::class
 		);
 		$this->createSkinSlot(
-			GlobalActionsToolsSkinSlotRenderer::REG_KEY,
-			GlobalActionsToolsSkinSlotRenderer::class
+			GlobalActionsOverviewSkinSlotRenderer::REG_KEY,
+			GlobalActionsOverviewSkinSlotRenderer::class
 		);
 		$this->createSkinSlot(
-			GlobalActionsManagerSkinSlotRenderer::REG_KEY,
-			GlobalActionsManagerSkinSlotRenderer::class
+			GlobalActionsEditingSkinSlotRenderer::REG_KEY,
+			GlobalActionsEditingSkinSlotRenderer::class
+		);
+		$this->createSkinSlot(
+			GlobalActionsAdministrationSkinSlotRenderer::REG_KEY,
+			GlobalActionsAdministrationSkinSlotRenderer::class
 		);
 		$this->createSkinSlot(
 			MainPanelSkinSlotRenderer::REG_KEY,

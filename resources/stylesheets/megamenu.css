@@ -133,25 +133,15 @@
 		background-repeat: no-repeat;
 		background-position: right;
 	}
-	#ga-tools {
-		max-width: 40rem;
-	}
-	#ga-manager {
-		max-width: 40rem;
-	}
-	#ga-menu-tools {
+	#ga-menu-overview,
+	#ga-menu-editing,
+	#ga-menu-administration {
 		columns: 2;
 		display: block;
 	}
-	#ga-menu-tools li {
-		display: inline-block;
-		width: 100%;
-	}
-	#ga-menu-manager {
-		columns: 2;
-		display: block;
-	}
-	#ga-menu-manager li {
+	#ga-menu-overview li,
+	#ga-menu-editing li,
+	#ga-menu-administration li {
 		display: inline-block;
 		width: 100%;
 	}

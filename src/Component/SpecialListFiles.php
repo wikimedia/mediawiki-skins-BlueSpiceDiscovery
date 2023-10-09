@@ -6,7 +6,7 @@ use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink;
 use SpecialPage;
 
-class SpecialAllPages extends RestrictedTextLink {
+class SpecialListFiles extends RestrictedTextLink {
 
 	/**
 	 *
@@ -20,7 +20,7 @@ class SpecialAllPages extends RestrictedTextLink {
 	 * @return string
 	 */
 	public function getId(): string {
-		return 'special-allpages';
+		return 'special-listfiles';
 	}
 
 	/**
@@ -29,7 +29,8 @@ class SpecialAllPages extends RestrictedTextLink {
 	 */
 	public function getHref(): string {
 		/** @var Title */
-		$specialpage = SpecialPage::getTitleFor( 'Allpages' );
+		$specialpage = SpecialPage::getTitleFor( 'ListFiles' );
+
 		return $specialpage->getLocalURL();
 	}
 
@@ -46,7 +47,7 @@ class SpecialAllPages extends RestrictedTextLink {
 	 * @return Message
 	 */
 	public function getText(): Message {
-		return Message::newFromKey( 'bs-discovery-mainlinks-allpages-label' );
+		return Message::newFromKey( 'bs-discovery-mainlinks-listfiles-label' );
 	}
 
 	/**
@@ -54,7 +55,7 @@ class SpecialAllPages extends RestrictedTextLink {
 	 * @return Message
 	 */
 	public function getTitle(): Message {
-		return Message::newFromKey( 'bs-discovery-mainlinks-allpages-label' );
+		return Message::newFromKey( 'bs-discovery-mainlinks-listfiles-label' );
 	}
 
 	/**
@@ -62,6 +63,6 @@ class SpecialAllPages extends RestrictedTextLink {
 	 * @return Message
 	 */
 	public function getAriaLabel(): Message {
-		return Message::newFromKey( 'bs-discovery-mainlinks-allpages-label' );
+		return Message::newFromKey( 'bs-discovery-mainlinks-listfiles-label' );
 	}
 }

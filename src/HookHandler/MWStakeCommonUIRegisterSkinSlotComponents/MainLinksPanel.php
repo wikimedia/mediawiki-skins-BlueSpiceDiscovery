@@ -3,6 +3,8 @@
 namespace BlueSpice\Discovery\HookHandler\MWStakeCommonUIRegisterSkinSlotComponents;
 
 use BlueSpice\Discovery\Component\SpecialAllPages;
+use BlueSpice\Discovery\Component\SpecialCategories;
+use BlueSpice\Discovery\Component\SpecialListFiles;
 use BlueSpice\Discovery\Component\SpecialMainPage;
 use BlueSpice\Discovery\Component\SpecialRecentChanges;
 use ConfigFactory;
@@ -36,20 +38,36 @@ class MainLinksPanel implements MWStakeCommonUIRegisterSkinSlotComponents {
 				'position' => 1
 			];
 		}
-		if ( $config->get( 'DiscoveryMainLinksAllPages' ) ) {
-			$links['special-allpages'] = [
-				'factory' => static function () {
-					return new SpecialAllPages();
-				},
-				'position' => 30
-			];
-		}
 		if ( $config->get( 'DiscoveryMainLinksRecentChanges' ) ) {
 			$links['special-recentchanges'] = [
 				'factory' => static function () {
 					return new SpecialRecentChanges();
 				},
-				'position' => 100
+				'position' => 50
+			];
+		}
+		if ( $config->get( 'DiscoveryMainLinksAllPages' ) ) {
+			$links['special-allpages'] = [
+				'factory' => static function () {
+					return new SpecialAllPages();
+				},
+				'position' => 60
+			];
+		}
+		if ( $config->get( 'DiscoveryMainLinksListFiles' ) ) {
+			$links['special-listfiles'] = [
+				'factory' => static function () {
+					return new SpecialListFiles();
+				},
+				'position' => 70
+			];
+		}
+		if ( $config->get( 'DiscoveryMainLinksCategories' ) ) {
+			$links['special-categories'] = [
+				'factory' => static function () {
+					return new SpecialCategories();
+				},
+				'position' => 80
 			];
 		}
 		$registry->register(
