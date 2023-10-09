@@ -4,6 +4,7 @@
 			"Fitoschido",
 			"JDíaz32",
 			"La Mantis",
+			"No se",
 			"Samthony"
 		]
 	},
@@ -14,5 +15,6 @@
 	"bs-discovery-page-version-pager-next": "Siguiente",
 	"bs-discovery-edit-footerlinks-link-text": "Editar enlaces de pie de página",
 	"bs-discovery-footerlinks-imprint-link-desc": "Imprimir",
-	"bs-discovery-footerlinks-imprint-link-page": "Proyecto:Impresión"
+	"bs-discovery-footerlinks-imprint-link-page": "Proyecto:Impresión",
+	"bs-discovery-breadcrumb-nav-node-ns-main": "Páginas"
 }
