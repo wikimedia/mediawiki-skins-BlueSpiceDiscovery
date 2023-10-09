@@ -2,8 +2,9 @@
 
 namespace BlueSpice\Discovery\Component;
 
-use BlueSpice\Discovery\SkinSlotRenderer\GlobalActionsManagerSkinSlotRenderer;
-use BlueSpice\Discovery\SkinSlotRenderer\GlobalActionsToolsSkinSlotRenderer;
+use BlueSpice\Discovery\SkinSlotRenderer\GlobalActionsAdministrationSkinSlotRenderer;
+use BlueSpice\Discovery\SkinSlotRenderer\GlobalActionsEditingSkinSlotRenderer;
+use BlueSpice\Discovery\SkinSlotRenderer\GlobalActionsOverviewSkinSlotRenderer;
 use MediaWiki\MediaWikiServices;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
@@ -87,42 +88,68 @@ class GlobalActionsButton extends SimpleDropdownIcon implements IRestrictedCompo
 						'classes' => [ 'd-flex', 'mega-menu-wrapper' ],
 						'items' => [
 							new SimpleCard( [
-								'id' => 'ga-tools',
+								'id' => 'ga-overview',
 								'classes' => [ 'card-mn' ],
 								'items' => [
 									new SimpleCardHeader( [
-										'id' => 'ga-menu-tools-head',
+										'id' => 'ga-menu-overview-head',
 										'classes' => [ 'menu-title' ],
 										'items' => [
 											new Literal(
 												'ga-menu-title',
-												Message::newFromKey( 'bs-discovery-navbar-global-actions-tool-text' )
+												Message::newFromKey(
+													'bs-discovery-navbar-global-actions-overview-text'
+												)
 											)
 										]
 									] ),
 									new Literal(
 										'ga-menu-list-items',
-										$this->getToolSkinSlotHtml()
+										$this->getOverviewSkinSlotHtml()
 									)
 								]
 							] ),
 							new SimpleCard( [
-								'id' => 'ga-manager',
+								'id' => 'ga-editing',
 								'classes' => [ 'card-mn' ],
 								'items' => [
 									new SimpleCardHeader( [
-										'id' => 'ga-menu-manager-head',
+										'id' => 'ga-menu-editing-head',
 										'classes' => [ 'menu-title' ],
 										'items' => [
 											new Literal(
 												'ga-menu-title',
-												Message::newFromKey( 'bs-discovery-navbar-global-actions-manager-text' )
+												Message::newFromKey(
+													'bs-discovery-navbar-global-actions-editing-text'
+												)
 											)
 										]
 									] ),
 									new Literal(
 										'ga-menu-list-items',
-										$this->getManagerSkinSlotHtml()
+										$this->getEditingSkinSlotHtml()
+									)
+								]
+							] ),
+							new SimpleCard( [
+								'id' => 'ga-administration',
+								'classes' => [ 'card-mn' ],
+								'items' => [
+									new SimpleCardHeader( [
+										'id' => 'ga-menu-administration-head',
+										'classes' => [ 'menu-title' ],
+										'items' => [
+											new Literal(
+												'ga-menu-title',
+												Message::newFromKey(
+													'bs-discovery-navbar-global-actions-administration-text'
+												)
+											)
+										]
+									] ),
+									new Literal(
+										'ga-menu-list-items',
+										$this->getAdministrationSkinSlotHtml()
 									),
 								]
 							] )
@@ -150,15 +177,15 @@ class GlobalActionsButton extends SimpleDropdownIcon implements IRestrictedCompo
 	 *
 	 * @return string
 	 */
-	private function getToolSkinSlotHtml(): string {
+	private function getOverviewSkinSlotHtml(): string {
 		/** @var MediaWikiServices */
 		$services = MediaWikiServices::getInstance();
 
 		/** @var SkinSlotRendererFactory */
 		$skinSlotRendererFactory = $services->get( 'MWStakeCommonUISkinSlotRendererFactory' );
 
-		/** @var GlobalActionsToolsSkinSlotRenderer */
-		$skinSlotRenderer = $skinSlotRendererFactory->create( GlobalActionsToolsSkinSlotRenderer::REG_KEY );
+		/** @var GlobalActionsOverviewSkinSlotRenderer */
+		$skinSlotRenderer = $skinSlotRendererFactory->create( GlobalActionsOverviewSkinSlotRenderer::REG_KEY );
 
 		return $skinSlotRenderer->getHtml();
 	}
@@ -167,15 +194,32 @@ class GlobalActionsButton extends SimpleDropdownIcon implements IRestrictedCompo
 	 *
 	 * @return string
 	 */
-	private function getManagerSkinSlotHtml(): string {
+	private function getEditingSkinSlotHtml(): string {
 		/** @var MediaWikiServices */
 		$services = MediaWikiServices::getInstance();
 
 		/** @var SkinSlotRendererFactory */
 		$skinSlotRendererFactory = $services->get( 'MWStakeCommonUISkinSlotRendererFactory' );
 
-		/** @var GlobalActionsManagerSkinSlotRenderer */
-		$skinSlotRenderer = $skinSlotRendererFactory->create( GlobalActionsManagerSkinSlotRenderer::REG_KEY );
+		/** @var GlobalActionsEditingSkinSlotRenderer */
+		$skinSlotRenderer = $skinSlotRendererFactory->create( GlobalActionsEditingSkinSlotRenderer::REG_KEY );
+
+		return $skinSlotRenderer->getHtml();
+	}
+
+	/**
+	 *
+	 * @return string
+	 */
+	private function getAdministrationSkinSlotHtml(): string {
+		/** @var MediaWikiServices */
+		$services = MediaWikiServices::getInstance();
+
+		/** @var SkinSlotRendererFactory */
+		$skinSlotRendererFactory = $services->get( 'MWStakeCommonUISkinSlotRendererFactory' );
+
+		/** @var GlobalActionsAdministrationSkinSlotRenderer */
+		$skinSlotRenderer = $skinSlotRendererFactory->create( GlobalActionsAdministrationSkinSlotRenderer::REG_KEY );
 
 		return $skinSlotRenderer->getHtml();
 	}
