@@ -4,9 +4,11 @@
 			"La Mantis",
 			"JDíaz32",
 			"Fitoschido",
-			"Samthony"
+			"Samthony",
+			"No se"
 		]
 	},
+	"bs-discovery-breadcrumb-nav-node-ns-main": "Páginas",
 	"ns-main-label": "Páginas",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navegación",
 	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Editar $1",
