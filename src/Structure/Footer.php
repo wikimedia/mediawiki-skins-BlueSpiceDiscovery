@@ -8,9 +8,13 @@ use BlueSpice\Discovery\IBaseTemplateAware;
 use BlueSpice\Discovery\ITemplateDataProvider;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
 use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
+use ExtensionRegistry;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
+use Message;
+use RawMessage;
+use Title;
 
 class Footer extends SkinStructureBase implements IBaseTemplateAware {
 
@@ -83,6 +87,13 @@ class Footer extends SkinStructureBase implements IBaseTemplateAware {
 	private function getFooterPlaces(): array {
 		$data = [];
 		$data['places'] = $this->template->getSkin()->getSiteFooterLinks();
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'BlueSpicePrivacy' ) ) {
+			$privacyPolicyUrl = Title::newFromText( 'PrivacyPages/PrivacyPolicy', NS_SPECIAL )->getPrefixedURL();
+			$data['defaultfooterlinks']['privacy'] = $this->template->getSkin()->footerLink(
+				Message::newFromKey( 'privacy' )->inContentLanguage(),
+				new RawMessage( $privacyPolicyUrl )
+			);
+		}
 		foreach ( $data as $key => $existingItems ) {
 			$newItems = [];
 			$this->getHookRunner()->onSkinAddFooterLinks( $this->template->getSkin(), $key, $newItems );
