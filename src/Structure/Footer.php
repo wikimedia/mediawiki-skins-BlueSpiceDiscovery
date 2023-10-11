@@ -9,6 +9,7 @@ use BlueSpice\Discovery\IBaseTemplateAware;
 use BlueSpice\Discovery\ITemplateDataProvider;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
 use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
+use ExtensionRegistry;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
@@ -17,6 +18,8 @@ use MediaWiki\Utils\UrlUtils;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
+use RawMessage;
+use Title;
 use TitleFactory;
 
 class Footer extends SkinStructureBase implements IBaseTemplateAware {
@@ -124,9 +127,16 @@ class Footer extends SkinStructureBase implements IBaseTemplateAware {
 		$data = [];
 		$skin = $this->template->getSkin();
 		$data['defaultfooterlinks'] = $skin->getSiteFooterLinks();
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'BlueSpicePrivacy' ) ) {
+			$privacyPolicyUrl = Title::newFromText( 'PrivacyPages/PrivacyPolicy', NS_SPECIAL )->getPrefixedURL();
+			$data['defaultfooterlinks']['privacy'] = $skin->footerLink(
+				Message::newFromKey( 'privacy' )->inContentLanguage(),
+				new RawMessage( $privacyPolicyUrl )
+			);
+		}
 		$data['defaultfooterlinks']['imprint'] = $skin->footerLink(
-			Message::newFromKey( 'bs-discovery-footerlinks-imprint-link-desc' ),
-			Message::newFromKey( 'bs-discovery-footerlinks-imprint-link-page' )
+			Message::newFromKey( 'bs-discovery-footerlinks-imprint-link-desc' )->inContentLanguage(),
+			Message::newFromKey( 'bs-discovery-footerlinks-imprint-link-page' )->inContentLanguage()
 		);
 		foreach ( $data as $key => $existingItems ) {
 			$newItems = [];
