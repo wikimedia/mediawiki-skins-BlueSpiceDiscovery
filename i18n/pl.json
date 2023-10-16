@@ -1,8 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
+			"Mro",
 			"Osnard"
 		]
 	},
-	"bs-discovery-skip-links-navigation-aria-label": "Przejdź do linków"
+	"bs-discovery-name": "BlueSpice Discovery",
+	"bs-discovery-desc": "BlueSpice skin",
+	"bs-discovery-skip-links-navigation-aria-label": "Przejdź do linków",
+	"bs-discovery-skip-to-navbar-primary-text": "Przejdź do paska nagłówka",
+	"bs-discovery-skip-to-sidebar-primary-text": "Przejdź do nawigacji głównej",
+	"bs-discovery-skip-to-sidebar-secondary-text": "Przejdź do narzędzi strony",
+	"bs-discovery-skip-to-main-text": "Przejdź do obszaru roboczego",
+	"bs-discovery-back-to-top-text": "Powrót do góry",
+	"bs-discovery-back-to-top-aria-label": "Powrót do góry",
+	"bs-discovery-navbar-aria-label": "Pasek nagłówka"
 }
