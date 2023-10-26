@@ -219,6 +219,8 @@
 			"ConfigDefinitionRegistry": {
 				"DiscoveryMainLinksMainpage": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksMainpage::getInstance",
 				"DiscoveryMainLinksAllPages": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksAllPages::getInstance",
+				"DiscoveryMainLinksListFiles": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksListFiles::getInstance",
+				"DiscoveryMainLinksCategories": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksCategories::getInstance",
 				"DiscoveryMainLinksRecentChanges": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksRecentChanges::getInstance",
 				"DiscoverySidebarPrimaryMainTabPanelMenu": "\\BlueSpice\\Discovery\\ConfigDefinition\\SidebarPrimaryMainTabPanelMenu::getInstance",
 				"DiscoveryMetaItemsHeader": "\\BlueSpice\\Discovery\\ConfigDefinition\\MetaItemsHeader::getInstance",
@@ -352,7 +354,7 @@
 			"value": "BlueSpice\\Discovery\\Renderer\\SkinLayoutRenderer::factory"
 		},
 		"DiscoveryMainLinksMainpage": {
-			"value": true,
+			"value": false,
 			"public": true,
 			"descriptionmsg": "bs-discovery-config-mainlinks-mainpage-label"
 		},
@@ -360,6 +362,16 @@
 			"value": true,
 			"public": true,
 			"descriptionmsg": "bs-discovery-config-mainlinks-allpages-label"
+		},
+		"DiscoveryMainLinksListFiles": {
+			"value": true,
+			"public": true,
+			"descriptionmsg": "bs-discovery-config-mainlinks-listfiles-label"
+		},
+		"DiscoveryMainLinksCategories": {
+			"value": true,
+			"public": true,
+			"descriptionmsg": "bs-discovery-config-mainlinks-categories-label"
 		},
 		"DiscoveryMainLinksRecentChanges": {
 			"value": true,

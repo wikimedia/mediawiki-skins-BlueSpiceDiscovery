@@ -4,9 +4,9 @@ namespace BlueSpice\Discovery\SkinSlotRenderer;
 
 use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
 
-class GlobalActionsToolsSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
+class GlobalActionsAdministrationSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 
-	public const REG_KEY = 'GlobalActionsTools';
+	public const REG_KEY = 'GlobalActionsAdministration';
 
 	/**
 	 *
@@ -45,7 +45,7 @@ class GlobalActionsToolsSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 
 		$this->sortItems( $items );
 
-		$html = '<ul id="ga-menu-tools" aria-labelledby="ga-menu-tools-head"';
+		$html = '<ul id="ga-menu-administration" aria-labelledby="ga-menu-administration-head"';
 		$html .= ' class="list-group menu-card-body menu-list">';
 		foreach ( $items as $id => $item ) {
 			if ( !is_callable( $item['factory'] ) ) {
