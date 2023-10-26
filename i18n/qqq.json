@@ -40,7 +40,7 @@
 	"bs-discovery-navbar-global-actions-button-title": "Title attribute for button to open menu with global actions links",
 	"bs-discovery-navbar-global-actions-button-aria-label": "Aria-label for button to open menu with global actions links",
 	"bs-discovery-navbar-global-actions-tool-text": "Heading for a list with global actions links\n\n{{Identical|Tool}}",
-	"bs-discovery-navbar-global-actions-manager-text": "Heading for a list with links to managers\n{{identical|Management}}",
+	"bs-discovery-navbar-global-actions-manager-text": "Heading for a list with links to administration pages\n{{identical|Administration}}",
 	"bs-discovery-navbar-languages-button-text": "Text for a button with language list for interwiki links\n{{identical|Language}}",
 	"bs-discovery-navbar-language-button-title": "Title attribute for a button with language list for interwiki links",
 	"bs-discovery-navbar-language-button-aria-label": "Aria-label attribute for a button with language list for interwiki links",
@@ -173,5 +173,14 @@
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Extension description on [[Special:Version]]",
 	"bs-discovery-edit-footerlinks-link-text": "Text for link to edit [MediaWiki:FooterLinks]",
 	"bs-discovery-footerlinks-imprint-link-desc": "Text for footer link to [Project:Imprint]",
-	"bs-discovery-footerlinks-imprint-link-page": "Destination for the [Project:Imprint] footer link"
+	"bs-discovery-footerlinks-imprint-link-page": "Destination for the [Project:Imprint] footer link",
+	"bs-discovery-navbar-global-actions-overview-text": "Heading for a list with links to overview pages\n\n{{Identical|Overview}}",
+	"bs-discovery-navbar-global-actions-editing-text": "Heading for a list with links to editing pages\n\n{{Identical|Editing}}",
+	"bs-discovery-mainlinks-allpages-label": "Title for link used in the left navigation for the page name of [[Special:AllPages]].\n{{Identical|All pages}}",
+	"bs-discovery-mainlinks-categories-label": "Title for link used in the left navigation for the page name of [[Special:Categories]].\n{{Identical|Category}}",
+	"bs-discovery-mainlinks-listfiles-label": "Title for link used in the left navigation for the page name of [[Special:ListFiles]].\n{{Identical|List files}}",
+	"bs-discovery-config-mainlinks-listfiles-label": "Label for checkbox in config, that shows entrypoint \"Files\" in the left navigation",
+	"bs-discovery-config-mainlinks-listfiles-help": "Help message for checkbox in config, that shows entrypoint \"Files\" in the left navigation",
+	"bs-discovery-config-mainlinks-categories-label": "Label for checkbox in config, that shows entrypoint \"Categories\" in the left navigation",
+	"bs-discovery-config-mainlinks-categories-help": "Help message for checkbox in config, that shows entrypoint \"Categories\" in the left navigation"
 }
