@@ -110,8 +110,8 @@
 	"bs-discovery-first-heading-aria-label": "Page title",
 	"bs-discovery-config-mainlinks-mainpage-label": "Show entrypoint \"Mainpage\"",
 	"bs-discovery-config-mainlinks-mainpage-help": "Show entrypoint \"Mainpage\" link in the left navigation",
-	"bs-discovery-config-mainlinks-allpages-label": "Show entrypoint \"All pages\"",
-	"bs-discovery-config-mainlinks-allpages-help": "Show entrypoint \"All pages\" link in the left navigation",
+	"bs-discovery-config-mainlinks-allpages-label": "Show entrypoint \"Pages\"",
+	"bs-discovery-config-mainlinks-allpages-help": "Show entrypoint \"Pages\" link in the left navigation",
 	"bs-discovery-config-mainlinks-recentchanges-label": "Show entrypoint \"Recent changes\"",
 	"bs-discovery-config-mainlinks-recentchanges-help": "Show entrypoint \"Recent changes\" link in the left navigation",
 	"bs-discovery-personalurl-mycontributions-text": "Contributions",
@@ -171,5 +171,15 @@
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Twitter Bootstrap icons used for BlueSpiceDiscovery and content. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
 	"bs-discovery-edit-footerlinks-link-text": "Edit footerlinks",
 	"bs-discovery-footerlinks-imprint-link-desc": "Imprint",
-	"bs-discovery-footerlinks-imprint-link-page": "Project:Imprint"
+	"bs-discovery-footerlinks-imprint-link-page": "Project:Imprint",
+	"bs-discovery-navbar-global-actions-overview-text": "Overview",
+	"bs-discovery-navbar-global-actions-editing-text": "Editing",
+	"bs-discovery-navbar-global-actions-administration-text": "Administration",
+	"bs-discovery-mainlinks-allpages-label": "Pages",
+	"bs-discovery-mainlinks-categories-label": "Categories",
+	"bs-discovery-mainlinks-listfiles-label": "Files",
+	"bs-discovery-config-mainlinks-listfiles-label": "Show entrypoint \"Files\"",
+	"bs-discovery-config-mainlinks-listfiles-help": "Show entrypoint \"Files\" link in the left navigation",
+	"bs-discovery-config-mainlinks-categories-label": "Show entrypoint \"Categories\"",
+	"bs-discovery-config-mainlinks-categories-help": "Show entrypoint \"Categories\" link in the left navigation"
 }
