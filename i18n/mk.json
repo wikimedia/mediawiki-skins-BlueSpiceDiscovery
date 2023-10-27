@@ -109,8 +109,8 @@
 	"bs-discovery-first-heading-aria-label": "Наслов на страницата",
 	"bs-discovery-config-mainlinks-mainpage-label": "Прикажувај ставка „Главна страница“",
 	"bs-discovery-config-mainlinks-mainpage-help": "Прикажувај ставка со врска „Главна страница“ во страничникот лево",
-	"bs-discovery-config-mainlinks-allpages-label": "Прикажувај ставка „Сите страници“",
-	"bs-discovery-config-mainlinks-allpages-help": "Прикажувај ставка со врска „Сите страници“ во страничникот лево",
+	"bs-discovery-config-mainlinks-allpages-label": "Прикажувај пристапна точка „Страници“",
+	"bs-discovery-config-mainlinks-allpages-help": "Прикажувај пристапна точка „Страници“ во страничникот лево",
 	"bs-discovery-config-mainlinks-recentchanges-label": "Прикажувај ставка „Скорешни промени“",
 	"bs-discovery-config-mainlinks-recentchanges-help": "Прикажувај ставка со врска „Скорешни промени“ во страничникот лево",
 	"bs-discovery-personalurl-mycontributions-text": "Придонеси",
@@ -171,5 +171,15 @@
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Иконите на Twitter Bootstrap се користат за BlueSpiceDiscovery и содржината. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
 	"bs-discovery-edit-footerlinks-link-text": "Уреди подножни врски",
 	"bs-discovery-footerlinks-imprint-link-desc": "Импресум",
-	"bs-discovery-footerlinks-imprint-link-page": "Project:Imprint"
+	"bs-discovery-footerlinks-imprint-link-page": "Project:Imprint",
+	"bs-discovery-navbar-global-actions-overview-text": "Преглед",
+	"bs-discovery-navbar-global-actions-editing-text": "Уредување",
+	"bs-discovery-navbar-global-actions-administration-text": "Администрација",
+	"bs-discovery-mainlinks-allpages-label": "Страници",
+	"bs-discovery-mainlinks-categories-label": "Категории",
+	"bs-discovery-mainlinks-listfiles-label": "Податотеки",
+	"bs-discovery-config-mainlinks-listfiles-label": "Прикажувај пристапна точка „Податотеки“",
+	"bs-discovery-config-mainlinks-listfiles-help": "Прикажувај пристапна точка „Податотеки“ во страничникот лево",
+	"bs-discovery-config-mainlinks-categories-label": "Прикажувај пристапна точка „Категории“",
+	"bs-discovery-config-mainlinks-categories-help": "Прикажувај пристапна точка „Категории“ во страничникот лево"
 }

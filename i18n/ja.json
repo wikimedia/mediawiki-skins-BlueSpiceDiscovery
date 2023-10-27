@@ -35,5 +35,7 @@
 	"bs-discovery-page-version-pager-deleted-user": "(利用者名は除去されています)",
 	"bs-discovery-page-version-pager-previous": "前へ",
 	"bs-discovery-page-version-pager-next": "次へ",
-	"bs-discovery-sidebar-actions-heading": "操作"
+	"bs-discovery-sidebar-actions-heading": "操作",
+	"bs-discovery-mainlinks-categories-label": "カテゴリ",
+	"bs-discovery-mainlinks-listfiles-label": "ファイル"
 }
