@@ -65,5 +65,9 @@
 	padding-left: 40px;
 }
 #sb-pri .list-group .list-group-item > a:focus-visible {
-	outline-color:  var(--focus-visible);
+	outline: 1px solid var(--focus-visible);
+}
+/* hide outline for focus on click */
+#sb-pri .list-group .list-group-item > a:focus:not(:focus-visible) {
+	outline: 0;
 }
