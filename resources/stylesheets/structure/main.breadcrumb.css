@@ -40,7 +40,10 @@ nav .breadcrumb {
 	color: var(--title-nav-fg--hover);
 }
 .breadcrumb-item a:focus-visible {
-	outline-color: var(--focus-visible);
+	outline: 1px solid var(--focus-visible);
+}
+.breadcrumb-item a:focus:not(:focus-visible ) {
+	outline: 0;
 }
 .breadcrumb-item.active{
 	color: var(--title-nav-fg);
