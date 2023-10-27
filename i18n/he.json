@@ -108,8 +108,8 @@
 	"bs-discovery-first-heading-aria-label": "כותרת הדף",
 	"bs-discovery-config-mainlinks-mainpage-label": "הצגת נקודת הכניסה \"עמוד ראשי\"",
 	"bs-discovery-config-mainlinks-mainpage-help": "הצגת נקודת הכניסה \"עמוד ראשי\" בסרגל הניווט הימני",
-	"bs-discovery-config-mainlinks-allpages-label": "הצגת נקודת הכניסה \"כל הדפים\"",
-	"bs-discovery-config-mainlinks-allpages-help": "הצגת נקודת הכניסה \"עמוד ראשי\" בסרגל הניווט הימני",
+	"bs-discovery-config-mainlinks-allpages-label": "הצגת נקודת הכניסה \"דפים\"",
+	"bs-discovery-config-mainlinks-allpages-help": "הצגת נקודת הכניסה \"דפים\" בסרגל הניווט הימני",
 	"bs-discovery-config-mainlinks-recentchanges-label": "הצגת נקודת הכניסה \"שינויים אחרונים\"",
 	"bs-discovery-config-mainlinks-recentchanges-help": "הצגת נקודת הכניסה \"שינויים אחרונים\" בסרגל הניווט הימני",
 	"bs-discovery-personalurl-mycontributions-text": "תרומות",
@@ -171,5 +171,15 @@
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "סמלים של Twitter Bootstrap המשמשים עבור BlueSpiceDiscovery ותוכן. (ר' [https://icons.getbootstrap.com https://icons.getbootstrap.com])",
 	"bs-discovery-edit-footerlinks-link-text": "עריכת קישורים תחתונים",
 	"bs-discovery-footerlinks-imprint-link-desc": "דפוסת",
-	"bs-discovery-footerlinks-imprint-link-page": "Project:דפוסת"
+	"bs-discovery-footerlinks-imprint-link-page": "Project:דפוסת",
+	"bs-discovery-navbar-global-actions-overview-text": "סקירה כללית",
+	"bs-discovery-navbar-global-actions-editing-text": "עריכה",
+	"bs-discovery-navbar-global-actions-administration-text": "ניהול",
+	"bs-discovery-mainlinks-allpages-label": "דפים",
+	"bs-discovery-mainlinks-categories-label": "קטגוריות",
+	"bs-discovery-mainlinks-listfiles-label": "קבצים",
+	"bs-discovery-config-mainlinks-listfiles-label": "הצגת נקודת הכניסה \"קבצים\"",
+	"bs-discovery-config-mainlinks-listfiles-help": "הצגת נקודת הכניסה עם קישור \"קבצים\" בסרגל הניווט הימני",
+	"bs-discovery-config-mainlinks-categories-label": "הצגת נקודת הכניסה \"קטגוריות\"",
+	"bs-discovery-config-mainlinks-categories-help": "הצגת נקודת הכניסה \"קטגוריות\" בסרגל הניווט הימני"
 }

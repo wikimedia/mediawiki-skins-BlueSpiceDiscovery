@@ -73,5 +73,9 @@
 	"bs-discovery-page-version-pager-deleted-user": "(корисничко име уклоњено)",
 	"bs-discovery-page-version-pager-previous": "Претходно",
 	"bs-discovery-page-version-pager-next": "Следеће",
-	"bs-discovery-footerlinks-imprint-link-desc": "Импресум"
+	"bs-discovery-footerlinks-imprint-link-desc": "Импресум",
+	"bs-discovery-navbar-global-actions-overview-text": "Преглед",
+	"bs-discovery-mainlinks-allpages-label": "Странице",
+	"bs-discovery-mainlinks-categories-label": "Категорије",
+	"bs-discovery-mainlinks-listfiles-label": "Датотеке"
 }
