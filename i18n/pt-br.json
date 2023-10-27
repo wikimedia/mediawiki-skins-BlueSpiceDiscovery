@@ -17,8 +17,6 @@
 	"bs-discovery-create-button-new-file-title": "Carregar um novo arquivo",
 	"bs-discovery-navbar-global-actions-button-title": "Ações globais",
 	"bs-discovery-navbar-global-actions-button-aria-label": "Ações globais",
-	"bs-discovery-navbar-global-actions-tool-text": "Ferramentas",
-	"bs-discovery-navbar-global-actions-manager-text": "Gerenciamento",
 	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Espaço nominal",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Páginas",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Página principal",

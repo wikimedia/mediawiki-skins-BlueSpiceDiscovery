@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"আফতাবুজ্জামান"
+			"আফতাবুজ্জামান",
+			"জয়শ্রীরাম সরকার"
 		]
 	},
+	"bs-discovery-config-mainlinks-listfiles-help": "বাম নেভিগেশনে এন্ট্রিপয়েন্ট \"ফাইলস\" সংযোগ দেখান",
 	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "প্রধান মেনু",
 	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 সম্পাদনা করুন",
 	"bs-discovery-page-version-pager-deleted-user": "(ব্যবহারকারীর নাম সরানো হয়েছে)",

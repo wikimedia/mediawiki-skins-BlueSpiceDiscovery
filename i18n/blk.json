@@ -20,8 +20,6 @@
 	"bs-discovery-create-button-new-file-title": "ဒင်ႏထင်ႏဖုဲင်တသာ",
 	"bs-discovery-navbar-global-actions-button-title": "တကမ္ဘာႏလွုမ်းခွုမ်မာꩻချက်ဖိုင်ႏ",
 	"bs-discovery-navbar-global-actions-button-aria-label": "တကမ္ဘာႏလွုမ်းခွုမ်မာꩻချက်ဖိုင်ႏ",
-	"bs-discovery-navbar-global-actions-tool-text": "ကိရိယာႏဖုံႏ",
-	"bs-discovery-navbar-global-actions-manager-text": "စီႏမံႏဖန်းဖြယ်",
 	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "ယီးနယ်မိဉ်ꩻ",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "လိတ်မဲ့ငါဖိုင်ႏ",
 	"bs-discovery-breadcrumb-nav-node-title": "ဗွောင် $1",

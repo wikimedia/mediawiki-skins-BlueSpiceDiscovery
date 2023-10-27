@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Ajeje Brazorf",
+			"BlueCamille",
 			"Cigaryno",
 			"Gomoko",
 			"McDutchie",
@@ -41,8 +42,8 @@
 	"bs-discovery-create-button-new-file-title": "Téléverser un nouveau fichier",
 	"bs-discovery-navbar-global-actions-button-title": "Actions globales",
 	"bs-discovery-navbar-global-actions-button-aria-label": "Actions globales",
-	"bs-discovery-navbar-global-actions-tool-text": "Outils",
-	"bs-discovery-navbar-global-actions-manager-text": "Gestion",
+	"bs-discovery-navbar-global-actions-overview-text": "Vue d'ensemble",
+	"bs-discovery-navbar-global-actions-administration-text": "Administration",
 	"bs-discovery-navbar-full-screen-button-enable-title": "Activer le mode plein écran",
 	"bs-discovery-navbar-full-screen-button-text": "Activer le mode plein écran",
 	"bs-discovery-navbar-full-screen-button-enable-aria-label": "Activer le mode plein écran",
@@ -112,6 +113,9 @@
 	"bs-discovery-breadcrumb-label-action-history": "Historique",
 	"bs-discovery-breadcrumb-label-action-edit": "Modifier",
 	"bs-discovery-first-heading-aria-label": "Titre de la page",
+	"bs-discovery-mainlinks-allpages-label": "Pages",
+	"bs-discovery-mainlinks-categories-label": "Catégories",
+	"bs-discovery-mainlinks-listfiles-label": "Fichiers",
 	"bs-discovery-config-mainlinks-mainpage-label": "Afficher le point d’entrée « Page d’accueil »",
 	"bs-discovery-config-mainlinks-mainpage-help": "Afficher le lien du point d’entrée « Page d’accueil » dans la navigation de gauche",
 	"bs-discovery-config-mainlinks-allpages-label": "Afficher le point d’entrée « Toutes les pages »",

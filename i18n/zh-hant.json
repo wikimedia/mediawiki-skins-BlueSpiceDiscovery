@@ -38,8 +38,6 @@
 	"bs-discovery-create-button-new-file-title": "上傳新檔案",
 	"bs-discovery-navbar-global-actions-button-title": "全域操作",
 	"bs-discovery-navbar-global-actions-button-aria-label": "全域操作",
-	"bs-discovery-navbar-global-actions-tool-text": "工具",
-	"bs-discovery-navbar-global-actions-manager-text": "管理",
 	"bs-discovery-navbar-full-screen-button-enable-title": "啟用全螢幕模式",
 	"bs-discovery-navbar-full-screen-button-text": "啟用全螢幕模式",
 	"bs-discovery-navbar-full-screen-button-enable-aria-label": "啟用全螢幕模式",

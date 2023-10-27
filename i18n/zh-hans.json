@@ -44,8 +44,6 @@
 	"bs-discovery-create-button-new-file-title": "上传新文件",
 	"bs-discovery-navbar-global-actions-button-title": "全域操作",
 	"bs-discovery-navbar-global-actions-button-aria-label": "全域操作",
-	"bs-discovery-navbar-global-actions-tool-text": "工具",
-	"bs-discovery-navbar-global-actions-manager-text": "管理",
 	"bs-discovery-navbar-full-screen-button-enable-title": "启用全屏模式",
 	"bs-discovery-navbar-full-screen-button-text": "启用全屏模式",
 	"bs-discovery-navbar-full-screen-button-enable-aria-label": "启用全屏模式",

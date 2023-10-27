@@ -39,8 +39,6 @@
 	"bs-discovery-create-button-new-file-title": "Завантажити новий файл",
 	"bs-discovery-navbar-global-actions-button-title": "Глобальні дії",
 	"bs-discovery-navbar-global-actions-button-aria-label": "Глобальні дії",
-	"bs-discovery-navbar-global-actions-tool-text": "Інструменти",
-	"bs-discovery-navbar-global-actions-manager-text": "Керування",
 	"bs-discovery-navbar-full-screen-button-enable-title": "Увімкнути повноекранний режим",
 	"bs-discovery-navbar-full-screen-button-text": "Увімкнути повноекранний режим",
 	"bs-discovery-navbar-full-screen-button-enable-aria-label": "Увімкнути повноекранний режим",
