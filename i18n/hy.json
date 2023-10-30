@@ -56,5 +56,9 @@
 	"bs-discovery-title-action-language-button-aria-label": "Ընտրեք լեզուն",
 	"bs-discovery-navbar-user-button-title": "Օգտվողի ընտրացանկ",
 	"bs-discovery-navbar-user-button-aria-label": "Օգտվողի ընտրացանկ",
-	"bs-discovery-page-version-pager-next": "Հաջորդ"
+	"bs-discovery-page-version-pager-next": "Հաջորդ",
+	"bs-discovery-navbar-global-actions-administration-text": "Կառավարում",
+	"bs-discovery-mainlinks-allpages-label": "Էջեր",
+	"bs-discovery-mainlinks-categories-label": "Կատեգորիաներ",
+	"bs-discovery-mainlinks-listfiles-label": "Նիշքեր"
 }
