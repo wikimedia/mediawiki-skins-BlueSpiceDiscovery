@@ -35,15 +35,7 @@ class MainLinksPanel implements MWStakeCommonUIRegisterSkinSlotComponents {
 				'factory' => static function () {
 					return new SpecialMainPage();
 				},
-				'position' => 1
-			];
-		}
-		if ( $config->get( 'DiscoveryMainLinksRecentChanges' ) ) {
-			$links['special-recentchanges'] = [
-				'factory' => static function () {
-					return new SpecialRecentChanges();
-				},
-				'position' => 50
+				'position' => 10
 			];
 		}
 		if ( $config->get( 'DiscoveryMainLinksAllPages' ) ) {
@@ -51,7 +43,7 @@ class MainLinksPanel implements MWStakeCommonUIRegisterSkinSlotComponents {
 				'factory' => static function () {
 					return new SpecialAllPages();
 				},
-				'position' => 60
+				'position' => 20
 			];
 		}
 		if ( $config->get( 'DiscoveryMainLinksListFiles' ) ) {
@@ -59,13 +51,21 @@ class MainLinksPanel implements MWStakeCommonUIRegisterSkinSlotComponents {
 				'factory' => static function () {
 					return new SpecialListFiles();
 				},
-				'position' => 70
+				'position' => 40
 			];
 		}
 		if ( $config->get( 'DiscoveryMainLinksCategories' ) ) {
 			$links['special-categories'] = [
 				'factory' => static function () {
 					return new SpecialCategories();
+				},
+				'position' => 50
+			];
+		}
+		if ( $config->get( 'DiscoveryMainLinksRecentChanges' ) ) {
+			$links['special-recentchanges'] = [
+				'factory' => static function () {
+					return new SpecialRecentChanges();
 				},
 				'position' => 80
 			];

@@ -351,7 +351,7 @@
 			"value": "BlueSpice\\Discovery\\Renderer\\SkinLayoutRenderer::factory"
 		},
 		"DiscoveryMainLinksMainpage": {
-			"value": false,
+			"value": true,
 			"public": true,
 			"descriptionmsg": "bs-discovery-config-mainlinks-mainpage-label"
 		},
@@ -361,12 +361,12 @@
 			"descriptionmsg": "bs-discovery-config-mainlinks-allpages-label"
 		},
 		"DiscoveryMainLinksListFiles": {
-			"value": true,
+			"value": false,
 			"public": true,
 			"descriptionmsg": "bs-discovery-config-mainlinks-listfiles-label"
 		},
 		"DiscoveryMainLinksCategories": {
-			"value": true,
+			"value": false,
 			"public": true,
 			"descriptionmsg": "bs-discovery-config-mainlinks-categories-label"
 		},
