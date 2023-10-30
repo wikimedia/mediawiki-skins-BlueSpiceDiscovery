@@ -5,6 +5,7 @@ namespace BlueSpice\Discovery\Component;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink;
 use SpecialPage;
+use Title;
 
 class SpecialListFiles extends RestrictedTextLink {
 
@@ -30,7 +31,6 @@ class SpecialListFiles extends RestrictedTextLink {
 	public function getHref(): string {
 		/** @var Title */
 		$specialpage = SpecialPage::getTitleFor( 'ListFiles' );
-
 		return $specialpage->getLocalURL();
 	}
 
