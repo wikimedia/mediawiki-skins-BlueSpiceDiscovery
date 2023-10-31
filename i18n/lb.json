@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"bs-discovery-skip-links-navigation-aria-label": "Op d'Linke wiesselen",
@@ -21,8 +22,7 @@
 	"bs-discovery-create-button-new-file-title": "En Neie Fichier eroplueden",
 	"bs-discovery-navbar-global-actions-button-title": "Global Aktiounen",
 	"bs-discovery-navbar-global-actions-button-aria-label": "Global Aktiounen",
-	"bs-discovery-navbar-global-actions-tool-text": "Geschierkëscht",
-	"bs-discovery-navbar-global-actions-manager-text": "Gestioun",
+	"bs-discovery-navbar-global-actions-administration-text": "Administratioun",
 	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Nummraum",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Säiten",
 	"bs-discovery-breadcrumb-nav-node-title": "$1 opmaachen",
@@ -56,6 +56,9 @@
 	"bs-discovery-breadcrumb-label-action-history": "Versiounen",
 	"bs-discovery-breadcrumb-label-action-edit": "Änneren",
 	"bs-discovery-first-heading-aria-label": "Titel vun der Säit",
+	"bs-discovery-mainlinks-allpages-label": "Säiten",
+	"bs-discovery-mainlinks-categories-label": "Kategorien",
+	"bs-discovery-mainlinks-listfiles-label": "Fichieren",
 	"bs-discovery-personalurl-mycontributions-text": "Kontributiounen",
 	"bs-discovery-personalurl-userpage-text": "Profil",
 	"bs-discovery-globalactionentry-templates-text": "Schablounen",
