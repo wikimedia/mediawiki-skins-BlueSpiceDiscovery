@@ -89,7 +89,9 @@ class Subpages implements ILangLinksProvider {
 	private function toLangCode( string $text ): ?string {
 		$code = trim( strtolower( $text ) );
 		if ( $this->languageNameUtils->isKnownLanguageTag( $code ) ) {
-			return $code;
+			if ( strlen( $code ) === 2 ) {
+				return $code;
+			}
 		}
 		return null;
 	}
