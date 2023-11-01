@@ -10,5 +10,8 @@
 	"bs-discovery-page-version-pager-deleted-user": "(ব্যবহারকারীর নাম সরানো হয়েছে)",
 	"bs-discovery-page-version-pager-previous": "পূর্ববর্তী",
 	"bs-discovery-page-version-pager-next": "পরবর্তী",
-	"bs-discovery-config-mainlinks-listfiles-help": "বামের পরিভ্রমণে \"ফাইল\" ভুক্তির সংযোগ দেখান"
+	"bs-discovery-config-mainlinks-listfiles-help": "বামের পরিভ্রমণে \"ফাইল\" ভুক্তির সংযোগ দেখান",
+	"bs-discovery-navbar-global-actions-overview-text": "একনজরে",
+	"bs-discovery-navbar-global-actions-editing-text": "সম্পাদনা করছেন",
+	"bs-discovery-navbar-global-actions-administration-text": "প্রশাসন"
 }
