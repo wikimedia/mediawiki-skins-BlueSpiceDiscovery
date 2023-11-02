@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Borhan",
 			"আফতাবুজ্জামান",
 			"জয়শ্রীরাম সরকার"
 		]
@@ -8,6 +9,9 @@
 	"bs-discovery-navbar-global-actions-overview-text": "একনজরে",
 	"bs-discovery-navbar-global-actions-editing-text": "সম্পাদনা করছেন",
 	"bs-discovery-navbar-global-actions-administration-text": "প্রশাসন",
+	"bs-discovery-mainlinks-allpages-label": "পাতাসমূহ",
+	"bs-discovery-mainlinks-categories-label": "বিষয়শ্রেণীসমূহ",
+	"bs-discovery-mainlinks-listfiles-label": "ফাইলসমূহ",
 	"bs-discovery-config-mainlinks-listfiles-help": "বামের পরিভ্রমণে \"ফাইল\" ভুক্তির সংযোগ দেখান",
 	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "প্রধান মেনু",
 	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 সম্পাদনা করুন",
