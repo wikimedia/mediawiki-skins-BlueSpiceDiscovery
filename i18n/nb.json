@@ -108,8 +108,8 @@
 	"bs-discovery-first-heading-aria-label": "Sidetittel",
 	"bs-discovery-config-mainlinks-mainpage-label": "Vis inngangspunktet «Hovedside»",
 	"bs-discovery-config-mainlinks-mainpage-help": "Vis lenke til inngangspunktet «Hovedside» i venstremenyen",
-	"bs-discovery-config-mainlinks-allpages-label": "Vis inngangspunktet «Alle sider»",
-	"bs-discovery-config-mainlinks-allpages-help": "Vis lenke til inngangspunktet «Alle sider» i venstremenyen",
+	"bs-discovery-config-mainlinks-allpages-label": "Vis inngangspunktet «Sider»",
+	"bs-discovery-config-mainlinks-allpages-help": "Vis lenke til inngangspunktet «Sider» i venstremenyen",
 	"bs-discovery-config-mainlinks-recentchanges-label": "Vis inngangspunktet «Siste endringer»",
 	"bs-discovery-config-mainlinks-recentchanges-help": "Vis lenke til inngangspunktet «Siste endringer» i venstremenyen",
 	"bs-discovery-personalurl-mycontributions-text": "Bidrag",
@@ -168,5 +168,16 @@
 	"bs-discovery-page-version-pager-previous": "Forrige",
 	"bs-discovery-page-version-pager-next": "Neste",
 	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Twitter Bootstrap-rammeverk for BlueSpiceDiscovery. ([https://getbootstrap.com https://getbootstrap.com])",
-	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Twitter Bootstrap-ikoner brukt for BlueSpiceDiscovery og innhold. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])"
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Twitter Bootstrap-ikoner brukt for BlueSpiceDiscovery og innhold. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
+	"bs-discovery-navbar-global-actions-overview-text": "Oversikt",
+	"bs-discovery-navbar-global-actions-editing-text": "Redigering",
+	"bs-discovery-navbar-global-actions-administration-text": "Administrasjon",
+	"bs-discovery-mainlinks-allpages-label": "Sider",
+	"bs-discovery-mainlinks-categories-label": "Kategorier",
+	"bs-discovery-mainlinks-listfiles-label": "Filer",
+	"bs-discovery-config-mainlinks-listfiles-label": "Vis inngangspunktet «Filer»",
+	"bs-discovery-config-mainlinks-listfiles-help": "Vis inngangspunktet «Filer» i venstremenyen",
+	"bs-discovery-config-mainlinks-categories-label": "Vis inngangspunktet «Kategorier»",
+	"bs-discovery-config-mainlinks-categories-help": "Vis inngangspunktet «Kategorier» i venstremenyen",
+	"bs-discovery-edit-footerlinks-link-text": "Rediger bunnlenker"
 }
