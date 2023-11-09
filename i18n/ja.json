@@ -3,6 +3,7 @@
 		"authors": [
 			"Ajeje Brazorf",
 			"Kokage si",
+			"LaMagiaaa",
 			"MathXplore",
 			"Shirayuki",
 			"もなー(偽物)"
@@ -37,5 +38,6 @@
 	"bs-discovery-page-version-pager-next": "次へ",
 	"bs-discovery-sidebar-actions-heading": "操作",
 	"bs-discovery-mainlinks-categories-label": "カテゴリ",
-	"bs-discovery-mainlinks-listfiles-label": "ファイル"
+	"bs-discovery-mainlinks-listfiles-label": "ファイル",
+	"bs-discovery-title-last-edit-info-timestamp-aria-label": "最終編集：$1"
 }
