@@ -25,7 +25,12 @@ class GlobalActions implements MWStakeCommonUIRegisterSkinSlotComponents {
 					'factory' => static function () {
 						return new SpecialAllTemplates();
 					}
-				],
+				]
+			]
+		);
+		$registry->register(
+			'GlobalActionsEditing',
+			[
 				'special-upload' => [
 					'factory' => static function () {
 						return new SpecialUpload();
