@@ -178,5 +178,6 @@
 	"bs-discovery-config-mainlinks-listfiles-label": "Mostrar o punto de entrada \"Ficheiros\"",
 	"bs-discovery-config-mainlinks-listfiles-help": "Mostrar a ligazón ao punto de entrada \"Ficheiros\" na navegación esquerda",
 	"bs-discovery-config-mainlinks-categories-label": "Mostrar o punto de entrada \"Categorías\"",
-	"bs-discovery-config-mainlinks-categories-help": "Mostrar a ligazón ao punto de entrada \"Categorías\" na navegación esquerda"
+	"bs-discovery-config-mainlinks-categories-help": "Mostrar a ligazón ao punto de entrada \"Categorías\" na navegación esquerda",
+	"bs-discovery-name": "BlueSpice Discovery"
 }
