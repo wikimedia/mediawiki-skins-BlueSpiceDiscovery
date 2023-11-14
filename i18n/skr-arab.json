@@ -24,5 +24,7 @@
 	"bs-discovery-page-version-pager-previous": "پچھلا",
 	"bs-discovery-page-version-pager-next": "اڳلا",
 	"bs-discovery-mainlinks-allpages-label": "ورقے",
-	"bs-discovery-mainlinks-listfiles-label": "فائلاں"
+	"bs-discovery-mainlinks-listfiles-label": "فائلاں",
+	"bs-discovery-navbar-global-actions-administration-text": "انتظامیہ",
+	"bs-discovery-mainlinks-categories-label": "ونکیاں"
 }
