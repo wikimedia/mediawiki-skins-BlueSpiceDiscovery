@@ -2,11 +2,12 @@
 
 namespace BlueSpice\Discovery\Component;
 
+use BlueSpice\Discovery\HookRunner;
 use Html;
 use IContextSource;
 use MediaWiki\Extension\MenuEditor\Node\TwoFoldLinkSpec;
 use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
-use MediaWiki\MediaWikiServices;
+use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Permissions\Authority;
 use MediaWiki\Revision\RevisionStore;
 use MediaWiki\Utils\UrlUtils;
@@ -42,23 +43,33 @@ class FooterLinksListItems extends Literal {
 	/** @var RevisionStore */
 	private $revisionStore;
 
+	/** @var HookContainer */
+	private $hookContainer;
+
 	/**
-	 * @param MediaWikiServices $services
 	 * @param Skin $skin
+	 * @param TitleFactory $titleFactory
+	 * @param RevisionStore $revisionStore
+	 * @param UrlUtils $urlUtils
+	 * @param LinkFormatter $linkFormatter
+	 * @param ParserFactory $parserFactory
+	 * @param HookContainer $hookContainer
+	 * v
 	 */
 	public function __construct(
 		Skin $skin, TitleFactory $titleFactory, RevisionStore $revisionStore,
-		UrlUtils $urlUtils, LinkFormatter $linkFormatter, ParserFactory $parserFactory
+		UrlUtils $urlUtils, LinkFormatter $linkFormatter, ParserFactory $parserFactory, HookContainer $hookContainer
 	) {
 		$this->skin = $skin;
 		parent::__construct( '', '' );
 
 		/** @var TitleFactory */
 		$this->titleFactory = $titleFactory;
+		$this->revisionStore = $revisionStore;
 		$this->urlUtils = $urlUtils;
 		$this->linkFormatter = $linkFormatter;
 		$this->parserFactory = $parserFactory;
-		$this->revisionStore = $revisionStore;
+		$this->hookContainer = $hookContainer;
 		$this->footerLinksSourceTitle = $this->titleFactory->makeTitle( NS_MEDIAWIKI, 'FooterLinks' );
 	}
 
@@ -74,10 +85,32 @@ class FooterLinksListItems extends Literal {
 
 	/** @inheritDoc */
 	public function getHtml(): string {
-		$customFooterLinks = $this->getCustomFooterLinks();
+		$footerLinks = [];
+
+		// The key has to be 'places' here to be mediawiki compatible!
+		$footerLinks['places'] = $this->getFooterLinks();
+
+		if ( $this->footerLinksSourceTitle instanceof Title === false
+			|| !$this->footerLinksSourceTitle->exists()
+		) {
+			$footerLinks['places'] = $this->skin->getSiteFooterLinks();
+
+			$footerLinks['places']['imprint'] = $this->skin->footerLink(
+				Message::newFromKey( 'bs-discovery-footerlinks-imprint-link-desc' )->inContentLanguage(),
+				Message::newFromKey( 'bs-discovery-footerlinks-imprint-link-page' )->inContentLanguage()
+			);
+		}
+
+		foreach ( $footerLinks as $key => $existingItems ) {
+			$newItems = [];
+			$this->getHookRunner()->onSkinAddFooterLinks( $this->skin, $key, $newItems );
+			$footerLinks[$key] = $existingItems + $newItems;
+		}
+
+		$this->hookContainer->run( 'BlueSpiceDiscoveryAfterGetFooterPlaces', [ &$footerLinks['places'] ] );
 
 		$items = [];
-		foreach ( $customFooterLinks as $link ) {
+		foreach ( $footerLinks['places'] as $link ) {
 			$item = Html::openElement( 'li' );
 			$item .= $link;
 			$item .= Html::closeElement( 'li' );
@@ -106,8 +139,9 @@ class FooterLinksListItems extends Literal {
 	/**
 	 * @return array
 	 */
-	private function getCustomFooterLinks(): array {
+	private function getFooterLinks(): array {
 		$parserData = $this->getParserData();
+
 		$customFooterLinksData = $this->buildCustomFooterLinksData( $parserData );
 
 		$links = [];
@@ -115,7 +149,7 @@ class FooterLinksListItems extends Literal {
 			$text = $data['text'];
 			unset( $data['text'] );
 
-			$links[] = Html::element(
+			$links[$text] = Html::element(
 				'a',
 				$data,
 				htmlspecialchars( $text )
@@ -209,5 +243,12 @@ class FooterLinksListItems extends Literal {
 		} catch ( \Exception $ex ) {
 			return [];
 		}
+	}
+
+	/**
+	 * @return HookRunner
+	 */
+	private function getHookRunner() {
+		return new HookRunner( $this->hookContainer );
 	}
 }
