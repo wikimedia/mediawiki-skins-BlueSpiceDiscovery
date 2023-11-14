@@ -4,22 +4,17 @@ namespace BlueSpice\Discovery\Structure;
 
 use BaseTemplate;
 use BlueSpice\Discovery\Component\FooterLinksListItems;
-use BlueSpice\Discovery\HookRunner;
 use BlueSpice\Discovery\IBaseTemplateAware;
 use BlueSpice\Discovery\ITemplateDataProvider;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
 use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
-use ExtensionRegistry;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Revision\RevisionStore;
 use MediaWiki\Utils\UrlUtils;
-use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
-use RawMessage;
-use Title;
 use TitleFactory;
 
 class Footer extends SkinStructureBase implements IBaseTemplateAware {
@@ -86,8 +81,7 @@ class Footer extends SkinStructureBase implements IBaseTemplateAware {
 	 */
 	public function getParams(): array {
 		return [
-			'defaultfooterlinks' => $this->getDefaultFooterLinks(),
-			'customfooterlinks' => $this->getFooterLinks(),
+			'footerlinks' => $this->getFooterLinks(),
 			'icons' => $this->getFooterIcons()
 		];
 	}
@@ -113,54 +107,12 @@ class Footer extends SkinStructureBase implements IBaseTemplateAware {
 		$parserFactory = $this->services->getService( 'MWStakeWikitextParserFactory' );
 
 		$component = new FooterLinksListItems(
-			$this->template->getSkin(), $titleFactory, $revisionStore, $urlUtils, $linkFormatter, $parserFactory
+			$this->template->getSkin(), $titleFactory, $revisionStore, $urlUtils,
+			$linkFormatter, $parserFactory, $this->hookContainer
 		);
 		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 
 		return $html;
-	}
-
-	/**
-	 * @return array
-	 */
-	private function getDefaultFooterLinks(): array {
-		$data = [];
-		$skin = $this->template->getSkin();
-		$data['defaultfooterlinks'] = $skin->getSiteFooterLinks();
-		if ( ExtensionRegistry::getInstance()->isLoaded( 'BlueSpicePrivacy' ) ) {
-			$privacyPolicyUrl = Title::newFromText( 'PrivacyPages/PrivacyPolicy', NS_SPECIAL )->getPrefixedURL();
-			$data['defaultfooterlinks']['privacy'] = $skin->footerLink(
-				Message::newFromKey( 'privacy' )->inContentLanguage(),
-				new RawMessage( $privacyPolicyUrl )
-			);
-		}
-		$data['defaultfooterlinks']['imprint'] = $skin->footerLink(
-			Message::newFromKey( 'bs-discovery-footerlinks-imprint-link-desc' )->inContentLanguage(),
-			Message::newFromKey( 'bs-discovery-footerlinks-imprint-link-page' )->inContentLanguage()
-		);
-		foreach ( $data as $key => $existingItems ) {
-			$newItems = [];
-			$this->getHookRunner()->onSkinAddFooterLinks( $skin, $key, $newItems );
-			$data[$key] = $existingItems + $newItems;
-		}
-
-		$footerlinks = $data['defaultfooterlinks'];
-		$this->hookContainer->run( 'BlueSpiceDiscoveryAfterGetFooterPlaces', [ &$footerlinks ] );
-		$items = [];
-		foreach ( $footerlinks as $place => $footerlink ) {
-			$items[] = [
-				'id' => $place . '-cnt',
-				'body' => $footerlink
-			];
-		}
-		return $items;
-	}
-
-	/**
-	 * @return HookRunner
-	 */
-	private function getHookRunner() {
-		return new HookRunner( $this->hookContainer );
 	}
 
 	/**

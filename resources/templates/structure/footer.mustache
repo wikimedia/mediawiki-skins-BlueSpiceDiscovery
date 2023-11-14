@@ -1,15 +1,9 @@
 <div id="footer" class="mx-0" role="contentinfo">
     <div class="inner">
         <ul id="footer-links">
-            {{#defaultfooterlinks}}
-            <li {{#class}} class="{{.}}"{{/class}}>
-                {{{body}}}
-            </li>
-            {{/defaultfooterlinks}}
-
-            {{#customfooterlinks}}
+            {{#footerlinks}}
             {{{.}}}
-            {{/customfooterlinks}}
+            {{/footerlinks}}
         </ul>
 		<ul id="footer-icons">
 			{{#icons}}
