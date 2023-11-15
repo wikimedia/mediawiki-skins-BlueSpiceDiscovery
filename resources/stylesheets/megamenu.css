@@ -106,6 +106,10 @@
 	cursor: pointer;
 }
 
+.list-group.menu-list li a:focus-visible {
+	outline: 1px solid var(--focus-visible);
+}
+
 @media ( min-width: 768px ) {
 	#lang-mm {
 		background-image: url("../images/translate_24px_menu.svg");
