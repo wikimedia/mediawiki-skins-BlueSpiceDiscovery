@@ -44,6 +44,9 @@ p {
 [class^="mw-content-"] a:visited:not( [class*="oo-ui-"] ) {
 	color: var(--link-fg);
 }
+.mw-body-content a:focus {
+	text-decoration: underline;
+}
 /* external links in content.externallinks.less due to backgroundimage settings */
 
 pre {
