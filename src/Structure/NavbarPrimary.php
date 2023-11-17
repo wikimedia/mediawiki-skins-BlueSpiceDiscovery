@@ -14,6 +14,7 @@ use BlueSpice\Discovery\ISkinLayout;
 use BlueSpice\Discovery\ISkinLayoutAware;
 use BlueSpice\Discovery\SkinSlotRenderer\NavbarPrimaryItemsSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\NavbarPrimarySearchFormSkinSlotRenderer;
+use Config;
 use IContextSource;
 use Message;
 use Title;
@@ -196,10 +197,25 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 					'bs-discovery-logo-return-to-aria-label',
 					$mainpage->getText()
 				)->text(),
-				'logo-src' => $GLOBALS['wgLogo'],
+				'logo-src' => $this->getActiveLogoPath(),
 				'navbar-menu-aria-label' => Message::newFromKey( 'bs-discovery-navbar-aria-label' ),
 			]
 		);
+	}
+
+	/**
+	 * @return string
+	 */
+	private function getActiveLogoPath(): string {
+		/** @var Config */
+		$config = $this->context->getConfig();
+
+		$logoPath = $config->get( 'Logo' );
+		$logos = $config->get( 'Logos' );
+		if ( isset( $logos['1x'] ) ) {
+			$logoPath = $logos['1x'];
+		}
+		return $logoPath;
 	}
 
 	/**
