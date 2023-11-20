@@ -22,7 +22,7 @@
 	"bs-discovery-navbar-user-login-text": "登入",
 	"bs-discovery-navbar-user-login-title": "登入",
 	"bs-discovery-navbar-user-login-aria-label": "登入",
-	"bs-discovery-logo-return-to-aria-label": "返回「$1」",
+	"bs-discovery-logo-return-to-aria-label": "返回到$1",
 	"bs-discovery-searchform-button-title": "立刻搜尋",
 	"bs-discovery-searchform-button-aria-label": "立刻搜尋",
 	"bs-discovery-searchform-input-placeholder": "您的搜尋字詞",
