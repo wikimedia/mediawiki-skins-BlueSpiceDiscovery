@@ -35,3 +35,7 @@ body .mw-rcfilters-ui-highlights {
 body.mediawiki a.new {
 	color: var(--new-link-fg);
 }
+
+body.mw-special-Allpages ul.mw-allpages-chunk li a {
+	word-wrap: break-word;
+}
