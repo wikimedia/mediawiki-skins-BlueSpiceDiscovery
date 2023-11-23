@@ -53,5 +53,9 @@
 	"bs-discovery-page-version-pager-deleted-user": "(nome utente rimosso)",
 	"bs-discovery-page-version-pager-info-text": "Questa è la versione di $1, $2 da [[User:$3|$3]]",
 	"bs-discovery-page-version-pager-previous": "Precedente",
-	"bs-discovery-page-version-pager-next": "Successivo"
+	"bs-discovery-page-version-pager-next": "Successivo",
+	"bs-discovery-navbar-global-actions-overview-text": "Panoramica",
+	"bs-discovery-mainlinks-allpages-label": "Pagine",
+	"bs-discovery-mainlinks-categories-label": "Categorie",
+	"bs-discovery-mainlinks-listfiles-label": "File"
 }

@@ -177,5 +177,6 @@
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Extension description on [[Special:Version]]",
 	"bs-discovery-edit-footerlinks-link-text": "Text for link to edit [MediaWiki:FooterLinks]",
 	"bs-discovery-footerlinks-imprint-link-desc": "Text for footer link to [Project:Imprint]",
-	"bs-discovery-footerlinks-imprint-link-page": "Destination for the [Project:Imprint] footer link"
+	"bs-discovery-footerlinks-imprint-link-page": "Destination for the [Project:Imprint] footer link",
+	"bs-discovery-navbar-global-actions-button-aria-label": "Aria-label for button to open menu with global actions links"
 }

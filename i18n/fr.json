@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Ajeje Brazorf",
+			"BlueCamille",
 			"Cigaryno",
 			"Gomoko",
-			"Verdy p",
-			"McDutchie"
+			"McDutchie",
+			"Verdy p"
 		]
 	},
 	"bs-discovery-name": "BlueSpice Discovery",
@@ -175,5 +176,10 @@
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Icônes Bootstrap de Twitter utilisées pour BlueSpiceDiscovery et le contenu. ([https://icons.getbootstrap.com/ https://icons.getbootstrap.com])",
 	"bs-discovery-edit-footerlinks-link-text": "Modifier les liens de bas de page",
 	"bs-discovery-footerlinks-imprint-link-desc": "Imprimer",
-	"bs-discovery-footerlinks-imprint-link-page": "Project:Imprint"
+	"bs-discovery-footerlinks-imprint-link-page": "Project:Imprint",
+	"bs-discovery-navbar-global-actions-overview-text": "Vue d'ensemble",
+	"bs-discovery-navbar-global-actions-administration-text": "Administration",
+	"bs-discovery-mainlinks-allpages-label": "Pages",
+	"bs-discovery-mainlinks-categories-label": "Catégories",
+	"bs-discovery-mainlinks-listfiles-label": "Fichiers"
 }

@@ -99,5 +99,7 @@
 	"bs-discovery-alert-old-page-version": "이 문서의 이전 판을 보고 있습니다. [[Special:Redirect/page/$1|최신 판으로 돌아갑니다]].",
 	"bs-discovery-page-version-pager-deleted-user": "(사용자 이름 삭제됨)",
 	"bs-discovery-page-version-pager-previous": "이전",
-	"bs-discovery-page-version-pager-next": "다음"
+	"bs-discovery-page-version-pager-next": "다음",
+	"bs-discovery-mainlinks-categories-label": "분류",
+	"bs-discovery-mainlinks-listfiles-label": "파일"
 }

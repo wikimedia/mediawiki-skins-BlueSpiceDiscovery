@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"bs-discovery-skip-links-navigation-aria-label": "Op d'Linke wiesselen",
@@ -76,5 +77,10 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (Säit gëtt et net)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigatioun",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Dëse Menü änneren",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 änneren"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 änneren",
+	"bs-discovery-navbar-global-actions-overview-text": "Iwwersiicht",
+	"bs-discovery-navbar-global-actions-administration-text": "Administratioun",
+	"bs-discovery-mainlinks-allpages-label": "Säiten",
+	"bs-discovery-mainlinks-categories-label": "Kategorien",
+	"bs-discovery-mainlinks-listfiles-label": "Fichieren"
 }

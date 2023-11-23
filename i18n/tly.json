@@ -1,11 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Patriot Kur",
 			"Patriot Kor",
+			"Patriot Kur",
 			"Гусейн"
 		]
 	},
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Sərnom",
-	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "Səhifə"
+	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "Səhifə",
+	"bs-discovery-mainlinks-allpages-label": "Səhifon",
+	"bs-discovery-mainlinks-categories-label": "Kategorijon",
+	"bs-discovery-mainlinks-listfiles-label": "Fajlon"
 }
