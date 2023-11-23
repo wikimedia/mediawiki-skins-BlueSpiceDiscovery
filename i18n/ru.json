@@ -1,13 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Adam-Yourist",
+			"BerryAVGN",
 			"Gulka.nik",
 			"Kareyac",
 			"Okras",
 			"Pacha Tchernof",
-			"UniCollab",
-			"Adam-Yourist",
-			"BerryAVGN"
+			"UniCollab"
 		]
 	},
 	"bs-discovery-desc": "Тема BlueSpice",
@@ -113,8 +113,8 @@
 	"bs-discovery-first-heading-aria-label": "Заголовок страницы",
 	"bs-discovery-config-mainlinks-mainpage-label": "Отобразить входную точку «Главная страница»",
 	"bs-discovery-config-mainlinks-mainpage-help": "Отобразить ссылку на входную точку «Главная страница» в левой части навигации",
-	"bs-discovery-config-mainlinks-allpages-label": "Отобразить входную точку «Все страницы»",
-	"bs-discovery-config-mainlinks-allpages-help": "Отобразить ссылку на входную точку «Все страницы» в левой части навигации",
+	"bs-discovery-config-mainlinks-allpages-label": "Отобразить входную точку «Страницы»",
+	"bs-discovery-config-mainlinks-allpages-help": "Отобразить ссылку на входную точку «Страницы» в левой части навигации",
 	"bs-discovery-config-mainlinks-recentchanges-label": "Отобразить входную точку «Свежие правки»",
 	"bs-discovery-config-mainlinks-recentchanges-help": "Отобразить ссылку на входную точку «Свежие правки» в левой части навигации",
 	"bs-discovery-personalurl-mycontributions-text": "Вклад",
