@@ -5,9 +5,8 @@ namespace BlueSpice\Discovery\Hook;
 interface BlueSpiceDiscoveryAfterGetFooterPlaces {
 
 	/**
-	 *
 	 * @param array &$footerlinks
-	 * @return array
+	 * @return void
 	 */
 	public function onBlueSpiceDiscoveryAfterGetFooterPlaces( &$footerlinks ): void;
 }
