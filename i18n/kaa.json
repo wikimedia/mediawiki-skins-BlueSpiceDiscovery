@@ -29,5 +29,8 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help": "Bet baslaması retinde kórsetiletuǵın tekst; parser funkciyasın óz ishine alıwı múmkin",
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Jańa panel qosıw",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS klasları",
-	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Belgiler klası"
+	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "Belgiler klası",
+	"bs-discovery-page-version-pager-deleted-user": "(paydalanıwshı atı óshirildi)",
+	"bs-discovery-page-version-pager-previous": "Aldınǵı",
+	"bs-discovery-page-version-pager-next": "Keyingi"
 }

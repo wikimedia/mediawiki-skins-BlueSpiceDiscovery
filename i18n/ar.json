@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"محمد أحمد عبد الفتاح",
-			"Meno25"
+			"Alshamiri1",
+			"Hubaishan",
+			"Meno25",
+			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"bs-discovery-name": "اكتشاف BlueSpice",
@@ -33,7 +35,7 @@
 	"bs-discovery-header-create-split-button-title": "افتح القائمة مع خيارات لإنشاء المحتوى",
 	"bs-discovery-header-create-split-button-aria-label": "افتح القائمة مع خيارات لإنشاء المحتوى",
 	"bs-discovery-create-button-new-section-text": "قسم جديد",
-	"bs-discovery-create-button-new-section-title": "قم بإنشاء قسم جديد",
+	"bs-discovery-create-button-new-section-title": "أنشِئ قسمًا جديدًا",
 	"bs-discovery-create-button-new-file-text": "ملف جديد",
 	"bs-discovery-create-button-new-file-title": "رفع ملف جديد",
 	"bs-discovery-navbar-global-actions-button-title": "أفعال عالمية",
@@ -132,5 +134,12 @@
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "ميدياويكي الشريط الجانبي المحسن",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "قائمة الشريط الجانبي في ميدياويكي بوظيفة محسّنة",
 	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "القائمة الرئيسة",
-	"menueditor-ui-enhanced-sidebar-internal-link-label": "وصلة داخلية"
+	"menueditor-ui-enhanced-sidebar-internal-link-label": "وصلة داخلية",
+	"bs-discovery-alert-old-page-version": "تقوم بعرض نسخة قديمة من هذه الصفحة. [[Special: Redirect / page / $1 | العودة إلى أحدث إصدار]].",
+	"bs-discovery-page-version-pager-deleted-user": "(اسم المستخدم تمت إزالته)",
+	"bs-discovery-page-version-pager-info-text": "هذه نسخة $1 ، $2 بواسطة [[المستخدم: $3 | $3 ]]",
+	"bs-discovery-page-version-pager-previous": "السابق",
+	"bs-discovery-page-version-pager-next": "التالي",
+	"bs-discovery-ext-credentials-desc-bootstrap-dist": "إطار عمل Twitter Bootstrap المستخدم في BlueSpiceDiscovery. ([https://getbootstrap.com/ https://getbootstrap.com])",
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "أيقونات Twitter Bootstrap المستخدمة في BlueSpiceDiscovery والمحتوى. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])"
 }

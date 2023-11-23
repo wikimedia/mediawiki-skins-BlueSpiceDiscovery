@@ -1,11 +1,21 @@
 {
 	"@metadata": {
 		"authors": [
+			"Fitoschido",
+			"JDíaz32",
 			"La Mantis",
-			"JDíaz32"
+			"No se",
+			"Samthony"
 		]
 	},
 	"ns-main-label": "Páginas",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navegación",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Editar $1"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Editar $1",
+	"bs-discovery-breadcrumb-nav-node-ns-main": "Páginas",
+	"bs-discovery-breadcrumb-label-action-edit": "Editar",
+	"bs-discovery-page-version-pager-previous": "Anterior",
+	"bs-discovery-page-version-pager-next": "Siguiente",
+	"bs-discovery-edit-footerlinks-link-text": "Editar enlaces de pie de página",
+	"bs-discovery-footerlinks-imprint-link-desc": "Imprimir",
+	"bs-discovery-footerlinks-imprint-link-page": "Proyecto:Impresión"
 }

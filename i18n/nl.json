@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98",
-			"Nickthijssen1994",
 			"AHendriksen-collecties",
-			"McDutchie"
+			"Mainframe98",
+			"McDutchie",
+			"Nickthijssen1994"
 		]
 	},
 	"bs-discovery-desc": "BlueSpice uiterlijk",
@@ -105,5 +105,10 @@
 	"bs-discovery-config-meta-items-header-label": "Elementen onder de paginatitel",
 	"bs-discovery-config-meta-items-header-help": "Geselecteerde elementen worden weergegeven onder de paginatitel",
 	"bs-discovery-config-meta-items-footer-label": "Elementen onder de pagina-inhoud",
-	"bs-discovery-config-meta-items-footer-help": "Geselecteerde elementen worden weergegeven onder de pagina-inhoud"
+	"bs-discovery-config-meta-items-footer-help": "Geselecteerde elementen worden weergegeven onder de pagina-inhoud",
+	"bs-discovery-alert-old-page-version": "U bekijkt een oudere versie van deze pagina. [[Special:Redirect/page/$1|Terug naar de laatste versie]].",
+	"bs-discovery-page-version-pager-deleted-user": "(gebruikersnaam verwijderd)",
+	"bs-discovery-page-version-pager-info-text": "Dit is de versie van $1, $2 door [[User:$3|$3]]",
+	"bs-discovery-page-version-pager-previous": "Vorige",
+	"bs-discovery-page-version-pager-next": "Volgende"
 }

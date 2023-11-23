@@ -2,9 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"MITO",
-			"Rönttönen",
 			"Nike",
-			"Pyscowicz"
+			"Pyscowicz",
+			"Rönttönen"
 		]
 	},
 	"bs-discovery-desc": "BlueSpice-ulkoasu",
@@ -100,5 +100,8 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (sivua ei ole)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigaatio",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Muokkaa tätä valikkoa",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Muokkaa $1"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Muokkaa $1",
+	"menueditor-ui-enhanced-sidebar-subpage-tree-label-edit": "Alasivupuu",
+	"bs-discovery-page-version-pager-previous": "Edellinen",
+	"bs-discovery-page-version-pager-next": "Seuraava"
 }

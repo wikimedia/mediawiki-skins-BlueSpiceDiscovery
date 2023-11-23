@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Khun Kt"
+			"Khun Kt",
+			"ခွန်ဖန်ဒွဲ့"
 		]
 	},
 	"bs-discovery-navbar-user-login-text": "နွို့အကောက်",
-	"bs-discovery-navbar-user-login-title": "Login",
+	"bs-discovery-navbar-user-login-title": "နွို့လွေꩻငါ",
 	"bs-discovery-navbar-user-login-aria-label": "နွို့အကောက်",
 	"bs-discovery-logo-return-to-aria-label": "သဲင်ꩻချာ $1ကို။",
 	"bs-discovery-searchform-button-title": "ထိုမ်ႏယိုခါ",
@@ -58,5 +59,7 @@
 	"bs-discovery-personalurl-userpage-text": "ပရိုဖုဲင်",
 	"bs-discovery-globalactionentry-templates-text": "တမ်းပလေက်ဖိုင်ႏ",
 	"bs-discovery-globalactionentry-templates-title": "တမ်းပလေက်ဖိုင်ႏလို့လို့",
-	"bs-discovery-last-edit-by-system-user": "စနိစ် ကေားသုင်ꩻသား"
+	"bs-discovery-last-edit-by-system-user": "စနိစ် ကေားသုင်ꩻသား",
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "မွဉ်းဖျင် $1",
+	"bs-discovery-page-version-pager-next": "လွေꩻငါထဲင်း"
 }

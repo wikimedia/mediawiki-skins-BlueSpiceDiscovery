@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Jeeputer",
-			"Mohammad ebz"
+			"Mohammad ebz",
+			"Rulebased"
 		]
 	},
 	"bs-discovery-last-edit-by-anon-user": "کاربر ناشناس",
@@ -12,5 +13,13 @@
 	"menueditor-ui-enhanced-sidebar-external-link-label": "پیوند به بیرون",
 	"menueditor-ui-enhanced-sidebar-internal-link-label": "پیوند داخلی",
 	"menueditor-ui-enhanced-sidebar-panel-heading-label-edit": "سرآیند پنل",
-	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "افزودن پنل جدید"
+	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "افزودن پنل جدید",
+	"bs-discovery-navbar-global-actions-overview-text": "بررسی اجمالی",
+	"bs-discovery-navbar-global-actions-editing-text": "در حال ویرایش",
+	"bs-discovery-navbar-global-actions-administration-text": "مدیریت",
+	"bs-discovery-mainlinks-allpages-label": "صفحات",
+	"bs-discovery-mainlinks-categories-label": "رده‌ها",
+	"bs-discovery-mainlinks-listfiles-label": "پرونده‌ها",
+	"bs-discovery-page-version-pager-deleted-user": "(نام کاربری حذف شده است)",
+	"bs-discovery-page-version-pager-previous": "قبلی"
 }

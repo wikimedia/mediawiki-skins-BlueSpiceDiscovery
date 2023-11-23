@@ -155,5 +155,16 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (página não existe)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navegação",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Editar este menu",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Editar $1"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Editar $1",
+	"bs-discovery-config-meta-items-header-label": "Elementos abaixo do título da página",
+	"bs-discovery-config-meta-items-header-help": "Os elementos selecionados são apresentados abaixo do título da página",
+	"bs-discovery-config-meta-items-footer-label": "Elementos abaixo do conteúdo da página",
+	"bs-discovery-config-meta-items-footer-help": "Os elementos selecionados são apresentados abaixo do conteúdo da página",
+	"bs-discovery-alert-old-page-version": "Está a ver uma versão antiga desta página. [[Special:Redirect/page/$1|Voltar para a versão mais recente]].",
+	"bs-discovery-page-version-pager-deleted-user": "(nome de utilizador removido)",
+	"bs-discovery-page-version-pager-info-text": "Esta versão é a de $1 às $2, criada por [[User:$3|$3]]",
+	"bs-discovery-page-version-pager-previous": "Anterior",
+	"bs-discovery-page-version-pager-next": "Seguinte",
+	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Estrutura de Bootstrap do Twitter usada para BlueSpiceDiscovery. ([https://getbootstrap.com/ https://getbootstrap.com])",
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Ícones de Bootstrap do Twitter usados para BlueSpiceDiscovery e conteúdo. ([https://icons.getbootstrap.com])"
 }
