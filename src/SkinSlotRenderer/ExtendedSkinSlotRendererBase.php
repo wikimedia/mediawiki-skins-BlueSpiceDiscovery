@@ -42,6 +42,12 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 */
 	protected $context = null;
 
+	/** @var DataAttributesBuilder */
+	protected $dataAttributesBuilder;
+
+	/** @var AriaAttributesBuilder */
+	protected $ariaAttributesBuilder;
+
 	/**
 	 *
 	 * @param SkinSlotRegistry $skinSlotRegistry
@@ -292,14 +298,12 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 
 		$ariaString = '';
 		if ( !empty( $aria ) ) {
-			$ariaAttributeBuilder = new AriaAttributesBuilder();
-			$ariaString = ' ' . $ariaAttributeBuilder->toString( $aria );
+			$ariaString = ' ' . $this->ariaAttributesBuilder->toString( $aria );
 		}
 
 		$dataString = '';
 		if ( !empty( $data ) ) {
-			$dataAttributeBuilder = new DataAttributesBuilder();
-			$dataString = ' ' . $dataAttributeBuilder->toString( $data );
+			$dataString = ' ' . $this->dataAttributesBuilder->toString( $data );
 		}
 
 		return '<' . $tag . $htmlId . $htmlClass . $ariaString . $dataString . '>';
