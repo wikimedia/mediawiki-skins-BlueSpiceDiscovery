@@ -176,7 +176,9 @@
 	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Extension description on [[Special:Version]]",
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Extension description on [[Special:Version]]",
 	"bs-discovery-edit-footerlinks-link-text": "Text for link to edit [MediaWiki:FooterLinks]",
-	"bs-discovery-footerlinks-imprint-link-desc": "Text for footer link to [Project:Imprint]",
-	"bs-discovery-footerlinks-imprint-link-page": "Destination for the [Project:Imprint] footer link",
-	"bs-discovery-navbar-global-actions-button-aria-label": "Aria-label for button to open menu with global actions links"
+	"bs-discovery-navbar-global-actions-button-aria-label": "Aria-label for button to open menu with global actions links",
+	"bs-discovery-footerlinks-imprint-link-desc": "Text for footer link to [Site:Imprint]",
+	"bs-discovery-footerlinks-imprint-link-page": "Destination for the [Site:Imprint] footer link ('Site' not translatable)",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Text for footer link to [Site:Terms_of_service]",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Destination for the [Site:Terms_of_service] footer link ('Site' not translatable)"
 }
