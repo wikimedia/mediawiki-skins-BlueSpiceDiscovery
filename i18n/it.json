@@ -56,5 +56,7 @@
 	"bs-discovery-page-version-pager-deleted-user": "(nome utente rimosso)",
 	"bs-discovery-page-version-pager-info-text": "Questa è la versione di $1, $2 da [[User:$3|$3]]",
 	"bs-discovery-page-version-pager-previous": "Precedente",
-	"bs-discovery-page-version-pager-next": "Successivo"
+	"bs-discovery-page-version-pager-next": "Successivo",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Condizioni del servizio",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Condizioni_del_servizio"
 }
