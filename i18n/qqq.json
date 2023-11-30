@@ -178,6 +178,8 @@
 	"bs-discovery-config-mainlinks-categories-label": "Label for checkbox in config, that shows entrypoint \"Categories\" in the left navigation",
 	"bs-discovery-config-mainlinks-categories-help": "Help message for checkbox in config, that shows entrypoint \"Categories\" in the left navigation",
 	"bs-discovery-edit-footerlinks-link-text": "Text for link to edit [MediaWiki:FooterLinks]",
-	"bs-discovery-footerlinks-imprint-link-desc": "Text for footer link to [Project:Imprint]",
-	"bs-discovery-footerlinks-imprint-link-page": "Destination for the [Project:Imprint] footer link"
+	"bs-discovery-footerlinks-imprint-link-desc": "Text for footer link to [Site:Imprint]",
+	"bs-discovery-footerlinks-imprint-link-page": "Destination for the [Site:Imprint] footer link ('Site' not translatable)",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Text for footer link to [Site:Terms_of_service]",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Destination for the [Site:Terms_of_service] footer link ('Site' not translatable)"
 }

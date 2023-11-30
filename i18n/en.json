@@ -181,5 +181,7 @@
 	"bs-discovery-config-mainlinks-categories-help": "Show entrypoint \"Categories\" link in the left navigation",
 	"bs-discovery-edit-footerlinks-link-text": "Edit footerlinks",
 	"bs-discovery-footerlinks-imprint-link-desc": "Imprint",
-	"bs-discovery-footerlinks-imprint-link-page": "Project:Imprint"
+	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Terms of service",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Terms_of_service"
 }
