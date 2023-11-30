@@ -172,8 +172,8 @@
 	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Extension description on [[Special:Version]]",
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Extension description on [[Special:Version]]",
 	"bs-discovery-edit-footerlinks-link-text": "Text for link to edit [MediaWiki:FooterLinks]",
-	"bs-discovery-footerlinks-imprint-link-desc": "Text for footer link to [Project:Imprint]",
-	"bs-discovery-footerlinks-imprint-link-page": "Destination for the [Project:Imprint] footer link",
+	"bs-discovery-footerlinks-imprint-link-desc": "Text for footer link to [Site:Imprint]",
+	"bs-discovery-footerlinks-imprint-link-page": "Destination for the [Site:Imprint] footer link ('Site' not translatable)",
 	"bs-discovery-navbar-global-actions-overview-text": "Heading for a list with links to overview pages\n\n{{Identical|Overview}}",
 	"bs-discovery-navbar-global-actions-editing-text": "Heading for a list with links to editing pages\n\n{{Identical|Editing}}",
 	"bs-discovery-mainlinks-allpages-label": "Title for link used in the left navigation for the page name of [[Special:AllPages]].\n{{Identical|All pages}}",
@@ -182,5 +182,7 @@
 	"bs-discovery-config-mainlinks-listfiles-label": "Label for checkbox in config, that shows entrypoint \"Files\" in the left navigation",
 	"bs-discovery-config-mainlinks-listfiles-help": "Help message for checkbox in config, that shows entrypoint \"Files\" in the left navigation",
 	"bs-discovery-config-mainlinks-categories-label": "Label for checkbox in config, that shows entrypoint \"Categories\" in the left navigation",
-	"bs-discovery-config-mainlinks-categories-help": "Help message for checkbox in config, that shows entrypoint \"Categories\" in the left navigation"
+	"bs-discovery-config-mainlinks-categories-help": "Help message for checkbox in config, that shows entrypoint \"Categories\" in the left navigation",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Text for footer link to [Site:Terms_of_service]",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Destination for the [Site:Terms_of_service] footer link ('Site' not translatable)"
 }

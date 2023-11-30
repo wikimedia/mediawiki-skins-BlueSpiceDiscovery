@@ -174,7 +174,7 @@
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Twitter Bootstrap icons used for BlueSpiceDiscovery and content. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
 	"bs-discovery-edit-footerlinks-link-text": "Edit footerlinks",
 	"bs-discovery-footerlinks-imprint-link-desc": "Imprint",
-	"bs-discovery-footerlinks-imprint-link-page": "Project:Imprint",
+	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint",
 	"bs-discovery-navbar-global-actions-overview-text": "Overview",
 	"bs-discovery-navbar-global-actions-editing-text": "Editing",
 	"bs-discovery-navbar-global-actions-administration-text": "Administration",
@@ -184,5 +184,7 @@
 	"bs-discovery-config-mainlinks-listfiles-label": "Show entrypoint \"Files\"",
 	"bs-discovery-config-mainlinks-listfiles-help": "Show entrypoint \"Files\" link in the left navigation",
 	"bs-discovery-config-mainlinks-categories-label": "Show entrypoint \"Categories\"",
-	"bs-discovery-config-mainlinks-categories-help": "Show entrypoint \"Categories\" link in the left navigation"
+	"bs-discovery-config-mainlinks-categories-help": "Show entrypoint \"Categories\" link in the left navigation",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Terms of service",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Terms_of_service"
 }
