@@ -99,7 +99,9 @@ class FooterLinksListItems extends Literal {
 				Message::newFromKey( 'bs-discovery-footerlinks-imprint-link-desc' )->inContentLanguage(),
 				Message::newFromKey( 'bs-discovery-footerlinks-imprint-link-page' )->inContentLanguage()
 			);
-			$footerLinks['places']['termsofservice'] = $this->skin->footerLink(
+			$termsOfServiceKey = Message::newFromKey( 'bs-discovery-footerlinks-termsofservice-link-desc' )
+				->inContentLanguage()->text();
+			$footerLinks['places'][$termsOfServiceKey] = $this->skin->footerLink(
 				Message::newFromKey( 'bs-discovery-footerlinks-termsofservice-link-desc' )->inContentLanguage(),
 				Message::newFromKey( 'bs-discovery-footerlinks-termsofservice-link-page' )->inContentLanguage()
 			);
