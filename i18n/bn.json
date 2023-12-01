@@ -17,5 +17,7 @@
 	"bs-discovery-navbar-global-actions-administration-text": "প্রশাসন",
 	"bs-discovery-mainlinks-allpages-label": "পাতাসমূহ",
 	"bs-discovery-mainlinks-categories-label": "বিষয়শ্রেণীসমূহ",
-	"bs-discovery-mainlinks-listfiles-label": "ফাইলসমূহ"
+	"bs-discovery-mainlinks-listfiles-label": "ফাইলসমূহ",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "পরিষেবার শর্তাবলী",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:পরিষেবার_শর্তাবলী"
 }
