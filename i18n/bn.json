@@ -17,5 +17,7 @@
 	"bs-discovery-mainlinks-allpages-label": "পাতাসমূহ",
 	"bs-discovery-mainlinks-categories-label": "বিষয়শ্রেণীসমূহ",
 	"bs-discovery-mainlinks-listfiles-label": "ফাইলসমূহ",
-	"bs-discovery-config-mainlinks-listfiles-help": "বামের পরিভ্রমণে \"ফাইল\" ভুক্তির সংযোগ দেখান"
+	"bs-discovery-config-mainlinks-listfiles-help": "বামের পরিভ্রমণে \"ফাইল\" ভুক্তির সংযোগ দেখান",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "পরিষেবার শর্তাবলী",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:পরিষেবার_শর্তাবলী"
 }

@@ -168,7 +168,7 @@
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Иконите на Twitter Bootstrap се користат за BlueSpiceDiscovery и содржината. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
 	"bs-discovery-edit-footerlinks-link-text": "Уреди подножни врски",
 	"bs-discovery-footerlinks-imprint-link-desc": "Импресум",
-	"bs-discovery-footerlinks-imprint-link-page": "Project:Imprint",
+	"bs-discovery-footerlinks-imprint-link-page": "Site:Импресум",
 	"bs-discovery-navbar-global-actions-overview-text": "Преглед",
 	"bs-discovery-navbar-global-actions-editing-text": "Уредување",
 	"bs-discovery-navbar-global-actions-administration-text": "Администрација",
@@ -178,5 +178,7 @@
 	"bs-discovery-config-mainlinks-listfiles-label": "Прикажувај пристапна точка „Податотеки“",
 	"bs-discovery-config-mainlinks-listfiles-help": "Прикажувај пристапна точка „Податотеки“ во страничникот лево",
 	"bs-discovery-config-mainlinks-categories-label": "Прикажувај пристапна точка „Категории“",
-	"bs-discovery-config-mainlinks-categories-help": "Прикажувај пристапна точка „Категории“ во страничникот лево"
+	"bs-discovery-config-mainlinks-categories-help": "Прикажувај пристапна точка „Категории“ во страничникот лево",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Услови на употреба",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Услови_на_употреба"
 }
