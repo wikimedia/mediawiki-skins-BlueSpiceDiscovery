@@ -178,5 +178,7 @@
 	"bs-discovery-config-mainlinks-categories-help": "Прикажувај пристапна точка „Категории“ во страничникот лево",
 	"bs-discovery-edit-footerlinks-link-text": "Уреди подножни врски",
 	"bs-discovery-footerlinks-imprint-link-desc": "Импресум",
-	"bs-discovery-footerlinks-imprint-link-page": "Project:Imprint"
+	"bs-discovery-footerlinks-imprint-link-page": "Site:Импресум",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Услови на употреба",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Услови_на_употреба"
 }

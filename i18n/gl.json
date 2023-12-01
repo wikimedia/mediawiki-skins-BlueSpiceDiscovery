@@ -177,5 +177,7 @@
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Iconas de Twitter Bootstrap usadas para BlueSpiceDiscovery e o contido. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
 	"bs-discovery-edit-footerlinks-link-text": "Editar as ligazóns ao pé das páxinas",
 	"bs-discovery-footerlinks-imprint-link-desc": "Imprimir",
-	"bs-discovery-footerlinks-imprint-link-page": "Project:Imprint"
+	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Termos de servizo",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Termos_de_servizo"
 }
