@@ -17,5 +17,7 @@
 	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 সম্পাদনা করুন",
 	"bs-discovery-page-version-pager-deleted-user": "(ব্যবহারকারীর নাম সরানো হয়েছে)",
 	"bs-discovery-page-version-pager-previous": "পূর্ববর্তী",
-	"bs-discovery-page-version-pager-next": "পরবর্তী"
+	"bs-discovery-page-version-pager-next": "পরবর্তী",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "পরিষেবার শর্তাবলী",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:পরিষেবার_শর্তাবলী"
 }
