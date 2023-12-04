@@ -171,7 +171,7 @@
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Ikone Twitter Bootstrap, uporabljene za BlueSpiceDiscovery in vsebino. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
 	"bs-discovery-edit-footerlinks-link-text": "Urejanje povezav v nogi",
 	"bs-discovery-footerlinks-imprint-link-desc": "Kolofon",
-	"bs-discovery-footerlinks-imprint-link-page": "Project:Kolofon",
+	"bs-discovery-footerlinks-imprint-link-page": "Site:Kolofon",
 	"bs-discovery-name": "BlueSpice Discovery",
 	"bs-discovery-navbar-global-actions-overview-text": "Pregled",
 	"bs-discovery-navbar-global-actions-editing-text": "Urejanje",
@@ -184,5 +184,7 @@
 	"bs-discovery-config-mainlinks-listfiles-label": "Prikaži vstopno točko »Datoteke«",
 	"bs-discovery-config-mainlinks-listfiles-help": "V navigaciji levo prikaži povezavo vstopne točke »Datoteke«",
 	"bs-discovery-config-mainlinks-categories-label": "Prikaži vstopno točko »Kategorije«",
-	"bs-discovery-config-mainlinks-categories-help": "V navigaciji levo prikaži povezavo vstopne točke »Kategorije«"
+	"bs-discovery-config-mainlinks-categories-help": "V navigaciji levo prikaži povezavo vstopne točke »Kategorije«",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Pogoji uporabe",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Pogoji_uporabe"
 }

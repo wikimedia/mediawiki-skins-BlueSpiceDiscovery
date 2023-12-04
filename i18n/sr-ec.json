@@ -79,5 +79,6 @@
 	"bs-discovery-mainlinks-categories-label": "Категорије",
 	"bs-discovery-mainlinks-listfiles-label": "Датотеке",
 	"bs-discovery-navbar-global-actions-editing-text": "Уређивање",
-	"bs-discovery-navbar-global-actions-administration-text": "Администрација"
+	"bs-discovery-navbar-global-actions-administration-text": "Администрација",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Услови коришћења"
 }
