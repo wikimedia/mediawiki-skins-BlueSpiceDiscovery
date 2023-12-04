@@ -74,5 +74,6 @@
 	"bs-discovery-page-version-pager-deleted-user": "(корисничко име уклоњено)",
 	"bs-discovery-page-version-pager-previous": "Претходно",
 	"bs-discovery-page-version-pager-next": "Следеће",
-	"bs-discovery-footerlinks-imprint-link-desc": "Импресум"
+	"bs-discovery-footerlinks-imprint-link-desc": "Импресум",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Услови коришћења"
 }
