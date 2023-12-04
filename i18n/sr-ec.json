@@ -76,5 +76,6 @@
 	"bs-discovery-mainlinks-allpages-label": "Странице",
 	"bs-discovery-mainlinks-categories-label": "Категорије",
 	"bs-discovery-mainlinks-listfiles-label": "Датотеке",
-	"bs-discovery-footerlinks-imprint-link-desc": "Импресум"
+	"bs-discovery-footerlinks-imprint-link-desc": "Импресум",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Услови коришћења"
 }

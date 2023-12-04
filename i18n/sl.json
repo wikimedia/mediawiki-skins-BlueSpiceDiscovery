@@ -181,5 +181,7 @@
 	"bs-discovery-config-mainlinks-categories-help": "V navigaciji levo prikaži povezavo vstopne točke »Kategorije«",
 	"bs-discovery-edit-footerlinks-link-text": "Urejanje povezav v nogi",
 	"bs-discovery-footerlinks-imprint-link-desc": "Kolofon",
-	"bs-discovery-footerlinks-imprint-link-page": "Project:Kolofon"
+	"bs-discovery-footerlinks-imprint-link-page": "Site:Kolofon",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Pogoji uporabe",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Pogoji_uporabe"
 }
