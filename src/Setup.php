@@ -114,7 +114,7 @@ class Setup {
 			'author' => 'Twitter Bootstrap',
 			'url' => 'https://getbootstrap.com',
 			'descriptionmsg' => 'bs-discovery-ext-credentials-desc-bootstrap-dist',
-			'version' => 'v5.3.0-alpha1',
+			'version' => 'v5.3.2',
 		];
 	}
 }
