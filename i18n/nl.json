@@ -110,5 +110,11 @@
 	"bs-discovery-page-version-pager-deleted-user": "(gebruikersnaam verwijderd)",
 	"bs-discovery-page-version-pager-info-text": "Dit is de versie van $1, $2 door [[User:$3|$3]]",
 	"bs-discovery-page-version-pager-previous": "Vorige",
-	"bs-discovery-page-version-pager-next": "Volgende"
+	"bs-discovery-page-version-pager-next": "Volgende",
+	"bs-discovery-navbar-global-actions-overview-text": "Overzicht",
+	"bs-discovery-navbar-global-actions-editing-text": "Bewerken",
+	"bs-discovery-navbar-global-actions-administration-text": "Beheer",
+	"bs-discovery-mainlinks-allpages-label": "Pagina's",
+	"bs-discovery-mainlinks-categories-label": "Categorieën",
+	"bs-discovery-mainlinks-listfiles-label": "Bestanden"
 }
