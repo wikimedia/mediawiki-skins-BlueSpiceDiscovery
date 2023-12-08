@@ -178,5 +178,7 @@
 	"bs-discovery-config-mainlinks-categories-help": "Monstrar le ligamine del puncto de entrata “Categorias” in le navigation al sinistra",
 	"bs-discovery-edit-footerlinks-link-text": "Modificar ligamines de pede",
 	"bs-discovery-footerlinks-imprint-link-desc": "Impressum",
-	"bs-discovery-footerlinks-imprint-link-page": "Project:Impressum"
+	"bs-discovery-footerlinks-imprint-link-page": "Site:Impressum",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Conditiones de servicio",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Conditiones_de_servicio"
 }
