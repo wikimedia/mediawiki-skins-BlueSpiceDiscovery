@@ -178,5 +178,7 @@
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "用於 BlueSpiceDiscovery 與內容的 Twitter Bootstrap 圖標。（[https://icons.getbootstrap.com https://icons.getbootstrap.com]）",
 	"bs-discovery-edit-footerlinks-link-text": "編輯頁尾連結",
 	"bs-discovery-footerlinks-imprint-link-desc": "印記",
-	"bs-discovery-footerlinks-imprint-link-page": "Project:Imprint"
+	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "服務條款",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:服務條款"
 }
