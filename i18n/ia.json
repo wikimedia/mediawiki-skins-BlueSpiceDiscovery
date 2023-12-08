@@ -171,7 +171,7 @@
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Icones de Twitter Bootstrap usate pro BlueSpiceDiscovery e contento. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
 	"bs-discovery-edit-footerlinks-link-text": "Modificar ligamines de pede",
 	"bs-discovery-footerlinks-imprint-link-desc": "Impressum",
-	"bs-discovery-footerlinks-imprint-link-page": "Project:Impressum",
+	"bs-discovery-footerlinks-imprint-link-page": "Site:Impressum",
 	"bs-discovery-navbar-global-actions-overview-text": "Vista general",
 	"bs-discovery-navbar-global-actions-editing-text": "Modification",
 	"bs-discovery-navbar-global-actions-administration-text": "Administration",
@@ -181,5 +181,7 @@
 	"bs-discovery-config-mainlinks-listfiles-label": "Monstrar le puncto de entrata “Files”",
 	"bs-discovery-config-mainlinks-listfiles-help": "Monstrar le ligamine del puncto de entrata “Files” in le navigation al sinistra",
 	"bs-discovery-config-mainlinks-categories-label": "Monstrar puncto de entrata “Categorias”",
-	"bs-discovery-config-mainlinks-categories-help": "Monstrar le ligamine del puncto de entrata “Categorias” in le navigation al sinistra"
+	"bs-discovery-config-mainlinks-categories-help": "Monstrar le ligamine del puncto de entrata “Categorias” in le navigation al sinistra",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Conditiones de servicio",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Conditiones_de_servicio"
 }

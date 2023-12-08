@@ -183,5 +183,7 @@
 	"bs-discovery-config-mainlinks-categories-help": "顯示在左側導覽列的「分類」連結入口點",
 	"bs-discovery-edit-footerlinks-link-text": "編輯頁尾連結",
 	"bs-discovery-footerlinks-imprint-link-desc": "印記",
-	"bs-discovery-footerlinks-imprint-link-page": "Project:Imprint"
+	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "服務條款",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:服務條款"
 }
