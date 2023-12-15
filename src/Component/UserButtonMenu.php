@@ -108,8 +108,8 @@ class UserButtonMenu extends SimpleDropdown {
 			] ),
 			/* literal for transparent megamenu container */
 			new Literal(
-				'ga-mm-div',
-				'<div id="ga-mm-div" class="mm-bg"></div>'
+				'usr-btn-menu-div',
+				'<div id="usr-btn-menu-div" class="mm-bg"></div>'
 			)
 		];
 	}
