@@ -456,6 +456,7 @@
 				"stylesheets/control/page-version-pager.css": {},
 				"stylesheets/fixes/ve-fixes.css": {},
 				"stylesheets/fixes/mw-fixes.css": {},
+				"stylesheets/fixes/mw-fixes.sm.css": { "media": "all and ( max-width: 981px )" },
 				"stylesheets/fixes/extjs-fixes.css": {},
 				"stylesheets/bluespice.print.css": { "media": "print" },
 				"stylesheets/control/mws-tree-component.css": {},
