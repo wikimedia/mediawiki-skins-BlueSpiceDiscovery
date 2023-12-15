@@ -99,7 +99,6 @@
 	"bs-discovery-navigation-heading": "Heading for panel with mediawiki navigation",
 	"bs-discovery-edit-mediawiki-sidebar-link-text": "Text for link to edit [MediaWiki:Sidebar]",
 	"bs-discovery-edit-mediawiki-sidebar-link-title": "Title for link to edit [MediaWiki:Sidebar]",
-	"bs-discovery-edit-mediawiki-sidebar-link-aria-label": "Aria-label for link to edit [MediaWiki:Sidebar]",
 	"bs-discovery-permalink-copy-text": "Link label for the permanent link in the toolbox",
 	"bs-discovery-main-links-heading": "Heading for static navigation",
 	"bs-discovery-breadcrumb-label-talk": "Label for talk page in breadcrumbs\n\n{{Identical|Talk}}",
