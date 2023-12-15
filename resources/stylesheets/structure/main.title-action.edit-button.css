@@ -40,6 +40,11 @@ a.title-actions {
 	font-size: 22px;
 	text-align:center;
 }
+.btn-group button.dropdown-icon:focus-visible {
+	outline: 0;
+	border-radius: 50%;
+	box-shadow: 0 0 0 .1em var(--focus-visible);
+}
 .btn-group button.dropdown-icon[disabled] {
 	display: none;
 }
