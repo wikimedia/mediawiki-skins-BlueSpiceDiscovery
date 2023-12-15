@@ -121,7 +121,7 @@ class MediaWikiLinksPanel extends SimpleCard {
 					]
 				] ),
 				new SimpleLinklistGroupFromArray( [
-					'id' => $id,
+					'id' => $id . 'list-group-body',
 					'classes' => [],
 					'aria' => [
 						'labelledby' => $id . '-head'
