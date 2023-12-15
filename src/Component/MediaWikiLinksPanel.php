@@ -148,7 +148,7 @@ class MediaWikiLinksPanel extends SimpleCard {
 			'href' => $title->getEditURL(),
 			'text' => Message::newFromKey( 'bs-discovery-edit-mediawiki-sidebar-link-text' ),
 			'title' => Message::newFromKey( 'bs-discovery-edit-mediawiki-sidebar-link-title' ),
-			'aria-label' => Message::newFromKey( 'bs-discovery-edit-mediawiki-sidebar-link-aria-label' ),
+			'aria-label' => Message::newFromKey( 'bs-discovery-edit-mediawiki-sidebar-link-text' ),
 			'permissions' => [ 'editinterface' ],
 		] );
 
