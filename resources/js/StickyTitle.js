@@ -1,24 +1,30 @@
 ( function( mw, $, d ){
 
-	var initialTitlePos = getTitleLineContent().offset().top;
-
-	$( window ).scroll( function() {
-		if( !isSpecialPage() && window.innerWidth >= 767  ) {
-			setSickyTitleForVerticalPosition();
-			handleVEToolbar();
+	var initialTitlePos = 0;
+	$( document ).ready( function( e ) {
+		initialTitlePos = getTitleLineContent().offset().top;
+		if ( initialTitlePos === 'undefined' ) {
+			initialTitlePos = 0;
 		}
-	} );
 
-	$( window ).on( 'resize', function( e ) {
-		var $titleLine = getTitleLine()
+		$( window ).scroll( function() {
+			if( !isSpecialPage() && window.innerWidth >= 767  ) {
+				setSickyTitleForVerticalPosition();
+				handleVEToolbar();
+			}
+		} );
 
-		if ( ( window.innerWidth < 766 ) && $titleLine.hasClass( 'title-fixed' ) ) {
-			disableStickyTitle();
-		} else if ( window.innerWidth >= 767 ) {
-			setSickyTitleForVerticalPosition();
-			handleVEToolbar();
-		}
-	} );
+		$( window ).on( 'resize', function( e ) {
+			var $titleLine = getTitleLine()
+
+			if ( ( window.innerWidth < 766 ) && $titleLine.hasClass( 'title-fixed' ) ) {
+				disableStickyTitle();
+			} else if ( window.innerWidth >= 767 ) {
+				setSickyTitleForVerticalPosition();
+				handleVEToolbar();
+			}
+		} );
+	} )
 
 	function setSickyTitleForVerticalPosition() {
 		var windowTop = $( this ).scrollTop();
