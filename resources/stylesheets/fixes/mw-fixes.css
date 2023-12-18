@@ -39,3 +39,17 @@ body.mediawiki a.new {
 body.mw-special-Allpages ul.mw-allpages-chunk li a {
 	word-wrap: break-word;
 }
+
+/* fix contrast of non selected elements on Special:SemanticMediaWiki */
+.smw-tabs label.nav-label {
+	color: #6e6e6e;
+}
+
+.smw-tabs label.nav-label:hover {
+	color: #252525;
+}
+
+/* fix user setting links always underlined */
+body.mw-underline-always .mw-body-content a {
+	text-decoration: underline;
+}
