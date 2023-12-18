@@ -52,3 +52,6 @@
 #footer .inner:hover #footer-links li.edit-footerlinks-link {
 	visibility: visible;
 }
+#footer .inner:focus-within #footer-links li.edit-footerlinks-link {
+	visibility: visible;
+}
