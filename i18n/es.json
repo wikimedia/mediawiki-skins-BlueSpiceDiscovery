@@ -17,5 +17,6 @@
 	"bs-discovery-page-version-pager-next": "Siguiente",
 	"bs-discovery-edit-footerlinks-link-text": "Editar enlaces de pie de página",
 	"bs-discovery-footerlinks-imprint-link-desc": "Imprimir",
-	"bs-discovery-footerlinks-imprint-link-page": "Proyecto:Impresión"
+	"bs-discovery-footerlinks-imprint-link-page": "Proyecto:Impresión",
+	"bs-discovery-config-mainlinks-categories-help": "Mostrar el enlace del punto de entrada «Categorías» en la navegación izquierda"
 }
