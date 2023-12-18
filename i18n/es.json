@@ -10,6 +10,7 @@
 	},
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Páginas",
 	"bs-discovery-breadcrumb-label-action-edit": "Editar",
+	"bs-discovery-config-mainlinks-categories-help": "Mostrar el enlace del punto de entrada «Categorías» en la navegación izquierda",
 	"ns-main-label": "Páginas",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navegación",
 	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Editar $1",
