@@ -96,7 +96,6 @@
 	"bs-discovery-navigation-heading": "Kom i gang",
 	"bs-discovery-edit-mediawiki-sidebar-link-text": "Rediger sidemenyen",
 	"bs-discovery-edit-mediawiki-sidebar-link-title": "Rediger MediaWiki:Sidebar",
-	"bs-discovery-edit-mediawiki-sidebar-link-aria-label": "Rediger MediaWiki:Sidebar",
 	"bs-discovery-sidebar-secondary-watch-link-title": "Overvåk side",
 	"bs-discovery-sidebar-secondary-watch-link-aria-label": "Overvåk side",
 	"bs-discovery-permalink-copy-text": "Kopier URL",
@@ -174,5 +173,7 @@
 	"bs-discovery-page-version-pager-next": "Neste",
 	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Twitter Bootstrap-rammeverk for BlueSpiceDiscovery. ([https://getbootstrap.com https://getbootstrap.com])",
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Twitter Bootstrap-ikoner brukt for BlueSpiceDiscovery og innhold. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
-	"bs-discovery-edit-footerlinks-link-text": "Rediger bunnlenker"
+	"bs-discovery-edit-footerlinks-link-text": "Rediger bunnlenker",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Bruksvilkår",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Bruksvilkår"
 }
