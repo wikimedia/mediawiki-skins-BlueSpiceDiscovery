@@ -179,5 +179,7 @@
 	"bs-discovery-config-mainlinks-listfiles-help": "Vis inngangspunktet «Filer» i venstremenyen",
 	"bs-discovery-config-mainlinks-categories-label": "Vis inngangspunktet «Kategorier»",
 	"bs-discovery-config-mainlinks-categories-help": "Vis inngangspunktet «Kategorier» i venstremenyen",
-	"bs-discovery-edit-footerlinks-link-text": "Rediger bunnlenker"
+	"bs-discovery-edit-footerlinks-link-text": "Rediger bunnlenker",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Bruksvilkår",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Bruksvilkår"
 }
