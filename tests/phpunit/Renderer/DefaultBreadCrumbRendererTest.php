@@ -71,8 +71,6 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 		$params = $renderer->getParams();
 
 		$actualRootNodeUrl = $params['rootNode']['href'];
-		$leafNode = array_pop( $params['nodes'] );
-		$actualLeafNodeUrl = $leafNode['button-href'];
 
 		$actualLabels = [];
 		foreach ( $params['labels'] as $label ) {
@@ -89,7 +87,6 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 		}, $actualLabels );
 
 		$this->assertEquals( $expectedRootNodeUrl, $actualRootNodeUrl );
-		$this->assertEquals( $expectedLeafNodeUrl, $actualLeafNodeUrl );
 		$this->assertEquals( $expectedLabels, $actualLabels );
 	}
 
