@@ -151,7 +151,8 @@ class BaseBreadcrumbDataProvider implements IBreadcrumbDataProvider {
 				'title' => $nodeTitle->getFullText(),
 				'splitBtnClass' => $btnClass,
 				'subpages' => $subpages,
-				'path' => $path
+				'path' => $path,
+				'current' => $current
 			];
 			array_push( $nodes, $node );
 		}
