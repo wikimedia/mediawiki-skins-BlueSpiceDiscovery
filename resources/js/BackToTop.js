@@ -21,6 +21,8 @@
 			},
 			scrollToTop.duration
 		);
+
+		$( '#content' ).first().focus();
 	} );
 
 } )( mediaWiki, jQuery, document );
