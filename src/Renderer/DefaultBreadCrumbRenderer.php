@@ -43,6 +43,9 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	 */
 	private $breadcrumbProvider = null;
 
+	/** @var NamespaceInfo */
+	private $namespaceInfo = null;
+
 	/**
 	 * @param Title $title
 	 * @param User $user
@@ -138,27 +141,17 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	 * @return void
 	 */
 	private function buildNodes( $nodesData ) {
-		$firstNode = false;
 		$nodes = [];
 
 		foreach ( $nodesData as $node ) {
-			if ( !$firstNode ) {
-				$nodeTextParts = explode( ':', $node['nodeText'] );
-				$firstNode = true;
-			} else {
-				$nodeTextParts = explode( ':', $node['nodeText'], 1 );
-			}
+			$nodeTextParts = explode( ':', $node['nodeText'], 1 );
 
 			$nodeText = array_pop( $nodeTextParts );
+
 			$nodeHTML = [
 				'id' => md5( 'breadcrumb-nav-subpages-' . $node['id'] ),
 				'button-text' => new \RawMessage( trim( $nodeText ) ),
 				'button-classes' => $node['classes'],
-				'button-title' => $this->messageLocalizer
-					->msg( 'bs-discovery-breadcrumb-nav-node-title', $node['title'] ),
-				'button-href' => $node['url'],
-				'button-aria-label' => $this->messageLocalizer
-					->msg( 'bs-discovery-breadcrumb-nav-node-aria-label', $node['title'] ),
 				'split-button-title' => $this->messageLocalizer
 					->msg( 'bs-discovery-breadcrumb-nav-node-split-button-title' ),
 				'split-button-aria-label' => $this->messageLocalizer
@@ -168,6 +161,29 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 				'hasItems' => $node['subpages'],
 				'path' => $node['path']
 			];
+
+			$tag = 'a';
+			if ( isset( $node['current'] ) && $node['current'] === true ) {
+				$tag = 'span';
+				$nodeHTML = array_merge(
+					$nodeHTML,
+					[
+						'tag' => $tag,
+					]
+				);
+			} else {
+				$nodeHTML = array_merge(
+					$nodeHTML,
+					[
+						'tag' => $tag,
+						'button-title' => $this->messageLocalizer
+							->msg( 'bs-discovery-breadcrumb-nav-node-title', $node['title'] ),
+						'button-href' => $node['url'],
+						'button-aria-label' => $this->messageLocalizer
+							->msg( 'bs-discovery-breadcrumb-nav-node-aria-label', $node['title'] ),
+					]
+				);
+			}
 			array_push( $nodes, $nodeHTML );
 		}
 
