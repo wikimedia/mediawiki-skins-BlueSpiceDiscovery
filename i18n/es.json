@@ -8,6 +8,8 @@
 			"Samthony"
 		]
 	},
+	"bs-discovery-breadcrumb-nav-node-ns-main": "Páginas",
+	"bs-discovery-breadcrumb-label-action-edit": "Editar",
 	"ns-main-label": "Páginas",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navegación",
 	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Editar $1",
@@ -16,6 +18,5 @@
 	"bs-discovery-edit-footerlinks-link-text": "Editar enlaces de pie de página",
 	"bs-discovery-footerlinks-imprint-link-desc": "Imprimir",
 	"bs-discovery-footerlinks-imprint-link-page": "Proyecto:Impresión",
-	"bs-discovery-breadcrumb-nav-node-ns-main": "Páginas",
-	"bs-discovery-breadcrumb-label-action-edit": "Editar"
+	"bs-discovery-config-mainlinks-categories-help": "Mostrar el enlace del punto de entrada «Categorías» en la navegación izquierda"
 }
