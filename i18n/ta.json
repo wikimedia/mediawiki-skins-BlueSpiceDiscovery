@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"ElangoRamanujam"
+			"ElangoRamanujam",
+			"Fahimrazick"
 		]
 	},
 	"bs-discovery-navbar-user-login-text": "புகுபதிகை",
 	"bs-discovery-navbar-user-login-title": "புகுபதிகை",
 	"bs-discovery-navbar-user-login-aria-label": "புகுபதிகை",
-	"bs-discovery-searchform-button-aria-label": "தற்பொழுது தேடவும்",
+	"bs-discovery-searchform-button-aria-label": "இப்போது தேடு",
 	"bs-discovery-header-create-button-text": "புதிய",
 	"bs-discovery-header-create-button-title": "ஒரு புதிய பக்கத்தை உருவாக்குக",
 	"bs-discovery-header-create-button-aria-label": "ஒரு புதிய பக்கத்தை உருவாக்குக.",
