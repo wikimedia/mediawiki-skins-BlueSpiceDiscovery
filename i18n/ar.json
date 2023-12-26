@@ -3,6 +3,7 @@
 		"authors": [
 			"Alshamiri1",
 			"Hubaishan",
+			"Karim185.3",
 			"Meno25",
 			"محمد أحمد عبد الفتاح"
 		]
@@ -136,7 +137,7 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "القائمة الرئيسة",
 	"menueditor-ui-enhanced-sidebar-internal-link-label": "وصلة داخلية",
 	"bs-discovery-alert-old-page-version": "تقوم بعرض نسخة قديمة من هذه الصفحة. [[Special: Redirect / page / $1 | العودة إلى أحدث إصدار]].",
-	"bs-discovery-page-version-pager-deleted-user": "(اسم المستخدم تمت إزالته)",
+	"bs-discovery-page-version-pager-deleted-user": "(أُزيل اسم المستخدم)",
 	"bs-discovery-page-version-pager-info-text": "هذه نسخة $1 ، $2 بواسطة [[المستخدم: $3 | $3 ]]",
 	"bs-discovery-page-version-pager-previous": "السابق",
 	"bs-discovery-page-version-pager-next": "التالي",
