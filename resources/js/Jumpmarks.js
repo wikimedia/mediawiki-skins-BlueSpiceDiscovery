@@ -2,7 +2,6 @@
 
 	$( d ).ready( function(){
 		var hash = window.location.hash;
-
 		if ( hash !== '' ) {
 			var jumpmark = getJumpmarkEl( hash );
 			if ( !jumpmark ) {
@@ -66,7 +65,7 @@
 				$( '#nb-pri' ).height(),
 			$jumpmark = $( jumpmark ),
 			$heading = $jumpmark.closest( 'h1,h2,h3,h4,h5,h6' ),
-			postion = $jumpmark.position().top;
+			postion = $jumpmark.offset().top;
 
 		if ( $heading.length === 1  ) {
 			postion -= $heading.height();
