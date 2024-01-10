@@ -8,9 +8,9 @@
 
 		{{#nodes}}
 		<li class="breadcrumb-item{{#nodes-class}} {{.}}{{/nodes-class}}" {{#aria-current}}aria-current="{{.}}"{{/aria-current}}>
-			<a {{#id}}id="{{.}}"{{/id}} {{#button-classes}}class="{{.}}"{{/button-classes}} title="{{button-title}}" {{#btn-data}}{{{.}}}{{/btn-data}} aria-label="{{button-aria-label}}"{{#btn-disabled}} disabled{{/btn-disabled}} href="{{button-href}}">
+			<{{tag}} {{#id}}id="{{.}}"{{/id}} {{#button-classes}}class="{{.}}"{{/button-classes}} title="{{button-title}}" {{#btn-data}}{{{.}}}{{/btn-data}}{{#button-aria-label}} aria-label="{{{.}}}"{{/button-aria-label}}{{#btn-disabled}} disabled{{/btn-disabled}} {{#button-href}}href="{{{.}}}"{{/button-href}}>
 			{{{button-text}}}
-			</a>
+			</{{tag}}>
 			{{#hasItems}}
 			<a class="dropdown-toggle{{#split-button-classes}} {{.}}{{/split-button-classes}}"{{#id}} id="{{.}}-menu-btn"{{/id}} data-bs-path="{{path}}" title="{{split-button-title}}" {{#split-btn-data}}{{{.}}}{{/split-btn-data}}data-bs-toggle="dropdown" aria-haspopup="true" aria-label="{{split-button-aria-label}}" aria-expanded="false" aria-controls="{{id}}-menu"{{#split-btn-disabled}} disabled{{/split-btn-disabled}} href="">
 			</a>
