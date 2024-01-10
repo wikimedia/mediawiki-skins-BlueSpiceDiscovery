@@ -67,7 +67,6 @@ class BaseBreadcrumbDataProvider implements IBreadcrumbDataProvider {
 		$this->relevantTitle = $title;
 		// `Special:Move/Talk:Some_Page/with/Subpage`
 		if ( $this->relevantTitle->isSpecialPage() ) {
-			$this->specialName = $this->relevantTitle->getDBkey();
 			$fullPageTitle = $this->relevantTitle->getPrefixedDBkey();
 
 			// `[ "Special:Move/MyPage", "Talk:Some_Page/with/Subpage" ]`
