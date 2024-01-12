@@ -5,6 +5,7 @@ namespace BlueSpice\Discovery\EnhancedSidebar\Node;
 use BlueSpice\Discovery\SubpageDataGenerator;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
+use Message;
 use Title;
 use UnexpectedValueException;
 use User;
@@ -114,6 +115,11 @@ class SubpageListNode extends InternalLinkNode {
 	 * @return string
 	 */
 	protected function getDisplayText(): string {
+		$msg = Message::newFromKey( $this->text );
+		if ( $msg->exists() ) {
+			return $msg->plain();
+		}
+
 		return $this->text;
 	}
 }
