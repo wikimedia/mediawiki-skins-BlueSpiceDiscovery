@@ -142,9 +142,16 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	 */
 	private function buildNodes( $nodesData ) {
 		$nodes = [];
+		$firstNode = false;
 
 		foreach ( $nodesData as $node ) {
-			$nodeTextParts = explode( ':', $node['nodeText'], 1 );
+			// Remove namespace prefix form nodeText
+			if ( !$firstNode ) {
+				$nodeTextParts = explode( ':', $node['nodeText'] );
+				$firstNode = true;
+			} else {
+				$nodeTextParts = explode( ':', $node['nodeText'], 1 );
+			}
 
 			$nodeText = array_pop( $nodeTextParts );
 
