@@ -4,6 +4,7 @@ namespace BlueSpice\Discovery\EnhancedSidebar\Node;
 
 use InvalidArgumentException;
 use MediaWiki\Extension\MenuEditor\Node\MenuNode;
+use Message;
 use User;
 
 abstract class EnhancedSidebarNode extends MenuNode {
@@ -144,6 +145,11 @@ abstract class EnhancedSidebarNode extends MenuNode {
 	 * @return string
 	 */
 	protected function getDisplayText(): string {
+		$msg = Message::newFromKey( $this->text );
+		if ( $msg->exists() ) {
+			return $msg->plain();
+		}
+
 		return $this->text;
 	}
 }
