@@ -5,6 +5,7 @@
 			"JDíaz32",
 			"La Mantis",
 			"No se",
+			"Osnard",
 			"Samthony"
 		]
 	},
@@ -18,5 +19,11 @@
 	"bs-discovery-edit-footerlinks-link-text": "Editar enlaces de pie de página",
 	"bs-discovery-footerlinks-imprint-link-desc": "Imprimir",
 	"bs-discovery-footerlinks-imprint-link-page": "Proyecto:Impresión",
-	"bs-discovery-config-mainlinks-categories-help": "Mostrar el enlace del punto de entrada «Categorías» en la navegación izquierda"
+	"bs-discovery-config-mainlinks-categories-help": "Mostrar el enlace del punto de entrada «Categorías» en la navegación izquierda",
+	"bs-discovery-details-pnl-more-link-text": "... todas las acciones",
+	"bs-discovery-navigation-heading": "Comenzando",
+	"bs-discovery-main-links-heading": "Puntos de entrada",
+	"bs-discovery-mainlinks-allpages-label": "Páginas",
+	"bs-discovery-mainlinks-categories-label": "Categorías",
+	"bs-discovery-mainlinks-listfiles-label": "Ficheros"
 }
