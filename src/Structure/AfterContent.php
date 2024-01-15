@@ -9,6 +9,9 @@ use BlueSpice\Discovery\SkinSlotRenderer\ToolsAfterContentSkinSlotRenderer;
 
 class AfterContent extends SkinStructureBase implements IBaseTemplateAware {
 
+	/** @var array */
+	private $skinComponents = [];
+
 	/**
 	 * @var BaseTemplate
 	 */
