@@ -5,11 +5,18 @@
 			"JDíaz32",
 			"La Mantis",
 			"No se",
+			"Osnard",
 			"Samthony"
 		]
 	},
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Páginas",
+	"bs-discovery-details-pnl-more-link-text": "... todas las acciones",
+	"bs-discovery-navigation-heading": "Comenzando",
+	"bs-discovery-main-links-heading": "Puntos de entrada",
 	"bs-discovery-breadcrumb-label-action-edit": "Editar",
+	"bs-discovery-mainlinks-allpages-label": "Páginas",
+	"bs-discovery-mainlinks-categories-label": "Categorías",
+	"bs-discovery-mainlinks-listfiles-label": "Ficheros",
 	"bs-discovery-config-mainlinks-categories-help": "Mostrar el enlace del punto de entrada «Categorías» en la navegación izquierda",
 	"ns-main-label": "Páginas",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navegación",
