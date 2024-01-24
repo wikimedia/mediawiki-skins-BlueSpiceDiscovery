@@ -7,17 +7,18 @@ class MainPanelSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	public const REG_KEY = 'MainLinksPanel';
 
 	/**
-	 *
 	 * @param array &$items
 	 * @return void
 	 */
 	protected function sortItems( &$items ): void {
-		ksort( $items );
-		usort( $items, static function ( $itemOne, $itemTwo ) {
-			$item1SortKey = isset( $itemOne['position'] ) ? $itemOne['position'] : 100;
-			$item2SortKey = isset( $itemTwo['position'] ) ? $itemTwo['position'] : 100;
+		parent::sortItems( $items );
 
-			return $item1SortKey > $item2SortKey ? 1 : 0;
+		$defaultSortValue = 100;
+		uasort( $items, static function ( $a, $b ) use ( $defaultSortValue ) {
+			$aSortValue = $a['position'] ?? $defaultSortValue;
+			$bSortValue = $b['position'] ?? $defaultSortValue;
+
+			return $aSortValue - $bSortValue;
 		} );
 	}
 
