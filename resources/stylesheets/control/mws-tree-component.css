@@ -68,3 +68,6 @@ ul.mws-tree a:not(.new):hover {
 .leaf .mws-tree-item-label {
 	margin-left: var(--mws-tree-expander-width);
 }
+ul.mws-tree .mws-tree-item a:focus-visible {
+	outline: 1px solid var(--focus-visible);
+}
