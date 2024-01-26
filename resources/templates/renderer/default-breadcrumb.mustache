@@ -1,5 +1,5 @@
-<nav aria-label="breadcrumb">
-	<ol id="breadcrumbs" class="breadcrumb{{#list-class}} {{.}}{{/list-class}}">
+<nav aria-label="breadcrumb" class="breadcrumb-nav">
+	<ul id="breadcrumbs" class="breadcrumb{{#list-class}} {{.}}{{/list-class}}">
 		{{#rootNode}}
 		<li class="breadcrumb-item root-node {{#rootNode-class}} {{.}}{{/rootNode-class}}" {{#aria-current}}aria-current="{{.}}"{{/aria-current}}>
 			<a href="{{href}}" title="{{title}}" aria-label="{{aria-label}}">{{{text}}}</a>
@@ -20,11 +20,10 @@
 			{{/hasItems}}
 		</li>
 		{{/nodes}}
-
-		<ul class="breadcrumb-labels">
-			{{#labels}}
-			<li class="badge bg-secondary breadcrumb-label {{#label-class}} {{.}}{{/label-class}}" {{#aria-current}}aria-current="{{.}}"{{/aria-current}}>{{{text}}}</li>
-			{{/labels}}
-		</ul>
-	</ol>
+	</ul>
+	<ul class="breadcrumb-labels breadcrumb">
+		{{#labels}}
+		<li class="badge bg-secondary breadcrumb-label {{#label-class}} {{.}}{{/label-class}}" {{#aria-current}}aria-current="{{.}}"{{/aria-current}}>{{{text}}}</li>
+		{{/labels}}
+	</ul>
 </nav>
