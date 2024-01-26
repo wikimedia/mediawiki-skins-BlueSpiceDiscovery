@@ -20,3 +20,6 @@
 #back-to-top:hover::before {
 	color: var(--back-to-top-fg--hover);
 }
+#back-to-top:focus {
+	border: 2px solid var(--focus-visible);
+}

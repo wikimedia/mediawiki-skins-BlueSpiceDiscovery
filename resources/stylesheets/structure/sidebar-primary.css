@@ -29,10 +29,11 @@
 	/* A min-height is required to show edit link for empty MediaWiki:Sidebar.json */
 	min-height: 35px;
 }
-#sb-pri #enh-mw-sb-edit-sidebar-link,
-#sb-pri #enh-mw-sb-edit-sidebar-link:visited {
-	visibility: hidden;
+#sb-pri #enh-mw-sb-edit-sidebar-link{
+	height: 0;
+	overflow: hidden;
 	float: right;
+	display: block;
 	padding: 0 1em;
 	text-align: right;
 	width: 100%;
@@ -40,7 +41,13 @@
 	color: var(--sidebar-primary-fg);
 }
 #sb-pri .enhanced-sidebar-cnt:hover #enh-mw-sb-edit-sidebar-link {
-	visibility: visible;
+	height: inherit;
+}
+
+#sb-pri #enh-mw-sb-edit-sidebar-link:focus-visible {
+	height: inherit;
+	border: 2px solid var(--focus-visible);
+	outline-color: transparent;
 }
 
 @media ( max-width: 767.99px ) {
