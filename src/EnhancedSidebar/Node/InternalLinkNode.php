@@ -3,6 +3,7 @@
 namespace BlueSpice\Discovery\EnhancedSidebar\Node;
 
 use InvalidArgumentException;
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
 use Title;
 use UnexpectedValueException;
@@ -93,7 +94,7 @@ class InternalLinkNode extends EnhancedSidebarNode {
 			return parent::getDisplayText();
 		}
 		// Try to find displaytitle of the target page
-		$pageProps = \PageProps::getInstance();
+		$pageProps = MediaWikiServices::getInstance()->getPageProps();
 		$raw = $pageProps->getProperties( $this->target, 'displaytitle' );
 		if ( !isset( $raw[$this->target->getArticleID()] ) ) {
 			return parent::getDisplayText();
