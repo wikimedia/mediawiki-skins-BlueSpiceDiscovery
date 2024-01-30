@@ -1,3 +1,7 @@
+.breadcrumb-nav {
+	display: flex;
+	flex-wrap: wrap;
+}
 .breadcrumb-item+.breadcrumb-item {
 	padding-left: 0.2rem;
 }
@@ -100,12 +104,7 @@ nav .breadcrumb {
 	box-shadow: 0 0 0 .2em var(--focus-visible);
 }
 
-ul.breadcrumb-labels {
-	list-style-type: none;
-	vertical-align: baseline;
-	display: flex;
-	margin: 0;
-	padding-left: 0.5rem;
+ul.breadcrumb.breadcrumb-labels {
 	color: var(--title-nav-fg);
 }
 .breadcrumb-label {
