@@ -5,6 +5,7 @@ namespace BlueSpice\Discovery\Renderer;
 use BlueSpice\Discovery\BreadcrumbDataProvider;
 use MediaWiki\SpecialPage\SpecialPageFactory;
 use MessageLocalizer;
+use RequestContext;
 use Title;
 use User;
 
@@ -145,7 +146,7 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 		$firstNode = false;
 
 		foreach ( $nodesData as $node ) {
-			// Remove namespace prefix form nodeText
+			// Remove namespace prefix from nodeText
 			if ( !$firstNode ) {
 				$nodeTextParts = explode( ':', $node['nodeText'] );
 				$firstNode = true;
@@ -169,8 +170,12 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 				'path' => $node['path']
 			];
 
+			/** TODO: Inject context */
+			$requestContext = RequestContext::getMain();
+			$viewAction = $requestContext->getRequest()->getVal( 'action', 'view' );
+
 			$tag = 'a';
-			if ( isset( $node['current'] ) && $node['current'] === true ) {
+			if ( isset( $node['current'] ) && $node['current'] === true && $viewAction === 'view' ) {
 				$tag = 'span';
 				$nodeHTML = array_merge(
 					$nodeHTML,
