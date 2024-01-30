@@ -2,13 +2,14 @@
 
 	$( d ).ready( function(){
 		var hash = window.location.hash;
+		var offset = $( '#main' ).offset().top + $( '#title-line' ).height();
 		if ( hash !== '' ) {
 			var jumpmark = getJumpmarkEl( hash );
 			if ( !jumpmark ) {
 				return;
 			}
 
-			var position = getPosition( jumpmark );
+			var position = getPosition( jumpmark, offset);
 			$( 'body, html').animate( {
 					scrollTop: position
 				},
@@ -31,7 +32,7 @@
 					return;
 				}
 
-				var position = getPosition( jumpmark );
+				var position = getPosition( jumpmark, offset );
 				if ( position === 0 ) {
 					return;
 				}
@@ -57,13 +58,8 @@
 		return element;
 	}
 
-	function getPosition( jumpmark ) {
-		var offset =
-				// The maybe fixed title
-				$( '#title-line' ).height() +
-				// The surely fixed header menu
-				$( '#nb-pri' ).height(),
-			$jumpmark = $( jumpmark ),
+	function getPosition( jumpmark, offset ) {
+		var $jumpmark = $( jumpmark ),
 			$heading = $jumpmark.closest( 'h1,h2,h3,h4,h5,h6' ),
 			postion = $jumpmark.offset().top;
 
