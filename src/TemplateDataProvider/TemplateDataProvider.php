@@ -380,7 +380,7 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 * @return void
 	 */
 	private function makePanelCreate(): void {
-		$idList = [ 'ca-new-page', 'ca-new-subpage', 't-new-file' ];
+		$idList = [ 'ca-new-page', 'ca-new-subpage' ];
 		$this->registerLinks( 'panel/create', $idList );
 	}
 
@@ -412,7 +412,6 @@ class TemplateDataProvider implements ITemplateDataProvider {
 		foreach ( $this->content_navigation['namespaces'] as $key => $link ) {
 			$this->register( 'actioncollection/namespaces', $link['id'] );
 		}
-		$this->register( 'actioncollection/namespaces', 't-new-file' );
 		$this->register( 'actioncollection/namespaces', 'ca-new-section' );
 	}
 
