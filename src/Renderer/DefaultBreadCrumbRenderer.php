@@ -166,7 +166,6 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 					->msg( 'bs-discovery-breadcrumb-nav-node-split-button-aria-label' ),
 				'nodes-class' => [],
 				'split-button-classes' => [ 'breadcrumb-nav-subpages', $node['splitBtnClass'] ],
-				'hasItems' => $node['subpages'],
 				'path' => $node['path']
 			];
 
@@ -181,6 +180,7 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 					$nodeHTML,
 					[
 						'tag' => $tag,
+						'hasItems' => $node['subpages'],
 					]
 				);
 			} else {
@@ -196,6 +196,7 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 					]
 				);
 			}
+
 			array_push( $nodes, $nodeHTML );
 		}
 
