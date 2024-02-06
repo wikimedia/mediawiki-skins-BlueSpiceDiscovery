@@ -171,28 +171,35 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 
 			/** TODO: Inject context */
 			$requestContext = RequestContext::getMain();
-			$viewAction = $requestContext->getRequest()->getVal( 'action', 'view' );
+			$action = $requestContext->getRequest()->getVal( 'action', 'view' );
 
-			$tag = 'a';
-			if ( isset( $node['current'] ) && $node['current'] === true && $viewAction === 'view' ) {
-				$tag = 'span';
+			if ( isset( $node['current'] ) && $node['current'] === true && $action === 'view' ) {
 				$nodeHTML = array_merge(
 					$nodeHTML,
 					[
-						'tag' => $tag,
-						'hasItems' => $node['subpages'],
+						'tag' => 'span',
 					]
 				);
 			} else {
 				$nodeHTML = array_merge(
 					$nodeHTML,
 					[
-						'tag' => $tag,
+						'tag' => 'a',
 						'button-title' => $this->messageLocalizer
 							->msg( 'bs-discovery-breadcrumb-nav-node-title', $node['title'] ),
 						'button-href' => $node['url'],
 						'button-aria-label' => $this->messageLocalizer
 							->msg( 'bs-discovery-breadcrumb-nav-node-aria-label', $node['title'] ),
+					]
+				);
+			}
+
+			// append subpage menu
+			if ( !isset( $node['current'] ) || $node['current'] !== true || $action === 'view' ) {
+				$nodeHTML = array_merge(
+					$nodeHTML,
+					[
+						'hasItems' => $node['subpages'],
 					]
 				);
 			}
