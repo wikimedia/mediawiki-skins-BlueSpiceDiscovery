@@ -24,7 +24,7 @@
 			}
 			if ( expanded === 'false' ) {
 				if ( $( window ).width() < 1400 ) {
-					$( 'body ').css( 'overflow', 'hidden' );
+					$( 'body ').css( 'overflow-x', 'hidden' );
 				}
 
 				toggleSidebar( controls );
