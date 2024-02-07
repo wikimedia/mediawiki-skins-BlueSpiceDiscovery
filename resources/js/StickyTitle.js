@@ -15,15 +15,22 @@
 		} );
 
 		$( window ).on( 'resize', function( e ) {
-			var $titleLine = getTitleLine()
-
-			if ( ( window.innerWidth < 766 ) && $titleLine.hasClass( 'title-fixed' ) ) {
+			if ( ( window.innerWidth < 766 ) &&  $( 'body' ).hasClass( 'title-fixed' ) ) {
 				disableStickyTitle();
 			} else if ( window.innerWidth >= 767 ) {
 				setSickyTitleForVerticalPosition();
 				handleVEToolbar();
 			}
 		} );
+
+		if ( $( 'body' ).hasClass( 'title-fixed' ) ) {
+			let resizeObserver = new ResizeObserver(() => {
+				alignTitleLine();
+				resizeTitleLineContent();
+			} );
+			resizeObserver.observe( $( '#main' )[0] );
+		}
+
 	} )
 
 	function setSickyTitleForVerticalPosition() {
@@ -44,6 +51,7 @@
 		var $titleSection = getTitleSection();
 		$titleSection.css( 'padding-top', $titleLine.height() );
 
+		alignTitleLine();
 		resizeTitleLineContent();
 	}
 
@@ -89,7 +97,7 @@
 
 	function setTitleLineContentWidth( width ) {
 		var $titleLineContent = getTitleLineContent();
-		$titleLineContent.innerWidth( width );
+		$titleLineContent.outerWidth( width );
 	}
 
 	function getWrapperTopPosition() {
@@ -98,6 +106,11 @@
 
 	function getMainWidth() {
 		return $( '#main' ).outerWidth();
+	}
+
+	function getMainPosLeft() {
+		var offset =  $( '#main' ).offset();
+		return offset.left;
 	}
 
 	function getContentWidth() {
@@ -113,6 +126,10 @@
 		}
 	}
 
+	function alignTitleLine() {
+		var left = getMainPosLeft();
+		$( 'body.title-fixed #title-line > div' ).css( 'margin-left', left );
+	}
 
 	function getVEToolbar() {
 		return  $( '#content .ve-init-target >.ve-ui-toolbar > .oo-ui-toolbar-bar' );
