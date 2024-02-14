@@ -16,7 +16,9 @@
 #sb-pri:hover {
 	overflow-y: auto;
 }
-
+#sb-pri .card {
+	color: inherit;
+}
 #sb-pri::-webkit-scrollbar {
 	width: 8px;
 }
