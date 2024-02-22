@@ -106,7 +106,10 @@ class InternalLinkNode extends EnhancedSidebarNode {
 	 */
 	protected function getOutputCssClasses(): array {
 		$classes = parent::getOutputCssClasses();
-		if ( $this->target instanceof Title && !$this->target->exists() ) {
+		if ( $this->target instanceof Title &&
+			!$this->target->exists() &&
+			!$this->target->isSpecialPage()
+		) {
 			return array_merge( $classes, [ 'internal', 'new' ] );
 		}
 		return array_merge( $classes, [ 'internal' ] );
