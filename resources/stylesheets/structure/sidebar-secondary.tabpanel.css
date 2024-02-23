@@ -49,6 +49,9 @@
 #sb-sec ul {
 	margin-left: 0;
 }
+#sb-sec .list-group .list-group-item:last-child {
+	padding-bottom: 5px;
+}
 #sb-sec .list-group .list-group-item > a {
 	display: inline-block;
 	width: 100%;
