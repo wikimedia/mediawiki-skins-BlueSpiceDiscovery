@@ -102,14 +102,34 @@ class TemplateDataProvider implements ITemplateDataProvider {
 		}
 		$groupPath = $groupKeys['path'];
 		$groupName = $groupKeys['name'];
+
 		if ( $groupName === 'toolbox' ) {
 			// Toolbox is colleciting all unmanaged links
 			return;
 		}
 		$this->buildGroupPath( $groupPath, $groupName );
-		if ( array_key_exists( $groupName, $this->managedLinks[$groupPath] )
-			&& array_key_exists( $id, $this->managedLinks[$groupPath][$groupName] ) ) {
+		if ( isset( $this->managedLinks[$groupPath][$groupName][$id] ) ) {
 			$this->managedLinks[$groupPath]['toolbox'][$id] = $this->managedLinks[$groupPath][$groupName][$id];
+			unset( $this->managedLinks[$groupPath][$groupName][$id] );
+		}
+	}
+
+	/**
+	 *
+	 * @param string $group
+	 * @param string $id
+	 * @return void
+	 */
+	public function delete( $group, $id ): void {
+		$groupKeys = $this->getRegistryGroupKeys( $group );
+		if ( empty( $groupKeys ) || $groupKeys['path'] === 'template' ) {
+			return;
+		}
+
+		$groupPath = $groupKeys['path'];
+		$groupName = $groupKeys['name'];
+
+		if ( isset( $this->managedLinks[$groupPath][$groupName][$id] ) ) {
 			unset( $this->managedLinks[$groupPath][$groupName][$id] );
 		}
 	}
