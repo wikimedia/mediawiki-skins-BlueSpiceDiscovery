@@ -55,3 +55,9 @@
 #footer .inner:focus-within #footer-links li.edit-footerlinks-link {
 	visibility: visible;
 }
+#footer #footer-icons li a:focus-visible {
+	box-shadow: none;
+}
+#footer #footer-icons li a:focus-visible img {
+	border: 1px solid var(--focus-visible);
+}
