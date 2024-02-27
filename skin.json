@@ -334,7 +334,13 @@
 		],
 		"BsAdapterAjaxPingResult": "\\BlueSpice\\Discovery\\Hook\\BsAdapterAjaxPingResult\\CheckAttentionIndicator::callback",
 		"PageSaveComplete": "setPageLanguage",
-		"BSUEModulePDFBeforeAddingContent": "pdf-export"
+		"BSUEModulePDFBeforeAddingContent": "pdf-export",
+		"BSUsageTrackerRegisterCollectors": [
+			"\\BlueSpice\\Discovery\\Hook\\BSUsageTrackerRegisterCollectors\\MediaWikiSidebarActive::callback",
+			"\\BlueSpice\\Discovery\\Hook\\BSUsageTrackerRegisterCollectors\\MediaWikiSidebarModified::callback",
+			"\\BlueSpice\\Discovery\\Hook\\BSUsageTrackerRegisterCollectors\\EnhancedSidebarActive::callback",
+			"\\BlueSpice\\Discovery\\Hook\\BSUsageTrackerRegisterCollectors\\EnhancedSidebarModified::callback"
+		]
 	},
 	"config_prefix": "bsg",
 	"config": {
