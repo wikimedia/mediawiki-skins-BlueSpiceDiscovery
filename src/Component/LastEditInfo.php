@@ -93,11 +93,19 @@ class LastEditInfo extends Literal {
 		$revisionDiffLink = $this->buildRevisionDiffLink( $title, $revision );
 		$lastEditorLink = $this->buildLastEditorLink( $revision );
 
-		$lastEditInfo = Message::newFromKey(
-			'bs-discovery-title-last-edit-info',
-			$revisionDiffLink,
-			$lastEditorLink
-		);
+		if ( $lastEditorLink ) {
+			$lastEditInfo = Message::newFromKey(
+				'bs-discovery-title-last-edit-info',
+				$revisionDiffLink,
+				$lastEditorLink
+			);
+		} else {
+			// RevisionDelete user
+			$lastEditInfo = Message::newFromKey(
+				'bs-discovery-title-last-edit-info-date-only',
+				$revisionDiffLink
+			);
+		}
 
 		if ( $lastEditInfo ) {
 			$html .= $lastEditInfo->text();
@@ -166,7 +174,14 @@ class LastEditInfo extends Literal {
 	 */
 	private function buildLastEditorLink( $revision ): string {
 		$html = '';
-		$userIdentity = $revision->getUser();
+		$userPerformer = $this->requestContext->getUser();
+		$userIdentity = $revision->getUser( RevisionRecord::FOR_THIS_USER, $userPerformer );
+
+		// RevisionDelete user
+		if ( !$userIdentity ) {
+			return '';
+		}
+
 		$user = $this->services->getUserFactory()->newFromId( $userIdentity->getId() );
 		$username = $user->getName();
 
