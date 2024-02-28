@@ -134,11 +134,8 @@ class ActionsPanel extends SimpleCard implements IRestrictedComponent {
 				? $this->getFavoritePositions()[$key]
 				: 0;
 		}
-		usort( $links, static function ( $e1, $e2 ) {
-			if ( $e1['position'] == $e2['position'] ) {
-				return 0;
-			}
-			return $e1['position'] > $e2['position'] ? 1 : 0;
+		uasort( $links, static function ( $e1, $e2 ) {
+			return $e1['position'] - $e2['position'];
 		} );
 		return $links;
 	}
