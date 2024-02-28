@@ -51,6 +51,9 @@
 .mega-menu .mm-edit-link:hover {
 	color: inherit;
 }
+.mega-menu .mm-edit-link:focus-visible {
+	outline: 1px solid var(--focus-visible);
+}
 .card.mega-menu {
 	background-color: var(--mm-primary-bg);
 	opacity: 1;
@@ -84,6 +87,9 @@
 	border-bottom: 0.3px solid var(--mm-primary-title-border);
 	background-color: var(--mm-primary-title-bg);
 	padding-left: 0;
+}
+.card-header.menu-title:focus-visible {
+	outline: 1px solid var(--focus-visible);
 }
 .card-body.menu-card-body {
 	padding-left: 0;
