@@ -16,6 +16,9 @@
 #sb-sec:hover {
 	overflow-y: auto;
 }
+#sb-sec .card {
+	color: inherit;
+}
 #sb-sec::-webkit-scrollbar {
 	width: 8px;
 }
