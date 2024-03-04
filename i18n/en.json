@@ -53,6 +53,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "More Subpages",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "More Subpages",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Main Page",
+	"bs-discovery-title-last-edit-info-date-only": "Last edited $1",
 	"bs-discovery-title-last-edit-info": "Last edited $1 <br /> by $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Last edit $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Last edit by $1",
