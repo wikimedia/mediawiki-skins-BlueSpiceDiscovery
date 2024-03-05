@@ -181,5 +181,6 @@
 	"bs-discovery-footerlinks-imprint-link-desc": "Kolofon",
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Kolofon",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Pogoji uporabe",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Pogoji_uporabe"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Pogoji_uporabe",
+	"bs-discovery-title-last-edit-info-date-only": "Zadnje urejanje: $1"
 }

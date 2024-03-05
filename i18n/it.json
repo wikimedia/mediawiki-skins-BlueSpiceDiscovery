@@ -58,5 +58,6 @@
 	"bs-discovery-page-version-pager-previous": "Precedente",
 	"bs-discovery-page-version-pager-next": "Successivo",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Condizioni del servizio",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Condizioni_del_servizio"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Condizioni_del_servizio",
+	"bs-discovery-title-last-edit-info-date-only": "Ultima modifica $1"
 }
