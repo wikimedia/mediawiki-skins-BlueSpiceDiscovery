@@ -53,6 +53,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "Več podstrani",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Več podstrani",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Glavna stran",
+	"bs-discovery-title-last-edit-info-date-only": "Zadnje urejanje: $1",
 	"bs-discovery-title-last-edit-info": "Zadnje urejanje $1 <br /> osebe $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Zadnje urejanje $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Zadnjič uredila oseba $1",

@@ -52,6 +52,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "Уште потстраници",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Уште потстраници",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Главна страница",
+	"bs-discovery-title-last-edit-info-date-only": "Последно уредување на $1",
 	"bs-discovery-title-last-edit-info": "Последно уредено на $1 <br /> од $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Последно уредување на $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Последно уредување од $1",
