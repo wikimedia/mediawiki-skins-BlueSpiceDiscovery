@@ -180,5 +180,6 @@
 	"bs-discovery-config-mainlinks-categories-label": "הצגת נקודת הכניסה \"קטגוריות\"",
 	"bs-discovery-config-mainlinks-categories-help": "הצגת נקודת הכניסה \"קטגוריות\" בסרגל הניווט הימני",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "תנאי השירות",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:תנאי_השירות"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:תנאי_השירות",
+	"bs-discovery-title-last-edit-info-date-only": "נערך לאחרונה ב־$1"
 }

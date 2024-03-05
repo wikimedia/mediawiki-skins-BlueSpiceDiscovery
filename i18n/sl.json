@@ -183,5 +183,6 @@
 	"bs-discovery-config-mainlinks-categories-label": "Prikaži vstopno točko »Kategorije«",
 	"bs-discovery-config-mainlinks-categories-help": "V navigaciji levo prikaži povezavo vstopne točke »Kategorije«",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Pogoji uporabe",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Pogoji_uporabe"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Pogoji_uporabe",
+	"bs-discovery-title-last-edit-info-date-only": "Zadnje urejanje: $1"
 }

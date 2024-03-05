@@ -180,5 +180,6 @@
 	"bs-discovery-config-mainlinks-categories-label": "Прикажувај пристапна точка „Категории“",
 	"bs-discovery-config-mainlinks-categories-help": "Прикажувај пристапна точка „Категории“ во страничникот лево",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Услови на употреба",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Услови_на_употреба"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Услови_на_употреба",
+	"bs-discovery-title-last-edit-info-date-only": "Последно уредување на $1"
 }
