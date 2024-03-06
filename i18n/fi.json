@@ -39,6 +39,7 @@
 	"bs-discovery-breadcrumb-nav-node-title": "Avaa $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Avaa $1",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Etusivu",
+	"bs-discovery-title-last-edit-info-date-only": "Viimeksi muokattu $1",
 	"bs-discovery-title-last-edit-info": "Viimeksi muokannut käyttäjä $1 <br /> kello $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Viimeisin muokkaus $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Viimeksi muokannut käyttäjä $1",
