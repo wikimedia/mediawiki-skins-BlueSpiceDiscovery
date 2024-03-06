@@ -104,5 +104,6 @@
 	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Muokkaa $1",
 	"bs-discovery-page-version-pager-previous": "Edellinen",
 	"bs-discovery-page-version-pager-next": "Seuraava",
-	"bs-discovery-footerlinks-termsofservice-link-desc": "Käyttöehdot"
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Käyttöehdot",
+	"bs-discovery-title-last-edit-info-date-only": "Viimeksi muokattu $1"
 }
