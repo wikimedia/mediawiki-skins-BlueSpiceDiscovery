@@ -82,5 +82,6 @@
 	"bs-discovery-navbar-global-actions-administration-text": "Administratioun",
 	"bs-discovery-mainlinks-allpages-label": "Säiten",
 	"bs-discovery-mainlinks-categories-label": "Kategorien",
-	"bs-discovery-mainlinks-listfiles-label": "Fichieren"
+	"bs-discovery-mainlinks-listfiles-label": "Fichieren",
+	"bs-discovery-title-last-edit-info-date-only": "Fir d'lescht geännert $1"
 }
