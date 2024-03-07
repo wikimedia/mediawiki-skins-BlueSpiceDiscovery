@@ -80,5 +80,6 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (Säit gëtt et net)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigatioun",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Dëse Menü änneren",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 änneren"
+	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 änneren",
+	"bs-discovery-title-last-edit-info-date-only": "Fir d'lescht geännert $1"
 }
