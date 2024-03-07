@@ -31,6 +31,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "Méi Ënnersäiten",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Méi Ënnersäiten",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Haaptsäit",
+	"bs-discovery-title-last-edit-info-date-only": "Fir d'lescht geännert $1",
 	"bs-discovery-title-last-edit-info": "Lescht Ännerung den $1  <br /> vum $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Lescht Ännerung $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Lescht Ännerung vum $1",
