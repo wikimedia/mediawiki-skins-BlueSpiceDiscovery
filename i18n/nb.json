@@ -180,5 +180,6 @@
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Bruksvilkår",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Bruksvilkår",
 	"bs-discovery-footerlinks-imprint-link-desc": "Utgiver",
-	"bs-discovery-footerlinks-imprint-link-page": "Site:Utgiver"
+	"bs-discovery-footerlinks-imprint-link-page": "Site:Utgiver",
+	"bs-discovery-title-last-edit-info-date-only": "Sist redigert $1"
 }

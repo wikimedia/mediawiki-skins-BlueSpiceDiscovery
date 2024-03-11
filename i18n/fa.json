@@ -21,5 +21,6 @@
 	"bs-discovery-navbar-global-actions-administration-text": "مدیریت",
 	"bs-discovery-mainlinks-allpages-label": "صفحات",
 	"bs-discovery-mainlinks-categories-label": "رده‌ها",
-	"bs-discovery-mainlinks-listfiles-label": "پرونده‌ها"
+	"bs-discovery-mainlinks-listfiles-label": "پرونده‌ها",
+	"bs-discovery-title-last-edit-info-date-only": "آخرین ویرایش در $1"
 }
