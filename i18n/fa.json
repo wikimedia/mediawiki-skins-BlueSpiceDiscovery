@@ -21,5 +21,6 @@
 	"menueditor-ui-enhanced-sidebar-panel-heading-label-edit": "سرآیند پنل",
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "افزودن پنل جدید",
 	"bs-discovery-page-version-pager-deleted-user": "(نام کاربری حذف شده است)",
-	"bs-discovery-page-version-pager-previous": "قبلی"
+	"bs-discovery-page-version-pager-previous": "قبلی",
+	"bs-discovery-title-last-edit-info-date-only": "آخرین ویرایش در $1"
 }
