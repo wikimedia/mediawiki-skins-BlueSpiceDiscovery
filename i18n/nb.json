@@ -52,6 +52,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "Flere undersider",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Flere undersider",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Hovedside",
+	"bs-discovery-title-last-edit-info-date-only": "Sist redigert $1",
 	"bs-discovery-title-last-edit-info": "Sist redigert $1 <br /> av $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Siste redigering $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Siste redigering av $1",
