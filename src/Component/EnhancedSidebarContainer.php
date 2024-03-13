@@ -211,10 +211,7 @@ class EnhancedSidebarContainer extends Container implements LoggerAwareInterface
 			'href' => $this->title->getEditURL(),
 			'text' => Message::newFromKey( 'bs-discovery-edit-mediawiki-sidebar-link-text' ),
 			'title' => Message::newFromKey( 'bs-discovery-enhanced-sidebar-edit-button-title' ),
-			'aria-label' => Message::newFromKey(
-					'bs-discovery-enhanced-sidebar-edit-button-aria-label',
-					$this->title->getFullText()
-				),
+			'aria-label' => Message::newFromKey( 'bs-discovery-edit-mediawiki-sidebar-link-text' ),
 			'permissions' => [ 'editinterface' ],
 		] );
 
