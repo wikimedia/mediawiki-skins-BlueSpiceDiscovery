@@ -179,5 +179,6 @@
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint",
 	"bs-discovery-tabpanel-page-desc": "A navegación de accións e ferramentas da páxina contén as lapelas, a caixa de ferramentas e as accións",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Termos de servizo",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Termos_de_servizo"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Termos_de_servizo",
+	"bs-discovery-title-last-edit-info-date-only": "Última edición o $1"
 }
