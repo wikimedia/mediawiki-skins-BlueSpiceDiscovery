@@ -53,6 +53,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "Máis subpáxinas",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Máis subpáxinas",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Páxina principal",
+	"bs-discovery-title-last-edit-info-date-only": "Última edición o $1",
 	"bs-discovery-title-last-edit-info": "Última edición o $1 <br /> por $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Última edición o $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Última edición por $1",
