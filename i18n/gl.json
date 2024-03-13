@@ -181,5 +181,6 @@
 	"bs-discovery-config-mainlinks-categories-label": "Mostrar o punto de entrada \"Categorías\"",
 	"bs-discovery-config-mainlinks-categories-help": "Mostrar a ligazón ao punto de entrada \"Categorías\" na navegación esquerda",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Termos de servizo",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Termos_de_servizo"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Termos_de_servizo",
+	"bs-discovery-title-last-edit-info-date-only": "Última edición o $1"
 }
