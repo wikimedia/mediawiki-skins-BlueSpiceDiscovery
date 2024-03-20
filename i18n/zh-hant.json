@@ -182,5 +182,6 @@
 	"bs-discovery-footerlinks-imprint-link-desc": "印記",
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "服務條款",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:服務條款"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:服務條款",
+	"bs-discovery-title-last-edit-info-date-only": "上一次編輯於 $1"
 }
