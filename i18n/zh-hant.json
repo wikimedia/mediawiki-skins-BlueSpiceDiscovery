@@ -54,6 +54,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "更多子頁面",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "更多子頁面",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "首頁",
+	"bs-discovery-title-last-edit-info-date-only": "上一次編輯於 $1",
 	"bs-discovery-title-last-edit-info": "最後編輯於$1 <br /> 由$2編輯",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "最後編輯於$1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "最後由$1編輯",
