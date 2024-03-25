@@ -7,7 +7,8 @@
 			"Gomoko",
 			"McDutchie",
 			"Verdy p",
-			"Vikoula5"
+			"Vikoula5",
+			"Wladek92"
 		]
 	},
 	"bs-discovery-name": "BlueSpice Discovery",
@@ -189,5 +190,6 @@
 	"bs-discovery-config-mainlinks-categories-label": "Afficher le point d'entrée \"Categories\"",
 	"bs-discovery-config-mainlinks-categories-help": "Afficher le lien « Catégories » du point d'entrée dans la navigation de gauche",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Conditions d’utilisation",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Conditions_de_service"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Conditions_de_service",
+	"bs-discovery-title-last-edit-info-date-only": "Dernière modification $1"
 }
