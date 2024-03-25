@@ -7,7 +7,8 @@
 			"Gomoko",
 			"McDutchie",
 			"Verdy p",
-			"Vikoula5"
+			"Vikoula5",
+			"Wladek92"
 		]
 	},
 	"bs-discovery-name": "BlueSpice Discovery",
@@ -59,6 +60,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "Plus de sous-pages",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Plus de sous-pages",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Accueil",
+	"bs-discovery-title-last-edit-info-date-only": "Dernière modification $1",
 	"bs-discovery-title-last-edit-info": "Dernière modification le $1<br /> par $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Dernière modification le $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Dernière modification par $1",
