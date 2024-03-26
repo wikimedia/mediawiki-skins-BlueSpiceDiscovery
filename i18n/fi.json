@@ -105,5 +105,7 @@
 	"bs-discovery-page-version-pager-previous": "Edellinen",
 	"bs-discovery-page-version-pager-next": "Seuraava",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Käyttöehdot",
-	"bs-discovery-title-last-edit-info-date-only": "Viimeksi muokattu $1"
+	"bs-discovery-title-last-edit-info-date-only": "Viimeksi muokattu $1",
+	"menueditor-ui-enhanced-sidebar-internal-link-label-edit": "Sisäinen linkki",
+	"menueditor-ui-enhanced-sidebar-external-link-label-edit": "Ulkoinen linkki"
 }
