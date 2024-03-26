@@ -88,6 +88,8 @@
 	"ns-main-label": "Sivut",
 	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Päävalikko",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "Sivu",
+	"menueditor-ui-enhanced-sidebar-internal-link-label-edit": "Sisäinen linkki",
+	"menueditor-ui-enhanced-sidebar-external-link-label-edit": "Ulkoinen linkki",
 	"menueditor-ui-enhanced-sidebar-subpage-tree-label-edit": "Alasivupuu",
 	"menueditor-ui-enhanced-sidebar-external-link-label": "Ulkoinen linkki",
 	"menueditor-ui-enhanced-sidebar-internal-link-label": "Sisäinen linkki",
