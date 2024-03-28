@@ -122,6 +122,7 @@ class Footer extends SkinStructureBase implements IBaseTemplateAware {
 		$items = [];
 		$footericons = $this->template->get( 'footericons' );
 		$items = $footericons['poweredby'];
+		$urlUtils = $this->services->getUrlUtils();
 
 		foreach ( $items as $key => &$item ) {
 			$validHref = isset( $item['url'] )
@@ -129,7 +130,7 @@ class Footer extends SkinStructureBase implements IBaseTemplateAware {
 				&& ( strpos( $item['url'], '#' ) !== 0 );
 
 			if ( $validHref ) {
-				$parsedURL = wfParseUrl( $item['url'] );
+				$parsedURL = $urlUtils->parse( $item['url'] );
 				if ( $parsedURL ) {
 					$item['target'] = '_blank';
 				}
