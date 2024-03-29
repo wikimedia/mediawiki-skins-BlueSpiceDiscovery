@@ -6,7 +6,8 @@
 			"Mschlindwein",
 			"Osnard",
 			"Robert Vogel",
-			"ThisCarthing"
+			"ThisCarthing",
+			"TomatoCake"
 		]
 	},
 	"bs-discovery-name": "BlueSpice Discovery",
@@ -58,6 +59,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "Mehr Unterseiten",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Mehr Unterseiten",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Hauptseite",
+	"bs-discovery-title-last-edit-info-date-only": "Zuletzt bearbeitet am $1",
 	"bs-discovery-title-last-edit-info": "Zuletzt bearbeitet $1 <br /> von $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Zuletzt bearbeitet $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Zuletzt bearbeitet von $1",
@@ -119,7 +121,7 @@
 	"bs-discovery-config-mainlinks-mainpage-label": "Einstiegspunkt \"Hauptseite\" anzeigen",
 	"bs-discovery-config-mainlinks-mainpage-help": "Einstiegspunkt \"Hauptseite\" in der linken Navigation anzeigen",
 	"bs-discovery-config-mainlinks-allpages-label": "Einstiegspunkt \"Seiten\" anzeigen",
-	"bs-discovery-config-mainlinks-allpages-help": "Einstiegspunkt \"Seiten\" in der linken Navigation anzeigen",
+	"bs-discovery-config-mainlinks-allpages-help": "Einstiegspunkt \"Seiten\" als Link in der linken Seitenleiste anzeigen",
 	"bs-discovery-config-mainlinks-listfiles-label": "Einstiegspunkt \"Dateien\" anzeigen",
 	"bs-discovery-config-mainlinks-listfiles-help": "Einstiegspunkt \"Dateien\" in der linken Navigation anzeigen",
 	"bs-discovery-config-mainlinks-categories-label": "Einstiegspunkt \"Kategorien\" anzeigen",
@@ -181,6 +183,7 @@
 	"bs-discovery-page-version-pager-next": "Nächste",
 	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Twitter Bootstrap-Framework, das für BlueSpiceDiscovery verwendet wird. ([https://getbootstrap.com/ https://getbootstrap.com])",
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Twitter Bootstrap-Symbole, die für BlueSpiceDiscovery und Inhalte verwendet werden. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
+	"bs-discovery-edit-footerlinks-link-text": "Links in der Fußzeile bearbeiten",
 	"bs-discovery-footerlinks-imprint-link-desc": "Impressum",
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Nutzungsbedingungen",
