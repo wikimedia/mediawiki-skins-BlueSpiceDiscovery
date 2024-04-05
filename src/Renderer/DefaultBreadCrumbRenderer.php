@@ -128,7 +128,7 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 		}
 
 		$this->options['rootNode'] = [
-			'text' => $rootNodeText,
+			'text' => str_replace( '_', ' ', $rootNodeText ),
 			'href' => $rootNodeUrl,
 			'role' => 'link',
 			'title' => $rootNodeText,
