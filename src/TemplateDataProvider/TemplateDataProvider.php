@@ -337,8 +337,8 @@ class TemplateDataProvider implements ITemplateDataProvider {
 	 * @return void
 	 */
 	private function makePanelPrint(): void {
-		$idList = [ 't-print' ];
-		$this->registerLinks( 'panel/export', $idList );
+		/** We don't want to show a print link - ERM36321 */
+		$this->delete( 'actioncollection/toolbox', 't-print' );
 	}
 
 	/**
