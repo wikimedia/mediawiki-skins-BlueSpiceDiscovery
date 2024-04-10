@@ -162,7 +162,6 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (страницата не постои)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Прегледник",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Уреди го мениво",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Уреди $1",
 	"bs-discovery-config-meta-items-header-label": "Елементи под насловот на страницата",
 	"bs-discovery-config-meta-items-header-help": "Избраните елементи се прикажуваат под насловот на страницата",
 	"bs-discovery-config-meta-items-footer-label": "Елементи под содржината на страницата",

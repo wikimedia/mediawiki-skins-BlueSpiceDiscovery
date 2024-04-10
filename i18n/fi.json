@@ -104,7 +104,6 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (sivua ei ole)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigaatio",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Muokkaa tätä valikkoa",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Muokkaa $1",
 	"bs-discovery-page-version-pager-previous": "Edellinen",
 	"bs-discovery-page-version-pager-next": "Seuraava",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Käyttöehdot"

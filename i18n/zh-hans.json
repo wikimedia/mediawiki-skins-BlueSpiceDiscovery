@@ -154,7 +154,6 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS类",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "图标类",
 	"bs-discovery-page-does-not-exist-title": "$1（页面不存在）",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "编辑$1",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "服务条款",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:服务条款"
 }

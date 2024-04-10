@@ -162,7 +162,6 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (страница не существует)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Навигация",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Редактировать это меню",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Редактировать $1",
 	"bs-discovery-config-meta-items-header-label": "Элементы под заголовком страницы",
 	"bs-discovery-config-meta-items-header-help": "Выбранные элементы отображаются под заголовком страницы",
 	"bs-discovery-config-meta-items-footer-label": "Элементы под содержимым страницы",

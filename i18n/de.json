@@ -171,7 +171,6 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (Seite existiert nicht)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigation",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Dieses Menü bearbeiten",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "$1 bearbeiten",
 	"bs-discovery-config-meta-items-header-label": "Elemente unterhalb des Seitentitels",
 	"bs-discovery-config-meta-items-header-help": "Ausgewählte Elemente werden unterhalb des Seitentitels angezeigt",
 	"bs-discovery-config-meta-items-footer-label": "Elemente unterhalb des Seiteninhalts",

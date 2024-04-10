@@ -163,7 +163,6 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (a páxina aínda non existe)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navegación",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Editar este menú",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Editar \"$1\"",
 	"bs-discovery-config-meta-items-header-label": "Elementos debaixo do título da páxina",
 	"bs-discovery-config-meta-items-header-help": "Os elementos seleccionados amósanse debaixo do título da páxina",
 	"bs-discovery-config-meta-items-footer-label": "Elementos debaixo do contido da páxina",

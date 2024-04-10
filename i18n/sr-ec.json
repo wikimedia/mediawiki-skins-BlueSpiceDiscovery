@@ -70,7 +70,6 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (страница не постоји)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Навигација",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Уреди овај мени",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Уреди $1",
 	"bs-discovery-page-version-pager-deleted-user": "(корисничко име уклоњено)",
 	"bs-discovery-page-version-pager-previous": "Претходно",
 	"bs-discovery-page-version-pager-next": "Следеће",
