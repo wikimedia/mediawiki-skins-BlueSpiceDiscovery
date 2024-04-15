@@ -52,6 +52,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "Plus subpaginas",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Plus subpaginas",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Pagina principal",
+	"bs-discovery-title-last-edit-info-date-only": "Ultime modification le $1",
 	"bs-discovery-title-last-edit-info": "Ultime modification $1 <br /> per $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Ultime modification $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Ultime modification per $1",
