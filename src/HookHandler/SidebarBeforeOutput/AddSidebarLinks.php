@@ -32,11 +32,6 @@ class AddSidebarLinks implements SidebarBeforeOutputHook {
 	 * @return void
 	 */
 	public function onSidebarBeforeOutput( $skin, &$sidebar ): void {
-		// Bail out for BlueSpiceCalumma
-		if ( $skin->getSkinName() === 'bluespicecalumma' ) {
-			return;
-		}
-
 		if ( !empty( $sidebar['TOOLBOX']['permalink'] ) ) {
 			$sidebar['TOOLBOX']['permalink']['text'] = $skin->msg( 'bs-discovery-permalink-copy-text' );
 		}
