@@ -9,6 +9,7 @@ use BlueSpice\Discovery\ISkinLayoutAware;
 use BlueSpice\Discovery\ISkinLayoutRenderer;
 use BlueSpice\Discovery\ITemplateProvider;
 use Exception;
+use OutputPage;
 use TemplateParser;
 
 class SkinLayoutRenderer implements ISkinLayoutRenderer {
@@ -65,6 +66,13 @@ class SkinLayoutRenderer implements ISkinLayoutRenderer {
 	 */
 	private function getAllStructureElementsHtml(): array {
 		$params = [];
+
+		if ( $this->skinLayout instanceof IBaseTemplateAware ) {
+			/** @var OutputPage */
+			$out = $this->skinLayout->template->getSkin()->getOutput();
+			$params['nonce'] = $out->getCSP()->getNonce();
+		}
+
 		$skinStructureElements = $this->skinLayout->getSkinStructureElements();
 		foreach ( $skinStructureElements as $skinStructureElement ) {
 			if ( $skinStructureElement instanceof IBaseTemplateAware ) {
