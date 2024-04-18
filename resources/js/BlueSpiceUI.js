@@ -264,4 +264,9 @@
 	*/
 
 
+	// Fix for new content dropdown focus if dialog is opened - ERM36346
+	$( '#new-content-itms .dropdown-item' ).on( 'click', function ( e ) {
+		$( '#new-content-menu-btn' ).focus();
+	} );
+
 })( document, jQuery, mediaWiki );
