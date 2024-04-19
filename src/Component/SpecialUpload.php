@@ -2,6 +2,7 @@
 
 namespace BlueSpice\Discovery\Component;
 
+use IContextSource;
 use MediaWiki\MediaWikiServices;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink;
@@ -9,11 +10,20 @@ use SpecialPage;
 
 class SpecialUpload extends RestrictedTextLink {
 
-	/**
-	 *
-	 */
+	/** @var SpecialPage|null */
+	private $specialPage;
+
 	public function __construct() {
 		parent::__construct( [] );
+		$this->specialPage = MediaWikiServices::getInstance()->getSpecialPageFactory()
+			->getPage( 'Upload' );
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function shouldRender( IContextSource $context ): bool {
+		return (bool)$this->specialPage;
 	}
 
 	/**
@@ -29,9 +39,7 @@ class SpecialUpload extends RestrictedTextLink {
 	 * @return string
 	 */
 	public function getHref(): string {
-		/** @var Title */
-		$specialpage = SpecialPage::getTitleFor( 'Upload' );
-		return $specialpage->getLocalURL();
+		return $this->specialPage->getPageTitle()->getLocalURL();
 	}
 
 	/**
@@ -47,9 +55,7 @@ class SpecialUpload extends RestrictedTextLink {
 	 * @return Message
 	 */
 	public function getText(): Message {
-		$specialpage = MediaWikiServices::getInstance()->getSpecialPageFactory()
-		->getPage( 'Upload' );
-		return $this->ensureMessageObject( $specialpage->getDescription() );
+		return $this->ensureMessageObject( $this->specialPage->getDescription() );
 	}
 
 	/**
@@ -57,9 +63,7 @@ class SpecialUpload extends RestrictedTextLink {
 	 * @return Message
 	 */
 	public function getTitle(): Message {
-		$specialpage = MediaWikiServices::getInstance()->getSpecialPageFactory()
-		->getPage( 'Upload' );
-		return $this->ensureMessageObject( $specialpage->getDescription() );
+		return $this->ensureMessageObject( $this->specialPage->getDescription() );
 	}
 
 	/**
@@ -67,8 +71,6 @@ class SpecialUpload extends RestrictedTextLink {
 	 * @return Message
 	 */
 	public function getAriaLabel(): Message {
-		$specialpage = MediaWikiServices::getInstance()->getSpecialPageFactory()
-		->getPage( 'Upload' );
-		return $this->ensureMessageObject( $specialpage->getDescription() );
+		return $this->ensureMessageObject( $this->specialPage->getDescription() );
 	}
 }
