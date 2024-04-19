@@ -86,4 +86,11 @@ class Menu implements ParsableMenu {
 			$this->parserFactory->getNodeProcessors()
 		);
 	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function getToolbarItems(): array {
+		return [];
+	}
 }
