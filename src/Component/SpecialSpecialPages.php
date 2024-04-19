@@ -2,6 +2,7 @@
 
 namespace BlueSpice\Discovery\Component;
 
+use IContextSource;
 use MediaWiki\MediaWikiServices;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink;
@@ -10,11 +11,20 @@ use SpecialPage;
 
 class SpecialSpecialPages extends RestrictedTextLink {
 
-	/**
-	 *
-	 */
+	/** @var SpecialPage|null */
+	private $specialPage;
+
 	public function __construct() {
 		parent::__construct( [] );
+		$this->specialPage = MediaWikiServices::getInstance()->getSpecialPageFactory()
+			->getPage( 'Specialpages' );
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function shouldRender( IContextSource $context ): bool {
+		return (bool)$this->specialPage;
 	}
 
 	/**
@@ -30,9 +40,7 @@ class SpecialSpecialPages extends RestrictedTextLink {
 	 * @return string
 	 */
 	public function getHref(): string {
-		/** @var Title */
-		$specialpage = SpecialPage::getTitleFor( 'Specialpages' );
-		return $specialpage->getLocalURL();
+		return $this->specialPage->getPageTitle()->getLocalURL();
 	}
 
 	/**
@@ -48,9 +56,7 @@ class SpecialSpecialPages extends RestrictedTextLink {
 	 * @return Message
 	 */
 	public function getText(): Message {
-		$specialpage = MediaWikiServices::getInstance()->getSpecialPageFactory()
-		->getPage( 'Specialpages' );
-		return $this->ensureMessageObject( $specialpage->getDescription() );
+		return $this->ensureMessageObject( $this->specialPage->getDescription()) );
 	}
 
 	/**
@@ -58,9 +64,7 @@ class SpecialSpecialPages extends RestrictedTextLink {
 	 * @return Message
 	 */
 	public function getTitle(): Message {
-		$specialpage = MediaWikiServices::getInstance()->getSpecialPageFactory()
-		->getPage( 'Specialpages' );
-		return $this->ensureMessageObject( $specialpage->getDescription() );
+		return $this->ensureMessageObject( $this->specialPage->getDescription() );
 	}
 
 	/**
@@ -68,9 +72,7 @@ class SpecialSpecialPages extends RestrictedTextLink {
 	 * @return Message
 	 */
 	public function getAriaLabel(): Message {
-		$specialpage = MediaWikiServices::getInstance()->getSpecialPageFactory()
-		->getPage( 'Specialpages' );
-		return $this->ensureMessageObject( $specialpage->getDescription() );
+		return $this->ensureMessageObject( $this->specialPage->getDescription() );
 	}
 
 	/**
