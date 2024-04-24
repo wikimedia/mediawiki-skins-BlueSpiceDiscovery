@@ -67,7 +67,7 @@
 	"bs-discovery-tabpanel-main-aria-label": "Main navigation",
 	"bs-discovery-tabpanel-main-desc": "Main navigation contains tabs, main links and MediaWiki sidebar",
 	"bs-discovery-tabpanel-page-text": "Page actions navigation",
-	"bs-discovery-tabpanel-page-title": "Tab with page page actions and tools",
+	"bs-discovery-tabpanel-page-title": "Tab with page actions and tools",
 	"bs-discovery-tabpanel-page-aria-label": "Page actions and tools navigation",
 	"bs-discovery-tabpanel-page-desc": "Page actions and tools navigaiton contains tabs, toolbox and actions",
 	"bs-discovery-sidebar-primary-toggle-show-title": "Open primary sidebar",
