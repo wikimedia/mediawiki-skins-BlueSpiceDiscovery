@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Умар"
+			"\u0423\u043c\u0430\u0440"
 		]
 	},
-	"bs-discovery-navbar-global-actions-tool-text": "ГӀирсаш",
-	"bs-discovery-sidebar-actions-heading": "Ардамаш",
-	"bs-discovery-personalurl-mycontributions-text": "Къинхьегам",
-	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Коьрта меню"
+	"bs-discovery-navbar-global-actions-tool-text": "\u0413\u04c0\u0438\u0440\u0441\u0430\u0448",
+	"bs-discovery-sidebar-actions-heading": "\u0410\u0440\u0434\u0430\u043c\u0430\u0448",
+	"bs-discovery-personalurl-mycontributions-text": "\u041a\u044a\u0438\u043d\u0445\u044c\u0435\u0433\u0430\u043c",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "\u041a\u043e\u044c\u0440\u0442\u0430 \u043c\u0435\u043d\u044e"
 }

@@ -4,10 +4,10 @@
 			"Abijeet Patro"
 		]
 	},
-	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "पृष्ठ",
-	"bs-discovery-enhanced-mediawiki-sidebar-field-depth": "गहराई",
-	"bs-discovery-page-version-pager-previous": "पिछला",
-	"bs-discovery-page-version-pager-next": "अगला",
-	"bs-discovery-mainlinks-listfiles-label": "फ़ाइलें",
-	"bs-discovery-footerlinks-termsofservice-link-desc": "सेवा की शर्तें"
+	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "\u092a\u0943\u0937\u094d\u0920",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-depth": "\u0917\u0939\u0930\u093e\u0908",
+	"bs-discovery-page-version-pager-previous": "\u092a\u093f\u091b\u0932\u093e",
+	"bs-discovery-page-version-pager-next": "\u0905\u0917\u0932\u093e",
+	"bs-discovery-mainlinks-listfiles-label": "\u092b\u093c\u093e\u0907\u0932\u0947\u0902",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "\u0938\u0947\u0935\u093e \u0915\u0940 \u0936\u0930\u094d\u0924\u0947\u0902"
 }

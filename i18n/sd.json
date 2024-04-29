@@ -4,11 +4,13 @@
 			"Mehtab ahmed"
 		]
 	},
-	"bs-discovery-navbar-global-actions-tool-text": "اوزارَ",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "نانءُپولار",
-	"bs-discovery-sidebar-actions-heading": "عمل",
-	"bs-discovery-dialog-detailssectionheading-namespaces": "نانءُپولارَ",
-	"bs-discovery-breadcrumb-label-special-linkliste": "ڳنڍڻا",
-	"bs-discovery-breadcrumb-label-action-edit": "سنواريو",
-	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "مک مينيو"
+	"bs-discovery-navbar-global-actions-tool-text": "\u0627\u0648\u0632\u0627\u0631\u064e",
+	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "\u0646\u0627\u0646\u0621\u064f\u067e\u0648\u0644\u0627\u0631",
+	"bs-discovery-sidebar-actions-heading": "\u0639\u0645\u0644",
+	"bs-discovery-dialog-detailssectionheading-namespaces": "\u0646\u0627\u0646\u0621\u064f\u067e\u0648\u0644\u0627\u0631\u064e",
+	"bs-discovery-breadcrumb-label-special-linkliste": "\u06b3\u0646\u068d\u06bb\u0627",
+	"bs-discovery-breadcrumb-label-action-edit": "\u0633\u0646\u0648\u0627\u0631\u064a\u0648",
+	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "\u0645\u06a9 \u0645\u064a\u0646\u064a\u0648",
+	"bs-discovery-title-last-edit-info-date-only": "$1\u0639 \u062a\u064a \u0622\u062e\u0631\u064a \u0680\u064a\u0631\u0648 \u0633\u0646\u0648\u0627\u0631\u064a\u0648 \u0648\u064a\u0648",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-href": "\u064a\u0648\u0622\u0631\u0627\u064a\u0644"
 }
