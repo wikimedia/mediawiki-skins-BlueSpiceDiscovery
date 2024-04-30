@@ -10,6 +10,7 @@ use BlueSpice\Discovery\ITemplateDataProvider;
 use BlueSpice\Discovery\ITemplateProvider;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
 use IContextSource;
+use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
 use MWStake\MediaWiki\Component\CommonUserInterface\ITabPanel;
 use MWStake\MediaWiki\Component\CommonUserInterface\SkinSlotRegistry;
@@ -252,8 +253,11 @@ abstract class StackedTabPanelContainerBase
 	 */
 	public function getParams(): array {
 		$this->buildTabPanels();
+		// bs-discovery-sidebar-primary-aria-label
+		// bs-discovery-sidebar-secondary-aria-label
 		$params = [
-			'id' => $this->getId()
+			'id' => $this->getId(),
+			'aria-label' => Message::newFromKey( 'bs-discovery-' . $this->getName() . '-aria-label' )->text()
 		];
 		if ( !empty( $this->getClasses() ) ) {
 			$params = array_merge(
