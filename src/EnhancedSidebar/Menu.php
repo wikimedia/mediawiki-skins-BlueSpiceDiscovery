@@ -3,6 +3,7 @@
 namespace BlueSpice\Discovery\EnhancedSidebar;
 
 use BlueSpice\Discovery\EnhancedSidebar\Parser as EnhancedSidebarParser;
+use MediaWiki\Extension\MenuEditor\EditPermissionProvider;
 use MediaWiki\Extension\MenuEditor\ParsableMenu;
 use MediaWiki\Extension\MenuEditor\Parser\IMenuParser;
 use MediaWiki\Revision\MutableRevisionRecord;
@@ -12,7 +13,7 @@ use MWException;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use Title;
 
-class Menu implements ParsableMenu {
+class Menu implements ParsableMenu, EditPermissionProvider {
 	/** @var string */
 	private $pagename;
 	/** @var ParserFactory */
