@@ -173,19 +173,19 @@
 				}
 			},
 			"EnhancedSidebarNodeProcessors": {
-				"internal": {
+				"enhanced-sidebar-internal-link": {
 					"class": "BlueSpice\\Discovery\\EnhancedSidebar\\NodeProcessor\\InternalLinkProcessor",
 					"services": [ "PermissionManager", "ParserFactory", "TitleFactory" ]
 				},
-				"external": {
+				"enhanced-sidebar-external-link": {
 					"class": "BlueSpice\\Discovery\\EnhancedSidebar\\NodeProcessor\\ExternalLinkProcessor",
 					"services": [ "ParserFactory" ]
 				},
-				"subpage-tree": {
+				"enhanced-sidebar-subpage-tree": {
 					"class": "BlueSpice\\Discovery\\EnhancedSidebar\\NodeProcessor\\SubpageListProcessor",
 					"services": [ "PermissionManager", "ParserFactory", "TitleFactory" ]
 				},
-				"panel-heading": {
+				"enhanced-sidebar-panel-heading": {
 					"class": "BlueSpice\\Discovery\\EnhancedSidebar\\NodeProcessor\\PanelHeadingProcessor",
 					"services": [ "ParserFactory" ]
 				}

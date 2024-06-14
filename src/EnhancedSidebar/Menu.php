@@ -4,6 +4,7 @@ namespace BlueSpice\Discovery\EnhancedSidebar;
 
 use BlueSpice\Discovery\EnhancedSidebar\Parser as EnhancedSidebarParser;
 use MediaWiki\Extension\MenuEditor\EditPermissionProvider;
+use MediaWiki\Extension\MenuEditor\Menu\GenericMenu;
 use MediaWiki\Extension\MenuEditor\ParsableMenu;
 use MediaWiki\Extension\MenuEditor\Parser\IMenuParser;
 use MediaWiki\Revision\MutableRevisionRecord;
@@ -13,18 +14,17 @@ use MWException;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use Title;
 
-class Menu implements ParsableMenu, EditPermissionProvider {
+class Menu extends GenericMenu implements ParsableMenu, EditPermissionProvider {
 	/** @var string */
 	private $pagename;
-	/** @var ParserFactory */
-	private $parserFactory;
 
 	/**
+	 * @param ParserFactory $parserFactory
 	 * @param string $pagename
 	 */
 	public function __construct( ParserFactory $parserFactory, string $pagename ) {
+		parent::__construct( $parserFactory );
 		$this->pagename = $pagename;
-		$this->parserFactory = $parserFactory;
 	}
 
 	/**
@@ -86,6 +86,16 @@ class Menu implements ParsableMenu, EditPermissionProvider {
 			$revisionRecord,
 			$this->parserFactory->getNodeProcessors()
 		);
+	}
+
+	/**
+	 * @return string[]
+	 */
+	public function getAllowedNodes(): array {
+		return [
+			'enhanced-sidebar-panel-heading', 'enhanced-sidebar-external-link',
+			'enhanced-sidebar-internal-link', 'enhanced-sidebar-subpage-tree'
+		];
 	}
 
 	/**
