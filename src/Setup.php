@@ -87,6 +87,9 @@ class Setup {
 		$GLOBALS['mwsgWikitextNodeProcessorRegistry'] += \ExtensionRegistry::getInstance()->getAttribute(
 			"BlueSpiceDiscoveryEnhancedSidebarNodeProcessors"
 		);
+
+		// Allow language selector to know the correct language based on subpages ERM36861
+		$GLOBALS['wgPageLanguageUseDB'] = true;
 	}
 
 	/**
