@@ -36,3 +36,7 @@ body.mediawiki .ve-init-sa-target-toolbar > .oo-ui-toolbar-bar > .oo-ui-toolbar-
     padding-right: 3px;
 }
 
+/* Fix inspector popup behind toolbar - ERM37546 */
+.oo-ui-popupWidget.ext-visualEditorPlus-inlineTextInspector {
+	z-index: 2;
+}
