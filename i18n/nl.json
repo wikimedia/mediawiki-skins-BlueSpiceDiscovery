@@ -4,7 +4,8 @@
 			"AHendriksen-collecties",
 			"Mainframe98",
 			"McDutchie",
-			"Nickthijssen1994"
+			"Nickthijssen1994",
+			"Romaine"
 		]
 	},
 	"bs-discovery-desc": "BlueSpice uiterlijk",
@@ -54,6 +55,7 @@
 	"bs-discovery-title-action-language-button-aria-label": "Taal selecteren",
 	"bs-discovery-tabpanel-main-text": "Hoofdnavigatie",
 	"bs-discovery-tabpanel-main-aria-label": "Hoofdnavigatie",
+	"bs-discovery-tabpanel-main-desc": "Hoofdnavigatie bevat tabbladen, hoofdlinks en MediaWiki-zijbalk",
 	"bs-discovery-sidebar-primary-toggle-show-title": "Primaire zijbalk openen",
 	"bs-discovery-sidebar-primary-toggle-show-aria-label": "Primaire zijbalk openen",
 	"bs-discovery-sidebar-secondary-export-link-title": "Exportopties",
@@ -87,10 +89,15 @@
 	"bs-discovery-globalactionentry-templates-text": "Sjablonen",
 	"bs-discovery-globalactionentry-templates-title": "Alle sjablonen",
 	"bs-discovery-last-edit-by-system-user": "systeemgebruiker",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "MediaWiki-zijbalk",
+	"bs-discovery-menu-provider-mediawiki-sidebar-desc": "Een MediaWiki-zijbalkmenu met slechts één niveau aan menu-items",
 	"bs-discovery-subpage-tree-pnl-header-text": "Subpagina's",
 	"ns-main-label": "Pagina's",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Verbeterde MediaWiki-zijbalk",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Een MediaWiki sidebar met verbeterde functie",
 	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "Hoofdmenu",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "Pagina",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-text": "Label",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-depth": "Diepte",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-href": "URL",
 	"menueditor-ui-enhanced-sidebar-internal-link-label-edit": "Interne koppeling",
@@ -112,5 +119,7 @@
 	"bs-discovery-page-version-pager-deleted-user": "(gebruikersnaam verwijderd)",
 	"bs-discovery-page-version-pager-info-text": "Dit is de versie van $1, $2 door [[User:$3|$3]]",
 	"bs-discovery-page-version-pager-previous": "Vorige",
-	"bs-discovery-page-version-pager-next": "Volgende"
+	"bs-discovery-page-version-pager-next": "Volgende",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Gebruiksvoorwaarden",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Gebruiksvoorwaarden"
 }
