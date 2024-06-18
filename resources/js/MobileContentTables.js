@@ -13,9 +13,15 @@
 				var headers = doctables[i].getElementsByTagName( 'th' );
 
 				if ( headers.length > 0 ) {
+					if ( doctables[i].classList.contains( 'responsive-table' ) ) {
+						continue;
+					}
 					doctables[i].className += " responsive-table";
 				}
 				else {
+					if ( doctables[i].classList.contains( 'responsive-gallery-table' ) ) {
+						continue;
+					}
 					doctables[i].className += " responsive-gallery-table";
 				}
 			}
@@ -32,10 +38,10 @@
 			for ( var i = 0; i < doctables.length; i++ ) {
 				var headers = doctables[i].getElementsByTagName( 'th' );
 				if ( headers.length > 0 ) {
-					$(doctables[i]).removeClass( "responsive-table" );
+					$( doctables[i] ).removeClass( "responsive-table" ).filter('[class=""]').removeAttr('class');
 				}
 				else {
-					$(doctables[i]).removeClass( "responsive-gallery-table" );
+					$( doctables[i] ).removeClass( "responsive-gallery-table" ).filter('[class=""]').removeAttr('class');
 				}
 			}
 		}
