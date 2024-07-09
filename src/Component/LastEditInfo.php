@@ -107,6 +107,11 @@ class LastEditInfo extends Literal {
 			);
 		}
 
+		$this->services->getHookContainer()->run(
+			'LastEditInfo',
+			[ $revision, $revisionDiffLink, $lastEditorLink, &$lastEditInfo ]
+		);
+
 		if ( $lastEditInfo ) {
 			$html .= $lastEditInfo->text();
 		}
