@@ -2,30 +2,24 @@
 	--mws-tree-expander-width: 22.87px;
 	--mws-tree-item-min-height: 35px;
 }
-ul.mws-tree,
-ul.mws-tree-item-children {
+ul.mws-tree {
 	list-style: none;
-}
-ul.mws-tree,
-ul.mws-tree-item-children {
 	padding-left: 0;
-}
-div.mws-tree-cnt {
 	display: none;
 }
-div.mws-tree-cnt.root,
-div.mws-tree-cnt.show {
+ul.mws-tree.root,
+ul.mws-tree.show {
 	display: block;
 }
 ul.mws-tree > li > div,
-ul.mws-tree-item-children > li > div {
+ul.mws-tree.mws-tree-item-children {
 	padding-left: 10px;
 	border-left: 5px solid transparent;
 	min-height: var(--mws-tree-item-min-height);
 	height: auto;
 }
-ul.mws-tree .mws-tree-item > div:not(.mws-tree-cnt):hover,
-ul.mws-tree .mws-tree-item.active > div:not(.mws-tree-cnt) {
+ul.mws-tree .mws-tree-item > div:hover,
+ul.mws-tree .mws-tree-item.active > div {
 	border-color: var(--sidebar-primary-marker--hover);
 	background-color: var(--sidebar-primary-bg--hover);
 	color: var(--sidebar-primary-fg--hover);
