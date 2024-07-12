@@ -310,6 +310,9 @@
 		},
 		"pdf-export": {
 			"class": "\\BlueSpice\\Discovery\\HookHandler\\PdfExportHandler"
+		},
+		"set-less-vars": {
+			"class": "\\BlueSpice\\Discovery\\HookHandler\\MWStakeCommonLessVars"
 		}
 	},
 	"Hooks":{
@@ -340,7 +343,8 @@
 			"\\BlueSpice\\Discovery\\Hook\\BSUsageTrackerRegisterCollectors\\MediaWikiSidebarModified::callback",
 			"\\BlueSpice\\Discovery\\Hook\\BSUsageTrackerRegisterCollectors\\EnhancedSidebarActive::callback",
 			"\\BlueSpice\\Discovery\\Hook\\BSUsageTrackerRegisterCollectors\\EnhancedSidebarModified::callback"
-		]
+		],
+		"MWStakeCommonUILessVarsInit": "set-less-vars"
 	},
 	"config_prefix": "bsg",
 	"config": {
