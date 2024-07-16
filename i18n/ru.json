@@ -179,5 +179,6 @@
 	"bs-discovery-page-version-pager-next": "Следующая",
 	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Система Twitter Bootstrap, используемая для BlueSpiceDiscovery. ([https://getbootstrap.com/ https://getbootstrap.com])",
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Значки Twitter Bootstrap, используемые для BlueSpiceDiscovery и содержимого. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
-	"bs-discovery-footerlinks-termsofservice-link-desc": "Правила использования"
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Правила использования",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Условия_использования"
 }
