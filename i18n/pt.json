@@ -181,5 +181,6 @@
 	"bs-discovery-footerlinks-imprint-link-desc": "Imprimir",
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprimir",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Condições de serviço",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Condições_de_serviço"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Condições_de_serviço",
+	"bs-discovery-title-last-edit-info-date-only": "Última edição a $1"
 }

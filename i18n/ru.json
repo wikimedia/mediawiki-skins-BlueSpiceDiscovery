@@ -174,5 +174,11 @@
 	"bs-discovery-page-version-pager-next": "Следующая",
 	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Система Twitter Bootstrap, используемая для BlueSpiceDiscovery. ([https://getbootstrap.com/ https://getbootstrap.com])",
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Значки Twitter Bootstrap, используемые для BlueSpiceDiscovery и содержимого. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
-	"bs-discovery-footerlinks-termsofservice-link-desc": "Правила использования"
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Правила использования",
+	"bs-discovery-title-last-edit-info-date-only": "Последнее изменение $1",
+	"bs-discovery-config-mainlinks-listfiles-label": "Отобразить входную точку «Файлы»",
+	"bs-discovery-config-mainlinks-listfiles-help": "Отобразить ссылку на входную точку «Файлы» в левой части навигации",
+	"bs-discovery-config-mainlinks-categories-label": "Отобразить входную точку «Категории»",
+	"bs-discovery-config-mainlinks-categories-help": "Отобразить ссылку на входную точку «Категории» в левой части навигации",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Условия_использования"
 }
