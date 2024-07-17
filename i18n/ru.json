@@ -178,5 +178,11 @@
 	"bs-discovery-mainlinks-allpages-label": "Страницы",
 	"bs-discovery-mainlinks-categories-label": "Категории",
 	"bs-discovery-mainlinks-listfiles-label": "Файлы",
-	"bs-discovery-navbar-global-actions-administration-text": "Администрирование"
+	"bs-discovery-navbar-global-actions-administration-text": "Администрирование",
+	"bs-discovery-title-last-edit-info-date-only": "Последнее изменение $1",
+	"bs-discovery-config-mainlinks-listfiles-label": "Отобразить входную точку «Файлы»",
+	"bs-discovery-config-mainlinks-listfiles-help": "Отобразить ссылку на входную точку «Файлы» в левой части навигации",
+	"bs-discovery-config-mainlinks-categories-label": "Отобразить входную точку «Категории»",
+	"bs-discovery-config-mainlinks-categories-help": "Отобразить ссылку на входную точку «Категории» в левой части навигации",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Условия_использования"
 }

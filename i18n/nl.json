@@ -4,7 +4,8 @@
 			"AHendriksen-collecties",
 			"Mainframe98",
 			"McDutchie",
-			"Nickthijssen1994"
+			"Nickthijssen1994",
+			"Romaine"
 		]
 	},
 	"bs-discovery-desc": "BlueSpice uiterlijk",
@@ -116,5 +117,13 @@
 	"bs-discovery-navbar-global-actions-administration-text": "Beheer",
 	"bs-discovery-mainlinks-allpages-label": "Pagina's",
 	"bs-discovery-mainlinks-categories-label": "Categorieën",
-	"bs-discovery-mainlinks-listfiles-label": "Bestanden"
+	"bs-discovery-mainlinks-listfiles-label": "Bestanden",
+	"bs-discovery-tabpanel-main-desc": "Hoofdnavigatie bevat tabbladen, hoofdlinks en MediaWiki-zijbalk",
+	"bs-discovery-menu-provider-mediawiki-sidebar-label": "MediaWiki-zijbalk",
+	"bs-discovery-menu-provider-mediawiki-sidebar-desc": "Een MediaWiki-zijbalkmenu met slechts één niveau aan menu-items",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "Verbeterde MediaWiki-zijbalk",
+	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Een MediaWiki sidebar met verbeterde functie",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-text": "Label",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Gebruiksvoorwaarden",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Gebruiksvoorwaarden"
 }

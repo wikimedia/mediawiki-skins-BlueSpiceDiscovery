@@ -4,6 +4,7 @@
 			"500000000006城",
 			"Cwek",
 			"GuoPC",
+			"Huajing",
 			"Lakejason0",
 			"LittlePaw365",
 			"MangoFanFanw",
@@ -177,5 +178,17 @@
 	"bs-discovery-page-version-pager-deleted-user": "（用户名已移除）",
 	"bs-discovery-page-version-pager-previous": "上一个",
 	"bs-discovery-page-version-pager-next": "下一个",
-	"bs-discovery-edit-footerlinks-link-text": "编辑页脚链接"
+	"bs-discovery-edit-footerlinks-link-text": "编辑页脚链接",
+	"bs-discovery-config-sidebar-primary-main-tab-menu-help": "在主侧边栏的主面板中选择菜单",
+	"bs-discovery-menu-provider-mediawiki-sidebar-desc": "仅有一级菜单项的 MediaWiki 侧边栏菜单",
+	"bs-discovery-menu-provider-subpage-tree-desc": "当前页面的子页面作为树状目录",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-page-help": "要链接到的页面；可以是一个已有标题，也可以包含一个评估为有效标题的解析器函数",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-text-help": "显示为链接的文本；可含有一个解析器函数",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-depth-help": "所要包含子页面的最大深度",
+	"bs-discovery-alert-old-page-version": "您正在查看该页面的旧版本。[[Special:Redirect/page/$1|回到最新版本]]。",
+	"bs-discovery-page-version-pager-info-text": "这是$1，$2的版本，由[[User:$3|$3]]建立",
+	"bs-discovery-ext-credentials-desc-bootstrap-dist": "用于 BlueSpiceDiscovery 的 Twitter Bootstrap 框架。([https://getbootstrap.com/ https://getbootstrap.com])",
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "用于 BlueSpiceDiscovery 和内容的Twitter Bootstrap 图标。([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
+	"bs-discovery-footerlinks-imprint-link-desc": "印记",
+	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint"
 }
