@@ -23,6 +23,10 @@
 body.ns-special #title-section {
 	background-color: var(--body-special-bg);
 }
+/** Fix color breadcrumbs only for special pages - ERM36341 */
+body.ns-special #title-section .breadcrumb-item {
+	color: #59595a;
+}
 #title-section a {
 	text-decoration: none;
 }
