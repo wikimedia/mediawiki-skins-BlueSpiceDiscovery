@@ -180,5 +180,7 @@
 	"bs-discovery-footerlinks-imprint-link-desc": "Imprint",
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Terms of service",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Terms_of_service"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Terms_of_service",
+	"bs-discovery-sidebar-primary-aria-label": "Primary sidebar",
+	"bs-discovery-sidebar-secondary-aria-label": "Secondary sidebar"
 }
