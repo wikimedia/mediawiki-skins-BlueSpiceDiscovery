@@ -45,6 +45,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "Meer Subpagina's",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Meer Subpagina's",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Hoofdpagina",
+	"bs-discovery-title-last-edit-info-date-only": "Laatst bewerkt $1",
 	"bs-discovery-title-last-edit-info": "Laatst bewerkt $1 <br /> door $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Laatste bewerking $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Laatste bewerking door $1",

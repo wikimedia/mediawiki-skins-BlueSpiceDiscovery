@@ -6,9 +6,11 @@
 			"Robby",
 			"Samflint",
 			"Tacsipacsi",
-			"Verdy p"
+			"Verdy p",
+			"Amire80"
 		]
 	},
+	"bs-discovery-name": "{{name}}",
 	"bs-discovery-skip-links-navigation-aria-label": "Aria-label attribute for skip links navigation",
 	"bs-discovery-skip-to-navbar-primary-text": "Text for skip link item navbar-primary",
 	"bs-discovery-skip-to-sidebar-primary-text": "Text for skip link item sidebar-primary",
@@ -85,8 +87,8 @@
 	"bs-discovery-sidebar-secondary-share-sharebymail-title": "Title for share by mail share option link",
 	"bs-discovery-sidebar-secondary-share-link-title": "Title attribute for button with share options",
 	"bs-discovery-sidebar-secondary-share-link-aria-label": "Aria-label attribute for button with share options",
-	"bs-discovery-sidebar-secondary-share-sharebymail-subject": "Text for mail subject in share by mail share option link.\n* $1 - Name of the wiki.\n* $2 - Full name of the page.",
-	"bs-discovery-sidebar-secondary-share-sharebymail-body": "Text for mail body in share by mail share option link.\n* $1 - Name of the wiki.\n* $2 - Full name of the page.\n* $3 - Perma link url",
+	"bs-discovery-sidebar-secondary-share-sharebymail-subject": "{{optional}}\n\nText for mail subject in share by mail share option link.\n* $1 - Name of the wiki.\n* $2 - Full name of the page.",
+	"bs-discovery-sidebar-secondary-share-sharebymail-body": "{{optional}}\n\nText for email body in share by mail share option link.\n* $1 - Name of the wiki.\n* $2 - Full name of the page.\n* $3 - Permalink url.",
 	"bs-discovery-sidebar-actions-heading": "Heading for actions panel in right sidebar\n\n{{Identical|Action}}",
 	"bs-discovery-sidebar-details-heading": "Heading for details panel in right sidebar\n\n{{Identical|Detail}}",
 	"bs-discovery-details-pnl-more-link-text": "Text for link details which opens a dialog, that lists a collection of links from toolbox, views, actions and variants.\n{{Identical|All}}",
