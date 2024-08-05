@@ -177,5 +177,7 @@
 	"bs-discovery-footerlinks-imprint-link-desc": "Импресум",
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Импресум",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Услови на употреба",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Услови_на_употреба"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Услови_на_употреба",
+	"bs-discovery-sidebar-primary-aria-label": "Главен страничник",
+	"bs-discovery-sidebar-secondary-aria-label": "Спореден страничник"
 }

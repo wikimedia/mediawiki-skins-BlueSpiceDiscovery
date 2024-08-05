@@ -6,6 +6,7 @@
 			"Cigaryno",
 			"Gomoko",
 			"McDutchie",
+			"Méthodes Bulebe Hangi",
 			"Verdy p",
 			"Vikoula5",
 			"Wladek92"
@@ -187,5 +188,7 @@
 	"bs-discovery-footerlinks-imprint-link-desc": "Imprimer",
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Impression",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Conditions d’utilisation",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Conditions_de_service"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Conditions_de_service",
+	"bs-discovery-sidebar-primary-aria-label": "la première colonne d'à coté",
+	"bs-discovery-sidebar-secondary-aria-label": "Deuxièmes ligne d'à coté"
 }

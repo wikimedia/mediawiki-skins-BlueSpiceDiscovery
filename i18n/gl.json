@@ -178,5 +178,7 @@
 	"bs-discovery-footerlinks-imprint-link-desc": "Imprimir",
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Termos de servizo",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Termos_de_servizo"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Termos_de_servizo",
+	"bs-discovery-sidebar-primary-aria-label": "Barra lateral principal",
+	"bs-discovery-sidebar-secondary-aria-label": "Barra lateral secundaria"
 }
