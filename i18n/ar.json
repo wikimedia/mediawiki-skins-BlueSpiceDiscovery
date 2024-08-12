@@ -5,7 +5,9 @@
 			"Hubaishan",
 			"Karim185.3",
 			"Meno25",
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"FiberAhmed",
+			"إزبيكييل"
 		]
 	},
 	"bs-discovery-name": "اكتشاف BlueSpice",
@@ -41,8 +43,6 @@
 	"bs-discovery-create-button-new-file-title": "رفع ملف جديد",
 	"bs-discovery-navbar-global-actions-button-title": "أفعال عالمية",
 	"bs-discovery-navbar-global-actions-button-aria-label": "أفعال عالمية",
-	"bs-discovery-navbar-global-actions-tool-text": "أدوات",
-	"bs-discovery-navbar-global-actions-manager-text": "إدارة",
 	"bs-discovery-navbar-full-screen-button-enable-title": "تفعيل وضع ملء الشاشة",
 	"bs-discovery-navbar-full-screen-button-text": "تفعيل وضع ملء الشاشة",
 	"bs-discovery-navbar-full-screen-button-enable-aria-label": "تفعيل وضع ملء الشاشة",
@@ -55,7 +55,7 @@
 	"bs-discovery-breadcrumb-nav-node-aria-label": "افتح $1",
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "المزيد من الصفحات الفرعية",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "المزيد من الصفحات الفرعية",
-	"bs-discovery-breadcrumb-nav-node-portal-page": "الصفحة الرئيسية",
+	"bs-discovery-breadcrumb-nav-node-portal-page": "الصفحة الرئيسة",
 	"bs-discovery-title-last-edit-info": "آخر تحرير $1<br /> بمقدار $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "التعديل الأخير $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "آخر تعديل بواسطة $1",
@@ -100,7 +100,6 @@
 	"bs-discovery-navigation-heading": "كيفية البدء",
 	"bs-discovery-edit-mediawiki-sidebar-link-text": "عدل الشريط الجانبي",
 	"bs-discovery-edit-mediawiki-sidebar-link-title": "تحرير ميدياويكي: الشريط الجانبي",
-	"bs-discovery-edit-mediawiki-sidebar-link-aria-label": "تحرير ميدياويكي: الشريط الجانبي",
 	"bs-discovery-sidebar-secondary-watch-link-title": "صفحة المشاهدة",
 	"bs-discovery-sidebar-secondary-watch-link-aria-label": "صفحة المشاهدة",
 	"bs-discovery-permalink-copy-text": "إنسخ الرابط",
@@ -142,5 +141,7 @@
 	"bs-discovery-page-version-pager-previous": "السابق",
 	"bs-discovery-page-version-pager-next": "التالي",
 	"bs-discovery-ext-credentials-desc-bootstrap-dist": "إطار عمل Twitter Bootstrap المستخدم في BlueSpiceDiscovery. ([https://getbootstrap.com/ https://getbootstrap.com])",
-	"bs-discovery-ext-credentials-desc-bootstrap-icons": "أيقونات Twitter Bootstrap المستخدمة في BlueSpiceDiscovery والمحتوى. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])"
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "أيقونات Twitter Bootstrap المستخدمة في BlueSpiceDiscovery والمحتوى. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
+	"bs-discovery-sidebar-primary-aria-label": "أساسي هو الشريط الجانبي",
+	"bs-discovery-sidebar-secondary-aria-label": "الشريط الجانبي الرئيسي"
 }

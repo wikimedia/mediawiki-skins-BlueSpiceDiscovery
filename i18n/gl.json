@@ -53,6 +53,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "Máis subpáxinas",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Máis subpáxinas",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Páxina principal",
+	"bs-discovery-title-last-edit-info-date-only": "Última edición o $1",
 	"bs-discovery-title-last-edit-info": "Última edición o $1 <br /> por $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Última edición o $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Última edición por $1",
@@ -68,6 +69,7 @@
 	"bs-discovery-tabpanel-page-text": "Navegación de accións da páxina",
 	"bs-discovery-tabpanel-page-title": "Lapela con accións e ferramentas da páxina",
 	"bs-discovery-tabpanel-page-aria-label": "Navegación de accións e ferramentas da páxina",
+	"bs-discovery-tabpanel-page-desc": "A navegación de accións e ferramentas da páxina contén as lapelas, a caixa de ferramentas e as accións",
 	"bs-discovery-sidebar-primary-toggle-show-title": "Abrir a barra lateral principal",
 	"bs-discovery-sidebar-primary-toggle-show-aria-label": "Abrir a barra lateral principal",
 	"bs-discovery-sidebar-primary-toggle-hide-title": "Pechar a barra lateral principal",
@@ -96,7 +98,6 @@
 	"bs-discovery-navigation-heading": "Primeiros pasos",
 	"bs-discovery-edit-mediawiki-sidebar-link-text": "Editar a barra lateral",
 	"bs-discovery-edit-mediawiki-sidebar-link-title": "Editar MediaWiki:Sidebar",
-	"bs-discovery-edit-mediawiki-sidebar-link-aria-label": "Editar MediaWiki:Sidebar",
 	"bs-discovery-sidebar-secondary-watch-link-title": "Vixiar a páxina",
 	"bs-discovery-sidebar-secondary-watch-link-aria-label": "Vixiar a páxina",
 	"bs-discovery-permalink-copy-text": "Copiar o URL",
@@ -162,7 +163,6 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (a páxina aínda non existe)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navegación",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Editar este menú",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Editar \"$1\"",
 	"bs-discovery-config-meta-items-header-label": "Elementos debaixo do título da páxina",
 	"bs-discovery-config-meta-items-header-help": "Os elementos seleccionados amósanse debaixo do título da páxina",
 	"bs-discovery-config-meta-items-footer-label": "Elementos debaixo do contido da páxina",
@@ -177,8 +177,8 @@
 	"bs-discovery-edit-footerlinks-link-text": "Editar as ligazóns ao pé das páxinas",
 	"bs-discovery-footerlinks-imprint-link-desc": "Imprimir",
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint",
-	"bs-discovery-tabpanel-page-desc": "A navegación de accións e ferramentas da páxina contén as lapelas, a caixa de ferramentas e as accións",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Termos de servizo",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Termos_de_servizo",
-	"bs-discovery-title-last-edit-info-date-only": "Última edición o $1"
+	"bs-discovery-sidebar-primary-aria-label": "Barra lateral principal",
+	"bs-discovery-sidebar-secondary-aria-label": "Barra lateral secundaria"
 }

@@ -54,6 +54,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "更多子頁面",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "更多子頁面",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "首頁",
+	"bs-discovery-title-last-edit-info-date-only": "上一次編輯於 $1",
 	"bs-discovery-title-last-edit-info": "最後編輯於$1 <br /> 由$2編輯",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "最後編輯於$1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "最後由$1編輯",
@@ -98,7 +99,6 @@
 	"bs-discovery-navigation-heading": "入門",
 	"bs-discovery-edit-mediawiki-sidebar-link-text": "編輯側邊欄",
 	"bs-discovery-edit-mediawiki-sidebar-link-title": "編輯 MediaWiki:Sidebar",
-	"bs-discovery-edit-mediawiki-sidebar-link-aria-label": "編輯 MediaWiki:Sidebar",
 	"bs-discovery-sidebar-secondary-watch-link-title": "監視頁面",
 	"bs-discovery-sidebar-secondary-watch-link-aria-label": "監視頁面",
 	"bs-discovery-permalink-copy-text": "複製 URL",
@@ -164,7 +164,6 @@
 	"bs-discovery-page-does-not-exist-title": "$1（頁面不存在）",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "導覽",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "編輯此選單",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "編輯$1",
 	"bs-discovery-config-meta-items-header-label": "頁面標題下方的元素",
 	"bs-discovery-config-meta-items-header-help": "所選元素顯示在頁面標題下方",
 	"bs-discovery-config-meta-items-footer-label": "頁面內容下方的元素",
@@ -181,5 +180,6 @@
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "服務條款",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:服務條款",
-	"bs-discovery-title-last-edit-info-date-only": "上一次編輯於 $1"
+	"bs-discovery-sidebar-primary-aria-label": "主要側邊欄",
+	"bs-discovery-sidebar-secondary-aria-label": "次要側邊欄"
 }

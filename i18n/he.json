@@ -52,6 +52,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "דפי־משנה נוספים",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "דפי־משנה נוספים",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "עמוד ראשי",
+	"bs-discovery-title-last-edit-info-date-only": "נערך לאחרונה ב־$1",
 	"bs-discovery-title-last-edit-info": "נערך לאחרונה $1 <br /> על־ידי $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "נערך לאחרונה $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "נערך לאחרונה על־ידי $1",
@@ -96,7 +97,6 @@
 	"bs-discovery-navigation-heading": "איך להתחיל",
 	"bs-discovery-edit-mediawiki-sidebar-link-text": "עריכת סרגל הצד",
 	"bs-discovery-edit-mediawiki-sidebar-link-title": "עריכת MediaWiki:Sidebar",
-	"bs-discovery-edit-mediawiki-sidebar-link-aria-label": "עריכת MediaWiki:Sidebar",
 	"bs-discovery-sidebar-secondary-watch-link-title": "לעקוב אחר הדף",
 	"bs-discovery-sidebar-secondary-watch-link-aria-label": "לעקוב אחר הדף",
 	"bs-discovery-permalink-copy-text": "העתקת URL",
@@ -162,7 +162,6 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (הדף אינו קיים)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "ניווט",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "עריכת התפריט הזה",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "עריכת $1",
 	"bs-discovery-config-meta-items-header-label": "רכיבים מתחת לכותרת הדף",
 	"bs-discovery-config-meta-items-header-help": "רכיבים נבחרים מוצגים מתחת לכותרת הדף",
 	"bs-discovery-config-meta-items-footer-label": "רכיבים מתחת לתוכן הדף",
@@ -179,5 +178,6 @@
 	"bs-discovery-footerlinks-imprint-link-page": "Site:דפוסת",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "תנאי השירות",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:תנאי_השירות",
-	"bs-discovery-title-last-edit-info-date-only": "נערך לאחרונה ב־$1"
+	"bs-discovery-sidebar-primary-aria-label": "סרגל צד ראשי",
+	"bs-discovery-sidebar-secondary-aria-label": "סרגל צד משני"
 }
