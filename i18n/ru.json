@@ -180,5 +180,7 @@
 	"bs-discovery-ext-credentials-desc-bootstrap-dist": "Система Twitter Bootstrap, используемая для BlueSpiceDiscovery. ([https://getbootstrap.com/ https://getbootstrap.com])",
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "Значки Twitter Bootstrap, используемые для BlueSpiceDiscovery и содержимого. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Правила использования",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Условия_использования"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Условия_использования",
+	"bs-discovery-sidebar-primary-aria-label": "Основная боковая панель",
+	"bs-discovery-sidebar-secondary-aria-label": "Дополнительная боковая панель"
 }
