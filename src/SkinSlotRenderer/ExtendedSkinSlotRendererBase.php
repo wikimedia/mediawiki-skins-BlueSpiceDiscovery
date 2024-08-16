@@ -279,9 +279,10 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 	 * @param array $classes
 	 * @param array $aria
 	 * @param array $data
+	 * @param string $role
 	 * @return string
 	 */
-	protected function buildOpeningHtml( $tag, $id, $classes, $aria, $data ): string {
+	protected function buildOpeningHtml( $tag, $id, $classes, $aria, $data, $role = '' ): string {
 		if ( $tag === '' ) {
 			return '';
 		}
@@ -306,7 +307,12 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 			$dataString = ' ' . $this->dataAttributesBuilder->toString( $data );
 		}
 
-		return '<' . $tag . $htmlId . $htmlClass . $ariaString . $dataString . '>';
+		$roleString = '';
+		if ( $role !== '' ) {
+			$roleString = 'role="' . $role . '"';
+		}
+
+		return '<' . $tag . $htmlId . $htmlClass . $ariaString . $dataString . $roleString . '>';
 	}
 
 	/**
