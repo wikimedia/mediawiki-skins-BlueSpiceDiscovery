@@ -34,7 +34,6 @@
 	right: 0;
 }
 #wrapper,
-#aftercontent,
 #footer {
 	padding-left: var(--sidebar-primary-spacer);
 	padding-right: var(--sidebar-secondary-spacer);
