@@ -53,4 +53,21 @@ class DataAfterContentSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	protected function getItemWrapperId( $id ): string {
 		return $id . '-cnt';
 	}
+
+	/**
+	 *
+	 * @return string
+	 */
+	protected function buildOpeningConainerWrapperHtml(): string {
+		$html = $this->buildOpeningHtml(
+			$this->getContainerWrapperTag(),
+			$this->getContainerWrapperId(),
+			$this->getContainerWrapperClasses(),
+			$this->getContainerWrapperAriaAttributes(),
+			$this->getContainerWrapperDataAttributes(),
+			'complementary'
+		);
+
+		return $html;
+	}
 }
