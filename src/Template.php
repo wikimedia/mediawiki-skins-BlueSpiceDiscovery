@@ -28,7 +28,6 @@ class Template extends BaseTemplate {
 			/* Output */
 			$this->html( 'headelement' );
 			echo $this->skinLayoutRenderer->getHtml();
-			$this->printTrail();
 			echo Html::closeElement( 'body' );
 			echo Html::closeElement( 'html' );
 		}
