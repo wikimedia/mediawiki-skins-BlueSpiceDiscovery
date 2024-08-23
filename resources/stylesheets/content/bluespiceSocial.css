@@ -46,10 +46,10 @@ ul.bs-social-entitylist .bs-social-entity-edit-mode form textarea {
 .bs-social-entity-title {
 	width: 80%;
 }
-.bs-social-entity .bs-social-entity-right .bs-social-entity-title h3 {
+.bs-social-entity .bs-social-entity-right .bs-social-entity-title {
 	padding-bottom: 0;
 }
-.bs-social-entity-title h3, .bs-social-entity .bs-social-entity-title h3 a {
+#aftercontent .bs-social-entity-title, #aftercontent .bs-social-entity .bs-social-entity-title a {
 	margin: 0;
 	margin-bottom: 10px;
 	color: var(--discussion-title-fg) !important;
