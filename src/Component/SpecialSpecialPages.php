@@ -50,7 +50,7 @@ class SpecialSpecialPages extends RestrictedTextLink {
 	public function getText(): Message {
 		$specialpage = MediaWikiServices::getInstance()->getSpecialPageFactory()
 		->getPage( 'Specialpages' );
-		return new RawMessage( $specialpage->getDescription() );
+		return $this->ensureMessageObject( $specialpage->getDescription() );
 	}
 
 	/**
@@ -60,7 +60,7 @@ class SpecialSpecialPages extends RestrictedTextLink {
 	public function getTitle(): Message {
 		$specialpage = MediaWikiServices::getInstance()->getSpecialPageFactory()
 		->getPage( 'Specialpages' );
-		return new RawMessage( $specialpage->getDescription() );
+		return $this->ensureMessageObject( $specialpage->getDescription() );
 	}
 
 	/**
@@ -70,6 +70,14 @@ class SpecialSpecialPages extends RestrictedTextLink {
 	public function getAriaLabel(): Message {
 		$specialpage = MediaWikiServices::getInstance()->getSpecialPageFactory()
 		->getPage( 'Specialpages' );
-		return new RawMessage( $specialpage->getDescription() );
+		return $this->ensureMessageObject( $specialpage->getDescription() );
+	}
+
+	/**
+	 * @param string|Message $stringOrMessage
+	 * @return Message
+	 */
+	protected function ensureMessageObject( $stringOrMessage ) {
+		return $stringOrMessage instanceof Message ? $stringOrMessage : new RawMessage( $stringOrMessage );
 	}
 }
