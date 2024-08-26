@@ -53,6 +53,7 @@
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "Fler undersidor",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Fler undersidor",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Huvudsida",
+	"bs-discovery-title-last-edit-info-date-only": "Senast redigerad $1",
 	"bs-discovery-title-last-edit-info": "Redigerades senast $1 <br /> av $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Redigerades senast $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "Redigerades senast av $1",
@@ -97,7 +98,6 @@
 	"bs-discovery-navigation-heading": "Komma igång",
 	"bs-discovery-edit-mediawiki-sidebar-link-text": "Redigera sidofältet",
 	"bs-discovery-edit-mediawiki-sidebar-link-title": "Redigera MediaWiki:Sidebar",
-	"bs-discovery-edit-mediawiki-sidebar-link-aria-label": "Redigera MediaWiki:Sidebar",
 	"bs-discovery-sidebar-secondary-watch-link-title": "Bevaka sida",
 	"bs-discovery-sidebar-secondary-watch-link-aria-label": "Bevaka sida",
 	"bs-discovery-permalink-copy-text": "Kopiera URL",
@@ -163,7 +163,6 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (sidan existerar inte)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigering",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Redigera denna meny",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Redigera $1",
 	"bs-discovery-config-meta-items-header-label": "Element under sidrubriken",
 	"bs-discovery-config-meta-items-header-help": "Valda element visas under sidrubriken",
 	"bs-discovery-config-meta-items-footer-label": "Element under sidinnehållet",
@@ -179,5 +178,7 @@
 	"bs-discovery-footerlinks-imprint-link-desc": "Avtryck",
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Användarvillkor",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Användarvillkor"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Användarvillkor",
+	"bs-discovery-sidebar-primary-aria-label": "Primärt sidofält",
+	"bs-discovery-sidebar-secondary-aria-label": "Sekundärt sidofält"
 }
