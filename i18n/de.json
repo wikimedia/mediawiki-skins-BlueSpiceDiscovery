@@ -184,5 +184,7 @@
 	"bs-discovery-footerlinks-imprint-link-desc": "Impressum",
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Nutzungsbedingungen",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Nutzungsbedingungen"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Nutzungsbedingungen",
+	"bs-discovery-sidebar-primary-aria-label": "Primäre Seitenleiste",
+	"bs-discovery-sidebar-secondary-aria-label": "Sekundäre Seitenleiste"
 }
