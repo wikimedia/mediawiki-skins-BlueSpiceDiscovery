@@ -22,5 +22,7 @@
 	"bs-discovery-mainlinks-allpages-label": "صفحات",
 	"bs-discovery-mainlinks-categories-label": "رده‌ها",
 	"bs-discovery-mainlinks-listfiles-label": "پرونده‌ها",
-	"bs-discovery-title-last-edit-info-date-only": "آخرین ویرایش در $1"
+	"bs-discovery-title-last-edit-info-date-only": "آخرین ویرایش در $1",
+	"bs-discovery-sidebar-primary-aria-label": "نوار کناری اصلی",
+	"bs-discovery-sidebar-secondary-aria-label": "نوار کناری ثانویه"
 }

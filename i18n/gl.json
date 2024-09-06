@@ -182,5 +182,7 @@
 	"bs-discovery-config-mainlinks-categories-help": "Mostrar a ligazón ao punto de entrada \"Categorías\" na navegación esquerda",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Termos de servizo",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Termos_de_servizo",
-	"bs-discovery-title-last-edit-info-date-only": "Última edición o $1"
+	"bs-discovery-title-last-edit-info-date-only": "Última edición o $1",
+	"bs-discovery-sidebar-primary-aria-label": "Barra lateral principal",
+	"bs-discovery-sidebar-secondary-aria-label": "Barra lateral secundaria"
 }

@@ -125,5 +125,6 @@
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "Een MediaWiki sidebar met verbeterde functie",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-text": "Label",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Gebruiksvoorwaarden",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Gebruiksvoorwaarden"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Gebruiksvoorwaarden",
+	"bs-discovery-title-last-edit-info-date-only": "Laatst bewerkt $1"
 }

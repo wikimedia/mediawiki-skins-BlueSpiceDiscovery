@@ -27,5 +27,7 @@
 	"bs-discovery-mainlinks-allpages-label": "ورقے",
 	"bs-discovery-mainlinks-categories-label": "ونکیاں",
 	"bs-discovery-mainlinks-listfiles-label": "فائلاں",
-	"bs-discovery-footerlinks-termsofservice-link-desc": "خدمت شرطاں"
+	"bs-discovery-footerlinks-termsofservice-link-desc": "خدمت شرطاں",
+	"bs-discovery-sidebar-primary-aria-label": "بݨیادی سائڈ بار",
+	"bs-discovery-sidebar-secondary-aria-label": "ثانوی سائڈ بار"
 }
