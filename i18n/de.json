@@ -188,5 +188,7 @@
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Nutzungsbedingungen",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Nutzungsbedingungen",
 	"bs-discovery-title-last-edit-info-date-only": "Zuletzt bearbeitet am $1",
-	"bs-discovery-edit-footerlinks-link-text": "Links in der Fußzeile bearbeiten"
+	"bs-discovery-edit-footerlinks-link-text": "Links in der Fußzeile bearbeiten",
+	"bs-discovery-sidebar-primary-aria-label": "Primäre Seitenleiste",
+	"bs-discovery-sidebar-secondary-aria-label": "Sekundäre Seitenleiste"
 }

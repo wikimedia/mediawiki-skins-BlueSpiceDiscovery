@@ -180,5 +180,7 @@
 	"bs-discovery-config-mainlinks-listfiles-help": "Отобразить ссылку на входную точку «Файлы» в левой части навигации",
 	"bs-discovery-config-mainlinks-categories-label": "Отобразить входную точку «Категории»",
 	"bs-discovery-config-mainlinks-categories-help": "Отобразить ссылку на входную точку «Категории» в левой части навигации",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Условия_использования"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Условия_использования",
+	"bs-discovery-sidebar-primary-aria-label": "Основная боковая панель",
+	"bs-discovery-sidebar-secondary-aria-label": "Дополнительная боковая панель"
 }

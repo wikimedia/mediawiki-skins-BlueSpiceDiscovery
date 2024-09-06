@@ -179,5 +179,7 @@
 	"bs-discovery-footerlinks-imprint-link-page": "Site:דפוסת",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "תנאי השירות",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:תנאי_השירות",
-	"bs-discovery-title-last-edit-info-date-only": "נערך לאחרונה ב־$1"
+	"bs-discovery-title-last-edit-info-date-only": "נערך לאחרונה ב־$1",
+	"bs-discovery-sidebar-primary-aria-label": "סרגל צד ראשי",
+	"bs-discovery-sidebar-secondary-aria-label": "סרגל צד משני"
 }

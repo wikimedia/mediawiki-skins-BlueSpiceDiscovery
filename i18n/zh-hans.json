@@ -186,5 +186,7 @@
 	"bs-discovery-ext-credentials-desc-bootstrap-dist": "用于 BlueSpiceDiscovery 的 Twitter Bootstrap 框架。([https://getbootstrap.com/ https://getbootstrap.com])",
 	"bs-discovery-ext-credentials-desc-bootstrap-icons": "用于 BlueSpiceDiscovery 和内容的Twitter Bootstrap 图标。([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
 	"bs-discovery-footerlinks-imprint-link-desc": "印记",
-	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint"
+	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint",
+	"bs-discovery-sidebar-primary-aria-label": "主要侧边栏",
+	"bs-discovery-sidebar-secondary-aria-label": "次要侧边栏"
 }

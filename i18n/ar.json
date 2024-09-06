@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Alshamiri1",
+			"FiberAhmed",
 			"Hubaishan",
 			"Karim185.3",
 			"Meno25",
+			"إزبيكييل",
 			"محمد أحمد عبد الفتاح"
 		]
 	},
@@ -55,7 +57,7 @@
 	"bs-discovery-breadcrumb-nav-node-aria-label": "افتح $1",
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "المزيد من الصفحات الفرعية",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "المزيد من الصفحات الفرعية",
-	"bs-discovery-breadcrumb-nav-node-portal-page": "الصفحة الرئيسية",
+	"bs-discovery-breadcrumb-nav-node-portal-page": "الصفحة الرئيسة",
 	"bs-discovery-title-last-edit-info": "آخر تحرير $1<br /> بمقدار $2",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "التعديل الأخير $1",
 	"bs-discovery-title-last-edit-info-user-aria-label": "آخر تعديل بواسطة $1",
@@ -142,5 +144,7 @@
 	"bs-discovery-page-version-pager-previous": "السابق",
 	"bs-discovery-page-version-pager-next": "التالي",
 	"bs-discovery-ext-credentials-desc-bootstrap-dist": "إطار عمل Twitter Bootstrap المستخدم في BlueSpiceDiscovery. ([https://getbootstrap.com/ https://getbootstrap.com])",
-	"bs-discovery-ext-credentials-desc-bootstrap-icons": "أيقونات Twitter Bootstrap المستخدمة في BlueSpiceDiscovery والمحتوى. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])"
+	"bs-discovery-ext-credentials-desc-bootstrap-icons": "أيقونات Twitter Bootstrap المستخدمة في BlueSpiceDiscovery والمحتوى. ([https://icons.getbootstrap.com https://icons.getbootstrap.com])",
+	"bs-discovery-sidebar-primary-aria-label": "أساسي هو الشريط الجانبي",
+	"bs-discovery-sidebar-secondary-aria-label": "الشريط الجانبي الرئيسي"
 }

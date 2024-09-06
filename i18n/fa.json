@@ -22,5 +22,7 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "افزودن پنل جدید",
 	"bs-discovery-page-version-pager-deleted-user": "(نام کاربری حذف شده است)",
 	"bs-discovery-page-version-pager-previous": "قبلی",
-	"bs-discovery-title-last-edit-info-date-only": "آخرین ویرایش در $1"
+	"bs-discovery-title-last-edit-info-date-only": "آخرین ویرایش در $1",
+	"bs-discovery-sidebar-primary-aria-label": "نوار کناری اصلی",
+	"bs-discovery-sidebar-secondary-aria-label": "نوار کناری ثانویه"
 }

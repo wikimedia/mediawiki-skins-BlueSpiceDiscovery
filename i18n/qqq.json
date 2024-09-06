@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Ajeje Brazorf",
+			"Amire80",
 			"Daniel Vogel",
 			"Robby",
 			"Samflint",
@@ -85,8 +86,8 @@
 	"bs-discovery-sidebar-secondary-share-sharebymail-title": "Title for share by mail share option link",
 	"bs-discovery-sidebar-secondary-share-link-title": "Title attribute for button with share options",
 	"bs-discovery-sidebar-secondary-share-link-aria-label": "Aria-label attribute for button with share options",
-	"bs-discovery-sidebar-secondary-share-sharebymail-subject": "Text for mail subject in share by mail share option link.\n* $1 - Name of the wiki.\n* $2 - Full name of the page.",
-	"bs-discovery-sidebar-secondary-share-sharebymail-body": "Text for mail body in share by mail share option link.\n* $1 - Name of the wiki.\n* $2 - Full name of the page.\n* $3 - Perma link url",
+	"bs-discovery-sidebar-secondary-share-sharebymail-subject": "{{optional}}\n\nText for mail subject in share by mail share option link.\n* $1 - Name of the wiki.\n* $2 - Full name of the page.",
+	"bs-discovery-sidebar-secondary-share-sharebymail-body": "{{optional}}\n\nText for email body in share by mail share option link.\n* $1 - Name of the wiki.\n* $2 - Full name of the page.\n* $3 - Permalink url.",
 	"bs-discovery-sidebar-actions-heading": "Heading for actions panel in right sidebar\n\n{{Identical|Action}}",
 	"bs-discovery-sidebar-details-heading": "Heading for details panel in right sidebar\n\n{{Identical|Detail}}",
 	"bs-discovery-details-pnl-more-link-text": "Text for link details which opens a dialog, that lists a collection of links from toolbox, views, actions and variants.\n{{Identical|All}}",
@@ -181,5 +182,6 @@
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Text for footer link to [Site:Terms_of_service]",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Destination for the [Site:Terms_of_service] footer link ('Site' not translatable)",
 	"bs-discovery-sidebar-primary-aria-label": "Aria-labe for navigation landmark primary sidebar",
-	"bs-discovery-sidebar-secondary-aria-label": "Aria-labe for navigation landmark secondary sidebar"
+	"bs-discovery-sidebar-secondary-aria-label": "Aria-labe for navigation landmark secondary sidebar",
+	"bs-discovery-name": "{{name}}"
 }

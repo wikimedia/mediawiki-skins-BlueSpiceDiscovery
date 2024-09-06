@@ -6,6 +6,7 @@
 			"Cigaryno",
 			"Gomoko",
 			"McDutchie",
+			"Méthodes Bulebe Hangi",
 			"Verdy p",
 			"Vikoula5",
 			"Wladek92"
@@ -189,5 +190,7 @@
 	"bs-discovery-config-mainlinks-categories-help": "Afficher le lien « Catégories » du point d'entrée dans la navigation de gauche",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Conditions d’utilisation",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Conditions_de_service",
-	"bs-discovery-title-last-edit-info-date-only": "Dernière modification $1"
+	"bs-discovery-title-last-edit-info-date-only": "Dernière modification $1",
+	"bs-discovery-sidebar-primary-aria-label": "la première colonne d'à coté",
+	"bs-discovery-sidebar-secondary-aria-label": "Deuxièmes ligne d'à coté"
 }
