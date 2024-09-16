@@ -466,7 +466,8 @@
 				"stylesheets/fixes/extjs-fixes.css": {},
 				"stylesheets/bluespice.print.css": { "media": "print" },
 				"stylesheets/control/mws-tree-component.css": {},
-				"stylesheets/control/hide-title.css": {}
+				"stylesheets/control/hide-title.css": {},
+				"stylesheets/wcag.css": { "media": "prefers-contrast: more" }
 			}
 		},
 		"skin.discovery.bluespice.themes.default": {
