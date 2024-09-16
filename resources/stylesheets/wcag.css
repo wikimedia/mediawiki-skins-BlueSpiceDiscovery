@@ -1,3 +1,4 @@
+.mwe-math-fallback-image-inline,
 .wcag-invertable {
 	-webkit-filter: invert(100%); /* Safari/Chrome */
 	filter: invert(100%);
