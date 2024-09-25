@@ -21,7 +21,7 @@
 	"bs-discovery-navbar-user-login-text": "Login",
 	"bs-discovery-navbar-user-login-title": "Login",
 	"bs-discovery-navbar-user-login-aria-label": "Login",
-	"bs-discovery-logo-return-to-aria-label": "Return to $1",
+	"bs-discovery-logo-return-to-aria-label": "{{SITENAME}} logo - Return to $1",
 	"bs-discovery-searchform-button-title": "Search now",
 	"bs-discovery-searchform-button-aria-label": "Search now",
 	"bs-discovery-searchform-input-placeholder": "Your search term",
