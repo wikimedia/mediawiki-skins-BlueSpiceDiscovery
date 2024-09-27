@@ -222,7 +222,7 @@ ul.bs-social-entitylist {
 }
 #content .bs-social-entity-right a,
 #content .bs-social-entity-right a::before {
-	color: var(--discussion-title-fg) !important;
+	color: var(--discussion-after-content-fg) !important;
 }
 #content .bs-social-entity-right a.highlight,
 #content .bs-social-entity-right a.highlight::before {
