@@ -14,7 +14,7 @@
 	"bs-discovery-navbar-user-button-personal-menu-text": "Strumenti personali",
 	"bs-discovery-navbar-user-login-text": "Accedi",
 	"bs-discovery-navbar-user-login-title": "Accedi",
-	"bs-discovery-logo-return-to-aria-label": "Torna a $1",
+	"bs-discovery-logo-return-to-aria-label": "Logo di {{SITENAME}} - Ritorna a $1",
 	"bs-discovery-header-create-button-text": "Nuovo",
 	"bs-discovery-header-create-button-title": "Crea una nuova pagina",
 	"bs-discovery-create-button-new-section-text": "Nuova sezione",
