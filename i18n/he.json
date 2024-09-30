@@ -20,7 +20,7 @@
 	"bs-discovery-navbar-user-login-text": "כניסה",
 	"bs-discovery-navbar-user-login-title": "כניסה",
 	"bs-discovery-navbar-user-login-aria-label": "כניסה",
-	"bs-discovery-logo-return-to-aria-label": "חזרה אל $1",
+	"bs-discovery-logo-return-to-aria-label": "סמל {{SITENAME}} – חזרה אל $1",
 	"bs-discovery-searchform-button-title": "לחפש עכשיו",
 	"bs-discovery-searchform-button-aria-label": "לחפש עכשיו",
 	"bs-discovery-searchform-input-placeholder": "מונח החיפוש שלך",

@@ -20,7 +20,7 @@
 	"bs-discovery-navbar-user-login-text": "Кириу",
 	"bs-discovery-navbar-user-login-title": "Кириу",
 	"bs-discovery-navbar-user-login-aria-label": "Кириу",
-	"bs-discovery-logo-return-to-aria-label": "$1 бетге къайт",
+	"bs-discovery-logo-return-to-aria-label": "{{SITENAME}} логотип -$1 бетге къайт",
 	"bs-discovery-searchform-button-title": "Бусагъатда изле",
 	"bs-discovery-searchform-button-aria-label": "Бусагъатда изле",
 	"bs-discovery-searchform-input-placeholder": "Излеу излемигиз",
