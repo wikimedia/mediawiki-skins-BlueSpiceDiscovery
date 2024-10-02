@@ -26,7 +26,7 @@
 	"bs-discovery-navbar-user-login-text": "Войти",
 	"bs-discovery-navbar-user-login-title": "Войти",
 	"bs-discovery-navbar-user-login-aria-label": "Войти",
-	"bs-discovery-logo-return-to-aria-label": "Вернуться к $1",
+	"bs-discovery-logo-return-to-aria-label": "Логотип {{SITENAME}} - вернуться к $1",
 	"bs-discovery-searchform-button-title": "Поиск сейчас",
 	"bs-discovery-searchform-button-aria-label": "Поиск сейчас",
 	"bs-discovery-searchform-input-placeholder": "Ваш поисковой запрос",
