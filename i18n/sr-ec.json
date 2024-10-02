@@ -11,7 +11,7 @@
 	"bs-discovery-navbar-user-login-text": "Пријави ме",
 	"bs-discovery-navbar-user-login-title": "Пријави ме",
 	"bs-discovery-navbar-user-login-aria-label": "Пријави ме",
-	"bs-discovery-logo-return-to-aria-label": "Назад на $1",
+	"bs-discovery-logo-return-to-aria-label": "{{SITENAME}} логотип - Назад на $1",
 	"bs-discovery-header-create-button-text": "Ново",
 	"bs-discovery-header-create-button-title": "Направи нову страницу",
 	"bs-discovery-header-create-button-aria-label": "Направи нову страницу",

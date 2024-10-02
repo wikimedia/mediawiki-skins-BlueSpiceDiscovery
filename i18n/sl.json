@@ -20,7 +20,7 @@
 	"bs-discovery-navbar-user-login-text": "Prijava",
 	"bs-discovery-navbar-user-login-title": "Prijava",
 	"bs-discovery-navbar-user-login-aria-label": "Prijava",
-	"bs-discovery-logo-return-to-aria-label": "Vrnitev na $1",
+	"bs-discovery-logo-return-to-aria-label": "Logotip projekta {{SITENAME}} – Vrnitev na $1",
 	"bs-discovery-searchform-button-title": "Poišči zdaj",
 	"bs-discovery-searchform-button-aria-label": "Išči zdaj",
 	"bs-discovery-searchform-input-placeholder": "Vaš iskalni izraz",

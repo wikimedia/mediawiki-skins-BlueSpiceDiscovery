@@ -20,7 +20,7 @@
 	"bs-discovery-navbar-user-login-text": "Aperir session",
 	"bs-discovery-navbar-user-login-title": "Aperir session",
 	"bs-discovery-navbar-user-login-aria-label": "Aperir session",
-	"bs-discovery-logo-return-to-aria-label": "Retornar a $1",
+	"bs-discovery-logo-return-to-aria-label": "Logo de {{SITENAME}} – Retornar a $1",
 	"bs-discovery-searchform-button-title": "Cercar ora",
 	"bs-discovery-searchform-button-aria-label": "Cercar ora",
 	"bs-discovery-searchform-input-placeholder": "Le termino a cercar",
