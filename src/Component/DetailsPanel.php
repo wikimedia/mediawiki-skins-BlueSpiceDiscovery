@@ -95,7 +95,7 @@ class DetailsPanel extends SimpleCard implements IRestrictedComponent {
 				'id' => $id . '-list',
 				'classes' => [],
 				'aria' => [
-					'labelledby' => $this->getId() . '-head'
+					'labelledby' => "{$id}-head"
 				],
 				'links' => $linkFormatter->formatLinks( $this->sortLinks( $actions ) )
 			] ),
