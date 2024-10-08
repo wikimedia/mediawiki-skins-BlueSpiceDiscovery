@@ -482,6 +482,7 @@
 		},
 		"skin.discovery.bluespice.scripts": {
 			"scripts": [
+				"js/bootstrap.js",
 				"js/CookieHandler.js",
 				"js/BlueSpiceUI.js",
 				"js/BreadCrumbs.js",
