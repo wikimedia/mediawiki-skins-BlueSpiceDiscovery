@@ -269,4 +269,12 @@
 		$( '#new-content-menu-btn' ).focus();
 	} );
 
+	blueSpiceDiscovery.ui.toggleSidebar = toggleSidebar;
+	blueSpiceDiscovery.ui.showSidebarPrimary = showSidebarPrimary;
+	blueSpiceDiscovery.ui.hideSidebarPrimary = hideSidebarPrimary;
+	blueSpiceDiscovery.ui.showSidebarSecondary = showSidebarSecondary;
+	blueSpiceDiscovery.ui.hideSidebarSecondary = hideSidebarSecondary;
+	blueSpiceDiscovery.ui.enterFullscreenMode = enableFullscreenMode;
+	blueSpiceDiscovery.ui.exitFullscreenMode = disableFullscreenMode;
+
 })( document, jQuery, mediaWiki );
