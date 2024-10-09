@@ -182,5 +182,7 @@
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Terms of service",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Terms_of_service",
 	"bs-discovery-sidebar-primary-aria-label": "Primary sidebar",
-	"bs-discovery-sidebar-secondary-aria-label": "Secondary sidebar"
+	"bs-discovery-sidebar-secondary-aria-label": "Secondary sidebar",
+	"bs-discovery-tools-after-content-aria-label": "Tools after content section",
+	"bs-discovery-data-after-content-aria-label": "Data after content section"
 }
