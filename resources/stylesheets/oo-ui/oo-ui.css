@@ -27,3 +27,8 @@ body.mediawiki .oo-ui-windowManager-modal > .oo-ui-dialog {
 .oo-ui-numberInputWidget-field > span, .oo-ui-numberInputWidget-field > input {
 	position: relative;
 }
+
+/* ERM31377 Ensure that tabOptionWidget is underlined when selected despite focus */
+.oo-ui-tabSelectWidget-framed.oo-ui-widget-enabled .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected .oo-ui-labelElement-label {
+	border-bottom-color: #36c;
+}
