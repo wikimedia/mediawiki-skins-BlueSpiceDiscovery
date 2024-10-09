@@ -309,16 +309,17 @@ abstract class ExtendedSkinSlotRendererBase extends SkinSlotRendererBase {
 		}
 
 		$roleString = '';
+		$ariaLabelString = '';
 		if ( $role !== '' ) {
 			$roleString = ' role="' . $role . '"';
-		}
 
-		/*
-		 * bs-discovery-tools-after-content-aria-label,
-		 * bs-discovery-data-after-content-aria-label
-		 */
-		$ariaLabel = Message::newFromKey( "bs-discovery-$id-aria-label" );
-		$ariaLabelString = ' aria-label="' . $ariaLabel->plain() . '"';
+			/*
+			* bs-discovery-tools-after-content-aria-label,
+			* bs-discovery-data-after-content-aria-label
+			*/
+			$ariaLabel = Message::newFromKey( "bs-discovery-$id-aria-label" );
+			$ariaLabelString = ' aria-label="' . $ariaLabel->escaped() . '"';
+		}
 
 		return '<' . $tag . $htmlId . $htmlClass . $ariaString . $dataString . $roleString . $ariaLabelString . '>';
 	}
