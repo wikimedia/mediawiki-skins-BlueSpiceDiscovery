@@ -3,7 +3,6 @@
 		"authors": [
 			"Ajeje Brazorf",
 			"Amire80",
-			"Daniel Vogel",
 			"McDutchie",
 			"Robby",
 			"Samflint",
@@ -185,7 +184,4 @@
 	"bs-discovery-footerlinks-termsofservice-link-page": "Destination for the [Site:Terms_of_service] footer link ('Site' not translatable)",
 	"bs-discovery-sidebar-primary-aria-label": "Aria-label for navigation landmark primary sidebar",
 	"bs-discovery-sidebar-secondary-aria-label": "Aria-labe for navigation landmark secondary sidebar"
-	"bs-discovery-name": "{{name}}",
-	"bs-discovery-tools-after-content-aria-label": "Aria label tools after content section in html",
-	"bs-discovery-data-after-content-aria-label": "Aria label for data afer content section in html"
 }

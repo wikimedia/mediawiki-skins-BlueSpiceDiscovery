@@ -179,5 +179,7 @@
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Conditiones de servicio",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Conditiones_de_servicio",
 	"bs-discovery-sidebar-primary-aria-label": "Barra lateral primari",
-	"bs-discovery-sidebar-secondary-aria-label": "Barra lateral secundari"
+	"bs-discovery-sidebar-secondary-aria-label": "Barra lateral secundari",
+	"bs-discovery-tools-after-content-aria-label": "Instrumentos post section de contento",
+	"bs-discovery-data-after-content-aria-label": "Datos post section de contento"
 }

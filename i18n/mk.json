@@ -20,7 +20,7 @@
 	"bs-discovery-navbar-user-login-text": "Најава",
 	"bs-discovery-navbar-user-login-title": "Најава",
 	"bs-discovery-navbar-user-login-aria-label": "Најава",
-	"bs-discovery-logo-return-to-aria-label": "Назад на $1",
+	"bs-discovery-logo-return-to-aria-label": "Лого на {{SITENAME}} — Назад кон $1",
 	"bs-discovery-searchform-button-title": "Пребарај сега",
 	"bs-discovery-searchform-button-aria-label": "Пребарај сега",
 	"bs-discovery-searchform-input-placeholder": "Ваш поим за пребарување",
@@ -179,5 +179,7 @@
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Услови на употреба",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Услови_на_употреба",
 	"bs-discovery-sidebar-primary-aria-label": "Главен страничник",
-	"bs-discovery-sidebar-secondary-aria-label": "Спореден страничник"
+	"bs-discovery-sidebar-secondary-aria-label": "Спореден страничник",
+	"bs-discovery-tools-after-content-aria-label": "Алатки по содржинскиот оддел",
+	"bs-discovery-data-after-content-aria-label": "Податоци по содржинскиот оддел"
 }
