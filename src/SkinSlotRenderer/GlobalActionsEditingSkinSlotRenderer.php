@@ -47,6 +47,8 @@ class GlobalActionsEditingSkinSlotRenderer extends ExtendedSkinSlotRendererBase 
 
 		$html = '<ul id="ga-menu-editing" aria-labelledby="ga-menu-editing-head"';
 		$html .= ' class="list-group menu-card-body menu-list">';
+		$hasValidComponent = false;
+
 		foreach ( $items as $id => $item ) {
 			if ( !is_callable( $item['factory'] ) ) {
 				continue;
@@ -68,10 +70,17 @@ class GlobalActionsEditingSkinSlotRenderer extends ExtendedSkinSlotRendererBase 
 				$html .= '<li>';
 				$html .= $this->rendererDataTreeRenderer->getHtml( $rendererDataTree );
 				$html .= '</li>';
+
+				$hasValidComponent = true;
 			}
 		}
 
 		$html .= '</ul>';
+
+		if ( !$hasValidComponent ) {
+			return '';
+		}
+
 		return $html;
 	}
 }

@@ -99,34 +99,40 @@ class GlobalActionsButton extends SimpleDropdownIcon implements IRestrictedCompo
 			]
 		] );
 
-		$editingCard = new SimpleCard( [
-			'id' => 'ga-editing',
-			'classes' => [ 'card-mn' ],
-			'items' => [
-				new SimpleCardHeader( [
-					'id' => 'ga-menu-editing-head',
-					'classes' => [ 'menu-title' ],
-					'items' => [
-						new Literal(
-							'ga-menu-title',
-							Message::newFromKey(
-								'bs-discovery-navbar-global-actions-editing-text'
+		$cardBodyItems = [ $overviewCard ];
+
+		// Add editing card if content exists
+		$editingHtml = $this->getEditingSkinSlotHtml();
+		if ( $editingHtml ) {
+			$editingCard = new SimpleCard( [
+				'id' => 'ga-editing',
+				'classes' => [ 'card-mn' ],
+				'items' => [
+					new SimpleCardHeader( [
+						'id' => 'ga-menu-editing-head',
+						'classes' => [ 'menu-title' ],
+						'items' => [
+							new Literal(
+								'ga-menu-title',
+								Message::newFromKey(
+									'bs-discovery-navbar-global-actions-editing-text'
+								)
 							)
-						)
-					]
-				] ),
-				new Literal(
-					'ga-menu-list-items',
-					$this->getEditingSkinSlotHtml()
-				)
-			]
-		] );
+						]
+					] ),
+					new Literal(
+						'ga-menu-list-items',
+						$this->getEditingSkinSlotHtml()
+					)
+				]
+			] );
 
-		$cardBodyItems = [ $overviewCard, $editingCard ];
+			$cardBodyItems[] = $editingCard;
+		}
 
-		// Conditionally add the administration card if the HTML is not empty
+		// Add administration card if content exists
 		$administrationHtml = $this->getAdministrationSkinSlotHtml();
-		if ( $administrationHtml !== '' ) {
+		if ( $administrationHtml ) {
 			$administrationCard = new SimpleCard( [
 				'id' => 'ga-administration',
 				'classes' => [ 'card-mn' ],
