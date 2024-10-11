@@ -45,7 +45,7 @@ class GlobalActionsEditingSkinSlotRenderer extends ExtendedSkinSlotRendererBase 
 
 		$this->sortItems( $items );
 
-		$html = '<ul id="ga-menu-editing" aria-labelledby="ga-menu-editing-head"';
+		$html = '<ul id="ga-menu-editing" aria-labelledby="ga-menu-editing-head" role="group"';
 		$html .= ' class="list-group menu-card-body menu-list">';
 		$hasValidComponent = false;
 
