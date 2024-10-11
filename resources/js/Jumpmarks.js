@@ -1,6 +1,6 @@
 ( function( mw, $, d ){
 
-	$( d ).ready( function(){
+	$( d ).ready( function() {
 		var hash = window.location.hash;
 		var offset = $( '#main' ).offset().top + $( '#title-line' ).height();
 		if ( hash !== '' ) {
@@ -17,32 +17,49 @@
 			);
 		};
 
-		$( '#content' ).on( 'click',
-			'#mw-content-text a:not( [id] ):not( [class] ),#mw-content-text map area',
-			function( e ) {
-			var hash = this.hash;
+		$( d ).on( 'click',
+			'nav.skip-links a, #mw-content-text a:not( [id] ):not( [class] ),#mw-content-text map area',
+			function ( event ) {
+				userInputScroll( event, this, offset );
+			}
+		);
 
-			if( this.pathname + this.search !== mw.util.getUrl() ) {
+		$( d ).on( 'keyup',
+			'nav.skip-links a, #mw-content-text a:not( [id] ):not( [class] ),#mw-content-text map area',
+			function ( event ) {
+				if ( event.keyCode === 13 ) {
+					userInputScroll( event, this, offset );
+				}
+			}
+		);
+
+	} );
+
+	function userInputScroll( event, element, offset ) {
+		let localUrl = element.pathname + element.search;
+		let fullUrl = window.location.origin + localUrl;
+
+		if( element.href.indexOf( localUrl ) !== 0 && element.href.indexOf( fullUrl ) !== 0 ) {
+			return;
+		}
+
+		if ( element.hash !== '' ) {
+			event.preventDefault();
+			var jumpmark = getJumpmarkEl( element.hash );
+			if ( !jumpmark ) {
 				return;
 			}
 
-			if ( hash !== '' ) {
-				var jumpmark = getJumpmarkEl( hash );
-				if ( !jumpmark ) {
-					return;
-				}
-
-				var position = getPosition( jumpmark, offset );
-				if ( position === 0 ) {
-					return;
-				}
-
-				$( 'body,html' ).animate( {
-					scrollTop: position
-				} );
+			var position = getPosition( jumpmark, offset );
+			if ( position === 0 ) {
+				return;
 			}
-		});
-	});
+
+			$( 'body,html' ).animate( {
+				scrollTop: position
+			} );
+		}
+	}
 
 	function getJumpmarkEl( hash ) {
 		// Strip the leading # to get the id
@@ -61,13 +78,13 @@
 	function getPosition( jumpmark, offset ) {
 		var $jumpmark = $( jumpmark ),
 			$heading = $jumpmark.closest( 'h1,h2,h3,h4,h5,h6' ),
-			postion = $jumpmark.offset().top;
+			position = $jumpmark.offset().top;
 
 		if ( $heading.length === 1  ) {
-			postion -= $heading.height();
+			position -= $heading.height();
 		}
 
-		return postion - offset;
+		return position - offset;
 	}
 
 } )( mediaWiki, jQuery, document );
