@@ -44,7 +44,6 @@
 		}
 
 		if ( element.hash !== '' ) {
-			event.preventDefault();
 			var jumpmark = getJumpmarkEl( element.hash );
 			if ( !jumpmark ) {
 				return;
