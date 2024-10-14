@@ -21,7 +21,7 @@
 	"bs-discovery-navbar-user-login-text": "Iniciar a sesión",
 	"bs-discovery-navbar-user-login-title": "Iniciar a sesión",
 	"bs-discovery-navbar-user-login-aria-label": "Iniciar a sesión",
-	"bs-discovery-logo-return-to-aria-label": "Volver a \"$1\"",
+	"bs-discovery-logo-return-to-aria-label": "Logo de {{SITENAME}} - Volver a \"$1\"",
 	"bs-discovery-searchform-button-title": "Procurar agora",
 	"bs-discovery-searchform-button-aria-label": "Procurar agora",
 	"bs-discovery-searchform-input-placeholder": "O teu termo de procura",
@@ -180,5 +180,7 @@
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Termos de servizo",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Termos_de_servizo",
 	"bs-discovery-sidebar-primary-aria-label": "Barra lateral principal",
-	"bs-discovery-sidebar-secondary-aria-label": "Barra lateral secundaria"
+	"bs-discovery-sidebar-secondary-aria-label": "Barra lateral secundaria",
+	"bs-discovery-tools-after-content-aria-label": "Ferramentas despois da sección de contido",
+	"bs-discovery-data-after-content-aria-label": "Datos despois da sección de contido"
 }
