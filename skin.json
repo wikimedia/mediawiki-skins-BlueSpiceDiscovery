@@ -506,7 +506,10 @@
 				"bs-discovery-sidebar-secondary-toggle-show-title",
 				"bs-discovery-sidebar-secondary-toggle-show-aria-label",
 				"bs-discovery-sidebar-secondary-toggle-hide-title",
-				"bs-discovery-sidebar-secondary-toggle-hide-aria-label"
+				"bs-discovery-sidebar-secondary-toggle-hide-aria-label",
+				"bs-discovery-navbar-user-button-aria-label",
+				"bs-discovery-navbar-user-button-requires-attention-aria-label",
+				"bs-discovery-requires-attention"
 			],
 			"dependencies": [
 				"mediawiki.cookie",
