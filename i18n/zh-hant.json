@@ -181,5 +181,7 @@
 	"bs-discovery-footerlinks-termsofservice-link-desc": "服務條款",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:服務條款",
 	"bs-discovery-sidebar-primary-aria-label": "主要側邊欄",
-	"bs-discovery-sidebar-secondary-aria-label": "次要側邊欄"
+	"bs-discovery-sidebar-secondary-aria-label": "次要側邊欄",
+	"bs-discovery-tools-after-content-aria-label": "內容章節之後的工具",
+	"bs-discovery-data-after-content-aria-label": "內容章節之後的資料"
 }
