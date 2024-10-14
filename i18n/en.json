@@ -17,6 +17,7 @@
 	"bs-discovery-navbar-search-form-input-aria-label": "Search form input",
 	"bs-discovery-navbar-user-button-title": "User menu",
 	"bs-discovery-navbar-user-button-aria-label": "User menu",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "User menu (requires attention)",
 	"bs-discovery-navbar-user-button-personal-menu-text": "Personal Tools",
 	"bs-discovery-navbar-user-login-text": "Login",
 	"bs-discovery-navbar-user-login-title": "Login",
@@ -184,5 +185,6 @@
 	"bs-discovery-sidebar-primary-aria-label": "Primary sidebar",
 	"bs-discovery-sidebar-secondary-aria-label": "Secondary sidebar",
 	"bs-discovery-tools-after-content-aria-label": "Tools after content section",
-	"bs-discovery-data-after-content-aria-label": "Data after content section"
+	"bs-discovery-data-after-content-aria-label": "Data after content section",
+	"bs-discovery-requires-attention": "(requires attention)"
 }
