@@ -185,5 +185,7 @@
 	"bs-discovery-footerlinks-termsofservice-link-page": "Destination for the [Site:Terms_of_service] footer link ('Site' not translatable)",
 	"bs-discovery-sidebar-primary-aria-label": "Aria-label for navigation landmark primary sidebar",
 	"bs-discovery-sidebar-secondary-aria-label": "Aria-labe for navigation landmark secondary sidebar",
-	"bs-discovery-requires-attention": "Text for visually hidden element to indicate that this element requires user attention"
+	"bs-discovery-requires-attention": "Text for visually hidden element to indicate that this element requires user attention",
+	"bs-discovery-table-of-contents-show-button-aria-label": "ARIA label for the table of contents show toggle button",
+	"bs-discovery-table-of-contents-hide-button-aria-label": "ARIA label for the table of contents hide toggle button"
 }

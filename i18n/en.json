@@ -186,5 +186,7 @@
 	"bs-discovery-sidebar-secondary-aria-label": "Secondary sidebar",
 	"bs-discovery-tools-after-content-aria-label": "Tools after content section",
 	"bs-discovery-data-after-content-aria-label": "Data after content section",
-	"bs-discovery-requires-attention": "(requires attention)"
+	"bs-discovery-requires-attention": "(requires attention)",
+	"bs-discovery-table-of-contents-show-button-aria-label": "Show the table of contents",
+	"bs-discovery-table-of-contents-hide-button-aria-label": "Hide the table of contents"
 }
