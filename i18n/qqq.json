@@ -22,6 +22,7 @@
 	"bs-discovery-navbar-search-form-input-aria-label": "Aria-label attribute for search form input field",
 	"bs-discovery-navbar-user-button-title": "Title attribute for button with user menu",
 	"bs-discovery-navbar-user-button-aria-label": "Aria label for button with user menu",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "Aria label for button with user menu if attention to this button is required",
 	"bs-discovery-navbar-user-button-personal-menu-text": "Text for heading of menu with personal tools",
 	"bs-discovery-navbar-user-login-text": "Text for login button\n\n{{Identical|Log in}}",
 	"bs-discovery-navbar-user-login-title": "Title attribute for login button\n\n{{Identical|Log in}}",
@@ -183,5 +184,6 @@
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Text for footer link to [Site:Terms_of_service]",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Destination for the [Site:Terms_of_service] footer link ('Site' not translatable)",
 	"bs-discovery-sidebar-primary-aria-label": "Aria-label for navigation landmark primary sidebar",
-	"bs-discovery-sidebar-secondary-aria-label": "Aria-labe for navigation landmark secondary sidebar"
+	"bs-discovery-sidebar-secondary-aria-label": "Aria-labe for navigation landmark secondary sidebar",
+	"bs-discovery-requires-attention": "Text for visually hidden element to indicate that this element requires user attention"
 }
