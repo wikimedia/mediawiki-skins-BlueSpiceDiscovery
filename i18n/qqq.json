@@ -10,6 +10,7 @@
 			"Verdy p"
 		]
 	},
+	"bs-discovery-name": "{{name}}",
 	"bs-discovery-skip-links-navigation-aria-label": "Aria-label attribute for skip links navigation",
 	"bs-discovery-skip-to-navbar-primary-text": "Text for skip link item navbar-primary",
 	"bs-discovery-skip-to-sidebar-primary-text": "Text for skip link item sidebar-primary",
@@ -184,8 +185,9 @@
 	"bs-discovery-footerlinks-termsofservice-link-page": "Destination for the [Site:Terms_of_service] footer link ('Site' not translatable)",
 	"bs-discovery-sidebar-primary-aria-label": "Aria-labe for navigation landmark primary sidebar",
 	"bs-discovery-sidebar-secondary-aria-label": "Aria-labe for navigation landmark secondary sidebar",
-	"bs-discovery-name": "{{name}}",
 	"bs-discovery-tools-after-content-aria-label": "Aria label tools after content section in html",
 	"bs-discovery-data-after-content-aria-label": "Aria label for data afer content section in html",
-	"bs-discovery-requires-attention": "Text for visually hidden element to indicate that this element requires user attention"
+	"bs-discovery-requires-attention": "Text for visually hidden element to indicate that this element requires user attention",
+	"bs-discovery-table-of-contents-show-button-aria-label": "ARIA label for the table of contents show toggle button",
+	"bs-discovery-table-of-contents-hide-button-aria-label": "ARIA label for the table of contents hide toggle button"
 }
