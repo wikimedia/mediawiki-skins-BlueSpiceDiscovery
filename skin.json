@@ -489,7 +489,8 @@
 				"js/MobileContentTables.js",
 				"js/dblClickEdit.js",
 				"js/TreeComponent.js",
-				"js/VEEditClick.js"
+				"js/VEEditClick.js",
+				"js/AddTOCAriaLabel.js"
 			],
 			"messages": [
 				"bs-discovery-navbar-full-screen-button-enable-title",
@@ -506,7 +507,9 @@
 				"bs-discovery-sidebar-secondary-toggle-hide-aria-label",
 				"bs-discovery-navbar-user-button-aria-label",
 				"bs-discovery-navbar-user-button-requires-attention-aria-label",
-				"bs-discovery-requires-attention"
+				"bs-discovery-requires-attention",
+				"bs-discovery-table-of-contents-show-button-aria-label",
+				"bs-discovery-table-of-contents-hide-button-aria-label"
 			],
 			"dependencies": [
 				"mediawiki.cookie",
