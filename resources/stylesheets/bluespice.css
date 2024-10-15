@@ -51,8 +51,7 @@ a.ico-btn:focus {
 	box-shadow: none;
 }
 a.ico-btn:focus-visible {
-	outline: 0;
-	box-shadow: 0 0 0 .1em var( --icon-primary--focus-visible );
+	outline: 2px solid var( --icon-primary--focus-visible );
 }
 .bg-transp {
 	background-color: transparent !important;
