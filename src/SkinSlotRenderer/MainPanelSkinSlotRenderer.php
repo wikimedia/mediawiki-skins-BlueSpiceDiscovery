@@ -65,6 +65,22 @@ class MainPanelSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 	}
 
 	/**
+	 * @inheritDoc
+	 */
+	protected function buildOpeningConainerWrapperHtml(): string {
+		$html = $this->buildOpeningHtml(
+			$this->getContainerWrapperTag(),
+			$this->getContainerWrapperId(),
+			$this->getContainerWrapperClasses(),
+			$this->getContainerWrapperAriaAttributes(),
+			$this->getContainerWrapperDataAttributes(),
+			'group'
+		);
+
+		return $html;
+	}
+
+	/**
 	 *
 	 * @param array &$rendererDataTree
 	 * @return void
