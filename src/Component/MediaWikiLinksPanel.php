@@ -74,6 +74,10 @@ class MediaWikiLinksPanel extends SimpleCard {
 		foreach ( $sidebar as $section => $links ) {
 			$this->checkActiveState( $links );
 
+			foreach ( $links as $key => $link ) {
+				$links[$key]['role'] = 'menuitem';
+			}
+
 			$items[] = $this->buildPanel( $section, $links, $linkFormatter );
 
 		}
@@ -126,7 +130,9 @@ class MediaWikiLinksPanel extends SimpleCard {
 					'aria' => [
 						'labelledby' => $id . '-head'
 					],
-					'links' => $linkFormatter->formatLinks( $links )
+					'links' => $linkFormatter->formatLinks( $links ),
+					'role' => 'menu',
+					'item-role' => 'presentation'
 				] )
 			]
 		] );

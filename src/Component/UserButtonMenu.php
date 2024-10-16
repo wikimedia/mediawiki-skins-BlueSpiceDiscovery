@@ -59,6 +59,10 @@ class UserButtonMenu extends SimpleDropdown {
 			}
 		}
 
+		foreach ( $links as $key => $link ) {
+			$links[$key]['role'] = 'menuitem';
+		}
+
 		$id = 'p-tools';
 
 		return [
@@ -96,6 +100,8 @@ class UserButtonMenu extends SimpleDropdown {
 										'id' => $id,
 										'classes' => [ 'menu-card-body', 'menu-list', 'll-dft' ],
 										'links' => $linkFormatter->formatLinks( $this->sortLinks( $links ) ),
+										'role' => 'menu',
+										'item-role' => 'presentation',
 										'aria' => [
 											'labelledby' => $id . '-head'
 										],
