@@ -45,7 +45,7 @@ class GlobalActionsAdministrationSkinSlotRenderer extends ExtendedSkinSlotRender
 
 		$this->sortItems( $items );
 
-		$html = '<ul id="ga-menu-administration" aria-labelledby="ga-menu-administration-head" role="group"';
+		$html = '<ul id="ga-menu-administration" aria-labelledby="ga-menu-administration-head" role="menu"';
 		$html .= ' class="list-group menu-card-body menu-list">';
 		$hasValidComponent = false;
 
@@ -67,7 +67,7 @@ class GlobalActionsAdministrationSkinSlotRenderer extends ExtendedSkinSlotRender
 				$rendererDataTree = $this->rendererDataTreeBuilder->getRendererDataTree( [
 					array_pop( $componentTree )
 				] );
-				$html .= '<li>';
+				$html .= '<li role="presentation">';
 				$html .= $this->rendererDataTreeRenderer->getHtml( $rendererDataTree );
 				$html .= '</li>';
 
