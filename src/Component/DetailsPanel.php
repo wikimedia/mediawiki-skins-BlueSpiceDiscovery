@@ -75,8 +75,13 @@ class DetailsPanel extends SimpleCard implements IRestrictedComponent {
 				];
 			}
 		}
+
 		if ( empty( $actions ) ) {
 			return [];
+		}
+
+		foreach ( $actions as $key => $action ) {
+			$actions[$key]['role'] = 'menuitem';
 		}
 
 		$id = 'ca-links-details';
@@ -97,7 +102,9 @@ class DetailsPanel extends SimpleCard implements IRestrictedComponent {
 				'aria' => [
 					'labelledby' => "{$id}-head"
 				],
-				'links' => $linkFormatter->formatLinks( $this->sortLinks( $actions ) )
+				'links' => $linkFormatter->formatLinks( $this->sortLinks( $actions ) ),
+				'role' => 'menu',
+				'item-role' => 'presentation'
 			] ),
 		];
 	}
