@@ -16,6 +16,7 @@
 	"bs-discovery-navbar-search-form-input-aria-label": "Поле за пребарување",
 	"bs-discovery-navbar-user-button-title": "Корисничко мени",
 	"bs-discovery-navbar-user-button-aria-label": "Корисничко мени",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "Корисничко мени (бара внимание)",
 	"bs-discovery-navbar-user-button-personal-menu-text": "Лични алатки",
 	"bs-discovery-navbar-user-login-text": "Најава",
 	"bs-discovery-navbar-user-login-title": "Најава",
@@ -181,5 +182,6 @@
 	"bs-discovery-sidebar-primary-aria-label": "Главен страничник",
 	"bs-discovery-sidebar-secondary-aria-label": "Спореден страничник",
 	"bs-discovery-tools-after-content-aria-label": "Алатки по содржинскиот оддел",
-	"bs-discovery-data-after-content-aria-label": "Податоци по содржинскиот оддел"
+	"bs-discovery-data-after-content-aria-label": "Податоци по содржинскиот оддел",
+	"bs-discovery-requires-attention": "(бара внимание)"
 }

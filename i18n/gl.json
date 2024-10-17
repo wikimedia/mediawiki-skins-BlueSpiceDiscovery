@@ -17,6 +17,7 @@
 	"bs-discovery-navbar-search-form-input-aria-label": "Entrada do formulario de busca",
 	"bs-discovery-navbar-user-button-title": "Menú de usuario",
 	"bs-discovery-navbar-user-button-aria-label": "Menú de usuario",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "Menú de usuario (cómpre atención)",
 	"bs-discovery-navbar-user-button-personal-menu-text": "Ferramentas persoais",
 	"bs-discovery-navbar-user-login-text": "Iniciar a sesión",
 	"bs-discovery-navbar-user-login-title": "Iniciar a sesión",
@@ -182,5 +183,6 @@
 	"bs-discovery-sidebar-primary-aria-label": "Barra lateral principal",
 	"bs-discovery-sidebar-secondary-aria-label": "Barra lateral secundaria",
 	"bs-discovery-tools-after-content-aria-label": "Ferramentas despois da sección de contido",
-	"bs-discovery-data-after-content-aria-label": "Datos despois da sección de contido"
+	"bs-discovery-data-after-content-aria-label": "Datos despois da sección de contido",
+	"bs-discovery-requires-attention": "(cómpre atención)"
 }

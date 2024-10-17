@@ -11,6 +11,7 @@
 	"bs-discovery-back-to-top-text": "Torna all'inizio",
 	"bs-discovery-navbar-user-button-title": "Menu utente",
 	"bs-discovery-navbar-user-button-aria-label": "Menu utente",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "Menu utente (richiede attenzione)",
 	"bs-discovery-navbar-user-button-personal-menu-text": "Strumenti personali",
 	"bs-discovery-navbar-user-login-text": "Accedi",
 	"bs-discovery-navbar-user-login-title": "Accedi",
@@ -58,5 +59,6 @@
 	"bs-discovery-page-version-pager-previous": "Precedente",
 	"bs-discovery-page-version-pager-next": "Successivo",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Condizioni del servizio",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Condizioni_del_servizio"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Condizioni_del_servizio",
+	"bs-discovery-requires-attention": "(richiede attenzione)"
 }
