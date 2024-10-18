@@ -97,7 +97,7 @@ class MainPanelSkinSlotRenderer extends ExtendedSkinSlotRendererBase {
 			$this->getContainerWrapperClasses(),
 			$this->getContainerWrapperAriaAttributes(),
 			$this->getContainerWrapperDataAttributes(),
-			'menu'
+			'group'
 		);
 
 		return $html;

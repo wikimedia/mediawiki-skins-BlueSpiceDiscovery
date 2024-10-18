@@ -44,13 +44,6 @@ class SpecialUpload extends RestrictedTextLink {
 	}
 
 	/**
-	 * @inheritDoc
-	 */
-	public function getRole(): string {
-		return 'menuitem';
-	}
-
-	/**
 	 *
 	 * @return Message
 	 */

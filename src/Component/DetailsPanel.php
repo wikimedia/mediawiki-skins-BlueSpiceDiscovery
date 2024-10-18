@@ -80,10 +80,6 @@ class DetailsPanel extends SimpleCard implements IRestrictedComponent {
 			return [];
 		}
 
-		foreach ( $actions as $key => $action ) {
-			$actions[$key]['role'] = 'menuitem';
-		}
-
 		$id = 'ca-links-details';
 		return [
 			new SimpleCardHeader( [
@@ -103,7 +99,7 @@ class DetailsPanel extends SimpleCard implements IRestrictedComponent {
 					'labelledby' => "{$id}-head"
 				],
 				'links' => $linkFormatter->formatLinks( $this->sortLinks( $actions ) ),
-				'role' => 'menu',
+				'role' => 'group',
 				'item-role' => 'presentation'
 			] ),
 		];
