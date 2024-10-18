@@ -108,10 +108,6 @@ class NamespaceMainPages extends SimpleCard {
 
 		ksort( $mainpages );
 
-		foreach ( $mainpages as $key => $mainpage ) {
-			$mainpages[$key]['role'] = 'menuitem';
-		}
-
 		$id = 'namespace-mainpage-links-pnl';
 		$headerText = wfMessage( 'bs-discovery-namespace-mainpage-links-pnl-header-text' )->text();
 
@@ -136,7 +132,7 @@ class NamespaceMainPages extends SimpleCard {
 						'labelledby' => $id . '-head'
 					],
 					'links' => $linkFormatter->formatLinks( $mainpages ),
-					'role' => 'menu',
+					'role' => 'group',
 					'item-role' => 'presentation'
 				] )
 			]
