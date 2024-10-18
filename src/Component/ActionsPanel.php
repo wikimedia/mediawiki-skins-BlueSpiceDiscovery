@@ -73,10 +73,6 @@ class ActionsPanel extends SimpleCard implements IRestrictedComponent {
 		];
 
 		if ( !empty( $actionsPrimary ) ) {
-			foreach ( $actionsPrimary as $key => $action ) {
-				$actionsPrimary[$key]['role'] = 'menuitem';
-			}
-
 			$pnl = new SimpleLinklistGroupFromArray( [
 				'id' => $this->getId() . '-list-pri',
 				'classes' => [],
@@ -84,7 +80,7 @@ class ActionsPanel extends SimpleCard implements IRestrictedComponent {
 					'labelledby' => $this->getId() . '-head'
 				],
 				'links' => $linkFormatter->formatLinks( $this->sortLinks( $actionsPrimary ) ),
-				'role' => 'menu',
+				'role' => 'group',
 				'item-role' => 'presentation'
 			] );
 
@@ -92,10 +88,6 @@ class ActionsPanel extends SimpleCard implements IRestrictedComponent {
 		}
 
 		if ( !empty( $actionsSecondary ) ) {
-			foreach ( $actionsSecondary as $key => $action ) {
-				$actionsSecondary[$key]['role'] = 'menuitem';
-			}
-
 			$pnl = new SimpleLinklistGroupFromArray( [
 				'id' => $this->getId() . '-list-sec',
 				'classes' => [],
@@ -103,7 +95,7 @@ class ActionsPanel extends SimpleCard implements IRestrictedComponent {
 					'labelledby' => $this->getId() . '-head'
 				],
 				'links' => $linkFormatter->formatLinks( $this->sortLinks( $actionsSecondary ) ),
-				'role' => 'menu',
+				'role' => 'group',
 				'item-role' => 'presentation'
 			] );
 
