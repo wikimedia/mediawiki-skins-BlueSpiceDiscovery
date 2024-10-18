@@ -183,5 +183,7 @@
 	"bs-discovery-tools-after-content-aria-label": "Алатки по содржинскиот оддел",
 	"bs-discovery-data-after-content-aria-label": "Податоци по содржинскиот оддел",
 	"bs-discovery-navbar-user-button-requires-attention-aria-label": "Корисничко мени (бара внимание)",
-	"bs-discovery-requires-attention": "(бара внимание)"
+	"bs-discovery-requires-attention": "(бара внимание)",
+	"bs-discovery-table-of-contents-show-button-aria-label": "Прикажи ја Содржината",
+	"bs-discovery-table-of-contents-hide-button-aria-label": "Скриј ја Соодржината"
 }
