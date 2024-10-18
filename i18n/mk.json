@@ -181,5 +181,7 @@
 	"bs-discovery-sidebar-primary-aria-label": "Главен страничник",
 	"bs-discovery-sidebar-secondary-aria-label": "Спореден страничник",
 	"bs-discovery-tools-after-content-aria-label": "Алатки по содржинскиот оддел",
-	"bs-discovery-data-after-content-aria-label": "Податоци по содржинскиот оддел"
+	"bs-discovery-data-after-content-aria-label": "Податоци по содржинскиот оддел",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "Корисничко мени (бара внимание)",
+	"bs-discovery-requires-attention": "(бара внимание)"
 }

@@ -181,5 +181,9 @@
 	"bs-discovery-sidebar-primary-aria-label": "Barra lateral primari",
 	"bs-discovery-sidebar-secondary-aria-label": "Barra lateral secundari",
 	"bs-discovery-tools-after-content-aria-label": "Instrumentos post section de contento",
-	"bs-discovery-data-after-content-aria-label": "Datos post section de contento"
+	"bs-discovery-data-after-content-aria-label": "Datos post section de contento",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "Menu de usator (require attention)",
+	"bs-discovery-requires-attention": "(require attention)",
+	"bs-discovery-table-of-contents-show-button-aria-label": "Monstrar le tabula de contento",
+	"bs-discovery-table-of-contents-hide-button-aria-label": "Celar le tabula de contento"
 }

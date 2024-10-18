@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Borhan",
+			"San1joy23",
 			"আফতাবুজ্জামান",
 			"জয়শ্রীরাম সরকার"
 		]
@@ -19,5 +20,8 @@
 	"bs-discovery-page-version-pager-previous": "পূর্ববর্তী",
 	"bs-discovery-page-version-pager-next": "পরবর্তী",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "পরিষেবার শর্তাবলী",
-	"bs-discovery-footerlinks-termsofservice-link-page": "Site:পরিষেবার_শর্তাবলী"
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:পরিষেবার_শর্তাবলী",
+	"bs-discovery-logo-return-to-aria-label": "{{SITENAME}} লোগো - $1 এ ফিরে যান",
+	"bs-discovery-tools-after-content-aria-label": "সামগ্রী বিভাগের পরে সরঞ্জাম",
+	"bs-discovery-data-after-content-aria-label": "বিষয়বস্তু বিভাগের পর তথ্য"
 }
