@@ -59,5 +59,7 @@
 	"bs-discovery-page-version-pager-next": "Successivo",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Condizioni del servizio",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Condizioni_del_servizio",
-	"bs-discovery-title-last-edit-info-date-only": "Ultima modifica $1"
+	"bs-discovery-title-last-edit-info-date-only": "Ultima modifica $1",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "Menu utente (richiede attenzione)",
+	"bs-discovery-requires-attention": "(richiede attenzione)"
 }

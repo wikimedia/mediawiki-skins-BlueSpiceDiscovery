@@ -23,7 +23,7 @@
 	"bs-discovery-navbar-user-login-text": "로그인",
 	"bs-discovery-navbar-user-login-title": "로그인",
 	"bs-discovery-navbar-user-login-aria-label": "로그인",
-	"bs-discovery-logo-return-to-aria-label": "$1(으)로 돌아가기",
+	"bs-discovery-logo-return-to-aria-label": "{{SITENAME}} 로고 - $1 항목으로 돌아가기",
 	"bs-discovery-searchform-button-title": "지금 검색하기",
 	"bs-discovery-searchform-button-aria-label": "지금 검색하기",
 	"bs-discovery-searchform-input-aria-label": "여기에 검색 용어를 입력하십시오",
@@ -102,7 +102,7 @@
 	"bs-discovery-page-version-pager-deleted-user": "(사용자 이름 삭제됨)",
 	"bs-discovery-page-version-pager-previous": "이전",
 	"bs-discovery-page-version-pager-next": "다음",
-	"bs-discovery-navbar-search-form-input-aria-label": "검색 양식 입력",
+	"bs-discovery-navbar-search-form-input-aria-label": "입력에서 검색",
 	"bs-discovery-searchform-input-placeholder": "내 검색 단어",
 	"bs-discovery-header-create-split-button-title": "콘텐츠 생성 옵션이 있는 메뉴를 열어",
 	"bs-discovery-header-create-split-button-aria-label": "콘텐츠 생성 옵션이 있는 메뉴를 열어",
@@ -127,5 +127,8 @@
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-desc": "기능이 개선된 미디어위키 사이드바 메뉴",
 	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "주 메뉴",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "문서",
-	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "둘러보기"
+	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "둘러보기",
+	"bs-discovery-main-links-heading": "엔트리포인트",
+	"bs-discovery-mainlinks-allpages-label": "문서",
+	"menueditor-ui-enhanced-sidebar-subpage-tree-label-edit": "하위 문서 트리"
 }

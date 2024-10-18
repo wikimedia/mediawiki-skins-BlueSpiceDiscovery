@@ -17,7 +17,7 @@
 	"bs-discovery-navbar-user-login-text": "Aanmelden",
 	"bs-discovery-navbar-user-login-title": "Aanmelden",
 	"bs-discovery-navbar-user-login-aria-label": "Aanmelden",
-	"bs-discovery-logo-return-to-aria-label": "Terug naar $1",
+	"bs-discovery-logo-return-to-aria-label": "{{SITENAME}}-logo – Terug naar $1",
 	"bs-discovery-searchform-button-title": "Zoeken naar",
 	"bs-discovery-searchform-button-aria-label": "Zoeken naar",
 	"bs-discovery-searchform-input-placeholder": "Uw zoekterm",

@@ -30,7 +30,7 @@
 	"bs-discovery-navbar-user-login-text": "登录",
 	"bs-discovery-navbar-user-login-title": "登录",
 	"bs-discovery-navbar-user-login-aria-label": "登录",
-	"bs-discovery-logo-return-to-aria-label": "返回$1",
+	"bs-discovery-logo-return-to-aria-label": "{{SITENAME}}标志 - 返回$1",
 	"bs-discovery-searchform-button-title": "搜索",
 	"bs-discovery-searchform-button-aria-label": "搜索",
 	"bs-discovery-searchform-input-placeholder": "搜索词",

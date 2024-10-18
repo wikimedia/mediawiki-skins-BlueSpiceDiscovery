@@ -182,5 +182,6 @@
 	"bs-discovery-config-mainlinks-categories-help": "Отобразить ссылку на входную точку «Категории» в левой части навигации",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Условия_использования",
 	"bs-discovery-sidebar-primary-aria-label": "Основная боковая панель",
-	"bs-discovery-sidebar-secondary-aria-label": "Дополнительная боковая панель"
+	"bs-discovery-sidebar-secondary-aria-label": "Дополнительная боковая панель",
+	"bs-discovery-requires-attention": "(требует внимания)"
 }
