@@ -186,5 +186,7 @@
 	"bs-discovery-navbar-user-button-requires-attention-aria-label": "Menú de usuario (cómpre atención)",
 	"bs-discovery-tools-after-content-aria-label": "Ferramentas despois da sección de contido",
 	"bs-discovery-data-after-content-aria-label": "Datos despois da sección de contido",
-	"bs-discovery-requires-attention": "(cómpre atención)"
+	"bs-discovery-requires-attention": "(cómpre atención)",
+	"bs-discovery-table-of-contents-show-button-aria-label": "Amosar a táboa de contidos",
+	"bs-discovery-table-of-contents-hide-button-aria-label": "Agochar a táboa de contidos"
 }
