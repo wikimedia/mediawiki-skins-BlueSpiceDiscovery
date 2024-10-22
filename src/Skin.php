@@ -130,7 +130,7 @@ class Skin extends SkinTemplate {
 	public function isViewMode() {
 		if (
 			$this->getTitle()->isMainPage() &&
-			$this->getRequest()->getRawVal( 'action', 'view' ) === 'view'
+			( $this->getRequest()->getRawVal( 'action' ) ?? 'view' ) === 'view'
 		) {
 			return true;
 		}
