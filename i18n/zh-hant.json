@@ -18,6 +18,7 @@
 	"bs-discovery-navbar-search-form-input-aria-label": "搜尋表單輸入欄位",
 	"bs-discovery-navbar-user-button-title": "使用者選單",
 	"bs-discovery-navbar-user-button-aria-label": "使用者選單",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "使用者選單（需注意）",
 	"bs-discovery-navbar-user-button-personal-menu-text": "個人工具",
 	"bs-discovery-navbar-user-login-text": "登入",
 	"bs-discovery-navbar-user-login-title": "登入",
@@ -183,5 +184,8 @@
 	"bs-discovery-sidebar-primary-aria-label": "主要側邊欄",
 	"bs-discovery-sidebar-secondary-aria-label": "次要側邊欄",
 	"bs-discovery-tools-after-content-aria-label": "內容章節之後的工具",
-	"bs-discovery-data-after-content-aria-label": "內容章節之後的資料"
+	"bs-discovery-data-after-content-aria-label": "內容章節之後的資料",
+	"bs-discovery-requires-attention": "（需注意）",
+	"bs-discovery-table-of-contents-show-button-aria-label": "顯示目次",
+	"bs-discovery-table-of-contents-hide-button-aria-label": "隱藏目次"
 }
