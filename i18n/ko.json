@@ -19,6 +19,7 @@
 	"bs-discovery-navbar-search-form-input-aria-label": "입력에서 검색",
 	"bs-discovery-navbar-user-button-title": "사용자 메뉴",
 	"bs-discovery-navbar-user-button-aria-label": "사용자 메뉴",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "사용자 메뉴 (주의 필요)",
 	"bs-discovery-navbar-user-button-personal-menu-text": "개인 도구",
 	"bs-discovery-navbar-user-login-text": "로그인",
 	"bs-discovery-navbar-user-login-title": "로그인",
@@ -49,7 +50,9 @@
 	"bs-discovery-breadcrumb-nav-node-aria-label": "$1 열기",
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "더 많은 하위 문서",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "더 많은 하위 문서",
+	"bs-discovery-title-last-edit-info-date-only": "마지막 편집: $1",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "$1 마지막 편집",
+	"bs-discovery-title-last-edit-info-user-aria-label": "마지막 편집자: $1",
 	"bs-discovery-last-edit-by-anon-user": "익명 사용자",
 	"bs-discovery-title-action-edit-button-title": "문서 편집",
 	"bs-discovery-title-action-edit-button-aria-label": "문서 편집",
@@ -117,11 +120,13 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "제목",
 	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "새 패널 추가",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS 클래스",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "아이콘 클래스",
 	"bs-discovery-page-does-not-exist-title": "$1 (없는 문서)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "둘러보기",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "이 메뉴 편집",
 	"bs-discovery-alert-old-page-version": "이 문서의 이전 판을 보고 있습니다. [[Special:Redirect/page/$1|최신 판으로 돌아갑니다]].",
 	"bs-discovery-page-version-pager-deleted-user": "(사용자 이름 삭제됨)",
 	"bs-discovery-page-version-pager-previous": "이전",
-	"bs-discovery-page-version-pager-next": "다음"
+	"bs-discovery-page-version-pager-next": "다음",
+	"bs-discovery-requires-attention": "(주의 필요)"
 }
