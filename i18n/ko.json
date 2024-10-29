@@ -128,5 +128,7 @@
 	"bs-discovery-page-version-pager-deleted-user": "(사용자 이름 삭제됨)",
 	"bs-discovery-page-version-pager-previous": "이전",
 	"bs-discovery-page-version-pager-next": "다음",
-	"bs-discovery-requires-attention": "(주의 필요)"
+	"bs-discovery-requires-attention": "(주의 필요)",
+	"bs-discovery-table-of-contents-show-button-aria-label": "목차 표시",
+	"bs-discovery-table-of-contents-hide-button-aria-label": "목차 숨기기"
 }
