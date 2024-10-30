@@ -56,7 +56,7 @@ class SpecialSpecialPages extends RestrictedTextLink {
 	 * @return Message
 	 */
 	public function getText(): Message {
-		return $this->ensureMessageObject( $this->specialPage->getDescription()) );
+		return $this->ensureMessageObject( $this->specialPage->getDescription() );
 	}
 
 	/**
