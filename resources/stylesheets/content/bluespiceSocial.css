@@ -68,6 +68,7 @@ ul.bs-social-entitylist .bs-social-entity-edit-mode form textarea {
 	height: 35px;
 	width: 35px;
 }
+.bs-social-entitylist-children .bs-social-entity-userimage .bs-userminiprofile[data-bs-whoisonline-marker] div::after,
 .bs-social-entitylist-children .bs-social-entity-userimage .bs-userminiprofile[data-bs-whoisonline-marker] a::after {
 	font-size: 10px;
 }
