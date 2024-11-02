@@ -37,7 +37,7 @@ abstract class Collection extends AttentionIndicator {
 	 * @return IAttentionIndicator
 	 */
 	public static function factory( string $key, Config $config, User $user,
-		MediaWikiServices $services, AttentionIndicatorFactory $attentionIndicatorFactory = null ) {
+		MediaWikiServices $services, ?AttentionIndicatorFactory $attentionIndicatorFactory = null ) {
 		if ( !$attentionIndicatorFactory ) {
 			$attentionIndicatorFactory = $services->getService( 'BSAttentionIndicatorFactory' );
 		}
