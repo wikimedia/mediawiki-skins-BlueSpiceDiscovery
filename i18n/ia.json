@@ -16,6 +16,7 @@
 	"bs-discovery-navbar-search-form-input-aria-label": "Entrata del formulario de recerca",
 	"bs-discovery-navbar-user-button-title": "Menu del usator",
 	"bs-discovery-navbar-user-button-aria-label": "Menu del usator",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "Menu de usator (require attention)",
 	"bs-discovery-navbar-user-button-personal-menu-text": "Instrumentos personal",
 	"bs-discovery-navbar-user-login-text": "Aperir session",
 	"bs-discovery-navbar-user-login-title": "Aperir session",
@@ -182,7 +183,6 @@
 	"bs-discovery-sidebar-secondary-aria-label": "Barra lateral secundari",
 	"bs-discovery-tools-after-content-aria-label": "Instrumentos post section de contento",
 	"bs-discovery-data-after-content-aria-label": "Datos post section de contento",
-	"bs-discovery-navbar-user-button-requires-attention-aria-label": "Menu de usator (require attention)",
 	"bs-discovery-requires-attention": "(require attention)",
 	"bs-discovery-table-of-contents-show-button-aria-label": "Monstrar le tabula de contento",
 	"bs-discovery-table-of-contents-hide-button-aria-label": "Celar le tabula de contento"

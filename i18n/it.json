@@ -11,6 +11,7 @@
 	"bs-discovery-back-to-top-text": "Torna all'inizio",
 	"bs-discovery-navbar-user-button-title": "Menu utente",
 	"bs-discovery-navbar-user-button-aria-label": "Menu utente",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "Menu utente (richiede attenzione)",
 	"bs-discovery-navbar-user-button-personal-menu-text": "Strumenti personali",
 	"bs-discovery-navbar-user-login-text": "Accedi",
 	"bs-discovery-navbar-user-login-title": "Accedi",
@@ -24,11 +25,11 @@
 	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Namespace",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Pagine",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Pagina principale",
+	"bs-discovery-title-last-edit-info-date-only": "Ultima modifica $1",
 	"bs-discovery-last-edit-by-anon-user": "Utente anonimo",
 	"bs-discovery-title-action-edit-button-title": "Modifica la pagina",
 	"bs-discovery-title-action-edit-button-aria-label": "Modifica la pagina",
 	"bs-discovery-title-action-language-button-title": "Seleziona lingua",
-	"bs-discovery-sidebar-secondary-share-sharebymail-subject": "$1: $2",
 	"bs-discovery-sidebar-details-heading": "Dettagli",
 	"bs-discovery-mainlinks-allpages-label": "Pagine",
 	"bs-discovery-mainlinks-categories-label": "Categorie",
@@ -59,7 +60,5 @@
 	"bs-discovery-page-version-pager-next": "Successivo",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Condizioni del servizio",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Condizioni_del_servizio",
-	"bs-discovery-title-last-edit-info-date-only": "Ultima modifica $1",
-	"bs-discovery-navbar-user-button-requires-attention-aria-label": "Menu utente (richiede attenzione)",
 	"bs-discovery-requires-attention": "(richiede attenzione)"
 }

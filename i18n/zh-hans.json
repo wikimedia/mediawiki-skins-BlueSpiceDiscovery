@@ -26,6 +26,7 @@
 	"bs-discovery-navbar-search-form-input-aria-label": "搜索表单输入框",
 	"bs-discovery-navbar-user-button-title": "用户菜单",
 	"bs-discovery-navbar-user-button-aria-label": "用户菜单",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "用户菜单（需注意）",
 	"bs-discovery-navbar-user-button-personal-menu-text": "个人工具",
 	"bs-discovery-navbar-user-login-text": "登录",
 	"bs-discovery-navbar-user-login-title": "登录",
@@ -162,6 +163,7 @@
 	"menueditor-ui-enhanced-sidebar-external-link-label": "外部链接",
 	"menueditor-ui-enhanced-sidebar-internal-link-label": "内部链接",
 	"menueditor-ui-enhanced-sidebar-subpage-tree-label": "子页面树",
+	"bs-discovery-enhanced-mediawiki-sidebar-show-for-groups-text": "群组显示",
 	"menueditor-ui-enhanced-sidebar-panel-heading-label-edit": "面板标题",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "标题文本",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading-help": "显示为标题的文字，可含有一个解析器函数",
@@ -188,5 +190,10 @@
 	"bs-discovery-footerlinks-termsofservice-link-desc": "服务条款",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:服务条款",
 	"bs-discovery-sidebar-primary-aria-label": "主要侧边栏",
-	"bs-discovery-sidebar-secondary-aria-label": "次要侧边栏"
+	"bs-discovery-sidebar-secondary-aria-label": "次要侧边栏",
+	"bs-discovery-tools-after-content-aria-label": "内容章节之后的工具",
+	"bs-discovery-data-after-content-aria-label": "内容章节之后的数据",
+	"bs-discovery-requires-attention": "（需注意）",
+	"bs-discovery-table-of-contents-show-button-aria-label": "显示目录",
+	"bs-discovery-table-of-contents-hide-button-aria-label": "隐藏目录"
 }

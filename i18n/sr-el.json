@@ -18,8 +18,6 @@
 	"bs-discovery-create-button-new-file-title": "Otpremi novu datoteku",
 	"bs-discovery-navbar-global-actions-button-title": "Globalne radnje",
 	"bs-discovery-navbar-global-actions-button-aria-label": "Globalne radnje",
-	"bs-discovery-navbar-global-actions-tool-text": "Alatke",
-	"bs-discovery-navbar-global-actions-manager-text": "Upravljanje",
 	"bs-discovery-navbar-full-screen-button-enable-title": "Omogući režim celog ekrana",
 	"bs-discovery-navbar-full-screen-button-text": "Omogući režim celog ekrana",
 	"bs-discovery-navbar-full-screen-button-enable-aria-label": "Omogući režim celog ekrana",
@@ -62,6 +60,5 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "CSS klase",
 	"bs-discovery-page-does-not-exist-title": "$1 (stranica ne postoji)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigacija",
-	"bs-discovery-enhanced-sidebar-edit-button-title": "Uredi ovaj meni",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Uredi $1"
+	"bs-discovery-enhanced-sidebar-edit-button-title": "Uredi ovaj meni"
 }

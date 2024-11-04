@@ -17,8 +17,6 @@
 	"bs-discovery-create-button-new-file-title": "Carregar um novo arquivo",
 	"bs-discovery-navbar-global-actions-button-title": "Ações globais",
 	"bs-discovery-navbar-global-actions-button-aria-label": "Ações globais",
-	"bs-discovery-navbar-global-actions-tool-text": "Ferramentas",
-	"bs-discovery-navbar-global-actions-manager-text": "Gerenciamento",
 	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Espaço nominal",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Páginas",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Página principal",
@@ -73,6 +71,5 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "Texto de cabeçalho",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-classes": "Classes CSS",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navegação",
-	"bs-discovery-enhanced-sidebar-edit-button-title": "Editar este menu",
-	"bs-discovery-enhanced-sidebar-edit-button-aria-label": "Editar $1"
+	"bs-discovery-enhanced-sidebar-edit-button-title": "Editar este menu"
 }
