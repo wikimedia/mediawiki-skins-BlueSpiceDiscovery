@@ -26,6 +26,7 @@
 	"bs-discovery-navbar-search-form-input-aria-label": "Entrée du formulaire de recherche",
 	"bs-discovery-navbar-user-button-title": "Menu utilisateur",
 	"bs-discovery-navbar-user-button-aria-label": "Menu utilisateur",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "Menu utilisateur (nécessite une attention particulière)",
 	"bs-discovery-navbar-user-button-personal-menu-text": "Outils personnels",
 	"bs-discovery-navbar-user-login-text": "Connexion",
 	"bs-discovery-navbar-user-login-title": "Connexion",
@@ -191,5 +192,10 @@
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Conditions d’utilisation",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Conditions_de_service",
 	"bs-discovery-sidebar-primary-aria-label": "la première colonne d'à coté",
-	"bs-discovery-sidebar-secondary-aria-label": "Deuxièmes ligne d'à coté"
+	"bs-discovery-sidebar-secondary-aria-label": "Deuxièmes ligne d'à coté",
+	"bs-discovery-tools-after-content-aria-label": "Outils après la section Contenu",
+	"bs-discovery-data-after-content-aria-label": "Données après la section Contenu",
+	"bs-discovery-requires-attention": "(nécessite une attention particulière)",
+	"bs-discovery-table-of-contents-show-button-aria-label": "Afficher la table des matières",
+	"bs-discovery-table-of-contents-hide-button-aria-label": "Masquer la table des matières"
 }
