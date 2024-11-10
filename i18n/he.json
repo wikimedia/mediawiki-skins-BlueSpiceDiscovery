@@ -179,5 +179,11 @@
 	"bs-discovery-footerlinks-termsofservice-link-desc": "תנאי השירות",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:תנאי_השירות",
 	"bs-discovery-sidebar-primary-aria-label": "סרגל צד ראשי",
-	"bs-discovery-sidebar-secondary-aria-label": "סרגל צד משני"
+	"bs-discovery-sidebar-secondary-aria-label": "סרגל צד משני",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "תפריט משתמש (דורש תשומת לב)",
+	"bs-discovery-tools-after-content-aria-label": "כלים אחרי קטע תוכן",
+	"bs-discovery-data-after-content-aria-label": "נתונים אחרי קטע תוכן",
+	"bs-discovery-requires-attention": "(דורש תשומת לב)",
+	"bs-discovery-table-of-contents-show-button-aria-label": "להציג את תוכן העניינים",
+	"bs-discovery-table-of-contents-hide-button-aria-label": "להסתיר את תוכן העניינים"
 }
