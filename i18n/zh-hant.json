@@ -185,5 +185,9 @@
 	"bs-discovery-sidebar-primary-aria-label": "主要側邊欄",
 	"bs-discovery-sidebar-secondary-aria-label": "次要側邊欄",
 	"bs-discovery-tools-after-content-aria-label": "內容章節之後的工具",
-	"bs-discovery-data-after-content-aria-label": "內容章節之後的資料"
+	"bs-discovery-data-after-content-aria-label": "內容章節之後的資料",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "使用者選單（需注意）",
+	"bs-discovery-requires-attention": "（需注意）",
+	"bs-discovery-table-of-contents-show-button-aria-label": "顯示目次",
+	"bs-discovery-table-of-contents-hide-button-aria-label": "隱藏目次"
 }

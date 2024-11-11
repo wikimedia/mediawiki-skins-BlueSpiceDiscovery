@@ -1,7 +1,6 @@
 {
 	"@metadata": {
 		"authors": [
-			"Amire80",
 			"Bluehill",
 			"Dr1t jg",
 			"MemphisA5",
@@ -130,5 +129,12 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "둘러보기",
 	"bs-discovery-main-links-heading": "엔트리포인트",
 	"bs-discovery-mainlinks-allpages-label": "문서",
-	"menueditor-ui-enhanced-sidebar-subpage-tree-label-edit": "하위 문서 트리"
+	"menueditor-ui-enhanced-sidebar-subpage-tree-label-edit": "하위 문서 트리",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "사용자 메뉴 (주의 필요)",
+	"bs-discovery-title-last-edit-info-date-only": "마지막 편집: $1",
+	"bs-discovery-title-last-edit-info-user-aria-label": "마지막 편집자: $1",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-icon-cls": "아이콘 클래스",
+	"bs-discovery-requires-attention": "(주의 필요)",
+	"bs-discovery-table-of-contents-show-button-aria-label": "목차 표시",
+	"bs-discovery-table-of-contents-hide-button-aria-label": "목차 숨기기"
 }

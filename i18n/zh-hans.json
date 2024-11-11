@@ -188,5 +188,12 @@
 	"bs-discovery-footerlinks-imprint-link-desc": "印记",
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Imprint",
 	"bs-discovery-sidebar-primary-aria-label": "主要侧边栏",
-	"bs-discovery-sidebar-secondary-aria-label": "次要侧边栏"
+	"bs-discovery-sidebar-secondary-aria-label": "次要侧边栏",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "用户菜单（需注意）",
+	"bs-discovery-enhanced-mediawiki-sidebar-show-for-groups-text": "群组显示",
+	"bs-discovery-tools-after-content-aria-label": "内容章节之后的工具",
+	"bs-discovery-data-after-content-aria-label": "内容章节之后的数据",
+	"bs-discovery-requires-attention": "（需注意）",
+	"bs-discovery-table-of-contents-show-button-aria-label": "显示目录",
+	"bs-discovery-table-of-contents-hide-button-aria-label": "隐藏目录"
 }
