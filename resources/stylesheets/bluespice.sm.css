@@ -38,3 +38,26 @@
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
+
+
+.discovery-mobile.ve-activated #header,
+.discovery-mobile.ve-activated .navbar-primary-height.d-block,
+.discovery-mobile.ve-activated #mwstake-alert-container,
+.discovery-mobile.ve-activated #data-before-content,
+.discovery-mobile.ve-activated #title-section {
+	display: none !important;
+}
+.discovery-mobile.ve-activated .oo-ui-toolbar-bar {
+	top: 0;
+}
+
+/* VE moblie view */
+.ve-init-target .oo-ui-toolbar-tools .ve-ui-toolbar-group-history,
+.ve-init-target .oo-ui-toolbar-tools .ve-ui-toolbar-group-format
+.ve-init-target .oo-ui-toolbar-tools .ve-ui-toolbar-group-specialCharacter,
+.ve-init-target .oo-ui-toolbar-tools .ve-ui-toolbar-group-at-mention,
+.ve-init-target .oo-ui-toolbar-tools .ve-ui-toolbar-group-content-droplets,
+.ve-init-target .oo-ui-toolbar-tools .ve-ui-toolbar-group-help,
+.ve-init-target .oo-ui-toolbar-tools .ve-ui-toolbar-group-pageMenu {
+	display: none;
+}
