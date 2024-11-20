@@ -15,7 +15,6 @@
 	margin: 0 auto;
 }
 #title-section {
-	padding-top: 1rem;
 	padding-bottom: 0.5rem;
 	border-bottom: 0.05px solid var(--title-nav-border-color);
 	background-color: var(--title-nav-bg);
@@ -35,6 +34,8 @@ body.ns-special #title-section .breadcrumb-item {
 }
 #title-line h1 {
 	padding-left: 0;
+	padding-bottom: 0;
+	margin-bottom: 0.3em;
 }
 #title-actions {
 	padding-right: 0;

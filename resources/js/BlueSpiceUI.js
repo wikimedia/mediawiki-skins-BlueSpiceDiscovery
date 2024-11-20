@@ -183,13 +183,30 @@
 		if( $( '#sb-sec-cnt.show' ).length ) {
 			$( '#back-to-top' ).addClass( 'collapsed' );
 		}
+		if ( $( window ).width() < 768 ) {
+			$( 'html' ).addClass( 'discovery-mobile' );
+		} else {
+			$( 'html' ).removeClass( 'discovery-mobile' );
+		}
+		if( $( '#sb-sec-cnt.show' ).length ) {
+			$( '#back-to-top' ).addClass( 'collapsed' );
+		}
+
+		let resizeObserver = new ResizeObserver(() => {
+			if ( $( window ).width() < 768 ) {
+				$( 'html' ).addClass( 'discovery-mobile' );
+			} else {
+				$( 'html' ).removeClass( 'discovery-mobile' );
+			}
+		} );
+		resizeObserver.observe( $( 'html' )[0] );
 	}
 
 	function toggleSidebar( id, expand ) {
 		var $toggleBtns = $( '.sb-toggle[aria-controls='+id+']' );
 		var $sidebarCnt = $( '#'+id );
 
-		// Allow only 'undefinded' or strings 'true' or 'false' 
+		// Allow only 'undefinded' or strings 'true' or 'false'
 		if ( expand !== 'true' && expand !== 'false' ) {
 			expand = undefined
 		}

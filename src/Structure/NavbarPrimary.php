@@ -79,9 +79,7 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 	 * @return void
 	 */
 	private function fetchNewContentButtonHtml() {
-		$user = $this->template->getSkin()->getUser();
-
-		$component = new CreateContentSplitButton( $user, $this->permissionManager );
+		$component = new CreateContentSplitButton();
 		$html = $this->componentRenderer->getComponentHtml( $component, $this->componentProcessData );
 
 		$this->skinComponents['new-content-button'] = $html;
