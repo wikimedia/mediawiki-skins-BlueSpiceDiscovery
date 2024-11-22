@@ -103,8 +103,8 @@ class Skin extends SkinTemplate {
 	}
 
 	/**
-	 *
 	 * @param OutputPage $out
+	 * @return void
 	 */
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );

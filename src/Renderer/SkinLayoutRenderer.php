@@ -45,16 +45,19 @@ class SkinLayoutRenderer implements ISkinLayoutRenderer {
 	 * @return string
 	 */
 	public function getHtml(): string {
-		$templateParser = new TemplateParser(
-			$this->skinLayout->getTemplatePath()
-		);
-		$templateParser->enableRecursivePartials(
-			$this->skinLayout->enableRecursivePartials()
-		);
-		$html = $templateParser->processTemplate(
-			$this->skinLayout->getTemplateName(),
-			$this->getAllStructureElementsHtml()
-		);
+		$html = '';
+		if ( $this->skinLayout instanceof ITemplateProvider ) {
+			$templateParser = new TemplateParser(
+				$this->skinLayout->getTemplatePath()
+			);
+			$templateParser->enableRecursivePartials(
+				$this->skinLayout->enableRecursivePartials()
+			);
+			$html = $templateParser->processTemplate(
+				$this->skinLayout->getTemplateName(),
+				$this->getAllStructureElementsHtml()
+			);
+		}
 		return $html;
 	}
 

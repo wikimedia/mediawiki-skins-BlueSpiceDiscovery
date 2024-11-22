@@ -74,11 +74,12 @@ abstract class SkinLayoutBase implements
 			'BlueSpiceDiscoveryStructureRegistry'
 		);
 
-		if ( !array_key_exists( $layoutName, $structureRegistry ) ) {
-			return $structureElements;
-		}
+		$usedComponents = $this->getStructureElementNames();
 
-		foreach ( $structureRegistry[$layoutName] as $name => $structureSpec ) {
+		foreach ( $structureRegistry as $name => $structureSpec ) {
+			if ( !in_array( $name, $usedComponents ) ) {
+				continue;
+			}
 			if ( isset( $structureSpec['factory'] ) && is_array( $structureSpec['factory'] ) ) {
 				$callback = end( $structureSpec['factory'] );
 				$structureSpec['factory'] = $callback;
