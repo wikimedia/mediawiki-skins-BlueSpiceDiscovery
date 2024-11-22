@@ -40,84 +40,82 @@
 				}
 			},
 			"StructureRegistry": {
-				"bluespice": {
-					"skip-to": {
-						"factory": "BlueSpice\\Discovery\\Structure\\SkipTo::factory",
-						"services": [
-							"BlueSpiceDiscoveryTemplateDataProvider",
-							"BlueSpiceDiscoveryComponentRenderer",
-							"BlueSpiceDiscoverySkinSlotRenderer",
-							"PermissionManager"
-						]
-					},
-					"navbar-primary": {
-						"factory": "BlueSpice\\Discovery\\Structure\\NavbarPrimary::factory",
-						"services": [
-							"BlueSpiceDiscoveryTemplateDataProvider",
-							"BlueSpiceDiscoveryComponentRenderer",
-							"BlueSpiceDiscoverySkinSlotRenderer",
-							"BlueSpiceDiscoveryCookieHandler",
-							"PermissionManager"
-						]
-					},
-					"main": {
-						"factory": "BlueSpice\\Discovery\\Structure\\Main::factory",
-						"services": [
-							"BlueSpiceDiscoveryTemplateDataProvider",
-							"BlueSpiceDiscoveryComponentRenderer",
-							"BlueSpiceDiscoverySkinSlotRenderer",
-							"BlueSpiceDiscoveryCookieHandler",
-							"PermissionManager",
-							"LinkRenderer",
-							"RevisionStore",
-							"ObjectFactory"
-						]
-					},
-					"aftercontent": {
-						"factory": "BlueSpice\\Discovery\\Structure\\AfterContent::factory",
-						"services": [
-							"BlueSpiceDiscoveryTemplateDataProvider",
-							"BlueSpiceDiscoveryComponentRenderer",
-							"BlueSpiceDiscoverySkinSlotRenderer",
-							"PermissionManager"
-						]
-					},
-					"footer": {
-						"factory": "BlueSpice\\Discovery\\Structure\\Footer::factory",
-						"services": [
-							"BlueSpiceDiscoveryTemplateDataProvider",
-							"BlueSpiceDiscoveryComponentRenderer",
-							"BlueSpiceDiscoverySkinSlotRenderer",
-							"PermissionManager"
-						]
-					},
-					"back-to-top": {
-						"factory": "BlueSpice\\Discovery\\Structure\\BackToTop::factory",
-						"services": [
-							"BlueSpiceDiscoveryTemplateDataProvider",
-							"BlueSpiceDiscoveryComponentRenderer",
-							"BlueSpiceDiscoverySkinSlotRenderer",
-							"PermissionManager"
-						]
-					},
-					"sidebar-primary": {
-						"factory": "BlueSpice\\Discovery\\Structure\\SidebarPrimary::factory",
-						"services": [
-							"BlueSpiceDiscoveryTemplateDataProvider",
-							"BlueSpiceDiscoveryComponentRenderer",
-							"MWStakeSkinSlotRegistry",
-							"ObjectFactory"
-						]
-					},
-					"sidebar-secondary": {
-						"factory": "BlueSpice\\Discovery\\Structure\\SidebarSecondary::factory",
-						"services": [
-							"BlueSpiceDiscoveryTemplateDataProvider",
-							"BlueSpiceDiscoveryComponentRenderer",
-							"MWStakeSkinSlotRegistry",
-							"ObjectFactory"
-						]
-					}
+				"skip-to": {
+					"factory": "BlueSpice\\Discovery\\Structure\\SkipTo::factory",
+					"services": [
+						"BlueSpiceDiscoveryTemplateDataProvider",
+						"BlueSpiceDiscoveryComponentRenderer",
+						"BlueSpiceDiscoverySkinSlotRenderer",
+						"PermissionManager"
+					]
+				},
+				"navbar-primary": {
+					"factory": "BlueSpice\\Discovery\\Structure\\NavbarPrimary::factory",
+					"services": [
+						"BlueSpiceDiscoveryTemplateDataProvider",
+						"BlueSpiceDiscoveryComponentRenderer",
+						"BlueSpiceDiscoverySkinSlotRenderer",
+						"BlueSpiceDiscoveryCookieHandler",
+						"PermissionManager"
+					]
+				},
+				"main": {
+					"factory": "BlueSpice\\Discovery\\Structure\\Main::factory",
+					"services": [
+						"BlueSpiceDiscoveryTemplateDataProvider",
+						"BlueSpiceDiscoveryComponentRenderer",
+						"BlueSpiceDiscoverySkinSlotRenderer",
+						"BlueSpiceDiscoveryCookieHandler",
+						"PermissionManager",
+						"LinkRenderer",
+						"RevisionStore",
+						"ObjectFactory"
+					]
+				},
+				"aftercontent": {
+					"factory": "BlueSpice\\Discovery\\Structure\\AfterContent::factory",
+					"services": [
+						"BlueSpiceDiscoveryTemplateDataProvider",
+						"BlueSpiceDiscoveryComponentRenderer",
+						"BlueSpiceDiscoverySkinSlotRenderer",
+						"PermissionManager"
+					]
+				},
+				"footer": {
+					"factory": "BlueSpice\\Discovery\\Structure\\Footer::factory",
+					"services": [
+						"BlueSpiceDiscoveryTemplateDataProvider",
+						"BlueSpiceDiscoveryComponentRenderer",
+						"BlueSpiceDiscoverySkinSlotRenderer",
+						"PermissionManager"
+					]
+				},
+				"back-to-top": {
+					"factory": "BlueSpice\\Discovery\\Structure\\BackToTop::factory",
+					"services": [
+						"BlueSpiceDiscoveryTemplateDataProvider",
+						"BlueSpiceDiscoveryComponentRenderer",
+						"BlueSpiceDiscoverySkinSlotRenderer",
+						"PermissionManager"
+					]
+				},
+				"sidebar-primary": {
+					"factory": "BlueSpice\\Discovery\\Structure\\SidebarPrimary::factory",
+					"services": [
+						"BlueSpiceDiscoveryTemplateDataProvider",
+						"BlueSpiceDiscoveryComponentRenderer",
+						"MWStakeSkinSlotRegistry",
+						"ObjectFactory"
+					]
+				},
+				"sidebar-secondary": {
+					"factory": "BlueSpice\\Discovery\\Structure\\SidebarSecondary::factory",
+					"services": [
+						"BlueSpiceDiscoveryTemplateDataProvider",
+						"BlueSpiceDiscoveryComponentRenderer",
+						"MWStakeSkinSlotRegistry",
+						"ObjectFactory"
+					]
 				}
 			},
 			"SkipToRegistry": {
