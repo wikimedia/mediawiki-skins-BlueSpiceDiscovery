@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hamilton Abreu"
+			"Hamilton Abreu",
+			"Mbs262"
 		]
 	},
 	"bs-discovery-name": "BlueSpice Discovery",
@@ -21,7 +22,7 @@
 	"bs-discovery-navbar-user-login-text": "Entrar",
 	"bs-discovery-navbar-user-login-title": "Entrar",
 	"bs-discovery-navbar-user-login-aria-label": "Iniciar sessão",
-	"bs-discovery-logo-return-to-aria-label": "Voltar para $1",
+	"bs-discovery-logo-return-to-aria-label": "Logótipo {{SITENAME}} - Voltar para $1",
 	"bs-discovery-searchform-button-title": "Pesquisar agora",
 	"bs-discovery-searchform-button-aria-label": "Pesquisar agora",
 	"bs-discovery-searchform-input-placeholder": "O seu termo de pesquisa",
