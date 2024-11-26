@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajeje Brazorf"
+			"Ajeje Brazorf",
+			"GianAntonucci"
 		]
 	},
 	"bs-discovery-desc": "Peḍḍi BlueSpice",
@@ -28,7 +29,7 @@
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Apri $1",
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "Cchiossai suttapàggini",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Cchiossai suttapàggini",
-	"bs-discovery-breadcrumb-nav-node-portal-page": "Pàggina principali",
+	"bs-discovery-breadcrumb-nav-node-portal-page": "Pàggina mastra",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Ùrtimu canciamentu $1",
 	"bs-discovery-title-action-edit-button-title": "Cancia la pàggina",
 	"bs-discovery-title-action-edit-button-aria-label": "Cancia la pàggina",
