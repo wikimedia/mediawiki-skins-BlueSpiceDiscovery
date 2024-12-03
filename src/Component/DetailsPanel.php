@@ -80,23 +80,22 @@ class DetailsPanel extends SimpleCard implements IRestrictedComponent {
 			return [];
 		}
 
-		$id = 'ca-links-details';
 		return [
 			new SimpleCardHeader( [
-				'id' => $id . '-head',
+				'id' => "{$this->getId()}-head",
 				'classes' => [ 'menu-title' ],
 				'items' => [
 					new Literal(
-						$id . '-title',
+						"{$this->getId()}-title",
 						Message::newFromKey( 'bs-discovery-sidebar-details-heading' )->text()
 					)
 				]
 			] ),
 			new SimpleLinklistGroupFromArray( [
-				'id' => $id . '-list',
+				'id' => "{$this->getId()}-list",
 				'classes' => [],
 				'aria' => [
-					'labelledby' => "{$id}-head"
+					'labelledby' => "{$this->getId()}-head"
 				],
 				'links' => $linkFormatter->formatLinks( $this->sortLinks( $actions ) ),
 				'role' => 'group',
