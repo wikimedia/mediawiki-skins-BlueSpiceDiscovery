@@ -3,21 +3,20 @@
 namespace BlueSpice\Discovery\Component;
 
 use IContextSource;
-use MediaWiki\MediaWikiServices;
+use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\SpecialPage\SpecialPageFactory;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink;
 use RawMessage;
-use SpecialPage;
 
 class SpecialSpecialPages extends RestrictedTextLink {
 
 	/** @var SpecialPage|null */
 	private $specialPage;
 
-	public function __construct() {
+	public function __construct( SpecialPageFactory $specialPageFactory ) {
 		parent::__construct( [] );
-		$this->specialPage = MediaWikiServices::getInstance()->getSpecialPageFactory()
-			->getPage( 'Specialpages' );
+		$this->specialPage = $specialPageFactory->getPage( 'Specialpages' );
 	}
 
 	/**
