@@ -270,7 +270,8 @@
 			"class": "\\BlueSpice\\Discovery\\HookHandler\\MWStakeCommonUIRegisterSkinSlotComponents\\NavbarPrimarySearchForm"
 		},
 		"global-actions": {
-			"class": "\\BlueSpice\\Discovery\\HookHandler\\MWStakeCommonUIRegisterSkinSlotComponents\\GlobalActions"
+			"class": "\\BlueSpice\\Discovery\\HookHandler\\MWStakeCommonUIRegisterSkinSlotComponents\\GlobalActions",
+			"services": [ "SpecialPageFactory" ]
 		},
 		"sidebar-primary-tabpanels": {
 			"class": "\\BlueSpice\\Discovery\\HookHandler\\MWStakeCommonUIRegisterSkinSlotComponents\\SidebarPrimaryTabPanels"
