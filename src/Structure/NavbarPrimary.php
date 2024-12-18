@@ -16,6 +16,7 @@ use BlueSpice\Discovery\SkinSlotRenderer\NavbarPrimaryItemsSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\NavbarPrimarySearchFormSkinSlotRenderer;
 use Config;
 use IContextSource;
+use MediaWiki\SpecialPage\SpecialPage;
 use Message;
 use Title;
 
@@ -46,6 +47,20 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 	 */
 	public function getName(): string {
 		return 'navbar-primary';
+	}
+
+	/**
+	 *
+	 * @param IContextSource $context
+	 * @return bool
+	 */
+	public function shouldRender( IContextSource $context ): bool {
+		$specialUserLogin = SpecialPage::getSafeTitleFor( 'Userlogin' );
+		$title = $context->getTitle();
+		if ( $specialUserLogin->equals( $title ) ) {
+			return false;
+		}
+		return true;
 	}
 
 	/**

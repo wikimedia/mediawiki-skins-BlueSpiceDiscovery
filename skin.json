@@ -312,6 +312,9 @@
 		},
 		"set-less-vars": {
 			"class": "\\BlueSpice\\Discovery\\HookHandler\\MWStakeCommonLessVars"
+		},
+		"addLoginPageResources": {
+			"class": "\\BlueSpice\\Discovery\\HookHandler\\BeforePageDisplay\\SpecialLogin"
 		}
 	},
 	"Hooks":{
@@ -343,7 +346,8 @@
 			"\\BlueSpice\\Discovery\\Hook\\BSUsageTrackerRegisterCollectors\\EnhancedSidebarActive::callback",
 			"\\BlueSpice\\Discovery\\Hook\\BSUsageTrackerRegisterCollectors\\EnhancedSidebarModified::callback"
 		],
-		"MWStakeCommonUILessVarsInit": "set-less-vars"
+		"MWStakeCommonUILessVarsInit": "set-less-vars",
+		"BeforePageDisplay": "addLoginPageResources"
 	},
 	"config_prefix": "bsg",
 	"config": {
@@ -688,6 +692,11 @@
 		"skin.discovery.enhanced-sidebar.styles": {
 			"styles": {
 				"stylesheets/control/enhanced-sidebar.css": {}
+			}
+		},
+		"skin.discovery.login.styles": {
+			"styles": {
+				"stylesheets/fixes/login.css": {}
 			}
 		}
 	},
