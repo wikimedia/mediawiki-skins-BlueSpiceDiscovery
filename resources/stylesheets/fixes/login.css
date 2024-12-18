@@ -1,0 +1,22 @@
+#wrapper {
+	background-image: url( ./../../images/bs_background.png );
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.ns-special.mw-special-Userlogin #main {
+	background-color: transparent;
+}
+
+#mw-content-text {
+	display: flex;
+}
+
+.mw-ui-container {
+	margin: 0 auto;
+}
+
+#firstHeading {
+	text-align: center;
+	width: 100%
+}
