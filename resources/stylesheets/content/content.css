@@ -97,3 +97,11 @@ blockquote {
 	padding: 0.5rem 1rem;
 	background-color: #F5F5F7;
 }
+
+#contentSub #mw-content-subtitle {
+	margin-top: 1em;
+}
+
+#contentSub a {
+	color: var( --link-fg );
+}
