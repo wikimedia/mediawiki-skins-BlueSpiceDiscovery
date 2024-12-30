@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Seipinne"
+			"Seipinne",
+			"Yupik"
 		]
 	},
 	"bs-discovery-back-to-top-text": "Maassâd aalgân",
@@ -66,7 +67,7 @@
 	"bs-discovery-breadcrumb-label-special-linkliste": "Liiŋkah",
 	"bs-discovery-breadcrumb-label-action-history": "Historjá",
 	"bs-discovery-breadcrumb-label-action-edit": "Mute",
-	"bs-discovery-first-heading-aria-label": "Siijđo paječaalâ",
+	"bs-discovery-first-heading-aria-label": "Sijđonommâ",
 	"bs-discovery-personalurl-mycontributions-text": "Hammiimeh",
 	"bs-discovery-personalurl-userpage-text": "Proofiil",
 	"bs-discovery-globalactionentry-templates-text": "Myenstereh",
