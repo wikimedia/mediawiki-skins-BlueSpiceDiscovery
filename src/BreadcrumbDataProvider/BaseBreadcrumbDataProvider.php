@@ -3,6 +3,7 @@
 namespace BlueSpice\Discovery\BreadcrumbDataProvider;
 
 use BlueSpice\Discovery\IBreadcrumbDataProvider;
+use MediaWiki\Context\RequestContext;
 use MessageLocalizer;
 use RawMessage;
 use Title;
@@ -97,6 +98,9 @@ class BaseBreadcrumbDataProvider implements IBreadcrumbDataProvider {
 		$nodes = [];
 
 		for ( $index = 0; $index < $numberOfParts; $index++ ) {
+			if ( empty( $nodeTitleParts[$index] ) ) {
+				continue;
+			}
 			$node = [];
 			$nodeTitleName .= '/' . $nodeTitleParts[$index];
 
@@ -187,5 +191,18 @@ class BaseBreadcrumbDataProvider implements IBreadcrumbDataProvider {
 	 */
 	public function applies( Title $title ): bool {
 		return true;
+	}
+
+	/**
+	 *
+	 * @inheritDoc
+	 */
+	public function isSelfLink( $node ): bool {
+		$requestContext = RequestContext::getMain();
+		$action = $requestContext->getRequest()->getVal( 'action', 'view' );
+		if ( isset( $node['current'] ) && $node['current'] === true && $action === 'view' ) {
+			return true;
+		}
+		return false;
 	}
 }
