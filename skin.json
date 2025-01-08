@@ -685,6 +685,8 @@
 				"ext.oOJSPlus.data",
 				"ext.menuEditor.tree",
 				"ext.menuEditor.node",
+				"oojs-ui.styles.icons-editing-core",
+				"oojs-ui.styles.icons-accessibility",
 				"oojs-ui.styles.icons-editing-list",
 				"ext.oOJSPlus.formelements"
 			]
