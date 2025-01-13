@@ -31,6 +31,10 @@
 #tools-after-content {
 	padding-left: 1rem;
 	padding-right: 1rem;
+	display: block !important;
+}
+#tools-after-content > div {
+	margin: 15px 0;
 }
 #data-after-content {
 	margin: 0;
@@ -51,8 +55,9 @@
 	top: 0;
 }
 
-/* VE moblie view */
-.ve-init-target .oo-ui-toolbar-tools .ve-ui-toolbar-group-history,
+/* VE mobile view */
+.ve-init-target .oo-ui-toolbar-tools .ve-ui-toolbar-group-history .oo-ui-tool-name-undo,
+.ve-init-target .oo-ui-toolbar-tools .ve-ui-toolbar-group-history .oo-ui-tool-name-redo,
 .ve-init-target .oo-ui-toolbar-tools .ve-ui-toolbar-group-format
 .ve-init-target .oo-ui-toolbar-tools .ve-ui-toolbar-group-specialCharacter,
 .ve-init-target .oo-ui-toolbar-tools .ve-ui-toolbar-group-at-mention,
