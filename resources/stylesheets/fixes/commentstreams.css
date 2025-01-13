@@ -1,0 +1,50 @@
+main .cs-comments {
+	margin-top: 25px;
+	border-top: 0.05px solid var(--comments-section-border-color);
+}
+main .cs-header {
+	margin: 25px 0;
+}
+main .cs-expanded .cs-comment-header {
+	background-color: transparent;
+}
+main .cs-stream {
+	margin-top: 1rem;
+}
+main .cs-comment {
+	background-color: var(--comments-bg);
+	padding: 10px;
+	border-radius: 2px;
+}
+main .cs-comment-header {
+	border-bottom: 1px solid var(--comments-section-border-color);
+}
+main .cs-head-comment > .cs-comment-header {
+	border-top-color: transparent;
+}
+main a,
+main a:visited {
+	font-weight: normal;
+	color: var(--link-fg);
+}
+main .cs-comment-author a {
+	font-weight: normal;
+	color: var(--link-fg);
+}
+.cs-comment-body {
+	margin-left: 5px;
+}
+.cs-stream-footer {
+	margin: 25px 0 25px 30px;
+}
+
+/** edit mode **/
+main .cs-edit-box {
+	margin-top: 7px;
+	background-color: var(--comments-bg);
+}
+main .cs-title-edit-field,
+main .cs-body-edit-field {
+	border-color: var(--comments-edit-border-color);
+	font-family: 'Lato', 'sans-serif';
+}
