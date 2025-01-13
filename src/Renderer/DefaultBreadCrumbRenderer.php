@@ -3,10 +3,11 @@
 namespace BlueSpice\Discovery\Renderer;
 
 use BlueSpice\Discovery\BreadcrumbDataProvider;
+use MediaWiki\Context\RequestContext;
+use MediaWiki\Language\RawMessage;
 use MediaWiki\SpecialPage\SpecialPageFactory;
+use MediaWiki\Title\Title;
 use MessageLocalizer;
-use RequestContext;
-use Title;
 use User;
 
 class DefaultBreadCrumbRenderer extends TemplateRendererBase {
@@ -158,7 +159,7 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 
 			$nodeHTML = [
 				'id' => md5( 'breadcrumb-nav-subpages-' . $node['id'] ),
-				'button-text' => new \RawMessage( trim( $nodeText ) ),
+				'button-text' => new RawMessage( trim( $nodeText ) ),
 				'button-classes' => $node['classes'],
 				'split-button-title' => $this->messageLocalizer
 					->msg( 'bs-discovery-breadcrumb-nav-node-split-button-title' ),
@@ -169,11 +170,9 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 				'path' => $node['path']
 			];
 
-			/** TODO: Inject context */
-			$requestContext = RequestContext::getMain();
-			$action = $requestContext->getRequest()->getVal( 'action', 'view' );
+			$isSelfLink = $this->breadcrumbProvider->isSelfLink( $node );
 
-			if ( isset( $node['current'] ) && $node['current'] === true && $action === 'view' ) {
+			if ( $isSelfLink ) {
 				$nodeHTML = array_merge(
 					$nodeHTML,
 					[
@@ -195,6 +194,8 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 			}
 
 			// append subpage menu
+			$requestContext = RequestContext::getMain();
+			$action = $requestContext->getRequest()->getVal( 'action', 'view' );
 			if ( !isset( $node['current'] ) || $node['current'] !== true || $action === 'view' ) {
 				$nodeHTML = array_merge(
 					$nodeHTML,

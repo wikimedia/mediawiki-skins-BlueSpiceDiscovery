@@ -166,6 +166,9 @@
 				"without-subpages": {
 					"class": "BlueSpice\\Discovery\\BreadcrumbDataProvider\\PagesWithoutSubpagesProvider"
 				},
+				"diffmode": {
+					"class": "BlueSpice\\Discovery\\BreadcrumbDataProvider\\DiffModeProvider"
+				},
 				"base-breadcrumb": {
 					"class": "BlueSpice\\Discovery\\BreadcrumbDataProvider\\BaseBreadcrumbDataProvider"
 				}
@@ -470,7 +473,8 @@
 				"stylesheets/bluespice.print.css": { "media": "print" },
 				"stylesheets/control/mws-tree-component.css": {},
 				"stylesheets/control/hide-title.css": {},
-				"stylesheets/wcag.css": { "media": "prefers-contrast: more" }
+				"stylesheets/wcag.css": { "media": "prefers-contrast: more" },
+				"stylesheets/fixes/diffmode.css": {}
 			}
 		},
 		"skin.discovery.bluespice.themes.default": {

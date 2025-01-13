@@ -30,4 +30,10 @@ interface IBreadcrumbDataProvider {
 	 * @return bool
 	 */
 	public function applies( Title $title ): bool;
+
+	/**
+	 * @param array $node
+	 * @return bool
+	 */
+	public function isSelfLink( $node ): bool;
 }
