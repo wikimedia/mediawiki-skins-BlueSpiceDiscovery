@@ -12,8 +12,6 @@
 	right: calc( var(--sidebar-secondary-width) - 20px );
 }
 #back-to-top::before {
-	content: "\f01b";
-	font-family: 'fontawesome';
 	font-size: 250%;
 	color: var(--back-to-top-fg);
 }
