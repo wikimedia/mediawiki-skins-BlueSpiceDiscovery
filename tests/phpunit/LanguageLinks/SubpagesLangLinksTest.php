@@ -4,6 +4,7 @@ namespace BlueSpice\Discovery\Tests\LanguageLinks;
 
 use BlueSpice\Discovery\LangLinksProvider\Subpages;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Tests\User\TempUser\TempUserTestTrait;
 use MediaWikiIntegrationTestCase;
 use Title;
 
@@ -13,10 +14,13 @@ use Title;
  */
 class SubpagesLangLinksTest extends MediaWikiIntegrationTestCase {
 
+	use TempUserTestTrait;
+
 	/**
 	 * @return void
 	 */
 	public function addDBDataOnce() {
+		$this->disableAutoCreateTempUser();
 		$this->setMwGlobals( 'wgNamespacesWithSubpages', [ NS_MAIN => true ] );
 		$this->setMwGlobals( 'wgLanguageCode', 'en' );
 
