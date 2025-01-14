@@ -1,6 +1,6 @@
 <?php
 
-namespace Skin\BlueSpiceDiscovery\Tests\Renderer;
+namespace BlueSpice\Discovery\Tests\Renderer;
 
 use BlueSpice\Discovery\SkinSlotRenderer\MainPanelSkinSlotRenderer;
 use PHPUnit\Framework\TestCase;

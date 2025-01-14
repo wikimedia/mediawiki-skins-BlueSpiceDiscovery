@@ -45,8 +45,8 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Skin\\BlueSpiceDiscovery\\Tests\\": "tests/phpunit",
-			"Skin\\BlueSpiceDiscovery\\": "src"
+			"BlueSpice\\Discovery\\Tests\\": "tests/phpunit",
+			"BlueSpice\\Discovery\\": "src"
 		}
 	},
 	"config": {
