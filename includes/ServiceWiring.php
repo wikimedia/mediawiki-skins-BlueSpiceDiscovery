@@ -1,6 +1,7 @@
 <?php
 
 use BlueSpice\Discovery\AttentionIndicatorFactory;
+use BlueSpice\Discovery\BackLinkProviderFactory;
 use BlueSpice\Discovery\BreadcrumbDataProviderFactory;
 use BlueSpice\Discovery\CookieHandler;
 use BlueSpice\Discovery\LangLinksProviderFactory;
@@ -91,6 +92,11 @@ return [
 	'BlueSpiceDiscoveryTemplateDataProviderFactory' => static function ( MediaWikiServices $services ) {
 		return new TemplateDataProviderFactory(
 			$services->get( 'MWStakeManifestObjectFactory' )
+		);
+	},
+	'BlueSpiceDiscoveryBackLinkProviderFactory' => static function ( MediaWikiServices $services ) {
+		return new BackLinkProviderFactory(
+			$services->getObjectFactory()
 		);
 	}
 ];
