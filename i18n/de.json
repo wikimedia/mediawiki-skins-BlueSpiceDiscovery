@@ -197,5 +197,6 @@
 	"bs-discovery-data-after-content-aria-label": "Daten nach dem Inhaltsabschnitt",
 	"bs-discovery-requires-attention": "(erfordert Aufmerksamkeit)",
 	"bs-discovery-table-of-contents-show-button-aria-label": "Inhaltsverzeichnis anzeigen",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "Inhaltsverzeichnis ausblenden"
+	"bs-discovery-table-of-contents-hide-button-aria-label": "Inhaltsverzeichnis ausblenden",
+	"bs-discovery-breadcrumb-label-diff": "Unterschiede"
 }

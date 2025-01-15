@@ -188,5 +188,6 @@
 	"bs-discovery-data-after-content-aria-label": "Datos despois da sección de contido",
 	"bs-discovery-requires-attention": "(cómpre atención)",
 	"bs-discovery-table-of-contents-show-button-aria-label": "Amosar a táboa de contidos",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "Agochar a táboa de contidos"
+	"bs-discovery-table-of-contents-hide-button-aria-label": "Agochar a táboa de contidos",
+	"bs-discovery-breadcrumb-label-diff": "Diferenzas"
 }

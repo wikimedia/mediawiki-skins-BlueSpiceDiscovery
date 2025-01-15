@@ -183,5 +183,8 @@
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Условия_использования",
 	"bs-discovery-sidebar-primary-aria-label": "Основная боковая панель",
 	"bs-discovery-sidebar-secondary-aria-label": "Дополнительная боковая панель",
-	"bs-discovery-requires-attention": "(требует внимания)"
+	"bs-discovery-requires-attention": "(требует внимания)",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "Меню пользователя (требует внимания)",
+	"bs-discovery-table-of-contents-show-button-aria-label": "Показать содержание",
+	"bs-discovery-table-of-contents-hide-button-aria-label": "Скрыть содержание"
 }

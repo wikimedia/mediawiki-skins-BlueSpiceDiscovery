@@ -21,7 +21,7 @@
 	"bs-discovery-navbar-user-login-text": "Logga in",
 	"bs-discovery-navbar-user-login-title": "Logga in",
 	"bs-discovery-navbar-user-login-aria-label": "Logga in",
-	"bs-discovery-logo-return-to-aria-label": "Återgå till $1",
+	"bs-discovery-logo-return-to-aria-label": "{{SITENAME}} logotyp - Återgå till $1",
 	"bs-discovery-searchform-button-title": "Sök nu",
 	"bs-discovery-searchform-button-aria-label": "Sök nu",
 	"bs-discovery-searchform-input-placeholder": "Din sökterm",
@@ -168,7 +168,7 @@
 	"bs-discovery-config-meta-items-header-help": "Valda element visas under sidrubriken",
 	"bs-discovery-config-meta-items-footer-label": "Element under sidinnehållet",
 	"bs-discovery-config-meta-items-footer-help": "Valda element visas under sidinnehållet",
-	"bs-discovery-alert-old-page-version": "Du visar en gammal version av denna sida. [[Special:Redirect/page/$1|Gå tillbaka till den senaste versionen]].",
+	"bs-discovery-alert-old-page-version": "Du tittar på en gammal version av denna sida. [[Special:Redirect/page/$1|Gå tillbaka till den senaste versionen]].",
 	"bs-discovery-page-version-pager-deleted-user": "(användarnamn borttaget)",
 	"bs-discovery-page-version-pager-info-text": "Detta är versionen från $1, $2 av [[User:$3|$3]]",
 	"bs-discovery-page-version-pager-previous": "Föregående",
@@ -182,5 +182,11 @@
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Användarvillkor",
 	"bs-discovery-title-last-edit-info-date-only": "Senast redigerad $1",
 	"bs-discovery-sidebar-primary-aria-label": "Primärt sidofält",
-	"bs-discovery-sidebar-secondary-aria-label": "Sekundärt sidofält"
+	"bs-discovery-sidebar-secondary-aria-label": "Sekundärt sidofält",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "Användarmeny (kräver uppmärksamhet)",
+	"bs-discovery-tools-after-content-aria-label": "Verktyg efter innehållsavsnitt",
+	"bs-discovery-data-after-content-aria-label": "Data efter innehållsavsnitt",
+	"bs-discovery-requires-attention": "(kräver uppmärksamhet)",
+	"bs-discovery-table-of-contents-show-button-aria-label": "Visa innehållsförteckning",
+	"bs-discovery-table-of-contents-hide-button-aria-label": "Dölj innehållsförteckning"
 }

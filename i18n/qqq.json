@@ -189,5 +189,6 @@
 	"bs-discovery-data-after-content-aria-label": "Aria label for data afer content section in html",
 	"bs-discovery-requires-attention": "Text for visually hidden element to indicate that this element requires user attention",
 	"bs-discovery-table-of-contents-show-button-aria-label": "ARIA label for the table of contents show toggle button",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "ARIA label for the table of contents hide toggle button"
+	"bs-discovery-table-of-contents-hide-button-aria-label": "ARIA label for the table of contents hide toggle button",
+	"bs-discovery-breadcrumb-label-diff": "Label for diff page in breadcrumbs\n\n{{Identical|Differences}}"
 }

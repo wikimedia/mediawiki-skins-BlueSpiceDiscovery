@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajeje Brazorf"
+			"Ajeje Brazorf",
+			"GianAntonucci"
 		]
 	},
 	"bs-discovery-desc": "Peḍḍi BlueSpice",
@@ -31,7 +32,7 @@
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Apri $1",
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "Cchiossai suttapàggini",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Cchiossai suttapàggini",
-	"bs-discovery-breadcrumb-nav-node-portal-page": "Pàggina principali",
+	"bs-discovery-breadcrumb-nav-node-portal-page": "Pàggina mastra",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Ùrtimu canciamentu $1",
 	"bs-discovery-last-edit-by-system-user": "utenti sistema",
 	"bs-discovery-title-action-edit-button-title": "Cancia la pàggina",
@@ -51,7 +52,7 @@
 	"bs-discovery-dialog-detailssectionheading-actions": "Azzioni di cuntinutu",
 	"bs-discovery-edit-mediawiki-sidebar-link-title": "Cancia MediaWiki:Sidebar",
 	"bs-discovery-edit-mediawiki-sidebar-link-aria-label": "Cancia MediaWiki:Sidebar",
-	"bs-discovery-breadcrumb-label-talk": "Discussioni",
+	"bs-discovery-breadcrumb-label-talk": "Discurruta",
 	"bs-discovery-breadcrumb-label-special-linkliste": "Culligamenti",
 	"bs-discovery-breadcrumb-label-action-history": "Crunuluggìa",
 	"bs-discovery-breadcrumb-label-action-edit": "Cancia",
