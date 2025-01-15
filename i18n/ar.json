@@ -2,13 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Alshamiri1",
+			"Cigaryno",
 			"FiberAhmed",
 			"Hubaishan",
 			"Karim185.3",
 			"Meno25",
 			"إزبيكييل",
-			"محمد أحمد عبد الفتاح",
-			"Cigaryno"
+			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"bs-discovery-name": "اكتشاف BlueSpice",
@@ -194,5 +194,6 @@
 	"bs-discovery-data-after-content-aria-label": "البيانات بعد قسم المحتوى",
 	"bs-discovery-requires-attention": "(يتطلب الاهتمام)",
 	"bs-discovery-table-of-contents-show-button-aria-label": "إظهار جدول المحتويات",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "إخفاء جدول المحتويات."
+	"bs-discovery-table-of-contents-hide-button-aria-label": "إخفاء جدول المحتويات.",
+	"bs-discovery-breadcrumb-label-diff": "الفروق"
 }

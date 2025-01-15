@@ -185,5 +185,6 @@
 	"bs-discovery-data-after-content-aria-label": "נתונים אחרי קטע תוכן",
 	"bs-discovery-requires-attention": "(דורש תשומת לב)",
 	"bs-discovery-table-of-contents-show-button-aria-label": "להציג את תוכן העניינים",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "להסתיר את תוכן העניינים"
+	"bs-discovery-table-of-contents-hide-button-aria-label": "להסתיר את תוכן העניינים",
+	"bs-discovery-breadcrumb-label-diff": "הבדלים"
 }

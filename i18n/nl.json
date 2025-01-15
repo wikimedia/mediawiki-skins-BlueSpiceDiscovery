@@ -192,5 +192,6 @@
 	"bs-discovery-data-after-content-aria-label": "Gegevens na inhoudsgedeelte",
 	"bs-discovery-requires-attention": "(vereist aandacht)",
 	"bs-discovery-table-of-contents-show-button-aria-label": "Inhoudsopgave weergeven",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "Inhoudsopgave verbergen"
+	"bs-discovery-table-of-contents-hide-button-aria-label": "Inhoudsopgave verbergen",
+	"bs-discovery-breadcrumb-label-diff": "Verschillen"
 }

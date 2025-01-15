@@ -188,5 +188,6 @@
 	"bs-discovery-data-after-content-aria-label": "Data after content section",
 	"bs-discovery-requires-attention": "(requires attention)",
 	"bs-discovery-table-of-contents-show-button-aria-label": "Show the table of contents",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "Hide the table of contents"
+	"bs-discovery-table-of-contents-hide-button-aria-label": "Hide the table of contents",
+	"bs-discovery-breadcrumb-label-diff": "Differences"
 }
