@@ -53,3 +53,8 @@ body.mw-special-Allpages ul.mw-allpages-chunk li a {
 body.mw-underline-always .mw-body-content a {
 	text-decoration: underline;
 }
+
+/* fix dialog container z-index */
+.skin-bluespicediscovery #mw-teleport-target {
+	z-index: 2000;
+}

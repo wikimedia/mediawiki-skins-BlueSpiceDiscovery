@@ -37,6 +37,8 @@
 #tools-after-content {
 	color: var(--content-fg-secondary);
 	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
 }
 
 #tools-after-content:empty {
