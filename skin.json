@@ -477,7 +477,8 @@
 				"stylesheets/control/mws-tree-component.css": {},
 				"stylesheets/control/hide-title.css": {},
 				"stylesheets/wcag.css": { "media": "prefers-contrast: more" },
-				"stylesheets/fixes/diffmode.css": {}
+				"stylesheets/fixes/diffmode.css": {},
+				"stylesheets/fixes/commentstreams.css": {}
 			}
 		},
 		"skin.discovery.bluespice.themes.default": {
