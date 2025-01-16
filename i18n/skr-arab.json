@@ -41,5 +41,6 @@
 	"bs-discovery-breadcrumb-label-special-linkliste": "لنک",
 	"bs-discovery-breadcrumb-label-action-history": "تاریخچہ",
 	"bs-discovery-breadcrumb-label-action-edit": "لکھو",
-	"bs-discovery-first-heading-aria-label": "عنوان ورقہ"
+	"bs-discovery-first-heading-aria-label": "عنوان ورقہ",
+	"bs-discovery-breadcrumb-label-diff": "فرق"
 }

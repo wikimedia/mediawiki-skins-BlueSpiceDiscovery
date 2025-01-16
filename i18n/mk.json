@@ -187,5 +187,6 @@
 	"bs-discovery-data-after-content-aria-label": "Податоци по содржинскиот оддел",
 	"bs-discovery-requires-attention": "(бара внимание)",
 	"bs-discovery-table-of-contents-show-button-aria-label": "Прикажи ја Содржината",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "Скриј ја Соодржината"
+	"bs-discovery-table-of-contents-hide-button-aria-label": "Скриј ја Соодржината",
+	"bs-discovery-breadcrumb-label-diff": "Разлики"
 }
