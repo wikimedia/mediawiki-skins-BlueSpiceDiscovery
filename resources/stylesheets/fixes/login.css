@@ -1,4 +1,4 @@
-#wrapper {
+body.mediawiki {
 	background-image: url( ./../../images/bs_background.png );
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -24,4 +24,17 @@
 #firstHeading {
 	text-align: center;
 	width: 100%
+}
+
+#footer {
+	background-color: transparent;
+}
+
+#footer li a {
+	color: white;
+}
+
+#footer li a:hover {
+	color: white;
+	text-decoration: underline;
 }
