@@ -3,9 +3,9 @@
 namespace BlueSpice\Discovery\HookHandler\SkinTemplateNavigation;
 
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
+use MediaWiki\Title\Title;
 use MWException;
 use SkinTemplate;
-use Title;
 
 class ShareOptions implements SkinTemplateNavigation__UniversalHook {
 

@@ -10,9 +10,9 @@ use MediaWiki\Extension\MenuEditor\Parser\IMenuParser;
 use MediaWiki\Revision\MutableRevisionRecord;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
+use MediaWiki\Title\Title;
 use MWException;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
-use Title;
 
 class Menu extends GenericMenu implements ParsableMenu, EditPermissionProvider {
 	/** @var string */

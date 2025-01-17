@@ -5,8 +5,8 @@ namespace BlueSpice\Discovery\EnhancedSidebar\Node;
 use BlueSpice\Discovery\SubpageDataGenerator;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Title\Title;
 use Message;
-use Title;
 use UnexpectedValueException;
 use User;
 

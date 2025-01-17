@@ -4,8 +4,8 @@ namespace BlueSpice\Discovery\LangLinksProvider;
 
 use BlueSpice\Discovery\ILangLinksProvider;
 use MediaWiki\Languages\LanguageNameUtils;
+use MediaWiki\Title\Title;
 use PageProps;
-use Title;
 
 class Subpages implements ILangLinksProvider {
 

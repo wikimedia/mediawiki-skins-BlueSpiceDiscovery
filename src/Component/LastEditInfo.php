@@ -10,10 +10,10 @@ use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\RevisionStore;
+use MediaWiki\Title\Title;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use RequestContext;
-use Title;
 use Wikimedia\ObjectFactory\ObjectFactory;
 
 class LastEditInfo extends Literal {

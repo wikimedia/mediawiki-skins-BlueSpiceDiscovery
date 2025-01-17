@@ -2,10 +2,10 @@
 
 namespace BlueSpice\Discovery\Component;
 
+use MediaWiki\Title\Title;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink;
 use SpecialPage;
-use Title;
 
 class SpecialListFiles extends RestrictedTextLink {
 

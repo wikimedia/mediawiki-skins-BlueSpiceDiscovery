@@ -7,10 +7,10 @@ use BlueSpice\Discovery\EnhancedSidebar\NodeProcessor\EnhancedSidebarNodeProcess
 use BlueSpice\Discovery\EnhancedSidebar\NodeProcessor\ExternalLinkProcessor;
 use BlueSpice\Discovery\EnhancedSidebar\Parser;
 use MediaWiki\Revision\MutableRevisionRecord;
+use MediaWiki\Title\Title;
 use MWException;
 use MWStake\MediaWiki\Lib\Nodes\INodeSource;
 use PHPUnit\Framework\TestCase;
-use Title;
 
 /**
  * @covers \BlueSpice\Discovery\EnhancedSidebar\Parser

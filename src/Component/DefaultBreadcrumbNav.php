@@ -6,9 +6,9 @@ use BlueSpice\Discovery\BreadcrumbDataProviderFactory;
 use BlueSpice\Discovery\Renderer\DefaultBreadCrumbRenderer;
 use IContextSource;
 use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\Title\Title;
 use MessageLocalizer;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
-use Title;
 
 class DefaultBreadcrumbNav extends Literal {
 

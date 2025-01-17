@@ -5,7 +5,7 @@ namespace BlueSpice\Discovery\EnhancedSidebar\Node;
 use InvalidArgumentException;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
-use Title;
+use MediaWiki\Title\Title;
 use UnexpectedValueException;
 use User;
 

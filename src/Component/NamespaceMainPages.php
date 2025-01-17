@@ -4,6 +4,7 @@ namespace BlueSpice\Discovery\Component;
 
 use IContextSource;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardHeader;
@@ -11,7 +12,6 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleLinklistGrou
 use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
 use PageProps;
 use RequestContext;
-use Title;
 
 class NamespaceMainPages extends SimpleCard {
 

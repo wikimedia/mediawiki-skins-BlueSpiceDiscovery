@@ -4,9 +4,9 @@ namespace BlueSpice\Discovery\BreadcrumbDataProvider;
 
 use BlueSpice\Discovery\IBreadcrumbDataProvider;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Title\Title;
 use MessageLocalizer;
 use RawMessage;
-use Title;
 use TitleFactory;
 
 class BaseBreadcrumbDataProvider implements IBreadcrumbDataProvider {

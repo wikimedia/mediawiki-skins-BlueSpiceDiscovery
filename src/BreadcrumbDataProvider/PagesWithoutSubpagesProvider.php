@@ -2,7 +2,7 @@
 
 namespace BlueSpice\Discovery\BreadcrumbDataProvider;
 
-use Title;
+use MediaWiki\Title\Title;
 
 class PagesWithoutSubpagesProvider extends BaseBreadcrumbDataProvider {
 
