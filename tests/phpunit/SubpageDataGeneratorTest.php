@@ -3,9 +3,9 @@
 namespace BlueSpice\Discovery\Tests;
 
 use BlueSpice\Discovery\SubpageDataGenerator;
+use MediaWiki\Title\Title;
 use MediaWikiIntegrationTestCase;
 use Message;
-use Title;
 
 /**
  * @group Database

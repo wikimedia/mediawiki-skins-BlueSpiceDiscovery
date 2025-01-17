@@ -2,12 +2,12 @@
 
 namespace BlueSpice\Discovery\EnhancedSidebar\NodeProcessor;
 
+use MediaWiki\Title\Title;
 use MWStake\MediaWiki\Lib\Nodes\INode;
 use MWStake\MediaWiki\Lib\Nodes\INodeProcessor;
 use MWStake\MediaWiki\Lib\Nodes\INodeSource;
 use ParserFactory;
 use ParserOptions;
-use Title;
 use User;
 
 abstract class EnhancedSidebarNodeProcessor implements INodeProcessor {

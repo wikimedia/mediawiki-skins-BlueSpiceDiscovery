@@ -3,8 +3,8 @@
 namespace BlueSpice\Discovery;
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use Message;
-use Title;
 
 class SubpageDataGenerator {
 

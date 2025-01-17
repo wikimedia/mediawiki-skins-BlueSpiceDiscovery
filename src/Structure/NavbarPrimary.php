@@ -17,8 +17,8 @@ use BlueSpice\Discovery\SkinSlotRenderer\NavbarPrimarySearchFormSkinSlotRenderer
 use Config;
 use IContextSource;
 use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\Title\Title;
 use Message;
-use Title;
 
 class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 

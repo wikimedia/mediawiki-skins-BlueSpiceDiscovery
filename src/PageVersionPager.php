@@ -6,8 +6,8 @@ use Html;
 use Language;
 use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Revision\RevisionRecord;
+use MediaWiki\Title\Title;
 use Message;
-use Title;
 use User;
 
 class PageVersionPager {

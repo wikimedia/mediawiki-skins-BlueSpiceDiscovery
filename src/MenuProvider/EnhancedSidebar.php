@@ -7,13 +7,13 @@ use BlueSpice\Discovery\CookieHandler;
 use BlueSpice\Discovery\IMenuProvider;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Revision\RevisionStore;
+use MediaWiki\Title\Title;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
 use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use Psr\Log\LoggerInterface;
 use RawMessage;
-use Title;
 use TitleFactory;
 
 class EnhancedSidebar implements IMenuProvider {

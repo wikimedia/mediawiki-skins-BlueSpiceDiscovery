@@ -8,8 +8,8 @@ use BlueSpice\Discovery\LangLinksProvider\Interwiki;
 use BlueSpice\Discovery\LangLinksProvider\Subpages;
 use BlueSpice\Discovery\LangLinksProviderFactory;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use MediaWikiIntegrationTestCase;
-use Title;
 
 /**
  * @covers BlueSpice\Discovery\LangLinksProviderFactory

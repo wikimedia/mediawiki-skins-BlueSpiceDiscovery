@@ -3,12 +3,12 @@
 namespace BlueSpice\Discovery\Component;
 
 use IContextSource;
+use MediaWiki\Title\Title;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleLink;
 use RequestContext;
 use SpecialPage;
-use Title;
 use User;
 
 class UserButtonLogin extends SimpleLink {

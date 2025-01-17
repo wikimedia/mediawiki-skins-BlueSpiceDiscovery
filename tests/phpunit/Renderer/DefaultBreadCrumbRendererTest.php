@@ -5,10 +5,10 @@ namespace BlueSpice\Discovery\Tests\Renderer;
 use BlueSpice\Discovery\BreadcrumbDataProviderFactory;
 use BlueSpice\Discovery\Renderer\DefaultBreadCrumbRenderer;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use MediaWikiIntegrationTestCase;
 use Message;
 use MessageLocalizer;
-use Title;
 use User;
 
 /**
