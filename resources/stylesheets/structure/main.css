@@ -101,7 +101,7 @@ main .alert-info a:hover {
 	background-color: var(--body-special-bg);
 }
 
-#contentSub .mw-revision.mw-message-box {
+#contentSub .mw-revision.cdx-message {
 	/* Hide mw page version information because we have our PageVersionPager */
 	display: none;
 }

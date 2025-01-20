@@ -3,6 +3,8 @@
 namespace BlueSpice\Discovery\Structure;
 
 use BaseTemplate;
+use BlueSpice\Discovery\BackLinkProviderFactory;
+use BlueSpice\Discovery\Component\BackTo;
 use BlueSpice\Discovery\Component\FullscreenButton;
 use BlueSpice\Discovery\Component\LastEditInfo;
 use BlueSpice\Discovery\Component\TitleActionEdit;
@@ -74,6 +76,11 @@ class Main implements
 	protected $objectFactory = null;
 
 	/**
+	 * @var BackLinkProviderFactory
+	 */
+	protected $backLinkProviderFactory = null;
+
+	/**
 	 * @var array
 	 */
 	protected $componentProcessData = [];
@@ -100,6 +107,7 @@ class Main implements
 	 * @param LinkRenderer $linkRenderer
 	 * @param RevisionStore $revisionStore
 	 * @param ObjectFactory $objectFactory
+	 * @param BackLinkProviderFactory $backLinkProviderFactory
 	 */
 	public function __construct(
 		ITemplateDataProvider $templateDataProvider,
@@ -109,7 +117,8 @@ class Main implements
 		PermissionManager $permissionManager,
 		LinkRenderer $linkRenderer,
 		RevisionStore $revisionStore,
-		ObjectFactory $objectFactory ) {
+		ObjectFactory $objectFactory,
+		BackLinkProviderFactory $backLinkProviderFactory ) {
 			$this->componentProcessData = $templateDataProvider->getAll();
 			$this->componentRenderer = $componentRenderer;
 			$this->skinSlotRenderer = $skinSlotRenderer;
@@ -118,6 +127,7 @@ class Main implements
 			$this->linkRenderer = $linkRenderer;
 			$this->revisionStore = $revisionStore;
 			$this->objectFactory = $objectFactory;
+			$this->backLinkProviderFactory = $backLinkProviderFactory;
 	}
 
 	/**
@@ -127,6 +137,7 @@ class Main implements
 	 * @param LinkRenderer $linkRenderer
 	 * @param RevisionStore $revisionStore
 	 * @param ObjectFactory $objectFactory
+	 * @param BackLinkProviderFactory $backLinkProviderFactory
 	 * @return ISkinStructure
 	 */
 	public static function factory(
@@ -137,10 +148,11 @@ class Main implements
 		PermissionManager $permissionManager,
 		LinkRenderer $linkRenderer,
 		RevisionStore $revisionStore,
-		ObjectFactory $objectFactory ) {
+		ObjectFactory $objectFactory,
+		BackLinkProviderFactory $backLinkProviderFactory ) {
 		return new static(
 			$templateDataProvider, $componentRenderer, $skinSlotRenderer, $cookieHandler,
-			$permissionManager, $linkRenderer, $revisionStore, $objectFactory );
+			$permissionManager, $linkRenderer, $revisionStore, $objectFactory, $backLinkProviderFactory );
 	}
 
 	/**
@@ -191,6 +203,7 @@ class Main implements
 		$this->fetchTitleActionEdit();
 		$this->fetchTitleActionLanguage();
 		$this->fetchTitleActionFullscreenButton();
+		$this->fetchBackTo();
 		$this->fetchRedirect( $subTitleProcessor->get( 'redirect' ) );
 		$this->fetchSkinSlotDataAfterTitle();
 		$this->fetchUndelete();
@@ -306,6 +319,16 @@ class Main implements
 		}
 
 		$this->skinComponents['title'] = $displayTitle;
+	}
+
+	/**
+	 *
+	 * @return void
+	 */
+	private function fetchBackTo() {
+		$backTo = new BackTo( $this->backLinkProviderFactory );
+		$html = $this->componentRenderer->getComponentHtml( $backTo, $this->componentProcessData );
+		$this->skinComponents['backTo'] = $html;
 	}
 
 	/**

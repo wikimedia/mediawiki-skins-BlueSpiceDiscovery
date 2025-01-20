@@ -69,7 +69,8 @@
 						"PermissionManager",
 						"LinkRenderer",
 						"RevisionStore",
-						"ObjectFactory"
+						"ObjectFactory",
+						"BlueSpiceDiscoveryBackLinkProviderFactory"
 					]
 				},
 				"aftercontent": {
@@ -201,6 +202,16 @@
 			"TitleActionPrimaryActionModifier": {
 			},
 			"LastEditInfoModifier": {
+			},
+			"BackLinkProviderRegistry": {
+				"diff": {
+					"class": "BlueSpice\\Discovery\\BackLinkProvider\\DiffBackLinkProvider",
+					"services": [ "TitleFactory" ]
+				},
+				"pages": {
+					"class": "BlueSpice\\Discovery\\BackLinkProvider\\PagesBackLinkProvider",
+					"services": [ "TitleFactory" ]
+				}
 			}
 		},
 		"BlueSpicePrivacy": {
@@ -321,6 +332,9 @@
 		},
 		"addLoginPageResources": {
 			"class": "\\BlueSpice\\Discovery\\HookHandler\\BeforePageDisplay\\SpecialLogin"
+		},
+		"addBacklinkOnSpecialPages": {
+			"class": "\\BlueSpice\\Discovery\\HookHandler\\BeforePageDisplay\\AddBacklink"
 		}
 	},
 	"Hooks":{
@@ -353,7 +367,7 @@
 			"\\BlueSpice\\Discovery\\Hook\\BSUsageTrackerRegisterCollectors\\EnhancedSidebarModified::callback"
 		],
 		"MWStakeCommonUILessVarsInit": "set-less-vars",
-		"BeforePageDisplay": "addLoginPageResources"
+		"BeforePageDisplay": [ "addLoginPageResources", "addBacklinkOnSpecialPages" ]
 	},
 	"config_prefix": "bsg",
 	"config": {
@@ -564,7 +578,8 @@
 				"stylesheets/structure/userminiprofile.css": {},
 				"stylesheets/content/bluespiceSocial.css": {},
 				"stylesheets/content/bluespiceSocial.sm.css": {  "media": "all and ( max-width: 720px )" },
-				"stylesheets/content/bluespiceSocial.xl.css": {  "media": "all and ( min-width: 1024px )" }
+				"stylesheets/content/bluespiceSocial.xl.css": {  "media": "all and ( min-width: 1024px )" },
+				"stylesheets/structure/main.backto.css": {}
 			}
 		},
 		"skin.discovery.aftercontent.styles": {
@@ -707,6 +722,11 @@
 			"styles": {
 				"stylesheets/fixes/login.css": {}
 			}
+		},
+		"skin.discovery.special.backlink": {
+			"packageFiles": [
+				"js/AddBacklinks.js"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
