@@ -4,12 +4,12 @@ namespace BlueSpice\Discovery\Component;
 
 use IContextSource;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleLink;
 use RequestContext;
 use SpecialPage;
-use User;
 
 class UserButtonLogin extends SimpleLink {
 
