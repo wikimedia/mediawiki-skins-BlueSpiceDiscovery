@@ -198,5 +198,9 @@
 	"bs-discovery-requires-attention": "(erfordert Aufmerksamkeit)",
 	"bs-discovery-table-of-contents-show-button-aria-label": "Inhaltsverzeichnis anzeigen",
 	"bs-discovery-table-of-contents-hide-button-aria-label": "Inhaltsverzeichnis ausblenden",
-	"bs-discovery-breadcrumb-label-diff": "Unterschiede"
+	"bs-discovery-breadcrumb-label-diff": "Unterschiede",
+	"bs-discovery-back-to-page": "Zurück zu $1",
+	"bs-discovery-back-to-page-title": "Zurück zur Seite $1",
+	"bs-discovery-back-to-version-history": "Zurück zur Versionsgeschichte",
+	"bs-discovery-back-to-version-history-title": "Zurück zur Versionsgeschichte der Seite $1"
 }

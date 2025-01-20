@@ -190,5 +190,9 @@
 	"bs-discovery-requires-attention": "Text for visually hidden element to indicate that this element requires user attention",
 	"bs-discovery-table-of-contents-show-button-aria-label": "ARIA label for the table of contents show toggle button",
 	"bs-discovery-table-of-contents-hide-button-aria-label": "ARIA label for the table of contents hide toggle button",
-	"bs-discovery-breadcrumb-label-diff": "Label for diff page in breadcrumbs\n\n{{Identical|Differences}}"
+	"bs-discovery-breadcrumb-label-diff": "Label for diff page in breadcrumbs\n\n{{Identical|Differences}}",
+	"bs-discovery-back-to-page": "Text for link to navigate back to page\nParameters:\n* - $1 - name of page",
+	"bs-discovery-back-to-page-title": "Title for link to navigate back to page\nParameters:\n* - $1 - name of page",
+	"bs-discovery-back-to-version-history": "Text for link to navigate back to the version history of a page",
+	"bs-discovery-back-to-version-history-title": "Title for link to go back to version history of a page\nParameters:\n* - $1 - name of page"
 }
