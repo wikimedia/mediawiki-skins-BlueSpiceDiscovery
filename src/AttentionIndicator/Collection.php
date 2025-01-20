@@ -7,7 +7,7 @@ use BlueSpice\Discovery\AttentionIndicatorFactory;
 use BlueSpice\Discovery\IAttentionIndicator;
 use Config;
 use MediaWiki\MediaWikiServices;
-use User;
+use MediaWiki\User\User;
 
 abstract class Collection extends AttentionIndicator {
 

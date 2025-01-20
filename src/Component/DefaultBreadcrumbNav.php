@@ -7,6 +7,7 @@ use BlueSpice\Discovery\Renderer\DefaultBreadCrumbRenderer;
 use IContextSource;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use MessageLocalizer;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 

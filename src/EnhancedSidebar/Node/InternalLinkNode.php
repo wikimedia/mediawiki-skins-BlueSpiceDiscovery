@@ -6,8 +6,8 @@ use InvalidArgumentException;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use UnexpectedValueException;
-use User;
 
 class InternalLinkNode extends EnhancedSidebarNode {
 

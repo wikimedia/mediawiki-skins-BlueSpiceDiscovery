@@ -7,8 +7,8 @@ use MediaWiki\Context\RequestContext;
 use MediaWiki\Language\RawMessage;
 use MediaWiki\SpecialPage\SpecialPageFactory;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use MessageLocalizer;
-use User;
 
 class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 

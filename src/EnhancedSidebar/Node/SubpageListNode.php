@@ -6,9 +6,9 @@ use BlueSpice\Discovery\SubpageDataGenerator;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use Message;
 use UnexpectedValueException;
-use User;
 
 class SubpageListNode extends InternalLinkNode {
 

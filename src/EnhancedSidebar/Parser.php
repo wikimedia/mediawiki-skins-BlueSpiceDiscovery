@@ -10,12 +10,12 @@ use JsonContent;
 use MediaWiki\Extension\MenuEditor\Parser\IMenuParser;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
+use MediaWiki\User\User;
 use MWStake\MediaWiki\Lib\Nodes\IMutableNode;
 use MWStake\MediaWiki\Lib\Nodes\INode;
 use MWStake\MediaWiki\Lib\Nodes\INodeProcessor;
 use MWStake\MediaWiki\Lib\Nodes\IParser;
 use MWStake\MediaWiki\Lib\Nodes\MutableParser;
-use User;
 
 /**
  * This parser's implementation could be confusing. It is a parser for the
