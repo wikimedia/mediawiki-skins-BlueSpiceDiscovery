@@ -106,5 +106,7 @@
 	"menueditor-ui-enhanced-sidebar-subpage-tree-label": "Ënnersäitebam",
 	"bs-discovery-page-version-pager-deleted-user": "(Benotzernumm ewechgeholl)",
 	"bs-discovery-page-version-pager-previous": "Vireg",
-	"bs-discovery-page-version-pager-next": "Nächst"
+	"bs-discovery-page-version-pager-next": "Nächst",
+	"bs-discovery-back-to-page": "Zréck op $1",
+	"bs-discovery-back-to-page-title": "Zréck op d'Säit $1"
 }
