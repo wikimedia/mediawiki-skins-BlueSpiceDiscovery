@@ -14,6 +14,7 @@ use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
 use BlueSpice\Discovery\TemplateDataProviderFactory;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Request\WebRequest;
 
 return [
 	'BlueSpiceDiscoveryTemplateDataProvider' => static function ( MediaWikiServices $services ) {

@@ -3,7 +3,7 @@
 namespace BlueSpice\Discovery;
 
 use FormatJson;
-use WebRequest;
+use MediaWiki\Request\WebRequest;
 
 class CookieHandler {
 	/**
