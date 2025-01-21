@@ -8,7 +8,7 @@ body.mediawiki {
 	background-color: transparent;
 }
 
-#mw-content-text {
+#mw-content-text:has( #userloginprompt ) {
 	display: flex;
 }
 
