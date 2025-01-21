@@ -5,12 +5,12 @@ namespace BlueSpice\Discovery\Component;
 use BlueSpice\Discovery\ILangLinksProvider;
 use BlueSpice\Discovery\LangLinksProviderFactory;
 use IContextSource;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdownIcon;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdownItemlistFromArray;
 use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
-use RequestContext;
 
 class TitleActionLanguage extends SimpleDropdownIcon {
 

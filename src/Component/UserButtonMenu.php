@@ -5,6 +5,7 @@ namespace BlueSpice\Discovery\Component;
 use BlueSpice\Discovery\SkinSlotRenderer\UserMenuCardsSkinSlotRenderer;
 use Html;
 use IContextSource;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\User;
 use Message;
@@ -17,7 +18,6 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleLinklistGrou
 use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
 use MWStake\MediaWiki\Component\DynamicFileDispatcher\DynamicFileDispatcherFactory;
 use RawMessage;
-use RequestContext;
 
 class UserButtonMenu extends SimpleDropdown {
 

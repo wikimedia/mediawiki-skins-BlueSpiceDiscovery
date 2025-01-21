@@ -11,7 +11,7 @@ use BlueSpice\Discovery\ISkinLayoutAware;
 use BlueSpice\Discovery\ITemplateProvider;
 use ExtensionRegistry;
 use IContextSource;
-use RequestContext;
+use MediaWiki\Context\RequestContext;
 use Wikimedia\ObjectFactory\ObjectFactory;
 
 abstract class SkinLayoutBase implements

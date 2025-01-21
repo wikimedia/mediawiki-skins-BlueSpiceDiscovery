@@ -12,6 +12,7 @@ use BlueSpice\Discovery\MetaItemsProviderFactory;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
 use BlueSpice\Discovery\Renderer\SkinSlotRenderer;
 use BlueSpice\Discovery\TemplateDataProviderFactory;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
 
 return [
