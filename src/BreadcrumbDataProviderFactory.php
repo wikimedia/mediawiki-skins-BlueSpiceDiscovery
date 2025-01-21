@@ -5,6 +5,7 @@ namespace BlueSpice\Discovery;
 use BlueSpice\Discovery\BreadcrumbDataProvider\BaseBreadcrumbDataProvider;
 use ExtensionRegistry;
 use MediaWiki\Title\Title;
+use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\User;
 use Wikimedia\ObjectFactory\ObjectFactory;
 
