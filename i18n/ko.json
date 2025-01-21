@@ -132,5 +132,6 @@
 	"bs-discovery-footerlinks-termsofservice-link-desc": "서비스 약관",
 	"bs-discovery-requires-attention": "(주의 필요)",
 	"bs-discovery-table-of-contents-show-button-aria-label": "목차 표시",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "목차 숨기기"
+	"bs-discovery-table-of-contents-hide-button-aria-label": "목차 숨기기",
+	"bs-discovery-breadcrumb-label-diff": "차이"
 }
