@@ -4,10 +4,10 @@ namespace BlueSpice\Discovery\Component;
 
 use BlueSpice\Discovery\SubpageDataGenerator;
 use IContextSource;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleTreeContainer;
-use RequestContext;
 
 class SubpageTree extends SimpleTreeContainer {
 

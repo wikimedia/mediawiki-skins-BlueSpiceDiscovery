@@ -4,6 +4,7 @@ namespace BlueSpice\Discovery\Component;
 
 use BlueSpice\Discovery\CookieHandler;
 use BlueSpice\Discovery\EnhancedSidebar\Parser as EnhancedSidebarParser;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Revision\RevisionStore;
 use MediaWiki\Title\Title;
 use Message;
@@ -14,7 +15,6 @@ use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use Psr\Log\LoggerAwareInterface;
 use Psr\Log\LoggerInterface;
-use RequestContext;
 
 class EnhancedSidebarContainer extends Container implements LoggerAwareInterface {
 

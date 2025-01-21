@@ -2,6 +2,7 @@
 
 namespace BlueSpice\Discovery\EnhancedSidebar\NodeProcessor;
 
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 use MWStake\MediaWiki\Lib\Nodes\INode;
@@ -92,7 +93,7 @@ abstract class EnhancedSidebarNodeProcessor implements INodeProcessor {
 	 * @return mixed
 	 */
 	protected function parseWikitextValue( $text, ?Title $title = null ) {
-		$requestContext = new \RequestContext();
+		$requestContext = new RequestContext();
 		if ( $this->user ) {
 			$requestContext->setUser( $this->user );
 		}
