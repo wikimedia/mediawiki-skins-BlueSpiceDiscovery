@@ -3,9 +3,9 @@
 namespace BlueSpice\Discovery\Component;
 
 use IContextSource;
+use MediaWiki\Message\Message;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\SpecialPage\SpecialPageFactory;
-use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink;
 use RawMessage;
 

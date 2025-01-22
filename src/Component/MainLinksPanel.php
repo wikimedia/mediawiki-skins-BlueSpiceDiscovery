@@ -5,7 +5,7 @@ namespace BlueSpice\Discovery\Component;
 use BlueSpice\Discovery\SkinSlotRenderer\MainPanelSkinSlotRenderer;
 use IContextSource;
 use MediaWiki\MediaWikiServices;
-use Message;
+use MediaWiki\Message\Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\CallbackLiteral;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;

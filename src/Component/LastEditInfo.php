@@ -9,10 +9,10 @@ use ExtensionRegistry;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Message\Message;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\RevisionStore;
 use MediaWiki\Title\Title;
-use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use Wikimedia\ObjectFactory\ObjectFactory;
 

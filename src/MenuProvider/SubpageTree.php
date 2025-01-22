@@ -4,7 +4,7 @@ namespace BlueSpice\Discovery\MenuProvider;
 
 use BlueSpice\Discovery\Component\SubpageTreePanel;
 use BlueSpice\Discovery\IMenuProvider;
-use Message;
+use MediaWiki\Message\Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
 use RawMessage;
 

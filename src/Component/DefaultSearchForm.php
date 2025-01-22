@@ -3,7 +3,7 @@
 namespace BlueSpice\Discovery\Component;
 
 use BlueSpice\Discovery\Renderer\DefaultSearchFormRenderer;
-use Message;
+use MediaWiki\Message\Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use SpecialPage;
 

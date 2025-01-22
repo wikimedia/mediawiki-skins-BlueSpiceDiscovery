@@ -4,8 +4,8 @@ namespace BlueSpice\Discovery\Component;
 
 use BlueSpice\Discovery\CookieHandler;
 use IContextSource;
+use MediaWiki\Message\Message;
 use MediaWiki\SpecialPage\SpecialPage;
-use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleLink;
 
 class FullscreenButton extends SimpleLink {
