@@ -195,5 +195,9 @@
 	"bs-discovery-requires-attention": "(يتطلب الاهتمام)",
 	"bs-discovery-table-of-contents-show-button-aria-label": "إظهار جدول المحتويات",
 	"bs-discovery-table-of-contents-hide-button-aria-label": "إخفاء جدول المحتويات.",
-	"bs-discovery-breadcrumb-label-diff": "الفروق"
+	"bs-discovery-breadcrumb-label-diff": "الفروق",
+	"bs-discovery-back-to-page": "العودة إلى $1",
+	"bs-discovery-back-to-page-title": "العودة إلى الصفحة $1",
+	"bs-discovery-back-to-version-history": "العودة إلى تاريخ الإصدار",
+	"bs-discovery-back-to-version-history-title": "العودة إلى سجل الإصدارات للصفحة $1"
 }
