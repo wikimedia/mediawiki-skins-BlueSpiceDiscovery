@@ -189,5 +189,9 @@
 	"bs-discovery-requires-attention": "(cómpre atención)",
 	"bs-discovery-table-of-contents-show-button-aria-label": "Amosar a táboa de contidos",
 	"bs-discovery-table-of-contents-hide-button-aria-label": "Agochar a táboa de contidos",
-	"bs-discovery-breadcrumb-label-diff": "Diferenzas"
+	"bs-discovery-breadcrumb-label-diff": "Diferenzas",
+	"bs-discovery-back-to-page": "Volver a \"$1\"",
+	"bs-discovery-back-to-page-title": "Volver á páxina \"$1\"",
+	"bs-discovery-back-to-version-history": "Volver ao historial de versións",
+	"bs-discovery-back-to-version-history-title": "Volver ao historial de versións da páxina \"$1\""
 }
