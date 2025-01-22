@@ -2,8 +2,8 @@
 
 namespace BlueSpice\Discovery\Component;
 
+use MediaWiki\Message\Message;
 use MediaWiki\Title\Title;
-use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink;
 
 class SpecialMainPage extends RestrictedTextLink {

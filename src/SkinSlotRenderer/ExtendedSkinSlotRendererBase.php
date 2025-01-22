@@ -4,7 +4,7 @@ namespace BlueSpice\Discovery\SkinSlotRenderer;
 
 use BlueSpice\Discovery\CookieHandler;
 use IContextSource;
-use Message;
+use MediaWiki\Message\Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\AriaAttributesBuilder;
 use MWStake\MediaWiki\Component\CommonUserInterface\DataAttributesBuilder;
 use MWStake\MediaWiki\Component\CommonUserInterface\HtmlIdRegistry;

@@ -10,7 +10,7 @@ use BlueSpice\Discovery\ITemplateDataProvider;
 use BlueSpice\Discovery\ITemplateProvider;
 use BlueSpice\Discovery\Renderer\ComponentRenderer;
 use IContextSource;
-use Message;
+use MediaWiki\Message\Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
 use MWStake\MediaWiki\Component\CommonUserInterface\ITabPanel;
 use MWStake\MediaWiki\Component\CommonUserInterface\SkinSlotRegistry;

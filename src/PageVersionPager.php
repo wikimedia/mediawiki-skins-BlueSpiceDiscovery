@@ -4,11 +4,11 @@ namespace BlueSpice\Discovery;
 
 use Html;
 use Language;
+use MediaWiki\Message\Message;
 use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use Message;
 
 class PageVersionPager {
 

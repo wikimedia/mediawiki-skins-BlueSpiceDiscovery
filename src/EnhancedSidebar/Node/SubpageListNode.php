@@ -4,10 +4,10 @@ namespace BlueSpice\Discovery\EnhancedSidebar\Node;
 
 use BlueSpice\Discovery\SubpageDataGenerator;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Message\Message;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use Message;
 use UnexpectedValueException;
 
 class SubpageListNode extends InternalLinkNode {

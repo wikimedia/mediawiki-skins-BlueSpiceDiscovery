@@ -4,9 +4,9 @@ namespace BlueSpice\Discovery\Component;
 
 use IContextSource;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Message\Message;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleLink;
 use SpecialPage;

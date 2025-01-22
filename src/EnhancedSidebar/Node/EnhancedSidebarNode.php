@@ -4,8 +4,8 @@ namespace BlueSpice\Discovery\EnhancedSidebar\Node;
 
 use InvalidArgumentException;
 use MediaWiki\Extension\MenuEditor\Node\MenuNode;
+use MediaWiki\Message\Message;
 use MediaWiki\User\User;
-use Message;
 
 abstract class EnhancedSidebarNode extends MenuNode {
 

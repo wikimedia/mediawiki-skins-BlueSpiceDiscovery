@@ -6,7 +6,7 @@ use BlueSpice\Discovery\ISkinLayout;
 use BlueSpice\Discovery\ISkinLayoutAware;
 use ExtensionRegistry;
 use IContextSource;
-use Message;
+use MediaWiki\Message\Message;
 
 class SkipTo extends SkinStructureBase implements ISkinLayoutAware {
 
