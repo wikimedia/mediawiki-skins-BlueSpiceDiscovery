@@ -2,7 +2,7 @@
 
 namespace BlueSpice\Discovery\Component;
 
-use IContextSource;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\Title\Title;

@@ -24,7 +24,7 @@ use BlueSpice\Discovery\SkinSlotRenderer\DataBeforeContentSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\TitleActionsSkinSlotRenderer;
 use BlueSpice\Discovery\SubTitleProcessor;
 use Html;
-use IContextSource;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Revision\RevisionStore;

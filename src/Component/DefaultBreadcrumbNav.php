@@ -4,7 +4,7 @@ namespace BlueSpice\Discovery\Component;
 
 use BlueSpice\Discovery\BreadcrumbDataProviderFactory;
 use BlueSpice\Discovery\Renderer\DefaultBreadCrumbRenderer;
-use IContextSource;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;

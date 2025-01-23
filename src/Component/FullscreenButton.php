@@ -3,7 +3,7 @@
 namespace BlueSpice\Discovery\Component;
 
 use BlueSpice\Discovery\CookieHandler;
-use IContextSource;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\Message\Message;
 use MediaWiki\SpecialPage\SpecialPage;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleLink;

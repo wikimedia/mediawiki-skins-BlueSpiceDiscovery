@@ -3,7 +3,7 @@
 namespace BlueSpice\Discovery\Component;
 
 use BlueSpice\Discovery\MenuManager;
-use IContextSource;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\ComponentBase;

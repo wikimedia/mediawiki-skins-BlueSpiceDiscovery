@@ -5,7 +5,7 @@ namespace BlueSpice\Discovery\Component;
 use BlueSpice\Discovery\ITitleActionPrimaryActionModifier;
 use Exception;
 use ExtensionRegistry;
-use IContextSource;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\Permissions\PermissionManager;

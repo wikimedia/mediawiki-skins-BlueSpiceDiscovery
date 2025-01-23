@@ -4,7 +4,7 @@ namespace BlueSpice\Discovery\Component;
 
 use BlueSpice\Discovery\HookRunner;
 use Html;
-use IContextSource;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\Extension\MenuEditor\Node\TwoFoldLinkSpec;
 use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
 use MediaWiki\HookContainer\HookContainer;

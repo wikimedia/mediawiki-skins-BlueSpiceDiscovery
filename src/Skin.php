@@ -4,6 +4,7 @@ namespace BlueSpice\Discovery;
 
 use Exception;
 use ExtensionRegistry;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\MediaWikiServices;
 use OutputPage;
 use SkinTemplate;

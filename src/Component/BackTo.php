@@ -4,7 +4,7 @@ namespace BlueSpice\Discovery\Component;
 
 use BlueSpice\Discovery\BackLinkProviderFactory;
 use BlueSpice\Discovery\IBackLinkProvider;
-use IContextSource;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\Message\Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleLink;
