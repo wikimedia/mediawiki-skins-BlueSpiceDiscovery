@@ -2,8 +2,8 @@
 
 namespace BlueSpice\Discovery;
 
-use Config;
 use ConfigFactory;
+use MediaWiki\Config\Config;
 use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
 
 class MenuManager {
