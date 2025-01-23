@@ -3,7 +3,7 @@
 namespace BlueSpice\Discovery;
 
 use BlueSpice\Discovery\AttenstionIndicator\NULLIndicator;
-use Config;
+use MediaWiki\Config\Config;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\User;
 use MWStake\MediaWiki\Component\ManifestRegistry\IRegistry;
