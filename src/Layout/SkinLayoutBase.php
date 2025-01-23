@@ -10,7 +10,7 @@ use BlueSpice\Discovery\ISkinLayout;
 use BlueSpice\Discovery\ISkinLayoutAware;
 use BlueSpice\Discovery\ITemplateProvider;
 use ExtensionRegistry;
-use IContextSource;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
 use Wikimedia\ObjectFactory\ObjectFactory;
 

@@ -4,7 +4,7 @@ namespace BlueSpice\Discovery\Component;
 
 use BlueSpice\Discovery\ILangLinksProvider;
 use BlueSpice\Discovery\LangLinksProviderFactory;
-use IContextSource;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
