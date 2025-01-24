@@ -139,5 +139,7 @@
 	"bs-discovery-table-of-contents-hide-button-aria-label": "목차 숨기기",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-href-help": "링크할 URL",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "서비스 약관",
-	"bs-discovery-breadcrumb-label-diff": "차이"
+	"bs-discovery-breadcrumb-label-diff": "차이",
+	"bs-discovery-back-to-page": "$1 항목으로 돌아가기",
+	"bs-discovery-back-to-page-title": "$1 문서로 돌아가기"
 }
