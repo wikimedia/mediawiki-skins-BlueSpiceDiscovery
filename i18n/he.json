@@ -188,5 +188,9 @@
 	"bs-discovery-requires-attention": "(דורש תשומת לב)",
 	"bs-discovery-table-of-contents-show-button-aria-label": "להציג את תוכן העניינים",
 	"bs-discovery-table-of-contents-hide-button-aria-label": "להסתיר את תוכן העניינים",
-	"bs-discovery-breadcrumb-label-diff": "הבדלים"
+	"bs-discovery-breadcrumb-label-diff": "הבדלים",
+	"bs-discovery-back-to-page": "חזרה אל $1",
+	"bs-discovery-back-to-page-title": "חזרה לדף $1",
+	"bs-discovery-back-to-version-history": "חזרה להיסטוריית הגרסאות",
+	"bs-discovery-back-to-version-history-title": "חזרה להיסטוריית הגרסאות של הדף $1"
 }
