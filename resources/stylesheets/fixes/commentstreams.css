@@ -11,6 +11,9 @@ main .cs-expanded .cs-comment-header {
 main .cs-stream {
 	margin-top: 1rem;
 }
+main .cs-avatar {
+	border-radius: 50%;
+}
 main .cs-comment {
 	background-color: var(--comments-bg);
 	padding: 10px;
@@ -21,6 +24,7 @@ main .cs-comment-header {
 }
 main .cs-head-comment > .cs-comment-header {
 	border-top-color: transparent;
+	background-color: transparent;
 }
 main a,
 main a:visited {
@@ -42,9 +46,25 @@ main .cs-comment-author a {
 main .cs-edit-box {
 	margin-top: 7px;
 	background-color: var(--comments-bg);
+	padding-bottom: 40px;
 }
 main .cs-title-edit-field,
 main .cs-body-edit-field {
 	border-color: var(--comments-edit-border-color);
 	font-family: 'Lato', 'sans-serif';
+}
+.cs-comments .cs-edit-box  div.ve-ce-branchNode {
+	background-color: white;
+}
+.cs-edit-box.ve-area-wrapper .oo-ui-toolbar {
+	margin-bottom: 10px;
+}
+.cs-edit-box.ve-area-wrapper .oo-ui-toolbar-bar {
+	background-color: white;
+}
+.cs-submit-btn {
+	float: right;
+}
+.cs-cancel-btn {
+	float: right;
 }
