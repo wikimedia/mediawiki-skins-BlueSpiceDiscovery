@@ -4,8 +4,8 @@ namespace BlueSpice\Discovery\Component;
 
 use BlueSpice\Discovery\Renderer\DefaultSearchFormRenderer;
 use MediaWiki\Message\Message;
+use MediaWiki\SpecialPage\SpecialPage;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
-use SpecialPage;
 
 class DefaultSearchForm extends Literal {
 
