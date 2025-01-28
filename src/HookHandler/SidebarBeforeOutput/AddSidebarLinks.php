@@ -4,10 +4,10 @@ namespace BlueSpice\Discovery\HookHandler\SidebarBeforeOutput;
 
 use MediaWiki\Hook\SidebarBeforeOutputHook;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
 use MWException;
 use Skin;
-use SpecialPage;
 
 class AddSidebarLinks implements SidebarBeforeOutputHook {
 

@@ -3,9 +3,9 @@
 namespace BlueSpice\Discovery\Component;
 
 use MediaWiki\Message\Message;
+use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink;
-use SpecialPage;
 
 class SpecialRecentChanges extends RestrictedTextLink {
 
