@@ -5,8 +5,8 @@ namespace BlueSpice\Discovery;
 use BaseTemplate;
 use Exception;
 use ExtensionRegistry;
-use Html;
 use MediaWiki\Context\IContextSource;
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use Wikimedia\ObjectFactory\ObjectFactory;
 
