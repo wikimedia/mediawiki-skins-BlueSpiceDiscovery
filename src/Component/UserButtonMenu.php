@@ -3,9 +3,9 @@
 namespace BlueSpice\Discovery\Component;
 
 use BlueSpice\Discovery\SkinSlotRenderer\UserMenuCardsSkinSlotRenderer;
-use Html;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\User\User;
