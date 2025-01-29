@@ -6,7 +6,7 @@ use Exception;
 use ExtensionRegistry;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\MediaWikiServices;
-use OutputPage;
+use MediaWiki\Output\OutputPage;
 use SkinTemplate;
 
 class Skin extends SkinTemplate {

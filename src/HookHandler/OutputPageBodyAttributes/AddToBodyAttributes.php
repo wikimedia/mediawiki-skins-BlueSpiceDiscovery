@@ -3,7 +3,7 @@
 namespace BlueSpice\Discovery\HookHandler\OutputPageBodyAttributes;
 
 use BlueSpice\Discovery\CookieHandler;
-use OutputPage;
+use MediaWiki\Output\OutputPage;
 use Skin;
 
 class AddToBodyAttributes {
