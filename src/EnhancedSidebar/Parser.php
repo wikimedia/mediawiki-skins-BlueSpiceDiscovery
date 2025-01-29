@@ -4,8 +4,8 @@ namespace BlueSpice\Discovery\EnhancedSidebar;
 
 use BlueSpice\Discovery\EnhancedSidebar\Node\EnhancedSidebarNode;
 use BlueSpice\Discovery\EnhancedSidebar\NodeProcessor\EnhancedSidebarNodeProcessor;
-use Content;
 use Exception;
+use MediaWiki\Content\Content;
 use MediaWiki\Content\JsonContent;
 use MediaWiki\Extension\MenuEditor\Parser\IMenuParser;
 use MediaWiki\Revision\RevisionRecord;
