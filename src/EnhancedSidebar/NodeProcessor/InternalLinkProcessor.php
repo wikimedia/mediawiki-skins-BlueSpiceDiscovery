@@ -3,12 +3,12 @@
 namespace BlueSpice\Discovery\EnhancedSidebar\NodeProcessor;
 
 use BlueSpice\Discovery\EnhancedSidebar\Node\InternalLinkNode;
+use MediaWiki\Parser\ParserFactory;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 use MWStake\MediaWiki\Lib\Nodes\INode;
 use MWStake\MediaWiki\Lib\Nodes\INodeSource;
-use ParserFactory;
 
 class InternalLinkProcessor extends EnhancedSidebarNodeProcessor {
 
