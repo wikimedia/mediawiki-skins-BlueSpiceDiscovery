@@ -6,7 +6,7 @@ use BlueSpice\Discovery\EnhancedSidebar\Node\EnhancedSidebarNode;
 use BlueSpice\Discovery\EnhancedSidebar\NodeProcessor\EnhancedSidebarNodeProcessor;
 use Content;
 use Exception;
-use JsonContent;
+use MediaWiki\Content\JsonContent;
 use MediaWiki\Extension\MenuEditor\Parser\IMenuParser;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
