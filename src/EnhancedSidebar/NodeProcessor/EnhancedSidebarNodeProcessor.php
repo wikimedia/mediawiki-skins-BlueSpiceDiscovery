@@ -3,13 +3,13 @@
 namespace BlueSpice\Discovery\EnhancedSidebar\NodeProcessor;
 
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Parser\ParserFactory;
 use MediaWiki\Parser\ParserOptions;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 use MWStake\MediaWiki\Lib\Nodes\INode;
 use MWStake\MediaWiki\Lib\Nodes\INodeProcessor;
 use MWStake\MediaWiki\Lib\Nodes\INodeSource;
-use ParserFactory;
 
 abstract class EnhancedSidebarNodeProcessor implements INodeProcessor {
 	/** @var User|null */
