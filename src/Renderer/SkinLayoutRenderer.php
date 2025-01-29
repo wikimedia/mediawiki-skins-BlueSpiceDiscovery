@@ -9,7 +9,7 @@ use BlueSpice\Discovery\ISkinLayoutAware;
 use BlueSpice\Discovery\ISkinLayoutRenderer;
 use BlueSpice\Discovery\ITemplateProvider;
 use Exception;
-use OutputPage;
+use MediaWiki\Output\OutputPage;
 use TemplateParser;
 
 class SkinLayoutRenderer implements ISkinLayoutRenderer {
