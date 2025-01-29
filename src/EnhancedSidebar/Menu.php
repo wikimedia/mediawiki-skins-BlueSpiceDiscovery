@@ -3,6 +3,7 @@
 namespace BlueSpice\Discovery\EnhancedSidebar;
 
 use BlueSpice\Discovery\EnhancedSidebar\Parser as EnhancedSidebarParser;
+use MediaWiki\Content\JsonContent;
 use MediaWiki\Extension\MenuEditor\EditPermissionProvider;
 use MediaWiki\Extension\MenuEditor\Menu\GenericMenu;
 use MediaWiki\Extension\MenuEditor\ParsableMenu;
@@ -73,7 +74,7 @@ class Menu extends GenericMenu implements ParsableMenu, EditPermissionProvider {
 	 */
 	public function getParser( Title $title, ?RevisionRecord $revisionRecord = null ): IMenuParser {
 		if ( !$revisionRecord ) {
-			$content = new \JsonContent( '[]' );
+			$content = new JsonContent( '[]' );
 			$revisionRecord = new MutableRevisionRecord( $title );
 			$revisionRecord->setSlot(
 				SlotRecord::newUnsaved(
