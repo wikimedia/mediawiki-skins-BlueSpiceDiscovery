@@ -24,7 +24,7 @@
 	"bs-discovery-navbar-user-login-text": "Увійти",
 	"bs-discovery-navbar-user-login-title": "Увійти",
 	"bs-discovery-navbar-user-login-aria-label": "Увійти",
-	"bs-discovery-logo-return-to-aria-label": "Повернутись до $1",
+	"bs-discovery-logo-return-to-aria-label": "Лого {{SITENAME}} — Повернутись до $1",
 	"bs-discovery-searchform-button-title": "Пошук",
 	"bs-discovery-searchform-button-aria-label": "Пошук",
 	"bs-discovery-searchform-input-placeholder": "Ваш пошуковий запит",
