@@ -8,7 +8,7 @@
 	"bs-discovery-desc": "Peḍḍi BlueSpice",
 	"bs-discovery-navbar-user-button-title": "Menu utenti",
 	"bs-discovery-navbar-user-button-aria-label": "Menu utenti",
-	"bs-discovery-navbar-user-button-personal-menu-text": "Strumenta pirsunali",
+	"bs-discovery-navbar-user-button-personal-menu-text": "Stigghi pirsunali",
 	"bs-discovery-navbar-user-login-text": "Trasi",
 	"bs-discovery-navbar-user-login-title": "Trasi",
 	"bs-discovery-navbar-user-login-aria-label": "Trasi",
@@ -27,8 +27,8 @@
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Pàggini",
 	"bs-discovery-breadcrumb-nav-node-title": "Apri $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Apri $1",
-	"bs-discovery-breadcrumb-nav-node-split-button-title": "Cchiossai suttapàggini",
-	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Cchiossai suttapàggini",
+	"bs-discovery-breadcrumb-nav-node-split-button-title": "Cchiù assai suttapàggini",
+	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "Cchiù assai suttapàggini",
 	"bs-discovery-breadcrumb-nav-node-portal-page": "Pàggina mastra",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "Ùrtimu canciamentu $1",
 	"bs-discovery-title-action-edit-button-title": "Cancia la pàggina",
@@ -54,5 +54,6 @@
 	"bs-discovery-personalurl-userpage-text": "Prufilu",
 	"bs-discovery-globalactionentry-templates-text": "Template",
 	"bs-discovery-globalactionentry-templates-title": "Tutti li template",
-	"bs-discovery-last-edit-by-system-user": "utenti sistema"
+	"bs-discovery-last-edit-by-system-user": "utenti sistema",
+	"bs-discovery-enhanced-sidebar-edit-button-title": "Cancia stu menù"
 }
