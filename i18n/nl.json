@@ -193,5 +193,9 @@
 	"bs-discovery-requires-attention": "(vereist aandacht)",
 	"bs-discovery-table-of-contents-show-button-aria-label": "Inhoudsopgave weergeven",
 	"bs-discovery-table-of-contents-hide-button-aria-label": "Inhoudsopgave verbergen",
-	"bs-discovery-breadcrumb-label-diff": "Verschillen"
+	"bs-discovery-breadcrumb-label-diff": "Verschillen",
+	"bs-discovery-back-to-page": "Terug naar $1",
+	"bs-discovery-back-to-page-title": "Teruggaan naar de pagina $1",
+	"bs-discovery-back-to-version-history": "Terug naar versiegeschiedenis",
+	"bs-discovery-back-to-version-history-title": "Teruggaan naar de versiegeschiedenis van de pagina $1"
 }
