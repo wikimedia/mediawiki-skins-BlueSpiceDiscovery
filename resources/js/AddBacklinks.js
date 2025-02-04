@@ -3,7 +3,14 @@
 		if ( e.currentTarget.title === mw.config.get( 'wgPageName' ) ) {
 			return;
 		}
-		if ( e.currentTarget.href.length === 0 ) {
+		var href = e.currentTarget.href;
+		if ( href.length === 0 ) {
+			return;
+		}
+		if ( href.includes( 'returnto' ) ) {
+			return;
+		}
+		if ( href.includes( mw.config.get( 'wgPageName' ) ) ) {
 			return;
 		}
 		e.preventDefault();
