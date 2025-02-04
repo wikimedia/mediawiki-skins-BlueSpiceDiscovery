@@ -53,6 +53,7 @@ main .cs-body-edit-field {
 	border-color: var(--comments-edit-border-color);
 	font-family: 'Lato', 'sans-serif';
 }
+
 .cs-comments .cs-edit-box  div.ve-ce-branchNode {
 	background-color: white;
 }
@@ -67,4 +68,15 @@ main .cs-body-edit-field {
 }
 .cs-cancel-btn {
 	float: right;
+}
+
+/* Prevent VEForAll from adding a border around normal VE editor */
+.ve-ce-branchNode:focus {
+	border-color: unset !important;
+	box-shadow: unset !important;
+}
+
+.ve-area-wrapper .ve-ce-branchNode:focus {
+	border-color: #52bad5 !important;
+	box-shadow: 0 0 7px rgba(39, 128, 248, .15) !important;
 }
