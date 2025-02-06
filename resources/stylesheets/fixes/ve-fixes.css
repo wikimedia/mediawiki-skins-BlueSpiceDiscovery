@@ -40,3 +40,8 @@ body.mediawiki .ve-init-sa-target-toolbar > .oo-ui-toolbar-bar > .oo-ui-toolbar-
 .oo-ui-popupWidget.ext-visualEditorPlus-inlineTextInspector {
 	z-index: 2;
 }
+
+/* Set min-height for the editable node in VE - copied over from Vector-specific file */
+.ve-init-mw-desktopArticleTarget .ve-init-mw-target-surface > .ve-ce-surface .ve-ce-attachedRootNode {
+	min-height: 15em;
+}
