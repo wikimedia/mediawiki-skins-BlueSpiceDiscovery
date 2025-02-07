@@ -6,6 +6,7 @@ use BlueSpice\Discovery\BreadcrumbDataProvider;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Language\RawMessage;
 use MediaWiki\SpecialPage\SpecialPageFactory;
+use MediaWiki\Title\NamespaceInfo;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 use MessageLocalizer;
