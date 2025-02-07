@@ -3,7 +3,7 @@
 namespace BlueSpice\Discovery\LangLinksProvider;
 
 use BlueSpice\Discovery\ILangLinksProvider;
-use ConfigFactory;
+use MediaWiki\Config\ConfigFactory;
 use MediaWiki\Languages\LanguageNameUtils;
 use MediaWiki\Title\Title;
 
