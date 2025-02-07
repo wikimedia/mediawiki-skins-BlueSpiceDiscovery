@@ -2,8 +2,8 @@
 
 namespace BlueSpice\Discovery\BreadcrumbDataProvider;
 
+use MediaWiki\Language\RawMessage;
 use MediaWiki\Title\Title;
-use RawMessage;
 
 class SpecialActionsProvider extends BaseBreadcrumbDataProvider {
 
