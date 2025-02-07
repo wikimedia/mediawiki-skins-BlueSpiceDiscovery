@@ -4,11 +4,11 @@ namespace BlueSpice\Discovery\BreadcrumbDataProvider;
 
 use BlueSpice\Discovery\IBreadcrumbDataProvider;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Language\RawMessage;
 use MediaWiki\Title\NamespaceInfo;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 use MessageLocalizer;
-use RawMessage;
 
 class BaseBreadcrumbDataProvider implements IBreadcrumbDataProvider {
 

@@ -5,6 +5,7 @@ namespace BlueSpice\Discovery\MenuProvider;
 use BlueSpice\Discovery\Component\EnhancedSidebarContainer;
 use BlueSpice\Discovery\CookieHandler;
 use BlueSpice\Discovery\IMenuProvider;
+use MediaWiki\Language\RawMessage;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Message\Message;
 use MediaWiki\Revision\RevisionStore;
@@ -14,7 +15,6 @@ use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
 use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use Psr\Log\LoggerInterface;
-use RawMessage;
 
 class EnhancedSidebar implements IMenuProvider {
 

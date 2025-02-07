@@ -3,11 +3,11 @@
 namespace BlueSpice\Discovery\Component;
 
 use MediaWiki\Context\IContextSource;
+use MediaWiki\Language\RawMessage;
 use MediaWiki\Message\Message;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\SpecialPage\SpecialPageFactory;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink;
-use RawMessage;
 
 class SpecialSpecialPages extends RestrictedTextLink {
 
