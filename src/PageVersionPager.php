@@ -2,8 +2,8 @@
 
 namespace BlueSpice\Discovery;
 
-use Language;
 use MediaWiki\Html\Html;
+use MediaWiki\Language\Language;
 use MediaWiki\Message\Message;
 use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Revision\RevisionRecord;
