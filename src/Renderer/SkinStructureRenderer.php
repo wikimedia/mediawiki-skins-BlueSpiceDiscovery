@@ -6,7 +6,7 @@ use BlueSpice\Discovery\ISkinStructureRenderer;
 use BlueSpice\Discovery\ITemplateProvider;
 use Exception;
 use MediaWiki\Context\IContextSource;
-use TemplateParser;
+use MediaWiki\Html\TemplateParser;
 
 class SkinStructureRenderer implements ISkinStructureRenderer {
 
