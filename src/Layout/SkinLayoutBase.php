@@ -9,9 +9,9 @@ use BlueSpice\Discovery\IResourceProvider;
 use BlueSpice\Discovery\ISkinLayout;
 use BlueSpice\Discovery\ISkinLayoutAware;
 use BlueSpice\Discovery\ITemplateProvider;
-use ExtensionRegistry;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Registration\ExtensionRegistry;
 use Wikimedia\ObjectFactory\ObjectFactory;
 
 abstract class SkinLayoutBase implements

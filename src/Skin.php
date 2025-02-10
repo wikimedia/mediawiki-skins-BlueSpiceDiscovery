@@ -3,10 +3,10 @@
 namespace BlueSpice\Discovery;
 
 use Exception;
-use ExtensionRegistry;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
+use MediaWiki\Registration\ExtensionRegistry;
 use SkinTemplate;
 
 class Skin extends SkinTemplate {

@@ -3,7 +3,7 @@
 namespace BlueSpice\Discovery;
 
 use BlueSpice\Discovery\BreadcrumbDataProvider\BaseBreadcrumbDataProvider;
-use ExtensionRegistry;
+use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\Title\NamespaceInfo;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
