@@ -4,9 +4,9 @@ namespace BlueSpice\Discovery\Structure;
 
 use BlueSpice\Discovery\ISkinLayout;
 use BlueSpice\Discovery\ISkinLayoutAware;
-use ExtensionRegistry;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Message\Message;
+use MediaWiki\Registration\ExtensionRegistry;
 
 class SkipTo extends SkinStructureBase implements ISkinLayoutAware {
 

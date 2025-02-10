@@ -2,6 +2,8 @@
 
 namespace BlueSpice\Discovery;
 
+use MediaWiki\Registration\ExtensionRegistry;
+
 class Setup {
 
 	/**
@@ -23,7 +25,7 @@ class Setup {
 		$skinSlots = new SkinSlots();
 		$skinSlots->init();
 
-		$GLOBALS['mwsgWikitextNodeProcessorRegistry'] += \ExtensionRegistry::getInstance()->getAttribute(
+		$GLOBALS['mwsgWikitextNodeProcessorRegistry'] += ExtensionRegistry::getInstance()->getAttribute(
 			"BlueSpiceDiscoveryEnhancedSidebarNodeProcessors"
 		);
 
