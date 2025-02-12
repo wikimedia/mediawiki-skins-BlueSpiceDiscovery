@@ -114,7 +114,7 @@ class Skin extends SkinTemplate {
 		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
 
 		// Use mediawiki resource module for skin
-		$out->addModuleStyles( "skin.discovery.mw.skinning.interface" );
+		$out->addModuleStyles( "skin.discovery.styles" );
 
 		// Use bootstrap framework
 		$out->addModuleStyles( "skin.discovery.bootstrap.styles" );
