@@ -426,20 +426,21 @@
 		}
 	},
 	"ResourceModules": {
-		"skin.discovery.mw.skinning.interface": {
+		"skin.discovery.styles": {
 			"class": "MediaWiki\\ResourceLoader\\SkinModule",
 			"features": {
-				"content-links": true,
-				"content-media": true,
-				"interface-message-box": true,
-				"interface-category": true,
-				"content-tables": true,
-				"i18n-ordered-lists": true,
-				"i18n-all-lists-margins": true,
-				"i18n-headings": true,
+				"normalize": true,
 				"elements": true,
+				"logo": true,
+				"content-links": true,
+				"content-links-external": true,
+				"content-media": true,
+				"content-tables": true,
 				"interface": true,
-				"logo": true
+				"interface-category": true,
+				"interface-edit-section-links": true,
+				"i18n-ordered-lists": true,
+				"i18n-headings": true
 			}
 		},
 		"skin.discovery.bootstrap.styles": {
