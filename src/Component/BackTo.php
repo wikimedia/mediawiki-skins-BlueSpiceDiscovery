@@ -6,6 +6,7 @@ use BlueSpice\Discovery\BackLinkProviderFactory;
 use BlueSpice\Discovery\IBackLinkProvider;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Message\Message;
+use MediaWiki\SpecialPage\SpecialPage;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleLink;
 
@@ -86,6 +87,11 @@ class BackTo extends SimpleLink {
 	public function shouldRender( IContextSource $context ): bool {
 		$provider = $this->backLinkProviderFactory->getProvider( $context );
 		if ( !$provider ) {
+			return false;
+		}
+		$specialUserLogin = SpecialPage::getSafeTitleFor( 'Userlogin' );
+		$title = $context->getTitle();
+		if ( $specialUserLogin->equals( $title ) ) {
 			return false;
 		}
 		$this->provider = $provider;
