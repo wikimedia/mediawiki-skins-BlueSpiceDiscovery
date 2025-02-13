@@ -58,3 +58,7 @@ body.mw-underline-always .mw-body-content a {
 .skin-bluespicediscovery #mw-teleport-target {
 	z-index: 2000;
 }
+
+.skin-bluespicediscovery .oojs-plus-color-picker-standalone {
+	z-index: 2050;
+}
