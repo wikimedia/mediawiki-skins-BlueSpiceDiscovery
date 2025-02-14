@@ -95,7 +95,7 @@ class DefaultBreadcrumbNav extends Literal {
 		}
 		$specialUserLogin = SpecialPage::getSafeTitleFor( 'Userlogin' );
 		$title = $context->getTitle();
-		if ( $specialUserLogin->equals( $title ) ) {
+		if ( !$title || $specialUserLogin->equals( $title ) ) {
 			return false;
 		}
 		return true;
