@@ -21,7 +21,7 @@
 	"bs-discovery-navbar-user-login-text": "Kevreañ",
 	"bs-discovery-navbar-user-login-title": "Kevreañ",
 	"bs-discovery-navbar-user-login-aria-label": "Kevreañ",
-	"bs-discovery-logo-return-to-aria-label": "Distreiñ da $1",
+	"bs-discovery-logo-return-to-aria-label": "logo {{SITENAME}} - Distreiñ da $1",
 	"bs-discovery-searchform-button-title": "Klask bremañ",
 	"bs-discovery-searchform-button-aria-label": "Klask bremañ",
 	"bs-discovery-searchform-input-placeholder": "Ho termen enklask",
