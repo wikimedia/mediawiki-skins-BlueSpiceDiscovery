@@ -115,7 +115,7 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 				[ 'action' => 'history' ],
 				'/wiki/Main_Page',
 				'/wiki/Dummy/ABC',
-				[ 'Move', 'bs-discovery-breadcrumb-label-action-history' ]
+				[ 'rawmessage', 'bs-discovery-breadcrumb-label-action-history' ]
 			],
 			'specialpage' => [
 				Title::newFromText( 'Special:Allpages' ),
@@ -129,14 +129,14 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 				[ 'target' => 'Dummy/ABC' ],
 				'/wiki/Main_Page',
 				'/wiki/Dummy/ABC',
-				[ 'Whatlinkshere' ]
+				[ 'rawmessage' ]
 			],
 			'specialpage-linkliste-with-target' => [
 				Title::newFromText( 'Special:CiteThisPage' ),
 				[ 'page' => 'Dummy/ABC' ],
 				'/wiki/Main_Page',
 				'/wiki/Dummy/ABC',
-				[ 'CiteThisPage' ]
+				[ 'rawmessage' ]
 			]
 		];
 	}
