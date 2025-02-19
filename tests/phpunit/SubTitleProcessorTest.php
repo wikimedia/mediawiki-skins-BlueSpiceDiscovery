@@ -84,12 +84,12 @@ class SubTitleProcessorTest extends MediaWikiIntegrationTestCase {
 			],
 			'subpages' => [
 				// phpcs:ignore Generic.Files.LineLength.TooLong
-				'<span class="subpages"><a href="/wiki/index.php/Dummy" title="Dummy" data-bs-title="Dummy">Dummy</a></span>',
+				'<div class="subpages"><a href="/wiki/index.php/Dummy" title="Dummy" data-bs-title="Dummy">Dummy</a></div>',
 				'',
 				'',
 				'',
 				// phpcs:ignore Generic.Files.LineLength.TooLong
-				'<span class="subpages"><a href="/wiki/index.php/Dummy" title="Dummy" data-bs-title="Dummy">Dummy</a></span>'
+				'<div class="subpages"><a href="/wiki/index.php/Dummy" title="Dummy" data-bs-title="Dummy">Dummy</a></div>'
 			]
 		];
 	}
