@@ -268,6 +268,13 @@
 					"module": "skin.discovery.enhancedSidebar.tree"
 				}
 			}
+		},
+		"PDFCreator": {
+			"StylesheetsProvider": {
+				"BlueSpiceDiscoveryBootstrapFontsStyles": {
+					"class": "\\BlueSpice\\Discovery\\Integration\\PDFCreator\\StylesheetsProvider\\BootstrapFontStyles"
+				}
+			}
 		}
 	},
 	"MessagesDirs": {
