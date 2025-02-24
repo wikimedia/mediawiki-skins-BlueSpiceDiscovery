@@ -18,6 +18,7 @@ main .cs-comment {
 	background-color: var(--comments-bg);
 	padding: 10px;
 	border-radius: 2px;
+	overflow: visible;
 }
 main .cs-comment-header {
 	border-bottom: 1px solid var(--comments-section-border-color);
