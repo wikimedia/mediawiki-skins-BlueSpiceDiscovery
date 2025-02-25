@@ -185,5 +185,10 @@
 	"bs-discovery-data-after-content-aria-label": "Datos post section de contento",
 	"bs-discovery-requires-attention": "(require attention)",
 	"bs-discovery-table-of-contents-show-button-aria-label": "Monstrar le tabula de contento",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "Celar le tabula de contento"
+	"bs-discovery-table-of-contents-hide-button-aria-label": "Celar le tabula de contento",
+	"bs-discovery-breadcrumb-label-diff": "Differentias",
+	"bs-discovery-back-to-page": "Retornar a $1",
+	"bs-discovery-back-to-page-title": "Retornar al pagina $1",
+	"bs-discovery-back-to-version-history": "Retornar al historia de versiones",
+	"bs-discovery-back-to-version-history-title": "Retornar al historia de versiones del pagina $1"
 }
