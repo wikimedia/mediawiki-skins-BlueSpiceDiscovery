@@ -192,5 +192,6 @@
 	"bs-discovery-back-to-page": "Text for link to navigate back to page\nParameters:\n* - $1 - name of page",
 	"bs-discovery-back-to-page-title": "Title for link to navigate back to page\nParameters:\n* - $1 - name of page",
 	"bs-discovery-back-to-version-history": "Text for link to navigate back to the version history of a page",
-	"bs-discovery-back-to-version-history-title": "Title for link to go back to version history of a page\nParameters:\n* - $1 - name of page"
+	"bs-discovery-back-to-version-history-title": "Title for link to go back to version history of a page\nParameters:\n* - $1 - name of page",
+	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Font description on [[Special:Version]]"
 }
