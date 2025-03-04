@@ -27,5 +27,8 @@ class AddToBodyAttributes {
 
 			$bodyAttrs[ 'class' ] .= " $bodyClassName $skinBodyClasses";
 		}
+
+		// Add a class to enable extension code for custom skins.
+		$bodyAttrs[ 'class' ] .= ' base-bluespicediscovery';
 	}
 }
