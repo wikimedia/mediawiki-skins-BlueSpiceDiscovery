@@ -11,6 +11,9 @@ main .cs-expanded .cs-comment-header {
 main .cs-stream {
 	margin-top: 1rem;
 }
+main .cs-stream .oo-ui-progressBarWidget {
+	margin: auto;
+}
 main .cs-avatar {
 	border-radius: 50%;
 }
