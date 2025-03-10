@@ -186,10 +186,10 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 					[
 						'tag' => 'a',
 						'button-title' => $this->messageLocalizer
-							->msg( 'bs-discovery-breadcrumb-nav-node-title', $node['title'] ),
+							->msg( 'bs-discovery-breadcrumb-nav-node-title', $node['title'] )->text(),
 						'button-href' => $node['url'],
 						'button-aria-label' => $this->messageLocalizer
-							->msg( 'bs-discovery-breadcrumb-nav-node-aria-label', $node['title'] ),
+							->msg( 'bs-discovery-breadcrumb-nav-node-aria-label', $node['title'] )->text(),
 					]
 				);
 			}
