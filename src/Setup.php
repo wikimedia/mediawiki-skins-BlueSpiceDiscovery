@@ -58,7 +58,7 @@ class Setup {
 			'author' => 'Twitter Bootstrap',
 			'url' => 'https://getbootstrap.com',
 			'descriptionmsg' => 'bs-discovery-ext-credentials-desc-bootstrap-dist',
-			'version' => 'v5.3.2',
+			'version' => 'v5.3.3',
 		];
 
 		// License for "Hyperlegible" font
