@@ -196,7 +196,7 @@
 			"TemplateDataProviderRegistry": {
 				"bluespice": {
 					"class": "BlueSpice\\Discovery\\TemplateDataProvider\\TemplateDataProvider",
-					"services": [ "HookContainer" ]
+					"services": [ "HookContainer", "PageProps" ]
 				}
 			},
 			"TitleActionPrimaryActionModifier": {
