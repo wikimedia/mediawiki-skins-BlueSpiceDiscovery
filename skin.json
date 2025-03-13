@@ -344,7 +344,7 @@
 			"class": "\\BlueSpice\\Discovery\\HookHandler\\BeforePageDisplay\\AddBacklink"
 		}
 	},
-	"Hooks":{
+	"Hooks": {
 		"MWStakeCommonUIRegisterSkinSlotComponents": [
 			"navbar-primary-searchform",
 			"global-actions",
@@ -378,16 +378,16 @@
 	},
 	"config_prefix": "bsg",
 	"config": {
-		"DiscoveryHardWiredLangLinks" : {
+		"DiscoveryHardWiredLangLinks": {
 			"value": {}
 		},
-		"DiscoveryLangLinksMode" : {
+		"DiscoveryLangLinksMode": {
 			"value": "subpages"
 		},
-		"LayoutEnabled":{
+		"LayoutEnabled": {
 			"value": "bluespice"
 		},
-		"LayoutRenderer" :{
+		"LayoutRenderer": {
 			"value": "BlueSpice\\Discovery\\Renderer\\SkinLayoutRenderer::factory"
 		},
 		"DiscoveryMainLinksMainpage": {
@@ -585,8 +585,8 @@
 				"stylesheets/content/content.toc.css": {},
 				"stylesheets/structure/userminiprofile.css": {},
 				"stylesheets/content/bluespiceSocial.css": {},
-				"stylesheets/content/bluespiceSocial.sm.css": {  "media": "all and ( max-width: 720px )" },
-				"stylesheets/content/bluespiceSocial.xl.css": {  "media": "all and ( min-width: 1024px )" },
+				"stylesheets/content/bluespiceSocial.sm.css": { "media": "all and ( max-width: 720px )" },
+				"stylesheets/content/bluespiceSocial.xl.css": { "media": "all and ( min-width: 1024px )" },
 				"stylesheets/structure/main.backto.css": {}
 			}
 		},
