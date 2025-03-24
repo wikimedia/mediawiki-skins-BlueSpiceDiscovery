@@ -209,7 +209,12 @@ class LastEditInfo extends Literal {
 			'bs-discovery-title-last-edit-info-user-aria-label',
 			$username
 		);
-		$html = $this->linkRenderer->makeLink(
+		$makeLinkMethod = in_array(
+			$username,
+			$GLOBALS['wgReservedUsernames'],
+			true
+		) ? 'makeKnownLink' : 'makeLink';
+		$html = $this->linkRenderer->$makeLinkMethod(
 			$user->getUserPage(),
 			$username,
 			[
