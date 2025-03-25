@@ -188,5 +188,6 @@
 	"bs-discovery-back-to-page": "Retornar a $1",
 	"bs-discovery-back-to-page-title": "Retornar al pagina $1",
 	"bs-discovery-back-to-version-history": "Retornar al historia de versiones",
-	"bs-discovery-back-to-version-history-title": "Retornar al historia de versiones del pagina $1"
+	"bs-discovery-back-to-version-history-title": "Retornar al historia de versiones del pagina $1",
+	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Le typo de litteras Atkinson Hyperlegible Next usate pro BlueSpiceDiscovery e contento. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])"
 }
