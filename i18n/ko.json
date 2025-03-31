@@ -50,6 +50,7 @@
 	"bs-discovery-breadcrumb-nav-node-aria-label": "$1 열기",
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "더 많은 하위 문서",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "더 많은 하위 문서",
+	"bs-discovery-breadcrumb-nav-node-portal-page": "대문",
 	"bs-discovery-title-last-edit-info-date-only": "마지막 편집: $1",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "$1 마지막 편집",
 	"bs-discovery-title-last-edit-info-user-aria-label": "마지막 편집자: $1",
