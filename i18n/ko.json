@@ -4,7 +4,8 @@
 			"Bluehill",
 			"Dr1t jg",
 			"MemphisA5",
-			"Ykhwong"
+			"Ykhwong",
+			"Tensama0415"
 		]
 	},
 	"bs-discovery-desc": "BlueSpice 스킨",
@@ -49,6 +50,7 @@
 	"bs-discovery-breadcrumb-nav-node-aria-label": "$1 열기",
 	"bs-discovery-breadcrumb-nav-node-split-button-title": "더 많은 하위 문서",
 	"bs-discovery-breadcrumb-nav-node-split-button-aria-label": "더 많은 하위 문서",
+	"bs-discovery-breadcrumb-nav-node-portal-page": "대문",
 	"bs-discovery-title-last-edit-info-date-only": "마지막 편집: $1",
 	"bs-discovery-title-last-edit-info-timestamp-aria-label": "$1 마지막 편집",
 	"bs-discovery-title-last-edit-info-user-aria-label": "마지막 편집자: $1",
@@ -79,6 +81,7 @@
 	"bs-discovery-dialog-details-heading": "모든 동작",
 	"bs-discovery-dialog-details-action-cancel": "취소",
 	"bs-discovery-dialog-detailssectionheading-namespaces": "이름공간",
+	"bs-discovery-dialog-detailssectionheading-views": "조회수",
 	"bs-discovery-dialog-detailssectionheading-toolbox": "도구 상자",
 	"bs-discovery-navigation-heading": "시작하기",
 	"bs-discovery-edit-mediawiki-sidebar-link-text": "사이드바 편집",
@@ -108,6 +111,7 @@
 	"bs-discovery-enhanced-mediawiki-sidebar-pnl-header-text": "주 메뉴",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "문서",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-text": "레이블",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-depth": "깊이",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-href": "URL",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-href-help": "링크할 URL",
 	"menueditor-ui-enhanced-sidebar-internal-link-label-edit": "내부 링크",
