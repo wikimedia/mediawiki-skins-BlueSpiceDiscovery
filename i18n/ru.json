@@ -187,5 +187,8 @@
 	"bs-discovery-table-of-contents-hide-button-aria-label": "Скрыть содержание",
 	"bs-discovery-back-to-page": "Вернуться к $1",
 	"bs-discovery-back-to-page-title": "Вернуться на страницу $1",
-	"bs-discovery-back-to-version-history": "Вернуться к истории версий"
+	"bs-discovery-back-to-version-history": "Вернуться к истории версий",
+	"bs-discovery-tools-after-content-aria-label": "Инструменты после раздела содержимого",
+	"bs-discovery-data-after-content-aria-label": "Данные после раздела содержимого",
+	"bs-discovery-breadcrumb-label-diff": "Различия"
 }
