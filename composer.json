@@ -15,7 +15,7 @@
 	},
 	"require": {
 		"composer/installers": "~1.0|~2",
-		"mwstake/mediawiki-component-commonuserinterface": "~5",
+		"mwstake/mediawiki-component-commonuserinterface": "~6",
 		"mwstake/mediawiki-component-manifestregistry": "~2",
 		"mwstake/mediawiki-component-wikitext": "~6",
 		"mwstake/mediawiki-lib-nodes": "~1"
