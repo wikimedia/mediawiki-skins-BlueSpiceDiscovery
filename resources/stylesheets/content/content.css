@@ -116,6 +116,32 @@ figure[ typeof~='mw:File/Frame' ].mw-halign-right {
 	margin: 0 0 1rem 1rem;
 }
 
+.floatleft + ul,
+.floatright + ul,
+figure[ typeof~='mw:File' ].mw-halign-left + ul,
+figure[ typeof~='mw:File' ].mw-halign-right + ul,
+figure[ typeof~='mw:File/Frameless' ].mw-halign-left + ul,
+figure[ typeof~='mw:File/Frameless' ].mw-halign-right + ul,
+figure[ typeof~='mw:File/Thumb' ].mw-halign-left + ul,
+figure[ typeof~='mw:File/Thumb' ].mw-halign-right + ul,
+figure[ typeof~='mw:File/Frame' ].mw-halign-left + ul,
+figure[ typeof~='mw:File/Frame' ].mw-halign-right + ul {
+	display: inline-block;
+}
+
+.floatleft + ol,
+.floatright + ol,
+figure[ typeof~='mw:File' ].mw-halign-left + ol,
+figure[ typeof~='mw:File' ].mw-halign-right + ol,
+figure[ typeof~='mw:File/Frameless' ].mw-halign-left + ol,
+figure[ typeof~='mw:File/Frameless' ].mw-halign-right + ol,
+figure[ typeof~='mw:File/Thumb' ].mw-halign-left + ol,
+figure[ typeof~='mw:File/Thumb' ].mw-halign-right + ol,
+figure[ typeof~='mw:File/Frame' ].mw-halign-left + ol,
+figure[ typeof~='mw:File/Frame' ].mw-halign-right + ol {
+	display: inline-block;
+}
+
 blockquote {
 	border-left: 2px solid var( --primary-bg );
 	border-radius: 2px;
