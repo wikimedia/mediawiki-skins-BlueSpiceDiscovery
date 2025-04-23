@@ -69,7 +69,7 @@ class InternalLinkProcessor extends EnhancedSidebarNodeProcessor {
 	 * @inheritDoc
 	 */
 	protected function getKeysToPreprocess( array $data ): array {
-		return parent::getKeysToPreprocess( $data ) + [ 'page' ];
+		return array_merge( parent::getKeysToPreprocess( $data ), [ 'page' ] );
 	}
 
 	/**
