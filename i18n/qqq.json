@@ -185,8 +185,8 @@
 	"bs-discovery-footerlinks-termsofservice-link-page": "Destination for the [Site:Terms_of_service] footer link ('Site' not translatable)",
 	"bs-discovery-sidebar-primary-aria-label": "Aria-label for navigation landmark primary sidebar",
 	"bs-discovery-sidebar-secondary-aria-label": "Aria-labe for navigation landmark secondary sidebar",
-	"bs-discovery-tools-after-content-aria-label": "Aria label tools after content section in html",
-	"bs-discovery-data-after-content-aria-label": "Aria label for data afer content section in html",
+	"bs-discovery-tools-after-content-aria-label": "Aria-label for tools after content section",
+	"bs-discovery-data-after-content-aria-label": "Aria-label for data after content section",
 	"bs-discovery-requires-attention": "Text for visually hidden element to indicate that this element requires user attention",
 	"bs-discovery-table-of-contents-show-button-aria-label": "ARIA label for the table of contents show toggle button",
 	"bs-discovery-table-of-contents-hide-button-aria-label": "ARIA label for the table of contents hide toggle button",
@@ -194,5 +194,9 @@
 	"bs-discovery-back-to-page": "Text for link to navigate back to page\nParameters:\n* - $1 - name of page",
 	"bs-discovery-back-to-page-title": "Title for link to navigate back to page\nParameters:\n* - $1 - name of page",
 	"bs-discovery-back-to-version-history": "Text for link to navigate back to the version history of a page",
-	"bs-discovery-back-to-version-history-title": "Title for link to go back to version history of a page\nParameters:\n* - $1 - name of page"
+	"bs-discovery-back-to-version-history-title": "Title for link to go back to version history of a page\nParameters:\n* - $1 - name of page",
+	"bs-discovery-desc": "BlueSpice skin",
+	"bs-discovery-navbar-global-actions-administration-text": "Heading for a list with links to administration pages\n\n{{Identical|Administration}}",
+	"bs-discovery-sidebar-secondary-watch-link-aria-label": "Aria-label for link to watch page",
+	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Font description on [[Special:Version]]"
 }

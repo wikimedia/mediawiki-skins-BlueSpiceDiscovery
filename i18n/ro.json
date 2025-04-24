@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Alesaru",
-			"Strainu"
+			"Strainu",
+			"Valentin JJ."
 		]
 	},
 	"bs-discovery-edit-footerlinks-link-text": "Editați legăturile din subsol",
 	"bs-discovery-footerlinks-imprint-link-desc": "Amprentă",
-	"bs-discovery-footerlinks-imprint-link-page": "Proiect:Amprentă"
+	"bs-discovery-footerlinks-imprint-link-page": "Proiect:Amprentă",
+	"bs-discovery-breadcrumb-label-talk": "Discuție"
 }

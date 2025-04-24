@@ -193,5 +193,6 @@
 	"bs-discovery-back-to-page": "Tillbaka till $1",
 	"bs-discovery-back-to-page-title": "Gå tillbaka till sidan $1",
 	"bs-discovery-back-to-version-history": "Tillbaka till versionshistoriken",
-	"bs-discovery-back-to-version-history-title": "Gå tillbaka till versionshistoriken för sidan $1"
+	"bs-discovery-back-to-version-history-title": "Gå tillbaka till versionshistoriken för sidan $1",
+	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Atkinson Hyperlegible Next Font som används för BlueSpiceDiscovery och dess innehåll. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])"
 }

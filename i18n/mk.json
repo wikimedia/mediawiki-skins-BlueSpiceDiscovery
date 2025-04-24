@@ -192,5 +192,6 @@
 	"bs-discovery-back-to-page": "Назад на $1",
 	"bs-discovery-back-to-page-title": "Назад на страницата $1",
 	"bs-discovery-back-to-version-history": "Назад на верзиската историја",
-	"bs-discovery-back-to-version-history-title": "Назад на верзиската историја на страницата $1"
+	"bs-discovery-back-to-version-history-title": "Назад на верзиската историја на страницата $1",
+	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Atkinson Hyperlegible Next Font што се користи за BlueSpiceDiscovery и содржината. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])"
 }

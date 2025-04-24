@@ -4,6 +4,7 @@
 			"Bluehill",
 			"Dr1t jg",
 			"MemphisA5",
+			"Tensama0415",
 			"Ykhwong"
 		]
 	},
@@ -141,5 +142,8 @@
 	"bs-discovery-footerlinks-termsofservice-link-desc": "서비스 약관",
 	"bs-discovery-breadcrumb-label-diff": "차이",
 	"bs-discovery-back-to-page": "$1 항목으로 돌아가기",
-	"bs-discovery-back-to-page-title": "$1 문서로 돌아가기"
+	"bs-discovery-back-to-page-title": "$1 문서로 돌아가기",
+	"bs-discovery-breadcrumb-nav-node-portal-page": "대문",
+	"bs-discovery-dialog-detailssectionheading-views": "조회수",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-depth": "깊이"
 }
