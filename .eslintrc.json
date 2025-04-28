@@ -12,7 +12,8 @@
 		"discovery_cookie": "writeable",
 		"ext": "readonly",
 		"jQuery": "readonly",
-		"mediaWiki": "readonly"
+		"mediaWiki": "readonly",
+		"OOJSPlus": "readonly"
 	},
 	"rules": {
 		"camelcase": "off",
