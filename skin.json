@@ -10,7 +10,10 @@
 	"license-name": "GPL-3.0-only",
 	"type": "skin",
 	"requires": {
-		"MediaWiki": ">= 1.39.0"
+		"MediaWiki": ">= 1.43.0",
+		"extensions": {
+			"OOJSPlus": ">= 3.0.0"
+		}
 	},
 	"ValidSkinNames": {
 		"bluespicediscovery": {
@@ -497,6 +500,7 @@
 				"stylesheets/fixes/extjs-fixes.css": {},
 				"stylesheets/bluespice.print.css": { "media": "print" },
 				"stylesheets/control/mws-tree-component.css": {},
+				"stylesheets/control/oojs-tree-component.css": {},
 				"stylesheets/control/hide-title.css": {},
 				"stylesheets/wcag.css": { "media": "prefers-contrast: more" },
 				"stylesheets/fixes/diffmode.css": {},
@@ -734,6 +738,15 @@
 		"skin.discovery.special.backlink": {
 			"packageFiles": [
 				"js/AddBacklinks.js"
+			]
+		},
+		"skin.discovery.subpagetree-component": {
+			"packageFiles": [
+				"js/SubpageTreePanel.js"
+			],
+			"dependencies": [
+				"ext.oojsplus.navigation.treePanel",
+				"oojs-ui"
 			]
 		}
 	},
