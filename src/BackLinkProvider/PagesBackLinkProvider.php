@@ -30,7 +30,7 @@ class PagesBackLinkProvider implements IBackLinkProvider {
 		if ( !$backToValue ) {
 			return false;
 		}
-		$this->backToTitle = $this->titleFactory->newFromText( $backToValue );
+		$this->backToTitle = $this->titleFactory->newFromText( urldecode( $backToValue ) );
 		return true;
 	}
 
@@ -47,7 +47,15 @@ class PagesBackLinkProvider implements IBackLinkProvider {
 	 * @inheritDoc
 	 */
 	public function getLabel(): Message {
-		return Message::newFromKey( 'bs-discovery-back-to-page', $this->backToTitle->getText() );
+		$titleText = $this->backToTitle->getText();
+		if ( $this->backToTitle->isSpecialPage() ) {
+			// some pages could have fragments which are set as part of title
+			// so we only need the first part of title
+			// ERM41535
+			$titleParts = explode( '/', $titleText );
+			$titleText = $this->backToTitle->getNSText() . ':' . $titleParts[0];
+		}
+		return Message::newFromKey( 'bs-discovery-back-to-page', $titleText );
 	}
 
 	/**

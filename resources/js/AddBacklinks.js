@@ -14,7 +14,7 @@
 			return;
 		}
 		const url = e.currentTarget.href;
-		const backTo = 'backTo=' + mw.config.get( 'wgPageName' );
+		const backTo = 'backTo=' + mw.util.rawurlencode( mw.util.rawurlencode( mw.config.get( 'wgPageName' ) ) );
 		let connector = '?';
 		if ( url.indexOf( '?' ) > 0 ) {
 			connector = '&';
