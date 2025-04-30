@@ -731,7 +731,7 @@
 				"stylesheets/fixes/login.css": {}
 			}
 		},
-		"skin.discovery.special.backlink": {
+		"skin.discovery.backlink": {
 			"packageFiles": [
 				"js/AddBacklinks.js"
 			]
