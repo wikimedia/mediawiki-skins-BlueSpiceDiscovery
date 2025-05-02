@@ -13,117 +13,171 @@ use MediaWikiIntegrationTestCase;
 class SubpageDataGeneratorTest extends MediaWikiIntegrationTestCase {
 
 	/**
-	 *
 	 * @return void
 	 */
-	public function addDBDataOnce() {
+	public function addDBData() {
 		$this->setMwGlobals( 'wgNamespacesWithSubpages', [ NS_MAIN => true ] );
 
-		$this->insertPage( 'Dummy2' );
-		$this->insertPage( 'Dummy2/ABC' );
-		$this->insertPage( 'Dummy2/DEF' );
-		$this->insertPage( 'Dummy2/DEF/Some_Subpage' );
-		$this->insertPage( 'Dummy2/GHI/AAA/BBB/CCC' );
+		$this->insertPage( 'Root' );
+		$this->insertPage( 'Root/1A' );
+		$this->insertPage( 'Root/1A/2A' );
+		$this->insertPage( 'Root/1A/2A/3A' );
+
+		$this->insertPage( 'Root/1B' );
+		$this->insertPage( 'Root/1B/2B' );
+
+		$this->insertPage( 'TreeMissing' );
+		$this->insertPage( 'TreeMissing/1C/2C' );
 	}
 
 	/**
 	 * @covers BlueSpice\Discovery\SubpageDataGenerator::generate
+	 * @dataProvider provideSubpageData
 	 */
-	public function testGenerate() {
+	public function testGenerate(
+		array $rawExpectedItems, int $maxDepth, ?string $activeTitleText, ?string $treeRootTitleText
+	) {
 		$subpageDataGenerator = new SubpageDataGenerator();
+		$title = Title::newFromText( 'Root/1A' );
 
-		// Tree from root title of $title
-		$title = Title::newFromText( 'Dummy2/DEF' );
-		$subpageDataGenerator->setActiveTitle( $title );
-		$actualSubpageData = $subpageDataGenerator->generate( $title );
-		$this->assertEquals( $this->getExpectedFromRoot(), $actualSubpageData );
+		if ( $activeTitleText ) {
+			$activeTitle = Title::newFromText( $activeTitleText );
+			$subpageDataGenerator->setActiveTitle( $activeTitle );
+		}
+		if ( $treeRootTitleText ) {
+			$treeRootTitle = Title::newFromText( $treeRootTitleText );
+			$subpageDataGenerator->setTreeRootTitle( $treeRootTitle );
+		}
 
-		// Tree with specific root title
-		$title = Title::NewFromText( 'Dummy2/GHI' );
-		$subpageDataGenerator->setTreeRootTitle( $title );
-		$actualSubpageData = $subpageDataGenerator->generate( $title );
-		$this->assertEquals( $this->getExpectedFromSpecificTitle(), $actualSubpageData );
+		$expected = [];
+		foreach ( $rawExpectedItems as $itemConfig ) {
+			$expected[] = $this->buildItem( ...$itemConfig );
+		}
+
+		$actualSubpageData = $subpageDataGenerator->generate( $title, $maxDepth );
+		$this->assertEquals( $expected, $actualSubpageData );
 	}
 
 	/**
 	 * @return array
 	 */
-	private function getExpectedFromRoot(): array {
+	protected function provideSubpageData(): array {
 		return [
-			$this->makeItem(
-				'Dummy2/ABC',
-				'ABC',
-				[],
-				[]
-			),
-			$this->makeItem(
-				'Dummy2/DEF',
-				'DEF',
-				[ 'active' ],
+			'Tree from root title' => [
+				// $expected
 				[
-					$this->makeItem(
-						'Dummy2/DEF/Some_Subpage',
-						'Some Subpage',
-						[],
-						[]
-					),
-				]
-			),
-			$this->makeItem(
-				'Dummy2/GHI',
-				'GHI',
-				[ 'new' ],
-				[
-					$this->makeItem(
-						'Dummy2/GHI/AAA',
-						'AAA',
-						[ 'new' ],
+					[
+						'Root/1A',
+						'1A',
+						[ 'active' ],
 						[
-							$this->makeItem(
-								'Dummy2/GHI/AAA/BBB',
-								'BBB',
-								[ 'new' ],
+							[
+								'Root/1A/2A',
+								'2A',
+								[],
 								[
-									$this->makeItem(
-										'Dummy2/GHI/AAA/BBB/CCC',
-										'CCC',
+									[
+										'Root/1A/2A/3A',
+										'3A',
 										[],
 										[]
-									)
+									]
 								]
-							)
+							]
 						]
-					)
-				]
-			)
-		];
-	}
-
-	/**
-	 * @return array
-	 */
-	private function getExpectedFromSpecificTitle(): array {
-		return [
-			$this->makeItem(
-				'Dummy2/GHI/AAA',
-				'AAA',
-				[ 'new' ],
-				[
-					$this->makeItem(
-						'Dummy2/GHI/AAA/BBB',
-						'BBB',
-						[ 'new' ],
+					],
+					[
+						'Root/1B',
+						'1B',
+						[],
 						[
-							$this->makeItem(
-								'Dummy2/GHI/AAA/BBB/CCC',
-								'CCC',
+							[
+								'Root/1B/2B',
+								'2B',
 								[],
 								[]
-							)
+							],
 						]
-					)
-				]
-			)
+					]
+				],
+				// $maxDepth
+				6,
+				// $activeTitle
+				'Root/1A',
+				// $treeRootTitle
+				null
+			],
+			'Tree from root title, maxDepth 2' => [
+				// $expected
+				[
+					[
+						'Root/1A',
+						'1A',
+						[ 'active' ],
+						[]
+					],
+					[
+						'Root/1B',
+						'1B',
+						[],
+						[]
+					]
+				],
+				// $maxDepth
+				2,
+				// $activeTitle
+				'Root/1A',
+				// $treeRootTitle
+				null
+			],
+			'Tree from specific title' => [
+				// $expected
+				[
+					[
+						'Root/1A/2A',
+						'2A',
+						[],
+						[
+							[
+								'Root/1A/2A/3A',
+								'3A',
+								[],
+								[]
+							]
+						]
+					]
+				],
+				// $maxDepth
+				6,
+				// $activeTitle
+				null,
+				// $treeRootTitle
+				'Root/1A'
+			],
+			'Tree with missing/new page' => [
+				// $expected
+				[
+					[
+						'TreeMissing/1C',
+						'1C',
+						[ 'new' ],
+						[
+							[
+								'TreeMissing/1C/2C',
+								'2C',
+								[ 'active' ],
+								[]
+							]
+						]
+					]
+				],
+				// $maxDepth
+				6,
+				// $activeTitle
+				'TreeMissing/1C/2C',
+				// $treeRootTitle
+				'TreeMissing'
+			]
 		];
 	}
 
@@ -134,7 +188,7 @@ class SubpageDataGeneratorTest extends MediaWikiIntegrationTestCase {
 	 * @param array $items
 	 * @return array
 	 */
-	private function makeItem( string $name, string $text, array $classes = [], array $items = [] ): array {
+	private function buildItem( string $name, string $text, array $classes = [], array $rawItems = [] ): array {
 		$title = Title::newFromText( $name );
 
 		$fullId = md5( $title->getFullText() );
@@ -147,10 +201,6 @@ class SubpageDataGeneratorTest extends MediaWikiIntegrationTestCase {
 			'href' => $title->getLocalURL(),
 		];
 
-		if ( !empty( $items ) ) {
-			$item['items'] = $items;
-		}
-
 		if ( !$title->exists() ) {
 			$item['title'] = Message::newFromKey(
 				'bs-discovery-page-does-not-exist-title',
@@ -158,8 +208,16 @@ class SubpageDataGeneratorTest extends MediaWikiIntegrationTestCase {
 			)->text();
 		}
 
-		if ( !empty( $classes ) ) {
+		if ( $classes ) {
 			$item['classes'] = $classes;
+		}
+
+		if ( $rawItems ) {
+			$items = [];
+			foreach ( $rawItems as $itemConfig ) {
+				$items[] = $this->buildItem( ...$itemConfig );
+			}
+			$item['items'] = $items;
 		}
 
 		return $item;
