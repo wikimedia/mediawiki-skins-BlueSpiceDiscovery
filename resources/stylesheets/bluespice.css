@@ -102,7 +102,8 @@ label {
 }
 
 /* For new Extension:CognitiveProcessDesigner V4; Will be removed soon */
-#n-cpd::after {
+#n-cpd::after,
+#ga-cpd-overview::after {
 	content: 'BETA';
 	border: 1px solid var( --bs-info-border-subtle );
 	background-color: var( --bs-info-bg-subtle );
