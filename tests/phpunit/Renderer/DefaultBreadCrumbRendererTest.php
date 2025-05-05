@@ -4,6 +4,7 @@ namespace BlueSpice\Discovery\Tests\Renderer;
 
 use BlueSpice\Discovery\BreadcrumbDataProviderFactory;
 use BlueSpice\Discovery\Renderer\DefaultBreadCrumbRenderer;
+use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\Title\Title;
@@ -42,8 +43,8 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testGetParams( $title, $webRequestValues, $expectedRootNodeUrl,
 		$expectedLeafNodeUrl, $expectedLabels ) {
-		$this->setMwGlobals( [
-			'wgArticlePath' => '/wiki/$1'
+		$this->overrideConfigValues( [
+			MainConfigNames::ArticlePath => '/wiki/$1'
 		] );
 
 		$mockUser = $this->createMock( User::class );

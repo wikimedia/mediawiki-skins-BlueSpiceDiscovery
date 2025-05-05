@@ -3,6 +3,7 @@
 namespace BlueSpice\Discovery\Tests;
 
 use BlueSpice\Discovery\SubpageDataGenerator;
+use MediaWiki\MainConfigNames;
 use MediaWiki\Message\Message;
 use MediaWiki\Title\Title;
 use MediaWikiIntegrationTestCase;
@@ -16,7 +17,9 @@ class SubpageDataGeneratorTest extends MediaWikiIntegrationTestCase {
 	 * @return void
 	 */
 	public function addDBData() {
-		$this->setMwGlobals( 'wgNamespacesWithSubpages', [ NS_MAIN => true ] );
+		$this->overrideConfigValues( [
+			MainConfigNames::NamespacesWithSubpages => [ NS_MAIN => true ]
+		] );
 
 		$this->insertPage( 'Root' );
 		$this->insertPage( 'Root/1A' );
