@@ -3,6 +3,7 @@
 namespace BlueSpice\Discovery\Tests;
 
 use BlueSpice\Discovery\SubTitleProcessor;
+use MediaWiki\MainConfigNames;
 use MediaWikiIntegrationTestCase;
 
 /**
@@ -35,8 +36,8 @@ class SubTitleProcessorTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testParse( $subtitle, $expectedRedirect, $expectedBacklink,
 		$expectedSubText, $expectedSubpages ) {
-		$this->setMwGlobals( [
-			'wgArticlePath' => '/wiki/$1'
+		$this->overrideConfigValues( [
+			MainConfigNames::ArticlePath => '/wiki/$1'
 		] );
 
 		$processor = new SubTitleProcessor();
