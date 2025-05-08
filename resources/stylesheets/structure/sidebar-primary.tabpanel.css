@@ -77,6 +77,10 @@
 	margin-left: 0;
 }
 
+#sb-pri ul:empty {
+	height: 0;
+}
+
 #sb-pri .list-group .list-group-item > a {
 	display: inline-block;
 	width: 100%;
