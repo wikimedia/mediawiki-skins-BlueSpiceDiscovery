@@ -525,7 +525,6 @@
 				"js/Jumpmarks.js",
 				"js/MobileContentTables.js",
 				"js/dblClickEdit.js",
-				"js/TreeComponent.js",
 				"js/VEEditClick.js",
 				"js/AddTOCAriaLabel.js"
 			],
