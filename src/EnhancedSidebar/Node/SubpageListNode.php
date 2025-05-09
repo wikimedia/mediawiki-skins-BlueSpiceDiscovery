@@ -99,7 +99,7 @@ class SubpageListNode extends InternalLinkNode {
 
 		$subpageDataGenerator = new SubpageDataGenerator();
 		$subpageDataGenerator->setTreeRootTitle( $this->target );
-		$subpageData = $subpageDataGenerator->generate( $this->target, $this->depth - 1 );
+		$subpageData = $subpageDataGenerator->generate( $this->target, $this->depth );
 
 		return $subpageData;
 	}
