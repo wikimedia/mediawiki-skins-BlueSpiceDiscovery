@@ -12,10 +12,9 @@ class AddBacklink implements BeforePageDisplayHook {
 	 */
 	public function onBeforePageDisplay( $out, $skin ): void {
 		$title = $out->getTitle();
-		$isSpecialPage = $title->isSpecialPage();
-		if ( !$isSpecialPage ) {
+		if ( !$title->exists() ) {
 			return;
 		}
-		$out->addModules( [ 'skin.discovery.special.backlink' ] );
+		$out->addModules( [ 'skin.discovery.backlink' ] );
 	}
 }
