@@ -3,7 +3,6 @@
 namespace BlueSpice\Discovery\EnhancedSidebar\Node;
 
 use InvalidArgumentException;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
@@ -84,22 +83,6 @@ class InternalLinkNode extends EnhancedSidebarNode {
 		return parent::treeSerialize() + [
 			'href' => $this->target->getLocalURL(),
 		];
-	}
-
-	/**
-	 * @return string
-	 */
-	protected function getDisplayText(): string {
-		if ( !$this->target->exists() ) {
-			return parent::getDisplayText();
-		}
-		// Try to find displaytitle of the target page
-		$pageProps = MediaWikiServices::getInstance()->getPageProps();
-		$raw = $pageProps->getProperties( $this->target, 'displaytitle' );
-		if ( !isset( $raw[$this->target->getArticleID()] ) ) {
-			return parent::getDisplayText();
-		}
-		return $raw[$this->target->getArticleID()];
 	}
 
 	/**
