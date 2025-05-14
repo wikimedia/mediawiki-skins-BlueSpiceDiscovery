@@ -56,7 +56,7 @@ class SubpageDataGenerator {
 			$subParts = explode( '/', $subpageTitle->getDBkey() );
 			$currentDepth = count( $subParts );
 
-			if ( $currentDepth - $rootDepth + 1 > $maxDepth ) {
+			if ( $currentDepth - $rootDepth > $maxDepth ) {
 				// too deep
 				continue;
 			}
