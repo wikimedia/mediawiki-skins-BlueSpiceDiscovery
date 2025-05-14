@@ -96,7 +96,7 @@ class SubpageDataGeneratorTest extends MediaWikiIntegrationTestCase {
 								'2B',
 								[],
 								[]
-							],
+							]
 						]
 					]
 				],
@@ -114,13 +114,27 @@ class SubpageDataGeneratorTest extends MediaWikiIntegrationTestCase {
 						'Root/1A',
 						'1A',
 						[ 'active' ],
-						[]
+						[
+							[
+								'Root/1A/2A',
+								'2A',
+								[],
+								[]
+							]
+						]
 					],
 					[
 						'Root/1B',
 						'1B',
 						[],
-						[]
+						[
+							[
+								'Root/1B/2B',
+								'2B',
+								[],
+								[]
+							]
+						]
 					]
 				],
 				// $maxDepth
