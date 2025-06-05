@@ -116,6 +116,26 @@ class TemplateDataProvider implements ITemplateDataProvider {
 
 	/**
 	 *
+	 * @param string $group
+	 * @param string $id
+	 * @return void
+	 */
+	public function delete( $group, $id ): void {
+		$groupKeys = $this->getRegistryGroupKeys( $group );
+		if ( empty( $groupKeys ) || $groupKeys['path'] === 'template' ) {
+			return;
+		}
+
+		$groupPath = $groupKeys['path'];
+		$groupName = $groupKeys['name'];
+
+		if ( isset( $this->managedLinks[$groupPath][$groupName][$id] ) ) {
+			unset( $this->managedLinks[$groupPath][$groupName][$id] );
+		}
+	}
+
+	/**
+	 *
 	 * @return array
 	 */
 	public function getAll(): array {
