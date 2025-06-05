@@ -8,7 +8,6 @@ use BlueSpice\Discovery\EnhancedSidebar\NodeProcessor\ExternalLinkProcessor;
 use BlueSpice\Discovery\EnhancedSidebar\Parser;
 use MediaWiki\Revision\MutableRevisionRecord;
 use MediaWiki\Title\Title;
-use MWException;
 use MWStake\MediaWiki\Lib\Nodes\INodeSource;
 use PHPUnit\Framework\TestCase;
 
@@ -19,7 +18,6 @@ class ParserTest extends TestCase {
 	/**
 	 * @covers \BlueSpice\Discovery\EnhancedSidebar\Parser::addNodesFromData
 	 * @return void
-	 * @throws MWException
 	 */
 	public function testMutation() {
 		$data = [
