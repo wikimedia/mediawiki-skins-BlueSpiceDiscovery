@@ -64,3 +64,11 @@
 	color: var( --icon-primary-fg--hover );
 	background-color: var( --icon-primary-bg );
 }
+
+#nb-pri #new-content[ disabled ],
+#nb-pri #new-content[ disabled ]:hover,
+#nb-pri #new-content-menu-btn[ disabled ],
+#nb-pri #new-content-menu-btn[ disabled ]:hover {
+	cursor: unset;
+	opacity: 0.3;
+}
