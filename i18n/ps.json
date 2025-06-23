@@ -4,6 +4,10 @@
 			"شاه زمان پټان"
 		]
 	},
+	"bs-discovery-back-to-top-text": "بېرته پورته",
+	"bs-discovery-back-to-top-aria-label": "بېرته سر ته",
+	"bs-discovery-navbar-aria-label": "سرليک پټه",
+	"bs-discovery-navbar-search-form-input-aria-label": "له ننوتنې پلټل",
 	"bs-discovery-navbar-user-button-title": "کارن غوره‌نۍ",
 	"bs-discovery-navbar-user-button-aria-label": "کارن غوره‌نۍ",
 	"bs-discovery-navbar-user-button-requires-attention-aria-label": "کارن غوره‌نۍ (پاملرنه غواړي)",
@@ -15,6 +19,7 @@
 	"bs-discovery-searchform-button-title": "اوس يې وپلټئ",
 	"bs-discovery-searchform-button-aria-label": "اوس يې وپلټئ",
 	"bs-discovery-searchform-input-placeholder": "ستاسو د لټون ډول",
+	"bs-discovery-searchform-input-aria-label": "خپله پلٹونکې گړنه مو دلته دننه کړئ",
 	"bs-discovery-header-create-button-text": "نوی",
 	"bs-discovery-header-create-button-title": "يو نوی مخ جوړول",
 	"bs-discovery-header-create-button-aria-label": "يو نوی مخ جوړول",
@@ -29,6 +34,10 @@
 	"bs-discovery-navbar-global-actions-overview-text": "ټوليزه‌کتنه",
 	"bs-discovery-navbar-global-actions-editing-text": "سمول",
 	"bs-discovery-navbar-global-actions-administration-text": "پازوالي",
+	"bs-discovery-navbar-full-screen-button-enable-title": "ټول‌سکرين ونگ‌ډول چارنول",
+	"bs-discovery-navbar-full-screen-button-enable-aria-label": "ټول‌سکرين ونگ‌ډول چارنول",
+	"bs-discovery-navbar-full-screen-button-disable-title": "ټول‌سکرين ونگ‌ډول ناچارنول",
+	"bs-discovery-navbar-full-screen-button-disable-aria-label": "ټول‌سکرين ونگ‌ډول ناچارنول",
 	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "نوم‌تشيال",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "مخونه",
 	"bs-discovery-breadcrumb-nav-node-title": "$1 پرانيستل",
@@ -45,5 +54,6 @@
 	"bs-discovery-title-action-edit-button-aria-label": "مخ سمول",
 	"bs-discovery-title-action-language-button-title": "ژبه ټاکل",
 	"bs-discovery-title-action-language-button-aria-label": "ژبه ټاکل",
-	"bs-discovery-tabpanel-main-text": "ار گرځښت"
+	"bs-discovery-tabpanel-main-text": "ار گرځښت",
+	"bs-discovery-sidebar-primary-toggle-show-title": "اره څنگپټه پرانيستل"
 }
