@@ -70,5 +70,6 @@
 #nb-pri #new-content-menu-btn[ disabled ],
 #nb-pri #new-content-menu-btn[ disabled ]:hover {
 	cursor: unset;
+	pointer-events: none;
 	opacity: 0.3;
 }
