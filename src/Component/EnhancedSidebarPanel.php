@@ -65,11 +65,7 @@ class EnhancedSidebarPanel extends SimpleCard implements LoggerAwareInterface {
 		$this->cookieHandler = $cookieHandler;
 	}
 
-	/**
-	 * @param LoggerInterface $logger
-	 * @return void
-	 */
-	public function setLogger( LoggerInterface $logger ) {
+	public function setLogger( LoggerInterface $logger ): void {
 		$this->logger = $logger;
 	}
 
