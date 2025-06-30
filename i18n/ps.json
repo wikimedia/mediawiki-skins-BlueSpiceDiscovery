@@ -140,5 +140,10 @@
 	"bs-discovery-back-to-page": "بېرته $1 ته",
 	"bs-discovery-back-to-page-title": "بېرته $1 مخ ته ورتلل",
 	"bs-discovery-back-to-version-history": "بېرته د بل‌بڼې پېښليک ته ورتللل",
-	"bs-discovery-back-to-version-history-title": "بېرته د $1 مخ بل‌بڼې ته ورتلل"
+	"bs-discovery-back-to-version-history-title": "بېرته د $1 مخ بل‌بڼې ته ورتلل",
+	"bs-discovery-skip-to-sidebar-primary-text": "ار چلند ته ورتلل",
+	"bs-discovery-breadcrumb-nav-aria-label": "د چلند لار",
+	"bs-discovery-tabpanel-main-aria-label": "آر چلند",
+	"bs-discovery-tabpanel-page-text": "مخ چارو چلند",
+	"bs-discovery-tabpanel-page-aria-label": "مخ چارو او توکو چلند"
 }
