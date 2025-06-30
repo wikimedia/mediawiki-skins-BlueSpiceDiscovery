@@ -22,7 +22,7 @@
 	"bs-discovery-navbar-user-login-text": "Bejelentkezés",
 	"bs-discovery-navbar-user-login-title": "Bejelentkezés",
 	"bs-discovery-navbar-user-login-aria-label": "Bejelentkezés",
-	"bs-discovery-logo-return-to-aria-label": "Vissza ide: $1",
+	"bs-discovery-logo-return-to-aria-label": "{{SITENAME}} logó - Visszatérés ide: $1",
 	"bs-discovery-searchform-button-title": "Keresés most",
 	"bs-discovery-searchform-button-aria-label": "Keresés most",
 	"bs-discovery-searchform-input-placeholder": "Keresés",
@@ -118,5 +118,17 @@
 	"bs-discovery-page-version-pager-deleted-user": "(felhasználónév eltávolítva)",
 	"bs-discovery-page-version-pager-previous": "Előző",
 	"bs-discovery-page-version-pager-next": "Következő",
-	"bs-discovery-footerlinks-imprint-link-desc": "Impresszum"
+	"bs-discovery-footerlinks-imprint-link-desc": "Impresszum",
+	"bs-discovery-navbar-user-button-requires-attention-aria-label": "Felhasználói menü (figyelmet igényel)",
+	"bs-discovery-breadcrumb-nav-aria-label": "Breadcrumb",
+	"bs-discovery-title-last-edit-info-date-only": "Utoljára módosítva $1",
+	"bs-discovery-sidebar-secondary-watch-link-aria-label": "Lap figyelése",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-heading": "Címsor szövege",
+	"bs-discovery-enhanced-mediawiki-sidebar-add-new-panel-button-label": "Új panel hozzáadása",
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Szolgáltatási feltételek",
+	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Szolgáltatási_feltételek",
+	"bs-discovery-back-to-page": "Vissza ide: $1",
+	"bs-discovery-back-to-page-title": "Vissza a/az $1 lapra",
+	"bs-discovery-back-to-version-history": "Vissza a verzióelőzményekhez",
+	"bs-discovery-back-to-version-history-title": "Vissza a/az $1 lap verzióelőzményeihez"
 }
