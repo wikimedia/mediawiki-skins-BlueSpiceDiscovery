@@ -46,7 +46,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "Disable fullscreen mode",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Disable fullscreen mode",
 	"bs-discovery-breadcrumb-nav-aria-label": "Breadcrumb",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Namespace",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Pages",
 	"bs-discovery-breadcrumb-nav-node-title": "Open $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Open $1",
