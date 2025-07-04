@@ -527,7 +527,8 @@
 				"js/MobileContentTables.js",
 				"js/dblClickEdit.js",
 				"js/VEEditClick.js",
-				"js/AddTOCAriaLabel.js"
+				"js/AddTOCAriaLabel.js",
+				"js/TreeComponent.js"
 			],
 			"messages": [
 				"bs-discovery-navbar-full-screen-button-enable-title",
