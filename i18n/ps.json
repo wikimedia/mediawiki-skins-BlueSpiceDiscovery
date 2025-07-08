@@ -62,6 +62,7 @@
 	"bs-discovery-title-action-language-button-title": "ژبه ټاکل",
 	"bs-discovery-title-action-language-button-aria-label": "ژبه ټاکل",
 	"bs-discovery-tabpanel-main-text": "ار گرځښت",
+	"bs-discovery-tabpanel-main-title": "د ار ويکي‌چلند سره ريښکه",
 	"bs-discovery-tabpanel-main-aria-label": "آر چلند",
 	"bs-discovery-tabpanel-page-text": "مخ چارو چلند",
 	"bs-discovery-tabpanel-page-title": "ريښکه له مخ چارو او توکو سره",
@@ -145,6 +146,5 @@
 	"bs-discovery-back-to-page": "بېرته $1 ته",
 	"bs-discovery-back-to-page-title": "بېرته $1 مخ ته ورتلل",
 	"bs-discovery-back-to-version-history": "بېرته د بل‌بڼې پېښليک ته ورتللل",
-	"bs-discovery-back-to-version-history-title": "بېرته د $1 مخ بل‌بڼې ته ورتلل",
-	"bs-discovery-tabpanel-main-title": "د ار ويکي‌چلند سره ريښکه"
+	"bs-discovery-back-to-version-history-title": "بېرته د $1 مخ بل‌بڼې ته ورتلل"
 }
