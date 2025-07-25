@@ -4,7 +4,6 @@ namespace BlueSpice\Discovery\Tests\LanguageLinks;
 
 use BlueSpice\Discovery\LangLinksProvider\Subpages;
 use MediaWiki\MainConfigNames;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Tests\User\TempUser\TempUserTestTrait;
 use MediaWiki\Title\Title;
 use MediaWikiIntegrationTestCase;
@@ -39,7 +38,7 @@ class SubpagesLangLinksTest extends MediaWikiIntegrationTestCase {
 	 * @dataProvider provideData
 	 */
 	public function testGetLangLinks( $title, $expected ) {
-		$services = MediaWikiServices::getInstance();
+		$services = $this->getServiceContainer();
 		$languageNameUtils = $services->getLanguageNameUtils();
 
 		$subpages = new Subpages( $languageNameUtils, $services->getPageProps() );

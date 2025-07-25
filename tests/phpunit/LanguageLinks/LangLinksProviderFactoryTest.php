@@ -7,7 +7,6 @@ use BlueSpice\Discovery\LangLinksProvider\Hardwired;
 use BlueSpice\Discovery\LangLinksProvider\Interwiki;
 use BlueSpice\Discovery\LangLinksProvider\Subpages;
 use BlueSpice\Discovery\LangLinksProviderFactory;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use MediaWikiIntegrationTestCase;
 
@@ -21,7 +20,7 @@ class LangLinksProviderFactoryTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testCreate() {
 		$title = Title::newFromText( 'Test Page' );
-		$services = MediaWikiServices::getInstance();
+		$services = $this->getServiceContainer();
 		$objectFactory = $services->get( 'MWStakeManifestObjectFactory' );
 		$config = $services->getConfigFactory()->makeConfig( 'bsg' );
 
