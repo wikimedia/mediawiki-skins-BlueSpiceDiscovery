@@ -53,10 +53,10 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 			return Message::newFromKey( $messageKey );
 		} );
 
-		$specialPageFactory = MediaWikiServices::getInstance()->getSpecialPageFactory();
-		$titleFactory = MediaWikiServices::getInstance()->getTitleFactory();
-		$namespaceInfo = MediaWikiServices::getInstance()->getNamespaceInfo();
-		$objectFactory = MediaWikiServices::getInstance()->getObjectFactory();
+		$specialPageFactory = $this->getServiceContainer()->getSpecialPageFactory();
+		$titleFactory = $this->getServiceContainer()->getTitleFactory();
+		$namespaceInfo = $this->getServiceContainer()->getNamespaceInfo();
+		$objectFactory = $this->getServiceContainer()->getObjectFactory();
 
 		$breadcrumbFactory = new BreadcrumbDataProviderFactory(
 			$mockMessageLocalizer,
