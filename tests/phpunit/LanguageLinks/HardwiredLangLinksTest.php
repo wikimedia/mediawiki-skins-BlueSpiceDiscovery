@@ -3,7 +3,6 @@
 namespace BlueSpice\Discovery\Tests\LanguageLinks;
 
 use BlueSpice\Discovery\LangLinksProvider\Hardwired;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use MediaWikiIntegrationTestCase;
 
@@ -24,7 +23,7 @@ class HardwiredLangLinksTest extends MediaWikiIntegrationTestCase {
 			]
 		] );
 
-		$services = MediaWikiServices::getInstance();
+		$services = $this->getServiceContainer();
 		$languageNameUtils = $services->getLanguageNameUtils();
 		$configFactory = $services->getConfigFactory();
 

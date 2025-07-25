@@ -7,7 +7,6 @@ use BlueSpice\Discovery\BackLinkProvider\PagesBackLinkProvider;
 use BlueSpice\Discovery\BackLinkProviderFactory;
 use MediaWiki\Context\DerivativeContext;
 use MediaWiki\Context\RequestContext;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Request\FauxRequest;
 use MediaWiki\Title\Title;
 use MediaWikiIntegrationTestCase;
@@ -28,7 +27,7 @@ class BackLinkFactoryTest extends MediaWikiIntegrationTestCase {
 		$context->setRequest( $request );
 		$context->setWikiPage( $this->getPage( $pageName ) );
 
-		$objectfactory = MediaWikiServices::getInstance()->getObjectFactory();
+		$objectfactory = $this->getServiceContainer()->getObjectFactory();
 		$factory = new BackLinkProviderFactory( $objectfactory );
 		$provider = $factory->getProvider( $context );
 
