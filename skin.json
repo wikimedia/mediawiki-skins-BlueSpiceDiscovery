@@ -353,6 +353,9 @@
 		},
 		"addBacklinkOnSpecialPages": {
 			"class": "\\BlueSpice\\Discovery\\HookHandler\\BeforePageDisplay\\AddBacklink"
+		},
+		"overrideMessages": {
+			"class": "\\BlueSpice\\Discovery\\HookHandler\\MessageCacheFetchOverrides\\FixMessages"
 		}
 	},
 	"Hooks": {
@@ -385,7 +388,8 @@
 			"\\BlueSpice\\Discovery\\Hook\\BSUsageTrackerRegisterCollectors\\EnhancedSidebarModified::callback"
 		],
 		"MWStakeCommonUILessVarsInit": "set-less-vars",
-		"BeforePageDisplay": [ "addLoginPageResources", "addBacklinkOnSpecialPages" ]
+		"BeforePageDisplay": [ "addLoginPageResources", "addBacklinkOnSpecialPages" ],
+		"MessageCacheFetchOverrides": "overrideMessages"
 	},
 	"config_prefix": "bsg",
 	"config": {
@@ -535,7 +539,6 @@
 				"js/MobileContentTables.js",
 				"js/dblClickEdit.js",
 				"js/VEEditClick.js",
-				"js/AddTOCAriaLabel.js",
 				"js/TreeComponent.js"
 			],
 			"messages": [
@@ -553,9 +556,7 @@
 				"bs-discovery-sidebar-secondary-toggle-hide-aria-label",
 				"bs-discovery-navbar-user-button-aria-label",
 				"bs-discovery-navbar-user-button-requires-attention-aria-label",
-				"bs-discovery-requires-attention",
-				"bs-discovery-table-of-contents-show-button-aria-label",
-				"bs-discovery-table-of-contents-hide-button-aria-label"
+				"bs-discovery-requires-attention"
 			],
 			"dependencies": [
 				"mediawiki.cookie",
