@@ -12,20 +12,22 @@ use MediaWiki\Revision\MutableRevisionRecord;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Title\Title;
-use MWException;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
+use ObjectCacheFactory;
 
 class Menu extends GenericMenu implements ParsableMenu, EditPermissionProvider {
-	/** @var string */
-	private $pagename;
 
 	/**
 	 * @param ParserFactory $parserFactory
 	 * @param string $pagename
+	 * @param ObjectCacheFactory $objectCacheFactory
 	 */
-	public function __construct( ParserFactory $parserFactory, string $pagename ) {
+	public function __construct(
+		ParserFactory $parserFactory,
+		private readonly ObjectCacheFactory $objectCacheFactory,
+		private readonly string $pagename
+	) {
 		parent::__construct( $parserFactory );
-		$this->pagename = $pagename;
 	}
 
 	/**
@@ -70,7 +72,6 @@ class Menu extends GenericMenu implements ParsableMenu, EditPermissionProvider {
 	 * @param RevisionRecord|null $revisionRecord
 	 *
 	 * @return IMenuParser
-	 * @throws MWException
 	 */
 	public function getParser( Title $title, ?RevisionRecord $revisionRecord = null ): IMenuParser {
 		if ( !$revisionRecord ) {
@@ -85,7 +86,8 @@ class Menu extends GenericMenu implements ParsableMenu, EditPermissionProvider {
 		}
 		return new EnhancedSidebarParser(
 			$revisionRecord,
-			$this->parserFactory->getNodeProcessors()
+			$this->parserFactory->getNodeProcessors(),
+			$this->objectCacheFactory
 		);
 	}
 
