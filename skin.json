@@ -158,7 +158,7 @@
 					"args": [ "MediaWiki:Sidebar.json", "enh-mw-sb" ],
 					"services": [
 						"RevisionStore", "TitleFactory", "MWStakeWikitextParserFactory",
-						"MWStakeCommonUITreeDataGenerator", "BlueSpiceDiscoveryCookieHandler"
+						"MWStakeCommonUITreeDataGenerator", "BlueSpiceDiscoveryCookieHandler", "ObjectCacheFactory"
 					]
 				}
 			},
@@ -180,19 +180,19 @@
 			"EnhancedSidebarNodeProcessors": {
 				"enhanced-sidebar-internal-link": {
 					"class": "BlueSpice\\Discovery\\EnhancedSidebar\\NodeProcessor\\InternalLinkProcessor",
-					"services": [ "PermissionManager", "ParserFactory", "TitleFactory" ]
+					"services": [ "ParserFactory", "TitleFactory", "PermissionManager" ]
 				},
 				"enhanced-sidebar-external-link": {
 					"class": "BlueSpice\\Discovery\\EnhancedSidebar\\NodeProcessor\\ExternalLinkProcessor",
-					"services": [ "ParserFactory" ]
+					"services": [ "ParserFactory", "TitleFactory" ]
 				},
 				"enhanced-sidebar-subpage-tree": {
 					"class": "BlueSpice\\Discovery\\EnhancedSidebar\\NodeProcessor\\SubpageListProcessor",
-					"services": [ "PermissionManager", "ParserFactory", "TitleFactory" ]
+					"services": [ "ParserFactory", "TitleFactory", "PermissionManager" ]
 				},
 				"enhanced-sidebar-panel-heading": {
 					"class": "BlueSpice\\Discovery\\EnhancedSidebar\\NodeProcessor\\PanelHeadingProcessor",
-					"services": [ "ParserFactory" ]
+					"services": [ "ParserFactory", "TitleFactory" ]
 				}
 			},
 			"MetaItemProviderRegistry": {},
@@ -250,7 +250,10 @@
 				"enhanced-sidebar": {
 					"class": "BlueSpice\\Discovery\\EnhancedSidebar\\Menu",
 					"args": [ "MediaWiki:Sidebar.json" ],
-					"services": [ "MWStakeWikitextParserFactory" ]
+					"services": [
+						"MWStakeWikitextParserFactory",
+						"ObjectCacheFactory"
+					]
 				}
 			},
 			"Nodes": {

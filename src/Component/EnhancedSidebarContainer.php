@@ -13,6 +13,7 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink
 use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
 use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
+use ObjectCacheFactory;
 use Psr\Log\LoggerAwareInterface;
 use Psr\Log\LoggerInterface;
 
@@ -24,54 +25,24 @@ class EnhancedSidebarContainer extends Container implements LoggerAwareInterface
 	private $logger;
 
 	/**
-	 * @var string
-	 */
-	private $id = '';
-
-	/**
-	 * @var Title
-	 */
-	private $title;
-
-	/**
-	 * @var RevisionStore
-	 */
-	private $revisionStore;
-
-	/**
-	 * @var ParserFactory
-	 */
-	private $parserFactory;
-
-	/**
-	 * @var TreeDataGenerator
-	 */
-	private $treeDataGenerator;
-
-	/**
-	 * @var CookieHandler
-	 */
-	protected $cookieHandler = null;
-
-	/**
 	 * @param string $id
 	 * @param Title $title
 	 * @param RevisionStore $revisionStore
 	 * @param ParserFactory $parserFactory
 	 * @param TreeDataGenerator $treeDataGenerator
-	 * @param CookieHandler $cookieHandler
+	 * @param CookieHandler|null $cookieHandler
+	 * @param ObjectCacheFactory $objectCacheFactory
 	 */
-	public function __construct( string $id, Title $title, RevisionStore $revisionStore,
-		ParserFactory $parserFactory, TreeDataGenerator $treeDataGenerator, CookieHandler $cookieHandler
+	public function __construct(
+		private readonly string $id,
+		private readonly Title $title,
+		private readonly RevisionStore $revisionStore,
+		private readonly ParserFactory $parserFactory,
+		private readonly TreeDataGenerator $treeDataGenerator,
+		private readonly ?CookieHandler $cookieHandler = null,
+		private readonly ObjectCacheFactory $objectCacheFactory
 	) {
 		parent::__construct( [] );
-
-		$this->id = $id;
-		$this->title = $title;
-		$this->revisionStore = $revisionStore;
-		$this->parserFactory = $parserFactory;
-		$this->treeDataGenerator = $treeDataGenerator;
-		$this->cookieHandler = $cookieHandler;
 	}
 
 	/**
@@ -180,7 +151,8 @@ class EnhancedSidebarContainer extends Container implements LoggerAwareInterface
 		$revision = $this->revisionStore->getRevisionByTitle( $this->title );
 		$parser = new EnhancedSidebarParser(
 			$revision,
-			$this->parserFactory->getNodeProcessors()
+			$this->parserFactory->getNodeProcessors(),
+			$this->objectCacheFactory
 		);
 
 		if ( !$parser ) {
