@@ -2,34 +2,77 @@
 
 namespace BlueSpice\Discovery\EnhancedSidebar\NodeProcessor;
 
+use BlueSpice\Discovery\EnhancedSidebar\Node\EnhancedSidebarNode;
 use BlueSpice\Discovery\EnhancedSidebar\Node\InternalLinkNode;
+use Exception;
 use MediaWiki\Parser\ParserFactory;
 use MediaWiki\Permissions\PermissionManager;
-use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 use MWStake\MediaWiki\Lib\Nodes\INode;
-use MWStake\MediaWiki\Lib\Nodes\INodeSource;
 
 class InternalLinkProcessor extends EnhancedSidebarNodeProcessor {
 
-	/** @var TitleFactory */
-	private $titleFactory;
-
-	/** @var PermissionManager */
-	private $permissionManager;
-
 	/**
-	 * @param PermissionManager $permissionManager
 	 * @param ParserFactory $parserFactory
 	 * @param TitleFactory $titleFactory
+	 * @param PermissionManager $permissionManager
 	 */
 	public function __construct(
-		PermissionManager $permissionManager, ParserFactory $parserFactory,
-		TitleFactory $titleFactory
+		ParserFactory $parserFactory,
+		TitleFactory $titleFactory,
+		private readonly PermissionManager $permissionManager,
 	) {
-		parent::__construct( $parserFactory );
-		$this->titleFactory = $titleFactory;
-		$this->permissionManager = $permissionManager;
+		parent::__construct( $parserFactory, $titleFactory );
+	}
+
+	/**
+	 * @param EnhancedSidebarNode $node
+	 *
+	 * @return bool
+	 */
+	public function isHidden( EnhancedSidebarNode $node ): bool {
+		$isHidden = parent::isHidden( $node );
+
+		if ( $isHidden ) {
+			return true;
+		}
+
+		if ( !$this->user ) {
+			return $isHidden;
+		}
+
+		if ( !$node->getTarget() ) {
+			return $isHidden;
+		}
+
+		$title = $this->titleFactory->newFromText( $node->getTarget() );
+
+		return !$this->permissionManager->userCan(
+			'read',
+			$this->user,
+			$title
+		);
+	}
+
+	/**
+	 * Serialize in format to be consumed by a tree
+	 *
+	 * @param EnhancedSidebarNode $node
+	 *
+	 * @return array
+	 *
+	 * @throws Exception
+	 */
+	public function serializeNodeTree( EnhancedSidebarNode $node ): array {
+		if ( !$node->getTarget() ) {
+			return parent::serializeNodeTree( $node );
+		}
+
+		$title = $this->titleFactory->newFromText( $node->getTarget() );
+
+		return parent::serializeNodeTree( $node ) + [
+				'href' => $title->getLocalURL(),
+			];
 	}
 
 	/**
@@ -41,28 +84,11 @@ class InternalLinkProcessor extends EnhancedSidebarNodeProcessor {
 	}
 
 	/**
-	 * @inheritDoc
-	 */
-	protected function getProcessedData( INodeSource $nodeSource ): array {
-		$data = parent::getProcessedData( $nodeSource );
-		$data['page'] = $this->getTitleFromParam( $data['page'] );
-		return $data;
-	}
-
-	/**
 	 * @param array $data
 	 * @return INode
 	 */
 	public function getNodeFromData( array $data ): INode {
-		return new InternalLinkNode( $this->getPermissionManager(), $data );
-	}
-
-	/**
-	 * @param string $pagename
-	 * @return Title
-	 */
-	protected function getTitleFromParam( $pagename ): Title {
-		return $this->titleFactory->newFromText( $pagename ) ?? $this->titleFactory->newMainPage();
+		return new InternalLinkNode( $data );
 	}
 
 	/**
@@ -70,12 +96,5 @@ class InternalLinkProcessor extends EnhancedSidebarNodeProcessor {
 	 */
 	protected function getKeysToPreprocess( array $data ): array {
 		return array_merge( parent::getKeysToPreprocess( $data ), [ 'page' ] );
-	}
-
-	/**
-	 * @return PermissionManager
-	 */
-	protected function getPermissionManager(): PermissionManager {
-		return $this->permissionManager;
 	}
 }
