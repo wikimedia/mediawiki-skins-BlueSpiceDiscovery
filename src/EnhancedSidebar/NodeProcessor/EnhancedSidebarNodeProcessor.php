@@ -78,7 +78,7 @@ abstract class EnhancedSidebarNodeProcessor implements INodeProcessor {
 		}
 
 		if ( is_string( $parsed ) ) {
-			$parsed = filter_var( $parsed, FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE );
+			$parsed = filter_var( $parsed, FILTER_VALIDATE_BOOLEAN );
 		}
 
 		return $parsed;
