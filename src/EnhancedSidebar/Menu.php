@@ -13,18 +13,18 @@ use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Title\Title;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
-use ObjectCacheFactory;
+use Wikimedia\ObjectCache\WANObjectCache;
 
 class Menu extends GenericMenu implements ParsableMenu, EditPermissionProvider {
 
 	/**
 	 * @param ParserFactory $parserFactory
+	 * @param WANObjectCache $objectCache
 	 * @param string $pagename
-	 * @param ObjectCacheFactory $objectCacheFactory
 	 */
 	public function __construct(
 		ParserFactory $parserFactory,
-		private readonly ObjectCacheFactory $objectCacheFactory,
+		private readonly WANObjectCache $objectCache,
 		private readonly string $pagename
 	) {
 		parent::__construct( $parserFactory );
@@ -87,7 +87,7 @@ class Menu extends GenericMenu implements ParsableMenu, EditPermissionProvider {
 		return new EnhancedSidebarParser(
 			$revisionRecord,
 			$this->parserFactory->getNodeProcessors(),
-			$this->objectCacheFactory
+			$this->objectCache
 		);
 	}
 

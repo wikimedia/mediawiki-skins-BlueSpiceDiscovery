@@ -7,6 +7,7 @@ use BlueSpice\Discovery\EnhancedSidebar\NodeProcessor\EnhancedSidebarNodeProcess
 use Exception;
 use MediaWiki\Content\Content;
 use MediaWiki\Content\JsonContent;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\MenuEditor\Parser\IMenuParser;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
@@ -16,9 +17,8 @@ use MWStake\MediaWiki\Lib\Nodes\INode;
 use MWStake\MediaWiki\Lib\Nodes\INodeProcessor;
 use MWStake\MediaWiki\Lib\Nodes\IParser;
 use MWStake\MediaWiki\Lib\Nodes\MutableParser;
-use ObjectCacheFactory;
 use UnexpectedValueException;
-use Wikimedia\ObjectCache\BagOStuff;
+use Wikimedia\ObjectCache\WANObjectCache;
 
 /**
  * This parser's implementation could be confusing. It is a parser for the
@@ -34,21 +34,27 @@ class Parser extends MutableParser implements IParser, IMenuParser {
 	/** @var bool */
 	private $doFullParse = false;
 
-	/** @var BagOStuff */
-	private BagOStuff $objectCache;
+	/** @var User */
+	private User $user;
+
+	/** @var string|null */
+	private ?string $dataCacheUserKey;
 
 	/** @var string */
-	private string $nodesCacheKey;
+	public const CACHE_KEY = 'enhanced-sidebar-nodes-cache';
+
+	/** @var int Cache TTL in seconds */
+	private const CACHE_TTL = 600;
 
 	/**
 	 * @param RevisionRecord $revision
 	 * @param array $nodeProcessors
-	 * @param ObjectCacheFactory $objectCacheFactory
+	 * @param WANObjectCache $objectCache
 	 */
 	public function __construct(
 		RevisionRecord $revision,
 		array $nodeProcessors,
-		ObjectCacheFactory $objectCacheFactory
+		private readonly WANObjectCache $objectCache
 	) {
 		parent::__construct( $revision );
 		$this->nodeProcessors = array_filter(
@@ -58,14 +64,13 @@ class Parser extends MutableParser implements IParser, IMenuParser {
 			}
 		);
 		$this->rawData = [];
-		$this->objectCache = $objectCacheFactory->getLocalServerInstance();
-		$this->nodesCacheKey = $this->objectCache->makeKey( 'enhanced-sidebar-nodes-cache' );
+		$this->user = RequestContext::getMain()->getUser();
+		$this->dataCacheUserKey = $objectCache->makeKey( self::CACHE_KEY, $this->user->getId() );
 	}
 
 	/**
 	 * This is only called if nodes are not cached or
 	 * if the nodes are edited via the sidebar editor
-	 * thus this is the place where the cache is populated
 	 *
 	 * @return EnhancedSidebarNode[]
 	 *
@@ -74,42 +79,40 @@ class Parser extends MutableParser implements IParser, IMenuParser {
 	public function parse(): array {
 		$content = $this->pullContent();
 		$nodes = [];
-
 		$this->processNodesInternally( $nodes, $content, 1 );
-		$this->cacheNodes( $nodes );
 
 		return $nodes;
 	}
 
 	/**
-	 * @param User $user
-	 *
 	 * @return array
 	 * @throws Exception
 	 */
-	public function parseForOutput( User $user ): array {
-		$this->setUserOnProcessors( $user );
-		$this->setFullParse( true );
+	public function parseForOutput(): array {
+		return $this->objectCache->getWithSetCallback( $this->dataCacheUserKey, self::CACHE_TTL, function () {
+			$data = [];
 
-		$nodes = $this->getCachedNodes() ?: $this->parse();
+			$this->setUserOnProcessors( $this->user );
 
-		$this->setFullParse( false );
+			$this->setFullParse( true );
+			$nodes = $this->parse();
+			$this->setFullParse( false );
 
-		$data = [];
-		foreach ( $nodes as $node ) {
-			// Convert usual flat list of nodes into a tree
-			if ( $node->getLevel() !== 1 ) {
-				continue;
+			foreach ( $nodes as $node ) {
+				// Convert usual flat list of nodes into a tree
+				if ( $node->getLevel() !== 1 ) {
+					continue;
+				}
+				if ( $this->isNodeHidden( $node ) ) {
+					continue;
+				}
+				$nodeData = $this->serializeNodeTree( $node ) + $this->getTreeChildren( $nodes, $node );
+				$nodeData['leaf'] = empty( $nodeData['items'] );
+				$data[] = $nodeData;
 			}
-			if ( $this->isNodeHidden( $node ) ) {
-				continue;
-			}
-			$nodeData = $this->serializeNodeTree( $node ) + $this->getTreeChildren( $nodes, $node );
-			$nodeData['leaf'] = empty( $nodeData['items'] );
-			$data[] = $nodeData;
-		}
 
-		return $data;
+			return $data;
+		} );
 	}
 
 	/**
@@ -375,30 +378,5 @@ class Parser extends MutableParser implements IParser, IMenuParser {
 		foreach ( $this->nodeProcessors as $processor ) {
 			$processor->setUser( $user );
 		}
-	}
-
-	/**
-	 * @param EnhancedSidebarNode[] $nodes
-	 *
-	 * @return void
-	 * @throws Exception
-	 */
-	private function cacheNodes( array $nodes ): void {
-		$serializedNodes = array_map( static fn ( EnhancedSidebarNode $node ) => serialize( $node ), $nodes );
-		$this->objectCache->set( $this->nodesCacheKey, $serializedNodes );
-	}
-
-	/**
-	 * @return EnhancedSidebarNode[]|false
-	 *
-	 * @throws Exception
-	 */
-	private function getCachedNodes(): array|false {
-		$cachedNodes = $this->objectCache->get( $this->nodesCacheKey );
-		if ( !$cachedNodes ) {
-			return $cachedNodes;
-		}
-
-		return array_map( static fn ( string $nodeData ) => unserialize( $nodeData ), $cachedNodes );
 	}
 }
