@@ -33,19 +33,15 @@ class InternalLinkProcessor extends EnhancedSidebarNodeProcessor {
 	public function isHidden( EnhancedSidebarNode $node ): bool {
 		$isHidden = parent::isHidden( $node );
 
-		if ( $isHidden ) {
-			return true;
-		}
-
-		if ( !$this->user ) {
+		if ( $isHidden || !$this->user ) {
 			return $isHidden;
 		}
 
-		if ( !$node->getTarget() ) {
+		$title = $this->getTitleFromNode( $node );
+
+		if ( !$title || !$title->exists() ) {
 			return $isHidden;
 		}
-
-		$title = $this->titleFactory->newFromText( $node->getTarget() );
 
 		return !$this->permissionManager->userCan(
 			'read',
@@ -64,15 +60,15 @@ class InternalLinkProcessor extends EnhancedSidebarNodeProcessor {
 	 * @throws Exception
 	 */
 	public function serializeNodeTree( EnhancedSidebarNode $node ): array {
-		if ( !$node->getTarget() ) {
+		$title = $this->getTitleFromNode( $node );
+
+		if ( !$title ) {
 			return parent::serializeNodeTree( $node );
 		}
 
-		$title = $this->titleFactory->newFromText( $node->getTarget() );
-
 		return parent::serializeNodeTree( $node ) + [
-				'href' => $title->getLocalURL(),
-			];
+			'href' => $title->getLocalURL(),
+		];
 	}
 
 	/**

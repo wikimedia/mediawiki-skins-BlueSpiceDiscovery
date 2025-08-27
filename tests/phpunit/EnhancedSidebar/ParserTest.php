@@ -64,12 +64,8 @@ class ParserTest extends TestCase {
 		$title = Title::newFromText( 'testTitle' );
 		$revision = new MutableRevisionRecord( $title );
 
-		$objectCache = $this->createMock( 'Wikimedia\ObjectCache\BagOStuff' );
-		$objectCache->method( 'makeKey' )->willReturn( 'cache-key' );
-		$objectCacheFactory = $this->createMock( 'ObjectCacheFactory' );
-		$objectCacheFactory->method( 'getLocalServerInstance' )->willReturn( $objectCache );
-
-		$parser = new Parser( $revision, [ $this->getProcessor() ], $objectCacheFactory );
+		$objectCache = $this->createMock( 'Wikimedia\ObjectCache\WANObjectCache' );
+		$parser = new Parser( $revision, [ $this->getProcessor() ], $objectCache );
 		$parser->addNodesFromData( $data );
 		$mutated = $parser->getMutatedData();
 		$expected = [

@@ -100,14 +100,11 @@ abstract class EnhancedSidebarNodeProcessor implements INodeProcessor {
 
 		$classes = $node->getOutputCssClasses();
 
-		$target = $node->getTarget();
-		if ( $target ) {
-			$title = $this->titleFactory->newFromText( $target );
-			if (
-				!$title->exists() && !$title->isSpecialPage()
-			) {
-				return array_merge( $classes, [ 'new' ] );
-			}
+		$title = $this->getTitleFromNode( $node );
+		if (
+			$title && !$title->exists() && !$title->isSpecialPage()
+		) {
+			$classes = array_merge( $classes, [ 'new' ] );
 		}
 
 		if ( !empty( $classes ) ) {
@@ -182,5 +179,19 @@ abstract class EnhancedSidebarNodeProcessor implements INodeProcessor {
 			'text',
 			'icon-cls'
 		];
+	}
+
+	/**
+	 * @param EnhancedSidebarNode $node
+	 *
+	 * @return Title|null
+	 */
+	protected function getTitleFromNode( EnhancedSidebarNode $node ): ?Title {
+		$target = $node->getTarget();
+		if ( !$target ) {
+			return null;
+		}
+
+		return $this->titleFactory->newFromDBkey( $target );
 	}
 }

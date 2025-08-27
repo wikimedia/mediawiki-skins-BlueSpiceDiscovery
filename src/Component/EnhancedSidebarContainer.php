@@ -4,7 +4,6 @@ namespace BlueSpice\Discovery\Component;
 
 use BlueSpice\Discovery\CookieHandler;
 use BlueSpice\Discovery\EnhancedSidebar\Parser as EnhancedSidebarParser;
-use MediaWiki\Context\RequestContext;
 use MediaWiki\Message\Message;
 use MediaWiki\Revision\RevisionStore;
 use MediaWiki\Title\Title;
@@ -13,9 +12,9 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink
 use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
 use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
-use ObjectCacheFactory;
 use Psr\Log\LoggerAwareInterface;
 use Psr\Log\LoggerInterface;
+use Wikimedia\ObjectCache\WANObjectCache;
 
 class EnhancedSidebarContainer extends Container implements LoggerAwareInterface {
 
@@ -31,7 +30,7 @@ class EnhancedSidebarContainer extends Container implements LoggerAwareInterface
 	 * @param ParserFactory $parserFactory
 	 * @param TreeDataGenerator $treeDataGenerator
 	 * @param CookieHandler|null $cookieHandler
-	 * @param ObjectCacheFactory $objectCacheFactory
+	 * @param WANObjectCache $objectCache
 	 */
 	public function __construct(
 		private readonly string $id,
@@ -40,7 +39,7 @@ class EnhancedSidebarContainer extends Container implements LoggerAwareInterface
 		private readonly ParserFactory $parserFactory,
 		private readonly TreeDataGenerator $treeDataGenerator,
 		private readonly ?CookieHandler $cookieHandler = null,
-		private readonly ObjectCacheFactory $objectCacheFactory
+		private readonly WANObjectCache $objectCache
 	) {
 		parent::__construct( [] );
 	}
@@ -152,7 +151,7 @@ class EnhancedSidebarContainer extends Container implements LoggerAwareInterface
 		$parser = new EnhancedSidebarParser(
 			$revision,
 			$this->parserFactory->getNodeProcessors(),
-			$this->objectCacheFactory
+			$this->objectCache
 		);
 
 		if ( !$parser ) {
@@ -160,7 +159,7 @@ class EnhancedSidebarContainer extends Container implements LoggerAwareInterface
 		}
 
 		try {
-			return $parser->parseForOutput( RequestContext::getMain()->getUser() );
+			return $parser->parseForOutput();
 		} catch ( \Exception $ex ) {
 			$this->logger->error(
 				'EnhancedSidebarParser failed to parse sidebar',
