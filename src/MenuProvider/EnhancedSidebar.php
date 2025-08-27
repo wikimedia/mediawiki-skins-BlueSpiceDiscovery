@@ -14,8 +14,8 @@ use MediaWiki\Title\TitleFactory;
 use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
 use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
-use ObjectCacheFactory;
 use Psr\Log\LoggerInterface;
+use Wikimedia\ObjectCache\WANObjectCache;
 
 class EnhancedSidebar implements IMenuProvider {
 
@@ -35,9 +35,9 @@ class EnhancedSidebar implements IMenuProvider {
 	 * @param ParserFactory $parserFactory
 	 * @param TreeDataGenerator $treeDataGenerator
 	 * @param CookieHandler|null $cookieHandler
+	 * @param WANObjectCache $objectCache
 	 * @param string $pagename
 	 * @param string $id
-	 * @param ObjectCacheFactory $objectCacheFactory
 	 */
 	public function __construct(
 		private readonly RevisionStore $revisionStore,
@@ -45,7 +45,7 @@ class EnhancedSidebar implements IMenuProvider {
 		private readonly ParserFactory $parserFactory,
 		private readonly TreeDataGenerator $treeDataGenerator,
 		private readonly ?CookieHandler $cookieHandler = null,
-		private readonly ObjectCacheFactory $objectCacheFactory,
+		private readonly WANObjectCache $objectCache,
 		string $pagename,
 		private readonly string $id = ''
 	) {
@@ -85,7 +85,7 @@ class EnhancedSidebar implements IMenuProvider {
 			$this->parserFactory,
 			$this->treeDataGenerator,
 			$this->cookieHandler,
-			$this->objectCacheFactory
+			$this->objectCache
 		);
 
 		$sidebarComponent->setLogger( $this->logger );

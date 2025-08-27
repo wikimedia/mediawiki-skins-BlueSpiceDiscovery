@@ -56,13 +56,8 @@ class SubpageListProcessor extends InternalLinkProcessor {
 	 * @return array
 	 */
 	private function getNodeSubpages( EnhancedSidebarNode $node ): array {
-		if ( !$node->getTarget() ) {
-			return [];
-		}
-
-		$title = $this->titleFactory->newFromText( $node->getTarget() );
-
-		if ( !$title->hasSubpages() ) {
+		$title = $this->getTitleFromNode( $node );
+		if ( !$title || !$title->hasSubpages() ) {
 			return [];
 		}
 
