@@ -103,6 +103,7 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (Säit gëtt et net)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "Navigatioun",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Dëse Menü änneren",
+	"bs-discovery-config-meta-items-header-label": "Elementer ënner dem Säitentitel",
 	"bs-discovery-page-version-pager-deleted-user": "(Benotzernumm ewechgeholl)",
 	"bs-discovery-page-version-pager-previous": "Vireg",
 	"bs-discovery-page-version-pager-next": "Nächst",
