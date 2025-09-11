@@ -190,8 +190,6 @@
 	"bs-discovery-tools-after-content-aria-label": "Werkzeuge nach dem Inhaltsabschnitt",
 	"bs-discovery-data-after-content-aria-label": "Daten nach dem Inhaltsabschnitt",
 	"bs-discovery-requires-attention": "(erfordert Aufmerksamkeit)",
-	"bs-discovery-table-of-contents-show-button-aria-label": "Inhaltsverzeichnis anzeigen",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "Inhaltsverzeichnis ausblenden",
 	"bs-discovery-breadcrumb-label-diff": "Unterschiede",
 	"bs-discovery-back-to-page": "Zurück zu $1",
 	"bs-discovery-back-to-page-title": "Zurück zur Seite $1",

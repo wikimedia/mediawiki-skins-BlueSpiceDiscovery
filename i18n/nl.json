@@ -189,12 +189,11 @@
 	"bs-discovery-tools-after-content-aria-label": "Hulpmiddelen na inhoudsgedeelte",
 	"bs-discovery-data-after-content-aria-label": "Gegevens na inhoudsgedeelte",
 	"bs-discovery-requires-attention": "(vereist aandacht)",
-	"bs-discovery-table-of-contents-show-button-aria-label": "Inhoudsopgave weergeven",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "Inhoudsopgave verbergen",
 	"bs-discovery-breadcrumb-label-diff": "Verschillen",
 	"bs-discovery-back-to-page": "Terug naar $1",
 	"bs-discovery-back-to-page-title": "Teruggaan naar de pagina $1",
 	"bs-discovery-back-to-version-history": "Terug naar versiegeschiedenis",
 	"bs-discovery-back-to-version-history-title": "Teruggaan naar de versiegeschiedenis van de pagina $1",
-	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Het lettertype Atkinson Hyperlegible Next dat wordt gebruikt voor BlueSpiceDiscovery en voor tekst. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])https://www.brailleinstitute.org"
+	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Het lettertype Atkinson Hyperlegible Next dat wordt gebruikt voor BlueSpiceDiscovery en voor tekst. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])https://www.brailleinstitute.org",
+	"bs-toc-hide-button-aria-label": "Inhoudsopgave verbergen"
 }

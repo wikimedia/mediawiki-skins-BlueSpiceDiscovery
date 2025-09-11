@@ -192,12 +192,11 @@
 	"bs-discovery-tools-after-content-aria-label": "Инструменты после раздела содержимого",
 	"bs-discovery-data-after-content-aria-label": "Данные после раздела содержимого",
 	"bs-discovery-requires-attention": "(требует внимания)",
-	"bs-discovery-table-of-contents-show-button-aria-label": "Показать содержание",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "Скрыть содержание",
 	"bs-discovery-breadcrumb-label-diff": "Различия",
 	"bs-discovery-back-to-page": "Вернуться к $1",
 	"bs-discovery-back-to-page-title": "Вернуться на страницу $1",
 	"bs-discovery-back-to-version-history": "Вернуться к истории версий",
 	"bs-discovery-back-to-version-history-title": "Вернуться к истории версий страницы $1",
-	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Шрифт Atkinson Hyperlegible Next, используемый для BlueSpiceDiscovery и контента. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])"
+	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Шрифт Atkinson Hyperlegible Next, используемый для BlueSpiceDiscovery и контента. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])",
+	"bs-toc-hide-button-aria-label": "Скрыть содержание"
 }

@@ -133,8 +133,7 @@
 	"bs-discovery-tools-after-content-aria-label": "Алатке после одељка са садржајем",
 	"bs-discovery-data-after-content-aria-label": "Подаци после одељка са садржајем",
 	"bs-discovery-requires-attention": "(захтева пажњу)",
-	"bs-discovery-table-of-contents-show-button-aria-label": "Прикажи табелу са садржајем",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "Сакриј табелу са садржајем",
 	"bs-discovery-back-to-page": "Назад на $1",
-	"bs-discovery-back-to-page-title": "Назад на страницу $1"
+	"bs-discovery-back-to-page-title": "Назад на страницу $1",
+	"bs-toc-hide-button-aria-label": "Сакриј табелу са садржајем"
 }
