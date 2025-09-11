@@ -158,5 +158,6 @@
 	"bs-discovery-back-to-page-title": "Vissza a/az $1 lapra",
 	"bs-discovery-back-to-version-history": "Vissza a verzióelőzményekhez",
 	"bs-discovery-back-to-version-history-title": "Vissza a/az $1 lap verzióelőzményeihez",
-	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Atkinson Hyperlegible Next betűtípus - BlueSpiceDiscovery és a tartalom esetében használt. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])"
+	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Atkinson Hyperlegible Next betűtípus - BlueSpiceDiscovery és a tartalom esetében használt. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])",
+	"bs-toc-hide-button-aria-label": "Tartalomjegyzék elrejtése"
 }

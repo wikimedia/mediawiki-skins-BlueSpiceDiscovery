@@ -189,5 +189,6 @@
 	"bs-discovery-back-to-page-title": "بېرته $1 مخ ته ورتلل",
 	"bs-discovery-back-to-version-history": "بېرته د بل‌بڼې پېښليک ته ورتللل",
 	"bs-discovery-back-to-version-history-title": "بېرته د $1 مخ بل‌بڼې ته ورتلل",
-	"bs-discovery-ext-credentials-desc-hyperlegible-font": "د Atkinson Hyperlegible Next ليکبڼه چې BlueSpiceDiscovery او منځپانگه کې کارېږي.([https://www.brailleinstitute.org https://www.brailleinstitute.org])"
+	"bs-discovery-ext-credentials-desc-hyperlegible-font": "د Atkinson Hyperlegible Next ليکبڼه چې BlueSpiceDiscovery او منځپانگه کې کارېږي.([https://www.brailleinstitute.org https://www.brailleinstitute.org])",
+	"bs-toc-hide-button-aria-label": "نيوليک پټول"
 }

@@ -198,5 +198,6 @@
 	"bs-discovery-desc": "BlueSpice skin",
 	"bs-discovery-navbar-global-actions-administration-text": "Heading for a list with links to administration pages\n\n{{Identical|Administration}}",
 	"bs-discovery-sidebar-secondary-watch-link-aria-label": "Aria-label for link to watch page",
-	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Font description on [[Special:Version]]"
+	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Font description on [[Special:Version]]",
+	"bs-toc-hide-button-aria-label": "Aria label for button to hide the table of contents"
 }
