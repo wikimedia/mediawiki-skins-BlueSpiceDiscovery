@@ -46,7 +46,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "Desactivar o modo de pantalla completa",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Desactivar o modo de pantalla completa",
 	"bs-discovery-breadcrumb-nav-aria-label": "Migalla de pan",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Espazo de nomes",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Páxinas",
 	"bs-discovery-breadcrumb-nav-node-title": "Abrir «$1»",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Abrir «$1»",

@@ -56,7 +56,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "Désactiver le mode plein écran",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Désactiver le mode plein écran",
 	"bs-discovery-breadcrumb-nav-aria-label": "Fil d’Ariane",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Espace de noms",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Pages",
 	"bs-discovery-breadcrumb-nav-node-title": "Ouvrir $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Ouvrir $1",

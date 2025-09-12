@@ -53,7 +53,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "تعطيل وضع ملء الشاشة",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "تعطيل وضع ملء الشاشة",
 	"bs-discovery-breadcrumb-nav-aria-label": "مسار التنقل",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "النطاق",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "الصفحات",
 	"bs-discovery-breadcrumb-nav-node-title": "افتح $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "افتح $1",

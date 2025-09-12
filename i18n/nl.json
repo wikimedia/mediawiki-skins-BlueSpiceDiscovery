@@ -50,7 +50,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "Schermvullende weergave uitschakelen",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Schermvullende weergave uitschakelen",
 	"bs-discovery-breadcrumb-nav-aria-label": "Broodkruimels",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Naamruimte",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Pagina’s",
 	"bs-discovery-breadcrumb-nav-node-title": "$1 openen",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "$1 openen",

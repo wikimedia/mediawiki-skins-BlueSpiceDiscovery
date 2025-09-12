@@ -45,7 +45,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "Излези од полн екран",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Излези од полн екран",
 	"bs-discovery-breadcrumb-nav-aria-label": "Трошка",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Именски простор",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Страници",
 	"bs-discovery-breadcrumb-nav-node-title": "Отвори $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Отвори $1",

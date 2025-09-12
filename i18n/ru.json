@@ -53,7 +53,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "Отключить полноэкранный режим",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Отключить полноэкранный режим",
 	"bs-discovery-breadcrumb-nav-aria-label": "Навигационная цепочка",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Пространство имён",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Страницы",
 	"bs-discovery-breadcrumb-nav-node-title": "Открыть $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Открыть $1",

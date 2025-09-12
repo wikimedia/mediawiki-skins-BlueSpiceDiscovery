@@ -35,7 +35,6 @@
 	"bs-discovery-navbar-full-screen-button-enable-aria-label": "Vollbildmodus aktivéieren",
 	"bs-discovery-navbar-full-screen-button-disable-title": "Vollbildmodus desaktivéieren",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Vollbildmodus desaktivéieren",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Nummraum",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Säiten",
 	"bs-discovery-breadcrumb-nav-node-title": "$1 opmaachen",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "$1 opmaachen",

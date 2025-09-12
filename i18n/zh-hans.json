@@ -56,7 +56,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "禁用全屏模式",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "禁用全屏模式",
 	"bs-discovery-breadcrumb-nav-aria-label": "面包屑",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "命名空间",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "页面",
 	"bs-discovery-breadcrumb-nav-node-title": "打开$1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "打开$1",

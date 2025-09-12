@@ -46,7 +46,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "Inaktivera helskärmsläge",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Inaktivera helskärmsläge",
 	"bs-discovery-breadcrumb-nav-aria-label": "Brödsmulor",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Namnrymd",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Sidor",
 	"bs-discovery-breadcrumb-nav-node-title": "Öppna $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Öppna $1",

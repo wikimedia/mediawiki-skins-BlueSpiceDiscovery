@@ -47,7 +47,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "停用全螢幕模式",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "停用全螢幕模式",
 	"bs-discovery-breadcrumb-nav-aria-label": "麵包屑導覽",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "命名空間",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "頁面",
 	"bs-discovery-breadcrumb-nav-node-title": "開啟$1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "開啟$1",

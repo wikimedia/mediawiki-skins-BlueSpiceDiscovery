@@ -45,7 +45,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "לכבות מצב מסך מלא",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "לכבות מצב מסך מלא",
 	"bs-discovery-breadcrumb-nav-aria-label": "ניווט פירורים",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "מרחב שם",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "דפים",
 	"bs-discovery-breadcrumb-nav-node-title": "פתיחת $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "פתיחת $1",

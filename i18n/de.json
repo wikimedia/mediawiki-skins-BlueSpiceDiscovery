@@ -53,7 +53,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "Vollbildmodus deaktivieren",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Vollbildmodus deaktivieren",
 	"bs-discovery-breadcrumb-nav-aria-label": "Brotkrumen",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Namensraum",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Seiten",
 	"bs-discovery-breadcrumb-nav-node-title": "Öffne $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Öffne $1",
