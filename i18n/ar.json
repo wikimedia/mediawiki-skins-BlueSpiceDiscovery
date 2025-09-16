@@ -53,7 +53,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "تعطيل وضع ملء الشاشة",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "تعطيل وضع ملء الشاشة",
 	"bs-discovery-breadcrumb-nav-aria-label": "مسار التنقل",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "النطاق",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "الصفحات",
 	"bs-discovery-breadcrumb-nav-node-title": "افتح $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "افتح $1",
@@ -191,12 +190,11 @@
 	"bs-discovery-tools-after-content-aria-label": "الأدوات بعد قسم المحتوى",
 	"bs-discovery-data-after-content-aria-label": "البيانات بعد قسم المحتوى",
 	"bs-discovery-requires-attention": "(يتطلب الاهتمام)",
-	"bs-discovery-table-of-contents-show-button-aria-label": "إظهار جدول المحتويات",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "إخفاء جدول المحتويات.",
 	"bs-discovery-breadcrumb-label-diff": "الفروق",
 	"bs-discovery-back-to-page": "العودة إلى $1",
 	"bs-discovery-back-to-page-title": "العودة إلى الصفحة $1",
 	"bs-discovery-back-to-version-history": "العودة إلى تاريخ الإصدار",
 	"bs-discovery-back-to-version-history-title": "العودة إلى سجل الإصدارات للصفحة $1",
-	"bs-discovery-ext-credentials-desc-hyperlegible-font": "الخط Atkinson Hyperlegible Next المستخدم في BlueSpiceDiscovery والمحتوى. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])"
+	"bs-discovery-ext-credentials-desc-hyperlegible-font": "الخط Atkinson Hyperlegible Next المستخدم في BlueSpiceDiscovery والمحتوى. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])",
+	"bs-toc-hide-button-aria-label": "إخفاء جدول المحتويات."
 }

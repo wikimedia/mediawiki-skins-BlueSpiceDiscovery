@@ -45,7 +45,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "ټول‌سکرين ونگ‌ډول ناچارنول",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "ټول‌سکرين ونگ‌ډول ناچارنول",
 	"bs-discovery-breadcrumb-nav-aria-label": "د چلند لار",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "نوم‌تشيال",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "مخونه",
 	"bs-discovery-breadcrumb-nav-node-title": "$1 پرانيستل",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "$1 پرانيستل",
@@ -182,12 +181,11 @@
 	"bs-discovery-tools-after-content-aria-label": "د منځپانگې برخې وروسته توکي",
 	"bs-discovery-data-after-content-aria-label": "د منځپانگې برخې وروسته اومتوکي",
 	"bs-discovery-requires-attention": "(پاملرنه غواړي)",
-	"bs-discovery-table-of-contents-show-button-aria-label": "نيوليک ښودل",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "نيوليک پټول",
 	"bs-discovery-breadcrumb-label-diff": "توپيرونه",
 	"bs-discovery-back-to-page": "بېرته $1 ته",
 	"bs-discovery-back-to-page-title": "بېرته $1 مخ ته ورتلل",
 	"bs-discovery-back-to-version-history": "بېرته د بل‌بڼې پېښليک ته ورتللل",
 	"bs-discovery-back-to-version-history-title": "بېرته د $1 مخ بل‌بڼې ته ورتلل",
-	"bs-discovery-ext-credentials-desc-hyperlegible-font": "د Atkinson Hyperlegible Next ليکبڼه چې BlueSpiceDiscovery او منځپانگه کې کارېږي.([https://www.brailleinstitute.org https://www.brailleinstitute.org])"
+	"bs-discovery-ext-credentials-desc-hyperlegible-font": "د Atkinson Hyperlegible Next ليکبڼه چې BlueSpiceDiscovery او منځپانگه کې کارېږي.([https://www.brailleinstitute.org https://www.brailleinstitute.org])",
+	"bs-toc-hide-button-aria-label": "نيوليک پټول"
 }

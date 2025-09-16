@@ -37,7 +37,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "Disabilita modalità a schermo intero",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Disabilita modalità a schermo intero",
 	"bs-discovery-breadcrumb-nav-aria-label": "Breadcrumb",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Namespace",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Pagine",
 	"bs-discovery-breadcrumb-nav-node-title": "Apri $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Apri $1",

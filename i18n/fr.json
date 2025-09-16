@@ -56,7 +56,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "Désactiver le mode plein écran",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Désactiver le mode plein écran",
 	"bs-discovery-breadcrumb-nav-aria-label": "Fil d’Ariane",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Espace de noms",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Pages",
 	"bs-discovery-breadcrumb-nav-node-title": "Ouvrir $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Ouvrir $1",
@@ -195,12 +194,11 @@
 	"bs-discovery-tools-after-content-aria-label": "Outils après la section Contenu",
 	"bs-discovery-data-after-content-aria-label": "Données après la section Contenu",
 	"bs-discovery-requires-attention": "(nécessite une attention particulière)",
-	"bs-discovery-table-of-contents-show-button-aria-label": "Afficher la table des matières",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "Masquer la table des matières",
 	"bs-discovery-breadcrumb-label-diff": "Différences",
 	"bs-discovery-back-to-page": "Retour à $1",
 	"bs-discovery-back-to-page-title": "Retourner à la page $1",
 	"bs-discovery-back-to-version-history": "Retour à l'historique des versions",
 	"bs-discovery-back-to-version-history-title": "Retourner à l'historique des versions de la page $1",
-	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Police Atkinson Hyperlegible Next utilisée pour BlueSpiceDiscovery et son contenu. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])"
+	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Police Atkinson Hyperlegible Next utilisée pour BlueSpiceDiscovery et son contenu. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])",
+	"bs-toc-hide-button-aria-label": "Masquer la table des matières"
 }

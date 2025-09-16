@@ -45,7 +45,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "Излези од полн екран",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Излези од полн екран",
 	"bs-discovery-breadcrumb-nav-aria-label": "Трошка",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Именски простор",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Страници",
 	"bs-discovery-breadcrumb-nav-node-title": "Отвори $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Отвори $1",
@@ -182,12 +181,11 @@
 	"bs-discovery-tools-after-content-aria-label": "Алатки по содржинскиот оддел",
 	"bs-discovery-data-after-content-aria-label": "Податоци по содржинскиот оддел",
 	"bs-discovery-requires-attention": "(бара внимание)",
-	"bs-discovery-table-of-contents-show-button-aria-label": "Прикажи ја Содржината",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "Скриј ја Соодржината",
 	"bs-discovery-breadcrumb-label-diff": "Разлики",
 	"bs-discovery-back-to-page": "Назад на $1",
 	"bs-discovery-back-to-page-title": "Назад на страницата $1",
 	"bs-discovery-back-to-version-history": "Назад на верзиската историја",
 	"bs-discovery-back-to-version-history-title": "Назад на верзиската историја на страницата $1",
-	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Atkinson Hyperlegible Next Font што се користи за BlueSpiceDiscovery и содржината. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])"
+	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Atkinson Hyperlegible Next Font што се користи за BlueSpiceDiscovery и содржината. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])",
+	"bs-toc-hide-button-aria-label": "Скриј ја Соодржината"
 }

@@ -46,7 +46,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "Desativar o modo de ecrã inteiro",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Desativar o modo de ecrã inteiro",
 	"bs-discovery-breadcrumb-nav-aria-label": "Trilho de navegação",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Espaço nominal",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Páginas",
 	"bs-discovery-breadcrumb-nav-node-title": "Abrir $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Abrir $1",

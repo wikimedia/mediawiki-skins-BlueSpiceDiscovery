@@ -45,7 +45,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "Disactivar modo de plen schermo",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Disactivar modo de plen schermo",
 	"bs-discovery-breadcrumb-nav-aria-label": "Pista de paginas visitate",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Spatio de nomines",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Paginas",
 	"bs-discovery-breadcrumb-nav-node-title": "Aperir $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Aperir $1",
@@ -182,12 +181,11 @@
 	"bs-discovery-tools-after-content-aria-label": "Instrumentos post section de contento",
 	"bs-discovery-data-after-content-aria-label": "Datos post section de contento",
 	"bs-discovery-requires-attention": "(require attention)",
-	"bs-discovery-table-of-contents-show-button-aria-label": "Monstrar le tabula de contento",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "Celar le tabula de contento",
 	"bs-discovery-breadcrumb-label-diff": "Differentias",
 	"bs-discovery-back-to-page": "Retornar a $1",
 	"bs-discovery-back-to-page-title": "Retornar al pagina $1",
 	"bs-discovery-back-to-version-history": "Retornar al historia de versiones",
 	"bs-discovery-back-to-version-history-title": "Retornar al historia de versiones del pagina $1",
-	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Le typo de litteras Atkinson Hyperlegible Next usate pro BlueSpiceDiscovery e contento. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])"
+	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Le typo de litteras Atkinson Hyperlegible Next usate pro BlueSpiceDiscovery e contento. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])",
+	"bs-toc-hide-button-aria-label": "Celar le tabula de contento"
 }

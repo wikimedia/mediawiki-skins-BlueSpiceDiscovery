@@ -45,7 +45,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "Slå av fullskjermmodus",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "Slå av fullskjermmodus",
 	"bs-discovery-breadcrumb-nav-aria-label": "Brødsmuler",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "Navnerom",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Sider",
 	"bs-discovery-breadcrumb-nav-node-title": "Åpne $1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "Åpne $1",
@@ -182,12 +181,11 @@
 	"bs-discovery-tools-after-content-aria-label": "Verktøy etter innholdsseksjonen",
 	"bs-discovery-data-after-content-aria-label": "Data etter innholdsseksjonen",
 	"bs-discovery-requires-attention": "(krever oppmerksomhet)",
-	"bs-discovery-table-of-contents-show-button-aria-label": "Vis innholdsfortegnelsen",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "Skjul innholdsfortegnelsen",
 	"bs-discovery-breadcrumb-label-diff": "Forskjeller",
 	"bs-discovery-back-to-page": "Tilbake til $1",
 	"bs-discovery-back-to-page-title": "Gå tilbake til siden $1",
 	"bs-discovery-back-to-version-history": "Tilbake til versjonshistorikk",
 	"bs-discovery-back-to-version-history-title": "Gå tilbake til versjonshistorikken til siden $1",
-	"bs-discovery-ext-credentials-desc-hyperlegible-font": "The Atkinson Hyperlegible Next Font brukt for BlueSpiceDiscovery og innhold. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])"
+	"bs-discovery-ext-credentials-desc-hyperlegible-font": "The Atkinson Hyperlegible Next Font brukt for BlueSpiceDiscovery og innhold. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])",
+	"bs-toc-hide-button-aria-label": "Skjul innholdsfortegnelsen"
 }

@@ -47,7 +47,6 @@
 	"bs-discovery-navbar-full-screen-button-disable-title": "停用全螢幕模式",
 	"bs-discovery-navbar-full-screen-button-disable-aria-label": "停用全螢幕模式",
 	"bs-discovery-breadcrumb-nav-aria-label": "麵包屑導覽",
-	"bs-discovery-breadcrumb-nav-node-ns-aria-label": "命名空間",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "頁面",
 	"bs-discovery-breadcrumb-nav-node-title": "開啟$1",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "開啟$1",
@@ -184,12 +183,11 @@
 	"bs-discovery-tools-after-content-aria-label": "內容章節之後的工具",
 	"bs-discovery-data-after-content-aria-label": "內容章節之後的資料",
 	"bs-discovery-requires-attention": "（需注意）",
-	"bs-discovery-table-of-contents-show-button-aria-label": "顯示目次",
-	"bs-discovery-table-of-contents-hide-button-aria-label": "隱藏目次",
 	"bs-discovery-breadcrumb-label-diff": "差異",
 	"bs-discovery-back-to-page": "返回到$1",
 	"bs-discovery-back-to-page-title": "返回到$1頁面",
 	"bs-discovery-back-to-version-history": "返回到版本歷史",
 	"bs-discovery-back-to-version-history-title": "返回到頁面$1的版本歷史",
-	"bs-discovery-ext-credentials-desc-hyperlegible-font": "使用在 BlueSpiceDiscovery 與內容的 Atkinson Hyperlegible Next Font。（[https://www.brailleinstitute.org https://www.brailleinstitute.org]）"
+	"bs-discovery-ext-credentials-desc-hyperlegible-font": "使用在 BlueSpiceDiscovery 與內容的 Atkinson Hyperlegible Next Font。（[https://www.brailleinstitute.org https://www.brailleinstitute.org]）",
+	"bs-toc-hide-button-aria-label": "隱藏目次"
 }
