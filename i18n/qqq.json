@@ -199,5 +199,10 @@
 	"bs-discovery-navbar-global-actions-administration-text": "Heading for a list with links to administration pages\n\n{{Identical|Administration}}",
 	"bs-discovery-sidebar-secondary-watch-link-aria-label": "Aria-label for link to watch page",
 	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Font description on [[Special:Version]]",
-	"bs-toc-hide-button-aria-label": "Aria label for button to hide the table of contents"
+	"bs-toc-hide-button-aria-label": "Aria label for button to hide the table of contents",
+	"bs-discovery-skip-links-nav-aria-label": "Aria-label attribute for skip links navigation",
+	"bs-discovery-sidebar-primary-cnt-aria-label": "Aria-label for navigation landmark primary sidebar",
+	"bs-discovery-sidebar-secondary-cnt-aria-label": "Aria-label for navigation landmark secondary sidebar",
+	"bs-discovery-tools-after-content-cnt-aria-label": "Aria-label for tools after content section",
+	"bs-discovery-data-after-content-cnt-aria-label": "Aria-label for data after content section"
 }
