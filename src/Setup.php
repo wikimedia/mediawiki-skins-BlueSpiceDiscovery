@@ -6,9 +6,6 @@ use MediaWiki\Registration\ExtensionRegistry;
 
 class Setup {
 
-	/**
-	 *
-	 */
 	public static function onCallback() {
 		self::addBootstrapAssetsToSpecialVersion();
 
@@ -26,7 +23,7 @@ class Setup {
 		$skinSlots->init();
 
 		$GLOBALS['mwsgWikitextNodeProcessorRegistry'] += ExtensionRegistry::getInstance()->getAttribute(
-			"BlueSpiceDiscoveryEnhancedSidebarNodeProcessors"
+		"BlueSpiceDiscoveryEnhancedSidebarNodeProcessors"
 		);
 
 		// Allow language selector to know the correct language based on subpages ERM36861

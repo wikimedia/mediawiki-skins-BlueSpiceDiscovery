@@ -55,7 +55,6 @@ class Main implements
 	protected $permissionManager = null;
 
 	/**
-	 *
 	 * @var CookieHandler
 	 */
 	protected $cookieHandler = null;
@@ -101,7 +100,6 @@ class Main implements
 	protected $skinComponents = [];
 
 	/**
-	 *
 	 * @param ITemplateDataProvider $templateDataProvider
 	 * @param PermissionManager $permissionManager
 	 * @param LinkRenderer $linkRenderer
@@ -131,7 +129,6 @@ class Main implements
 	}
 
 	/**
-	 *
 	 * @param ITemplateDataProvider $templateDataProvider
 	 * @param PermissionManager $permissionManager
 	 * @param LinkRenderer $linkRenderer
@@ -156,7 +153,6 @@ class Main implements
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getName(): string {
@@ -224,7 +220,6 @@ class Main implements
 	}
 
 	/**
-	 *
 	 * @return void
 	 */
 	private function fetchBreadcrumb() {
@@ -237,7 +232,6 @@ class Main implements
 	}
 
 	/**
-	 *
 	 * @return void
 	 */
 	private function fetchLastEdit() {
@@ -250,7 +244,6 @@ class Main implements
 	}
 
 	/**
-	 *
 	 * @return void
 	 */
 	private function fetchTitleActionEdit() {
@@ -271,7 +264,6 @@ class Main implements
 	}
 
 	/**
-	 *
 	 * @return void
 	 */
 	private function fetchTitleActionFullscreenButton() {
@@ -322,7 +314,6 @@ class Main implements
 	}
 
 	/**
-	 *
 	 * @return void
 	 */
 	private function fetchBackTo() {
@@ -401,7 +392,6 @@ class Main implements
 	}
 
 	/**
-	 *
 	 * @return void
 	 */
 	private function fetchSkinSlotDataBeforeContent() {
@@ -414,7 +404,6 @@ class Main implements
 	}
 
 	/**
-	 *
 	 * @return void
 	 */
 	private function fetchSkinSlotDataAfterTitle() {
@@ -427,7 +416,6 @@ class Main implements
 	}
 
 	/**
-	 *
 	 * @return void
 	 */
 	private function fetchSkinSlotTitleActions() {

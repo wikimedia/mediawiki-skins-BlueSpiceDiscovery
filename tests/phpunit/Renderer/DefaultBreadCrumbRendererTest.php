@@ -18,7 +18,6 @@ use MessageLocalizer;
 class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 
 	/**
-	 *
 	 * @return void
 	 */
 	public function addDBDataOnce() {
@@ -31,7 +30,6 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 *
 	 * @param Title $title
 	 * @param array $webRequestValues
 	 * @param array $expectedRootNode

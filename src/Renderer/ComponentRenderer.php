@@ -24,7 +24,6 @@ class ComponentRenderer {
 	private $rendererDataTreeRenderer = null;
 
 	/**
-	 *
 	 * @param ComponentManager $manager
 	 * @param RendererDataTreeBuilder $dataTreeBuilder
 	 * @param RendererDataTreeRenderer $dataTreeRenderer
@@ -39,7 +38,6 @@ class ComponentRenderer {
 	}
 
 	/**
-	 *
 	 * @param IComponent $component
 	 * @param array $componentProcessData
 	 * @return string

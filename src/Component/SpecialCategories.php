@@ -9,15 +9,11 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink
 
 class SpecialCategories extends RestrictedTextLink {
 
-	/**
-	 *
-	 */
 	public function __construct() {
 		parent::__construct( [] );
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getId(): string {
@@ -25,7 +21,6 @@ class SpecialCategories extends RestrictedTextLink {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getHref(): string {
@@ -36,7 +31,6 @@ class SpecialCategories extends RestrictedTextLink {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function getPermissions(): array {
@@ -44,7 +38,6 @@ class SpecialCategories extends RestrictedTextLink {
 	}
 
 	/**
-	 *
 	 * @return Message
 	 */
 	public function getText(): Message {
@@ -52,7 +45,6 @@ class SpecialCategories extends RestrictedTextLink {
 	}
 
 	/**
-	 *
 	 * @return Message
 	 */
 	public function getTitle(): Message {
@@ -60,7 +52,6 @@ class SpecialCategories extends RestrictedTextLink {
 	}
 
 	/**
-	 *
 	 * @return Message
 	 */
 	public function getAriaLabel(): Message {

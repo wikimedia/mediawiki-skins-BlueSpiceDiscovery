@@ -48,7 +48,6 @@ class NamespaceMainPages extends SimpleCard {
 	}
 
 	/**
-	 *
 	 * @param IContextSource $context
 	 * @return bool
 	 */
@@ -57,7 +56,6 @@ class NamespaceMainPages extends SimpleCard {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	private function buildPanels(): array {

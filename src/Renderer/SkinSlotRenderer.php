@@ -12,7 +12,6 @@ class SkinSlotRenderer {
 	private $skinSlotRendererFactory = null;
 
 	/**
-	 *
 	 * @param ComponentManager $manager
 	 */
 	public function __construct( SkinSlotRendererFactory $skinSlotRendererFactory ) {
@@ -20,7 +19,6 @@ class SkinSlotRenderer {
 	}
 
 	/**
-	 *
 	 * @param string $skinSlotRegKey
 	 * @param array $componentProcessData
 	 * @return string

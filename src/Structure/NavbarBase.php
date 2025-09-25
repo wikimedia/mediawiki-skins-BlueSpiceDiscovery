@@ -39,7 +39,6 @@ abstract class NavbarBase implements ISkinStructure, ITemplateProvider, IResourc
 	protected $cookieHandler = null;
 
 	/**
-	 *
 	 * @param ITemplateDataProvider $templateDataProvider
 	 * @param CookieHandler $cookieHandler
 	 * @param PermissionManager $permissionManager
@@ -58,7 +57,6 @@ abstract class NavbarBase implements ISkinStructure, ITemplateProvider, IResourc
 	}
 
 	/**
-	 *
 	 * @param ITemplateDataProvider $templateDataProvider
 	 * @param ComponentRenderer $componentRenderer
 	 * @param CookieHandler $cookieHandler
@@ -101,7 +99,6 @@ abstract class NavbarBase implements ISkinStructure, ITemplateProvider, IResourc
 	}
 
 	/**
-	 *
 	 * @param IContextSource $context
 	 * @return bool
 	 */
@@ -110,7 +107,6 @@ abstract class NavbarBase implements ISkinStructure, ITemplateProvider, IResourc
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function getParams(): array {

@@ -12,7 +12,6 @@ use MediaWikiIntegrationTestCase;
 class SubTitleProcessorTest extends MediaWikiIntegrationTestCase {
 
 	/**
-	 *
 	 * @return void
 	 */
 	public function addDBDataOnce() {
@@ -24,7 +23,6 @@ class SubTitleProcessorTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 *
 	 * @param string $subtitle
 	 * @param string $expectedRedirect
 	 * @param string $expectedBacklink

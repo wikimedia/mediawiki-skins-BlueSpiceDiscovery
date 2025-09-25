@@ -50,7 +50,6 @@ class SubpageListProcessor extends InternalLinkProcessor {
 	}
 
 	/**
-	 *
 	 * @param EnhancedSidebarNode $node
 	 *
 	 * @return array

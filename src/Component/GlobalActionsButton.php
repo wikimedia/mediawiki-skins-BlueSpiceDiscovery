@@ -16,9 +16,6 @@ use MWStake\MediaWiki\Component\CommonUserInterface\IRestrictedComponent;
 
 class GlobalActionsButton extends SimpleDropdownIcon implements IRestrictedComponent {
 
-	/**
-	 *
-	 */
 	public function __construct() {
 		parent::__construct( [] );
 	}
@@ -182,7 +179,6 @@ class GlobalActionsButton extends SimpleDropdownIcon implements IRestrictedCompo
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function getPermissions(): array {
@@ -190,7 +186,6 @@ class GlobalActionsButton extends SimpleDropdownIcon implements IRestrictedCompo
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	private function getOverviewSkinSlotHtml(): string {
@@ -207,7 +202,6 @@ class GlobalActionsButton extends SimpleDropdownIcon implements IRestrictedCompo
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	private function getEditingSkinSlotHtml(): string {
@@ -224,7 +218,6 @@ class GlobalActionsButton extends SimpleDropdownIcon implements IRestrictedCompo
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	private function getAdministrationSkinSlotHtml(): string {

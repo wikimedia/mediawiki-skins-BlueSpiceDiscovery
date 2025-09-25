@@ -14,7 +14,6 @@ class SkinStructureRenderer implements ISkinStructureRenderer {
 	private $skinStructureElement = null;
 
 	/**
-	 *
 	 * @param SkinStructureElement $skinStructureElement
 	 */
 	public function __construct( $skinStructureElement ) {
@@ -28,7 +27,6 @@ class SkinStructureRenderer implements ISkinStructureRenderer {
 	}
 
 	/**
-	 *
 	 * @param IContextSource $context
 	 * @return string
 	 */

@@ -20,7 +20,6 @@ class PagesBackLinkProvider implements IBackLinkProvider {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function applies( $context ): bool {
@@ -35,7 +34,6 @@ class PagesBackLinkProvider implements IBackLinkProvider {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function getHref(): string {
@@ -43,7 +41,6 @@ class PagesBackLinkProvider implements IBackLinkProvider {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function getLabel(): Message {
@@ -59,7 +56,6 @@ class PagesBackLinkProvider implements IBackLinkProvider {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function getTitle(): Message {
@@ -67,7 +63,6 @@ class PagesBackLinkProvider implements IBackLinkProvider {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function getAriaLabel(): Message {
