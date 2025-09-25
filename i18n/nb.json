@@ -5,7 +5,6 @@
 		]
 	},
 	"bs-discovery-desc": "BlueSpice-drakt",
-	"bs-discovery-skip-links-navigation-aria-label": "Hopp til lenker",
 	"bs-discovery-skip-to-navbar-primary-text": "Hopp til topplinje",
 	"bs-discovery-skip-to-sidebar-primary-text": "Hopp til hovednavigasjon",
 	"bs-discovery-skip-to-sidebar-secondary-text": "Hopp til sideverktøy",
@@ -176,10 +175,6 @@
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Utgiver",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Bruksvilkår",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Bruksvilkår",
-	"bs-discovery-sidebar-primary-aria-label": "Primært sidefelt",
-	"bs-discovery-sidebar-secondary-aria-label": "Sekundært sidefelt",
-	"bs-discovery-tools-after-content-aria-label": "Verktøy etter innholdsseksjonen",
-	"bs-discovery-data-after-content-aria-label": "Data etter innholdsseksjonen",
 	"bs-discovery-requires-attention": "(krever oppmerksomhet)",
 	"bs-discovery-breadcrumb-label-diff": "Forskjeller",
 	"bs-discovery-back-to-page": "Tilbake til $1",

@@ -6,7 +6,6 @@
 		]
 	},
 	"bs-discovery-desc": "Тема BlueSpice-а",
-	"bs-discovery-skip-links-navigation-aria-label": "Прескочи на везе",
 	"bs-discovery-skip-to-navbar-primary-text": "Прескочи на заглавље",
 	"bs-discovery-skip-to-sidebar-primary-text": "Прескочи на главну навигацију",
 	"bs-discovery-skip-to-sidebar-secondary-text": "Прескочи на опције странице",
@@ -127,10 +126,6 @@
 	"bs-discovery-page-version-pager-next": "Следеће",
 	"bs-discovery-footerlinks-imprint-link-desc": "Импресум",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Услови коришћења",
-	"bs-discovery-sidebar-primary-aria-label": "Примарна трака са алаткама",
-	"bs-discovery-sidebar-secondary-aria-label": "Секундарна трака са алаткама",
-	"bs-discovery-tools-after-content-aria-label": "Алатке после одељка са садржајем",
-	"bs-discovery-data-after-content-aria-label": "Подаци после одељка са садржајем",
 	"bs-discovery-requires-attention": "(захтева пажњу)",
 	"bs-discovery-back-to-page": "Назад на $1",
 	"bs-discovery-back-to-page-title": "Назад на страницу $1",

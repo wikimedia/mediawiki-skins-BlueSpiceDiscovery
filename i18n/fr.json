@@ -7,6 +7,7 @@
 			"Gomoko",
 			"JLTRY",
 			"Mahabarata",
+			"Marphy 123",
 			"McDutchie",
 			"Méthodes Bulebe Hangi",
 			"Verdy p",
@@ -16,7 +17,6 @@
 	},
 	"bs-discovery-name": "BlueSpice Discovery",
 	"bs-discovery-desc": "Habillage BlueSpice",
-	"bs-discovery-skip-links-navigation-aria-label": "Sauter aux liens",
 	"bs-discovery-skip-to-navbar-primary-text": "Sauter à la barre d’entête",
 	"bs-discovery-skip-to-sidebar-primary-text": "Sauter à la navigation principale",
 	"bs-discovery-skip-to-sidebar-secondary-text": "Sauter aux outils de la page",
@@ -189,10 +189,6 @@
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Impression",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Conditions d’utilisation",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Conditions_de_service",
-	"bs-discovery-sidebar-primary-aria-label": "la première colonne d'à coté",
-	"bs-discovery-sidebar-secondary-aria-label": "Deuxièmes ligne d'à coté",
-	"bs-discovery-tools-after-content-aria-label": "Outils après la section Contenu",
-	"bs-discovery-data-after-content-aria-label": "Données après la section Contenu",
 	"bs-discovery-requires-attention": "(nécessite une attention particulière)",
 	"bs-discovery-breadcrumb-label-diff": "Différences",
 	"bs-discovery-back-to-page": "Retour à $1",
@@ -200,5 +196,10 @@
 	"bs-discovery-back-to-version-history": "Retour à l'historique des versions",
 	"bs-discovery-back-to-version-history-title": "Retourner à l'historique des versions de la page $1",
 	"bs-discovery-ext-credentials-desc-hyperlegible-font": "Police Atkinson Hyperlegible Next utilisée pour BlueSpiceDiscovery et son contenu. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])",
-	"bs-toc-hide-button-aria-label": "Masquer la table des matières"
+	"bs-toc-hide-button-aria-label": "Masquer la table des matières",
+	"bs-discovery-skip-links-nav-aria-label": "Skip links",
+	"bs-discovery-sidebar-primary-cnt-aria-label": "Main navigation",
+	"bs-discovery-sidebar-secondary-cnt-aria-label": "Page tools",
+	"bs-discovery-tools-after-content-cnt-aria-label": "Additional page information",
+	"bs-discovery-data-after-content-cnt-aria-label": "Page appendix"
 }

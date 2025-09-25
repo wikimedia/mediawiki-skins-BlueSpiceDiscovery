@@ -5,7 +5,6 @@
 		]
 	},
 	"bs-discovery-desc": "Руво „BlueSpice“",
-	"bs-discovery-skip-links-navigation-aria-label": "Прејди на врските",
 	"bs-discovery-skip-to-navbar-primary-text": "Прејди на заглавната лента",
 	"bs-discovery-skip-to-sidebar-primary-text": "Прејди на главниот прегледник",
 	"bs-discovery-skip-to-sidebar-secondary-text": "Прејди на алатките за страницата",
@@ -176,10 +175,6 @@
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Импресум",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Услови на употреба",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Услови_на_употреба",
-	"bs-discovery-sidebar-primary-aria-label": "Главен страничник",
-	"bs-discovery-sidebar-secondary-aria-label": "Спореден страничник",
-	"bs-discovery-tools-after-content-aria-label": "Алатки по содржинскиот оддел",
-	"bs-discovery-data-after-content-aria-label": "Податоци по содржинскиот оддел",
 	"bs-discovery-requires-attention": "(бара внимание)",
 	"bs-discovery-breadcrumb-label-diff": "Разлики",
 	"bs-discovery-back-to-page": "Назад на $1",
