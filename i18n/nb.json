@@ -194,5 +194,10 @@
 	"bs-discovery-back-to-version-history": "Tilbake til versjonshistorikk",
 	"bs-discovery-back-to-version-history-title": "Gå tilbake til versjonshistorikken til siden $1",
 	"bs-discovery-ext-credentials-desc-hyperlegible-font": "The Atkinson Hyperlegible Next Font brukt for BlueSpiceDiscovery og innhold. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])",
-	"bs-toc-hide-button-aria-label": "Skjul innholdsfortegnelsen"
+	"bs-toc-hide-button-aria-label": "Skjul innholdsfortegnelsen",
+	"bs-discovery-skip-links-nav-aria-label": "Hopp over lenker",
+	"bs-discovery-sidebar-primary-cnt-aria-label": "Hovednavigasjon",
+	"bs-discovery-sidebar-secondary-cnt-aria-label": "Sideverktøy",
+	"bs-discovery-tools-after-content-cnt-aria-label": "Ytterligere sideinformasjon",
+	"bs-discovery-data-after-content-cnt-aria-label": "Sidevedlegg"
 }
