@@ -29,7 +29,7 @@ class DiffBackLinkProvider implements IBackLinkProvider {
 			return false;
 		}
 		$this->backToTitle = $diffTitle;
-		return true;
+		return $this->backToTitle instanceof Title;
 	}
 
 	/**
