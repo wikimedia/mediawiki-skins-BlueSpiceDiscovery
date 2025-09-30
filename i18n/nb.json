@@ -5,7 +5,6 @@
 		]
 	},
 	"bs-discovery-desc": "BlueSpice-drakt",
-	"bs-discovery-skip-links-navigation-aria-label": "Hopp til lenker",
 	"bs-discovery-skip-to-navbar-primary-text": "Hopp til topplinje",
 	"bs-discovery-skip-to-sidebar-primary-text": "Hopp til hovednavigasjon",
 	"bs-discovery-skip-to-sidebar-secondary-text": "Hopp til sideverktøy",
@@ -176,10 +175,6 @@
 	"bs-discovery-footerlinks-imprint-link-page": "Site:Utgiver",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Bruksvilkår",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Bruksvilkår",
-	"bs-discovery-sidebar-primary-aria-label": "Primært sidefelt",
-	"bs-discovery-sidebar-secondary-aria-label": "Sekundært sidefelt",
-	"bs-discovery-tools-after-content-aria-label": "Verktøy etter innholdsseksjonen",
-	"bs-discovery-data-after-content-aria-label": "Data etter innholdsseksjonen",
 	"bs-discovery-requires-attention": "(krever oppmerksomhet)",
 	"bs-discovery-breadcrumb-label-diff": "Forskjeller",
 	"bs-discovery-back-to-page": "Tilbake til $1",
@@ -187,5 +182,10 @@
 	"bs-discovery-back-to-version-history": "Tilbake til versjonshistorikk",
 	"bs-discovery-back-to-version-history-title": "Gå tilbake til versjonshistorikken til siden $1",
 	"bs-discovery-ext-credentials-desc-hyperlegible-font": "The Atkinson Hyperlegible Next Font brukt for BlueSpiceDiscovery og innhold. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])",
-	"bs-toc-hide-button-aria-label": "Skjul innholdsfortegnelsen"
+	"bs-toc-hide-button-aria-label": "Skjul innholdsfortegnelsen",
+	"bs-discovery-skip-links-nav-aria-label": "Hopp over lenker",
+	"bs-discovery-sidebar-primary-cnt-aria-label": "Hovednavigasjon",
+	"bs-discovery-sidebar-secondary-cnt-aria-label": "Sideverktøy",
+	"bs-discovery-tools-after-content-cnt-aria-label": "Ytterligere sideinformasjon",
+	"bs-discovery-data-after-content-cnt-aria-label": "Sidevedlegg"
 }

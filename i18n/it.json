@@ -7,7 +7,6 @@
 			"GpieroMW"
 		]
 	},
-	"bs-discovery-skip-links-navigation-aria-label": "Salta ai collegamenti",
 	"bs-discovery-skip-to-sidebar-primary-text": "Salta alla navigazione principale",
 	"bs-discovery-back-to-top-text": "Torna all'inizio",
 	"bs-discovery-navbar-user-button-title": "Menu utente",
@@ -110,11 +109,11 @@
 	"bs-discovery-page-version-pager-next": "Successivo",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Condizioni del servizio",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Condizioni_del_servizio",
-	"bs-discovery-sidebar-primary-aria-label": "Barra laterale primaria",
-	"bs-discovery-sidebar-secondary-aria-label": "Barra laterale secondaria",
 	"bs-discovery-requires-attention": "(richiede attenzione)",
 	"bs-discovery-back-to-page": "Torna a $1",
 	"bs-discovery-back-to-page-title": "Torna alla pagina $1",
 	"bs-discovery-back-to-version-history": "Torna alla cronologia delle versioni",
-	"bs-discovery-back-to-version-history-title": "Torna alla cronologia delle versioni della pagina $1"
+	"bs-discovery-back-to-version-history-title": "Torna alla cronologia delle versioni della pagina $1",
+	"bs-discovery-sidebar-primary-cnt-aria-label": "Navigazione principale",
+	"bs-discovery-tools-after-content-cnt-aria-label": "Informazioni aggiuntive sulla pagina"
 }

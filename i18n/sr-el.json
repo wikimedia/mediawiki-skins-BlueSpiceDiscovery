@@ -3,7 +3,6 @@
 		"authors": []
 	},
 	"bs-discovery-desc": "Tema BlueSpice-a",
-	"bs-discovery-skip-links-navigation-aria-label": "Preskoči na veze",
 	"bs-discovery-skip-to-navbar-primary-text": "Preskoči na zaglavlje",
 	"bs-discovery-skip-to-sidebar-primary-text": "Preskoči na glavnu navigaciju",
 	"bs-discovery-skip-to-sidebar-secondary-text": "Preskoči na opcije stranice",
@@ -124,10 +123,6 @@
 	"bs-discovery-page-version-pager-next": "Sledeće",
 	"bs-discovery-footerlinks-imprint-link-desc": "Impresum",
 	"bs-discovery-footerlinks-termsofservice-link-desc": "Uslovi korišćenja",
-	"bs-discovery-sidebar-primary-aria-label": "Primarna traka sa alatkama",
-	"bs-discovery-sidebar-secondary-aria-label": "Sekundarna traka sa alatkama",
-	"bs-discovery-tools-after-content-aria-label": "Alatke posle odeljka sa sadržajem",
-	"bs-discovery-data-after-content-aria-label": "Podaci posle odeljka sa sadržajem",
 	"bs-discovery-requires-attention": "(zahteva pažnju)",
 	"bs-discovery-back-to-page": "Nazad na $1",
 	"bs-discovery-back-to-page-title": "Nazad na stranicu $1",
