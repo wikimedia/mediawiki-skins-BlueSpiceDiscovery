@@ -3,14 +3,15 @@
 	width: 60px;
 	display: block;
 	position: fixed;
-	right: 20px;
-	top: calc( 100vh - 100px );
+	right: 15px;
+	top: calc( 100vh - 125px );
 	text-decoration: none;
 	z-index: 1000;
 }
 
 #back-to-top.collapsed {
 	right: calc( var( --sidebar-secondary-width ) - 20px );
+	top: calc( 100vh - 100px );
 }
 
 #back-to-top::before {

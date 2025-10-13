@@ -16,3 +16,16 @@ body.enhanced-action-history #title-actions {
 body.hide-title.title-fixed .enhanced-history-toolbar {
 	top: var( --navbar-primary-height ) !important;
 }
+
+/* Fix chatbot button color */
+.base-bluespicediscovery #chat button#maximizeChat {
+	border-color: var( --sidebar-secondary-bg );
+}
+
+.base-bluespicediscovery #chat button#maximizeChat.attention {
+	background-color: #c9e08f;
+}
+
+.base-bluespicediscovery #chat button#maximizeChat.active {
+	background-color: #f1f3f9;
+}
