@@ -4,7 +4,8 @@
 			"MITO",
 			"Nike",
 			"Pyscowicz",
-			"Rönttönen"
+			"Rönttönen",
+			"Minilammas"
 		]
 	},
 	"bs-discovery-desc": "BlueSpice-ulkoasu",
@@ -103,5 +104,6 @@
 	"bs-discovery-enhanced-sidebar-edit-button-title": "Muokkaa tätä valikkoa",
 	"bs-discovery-page-version-pager-previous": "Edellinen",
 	"bs-discovery-page-version-pager-next": "Seuraava",
-	"bs-discovery-footerlinks-termsofservice-link-desc": "Käyttöehdot"
+	"bs-discovery-footerlinks-termsofservice-link-desc": "Käyttöehdot",
+	"bs-discovery-skip-links-nav-aria-label": "Ohita linkit"
 }
