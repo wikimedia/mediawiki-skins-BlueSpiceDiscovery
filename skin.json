@@ -539,7 +539,8 @@
 				"js/MobileContentTables.js",
 				"js/dblClickEdit.js",
 				"js/VEEditClick.js",
-				"js/TreeComponent.js"
+				"js/TreeComponent.js",
+				"js/AccessibilityFocusFix.js"
 			],
 			"messages": [
 				"bs-discovery-navbar-full-screen-button-enable-title",
