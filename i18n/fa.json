@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Jeeputer",
+			"LordProfo",
 			"Mohammad ebz",
 			"Rulebased"
 		]
@@ -11,6 +12,7 @@
 	"bs-discovery-navbar-global-actions-administration-text": "مدیریت",
 	"bs-discovery-title-last-edit-info-date-only": "آخرین ویرایش در $1",
 	"bs-discovery-last-edit-by-anon-user": "کاربر ناشناس",
+	"bs-discovery-dialog-detailssectionheading-namespaces": "فضاهای نام",
 	"bs-discovery-breadcrumb-label-action-edit": "ویرایش",
 	"bs-discovery-mainlinks-allpages-label": "صفحات",
 	"bs-discovery-mainlinks-categories-label": "رده‌ها",
