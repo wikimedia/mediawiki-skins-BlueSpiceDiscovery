@@ -23,7 +23,7 @@
 
 #nb-pri form input {
 	height: 40px;
-	font-size: 15px;
+	font-size: 0.9375rem;
 	background-color: var( --navbar-primary-searchform-bg );
 	border-color: var( --navbar-primary-searchform-border-inactive );
 	border-width: 0.5px 0.5px 0.5px 0;
