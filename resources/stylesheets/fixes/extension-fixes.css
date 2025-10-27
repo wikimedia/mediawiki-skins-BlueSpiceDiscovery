@@ -23,7 +23,8 @@ body.hide-title.title-fixed .enhanced-history-toolbar {
 }
 
 .base-bluespicediscovery #chat button#maximizeChat.attention {
-	background-color: #c9e08f;
+	background-color: #3e5389;
+	background-image: url( ./../../images/chatbot_logo_white.svg );
 }
 
 .base-bluespicediscovery #chat button#maximizeChat.active {
