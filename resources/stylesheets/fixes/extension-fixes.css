@@ -30,3 +30,11 @@ body.hide-title.title-fixed .enhanced-history-toolbar {
 .base-bluespicediscovery #chat button#maximizeChat.active {
 	background-color: #f1f3f9;
 }
+
+/* ERM43801 - Fix contrast mode of browser with forced colors */
+@media ( forced-colors: active ) {
+	.notifications-ui-widget-ToggleReadCircleButtonWidget-circle,
+	.notifications-ui-widget-ToggleReadCircleButtonWidget-circle-unread {
+		background-color: Highlight !important;
+	}
+}
