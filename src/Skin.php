@@ -110,9 +110,6 @@ class Skin extends SkinTemplate {
 		// Enable responsive behaviour on mobile browsers
 		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
 
-		// Announce supported color schemes
-		$out->addMeta( 'color-scheme', 'light dark' );
-
 		// Use mediawiki resource module for skin
 		$out->addModuleStyles( "skin.discovery.styles" );
 
