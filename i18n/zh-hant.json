@@ -198,5 +198,8 @@
 	"bs-discovery-sidebar-primary-cnt-aria-label": "主導覽",
 	"bs-discovery-sidebar-secondary-cnt-aria-label": "頁面工具",
 	"bs-discovery-tools-after-content-cnt-aria-label": "額外頁面資訊",
-	"bs-discovery-data-after-content-cnt-aria-label": "頁面附錄"
+	"bs-discovery-data-after-content-cnt-aria-label": "頁面附錄",
+	"bs-discovery-footer-places-alt-text-mediawiki": "由 MediaWiki 提供支援",
+	"bs-discovery-footer-places-alt-text-bluespice": "由 BlueSpice 提供支援",
+	"bs-discovery-footer-places-alt-text-semanticmediawiki": "由 Semantic MediaWiki 提供支援"
 }
