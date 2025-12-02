@@ -4,9 +4,13 @@
 	display: block;
 	position: fixed;
 	right: 15px;
-	top: calc( 100vh - 125px );
+	top: calc( 100vh - 80px );
 	text-decoration: none;
 	z-index: 1000;
+}
+
+body:has( #chatbot-cnt ) #back-to-top {
+	top: calc( 100vh - 125px );
 }
 
 #back-to-top.collapsed {
