@@ -41,5 +41,8 @@
 	"bs-discovery-dialog-detailssectionheading-namespaces": "नामपदहरू",
 	"bs-discovery-dialog-detailssectionheading-views": "अवलोकनहरू",
 	"bs-discovery-dialog-detailssectionheading-actions": "सामग्री कार्यहरू",
-	"bs-discovery-dialog-detailssectionheading-toolbox": "उपकरणको बाकस"
+	"bs-discovery-dialog-detailssectionheading-toolbox": "उपकरणको बाकस",
+	"bs-discovery-footer-places-alt-text-mediawiki": "मिडियाविकि द्वारा संचालित",
+	"bs-discovery-footer-places-alt-text-bluespice": "ब्लुस्पाइस द्वारा संचालित",
+	"bs-discovery-footer-places-alt-text-semanticmediawiki": "सिमान्टिक मिडियाविकि द्वारा संचालित"
 }
