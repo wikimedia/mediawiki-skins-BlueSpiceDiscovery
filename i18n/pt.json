@@ -3,6 +3,7 @@
 		"authors": [
 			"Hamilton Abreu",
 			"Mansil alfalb",
+			"Maria Manuela Silva",
 			"Mbs262"
 		]
 	},
@@ -200,5 +201,8 @@
 	"bs-discovery-sidebar-primary-cnt-aria-label": "Navegação principal",
 	"bs-discovery-sidebar-secondary-cnt-aria-label": "Ferramentas de página",
 	"bs-discovery-tools-after-content-cnt-aria-label": "Informação adicional da página",
-	"bs-discovery-data-after-content-cnt-aria-label": "Apêndice da página"
+	"bs-discovery-data-after-content-cnt-aria-label": "Apêndice da página",
+	"bs-discovery-footer-places-alt-text-mediawiki": "Desenvolvido por MediaWiki",
+	"bs-discovery-footer-places-alt-text-bluespice": "Desenvolvido por BlueSpice",
+	"bs-discovery-footer-places-alt-text-semanticmediawiki": "Desenvolvido por Semantic MediaWiki"
 }
