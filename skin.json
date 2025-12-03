@@ -508,6 +508,7 @@
 				"stylesheets/oo-ui/oo-ui.sm.css": { "media": "all and ( max-width: 767px )" },
 				"stylesheets/mediawiki.ui/components/radio.css": {},
 				"stylesheets/fixes/extension-fixes.css": {},
+				"stylesheets/fixes/extension-fixes.sm.css": { "media": "all and ( max-width: 767px )" },
 				"stylesheets/control/page-version-pager.css": {},
 				"stylesheets/fixes/ve-fixes.css": {},
 				"stylesheets/fixes/mw-fixes.css": {},
