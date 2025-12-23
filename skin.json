@@ -382,7 +382,6 @@
 		"OutputPageBodyAttributes": [
 			"body-classes"
 		],
-		"BsAdapterAjaxPingResult": "\\BlueSpice\\Discovery\\Hook\\BsAdapterAjaxPingResult\\CheckAttentionIndicator::callback",
 		"PageSaveComplete": [ "setPageLanguage", "invalidateEnhancedSidebarCache" ],
 		"BSUEModulePDFBeforeAddingContent": "pdf-export",
 		"BSUsageTrackerRegisterCollectors": [
@@ -771,6 +770,13 @@
 		"localBasePath": "resources",
 		"remoteSkinPath": "BlueSpiceDiscovery/resources"
 	},
+	"RestRoutes": [
+		{
+			"path": "/bluespice/discovery/attention-indicators",
+			"class": "BlueSpice\\Discovery\\Rest\\AttentionIndicatorHandler",
+			"services": [ "BSAttentionIndicatorFactory" ]
+		}
+	],
 	"load_composer_autoloader": true,
 	"manifest_version": 2
 }
