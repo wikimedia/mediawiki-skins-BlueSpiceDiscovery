@@ -146,5 +146,7 @@
 	"bs-discovery-breadcrumb-nav-node-portal-page": "대문",
 	"bs-discovery-dialog-detailssectionheading-views": "조회수",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-depth": "깊이",
-	"bs-toc-hide-button-aria-label": "목차 숨기기"
+	"bs-toc-hide-button-aria-label": "목차 숨기기",
+	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "편집",
+	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "지우기"
 }
