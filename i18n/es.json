@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Avengium",
 			"Fitoschido",
 			"JDíaz32",
 			"La Mantis",
@@ -27,5 +28,7 @@
 	"bs-discovery-mainlinks-categories-label": "Categorías",
 	"bs-discovery-mainlinks-listfiles-label": "Ficheros",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Términos_de_servicio",
-	"bs-discovery-sidebar-actions-heading": "Acciones"
+	"bs-discovery-sidebar-actions-heading": "Acciones",
+	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "Editar",
+	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "Limpiar"
 }

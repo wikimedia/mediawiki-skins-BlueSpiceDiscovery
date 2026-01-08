@@ -22,5 +22,11 @@
 	"bs-discovery-mainlinks-allpages-label": "ਸਫ਼ੇ",
 	"ns-main-label": "ਸਫ਼ੇ",
 	"bs-discovery-header-create-button-text": "ਨਵਾਂ",
-	"bs-discovery-personalurl-mycontributions-text": "ਯੋਗਦਾਨ"
+	"bs-discovery-personalurl-mycontributions-text": "ਯੋਗਦਾਨ",
+	"bs-discovery-title-action-edit-button-title": "ਵਰਕਾ ਸੋਧੋ",
+	"bs-discovery-title-action-edit-button-aria-label": "ਵਰਕਾ ਸੋਧੋ",
+	"bs-discovery-sidebar-secondary-share-link-title": "ਵਰਕਾ ਸਾਂਝਾ ਕਰੋ",
+	"bs-discovery-sidebar-secondary-watch-link-aria-label": "ਵਰਕਾ 'ਤੇ ਨਿਗ੍ਹਾ ਰੱਖੋ",
+	"bs-discovery-first-heading-aria-label": " ਵਰਕੇ ਦਾ ਸਿਰਲੇਖ",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-page": "ਵਰਕਾ"
 }
