@@ -43,7 +43,7 @@ class Parser extends MutableParser implements IParser, IMenuParser {
 	public const CACHE_KEY = 'enhanced-sidebar-nodes-cache';
 
 	/** @var int Cache TTL in seconds */
-	private const CACHE_TTL = 600;
+	private const CACHE_TTL = 0;
 
 	/**
 	 * @param RevisionRecord $revision
@@ -106,7 +106,11 @@ class Parser extends MutableParser implements IParser, IMenuParser {
 					continue;
 				}
 				$nodeData = $this->serializeNodeTree( $node ) + $this->getTreeChildren( $nodes, $node );
-				$nodeData['leaf'] = empty( $nodeData['items'] );
+				$isLeaf = empty( $nodeData['items'] );
+				if ( isset( $nodeData['isLeaf'] ) ) {
+					$isLeaf = $nodeData['isLeaf'];
+				}
+				$nodeData['leaf'] = $isLeaf;
 				$data[] = $nodeData;
 			}
 
