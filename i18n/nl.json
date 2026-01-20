@@ -208,5 +208,6 @@
 	"bs-discovery-sidebar-primary-cnt-aria-label": "Hoofdnavigatie",
 	"bs-discovery-sidebar-secondary-cnt-aria-label": "Paginahulpmiddelen",
 	"bs-discovery-tools-after-content-cnt-aria-label": "Aanvullende pagina-informatie",
-	"bs-discovery-data-after-content-cnt-aria-label": "Pagina-appendix"
+	"bs-discovery-data-after-content-cnt-aria-label": "Pagina-appendix",
+	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "Bewerken"
 }
