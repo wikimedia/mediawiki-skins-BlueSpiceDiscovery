@@ -1,37 +1,18 @@
-a.title-actions {
-	text-align: center;
-	vertical-align: middle;
-	color: var( --title-nav-fg );
-	line-height: 2rem;
-	padding: 4px 8px;
-	margin-left: 1rem;
-	height: 40px;
-	width: 40px;
-}
-
-.title-actions:hover {
-	color: var( --icon-primary-fg--hover );
-	background-color: var( --title-nav-bg--hover );
-	height: 40px;
-	padding: 4px 8px;
-	width: 40px;
-	border-radius: 50%;
-}
-
-.title-actions a:focus-visible {
-	outline: 0;
-	border-radius: 50%;
-	box-shadow: 0 0 0 0.1em var( --focus-visible );
-}
-
 #title-actions a.ico-btn {
 	cursor: pointer;
 	text-align: center;
-	color: var( --title-nav-fg );
+	color: var( --icon-primary-fg );
+	background-color: var( --icon-primary-bg );
 }
 
 #title-actions a.ico-btn:hover {
 	color: var( --icon-primary-fg--hover );
+	background-color: var( --icon-primary-bg--hover );
+}
+
+#title-actions a.ico-btn.active {
+	color: var( --icon-primary-fg--active );
+	background-color: var( --icon-primary-bg--active );
 }
 
 .btn-group button.dropdown-icon {
