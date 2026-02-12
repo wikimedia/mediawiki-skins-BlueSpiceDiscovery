@@ -33,8 +33,8 @@
 }
 
 a#sb-sec-tgl-btn {
-	color: var( --icon-primary-fg--hover );
-	background-color: var( --title-nav-bg--hover );
+	color: var( --icon-primary-fg );
+	background-color: var( --icon-primary-bg );
 	height: 32px;
 	width: 32px;
 	transform: rotate( 90deg );
@@ -43,12 +43,17 @@ a#sb-sec-tgl-btn {
 	margin-left: 5px;
 }
 
-a#sb-sec-tgl-btn[ aria-expanded='false' ] {
-	color: var( --title-nav-fg );
-	background-color: transparent;
+a#sb-sec-tgl-btn:hover {
+	color: var( --icon-primary-fg--hover );
+	background-color: var( --icon-primary-bg--hover );
+}
+
+a#sb-sec-tgl-btn[ aria-expanded='true' ] {
+	color: var( --icon-primary-fg--active );
+	background-color: var( --icon-primary-bg--active );
 }
 
 .fs-mode-enabled #sb-sec-tgl-btn {
-	color: var( --title-nav-fg );
+	color: var( --icon-primary-fg );
 	background-color: transparent;
 }
