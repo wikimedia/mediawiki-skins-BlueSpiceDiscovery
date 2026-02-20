@@ -2,34 +2,34 @@
 	font-size: 25px;
 	margin-left: 35px;
 	padding: 4px 6px;
-	color: var( --icon-primary-fg--hover );
-	background-color: var( --icon-primary-bg--hover );
+	background-color: var( --icon-primary-bg );
+	color: var( --icon-primary-fg );
 }
 
 #sb-pri-tgl-btn:hover {
 	padding: 4px 6px;
 }
 
-#sb-pri-tgl-btn[ aria-expanded='false' ] {
-	color: var( --title-nav-fg );
-	background-color: transparent;
+#sb-pri-tgl-btn[ aria-expanded='true' ] {
+	background-color: var( --icon-primary-bg--active );
+	color: var( --icon-primary-fg--active );
 }
 
 .fs-mode-enabled #sb-pri-tgl-btn {
-	color: var( --title-nav-fg );
+	color: var( --icon-primary-fg );
 	background-color: transparent;
 }
 
 #sb-tgl-mobile-pri {
 	font-size: 25px;
 	padding: 4px 6px;
-	color: var( --icon-primary-fg--hover );
-	background-color: var( --icon-primary-bg--hover );
+	color: var( --icon-primary-fg );
+	background-color: var( --icon-primary-bg );
 }
 
-#sb-tgl-mobile-pri[ aria-expanded='false' ] {
-	color: var( --title-nav-fg );
-	background-color: transparent;
+#sb-tgl-mobile-pri[ aria-expanded='true' ] {
+	background-color: var( --icon-primary-bg--active );
+	color: var( --icon-primary-fg--active );
 }
 
 a#sb-sec-tgl-btn {
