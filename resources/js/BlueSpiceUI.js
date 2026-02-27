@@ -48,8 +48,8 @@
 
 	function enableFullscreenMode( element ) {
 		$( element ).addClass( 'fs-mode-enabled' );
-		$( element ).removeClass( 'bi-chevron-expand' );
-		$( element ).addClass( 'bi-chevron-contract' );
+		$( element ).removeClass( 'bi-bs-fullscreen-expand' );
+		$( element ).addClass( 'bi-bs-fullscreen-collapse' );
 		$( element ).attr(
 			'title',
 			mw.message( 'bs-discovery-navbar-full-screen-button-disable-title' ).text()
@@ -80,8 +80,8 @@
 
 	function disableFullscreenMode( element ) {
 		$( element ).removeClass( 'fs-mode-enabled' );
-		$( element ).removeClass( 'bi-chevron-contract' );
-		$( element ).addClass( 'bi-chevron-expand' );
+		$( element ).removeClass( 'bi-bs-fullscreen-collapse' );
+		$( element ).addClass( 'bi-bs-fullscreen-expand' );
 		$( element ).attr(
 			'title',
 			mw.message( 'bs-discovery-navbar-full-screen-button-enable-title' ).text()

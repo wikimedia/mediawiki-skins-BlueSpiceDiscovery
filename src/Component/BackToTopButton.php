@@ -23,7 +23,7 @@ class BackToTopButton extends SimpleLink {
 	 * @inheritDoc
 	 */
 	public function getClasses(): array {
-		return [ 'back-to-top', 'd-none', 'bi-arrow-up-circle-fill' ];
+		return [ 'back-to-top', 'd-none', 'bi-bs-back-to-top' ];
 	}
 
 	/**
