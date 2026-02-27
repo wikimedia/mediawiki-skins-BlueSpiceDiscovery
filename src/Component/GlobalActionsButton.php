@@ -55,7 +55,7 @@ class GlobalActionsButton extends SimpleDropdownIcon implements IRestrictedCompo
 	 * @return array
 	 */
 	public function getIconClasses(): array {
-		return [ 'bi-gear-fill' ];
+		return [ 'bi-bs-ga' ];
 	}
 
 	/**

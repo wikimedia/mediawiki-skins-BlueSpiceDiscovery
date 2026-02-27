@@ -28,9 +28,9 @@ class Watch extends SimpleLink {
 	 * @inheritDoc
 	 */
 	public function getClasses(): array {
-		$class = 'bi-star';
+		$class = 'bi-bs-watch';
 		if ( $this->getId() === 'ca-unwatch' ) {
-			$class = 'bi-star-fill';
+			$class = 'bi-bs-unwatch';
 		}
 		return [ 'ico-btn', $class ];
 	}

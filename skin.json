@@ -501,6 +501,7 @@
 				"stylesheets/mws.button.css": {},
 				"stylesheets/mws.dropdown.css": {},
 				"stylesheets/bootstrap.override.css": {},
+				"stylesheets/bluespice.icons.css": {},
 				"stylesheets/bluespice.css": {},
 				"stylesheets/bluespice.sm.css": { "media": "all and ( max-width: 767px )" },
 				"stylesheets/bluespice.md.css": { "media": "all and ( min-width: 767px ) and ( max-width: 1199px )" },

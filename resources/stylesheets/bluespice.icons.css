@@ -1,0 +1,77 @@
+/* Icon for back to top */
+.bi-bs-back-to-top::before {
+	content: '\f139';
+	font-family: 'bootstrap-icons';
+}
+
+/* Icon for create new page button */
+.bi-bs-create-page::before {
+	content: '\f64d';
+	font-family: 'bootstrap-icons';
+}
+
+/* Icon for edit icon */
+.bi-bs-edit::before {
+	content: '\f4c9';
+	font-family: 'bootstrap-icons';
+}
+
+/* Icon for fullscreen collapse */
+.bi-bs-fullscreen-collapse::before {
+	content: '\f27d';
+	font-family: 'bootstrap-icons';
+}
+
+/* Icon for fullscreen expand */
+.bi-bs-fullscreen-expand::before {
+	content: '\f283';
+	font-family: 'bootstrap-icons';
+}
+
+/* Icon for global actions */
+.bi-bs-ga::before {
+	content: '\f3e2';
+	font-family: 'bootstrap-icons';
+}
+
+/* Icon for custom menu */
+.bi-bs-menu::before {
+	content: '\f3f8';
+	font-family: 'bootstrap-icons';
+}
+
+/* Icon for notification */
+.bi-bs-notification::before {
+	content: '\f189';
+	font-family: 'bootstrap-icons';
+}
+
+/* Icon for sidebar primary button */
+.bi-bs-sb-pri-toggle::before {
+	content: '\f479';
+	font-family: 'bootstrap-icons';
+}
+
+/* Icon for sidebar secondary button */
+.bi-bs-sb-sec-toggle::before {
+	content: '\f621';
+	font-family: 'bootstrap-icons';
+}
+
+/* Icon for share button */
+.bi-bs-share::before {
+	content: '\f52e';
+	font-family: 'bootstrap-icons';
+}
+
+/* Icon for unwatch page */
+.bi-bs-unwatch::before {
+	content: '\f586';
+	font-family: 'bootstrap-icons';
+}
+
+/* Icon for watch page */
+.bi-bs-watch::before {
+	content: '\f588';
+	font-family: 'bootstrap-icons';
+}

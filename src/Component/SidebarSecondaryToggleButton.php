@@ -35,7 +35,7 @@ class SidebarSecondaryToggleButton extends SimpleLink {
 	 * @inheritDoc
 	 */
 	public function getClasses(): array {
-		return [ 'ico-btn', 'bi-wrench', 'sb-toggle' ];
+		return [ 'ico-btn', 'bi-bs-sb-sec-toggle', 'sb-toggle' ];
 	}
 
 	/**

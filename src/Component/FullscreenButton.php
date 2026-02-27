@@ -100,9 +100,9 @@ class FullscreenButton extends SimpleLink {
 
 		if ( $this->fullscreenMode === 'true' ) {
 			array_push( $classes, 'fs-mode-enabled' );
-			array_push( $classes, 'bi-chevron-contract' );
+			array_push( $classes, 'bi-bs-fullscreen-collapse' );
 		} else {
-			array_push( $classes, 'bi-chevron-expand' );
+			array_push( $classes, 'bi-bs-fullscreen-expand' );
 		}
 
 		return $classes;

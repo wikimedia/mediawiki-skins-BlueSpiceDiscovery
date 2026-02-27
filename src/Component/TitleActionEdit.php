@@ -151,7 +151,7 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	 * @return array
 	 */
 	public function getIconClasses(): array {
-		return [ 'bi-pencil-fill' ];
+		return [ 'bi-bs-edit' ];
 	}
 
 	/**

@@ -68,7 +68,7 @@ class CreateContentSplitButton extends SimpleDropdownIconSplitButton {
 	 * @return Message
 	 */
 	public function getIconClasses(): array {
-		return [ 'bi-plus-lg' ];
+		return [ 'bi-bs-create-page' ];
 	}
 
 	/**
