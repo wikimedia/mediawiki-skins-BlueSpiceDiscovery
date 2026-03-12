@@ -69,7 +69,7 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 
 		$params = $renderer->getParams();
 
-		$actualRootNodeUrl = $params['rootNode']['href'];
+		$actualRootNodeUrl = $params['rootNode'][0]['href'];
 
 		$actualLabels = [];
 		foreach ( $params['labels'] as $label ) {
@@ -94,25 +94,28 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 		$specialpages = $specialPageFactory->getTitleForAlias( 'Specialpages' );
 		$specialpagesPath = '/wiki/' . $specialpages->getFullText();
 
+		$specialAllPages = $specialPageFactory->getTitleForAlias( 'AllPages' );
+		$specialAllPagesPath = $specialAllPages->getFullText();
+
 		return [
 			'main-namespace-view-mode' => [
 				Title::newFromText( 'Dummy/ABC' ),
 				[ '' ],
-				'/wiki/Main_Page',
+				'/index.php?title=' . $specialAllPagesPath . '&namespace=0',
 				'/wiki/Dummy/ABC',
 				[]
 			],
 			'talk-namespace-history-mode' => [
 				Title::newFromText( 'Talk:Dummy/ABC' ),
 				[ 'action' => 'history' ],
-				'/wiki/Main_Page',
+				'/index.php?title=' . $specialAllPagesPath . '&namespace=0',
 				'/wiki/Dummy/ABC',
 				[ 'bs-discovery-breadcrumb-label-talk', 'bs-discovery-breadcrumb-label-action-history' ]
 			],
 			'specialpage-with-title-in-path' => [
 				Title::newFromText( 'Special:Move/Dummy/ABC' ),
 				[ 'action' => 'history' ],
-				'/wiki/Main_Page',
+				'/index.php?title=' . $specialAllPagesPath . '&namespace=0',
 				'/wiki/Dummy/ABC',
 				[ 'rawmessage', 'bs-discovery-breadcrumb-label-action-history' ]
 			],
@@ -126,14 +129,14 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 			'specialpage-linkliste-with-target' => [
 				Title::newFromText( 'Special:Whatlinkshere' ),
 				[ 'target' => 'Dummy/ABC' ],
-				'/wiki/Main_Page',
+				'/index.php?title=' . $specialAllPagesPath . '&namespace=0',
 				'/wiki/Dummy/ABC',
 				[ 'rawmessage' ]
 			],
 			'specialpage-linkliste-with-target' => [
 				Title::newFromText( 'Special:CiteThisPage' ),
 				[ 'page' => 'Dummy/ABC' ],
-				'/wiki/Main_Page',
+				'/index.php?title=' . $specialAllPagesPath . '&namespace=0',
 				'/wiki/Dummy/ABC',
 				[ 'rawmessage' ]
 			],
