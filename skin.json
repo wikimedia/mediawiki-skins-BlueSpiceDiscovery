@@ -182,6 +182,12 @@
 					"class": "BlueSpice\\Discovery\\BreadcrumbDataProvider\\BaseBreadcrumbDataProvider"
 				}
 			},
+			"BreadcrumbRootProviderRegistry": {
+				"base-namespace": {
+					"class": "BlueSpice\\Discovery\\BreadcrumbRootProvider\\BaseBreadcrumbRootProvider",
+					"services": [ "SpecialPageFactory" ]
+				}
+			},
 			"EnhancedSidebarNodeProcessors": {
 				"enhanced-sidebar-internal-link": {
 					"class": "BlueSpice\\Discovery\\EnhancedSidebar\\NodeProcessor\\InternalLinkProcessor",

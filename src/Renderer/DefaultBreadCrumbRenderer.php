@@ -49,6 +49,9 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	/** @var NamespaceInfo */
 	private $namespaceInfo = null;
 
+	/** @var IBreadcrumbRootProvider */
+	private $rootProvider = null;
+
 	/**
 	 * @param Title $title
 	 * @param User $user
@@ -68,6 +71,7 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 		$this->namespaceInfo = $namespaceInfo;
 
 		$this->breadcrumbProvider = $breadcrumbProviderFactory->getProviderForTitle( $title, $user );
+		$this->rootProvider = $breadcrumbProviderFactory->getRootProviderForTitle( $title );
 	}
 
 	/**
@@ -92,49 +96,8 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	 * @return void
 	 */
 	private function buildRootNode() {
-		$rootNodeText = $this->relevantTitle->getNsText();
-		if ( $this->relevantTitle->getNamespace() === 0 ) {
-			$rootNodeText = $this->messageLocalizer->msg(
-				'bs-discovery-breadcrumb-nav-node-ns-main' )->plain();
-		}
-
-		if ( $this->relevantTitle->isTalkPage() ) {
-			if ( $this->relevantTitle->getNamespace() === 1 ) {
-				$rootNodeText = $this->messageLocalizer->msg(
-					'bs-discovery-breadcrumb-nav-node-ns-main' )->plain();
-			} else {
-				$rootNodeText = $this->relevantTitle->getSubjectNsText();
-			}
-		}
-		$titleMainPage = null;
-		if ( $this->relevantTitle->isSpecialPage() ) {
-			$titleMainPage = $this->specialPageFactory->getTitleForAlias( 'Specialpages' );
-
-			$rootNodeText = $this->relevantTitle->getPageLanguage()->getNsText(
-				$titleMainPage->getNamespace() );
-			$rootNodeUrl = $titleMainPage->getLocalURL();
-		}
-		if ( $titleMainPage === null ) {
-			$titleMainPage = Title::makeTitleSafe(
-				$this->relevantTitle->getNamespace(),
-				Title::newMainPage()->getDBkey()
-			);
-
-			if ( $titleMainPage->exists() ) {
-				$rootNodeUrl = $titleMainPage->getLocalURL();
-			} else {
-				$titleMainPage = $this->specialPageFactory->getTitleForAlias( 'Allpages' );
-				$rootNodeUrl = $titleMainPage->getLocalURL(
-					'namespace=' . $this->relevantTitle->getNamespace() );
-			}
-		}
-
-		$this->options['rootNode'] = [
-			'text' => str_replace( '_', ' ', $rootNodeText ),
-			'href' => $rootNodeUrl,
-			'role' => 'link',
-			'title' => $rootNodeText
-		];
+		$rootNodes = $this->rootProvider->getNodes( $this->relevantTitle );
+		$this->options['rootNode'] = $rootNodes;
 	}
 
 	/**

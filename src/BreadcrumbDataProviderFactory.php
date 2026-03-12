@@ -3,6 +3,7 @@
 namespace BlueSpice\Discovery;
 
 use BlueSpice\Discovery\BreadcrumbDataProvider\BaseBreadcrumbDataProvider;
+use BlueSpice\Discovery\BreadcrumbRootProvider\BaseBreadcrumbRootProvider;
 use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\Title\NamespaceInfo;
 use MediaWiki\Title\Title;
@@ -82,6 +83,30 @@ class BreadcrumbDataProviderFactory {
 		return $this->objectFactory->createObject( [
 			'class' => BaseBreadcrumbDataProvider::class,
 			'args' => $args,
+		] );
+	}
+
+	/**
+	 * @param Title $title
+	 * @return IBreadcrumbRootProvider
+	 */
+	public function getRootProviderForTitle( $title ): IBreadcrumbRootProvider {
+		$providers = ExtensionRegistry::getInstance()->getAttribute(
+			'BlueSpiceDiscoveryBreadcrumbRootProviderRegistry'
+		);
+		foreach ( $providers as $key => $spec ) {
+			$provider = $this->objectFactory->createObject( $spec );
+			if ( !( $provider instanceof IBreadcrumbRootProvider ) ) {
+				continue;
+			}
+			if ( $provider->applies( $title ) ) {
+				return $provider;
+			}
+		}
+
+		return $this->objectFactory->createObject( [
+			'class' => BaseBreadcrumbRootProvider::class,
+			'args' => $spec,
 		] );
 	}
 }

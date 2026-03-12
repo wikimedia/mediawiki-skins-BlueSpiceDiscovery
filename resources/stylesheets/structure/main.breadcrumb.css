@@ -115,12 +115,12 @@ nav .breadcrumb {
 
 .breadcrumb-item.root-node a:hover {
 	background-color: var( --breadcrumbs-rootnode-bg--hover );
-	color: var( --breadcrumbs-rootnode-fg );
+	color: var( --breadcrumbs-rootnode-fg--hover );
 }
 
 .breadcrumb-item.root-node a:active {
-	background-color: var( --breadcrumbs-rootnode-bg--hover );
-	color: var( --breadcrumbs-rootnode-fg );
+	background-color: var( --breadcrumbs-rootnode-bg--active );
+	color: var( --breadcrumbs-rootnode-fg--active );
 }
 
 .breadcrumb-item.root-node a:focus-visible {
