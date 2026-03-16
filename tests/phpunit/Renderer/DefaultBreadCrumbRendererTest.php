@@ -11,6 +11,7 @@ use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 use MediaWikiIntegrationTestCase;
 use MessageLocalizer;
+use Wikimedia\CSS\Sanitizer\StyleAttributeSanitizer;
 
 /**
  * @group Database
@@ -65,7 +66,8 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 		);
 
 		$renderer = new DefaultBreadCrumbRenderer( $title, $mockUser,
-			$mockMessageLocalizer, $specialPageFactory, $namespaceInfo, $breadcrumbFactory );
+			$mockMessageLocalizer, $specialPageFactory, $namespaceInfo,
+			$breadcrumbFactory, StyleAttributeSanitizer::newDefault() );
 
 		$params = $renderer->getParams();
 

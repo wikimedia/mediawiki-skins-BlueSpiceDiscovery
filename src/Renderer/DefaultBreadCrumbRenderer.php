@@ -10,6 +10,7 @@ use MediaWiki\Title\NamespaceInfo;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 use MessageLocalizer;
+use Wikimedia\CSS\Sanitizer\StyleAttributeSanitizer;
 
 class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 
@@ -49,6 +50,9 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	/** @var IBreadcrumbRootProvider */
 	private $rootProvider = null;
 
+	/** @var StyleAttributeSanitizer */
+	private $styleSanitizer = null;
+
 	/**
 	 * @param Title $title
 	 * @param User $user
@@ -56,9 +60,10 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	 * @param SpecialPageFactory $specialPageFactory
 	 * @param NamespaceInfo $namespaceInfo
 	 * @param BreadcrumbDataProviderFactory $breadcrumbProviderFactory
+	 * @param StyleAttributeSanitizer $styleSanitizer
 	 */
 	public function __construct( $title, $user, $messageLocalizer, $specialPageFactory,
-		$namespaceInfo, $breadcrumbProviderFactory ) {
+		$namespaceInfo, $breadcrumbProviderFactory, StyleAttributeSanitizer $styleSanitizer ) {
 		parent::__construct();
 
 		$this->title = $title;
@@ -69,6 +74,7 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 
 		$this->breadcrumbProvider = $breadcrumbProviderFactory->getProviderForTitle( $title, $user );
 		$this->rootProvider = $breadcrumbProviderFactory->getRootProviderForTitle( $title );
+		$this->styleSanitizer = $styleSanitizer;
 	}
 
 	/**
@@ -92,6 +98,12 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	 */
 	private function buildRootNode() {
 		$rootNodes = $this->rootProvider->getNodes( $this->relevantTitle );
+		foreach ( $rootNodes as $node ) {
+			if ( !isset( $node['style'] ) ) {
+				continue;
+			}
+			$node['style'] = $this->styleSanitizer->sanitizeString( $node['style'] );
+		}
 		$this->options['rootNode'] = $rootNodes;
 	}
 
