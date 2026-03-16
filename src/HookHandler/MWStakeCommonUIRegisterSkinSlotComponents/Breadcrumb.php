@@ -6,6 +6,7 @@ use BlueSpice\Discovery\Component\DefaultBreadcrumbNav;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
 use MWStake\MediaWiki\Component\CommonUserInterface\Hook\MWStakeCommonUIRegisterSkinSlotComponents;
+use Wikimedia\CSS\Sanitizer\StyleAttributeSanitizer;
 
 class Breadcrumb implements MWStakeCommonUIRegisterSkinSlotComponents {
 
@@ -26,8 +27,9 @@ class Breadcrumb implements MWStakeCommonUIRegisterSkinSlotComponents {
 						$namespaceInfo = MediaWikiServices::getInstance()->getNamespaceInfo();
 						$breadcrumbFactory = MediaWikiServices::getInstance()
 							->getService( 'BlueSpiceDiscoveryBreadcrumbDataProviderFactory' );
+						$styleSanitizer = StyleAttributeSanitizer::newDefault();
 						return new DefaultBreadcrumbNav( $title, $user, $messageLocalizer, $specialPageFactory,
-							$namespaceInfo, $breadcrumbFactory );
+							$namespaceInfo, $breadcrumbFactory, $styleSanitizer );
 					}
 				]
 			]

@@ -11,6 +11,7 @@ use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 use MessageLocalizer;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
+use Wikimedia\CSS\Sanitizer\StyleAttributeSanitizer;
 
 class DefaultBreadcrumbNav extends Literal {
 
@@ -50,6 +51,11 @@ class DefaultBreadcrumbNav extends Literal {
 	private $breadcrumbFactory = null;
 
 	/**
+	 * @var StyleAttributeSanitizer
+	 */
+	private $styleSanitizer = null;
+
+	/**
 	 *
 	 * @param Title $title
 	 * @param User $user
@@ -57,15 +63,17 @@ class DefaultBreadcrumbNav extends Literal {
 	 * @param SpecialPageFactory $specialPageFactory
 	 * @param NamespaceInfo $namespaceInfo
 	 * @param BreadcrumbDataProviderFactory $breadcrumbFactory
+	 * @param StyleAttributeSanitier $styleSanitizer
 	 */
 	public function __construct( $title, $user, $messageLocalizer, $specialPageFactory,
-		$namespaceInfo, $breadcrumbFactory ) {
+		$namespaceInfo, $breadcrumbFactory, StyleAttributeSanitizer $styleSanitizer ) {
 		$this->title = $title;
 		$this->user = $user;
 		$this->messageLocalizer = $messageLocalizer;
 		$this->specialPageFactory = $specialPageFactory;
 		$this->namespaceInfo = $namespaceInfo;
 		$this->breadcrumbFactory = $breadcrumbFactory;
+		$this->styleSanitizer = $styleSanitizer;
 	}
 
 	/**
@@ -79,7 +87,7 @@ class DefaultBreadcrumbNav extends Literal {
 
 	private function buildHtml(): string {
 		$renderer = new DefaultBreadCrumbRenderer( $this->title, $this->user, $this->messageLocalizer,
-			$this->specialPageFactory, $this->namespaceInfo, $this->breadcrumbFactory );
+			$this->specialPageFactory, $this->namespaceInfo, $this->breadcrumbFactory, $this->styleSanitizer );
 
 		return $renderer->getHtml();
 	}
