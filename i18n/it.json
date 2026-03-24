@@ -4,7 +4,8 @@
 			"Ajeje Brazorf",
 			"Beta16",
 			"Emabarto01",
-			"GpieroMW"
+			"GpieroMW",
+			"FL2226"
 		]
 	},
 	"bs-discovery-skip-to-sidebar-primary-text": "Salta alla navigazione principale",
@@ -117,5 +118,6 @@
 	"bs-discovery-sidebar-primary-cnt-aria-label": "Navigazione principale",
 	"bs-discovery-tools-after-content-cnt-aria-label": "Informazioni aggiuntive sulla pagina",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "Modifica",
-	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "Pulisci"
+	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "Pulisci",
+	"bs-discovery-breadcrumb-nav-root-node-title": "Mostra tutte le pagine nello spazio dei nomi $1"
 }
