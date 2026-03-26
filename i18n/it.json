@@ -4,6 +4,7 @@
 			"Ajeje Brazorf",
 			"Beta16",
 			"Emabarto01",
+			"FL2226",
 			"GpieroMW"
 		]
 	},
@@ -122,5 +123,6 @@
 	"bs-discovery-sidebar-primary-cnt-aria-label": "Navigazione principale",
 	"bs-discovery-tools-after-content-cnt-aria-label": "Informazioni aggiuntive sulla pagina",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "Modifica",
-	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "Pulisci"
+	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "Pulisci",
+	"bs-discovery-breadcrumb-nav-root-node-title": "Mostra tutte le pagine nello spazio dei nomi $1"
 }

@@ -214,5 +214,6 @@
 	"bs-discovery-footer-places-alt-text-mediawiki": "Mogelijk gemaakt door MediaWiki",
 	"bs-discovery-footer-places-alt-text-bluespice": "Mogelijk gemaakt door BlueSpice",
 	"bs-discovery-footer-places-alt-text-semanticmediawiki": "Mogelijk gemaakt door Semantic MediaWiki",
-	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "Wissen"
+	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "Wissen",
+	"bs-discovery-breadcrumb-nav-root-node-title": "Alle pagina's weergeven in naamruimte $1"
 }
