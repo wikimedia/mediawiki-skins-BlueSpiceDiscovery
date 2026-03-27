@@ -348,10 +348,6 @@
 			"class": "\\BlueSpice\\Discovery\\Hook\\SetPageLanguage",
 			"services": [ "LanguageNameUtils" ]
 		},
-		"invalidateEnhancedSidebarCache": {
-			"class": "\\BlueSpice\\Discovery\\Hook\\InvalidateEnhancedSidebarCache",
-			"services": [ "MainWANObjectCache" ]
-		},
 		"pdf-export": {
 			"class": "\\BlueSpice\\Discovery\\HookHandler\\PdfExportHandler"
 		},
@@ -388,7 +384,7 @@
 		"OutputPageBodyAttributes": [
 			"body-classes"
 		],
-		"PageSaveComplete": [ "setPageLanguage", "invalidateEnhancedSidebarCache" ],
+		"PageSaveComplete": [ "setPageLanguage" ],
 		"BSUEModulePDFBeforeAddingContent": "pdf-export",
 		"BSUsageTrackerRegisterCollectors": [
 			"\\BlueSpice\\Discovery\\Hook\\BSUsageTrackerRegisterCollectors\\MediaWikiSidebarActive::callback",
