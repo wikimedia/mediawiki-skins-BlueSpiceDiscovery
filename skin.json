@@ -542,7 +542,8 @@
 				"js/dblClickEdit.js",
 				"js/VEEditClick.js",
 				"js/TreeComponent.js",
-				"js/AccessibilityFocusFix.js"
+				"js/AccessibilityFocusFix.js",
+				"js/GlobalActions.js"
 			],
 			"messages": [
 				"bs-discovery-navbar-full-screen-button-enable-title",
@@ -782,6 +783,11 @@
 			"path": "/bluespice/discovery/attention-indicators",
 			"class": "BlueSpice\\Discovery\\Rest\\AttentionIndicatorHandler",
 			"services": [ "BSAttentionIndicatorFactory" ]
+		},
+		{
+			"path": "/bluespice/discovery/global-actions",
+			"class": "BlueSpice\\Discovery\\Rest\\GlobalActionsHandler",
+			"services": [ "MWStakeCommonUISkinSlotRendererFactory", "BlueSpiceDiscoveryComponentRenderer" ]
 		}
 	],
 	"load_composer_autoloader": true,
