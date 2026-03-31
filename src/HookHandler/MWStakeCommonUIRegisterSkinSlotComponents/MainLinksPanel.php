@@ -3,7 +3,6 @@
 namespace BlueSpice\Discovery\HookHandler\MWStakeCommonUIRegisterSkinSlotComponents;
 
 use BlueSpice\Discovery\Component\SpecialAllPages;
-use BlueSpice\Discovery\Component\SpecialCategories;
 use BlueSpice\Discovery\Component\SpecialListFiles;
 use BlueSpice\Discovery\Component\SpecialMainPage;
 use BlueSpice\Discovery\Component\SpecialRecentChanges;
@@ -52,14 +51,6 @@ class MainLinksPanel implements MWStakeCommonUIRegisterSkinSlotComponents {
 					return new SpecialListFiles();
 				},
 				'position' => 40
-			];
-		}
-		if ( $config->get( 'DiscoveryMainLinksCategories' ) ) {
-			$links['special-categories'] = [
-				'factory' => static function () {
-					return new SpecialCategories();
-				},
-				'position' => 50
 			];
 		}
 		if ( $config->get( 'DiscoveryMainLinksRecentChanges' ) ) {
