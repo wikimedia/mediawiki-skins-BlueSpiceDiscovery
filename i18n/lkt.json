@@ -37,5 +37,12 @@
 	"bs-discovery-page-version-pager-previous": "Hékta",
 	"bs-discovery-page-version-pager-next": "Íyokhihe",
 	"bs-discovery-sidebar-primary-cnt-aria-label": "Očháŋku ignípi čhokáta",
-	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "Yutȟókeča {{GENDER:|yo|ye|yo/ye}}"
+	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "Yutȟókeča {{GENDER:|yo|ye|yo/ye}}",
+	"bs-discovery-navbar-user-button-personal-menu-text": "Wíkhičhaŋye Mitȟáwa",
+	"bs-discovery-navbar-global-actions-administration-text": "Oítȟaƞčhaƞ",
+	"bs-discovery-last-edit-by-anon-user": "Tuwá čhažé-wanílya uŋ waŋ",
+	"bs-discovery-mainlinks-listfiles-label": "Wópȟaȟta",
+	"bs-discovery-personalurl-mycontributions-text": "Táku yéč'uŋ",
+	"bs-discovery-enhanced-mediawiki-sidebar-field-href": "URL",
+	"bs-discovery-breadcrumb-label-diff": "Wótȟókeča"
 }
