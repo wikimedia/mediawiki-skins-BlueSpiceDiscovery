@@ -3,9 +3,10 @@
 		"authors": [
 			"Ajeje Brazorf",
 			"Beta16",
+			"Daimona Eaytoy",
 			"Emabarto01",
-			"GpieroMW",
-			"FL2226"
+			"FL2226",
+			"GpieroMW"
 		]
 	},
 	"bs-discovery-skip-to-sidebar-primary-text": "Salta alla navigazione principale",
@@ -119,5 +120,5 @@
 	"bs-discovery-tools-after-content-cnt-aria-label": "Informazioni aggiuntive sulla pagina",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "Modifica",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "Pulisci",
-	"bs-discovery-breadcrumb-nav-root-node-title": "Mostra tutte le pagine nello spazio dei nomi $1"
+	"bs-discovery-breadcrumb-nav-root-node-title": "Mostra tutte le pagine nel namespace $1"
 }
