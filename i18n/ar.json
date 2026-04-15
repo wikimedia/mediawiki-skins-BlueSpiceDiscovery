@@ -209,5 +209,6 @@
 	"bs-discovery-footer-places-alt-text-bluespice": "مدعوم من BlueSpice",
 	"bs-discovery-footer-places-alt-text-semanticmediawiki": "مدعوم من Semantic MediaWiki",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "عدل",
-	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "مسح"
+	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "مسح",
+	"bs-discovery-breadcrumb-nav-root-node-title": "عرض جميع الصفحات في مساحة الاسم $1"
 }
