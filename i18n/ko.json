@@ -106,6 +106,7 @@
 	"bs-discovery-last-edit-by-system-user": "시스템 사용자",
 	"bs-discovery-menu-provider-mediawiki-sidebar-label": "미디어위키 사이드바",
 	"bs-discovery-menu-provider-namespace-mainpage-list-label": "이름공간 주 문서 목록",
+	"bs-discovery-menu-provider-subpage-tree-label": "하위 문서 트리",
 	"bs-discovery-subpage-tree-pnl-header-text": "하위 문서",
 	"ns-main-label": "문서",
 	"bs-discovery-menu-provider-enhanced-mediawiki-sidebar-tree-label": "개선된 미디어위키 사이드바",
@@ -139,13 +140,12 @@
 	"bs-discovery-back-to-page": "$1 항목으로 돌아가기",
 	"bs-discovery-back-to-page-title": "$1 문서로 돌아가기",
 	"bs-toc-hide-button-aria-label": "목차 숨기기",
-	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "편집",
-	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "지우기",
-	"bs-discovery-menu-provider-subpage-tree-label": "하위 문서 트리",
 	"bs-discovery-sidebar-primary-cnt-aria-label": "주 둘러보기",
 	"bs-discovery-sidebar-secondary-cnt-aria-label": "문서 도구",
 	"bs-discovery-tools-after-content-cnt-aria-label": "추가 문서 정보",
 	"bs-discovery-footer-places-alt-text-mediawiki": "MediaWiki 제공",
 	"bs-discovery-footer-places-alt-text-bluespice": "BlueSpice 제공",
-	"bs-discovery-footer-places-alt-text-semanticmediawiki": "Semantic MediaWiki 제공"
+	"bs-discovery-footer-places-alt-text-semanticmediawiki": "Semantic MediaWiki 제공",
+	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "편집",
+	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "지우기"
 }
