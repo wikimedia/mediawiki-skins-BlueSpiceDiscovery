@@ -150,6 +150,10 @@
 	"bs-discovery-page-does-not-exist-title": "$1 (없는 문서)",
 	"bs-discovery-enhanced-mediawiki-sidebar-header-text": "둘러보기",
 	"bs-discovery-enhanced-sidebar-edit-button-title": "이 메뉴 편집",
+	"bs-discovery-config-meta-items-header-label": "문서 제목 아래 요소",
+	"bs-discovery-config-meta-items-header-help": "선택된 요소는 문서 제목 아래에 표시됩니다",
+	"bs-discovery-config-meta-items-footer-label": "문서 내용 아래 요소",
+	"bs-discovery-config-meta-items-footer-help": "선택된 요소는 문서 내용 아래에 표시됩니다",
 	"bs-discovery-alert-old-page-version": "이 문서의 이전 판을 보고 있습니다. [[Special:Redirect/page/$1|최신 판으로 돌아갑니다]].",
 	"bs-discovery-page-version-pager-deleted-user": "(사용자 이름 삭제됨)",
 	"bs-discovery-page-version-pager-previous": "이전",
@@ -159,6 +163,8 @@
 	"bs-discovery-breadcrumb-label-diff": "차이",
 	"bs-discovery-back-to-page": "$1 항목으로 돌아가기",
 	"bs-discovery-back-to-page-title": "$1 문서로 돌아가기",
+	"bs-discovery-back-to-version-history": "버전 역사로 돌아가기",
+	"bs-discovery-back-to-version-history-title": "$1 문서의 버전 역사로 돌아갑니다",
 	"bs-toc-hide-button-aria-label": "목차 숨기기",
 	"bs-discovery-sidebar-primary-cnt-aria-label": "주 둘러보기",
 	"bs-discovery-sidebar-secondary-cnt-aria-label": "문서 도구",
@@ -167,5 +173,6 @@
 	"bs-discovery-footer-places-alt-text-bluespice": "BlueSpice 제공",
 	"bs-discovery-footer-places-alt-text-semanticmediawiki": "Semantic MediaWiki 제공",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "편집",
-	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "지우기"
+	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "지우기",
+	"bs-discovery-breadcrumb-nav-root-node-title": "$1 이름공간에 속한 모든 문서 표시"
 }
