@@ -174,5 +174,12 @@
 	"bs-discovery-config-mainlinks-recentchanges-help": "왼쪽 둘러보기에 진입점 \"최근 바뀜\" 링크를 표시",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-page-help": "링크할 페이지. 기존 제목일 수도 있고, 유효한 제목으로 평가되는 파서 함수를 포함할 수도 있음",
 	"bs-discovery-enhanced-mediawiki-sidebar-field-text-help": "링크에 표시되는 텍스트. 파서 함수를 포함할 수 있음",
-	"bs-discovery-enhanced-mediawiki-sidebar-field-depth-help": "포함할 하위 페이지의 최대 깊이"
+	"bs-discovery-enhanced-mediawiki-sidebar-field-depth-help": "포함할 하위 페이지의 최대 깊이",
+	"bs-discovery-config-meta-items-header-label": "문서 제목 아래 요소",
+	"bs-discovery-config-meta-items-header-help": "선택된 요소는 문서 제목 아래에 표시됩니다",
+	"bs-discovery-config-meta-items-footer-label": "문서 내용 아래 요소",
+	"bs-discovery-config-meta-items-footer-help": "선택된 요소는 문서 내용 아래에 표시됩니다",
+	"bs-discovery-back-to-version-history": "버전 역사로 돌아가기",
+	"bs-discovery-back-to-version-history-title": "$1 문서의 버전 역사로 돌아갑니다",
+	"bs-discovery-breadcrumb-nav-root-node-title": "$1 이름공간에 속한 모든 문서 표시"
 }
