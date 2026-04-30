@@ -82,7 +82,8 @@ return [
 	},
 	'BlueSpiceDiscoveryMetaItemFactory' => static function ( MediaWikiServices $services ) {
 		return new MetaItemsProviderFactory(
-			$services->get( 'MWStakeManifestObjectFactory' )
+			$services->get( 'MWStakeManifestObjectFactory' ),
+			$services->get( 'MWStakeManifestRegistryFactory' )
 		);
 	},
 	'BlueSpiceDiscoveryMetaItemManager' => static function ( MediaWikiServices $services ) {
