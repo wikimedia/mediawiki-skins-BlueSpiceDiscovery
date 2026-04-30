@@ -9,9 +9,11 @@
 }
 
 /* Hide title action on enhanced action history */
-body.enhanced-action-history #title-actions {
+body.enhanced-action-history #title-actions,
+body.spreadsheets-edit-mode #title-actions {
 	visibility: hidden;
 }
+
 /* Fix toolbar with hide title on enhanced version history */
 body.hide-title.title-fixed .enhanced-history-toolbar {
 	top: var( --navbar-primary-height ) !important;
