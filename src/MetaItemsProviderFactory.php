@@ -3,6 +3,7 @@
 namespace BlueSpice\Discovery;
 
 use MWStake\MediaWiki\Component\ManifestRegistry\ManifestObjectFactory;
+use MWStake\MediaWiki\Component\ManifestRegistry\ManifestRegistryFactory;
 
 class MetaItemsProviderFactory {
 
@@ -15,15 +16,25 @@ class MetaItemsProviderFactory {
 	private $objectFactory = null;
 
 	/**
+	 * @var ManifestRegistryFactory
+	 */
+	private $registryFactory = null;
+
+	/**
 	 * @var array|null
 	 */
 	private $menus = null;
 
 	/**
 	 * @param ManifestObjectFactory $objectFactory
+	 * @param ManifestRegistryFactory $registryFactory
 	 */
-	public function __construct( ManifestObjectFactory $objectFactory ) {
+	public function __construct(
+		ManifestObjectFactory $objectFactory,
+		ManifestRegistryFactory $registryFactory
+	) {
 		$this->objectFactory = $objectFactory;
+		$this->registryFactory = $registryFactory;
 	}
 
 	/**
@@ -53,5 +64,15 @@ class MetaItemsProviderFactory {
 			[],
 			self::INSTANCEOF
 		);
+	}
+
+	/**
+	 * @param string $name
+	 * @return array|null List of supported skin class names, or null if unrestricted
+	 */
+	public function getSupportedSkins( string $name ): ?array {
+		$registry = $this->registryFactory->get( self::REGISTRY_NAME );
+		$spec = $registry->getObjectSpec( $name );
+		return $spec['supportedSkins'] ?? null;
 	}
 }
