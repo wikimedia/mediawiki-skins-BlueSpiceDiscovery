@@ -13,7 +13,6 @@ interface IBreadcrumbRootProvider {
 	public function getNodes( Title $title ): array;
 
 	/**
-	 *
 	 * @param Title $title
 	 * @return bool
 	 */

@@ -55,7 +55,6 @@ class BaseBreadcrumbRootProvider implements IBreadcrumbRootProvider {
 	}
 
 	/**
-	 *
 	 * @param Title $title
 	 * @return bool
 	 */
