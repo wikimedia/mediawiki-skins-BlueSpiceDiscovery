@@ -64,7 +64,8 @@ class Parser extends MutableParser implements IParser, IMenuParser {
 		);
 		$this->rawData = [];
 		$this->user = RequestContext::getMain()->getUser();
-		$this->dataCacheUserKey = $objectCache->makeKey( self::CACHE_KEY, $this->user->getId(), $revision->getId() );
+		$this->dataCacheUserKey = $objectCache->makeKey( self::CACHE_KEY, $this->user->getId(),
+			$revision->getId(), $this->user->getTouched() );
 	}
 
 	/**
