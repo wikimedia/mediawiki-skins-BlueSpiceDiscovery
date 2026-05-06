@@ -219,6 +219,11 @@ class UserButtonMenu extends SimpleDropdown {
 				'text' => Message::newFromKey(
 					'bs-discovery-personalurl-userpage-text'
 				)
+			],
+			'simpleblog_myblog' => [
+				'text' => Message::newFromKey(
+					'bs-discovery-personalurl-blog-text'
+				)
 			]
 		];
 	}
