@@ -196,5 +196,6 @@
 	"bs-discovery-footer-places-alt-text-semanticmediawiki": "Powered by Semantic MediaWiki",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "Edit",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "Clear",
-	"bs-discovery-breadcrumb-nav-root-node-title": "Show all pages in namespace $1"
+	"bs-discovery-breadcrumb-nav-root-node-title": "Show all pages in namespace $1",
+	"bs-discovery-personalurl-blog-text": "Blog"
 }
