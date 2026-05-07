@@ -108,7 +108,6 @@
 	"bs-discovery-breadcrumb-label-action-edit": "편집",
 	"bs-discovery-first-heading-aria-label": "문서 제목",
 	"bs-discovery-mainlinks-allpages-label": "문서",
-	"bs-discovery-mainlinks-categories-label": "분류",
 	"bs-discovery-mainlinks-listfiles-label": "파일",
 	"bs-discovery-config-mainlinks-mainpage-label": "진입점 \"대문\" 표시",
 	"bs-discovery-config-mainlinks-mainpage-help": "왼쪽 둘러보기에 진입점 \"대문\" 링크를 표시",
@@ -116,8 +115,6 @@
 	"bs-discovery-config-mainlinks-allpages-help": "왼쪽 둘러보기에 진입점 \"문서\" 링크를 표시",
 	"bs-discovery-config-mainlinks-listfiles-label": "진입점 \"파일\" 표시",
 	"bs-discovery-config-mainlinks-listfiles-help": "왼쪽 둘러보기에 진입점 \"파일\" 링크를 표시",
-	"bs-discovery-config-mainlinks-categories-label": "진입점 \"분류\" 표시",
-	"bs-discovery-config-mainlinks-categories-help": "왼쪽 둘러보기에 진입점 \"분류\" 링크를 표시",
 	"bs-discovery-config-mainlinks-recentchanges-label": "진입점 \"최근 바뀜\" 표시",
 	"bs-discovery-config-mainlinks-recentchanges-help": "왼쪽 둘러보기에 진입점 \"최근 바뀜\" 링크를 표시",
 	"bs-discovery-personalurl-mycontributions-text": "기여",
@@ -197,5 +194,6 @@
 	"bs-discovery-footer-places-alt-text-semanticmediawiki": "Semantic MediaWiki 제공",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "편집",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "지우기",
-	"bs-discovery-breadcrumb-nav-root-node-title": "$1 이름공간에 속한 모든 문서 표시"
+	"bs-discovery-breadcrumb-nav-root-node-title": "$1 이름공간에 속한 모든 문서 표시",
+	"bs-discovery-personalurl-blog-text": "블로그"
 }

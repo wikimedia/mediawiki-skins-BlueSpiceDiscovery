@@ -112,7 +112,6 @@
 	"bs-discovery-breadcrumb-label-action-edit": "Bewerken",
 	"bs-discovery-first-heading-aria-label": "Paginatitel",
 	"bs-discovery-mainlinks-allpages-label": "Pagina’s",
-	"bs-discovery-mainlinks-categories-label": "Categorieën",
 	"bs-discovery-mainlinks-listfiles-label": "Bestanden",
 	"bs-discovery-config-mainlinks-mainpage-label": "Toegangspunt “Hoofdpagina” weergeven",
 	"bs-discovery-config-mainlinks-mainpage-help": "De koppeling naar het toegangspunt “Hoofdpagina” weergeven in de navigatie aan de linkerkant",
@@ -120,8 +119,6 @@
 	"bs-discovery-config-mainlinks-allpages-help": "De koppeling naar het toegangspunt “Pagina’s” weergeven in de navigatie aan de linkerkant",
 	"bs-discovery-config-mainlinks-listfiles-label": "Toegangspunt “Bestanden” weergeven",
 	"bs-discovery-config-mainlinks-listfiles-help": "De koppeling naar het toegangspunt “Bestanden” weergeven in de navigatie aan de linkerkant",
-	"bs-discovery-config-mainlinks-categories-label": "Toegangspunt “Categorieën” weergeven",
-	"bs-discovery-config-mainlinks-categories-help": "De koppeling naar het toegangspunt “Categorieën” weergeven in de navigatie aan de linkerkant",
 	"bs-discovery-config-mainlinks-recentchanges-label": "Toegangspunt “Recente wijzigingen” weergeven",
 	"bs-discovery-config-mainlinks-recentchanges-help": "De koppeling naar het toegangspunt “Recente wijzigingen” weergeven in de navigatie aan de linkerkant",
 	"bs-discovery-personalurl-mycontributions-text": "Bijdragen",
@@ -201,5 +198,6 @@
 	"bs-discovery-footer-places-alt-text-semanticmediawiki": "Mogelijk gemaakt door Semantic MediaWiki",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "Bewerken",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "Wissen",
-	"bs-discovery-breadcrumb-nav-root-node-title": "Alle pagina's weergeven in naamruimte $1"
+	"bs-discovery-breadcrumb-nav-root-node-title": "Alle pagina's weergeven in naamruimte $1",
+	"bs-discovery-personalurl-blog-text": "Blog"
 }
