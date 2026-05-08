@@ -197,5 +197,6 @@
 	"bs-discovery-ext-credentials-desc-hyperlegible-font": "BlueSpiceDiscovery 및 콘텐츠에 사용된 Atkinson Hyperlegible Next 글꼴입니다. ([https://www.brailleinstitute.org https://www.brailleinstitute.org])",
 	"bs-discovery-skip-links-nav-aria-label": "링크 건너뛰기",
 	"bs-discovery-data-after-content-cnt-aria-label": "문서 부록",
-	"bs-discovery-breadcrumb-nav-root-node-title": "$1 이름공간에 속한 모든 문서 표시"
+	"bs-discovery-breadcrumb-nav-root-node-title": "$1 이름공간에 속한 모든 문서 표시",
+	"bs-discovery-personalurl-blog-text": "블로그"
 }
