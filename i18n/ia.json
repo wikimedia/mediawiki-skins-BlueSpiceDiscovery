@@ -203,5 +203,6 @@
 	"bs-discovery-footer-places-alt-text-semanticmediawiki": "Actionate per Semantic MediaWiki",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "Modificar",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "Rader",
-	"bs-discovery-breadcrumb-nav-root-node-title": "Monstrar tote le paginas in le spatio de nomines $1"
+	"bs-discovery-breadcrumb-nav-root-node-title": "Monstrar tote le paginas in le spatio de nomines $1",
+	"bs-discovery-personalurl-blog-text": "Blog"
 }
