@@ -197,5 +197,6 @@
 	"bs-discovery-footer-places-alt-text-semanticmediawiki": "Semantic MediaWiki 제공",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "편집",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "지우기",
-	"bs-discovery-breadcrumb-nav-root-node-title": "$1 이름공간에 속한 모든 문서 표시"
+	"bs-discovery-breadcrumb-nav-root-node-title": "$1 이름공간에 속한 모든 문서 표시",
+	"bs-discovery-personalurl-blog-text": "블로그"
 }

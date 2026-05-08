@@ -194,5 +194,6 @@
 	"bs-discovery-footer-places-alt-text-semanticmediawiki": "Desenvolvido por Semantic MediaWiki",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "Editar",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "Limpar",
-	"bs-discovery-breadcrumb-nav-root-node-title": "Mostrar todas as páxinas no espazo de nomes «$1»"
+	"bs-discovery-breadcrumb-nav-root-node-title": "Mostrar todas as páxinas no espazo de nomes «$1»",
+	"bs-discovery-personalurl-blog-text": "Blog"
 }
