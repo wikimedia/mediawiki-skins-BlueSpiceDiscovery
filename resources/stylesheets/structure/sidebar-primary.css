@@ -10,13 +10,14 @@
 #sb-pri {
 	height: 100%;
 	max-height: calc( 100vh - calc( 15px + var( --navbar-primary-height ) ) );
-	overflow: hidden;
+	overflow: hidden auto;
 	width: 100%;
 	padding-bottom: 20px;
+	scrollbar-width: none;
 }
 
 #sb-pri:hover {
-	overflow-y: auto;
+	scrollbar-width: thin;
 }
 
 #sb-pri .card {
@@ -24,6 +25,10 @@
 }
 
 #sb-pri::-webkit-scrollbar {
+	width: 0;
+}
+
+#sb-pri:hover::-webkit-scrollbar {
 	width: 8px;
 }
 
@@ -58,6 +63,61 @@
 	height: inherit;
 	border: 2px solid var( --focus-visible );
 	outline-color: transparent;
+}
+
+#namespace-tree-pnl-head {
+	display: flex;
+}
+
+#namespace-tree-pnl-head > div {
+	width: 100%;
+	padding: 6px 0;
+}
+
+#namespace-tree-pnl-head button {
+	float: right;
+	padding: 6px 10px;
+	border-radius: 50%;
+	background-color: var( --sidebar-primary-icon-bg );
+	color: var( --sidebar-primary-icon-fg );
+}
+
+#namespace-tree-pnl-head button:hover {
+	background-color: var( --sidebar-primary-icon-bg--hover );
+	color: var( --sidebar-primary-icon-fg--hover );
+}
+
+#namespace-tree-pnl-head button.active {
+	border-color: transparent;
+	background-color: var( --sidebar-primary-icon-bg--active );
+	color: var( --sidebar-primary-icon-fg--active );
+}
+
+.bs-discovery-tree-back-to-top {
+	display: block;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	padding: 6px 10px;
+	text-align: center;
+	background-color: var( --sidebar-primary-bg );
+	border: none;
+	border-bottom: 1px solid var( --sidebar-primary-border-marker );
+	cursor: pointer;
+	color: var( --back-to-top-fg );
+}
+
+.bs-discovery-tree-back-to-top:hover {
+	color: var( --back-to-top-fg--hover );
+}
+
+.bs-discovery-tree-back-to-top.bi-bs-back-to-top::before {
+	margin-right: 8px;
+}
+
+.bs-discovery-nav-tree-search-cnt {
+	padding: 0 16px;
 }
 
 @media ( max-width: 767.99px ) {
