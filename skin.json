@@ -161,6 +161,9 @@
 						"MWStakeCommonUITreeDataGenerator", "BlueSpiceDiscoveryCookieHandler",
 						"MainWANObjectCache"
 					]
+				},
+				"namespace-tree": {
+					"class": "BlueSpice\\Discovery\\MenuProvider\\NamespaceTree"
 				}
 			},
 			"AttentionIndicatorRegistry": {},
@@ -359,6 +362,12 @@
 		"addBacklinkOnSpecialPages": {
 			"class": "\\BlueSpice\\Discovery\\HookHandler\\BeforePageDisplay\\AddBacklink"
 		},
+		"invalidateNamespaceTreeCache": {
+			"class": "\\BlueSpice\\Discovery\\HookHandler\\BeforePageDisplay\\InvalidateNamespaceTreeCache"
+		},
+		"pageActions": {
+			"class": "\\BlueSpice\\Discovery\\HookHandler\\PageActions"
+		},
 		"overrideMessages": {
 			"class": "\\BlueSpice\\Discovery\\HookHandler\\MessageCacheFetchOverrides\\FixMessages"
 		}
@@ -383,7 +392,9 @@
 		"OutputPageBodyAttributes": [
 			"body-classes"
 		],
-		"PageSaveComplete": [ "setPageLanguage" ],
+		"PageSaveComplete": [ "setPageLanguage", "pageActions" ],
+		"PageMoveComplete": [ "pageActions" ],
+		"PageDeleteComplete": [ "pageActions" ],
 		"BSUEModulePDFBeforeAddingContent": "pdf-export",
 		"BSUsageTrackerRegisterCollectors": [
 			"\\BlueSpice\\Discovery\\Hook\\BSUsageTrackerRegisterCollectors\\MediaWikiSidebarActive::callback",
@@ -392,7 +403,7 @@
 			"\\BlueSpice\\Discovery\\Hook\\BSUsageTrackerRegisterCollectors\\EnhancedSidebarModified::callback"
 		],
 		"MWStakeCommonUILessVarsInit": "set-less-vars",
-		"BeforePageDisplay": [ "addLoginPageResources", "addBacklinkOnSpecialPages" ],
+		"BeforePageDisplay": [ "addLoginPageResources", "addBacklinkOnSpecialPages", "invalidateNamespaceTreeCache" ],
 		"MessageCacheFetchOverrides": "overrideMessages"
 	},
 	"config_prefix": "bsg",
@@ -767,6 +778,20 @@
 			"scripts": [
 				"js/EnhancedSidebarSubpageTree.js",
 				"js/EnhancedSidebarLocalStorage.js"
+			],
+			"dependencies": [
+				"ext.oojsplus.navigation.treePanel",
+				"oojs-ui"
+			]
+		},
+		"skin.discovery.namespacetree-component": {
+			"packageFiles": [
+				"js/NamespaceTree.js",
+				"js/ui/NamespaceTreePanel.js"
+			],
+			"messages": [
+				"bs-discovery-back-to-top-text",
+				"bs-discovery-namespace-tree-search-label"
 			],
 			"dependencies": [
 				"ext.oojsplus.navigation.treePanel",

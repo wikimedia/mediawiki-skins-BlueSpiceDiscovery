@@ -75,3 +75,9 @@
 	content: '\f588';
 	font-family: 'bootstrap-icons';
 }
+
+/* Icon for search */
+.bi-bs-search::before {
+	content: '\f52a';
+	font-family: 'bootstrap-icons';
+}

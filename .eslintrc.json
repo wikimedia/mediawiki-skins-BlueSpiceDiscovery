@@ -23,6 +23,7 @@
 		"camelcase": "off",
 		"es-x/no-array-prototype-includes": "off",
 		"es-x/no-async-functions": "off",
+		"es-x/no-object-values": "off",
 		"max-len": "off",
 		"no-jquery/no-class-state": "off",
 		"no-jquery/no-global-selector": "off",
