@@ -199,5 +199,11 @@
 	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "Bewerken",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "Wissen",
 	"bs-discovery-breadcrumb-nav-root-node-title": "Alle pagina's weergeven in naamruimte $1",
-	"bs-discovery-personalurl-blog-text": "Blog"
+	"bs-discovery-personalurl-blog-text": "Blog",
+	"bs-discovery-menu-provider-namespace-tree-label": "Alle pagina's",
+	"bs-discovery-menu-provider-namespace-tree-desc": "Alle pagina's van de huidige naamruimte als boomstructuur",
+	"bs-discovery-namespace-tree-pnl-header-text": "Pagina's",
+	"bs-discovery-namespace-tree-search-btn-label": "Zoekresultaten weergeven",
+	"bs-discovery-namespace-tree-create-btn-label": "Nieuwe pagina maken",
+	"bs-discovery-namespace-tree-search-label": "Zoeken naar een pagina"
 }
