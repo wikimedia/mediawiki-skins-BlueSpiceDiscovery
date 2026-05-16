@@ -43,5 +43,7 @@
 	"bs-discovery-breadcrumb-label-action-edit": "لکھو",
 	"bs-discovery-first-heading-aria-label": "عنوان ورقہ",
 	"bs-discovery-breadcrumb-label-diff": "فرق",
-	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "صاف"
+	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "صاف",
+	"bs-discovery-menu-provider-namespace-tree-label": "سارے ورقے",
+	"bs-discovery-namespace-tree-pnl-header-text": "ورقے"
 }
