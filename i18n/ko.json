@@ -8,7 +8,7 @@
 			"Ykhwong"
 		]
 	},
-	"bs-discovery-desc": "BlueSpice 스킨",
+	"bs-discovery-desc": "블루스파이스 스킨",
 	"bs-discovery-skip-to-navbar-primary-text": "헤더 표시줄로 건너뛰기",
 	"bs-discovery-skip-to-sidebar-primary-text": "주 둘러보기로 건너뛰기",
 	"bs-discovery-skip-to-sidebar-secondary-text": "문서 도구로 건너뛰기",
@@ -190,7 +190,7 @@
 	"bs-discovery-tools-after-content-cnt-aria-label": "추가 문서 정보",
 	"bs-discovery-data-after-content-cnt-aria-label": "문서 부록",
 	"bs-discovery-footer-places-alt-text-mediawiki": "MediaWiki 제공",
-	"bs-discovery-footer-places-alt-text-bluespice": "BlueSpice 제공",
+	"bs-discovery-footer-places-alt-text-bluespice": "블루스파이스 제공",
 	"bs-discovery-footer-places-alt-text-semanticmediawiki": "Semantic MediaWiki 제공",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "편집",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "지우기",
