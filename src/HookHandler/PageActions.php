@@ -41,7 +41,7 @@ class PageActions implements PageSaveCompleteHook, PageMoveCompleteHook, PageDel
 	public function onPageDeleteComplete(
 		$page, $deleter, $reason, $pageID, $deletedRev, $logEntry, $archivedRevisionCount
 	): void {
-		$this->invalidateNamespace( $page->getTitle() );
+		$this->invalidateNamespace( Title::castFromPageIdentity( $page ) );
 	}
 
 	/**
