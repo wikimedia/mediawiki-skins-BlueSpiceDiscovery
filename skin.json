@@ -557,6 +557,7 @@
 				"js/GlobalActions.js"
 			],
 			"messages": [
+				"bs-discovery-breadcrumb-label-action-edit",
 				"bs-discovery-navbar-full-screen-button-enable-title",
 				"bs-discovery-navbar-full-screen-button-enable-aria-label",
 				"bs-discovery-navbar-full-screen-button-disable-title",
