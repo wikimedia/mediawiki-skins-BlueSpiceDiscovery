@@ -4,6 +4,7 @@
 			"شاه زمان پټان"
 		]
 	},
+	"bs-discovery-name": "بلوسپيس موندنه",
 	"bs-discovery-desc": "بلوسپايس پوښۍ",
 	"bs-discovery-skip-to-navbar-primary-text": "سرليک پټې ته ټوپ‌وهل",
 	"bs-discovery-skip-to-sidebar-primary-text": "ار چلند ته ورتلل",
@@ -190,6 +191,5 @@
 	"bs-discovery-footer-places-alt-text-semanticmediawiki": "د ماناپوهنيزه مېډياويکي له خوا پرمخ وړل کېږي",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "سمول",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "سپينول",
-	"bs-discovery-breadcrumb-nav-root-node-title": "په $1 نوم‌تشيال کې ټول مخونه ښودل",
-	"bs-discovery-name": "بلوسپيس موندنه"
+	"bs-discovery-breadcrumb-nav-root-node-title": "په $1 نوم‌تشيال کې ټول مخونه ښودل"
 }
