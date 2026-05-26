@@ -24,7 +24,7 @@
 	"bs-discovery-searchform-button-title": "اوس يې وپلټئ",
 	"bs-discovery-searchform-button-aria-label": "اوس يې وپلټئ",
 	"bs-discovery-searchform-input-placeholder": "ستاسو د لټون ډول",
-	"bs-discovery-searchform-input-aria-label": "خپله پلٹونکې گړنه مو دلته دننه کړئ",
+	"bs-discovery-searchform-input-aria-label": "خپله پلټونکې گړنه مو دلته دننه کړئ",
 	"bs-discovery-header-create-button-text": "نوی",
 	"bs-discovery-header-create-button-title": "يو نوی مخ جوړول",
 	"bs-discovery-header-create-button-aria-label": "يو نوی مخ جوړول",
@@ -193,5 +193,6 @@
 	"bs-discovery-footer-places-alt-text-mediawiki": "د مېډياويکي له خوا پرمخ وړل کېږي",
 	"bs-discovery-footer-places-alt-text-bluespice": "د بلوسپيس له خوا پرمخ وړل کېږي",
 	"bs-discovery-footer-places-alt-text-semanticmediawiki": "د ماناپوهنيزه مېډياويکي له خوا پرمخ وړل کېږي",
-	"bs-discovery-breadcrumb-nav-root-node-title": "په $1 نوم‌تشيال کې ټول مخونه ښودل"
+	"bs-discovery-breadcrumb-nav-root-node-title": "په $1 نوم‌تشيال کې ټول مخونه ښودل",
+	"bs-discovery-name": "بلوسپيس موندنه"
 }
