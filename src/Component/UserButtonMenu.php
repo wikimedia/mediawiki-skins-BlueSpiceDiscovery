@@ -16,6 +16,7 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardBody;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardHeader;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdown;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleLinklistGroupFromArray;
+use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleSeparator;
 use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
 use MWStake\MediaWiki\Component\DynamicFileDispatcher\DynamicFileDispatcherFactory;
 
@@ -57,6 +58,7 @@ class UserButtonMenu extends SimpleDropdown {
 		}
 
 		$id = 'p-tools';
+		$linkAreas = $this->groupLinksByPositionArea( $this->sortLinks( $links ) );
 
 		return [
 			new SimpleCard( [
@@ -89,14 +91,36 @@ class UserButtonMenu extends SimpleDropdown {
 											)
 										]
 									] ),
-									new SimpleLinklistGroupFromArray( [
-										'id' => $id,
-										'classes' => [ 'menu-card-body', 'menu-list', 'll-dft' ],
-										'links' => $linkFormatter->formatLinks( $this->sortLinks( $links ) ),
-										'role' => 'group',
-										'item-role' => 'presentation',
-										'aria' => [
-											'labelledby' => $id . '-head'
+									new SimpleCardBody( [
+										'id' => $id . '-areas',
+										'classes' => [ 'menu-card-body', 'menu-list-areas' ],
+										'items' => [
+											new SimpleCardBody( [
+												'id' => $id . '-areas-left',
+												'classes' => [ 'menu-list-column', 'menu-list-column-left' ],
+												'items' => [
+												$this->makeLinkAreaGroup(
+													$id, 100, $linkAreas[100], $linkFormatter
+												),
+												new SimpleSeparator( 'pt-separator-entry-left' ),
+												$this->makeLinkAreaGroup(
+													$id, 200, $linkAreas[200], $linkFormatter
+												),
+												],
+											] ),
+											new SimpleCardBody( [
+												'id' => $id . '-areas-right',
+												'classes' => [ 'menu-list-column', 'menu-list-column-right' ],
+												'items' => [
+												$this->makeLinkAreaGroup(
+													$id, 300, $linkAreas[300], $linkFormatter
+												),
+												new SimpleSeparator( 'pt-separator-entry-right' ),
+												$this->makeLinkAreaGroup(
+													$id, 400, $linkAreas[400], $linkFormatter
+												),
+												],
+											] ),
 										],
 									] ),
 								]
@@ -192,12 +216,12 @@ class UserButtonMenu extends SimpleDropdown {
 	 */
 	protected function getFavoritePositions(): array {
 		return [
-			'watchlist' => 30,
-			'mycontris' => 60,
-			'mytalk' => 90,
 			'userpage' => 100,
-			'preferences' => 140,
-			'logout' => 150,
+			'preferences' => 101,
+			'mytalk' => 190,
+			'mycontris' => 301,
+			'watchlist' => 302,
+			'logout' => 400,
 		];
 	}
 
@@ -239,20 +263,80 @@ class UserButtonMenu extends SimpleDropdown {
 	 */
 	protected function sortLinks( $links ): array {
 		foreach ( $links as $key => &$data ) {
-			if ( isset( $data['position'] ) ) {
-				continue;
+			if ( !isset( $data['position'] ) ) {
+				$data['position'] = isset( $this->getFavoritePositions()[$key] )
+					? $this->getFavoritePositions()[$key]
+					: 100;
 			}
-			$data['position'] = isset( $this->getFavoritePositions()[$key] )
-				? $this->getFavoritePositions()[$key]
-				: 0;
 		}
 		usort( $links, static function ( $e1, $e2 ) {
-			if ( $e1['position'] == $e2['position'] ) {
-				return 0;
-			}
-			return $e1['position'] > $e2['position'] ? 1 : 0;
+			return (int)$e1['position'] <=> (int)$e2['position'];
 		} );
 		return $links;
+	}
+
+	/**
+	 * @param string $id
+	 * @param int $area
+	 * @param array $links
+	 * @param LinkFormatter $linkFormatter
+	 * @return SimpleLinklistGroupFromArray
+	 */
+	private function makeLinkAreaGroup(
+		string $id,
+		int $area,
+		array $links,
+		LinkFormatter $linkFormatter
+	): SimpleLinklistGroupFromArray {
+		return new SimpleLinklistGroupFromArray( [
+			'id' => $id . '-area-' . $area,
+			'classes' => [ 'menu-list', 'll-dft', 'menu-list-area', 'menu-list-area-' . $area ],
+			'links' => $linkFormatter->formatLinks( $links ),
+			'role' => 'group',
+			'item-role' => 'presentation',
+			'aria' => [
+				'labelledby' => $id . '-head'
+			],
+		] );
+	}
+
+	/**
+	 * @param array $links
+	 * @return array
+	 */
+	private function groupLinksByPositionArea( array $links ): array {
+		$areas = [
+			100 => [],
+			200 => [],
+			300 => [],
+			400 => [],
+		];
+
+		foreach ( $links as $link ) {
+			$areas[$this->getPositionArea( $link )][] = $link;
+		}
+
+		return $areas;
+	}
+
+	/**
+	 * @param array $link
+	 * @return int
+	 */
+	private function getPositionArea( array $link ): int {
+		$position = (int)( $link['position'] ?? 100 );
+
+		if ( $position < 200 ) {
+			return 100;
+		}
+		if ( $position < 300 ) {
+			return 200;
+		}
+		if ( $position < 400 ) {
+			return 300;
+		}
+
+		return 400;
 	}
 
 	/**
