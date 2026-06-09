@@ -6,8 +6,7 @@
 
 		const isEditMode = () => {
 			const queryParams = new URLSearchParams( window.location.search );
-			return queryParams.get( 'action' ) === 'edit' ||
-				queryParams.get( 'veaction' ) === 'edit' ||
+			return queryParams.get( 'veaction' ) === 'edit' ||
 				d.body.classList.contains( 've-activated' );
 		};
 
