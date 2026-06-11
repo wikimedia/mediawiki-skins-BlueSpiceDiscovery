@@ -85,7 +85,7 @@ class NamespaceMainPages extends SimpleCard {
 		$mainpages = [];
 		foreach ( $namespaces as $namespace ) {
 			$title = Title::makeTitleSafe( $namespace, $mainPageText );
-			if ( !$title->exists() ) {
+			if ( !$title || !$title->exists() ) {
 				continue;
 			}
 
