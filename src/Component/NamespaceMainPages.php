@@ -97,7 +97,8 @@ class NamespaceMainPages extends SimpleCard {
 				'href' => $title->getLinkURL()
 			];
 
-			if ( $context->getTitle()->equals( $title ) ) {
+			$contextTitle = $context->getTitle();
+			if ( $contextTitle && $contextTitle->equals( $title ) ) {
 				$mainpages[$nsText]['class'] = 'active';
 			}
 		}
