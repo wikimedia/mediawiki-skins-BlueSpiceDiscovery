@@ -193,7 +193,7 @@ class UserButtonMenu extends SimpleDropdown {
 	/**
 	 * @return string
 	 */
-	private function getSkinSlotHtml(): string {
+	protected function getSkinSlotHtml(): string {
 		/** @var MediaWikiServices */
 		$services = MediaWikiServices::getInstance();
 
@@ -278,7 +278,7 @@ class UserButtonMenu extends SimpleDropdown {
 	 * @param LinkFormatter $linkFormatter
 	 * @return SimpleLinklistGroupFromArray
 	 */
-	private function makeLinkAreaGroup(
+	protected function makeLinkAreaGroup(
 		string $id,
 		int $area,
 		array $links,
@@ -300,7 +300,7 @@ class UserButtonMenu extends SimpleDropdown {
 	 * @param array $links
 	 * @return array
 	 */
-	private function groupLinksByPositionArea( array $links ): array {
+	protected function groupLinksByPositionArea( array $links ): array {
 		$areas = [
 			100 => [],
 			200 => [],
@@ -319,7 +319,7 @@ class UserButtonMenu extends SimpleDropdown {
 	 * @param array $link
 	 * @return int
 	 */
-	private function getPositionArea( array $link ): int {
+	protected function getPositionArea( array $link ): int {
 		$position = (int)( $link['position'] ?? 100 );
 
 		if ( $position < 200 ) {
