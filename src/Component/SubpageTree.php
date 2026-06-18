@@ -50,7 +50,7 @@ class SubpageTree extends SimpleTreeContainer {
 	public function shouldRender( IContextSource $context ): bool {
 		$title = $context->getTitle();
 
-		if ( !$title->isContentPage() ) {
+		if ( !$title || !$title->isContentPage() ) {
 			return false;
 		}
 
