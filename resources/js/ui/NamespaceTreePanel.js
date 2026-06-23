@@ -97,6 +97,7 @@ bs.skin.ui.NamespaceTreePanel.prototype.setupTree = function () {
 				this.pages = pages;
 				this.clearSkeleton();
 				this.updatePages();
+				setTimeout( () => this.scrollToActivePath( activePath, root ), 100 );
 			} );
 		} );
 		return;
@@ -110,6 +111,7 @@ bs.skin.ui.NamespaceTreePanel.prototype.setupTree = function () {
 		this.pages = data;
 		this.clearSkeleton();
 		this.updatePages();
+		setTimeout( () => this.scrollToActivePath( activePath, root ), 100 );
 	} );
 };
 
@@ -347,6 +349,44 @@ bs.skin.ui.NamespaceTreePanel.prototype.updatePages = function () {
 		session.setObject( expandedKey, filtered );
 		originalCollapse( name );
 	};
+};
+
+bs.skin.ui.NamespaceTreePanel.prototype.scrollToActivePath = function ( activePath, root ) {
+	// For top-level pages (empty activePath), scroll to the root page
+	const targetElement = activePath && activePath.length > 0 ? activePath[ activePath.length - 1 ] : root;
+
+	if ( !targetElement ) {
+		return;
+	}
+
+	const self = this;
+	const treeCnt = document.querySelector( '#sb-pri' );
+	if ( !treeCnt ) {
+		return;
+	}
+
+	// Multiple requestAnimationFrame to ensure rendering is complete
+	requestAnimationFrame( () => {
+		requestAnimationFrame( () => {
+			requestAnimationFrame( () => {
+				const $element = self.$treeCnt.find( 'li.oojs-ui-data-tree-item[data-name="' + targetElement.replace( /"/g, '&quot;' ) + '"]' );
+
+				if ( $element.length > 0 && $element[ 0 ].offsetParent !== null ) {
+					const rect = $element[ 0 ].getBoundingClientRect();
+					const containerRect = treeCnt.getBoundingClientRect();
+
+					const relativeTop = rect.top - containerRect.top + treeCnt.scrollTop;
+					const itemHeight = rect.height;
+					const containerHeight = treeCnt.clientHeight;
+
+					// Only scroll if item is outside visible area
+					if ( relativeTop < treeCnt.scrollTop || relativeTop + itemHeight > treeCnt.scrollTop + containerHeight ) {
+						treeCnt.scrollTop = relativeTop - ( containerHeight / 2 ) + ( itemHeight / 2 );
+					}
+				}
+			} );
+		} );
+	} );
 };
 
 bs.skin.ui.NamespaceTreePanel.prototype.onSearchInput = function () {
