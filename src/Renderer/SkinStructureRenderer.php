@@ -36,9 +36,7 @@ class SkinStructureRenderer implements ISkinStructureRenderer {
 		if ( !$this->skinStructureElement->shouldRender( $context ) ) {
 			return '';
 		}
-		$params = array_merge(
-			$this->skinStructureElement->getParams()
-		);
+		$params = $this->skinStructureElement->getParams();
 		$templateParser = new TemplateParser(
 			$this->skinStructureElement->getTemplatePath()
 		);
