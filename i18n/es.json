@@ -12,6 +12,7 @@
 		]
 	},
 	"bs-discovery-breadcrumb-nav-node-ns-main": "Páginas",
+	"bs-discovery-title-action-language-button-aria-label": "Seleccionar un idioma",
 	"bs-discovery-sidebar-actions-heading": "Acciones",
 	"bs-discovery-details-pnl-more-link-text": "... todas las acciones",
 	"bs-discovery-navigation-heading": "Comenzando",
@@ -28,6 +29,5 @@
 	"bs-discovery-footerlinks-imprint-link-page": "Proyecto:Impresión",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Términos_de_servicio",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "Editar",
-	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "Limpiar",
-	"bs-discovery-title-action-language-button-aria-label": "Seleccionar un idioma"
+	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "Limpiar"
 }
