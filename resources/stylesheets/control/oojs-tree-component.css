@@ -76,7 +76,7 @@
 		padding: calc( (var( --mws-tree-item-min-height ) - 1.5em) / 2 ) 0;
 	}
 
-	li.leaf div > span:first-child {
+	li div > span:first-child:not( .oojsplus-data-tree-expander ) {
 		margin-left: 32px;
 	}
 
