@@ -299,29 +299,30 @@
 	} );
 
 	const $sidebar = $( '#sb-pri' );
-
-	// Restore saved position
-	const saved = discovery_cookie.get( 'sb-pri-scroll' );
-	if ( saved !== null ) {
-		const scrollTo = parseInt( saved, 10 );
-		const tryRestore = () => {
-			if ( $sidebar[ 0 ].scrollHeight > scrollTo ) {
-				$sidebar.scrollTop( scrollTo );
-				return true;
-			}
-			return false;
-		};
-		if ( !tryRestore() ) {
-			const observer = new MutationObserver( () => {
-				if ( tryRestore() ) {
-					observer.disconnect();
+	if ( $sidebar[ 0 ] ) {
+		// Restore saved position
+		const saved = discovery_cookie.get( 'sb-pri-scroll' );
+		if ( saved !== null ) {
+			const scrollTo = parseInt( saved, 10 );
+			const tryRestore = () => {
+				if ( $sidebar[ 0 ].scrollHeight > scrollTo ) {
+					$sidebar.scrollTop( scrollTo );
+					return true;
 				}
-			} );
-			observer.observe( $sidebar[ 0 ], { childList: true, subtree: true } );
-			setTimeout( () => {
-				observer.disconnect();
-				tryRestore();
-			}, 5000 );
+				return false;
+			};
+			if ( !tryRestore() ) {
+				const observer = new MutationObserver( () => {
+					if ( tryRestore() ) {
+						observer.disconnect();
+					}
+				} );
+				observer.observe( $sidebar[ 0 ], { childList: true, subtree: true } );
+				setTimeout( () => {
+					observer.disconnect();
+					tryRestore();
+				}, 5000 );
+			}
 		}
 	}
 
