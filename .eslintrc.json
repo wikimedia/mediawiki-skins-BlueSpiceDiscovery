@@ -17,7 +17,8 @@
 		"ext": "readonly",
 		"jQuery": "readonly",
 		"mediaWiki": "readonly",
-		"OOJSPlus": "readonly"
+		"OOJSPlus": "readonly",
+		"StandardDialogs": "readonly"
 	},
 	"rules": {
 		"camelcase": "off",

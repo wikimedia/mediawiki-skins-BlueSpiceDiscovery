@@ -12,7 +12,8 @@
 	"requires": {
 		"MediaWiki": ">= 1.43.0",
 		"extensions": {
-			"OOJSPlus": ">= 3.0.0"
+			"OOJSPlus": ">= 3.0.0",
+			"StandardDialogs": ">= 3.2.0"
 		}
 	},
 	"ValidSkinNames": {
@@ -772,7 +773,8 @@
 			],
 			"dependencies": [
 				"ext.oojsplus.navigation.treePanel",
-				"oojs-ui"
+				"oojs-ui",
+				"ext.standardDialogs.page-actions"
 			]
 		},
 		"skin.discovery.enhancedsidebar-subpagetree": {
@@ -796,7 +798,8 @@
 			],
 			"dependencies": [
 				"ext.oojsplus.navigation.treePanel",
-				"oojs-ui"
+				"oojs-ui",
+				"ext.standardDialogs.page-actions"
 			]
 		}
 	},
