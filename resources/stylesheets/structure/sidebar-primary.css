@@ -120,6 +120,18 @@
 	padding: 0 16px;
 }
 
+.oojsplus-data-navigation-tree .action-tree-item.oo-ui-buttonElement.oo-ui-widget-enabled > .oo-ui-buttonElement-button > .oo-ui-iconElement-icon {
+	opacity: 0.45;
+	min-width: 16px;
+	width: 16px;
+	min-height: 16px;
+	left: 0.5rem;
+}
+
+.oojsplus-data-navigation-tree .action-tree-item.oo-ui-buttonElement:hover > .oo-ui-buttonElement-button > .oo-ui-iconElement-icon {
+	opacity: 0.55;
+}
+
 @media ( max-width: 767.99px ) {
 	#sb-pri {
 		overflow: auto;

@@ -326,6 +326,7 @@ bs.skin.ui.NamespaceTreePanel.prototype.updatePages = function () {
 		includeRedirect: false
 	} );
 	this.$treeCnt.append( pageTree.$element );
+	pageTree.setItemActions( [ new StandardDialogs.ui.AddSubPageItemAction() ] );
 
 	// Track expand/collapse by patching expandNode/collapseNode on the tree.
 	const session = require( 'mediawiki.storage' ).session;

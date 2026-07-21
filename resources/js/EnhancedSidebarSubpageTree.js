@@ -91,6 +91,7 @@ $( () => {
 					stateful: true,
 					maxLevel: depth - 1
 				} );
+				pageTree.setItemActions( [ new StandardDialogs.ui.AddSubPageItemAction() ] );
 				const $treeList = $( pageTree.$element ).find( 'ul' );
 				$( $treeList ).attr( 'role', 'group' );
 				$( $parent ).append( pageTree.$element );
