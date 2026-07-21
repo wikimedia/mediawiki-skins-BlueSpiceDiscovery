@@ -202,7 +202,7 @@ class SubpageDataGeneratorTest extends MediaWikiIntegrationTestCase {
 	 * @param string $name
 	 * @param string $text
 	 * @param array $classes
-	 * @param array $items
+	 * @param array $rawItems
 	 * @return array
 	 */
 	private function buildItem( string $name, string $text, array $classes = [], array $rawItems = [] ): array {

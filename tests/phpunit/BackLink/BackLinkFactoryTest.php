@@ -17,6 +17,7 @@ class BackLinkFactoryTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * @param string $pageName
 	 * @param array $urlParams
+	 * @param string|null $instanceName
 	 * @dataProvider provideTestData
 	 * @covers BlueSpice\Discovery\BackLinkProviderFactory::getProvider
 	 */
