@@ -1,7 +1,7 @@
 $( () => {
 
 	function setExpandedState( expand, key, name ) {
-		const expandedItems = localStorage.getItem( 'expanded-navigation-tree' );
+		const expandedItems = localStorage.getItem( 'expanded-navigation-tree' ); // eslint-disable-line mediawiki/no-storage
 		let expandedItemsList = {};
 		if ( expandedItems !== null ) {
 			expandedItemsList = JSON.parse( expandedItems );
@@ -36,9 +36,9 @@ $( () => {
 			}
 		}
 		if ( Object.keys( expandedItemsList ).length === 0 ) {
-			localStorage.removeItem( 'expanded-navigation-tree' );
+			localStorage.removeItem( 'expanded-navigation-tree' ); // eslint-disable-line mediawiki/no-storage
 		} else {
-			localStorage.setItem( 'expanded-navigation-tree', JSON.stringify( expandedItemsList ) );
+			localStorage.setItem( 'expanded-navigation-tree', JSON.stringify( expandedItemsList ) ); // eslint-disable-line mediawiki/no-storage
 		}
 	}
 
@@ -62,7 +62,7 @@ $( () => {
 			$( $parent ).attr( 'aria-busy', true );
 			const expandPaths = [];
 
-			const expandedItems = localStorage.getItem( 'expanded-navigation-tree' );
+			const expandedItems = localStorage.getItem( 'expanded-navigation-tree' ); // eslint-disable-line mediawiki/no-storage
 			if ( expandedItems !== null ) {
 				const expandedItemsArray = JSON.parse( expandedItems );
 				if ( !expandedItemsArray.hasOwnProperty( key ) ) {
@@ -116,7 +116,7 @@ $( () => {
 			return;
 		}
 
-		const expandedItems = localStorage.getItem( 'expanded-navigation-tree' );
+		const expandedItems = localStorage.getItem( 'expanded-navigation-tree' ); // eslint-disable-line mediawiki/no-storage
 		if ( !expandedItems ) {
 			return;
 		}

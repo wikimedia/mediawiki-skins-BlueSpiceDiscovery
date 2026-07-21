@@ -1,6 +1,6 @@
 $( () => {
 
-	const items = localStorage.getItem( 'expanded-navigation-tree' );
+	const items = localStorage.getItem( 'expanded-navigation-tree' ); // eslint-disable-line mediawiki/no-storage
 	if ( !items ) {
 		return;
 	}
@@ -14,9 +14,9 @@ $( () => {
 		delete ( itemsList[ itemsIDs[ id ] ] );
 	}
 	if ( Object.keys( itemsList ).length === 0 ) {
-		localStorage.removeItem( 'expanded-navigation-tree' );
+		localStorage.removeItem( 'expanded-navigation-tree' ); // eslint-disable-line mediawiki/no-storage
 	} else {
-		localStorage.setItem( 'expanded-navigation-tree', JSON.stringify( itemsList ) );
+		localStorage.setItem( 'expanded-navigation-tree', JSON.stringify( itemsList ) ); // eslint-disable-line mediawiki/no-storage
 	}
 
 } );
