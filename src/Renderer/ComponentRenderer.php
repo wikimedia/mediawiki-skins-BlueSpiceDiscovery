@@ -24,14 +24,15 @@ class ComponentRenderer {
 	private $rendererDataTreeRenderer = null;
 
 	/**
-	 * @param ComponentManager $manager
-	 * @param RendererDataTreeBuilder $dataTreeBuilder
-	 * @param RendererDataTreeRenderer $dataTreeRenderer
+	 * @param ComponentManager $componentManager
+	 * @param RendererDataTreeBuilder $rendererDataTreeBuilder
+	 * @param RendererDataTreeRenderer $rendererDataTreeRenderer
 	 */
 	public function __construct(
 		ComponentManager $componentManager,
 		RendererDataTreeBuilder $rendererDataTreeBuilder,
-		RendererDataTreeRenderer $rendererDataTreeRenderer ) {
+		RendererDataTreeRenderer $rendererDataTreeRenderer
+	) {
 		$this->componentManager = $componentManager;
 		$this->rendererDataTreeBuilder = $rendererDataTreeBuilder;
 		$this->rendererDataTreeRenderer = $rendererDataTreeRenderer;

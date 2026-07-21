@@ -271,7 +271,6 @@ class UserButtonMenu extends SimpleDropdown {
 	}
 
 	/**
-	 *
 	 * @param string $id
 	 * @param int $area
 	 * @param array $links

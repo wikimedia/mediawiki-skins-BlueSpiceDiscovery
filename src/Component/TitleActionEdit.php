@@ -34,6 +34,7 @@ class TitleActionEdit extends SimpleDropdownIconSplitButton {
 	/**
 	 * @param PermissionManager $permissionManager
 	 * @param array $componentProcessData
+	 * @param ObjectFactory $objectFactory
 	 */
 	public function __construct( $permissionManager, $componentProcessData, $objectFactory ) {
 		parent::__construct( [] );

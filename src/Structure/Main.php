@@ -101,6 +101,9 @@ class Main implements
 
 	/**
 	 * @param ITemplateDataProvider $templateDataProvider
+	 * @param ComponentRenderer $componentRenderer
+	 * @param SkinSlotRenderer $skinSlotRenderer
+	 * @param CookieHandler $cookieHandler
 	 * @param PermissionManager $permissionManager
 	 * @param LinkRenderer $linkRenderer
 	 * @param RevisionStore $revisionStore
@@ -130,6 +133,9 @@ class Main implements
 
 	/**
 	 * @param ITemplateDataProvider $templateDataProvider
+	 * @param ComponentRenderer $componentRenderer
+	 * @param SkinSlotRenderer $skinSlotRenderer
+	 * @param CookieHandler $cookieHandler
 	 * @param PermissionManager $permissionManager
 	 * @param LinkRenderer $linkRenderer
 	 * @param RevisionStore $revisionStore

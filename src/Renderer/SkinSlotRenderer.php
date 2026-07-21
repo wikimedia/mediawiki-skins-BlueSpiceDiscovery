@@ -7,12 +7,12 @@ use MWStake\MediaWiki\Component\CommonUserInterface\SkinSlotRendererFactory;
 class SkinSlotRenderer {
 
 	/**
-	 * @var ComponentManager
+	 * @var SkinSlotRendererFactory
 	 */
 	private $skinSlotRendererFactory = null;
 
 	/**
-	 * @param ComponentManager $manager
+	 * @param SkinSlotRendererFactory $skinSlotRendererFactory
 	 */
 	public function __construct( SkinSlotRendererFactory $skinSlotRendererFactory ) {
 		$this->skinSlotRendererFactory = $skinSlotRendererFactory;

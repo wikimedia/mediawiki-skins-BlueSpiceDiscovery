@@ -45,6 +45,7 @@ class LastEditInfo extends Literal {
 	 * @param RequestContext $requestContext
 	 * @param LinkRenderer $linkRenderer
 	 * @param RevisionStore $revisionStore
+	 * @param ObjectFactory $objectFactory
 	 */
 	public function __construct( $requestContext, $linkRenderer, $revisionStore, $objectFactory ) {
 		parent::__construct(

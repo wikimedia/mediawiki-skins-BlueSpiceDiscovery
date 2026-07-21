@@ -33,8 +33,8 @@ class DefaultBreadCrumbRendererTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * @param Title $title
 	 * @param array $webRequestValues
-	 * @param array $expectedRootNode
-	 * @param array $expectedLeafNode
+	 * @param string $expectedRootNodeUrl
+	 * @param string $expectedLeafNodeUrl
 	 * @param array $expectedLabels
 	 * @return void
 	 * @dataProvider provideGetParamsTestData
