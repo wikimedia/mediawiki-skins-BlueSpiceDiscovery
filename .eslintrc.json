@@ -24,6 +24,7 @@
 		"es-x/no-array-prototype-includes": "off",
 		"es-x/no-async-functions": "off",
 		"max-len": "off",
+		"mediawiki/no-unlabeled-buttonwidget": "off",
 		"no-jquery/no-class-state": "off",
 		"no-jquery/no-global-selector": "off",
 		"no-jquery/variable-pattern": "off",
