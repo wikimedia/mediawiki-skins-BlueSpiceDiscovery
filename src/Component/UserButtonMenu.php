@@ -22,9 +22,6 @@ use MWStake\MediaWiki\Component\DynamicFileDispatcher\DynamicFileDispatcherFacto
 
 class UserButtonMenu extends SimpleDropdown {
 
-	/**
-	 *
-	 */
 	public function __construct() {
 		parent::__construct( [] );
 	}
@@ -180,7 +177,6 @@ class UserButtonMenu extends SimpleDropdown {
 	}
 
 	/**
-	 *
 	 * @param IContextSource $context
 	 * @return bool
 	 */
@@ -195,7 +191,6 @@ class UserButtonMenu extends SimpleDropdown {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	protected function getSkinSlotHtml(): string {
@@ -340,7 +335,6 @@ class UserButtonMenu extends SimpleDropdown {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	private function getAvatar(): string {

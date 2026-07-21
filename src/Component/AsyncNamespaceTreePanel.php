@@ -13,9 +13,6 @@ use RawMessage;
 
 class AsyncNamespaceTreePanel extends SimpleCard {
 
-	/**
-	 *
-	 */
 	public function __construct() {
 		parent::__construct( [] );
 	}

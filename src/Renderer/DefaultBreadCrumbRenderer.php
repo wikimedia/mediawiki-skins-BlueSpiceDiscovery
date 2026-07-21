@@ -25,19 +25,16 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	private $title;
 
 	/**
-	 *
 	 * @var MessageLocalizer
 	 */
 	private $messageLocalizer;
 
 	/**
-	 *
 	 * @var SpecialPageFactory
 	 */
 	private $specialPageFactory;
 
 	/**
-	 *
 	 * @var Title
 	 */
 	private $relevantTitle = null;
@@ -81,7 +78,6 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function getParams(): array {
@@ -98,7 +94,6 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	}
 
 	/**
-	 *
 	 * @return void
 	 */
 	private function buildRootNode() {
@@ -186,7 +181,6 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getTemplatePath(): string {
