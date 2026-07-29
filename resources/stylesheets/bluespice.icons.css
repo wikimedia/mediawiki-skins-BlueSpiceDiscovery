@@ -81,3 +81,9 @@
 	content: '\f52a';
 	font-family: 'bootstrap-icons';
 }
+
+/* Icon arrow back */
+.bi-bs-back-arrow::before {
+	content: '\f12f';
+	font-family: 'bootstrap-icons';
+}
