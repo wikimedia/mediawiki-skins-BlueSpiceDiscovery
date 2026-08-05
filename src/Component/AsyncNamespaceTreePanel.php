@@ -2,8 +2,8 @@
 
 namespace BlueSpice\Discovery\Component;
 
-use Html;
 use MediaWiki\Context\IContextSource;
+use MediaWiki\Html\Html;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleButton;
