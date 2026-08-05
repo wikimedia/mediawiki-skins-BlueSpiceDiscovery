@@ -4,12 +4,12 @@ namespace BlueSpice\Discovery\Component;
 
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Html\Html;
+use MediaWiki\Language\RawMessage;
 use MediaWiki\Message\Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleButton;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardHeader;
-use RawMessage;
 
 class AsyncNamespaceTreePanel extends SimpleCard {
 
