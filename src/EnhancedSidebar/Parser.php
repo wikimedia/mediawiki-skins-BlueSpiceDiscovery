@@ -275,7 +275,9 @@ class Parser extends MutableParser implements IParser, IMenuParser {
 	 * @return Content
 	 */
 	protected function getContentObject(): Content {
-		return new JsonContent( $this->getMutatedData() );
+		return new JsonContent(
+			json_encode( $this->rawData, JSON_PRETTY_PRINT )
+		);
 	}
 
 	/**
