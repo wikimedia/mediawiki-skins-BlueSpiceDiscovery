@@ -7,6 +7,8 @@ use BlueSpice\Discovery\EnhancedSidebar\NodeProcessor\EnhancedSidebarNodeProcess
 use BlueSpice\Discovery\EnhancedSidebar\NodeProcessor\ExternalLinkProcessor;
 use BlueSpice\Discovery\EnhancedSidebar\Parser;
 use MediaWiki\Revision\MutableRevisionRecord;
+use MediaWiki\Revision\RevisionRecord;
+use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Title\Title;
 use MWStake\MediaWiki\Lib\Nodes\INodeSource;
 use PHPUnit\Framework\TestCase;
@@ -15,6 +17,49 @@ use PHPUnit\Framework\TestCase;
  * @covers \BlueSpice\Discovery\EnhancedSidebar\Parser
  */
 class ParserTest extends TestCase {
+	/**
+	 * @covers \BlueSpice\Discovery\EnhancedSidebar\Parser::addNodesFromData
+	 * @covers \BlueSpice\Discovery\EnhancedSidebar\Parser::getContentObject
+	 * @return void
+	 */
+	public function testSingleTopLevelNodePersistsValidContent() {
+		$data = [
+			[
+				'type' => 'enhanced-sidebar-external-link',
+				'href' => 'https://www.mediawiki.org',
+				'text' => 'MediaWiki',
+				'hidden' => '',
+				'level' => 1
+			],
+		];
+
+		$title = Title::newFromText( 'testTitle' );
+		// A "real" (non-Mutable) revision, like an already-saved page - $mutated starts false.
+		$revision = $this->createMock( RevisionRecord::class );
+		$revision->method( 'getId' )->willReturn( 1 );
+		$revision->method( 'getPage' )->willReturn( $title );
+
+		$objectCache = $this->createMock( 'Wikimedia\ObjectCache\WANObjectCache' );
+		$parser = new Parser( $revision, [ $this->getProcessor() ], $objectCache );
+		$parser->addNodesFromData( $data );
+
+		$content = $parser->getRevision()->getContent( SlotRecord::MAIN );
+		$this->assertNotNull( $content, 'Revision content must not be null after a single top-level node was added' );
+		$this->assertSame(
+			[
+				[
+					'type' => 'enhanced-sidebar-external-link',
+					'text' => 'MediaWiki',
+					'hidden' => '',
+					'classes' => [],
+					'icon-cls' => '',
+					'href' => 'https://www.mediawiki.org',
+				]
+			],
+			json_decode( $content->getText(), true )
+		);
+	}
+
 	/**
 	 * @covers \BlueSpice\Discovery\EnhancedSidebar\Parser::addNodesFromData
 	 * @return void
