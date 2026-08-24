@@ -41,6 +41,16 @@ class MetaItemsFooter extends ArraySetting {
 	}
 
 	/**
+	 * Meta items provided by extensions that are not available in this installation
+	 * must be filtered out, otherwise the setting can not be saved anymore
+	 *
+	 * @return array
+	 */
+	public function getValue() {
+		return array_values( array_intersect( (array)parent::getValue(), $this->getOptions() ) );
+	}
+
+	/**
 	 * @return array
 	 */
 	protected function getOptions() {
