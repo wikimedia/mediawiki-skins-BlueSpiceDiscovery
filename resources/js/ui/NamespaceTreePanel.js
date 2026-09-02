@@ -97,7 +97,9 @@ bs.skin.ui.NamespaceTreePanel.prototype.setupTree = function () {
 				this.pages = pages;
 				this.clearSkeleton();
 				this.updatePages();
-				setTimeout( () => this.scrollToActivePath( activePath, root ), 100 );
+				if ( !mw.config.get( 'wgIsMainPage' ) ) {
+					setTimeout( () => this.scrollToActivePath( activePath, root ), 100 );
+				}
 			} );
 		} );
 		return;
@@ -111,7 +113,9 @@ bs.skin.ui.NamespaceTreePanel.prototype.setupTree = function () {
 		this.pages = data;
 		this.clearSkeleton();
 		this.updatePages();
-		setTimeout( () => this.scrollToActivePath( activePath, root ), 100 );
+		if ( !mw.config.get( 'wgIsMainPage' ) ) {
+			setTimeout( () => this.scrollToActivePath( activePath, root ), 100 );
+		}
 	} );
 };
 

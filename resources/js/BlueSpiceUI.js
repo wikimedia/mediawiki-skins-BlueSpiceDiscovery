@@ -298,42 +298,44 @@
 		$( '#new-content-menu-btn' ).trigger( 'focus' );
 	} );
 
-	const $sidebar = $( '#sb-pri' );
-	if ( $sidebar[ 0 ] ) {
-		// Restore saved position
-		const saved = discovery_cookie.get( 'sb-pri-scroll' );
-		if ( saved !== null ) {
-			const scrollTo = parseInt( saved, 10 );
-			const tryRestore = () => {
-				if ( $sidebar[ 0 ].scrollHeight > scrollTo ) {
-					$sidebar.scrollTop( scrollTo );
-					return true;
-				}
-				return false;
-			};
-			if ( !tryRestore() ) {
-				const observer = new MutationObserver( () => {
-					if ( tryRestore() ) {
-						observer.disconnect();
+	if ( !mw.config.get( 'wgIsMainPage' ) ) {
+		const $sidebar = $( '#sb-pri' );
+		if ( $sidebar[ 0 ] ) {
+			// Restore saved position
+			const saved = discovery_cookie.get( 'sb-pri-scroll' );
+			if ( saved !== null ) {
+				const scrollTo = parseInt( saved, 10 );
+				const tryRestore = () => {
+					if ( $sidebar[ 0 ].scrollHeight > scrollTo ) {
+						$sidebar.scrollTop( scrollTo );
+						return true;
 					}
-				} );
-				observer.observe( $sidebar[ 0 ], { childList: true, subtree: true } );
-				setTimeout( () => {
-					observer.disconnect();
-					tryRestore();
-				}, 5000 );
+					return false;
+				};
+				if ( !tryRestore() ) {
+					const observer = new MutationObserver( () => {
+						if ( tryRestore() ) {
+							observer.disconnect();
+						}
+					} );
+					observer.observe( $sidebar[ 0 ], { childList: true, subtree: true } );
+					setTimeout( () => {
+						observer.disconnect();
+						tryRestore();
+					}, 5000 );
+				}
 			}
 		}
-	}
 
-	// When scrolling: Save position (throttled)
-	let scrollTimer;
-	$sidebar.on( 'scroll', () => {
-		clearTimeout( scrollTimer );
-		scrollTimer = setTimeout( () => {
-			discovery_cookie.set( 'sb-pri-scroll', $sidebar.scrollTop() );
-		}, 200 );
-	} );
+		// When scrolling: Save position (throttled)
+		let scrollTimer;
+		$sidebar.on( 'scroll', () => {
+			clearTimeout( scrollTimer );
+			scrollTimer = setTimeout( () => {
+				discovery_cookie.set( 'sb-pri-scroll', $sidebar.scrollTop() );
+			}, 200 );
+		} );
+	}
 
 	blueSpiceDiscovery.ui.toggleSidebar = toggleSidebar;
 	blueSpiceDiscovery.ui.showSidebarPrimary = showSidebarPrimary;
