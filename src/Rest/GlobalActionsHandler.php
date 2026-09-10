@@ -6,19 +6,24 @@ use BlueSpice\Discovery\Renderer\ComponentRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\GlobalActionsAdministrationSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\GlobalActionsEditingSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\GlobalActionsOverviewSkinSlotRenderer;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Message\Message;
+use MediaWiki\Rest\HttpException;
 use MediaWiki\Rest\SimpleHandler;
+use MediaWiki\Title\TitleFactory;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardBody;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardHeader;
 use MWStake\MediaWiki\Component\CommonUserInterface\SkinSlotRendererFactory;
+use Wikimedia\ParamValidator\ParamValidator;
 
 class GlobalActionsHandler extends SimpleHandler {
 
 	public function __construct(
 		private readonly SkinSlotRendererFactory $skinSlotRendererFactory,
-		private readonly ComponentRenderer $componentRenderer
+		private readonly ComponentRenderer $componentRenderer,
+		private readonly TitleFactory $titleFactory
 	) {
 	}
 
@@ -26,6 +31,13 @@ class GlobalActionsHandler extends SimpleHandler {
 	 * @return \MediaWiki\Rest\Response
 	 */
 	public function execute() {
+		$params = $this->getValidatedParams();
+		$title = $this->titleFactory->newFromText( $params['title'] );
+		if ( !$title ) {
+			throw new HttpException( 'Invalid context title', 400 );
+		}
+		RequestContext::getMain()->setTitle( $title );
+
 		$overviewHtml = $this->getOverviewSkinSlotHtml();
 		$editingHtml = $this->getEditingSkinSlotHtml();
 		$administrationHtml = $this->getAdministrationSkinSlotHtml();
@@ -116,6 +128,19 @@ class GlobalActionsHandler extends SimpleHandler {
 	 */
 	public function needsReadAccess() {
 		return true;
+	}
+
+	/**
+	 * @return array[]
+	 */
+	public function getParamSettings() {
+		return [
+			'title' => [
+				static::PARAM_SOURCE => 'query',
+				ParamValidator::PARAM_REQUIRED => true,
+				ParamValidator::PARAM_TYPE => 'string'
+			]
+		];
 	}
 
 	/**

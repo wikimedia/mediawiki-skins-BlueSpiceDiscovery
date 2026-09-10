@@ -815,7 +815,11 @@
 		{
 			"path": "/bluespice/discovery/global-actions",
 			"class": "BlueSpice\\Discovery\\Rest\\GlobalActionsHandler",
-			"services": [ "MWStakeCommonUISkinSlotRendererFactory", "BlueSpiceDiscoveryComponentRenderer" ]
+			"services": [
+				"MWStakeCommonUISkinSlotRendererFactory",
+				"BlueSpiceDiscoveryComponentRenderer",
+				"TitleFactory"
+			]
 		}
 	],
 	"load_composer_autoloader": true,

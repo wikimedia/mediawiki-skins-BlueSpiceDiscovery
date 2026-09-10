@@ -59,4 +59,11 @@ class DiffBackLinkProvider implements IBackLinkProvider {
 	public function getAriaLabel(): Message {
 		return Message::newFromKey( 'bs-discovery-back-to-version-history' );
 	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function getPreComponents(): array {
+		return [];
+	}
 }
