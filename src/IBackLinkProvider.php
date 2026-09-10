@@ -4,6 +4,7 @@ namespace BlueSpice\Discovery;
 
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Message\Message;
+use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
 
 interface IBackLinkProvider {
 
@@ -32,5 +33,10 @@ interface IBackLinkProvider {
 	 * @return Message
 	 */
 	public function getAriaLabel(): Message;
+
+	/**
+	 * @return IComponent[]
+	 */
+	public function getPreComponents(): array;
 
 }

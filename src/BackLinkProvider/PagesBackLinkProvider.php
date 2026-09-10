@@ -3,6 +3,7 @@
 namespace BlueSpice\Discovery\BackLinkProvider;
 
 use BlueSpice\Discovery\IBackLinkProvider;
+use MediaWiki\Language\RawMessage;
 use MediaWiki\Message\Message;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
@@ -30,8 +31,12 @@ class PagesBackLinkProvider implements IBackLinkProvider {
 		if ( !$backToValue ) {
 			return false;
 		}
-		$this->backToTitle = $this->titleFactory->newFromText( urldecode( $backToValue ) );
-		return $this->backToTitle instanceof Title;
+		$title = $this->titleFactory->newFromText( urldecode( $backToValue ) );
+		if ( !( $title instanceof Title ) ) {
+			return false;
+		}
+		$this->backToTitle = $title;
+		return true;
 	}
 
 	/**
@@ -53,7 +58,7 @@ class PagesBackLinkProvider implements IBackLinkProvider {
 			$titleParts = explode( '/', $titleText );
 			$titleText = $this->backToTitle->getNSText() . ':' . $titleParts[0];
 		}
-		return Message::newFromKey( 'bs-discovery-back-to-page', $titleText );
+		return new RawMessage( $titleText );
 	}
 
 	/**
@@ -68,5 +73,12 @@ class PagesBackLinkProvider implements IBackLinkProvider {
 	 */
 	public function getAriaLabel(): Message {
 		return Message::newFromKey( 'bs-discovery-back-to-page', $this->backToTitle->getText() );
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function getPreComponents(): array {
+		return [];
 	}
 }

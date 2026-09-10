@@ -40,12 +40,15 @@ class BackTo extends SimpleLink {
 	 * @inheritDoc
 	 */
 	public function getSubComponents(): array {
-		return [
-			new Literal(
-				'backTo-label',
-				$this->provider->getLabel()
-			)
-		];
+		return array_merge(
+			$this->provider->getPreComponents(),
+			[
+				new Literal(
+					'backTo-label',
+					$this->provider->getLabel()
+				)
+			]
+		);
 	}
 
 	/**
