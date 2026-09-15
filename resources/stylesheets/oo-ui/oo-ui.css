@@ -43,6 +43,19 @@ body.mediawiki .oo-ui-windowManager-modal > .oo-ui-dialog {
 	border-color: #72777d;
 }
 
+/* ERM49691 - Give the clear indicator of search inputs a visible hover state */
+.oo-ui-textInputWidget.oo-ui-textInputWidget-type-search.oo-ui-indicatorElement > .oo-ui-indicatorElement-indicator {
+	width: 24px;
+	margin-right: 4px;
+	background-size: 12px 12px;
+	border-radius: 2px;
+	transition: background-color 100ms;
+}
+
+.oo-ui-textInputWidget.oo-ui-widget-enabled.oo-ui-textInputWidget-type-search.oo-ui-indicatorElement > .oo-ui-indicatorElement-indicator:hover {
+	background-color: var( --background-color-interactive--hover, #eaecf0 );
+}
+
 /* ERM43801 - Fix contrast mode of browser with forced colors */
 @media ( forced-colors: active ) {
 	.oo-ui-tabOptionWidget.oo-ui-optionWidget-selected,
