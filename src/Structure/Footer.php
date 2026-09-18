@@ -21,13 +21,13 @@ use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 class Footer extends SkinStructureBase implements IBaseTemplateAware {
 
 	/** @var BaseTemplate */
-	private $template;
+	protected $template;
 
 	/** @var HookContainer */
-	private $hookContainer;
+	protected $hookContainer;
 
 	/** @var MediaWikiServices */
-	private $services;
+	protected $services;
 
 	/**
 	 * @param ITemplateDataProvider $templateDataProvider
@@ -87,7 +87,7 @@ class Footer extends SkinStructureBase implements IBaseTemplateAware {
 	/**
 	 * @return string
 	 */
-	private function getFooterLinks(): string {
+	protected function getFooterLinks(): string {
 		/**
 		 * For compatibility the services are not injected
 		 * TODO: Inject services
@@ -116,7 +116,7 @@ class Footer extends SkinStructureBase implements IBaseTemplateAware {
 	/**
 	 * @return array
 	 */
-	private function getFooterIcons(): array {
+	protected function getFooterIcons(): array {
 		$items = [];
 		$footericons = $this->services->getMainConfig()->get( 'FooterIcons' );
 		$items = $footericons['poweredby'];

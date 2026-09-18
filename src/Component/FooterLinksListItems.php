@@ -24,28 +24,28 @@ use Throwable;
 class FooterLinksListItems extends Literal {
 
 	/** @var Skin */
-	private $skin;
+	protected $skin;
 
 	/** @var Title */
-	private $footerLinksSourceTitle;
+	protected $footerLinksSourceTitle;
 
 	/** @var TitleFactory */
-	private $titleFactory;
+	protected $titleFactory;
 
 	/** @var UrlUtils */
-	private $urlUtils;
+	protected $urlUtils;
 
 	/** @var LinkFormatter */
-	private $linkFormatter;
+	protected $linkFormatter;
 
 	/** @var ParserFactory */
-	private $parserFactory;
+	protected $parserFactory;
 
 	/** @var RevisionStore */
-	private $revisionStore;
+	protected $revisionStore;
 
 	/** @var HookContainer */
-	private $hookContainer;
+	protected $hookContainer;
 
 	/**
 	 * @param Skin $skin
@@ -132,7 +132,7 @@ class FooterLinksListItems extends Literal {
 	 *
 	 * @return string[] Map of (key => HTML) for 'privacy', 'about', 'disclaimer'
 	 */
-	private function getDefaultFooterLinks(): array {
+	protected function getDefaultFooterLinks(): array {
 		$footerLinks = [];
 
 		$linkSpecs = [
@@ -157,7 +157,7 @@ class FooterLinksListItems extends Literal {
 	 * @param string $pageKey The i18n message key for the page to link to
 	 * @return string HTML anchor
 	 */
-	private function buildFooterLink( string $key, string $descKey, string $pageKey ): string {
+	protected function buildFooterLink( string $key, string $descKey, string $pageKey ): string {
 		$descMsg = Message::newFromKey( $descKey )->inContentLanguage();
 		$pageMsg = Message::newFromKey( $pageKey )->inContentLanguage();
 
@@ -187,7 +187,7 @@ class FooterLinksListItems extends Literal {
 	/**
 	 * @return array
 	 */
-	private function getCustomFooterLinks(): array {
+	protected function getCustomFooterLinks(): array {
 		$parserData = $this->getParserData();
 
 		$customFooterLinksData = $this->buildCustomFooterLinksData( $parserData );
@@ -211,7 +211,7 @@ class FooterLinksListItems extends Literal {
 	 * @param INode[] $parserData
 	 * @return array
 	 */
-	private function buildCustomFooterLinksData( array $parserData ): array {
+	protected function buildCustomFooterLinksData( array $parserData ): array {
 		$links = [];
 		foreach ( $parserData as $dataItem ) {
 			if ( !( $dataItem instanceof TwoFoldLinkSpec ) ) {
@@ -249,7 +249,7 @@ class FooterLinksListItems extends Literal {
 	/**
 	 * @return string
 	 */
-	private function buildEditLink(): string {
+	protected function buildEditLink(): string {
 		$link = Html::openElement(
 			'li',
 			[
@@ -281,7 +281,7 @@ class FooterLinksListItems extends Literal {
 	/**
 	 * @return INode[]
 	 */
-	private function getParserData(): array {
+	protected function getParserData(): array {
 		$revision = $this->revisionStore->getRevisionByTitle( $this->footerLinksSourceTitle );
 		if ( !$revision ) {
 			return [];
@@ -302,7 +302,7 @@ class FooterLinksListItems extends Literal {
 	/**
 	 * @return HookRunner
 	 */
-	private function getHookRunner() {
+	protected function getHookRunner() {
 		return new HookRunner( $this->hookContainer );
 	}
 }
