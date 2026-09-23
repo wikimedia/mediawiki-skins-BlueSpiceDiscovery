@@ -243,6 +243,11 @@
 		"FlexiSkin": {
 			"SubscriberRegistry": {
 				"discovery": "\\BlueSpice\\Discovery\\FlexiSkin\\Subscriber::factory"
+			},
+			"SkinRegistry": {
+				"bluespicediscovery": {
+					"plugins": [ "LayoutColors", "Content", "FreeCss" ]
+				}
 			}
 		},
 		"BlueSpiceFoundation": {
