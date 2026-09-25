@@ -252,6 +252,7 @@
 				"DiscoveryMainLinksListFiles": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksListFiles::getInstance",
 				"DiscoveryMainLinksRecentChanges": "\\BlueSpice\\Discovery\\ConfigDefinition\\MainLinksRecentChanges::getInstance",
 				"DiscoverySidebarPrimaryMainTabPanelMenu": "\\BlueSpice\\Discovery\\ConfigDefinition\\SidebarPrimaryMainTabPanelMenu::getInstance",
+				"DiscoveryEnableCachingEnhancedSidebar": "\\BlueSpice\\Discovery\\ConfigDefinition\\EnableCachingEnhancedSidebar::getInstance",
 				"DiscoveryMetaItemsHeader": "\\BlueSpice\\Discovery\\ConfigDefinition\\MetaItemsHeader::getInstance",
 				"DiscoveryMetaItemsFooter": "\\BlueSpice\\Discovery\\ConfigDefinition\\MetaItemsFooter::getInstance"
 			},
@@ -456,6 +457,9 @@
 		},
 		"DiscoveryTemplateDataProvider": {
 			"value": "bluespice"
+		},
+		"DiscoveryEnableCachingEnhancedSidebar": {
+			"value": true
 		}
 	},
 	"ResourceModules": {
