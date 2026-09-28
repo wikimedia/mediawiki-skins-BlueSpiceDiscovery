@@ -45,7 +45,7 @@ class Parser extends MutableParser implements IParser, IMenuParser {
 	public const CACHE_KEY = 'enhanced-sidebar-nodes-cache';
 
 	/** @var int Cache TTL in seconds */
-	private const CACHE_TTL = 0;
+	private const CACHE_TTL = 3600;
 
 	/** @var Config */
 	private $config;
@@ -101,7 +101,7 @@ class Parser extends MutableParser implements IParser, IMenuParser {
 		return $this->objectCache->getWithSetCallback(
 			$this->dataCacheUserKey,
 			self::CACHE_TTL,
-			$this->getOutput()
+			fn () => $this->getOutput()
 		);
 	}
 
