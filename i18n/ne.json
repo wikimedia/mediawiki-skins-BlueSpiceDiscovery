@@ -20,6 +20,8 @@
 	"bs-discovery-create-button-new-section-text": "नयाँ खण्ड",
 	"bs-discovery-create-button-new-section-title": "नयाँ खण्ड सिर्जना गर्नुहोस्",
 	"bs-discovery-create-button-new-file-text": "नयाँ फाइल",
+	"bs-discovery-navbar-global-actions-overview-text": "अवलोकन",
+	"bs-discovery-navbar-global-actions-editing-text": "सम्पादन गर्दै",
 	"bs-discovery-breadcrumb-nav-node-ns-main": "पृष्ठहरू",
 	"bs-discovery-breadcrumb-nav-node-title": "$1 खोल्नुहोस्",
 	"bs-discovery-breadcrumb-nav-node-aria-label": "$1 खोल्नुहोस्",
