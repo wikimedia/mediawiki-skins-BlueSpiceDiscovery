@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"A.jalate",
 			"Avengium",
 			"Fitoschido",
 			"JDíaz32",
@@ -29,5 +30,6 @@
 	"bs-discovery-footerlinks-imprint-link-page": "Proyecto:Impresión",
 	"bs-discovery-footerlinks-termsofservice-link-page": "Site:Términos_de_servicio",
 	"bs-discovery-breadcrumb-label-special-editwatchlist-raw": "Editar",
-	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "Limpiar"
+	"bs-discovery-breadcrumb-label-special-editwatchlist-clear": "Limpiar",
+	"bs-discovery-config-enable-caching-enhanced-sidebar-label": "Utilice el almacenamiento en caché para \"La barra lateral de Mediawiki mejorada\""
 }
