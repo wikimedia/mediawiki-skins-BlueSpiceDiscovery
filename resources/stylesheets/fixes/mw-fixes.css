@@ -67,3 +67,11 @@ body.mw-underline-always .mw-body-content a {
 .mw-mmv-above-fold {
 	box-sizing: content-box;
 }
+
+.permissions-errors {
+	background-color: var( --background-color-error-subtle, #ffe9e5 );
+	border: 1px solid var( --border-color-error, #9f3526 );
+	border-radius: 2px;
+	padding: 16px 24px;
+	font-weight: normal;
+}
