@@ -52,7 +52,7 @@ class AsyncNamespaceTreePanel extends SimpleCard {
 						'id' => 'navigation-tree-search',
 						'aria-label' => Message::newFromKey( 'bs-discovery-namespace-tree-search-btn-label' ),
 						'aria' => [
-							'pressed' => false
+							'pressed' => 'false'
 						],
 						'text' => new RawMessage( '' ),
 						'title' => Message::newFromKey( 'bs-discovery-namespace-tree-search-btn-label' ),

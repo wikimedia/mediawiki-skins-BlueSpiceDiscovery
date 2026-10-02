@@ -57,7 +57,7 @@ class SubpageListProcessor extends InternalLinkProcessor {
 		return array_merge(
 			$data,
 			[
-				'data' => [ 'root' => $titleDBKey, 'depth' => $node->getDepth() ],
+				'data' => [ 'root' => $titleDBKey, 'depth' => (string)$node->getDepth() ],
 				'classes' => $classes,
 				'items' => [],
 				'isLeaf' => !$hasSubpages
