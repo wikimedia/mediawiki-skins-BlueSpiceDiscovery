@@ -37,6 +37,10 @@ body.hide-title.title-fixed .enhanced-history-toolbar {
 	top: var( --navbar-primary-height );
 }
 
+#book-nav-pri-book-selector::after {
+	width: 16px;
+}
+
 /* ERM43801 - Fix contrast mode of browser with forced colors */
 @media ( forced-colors: active ) {
 	.notifications-ui-widget-ToggleReadCircleButtonWidget-circle,
