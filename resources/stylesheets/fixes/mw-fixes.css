@@ -11,6 +11,10 @@ body.mediawiki .mw-notification-area {
 	top: var( --navbar-primary-height );
 }
 
+body.mediawiki .mw-notification-area:empty {
+	padding: 0;
+}
+
 /* Fix notification popup position */
 body.mediawiki .mw-notification-area-layout {
 	position: fixed;

@@ -219,6 +219,10 @@
 		const $toggleBtns = $( '.sb-toggle[aria-controls=' + id + ']' );
 		const $sidebarCnt = $( '#' + id );
 
+		if ( !$sidebarCnt.length ) {
+			return;
+		}
+
 		// Allow only 'undefinded' or strings 'true' or 'false'
 		if ( expand !== 'true' && expand !== 'false' ) {
 			expand = undefined;

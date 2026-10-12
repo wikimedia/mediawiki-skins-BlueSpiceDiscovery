@@ -33,6 +33,10 @@ body.hide-title.title-fixed .enhanced-history-toolbar {
 	background-color: #f1f3f9;
 }
 
+.hide-title .ext-edit-comments-header-layout {
+	top: var( --navbar-primary-height );
+}
+
 /* ERM43801 - Fix contrast mode of browser with forced colors */
 @media ( forced-colors: active ) {
 	.notifications-ui-widget-ToggleReadCircleButtonWidget-circle,
