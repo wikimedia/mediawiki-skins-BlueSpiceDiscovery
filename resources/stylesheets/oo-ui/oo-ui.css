@@ -45,8 +45,10 @@ body.mediawiki .oo-ui-windowManager-modal > .oo-ui-dialog {
 
 /* ERM49691 - Give the clear indicator of search inputs a visible hover state */
 .oo-ui-textInputWidget.oo-ui-textInputWidget-type-search.oo-ui-indicatorElement > .oo-ui-indicatorElement-indicator {
+	top: 2px;
 	width: 24px;
-	margin-right: 4px;
+	height: calc( 100% - 4px );
+	margin-right: 2px;
 	background-size: 12px 12px;
 	border-radius: 2px;
 	transition: background-color 100ms;
