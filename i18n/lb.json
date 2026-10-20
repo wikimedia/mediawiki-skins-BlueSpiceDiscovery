@@ -116,5 +116,6 @@
 	"bs-discovery-namespace-tree-search-btn-label": "Sich weisen",
 	"bs-discovery-namespace-tree-create-btn-label": "Eng nei Säit uleeën",
 	"bs-discovery-namespace-tree-search-label": "No enger Säit sichen",
-	"bs-discovery-footerlinks-imprint-link-desc": "Impressum"
+	"bs-discovery-footerlinks-imprint-link-desc": "Impressum",
+	"bs-toc-hide-button-aria-label": "Inhaltsverzeechnes verstoppen"
 }
