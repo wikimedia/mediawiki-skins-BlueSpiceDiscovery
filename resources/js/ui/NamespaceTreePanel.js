@@ -3,7 +3,8 @@ bs.util.registerNamespace( 'bs.skin.ui' );
 bs.skin.ui.NamespaceTreePanel = function ( cfg ) {
 	cfg = cfg || {};
 	cfg.namespaceId = cfg.namespaceId || 0;
-	const sessionKey = 'namespace-tree-ns-' + cfg.namespaceId;
+	const wikiId = cfg.wikiId || '';
+	const sessionKey = wikiId + '-namespace-tree-ns-' + cfg.namespaceId;
 	cfg.store = new OOJSPlus.ui.data.store.NamespaceTreeStore( {
 		path: 'mws/v1/title-tree-store',
 		sessionCacheKey: sessionKey,
