@@ -79,6 +79,11 @@ class BackTo extends SimpleLink {
 		return $this->provider->getHref();
 	}
 
+	/** @inheritDoc */
+	public function getTarget(): string {
+		return '_self';
+	}
+
 	/**
 	 * @param IContextSource $context
 	 * @return bool
