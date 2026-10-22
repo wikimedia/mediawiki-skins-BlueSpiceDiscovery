@@ -13,6 +13,7 @@ use BlueSpice\Discovery\Component\UserButtonMenu;
 use BlueSpice\Discovery\ISkinLayout;
 use BlueSpice\Discovery\ISkinLayoutAware;
 use BlueSpice\Discovery\SkinSlotRenderer\NavbarPrimaryCenterItemsSkinSlotRenderer;
+use BlueSpice\Discovery\SkinSlotRenderer\NavbarPrimaryEastItemsSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\NavbarPrimaryItemsSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\NavbarPrimarySearchFormSkinSlotRenderer;
 use MediaWiki\Config\Config;
@@ -97,6 +98,18 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 		);
 
 		$this->skinComponents['navbar-center-items'] = $html;
+	}
+
+	/**
+	 * @return void
+	 */
+	private function fetchSkinSlotNavbarPrimaryEastItemsHtml(): void {
+		$html = $this->skinSlotRenderer->getSkinSlotHtml(
+			NavbarPrimaryEastItemsSkinSlotRenderer::REG_KEY,
+			$this->componentProcessData
+		);
+
+		$this->skinComponents['navbar-east-items'] = $html;
 	}
 
 	/**
@@ -197,6 +210,7 @@ class NavbarPrimary extends NavbarBase implements ISkinLayoutAware {
 		$this->fetchNewContentButtonHtml();
 		$this->fetchSkinSlotNavbarPrimaryItemsHtml();
 		$this->fetchSkinSlotNavbarPrimaryCenterItemsHtml();
+		$this->fetchSkinSlotNavbarPrimaryEastItemsHtml();
 		$this->fetchGlobalActionsButtonHtml();
 		$this->fetchLoginButtonHtml();
 		$this->fetchUserMenuButtonHtml();

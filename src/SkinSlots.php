@@ -11,6 +11,7 @@ use BlueSpice\Discovery\SkinSlotRenderer\GlobalActionsEditingSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\GlobalActionsOverviewSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\MainPanelSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\NavbarPrimaryCenterItemsSkinSlotRenderer;
+use BlueSpice\Discovery\SkinSlotRenderer\NavbarPrimaryEastItemsSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\NavbarPrimaryItemsSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\NavbarPrimarySearchFormSkinSlotRenderer;
 use BlueSpice\Discovery\SkinSlotRenderer\SidebarPrimaryTabPanelSkinSlotRenderer;
@@ -38,6 +39,10 @@ class SkinSlots {
 		$this->createSkinSlot(
 			NavbarPrimaryCenterItemsSkinSlotRenderer::REG_KEY,
 			NavbarPrimaryCenterItemsSkinSlotRenderer::class
+		);
+		$this->createSkinSlot(
+			NavbarPrimaryEastItemsSkinSlotRenderer::REG_KEY,
+			NavbarPrimaryEastItemsSkinSlotRenderer::class
 		);
 		$this->createSkinSlot(
 			NavbarPrimarySearchFormSkinSlotRenderer::REG_KEY,
