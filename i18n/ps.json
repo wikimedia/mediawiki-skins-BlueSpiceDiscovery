@@ -212,5 +212,7 @@
 	"bs-discovery-namespace-tree-pnl-header-text": "مخونه",
 	"bs-discovery-namespace-tree-search-btn-label": "لټون ښودل",
 	"bs-discovery-namespace-tree-create-btn-label": "يو نوی مخ جوړول",
-	"bs-discovery-namespace-tree-search-label": "د يو مخ پلټل"
+	"bs-discovery-namespace-tree-search-label": "د يو مخ پلټل",
+	"bs-discovery-config-enable-caching-enhanced-sidebar-label": "د \"پرمختللې مېډياويکي څنگپټې\" لپاره نيوک کارول",
+	"bs-discovery-config-enable-caching-enhanced-sidebar-help": "نيوک د څنگپټې چارترسراوی ښه کوي. کله چې نيوک چارن وي؛ نو د شرايطو اوښتنې شتون نلري. د شرايطو اوښتنو کارولو لپاره نيوک ناچارن کړئ."
 }
