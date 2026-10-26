@@ -16,12 +16,18 @@
 		margin-bottom: 0;
 	}
 
-	ul.tree-node-list > li > div:hover,
-	ul.tree-node-list .active > div {
+	ul.tree-node-list > li > div:hover {
 		margin-left: 0;
 		border-left: 5px solid var( --sidebar-primary-marker--hover );
 		background-color: var( --sidebar-primary-bg--hover );
 		color: var( --sidebar-primary-fg--hover );
+	}
+
+	ul.tree-node-list .active > div {
+		margin-left: 0;
+		border-left: 5px solid var( --sidebar-primary-marker--hover );
+		background-color: var( --sidebar-primary-bg--active );
+		color: var( --sidebar-primary-fg--active );
 	}
 
 	ul.tree-node-list .mws-tree-item a {
@@ -31,10 +37,17 @@
 		padding: calc( (var( --bs-tree-item-min-height ) - 1.5em) / 2 ) 0;
 	}
 
-	ul.tree-node-list a:not( .new ),
-	ul.tree-node-list a:not( .new ):visited,
-	ul.tree-node-list a:not( .new ):hover {
-		color: inherit;
+	ul.tree-node-list a {
+		color: var( --sidebar-primary-fg );
+	}
+
+	ul.tree-node-list a:hover,
+	ul.tree-node-list .active a:hover {
+		color: var( --sidebar-primary-fg--hover );
+	}
+
+	ul.tree-node-list .active a {
+		color: var( --sidebar-primary-fg--active );
 	}
 
 	.tree-node-list .oojsplus-data-tree-expander {
