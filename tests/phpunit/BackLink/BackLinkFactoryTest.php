@@ -7,10 +7,10 @@ use BlueSpice\Discovery\BackLinkProvider\PagesBackLinkProvider;
 use BlueSpice\Discovery\BackLinkProviderFactory;
 use MediaWiki\Context\DerivativeContext;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Page\WikiPage;
 use MediaWiki\Request\FauxRequest;
 use MediaWiki\Title\Title;
 use MediaWikiIntegrationTestCase;
-use WikiPage;
 
 class BackLinkFactoryTest extends MediaWikiIntegrationTestCase {
 
