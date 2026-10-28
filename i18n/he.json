@@ -201,6 +201,6 @@
 	"bs-discovery-namespace-tree-search-btn-label": "הצגת חיפוש",
 	"bs-discovery-namespace-tree-create-btn-label": "יצירת דף חדש",
 	"bs-discovery-namespace-tree-search-label": "חיפוש דף",
-	"bs-discovery-config-enable-caching-enhanced-sidebar-label": "שימוש במטמון עבור \"סרגל צד משופר של מדיה-ויקי\"",
+	"bs-discovery-config-enable-caching-enhanced-sidebar-label": "שימוש במטמון עבור \"סרגל צד משופר של מדיה־ויקי\"",
 	"bs-discovery-config-enable-caching-enhanced-sidebar-help": "אחסון במטמון משפר את ביצועי סרגל הצד. משתני הקשר אינם זמינים כאשר אחסון במטמון מופעל. יש לבטל את המטמון כדי להשתמש במשתני הקשר."
 }
