@@ -5,11 +5,11 @@ namespace BlueSpice\Discovery\Component;
 use BlueSpice\Discovery\BreadcrumbDataProviderFactory;
 use BlueSpice\Discovery\Renderer\DefaultBreadCrumbRenderer;
 use MediaWiki\Context\IContextSource;
+use MediaWiki\Language\MessageLocalizer;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\NamespaceInfo;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use MessageLocalizer;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use Wikimedia\CSS\Sanitizer\StyleAttributeSanitizer;
 
