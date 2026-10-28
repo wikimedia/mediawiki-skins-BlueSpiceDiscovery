@@ -4,13 +4,13 @@ namespace BlueSpice\Discovery\Tests\Renderer;
 
 use BlueSpice\Discovery\BreadcrumbDataProviderFactory;
 use BlueSpice\Discovery\Renderer\DefaultBreadCrumbRenderer;
+use MediaWiki\Language\MessageLocalizer;
 use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 use MediaWikiIntegrationTestCase;
-use MessageLocalizer;
 use Wikimedia\CSS\Sanitizer\StyleAttributeSanitizer;
 
 /**

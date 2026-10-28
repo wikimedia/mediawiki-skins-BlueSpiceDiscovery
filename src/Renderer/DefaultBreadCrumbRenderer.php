@@ -4,12 +4,12 @@ namespace BlueSpice\Discovery\Renderer;
 
 use BlueSpice\Discovery\BreadcrumbDataProvider;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Language\MessageLocalizer;
 use MediaWiki\Language\RawMessage;
 use MediaWiki\SpecialPage\SpecialPageFactory;
 use MediaWiki\Title\NamespaceInfo;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use MessageLocalizer;
 use Wikimedia\CSS\Sanitizer\StyleAttributeSanitizer;
 
 class DefaultBreadCrumbRenderer extends TemplateRendererBase {
