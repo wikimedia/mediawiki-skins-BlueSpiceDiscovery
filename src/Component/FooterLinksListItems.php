@@ -10,6 +10,7 @@ use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Html\Html;
 use MediaWiki\Message\Message;
 use MediaWiki\Revision\RevisionStore;
+use MediaWiki\Skin\Skin;
 use MediaWiki\Skin\SkinComponentLink;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
@@ -18,7 +19,6 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\LinkFormatter;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use MWStake\MediaWiki\Lib\Nodes\INode;
-use Skin;
 use Throwable;
 
 class FooterLinksListItems extends Literal {

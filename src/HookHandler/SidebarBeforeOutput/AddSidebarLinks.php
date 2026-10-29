@@ -4,9 +4,9 @@ namespace BlueSpice\Discovery\HookHandler\SidebarBeforeOutput;
 
 use MediaWiki\Hook\SidebarBeforeOutputHook;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Skin\Skin;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
-use Skin;
 use Throwable;
 
 class AddSidebarLinks implements SidebarBeforeOutputHook {
