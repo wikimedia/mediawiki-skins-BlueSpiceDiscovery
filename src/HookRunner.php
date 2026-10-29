@@ -4,7 +4,7 @@ namespace BlueSpice\Discovery;
 
 use MediaWiki\Hook\SkinAddFooterLinksHook;
 use MediaWiki\HookContainer\HookContainer;
-use Skin;
+use MediaWiki\Skin\Skin;
 
 class HookRunner implements SkinAddFooterLinksHook {
 
