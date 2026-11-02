@@ -72,10 +72,19 @@ body.mw-underline-always .mw-body-content a {
 	box-sizing: content-box;
 }
 
+/* Intentionally set to grey since its only a note and not a system error */
 .permissions-errors {
-	background-color: var( --background-color-error-subtle, #ffe9e5 );
-	border: 1px solid var( --border-color-error, #9f3526 );
+	background-color: var( --background-color-notice-subtle, #eaecf0 );
+	border: 1px solid var( --border-color-notice, #72777d );
 	border-radius: 2px;
 	padding: 16px 24px;
 	font-weight: normal;
+	display: inline-flex;
+	width: 100%;
+}
+
+.permissions-errors::before {
+	content: '\f47a';
+	font-family: 'bootstrap-icons';
+	margin-right: 8px;
 }
