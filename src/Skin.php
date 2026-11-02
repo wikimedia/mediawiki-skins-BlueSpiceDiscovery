@@ -7,7 +7,7 @@ use MediaWiki\Context\IContextSource;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Registration\ExtensionRegistry;
-use SkinTemplate;
+use MediaWiki\Skin\SkinTemplate;
 
 class Skin extends SkinTemplate {
 	/**
