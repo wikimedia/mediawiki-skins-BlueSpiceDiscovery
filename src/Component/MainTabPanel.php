@@ -10,6 +10,7 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\ComponentBase;
 use MWStake\MediaWiki\Component\CommonUserInterface\IComponent;
 use MWStake\MediaWiki\Component\CommonUserInterface\IRestrictedComponent;
 use MWStake\MediaWiki\Component\CommonUserInterface\ITabPanel;
+use MWStake\MediaWiki\Component\CommonUserInterface\SkinSlotRegistry;
 
 class MainTabPanel extends ComponentBase implements ITabPanel, IRestrictedComponent {
 
@@ -60,9 +61,15 @@ class MainTabPanel extends ComponentBase implements ITabPanel, IRestrictedCompon
 		$menuManager = $services->get( 'BlueSpiceDiscoveryMenuManager' );
 		$menuComponent = $menuManager->getMenuComponentFromConfigVar( 'DiscoverySidebarPrimaryMainTabPanelMenu' );
 
-		$subcomponents = [
-			new MainLinksPanel()
-		];
+		/** @var SkinSlotRegistry $skinSlotRegistry */
+		$skinSlotRegistry = $services->get( 'MWStakeSkinSlotRegistry' );
+		$items = $skinSlotRegistry->getSkinSlot( 'MainTabPanelBeforeContent' );
+		ksort( $items );
+		$subcomponents = [];
+		foreach ( $items as $item ) {
+			$subcomponents[] = $services->getObjectFactory()->createObject( $item );
+		}
+		$subcomponents[] = new MainLinksPanel();
 
 		if ( $menuComponent ) {
 			$subcomponents[] = $menuComponent;
