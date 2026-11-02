@@ -3,8 +3,8 @@
 namespace BlueSpice\Discovery\HookHandler\SkinTemplateNavigation;
 
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
+use MediaWiki\Skin\SkinTemplate;
 use MediaWiki\Title\Title;
-use SkinTemplate;
 use Throwable;
 
 class ShareOptions implements SkinTemplateNavigation__UniversalHook {

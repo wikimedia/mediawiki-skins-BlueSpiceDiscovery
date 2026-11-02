@@ -4,8 +4,8 @@ namespace BlueSpice\Discovery\HookHandler\SkinTemplateNavigation;
 
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Skin\SkinTemplate;
 use MediaWiki\Title\Title;
-use SkinTemplate;
 
 class CreateContentOptions implements SkinTemplateNavigation__UniversalHook {
 
