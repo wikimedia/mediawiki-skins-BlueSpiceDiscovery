@@ -41,6 +41,13 @@
 		color: var( --sidebar-primary-fg );
 	}
 
+	ul.tree-node-list a.new,
+	ul.tree-node-list a.new:hover,
+	ul.tree-node-list .active a.new,
+	ul.tree-node-list .active a.new:hover {
+		color: var( --new-link-fg );
+	}
+
 	ul.tree-node-list a:hover,
 	ul.tree-node-list .active a:hover {
 		color: var( --sidebar-primary-fg--hover );
