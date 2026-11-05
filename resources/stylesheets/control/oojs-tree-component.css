@@ -37,7 +37,8 @@
 		padding: calc( (var( --bs-tree-item-min-height ) - 1.5em) / 2 ) 0;
 	}
 
-	ul.tree-node-list a {
+	ul.tree-node-list a,
+	ul.tree-node-list a:visited {
 		color: var( --sidebar-primary-fg );
 	}
 
