@@ -357,9 +357,6 @@
 			"class": "\\BlueSpice\\Discovery\\Hook\\SetPageLanguage",
 			"services": [ "LanguageNameUtils" ]
 		},
-		"pdf-export": {
-			"class": "\\BlueSpice\\Discovery\\HookHandler\\PdfExportHandler"
-		},
 		"set-less-vars": {
 			"class": "\\BlueSpice\\Discovery\\HookHandler\\MWStakeCommonLessVars"
 		},
@@ -402,7 +399,6 @@
 		"PageSaveComplete": [ "setPageLanguage", "pageActions" ],
 		"PageMoveComplete": [ "pageActions" ],
 		"PageDeleteComplete": [ "pageActions" ],
-		"BSUEModulePDFBeforeAddingContent": "pdf-export",
 		"BSUsageTrackerRegisterCollectors": [
 			"\\BlueSpice\\Discovery\\Hook\\BSUsageTrackerRegisterCollectors\\MediaWikiSidebarActive::callback",
 			"\\BlueSpice\\Discovery\\Hook\\BSUsageTrackerRegisterCollectors\\MediaWikiSidebarModified::callback",
