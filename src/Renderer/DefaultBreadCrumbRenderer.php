@@ -113,22 +113,12 @@ class DefaultBreadCrumbRenderer extends TemplateRendererBase {
 	 */
 	private function buildNodes( $nodesData ) {
 		$nodes = [];
-		$firstNode = false;
 
 		foreach ( $nodesData as $node ) {
-			// Remove namespace prefix from nodeText
-			if ( !$firstNode ) {
-				$nodeTextParts = explode( ':', $node['nodeText'] );
-				$firstNode = true;
-			} else {
-				$nodeTextParts = explode( ':', $node['nodeText'], 1 );
-			}
-
-			$nodeText = array_pop( $nodeTextParts );
-
+			// nodeText comes without namespace prefix from the data provider
 			$nodeHTML = [
 				'id' => md5( 'breadcrumb-nav-subpages-' . $node['id'] ),
-				'button-text' => new RawMessage( trim( $nodeText ) ),
+				'button-text' => new RawMessage( trim( $node['nodeText'] ) ),
 				'button-classes' => $node['classes'],
 				'split-button-title' => $this->messageLocalizer
 					->msg( 'bs-discovery-breadcrumb-nav-node-split-button-title' )->text(),
