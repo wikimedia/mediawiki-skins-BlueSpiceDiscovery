@@ -133,10 +133,8 @@ class BaseBreadcrumbDataProvider implements IBreadcrumbDataProvider {
 				}
 			}
 
-			if ( strpos( $nodeTitleParts[$index], ':' ) &&
-					$nodeTitle->isSpecialPage() ) {
-				$text = explode( ':', $nodeTitleParts[$index], 2 );
-				$nodeText = $text[1];
+			if ( $index === 0 ) {
+				$nodeText = explode( '/', $title->getText(), 2 )[0];
 			} else {
 				$nodeText = $nodeTitleParts[$index];
 			}
