@@ -57,6 +57,16 @@ p {
 }
 /* external links in content.externallinks.less due to backgroundimage settings */
 
+/* self links: bold and not clickable like in core, Parsoid keeps their href */
+.mw-body-content a.mw-selflink,
+.mw-body-content a.mw-selflink:visited,
+[ class^='mw-content-' ] a.mw-selflink,
+[ class^='mw-content-' ] a.mw-selflink:visited {
+	color: inherit;
+	font-weight: bold;
+	pointer-events: none;
+}
+
 pre {
 	font-family: monospace, 'Courier';
 	/* 0.8 * 16px = 12.8 */
